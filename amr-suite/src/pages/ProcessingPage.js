@@ -1,8 +1,9 @@
 import React from "react";
 import styles from "../styles/ProcessingResultsPage.module.css"; // Page-specific CSS
 import Header from "../components/Header";
-
+import { useNavigate } from "react-router-dom";
 const ProcessingResultsPage = () => {
+  const navigate = useNavigate();
   return (
     <div className={styles.processingResultsPage}>
       <Header />
@@ -41,9 +42,24 @@ const ProcessingResultsPage = () => {
         {/* Right Section: View Results */}
         <div className={styles.rightSection}>
           <h2 className={styles.resultsTitle}>View Results</h2>
-          <button className={styles.resultButton}>Isolation Burden Analysis</button>
-          <button className={styles.resultButton}>Resistance Analysis</button>
-          <button className={styles.resultButton}>Scorecards</button>
+          <button
+            className={styles.resultButton}
+            onClick={() => navigate("/isolation-burden")} 
+          >
+            Isolation Burden Analysis
+          </button>
+          <button
+            className={styles.resultButton}
+            onClick={() => navigate("/resistance-analysis")} 
+          >
+            Resistance Analysis
+          </button>
+          <button
+            className={styles.resultButton}
+            onClick={() => navigate("/scorecards")} 
+          >
+            Scorecards
+          </button>
         </div>
       </main>
     </div>

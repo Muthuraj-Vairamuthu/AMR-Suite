@@ -6,7 +6,7 @@ const Header = () => {
     <AppBar position="static" style={{ backgroundColor: "#1c1c28", padding: "0 16px" }}>
       <Toolbar style={{ display: "flex", justifyContent: "space-between" }}>
         <Box display="flex" alignItems="center">
-          <Box component="img" src="/assets/logo.png" alt="Logo" height="40px" />
+          <Box component="img" src="/assets/icon.png" alt="Logo" height="40px" />
           <Typography variant="h6" style={{ marginLeft: "16px" }}>
             AMRSuite
           </Typography>
