@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMRSuite Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1e1e1e;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #141414;
+            padding: 15px;
+            border-bottom: 2px solid #333;
+        }
+        .navbar .title {
+            color: white;
+            font-size: 20px;
+            margin-left: 20px;
+        }
+        .navbar .home {
+            color: white;
+            text-decoration: none;
+            margin-right: 20px;
+        }
+        .navbar img {
+            width: 50px;
+            height: auto;
+            margin-right: 20px;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 90vh;
+        }
+        .login-box {
+            background-color: #2a2a2a;
+            padding: 30px;
+            border-radius: 10px;
+            width: 400px;
+        }
+        .login-box h2 {
+            text-align: center;
+        }
+        .input-box {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            background: #ddd;
+            border: none;
+            border-radius: 5px;
+        }
+        .button {
+            width: 100%;
+            padding: 10px;
+            background-color: #162447;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .google-btn {
+            background-color: #b22222;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .google-btn img {
+            width: 20px;
+            margin-right: 10px;
+        }
+        .signup-box {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .signup-box a {
+            background-color: #354f72;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="title">AMRSuite</div>
+        <div class="home"><a href="#">Home</a></div>
+        <img src="logo.png" alt="Lab Logo">
+    </div>
+
+    <div class="container">
+        <div class="login-box">
+            <h2>Welcome to AMRSuite</h2>
+            <h3>Login</h3>
+            <form id = "login-form" method="POST" action="/login">
+                {% csrf_token %}
+                <input type="text" name="username" class="input-box" placeholder="Username" required>
+                <input type="password" name="password" class="input-box" placeholder="Password" required>
+                <p><a href="#" style="color: white;">Forgot password?</a></p>
+                <button class="button" id="login-button">Sign in</button>
+            </form>
+        
+            <hr>
+            <button class="button google-btn">
+                <img src="google-icon.png" alt="Google Logo"> Sign in with Google
+            </button>
+            <div class="signup-box">
+                <h3>New Here?</h3>
+                <p>Sign up to explore and analyze your AMST data!</p>
+                <a href="#">Sign up</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+
+<script>
+    document.getElementById('login-button').addEventListener('click', function(event) {
+        document.getElementById('login-form').submit();
+    });
+</script>

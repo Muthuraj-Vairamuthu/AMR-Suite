@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMRSuite - Process Dataset</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1e1e1e;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #141414;
+            padding: 15px;
+            border-bottom: 2px solid #333;
+        }
+        .navbar .title {
+            color: white;
+            font-size: 20px;
+            margin-left: 20px;
+        }
+        .navbar .home {
+            color: white;
+            text-decoration: none;
+            margin-right: 20px;
+        }
+        .navbar img {
+            width: 50px;
+            height: auto;
+            margin-right: 20px;
+        }
+        .container {
+            text-align: center;
+            padding: 30px;
+        }
+        .section-container {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 30px;
+        }
+        .box {
+            background-color: #2a2a2a;
+            padding: 20px;
+            border-radius: 10px;
+            width: 350px;
+        }
+        .box h3 {
+            text-align: center;
+            text-decoration: underline;
+        }
+        .label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        .dropdown {
+            width: 100%;
+            padding: 10px;
+            background: #ddd;
+            border: none;
+            border-radius: 5px;
+            appearance: none;
+            cursor: pointer;
+        }
+        .next-button {
+            margin-top: 30px;
+            background-color: #162447;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .next-button:hover {
+            background-color: #1f3a5f;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="title">AMRSuite</div>
+        <div class="home"><a>Home</a></div>
+        <img src="logo.png" alt="Lab Logo">
+    </div>
+
+    <!-- Page Content -->
+    <div class="container">
+        <h2>Processing your Dataset</h2>
+
+        <div class="section-container">
+            <!-- Left Section -->
+            <div class="box">
+                <h3>Map Dataset Columns</h3>
+                <label class="label">Bacterial Infection: <span style="color: red;">*</span></label>
+                <select class="dropdown">
+                    <option>Choose Column</option>
+                </select>
+
+                <label class="label">Source Input: <span style="color: red;">*</span></label>
+                <select class="dropdown">
+                    <option>Choose Column</option>
+                </select>
+
+                <label class="label">Antibiotic Format: <span style="color: red;">*</span></label>
+                <input type="text" class="dropdown" placeholder="Column Format">
+            </div>
+
+            <!-- Right Section -->
+            <div class="box">
+                <h3>Dataset Details</h3>
+                <label class="label">Dataset Format: <span style="color: red;">*</span></label>
+                <select class="dropdown">
+                    <option>Choose Column</option>
+                </select>
+
+                <label class="label">Cluster Attribute: <span style="color: red;">*</span></label>
+                <select class="dropdown">
+                    <option>Choose Column</option>
+                </select>
+
+                <label class="label">Time Stamp: <span style="color: red;">*</span></label>
+                <select class="dropdown">
+                    <option>Choose Trend</option>
+                </select>
+            </div>
+        </div>
+        <form action="/dataset_upload" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input type="file" name="csv_file" accept=".csv" required><br><br>
+            <button class="next-button" type="submit">Upload</button>
+        </form>
+    </div>
+
+</body>
+</html>
