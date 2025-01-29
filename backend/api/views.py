@@ -29,5 +29,4 @@ def upload_dataset(request):
 
 def dataset_upload(request):
     file = request.FILES['csv_file']
-    print(file)
     return HttpResponse('File uploaded')

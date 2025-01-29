@@ -3,142 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AMRSuite - Process Dataset</title>
+    <title>Dataset Mapping</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #1e1e1e;
-            color: white;
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
         }
-        .navbar {
+
+        body {
+            background-color: #1a1a1a;
+            color: white;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: #141414;
-            padding: 15px;
-            border-bottom: 2px solid #333;
+            padding: 10px 20px;
+            margin-bottom: 40px;
         }
-        .navbar .title {
-            color: white;
-            font-size: 20px;
-            margin-left: 20px;
+
+        .logo {
+            font-weight: bold;
+            font-size: 1.2rem;
         }
-        .navbar .home {
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
             color: white;
             text-decoration: none;
-            margin-right: 20px;
         }
-        .navbar img {
-            width: 50px;
-            height: auto;
-            margin-right: 20px;
-        }
-        .container {
+
+        h1 {
             text-align: center;
-            padding: 30px;
+            margin-bottom: 40px;
+            font-size: 2rem;
         }
-        .section-container {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            margin-top: 30px;
+
+        .upload-container {
+            max-width: 800px;
+            margin: 0 auto;
         }
-        .box {
-            background-color: #2a2a2a;
-            padding: 20px;
-            border-radius: 10px;
-            width: 350px;
-        }
-        .box h3 {
+
+        .drop-zone {
+            background-color: #2a2f3b;
+            border: 2px dashed #3a4155;
+            border-radius: 8px;
+            padding: 60px 20px;
             text-align: center;
-            text-decoration: underline;
+            margin-bottom: 30px;
         }
-        .label {
-            display: block;
-            margin: 10px 0 5px;
+
+        .drop-zone p {
+            color: #9ba1b0;
+            margin: 10px 0;
         }
-        .dropdown {
-            width: 100%;
-            padding: 10px;
-            background: #ddd;
-            border: none;
-            border-radius: 5px;
-            appearance: none;
-            cursor: pointer;
-        }
-        .next-button {
-            margin-top: 30px;
-            background-color: #162447;
+
+        .browse-btn {
+            background-color: #1a2133;
             color: white;
             border: none;
-            padding: 10px 20px;
+            padding: 10px 30px;
             border-radius: 5px;
-            font-size: 16px;
             cursor: pointer;
+            margin-top: 15px;
+            font-size: 0.9rem;
         }
-        .next-button:hover {
-            background-color: #1f3a5f;
+
+        .upload-btn {
+            background-color: #1a2133;
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 1rem;
+        }
+
+        button:hover {
+            background-color: #2a3143;
         }
     </style>
 </head>
 <body>
-
-    <!-- Navbar -->
-    <div class="navbar">
-        <div class="title">AMRSuite</div>
-        <div class="home"><a>Home</a></div>
-        <img src="logo.png" alt="Lab Logo">
-    </div>
-
-    <!-- Page Content -->
-    <div class="container">
-        <h2>Processing your Dataset</h2>
-
-        <div class="section-container">
-            <!-- Left Section -->
-            <div class="box">
-                <h3>Map Dataset Columns</h3>
-                <label class="label">Bacterial Infection: <span style="color: red;">*</span></label>
-                <select class="dropdown">
-                    <option>Choose Column</option>
-                </select>
-
-                <label class="label">Source Input: <span style="color: red;">*</span></label>
-                <select class="dropdown">
-                    <option>Choose Column</option>
-                </select>
-
-                <label class="label">Antibiotic Format: <span style="color: red;">*</span></label>
-                <input type="text" class="dropdown" placeholder="Column Format">
-            </div>
-
-            <!-- Right Section -->
-            <div class="box">
-                <h3>Dataset Details</h3>
-                <label class="label">Dataset Format: <span style="color: red;">*</span></label>
-                <select class="dropdown">
-                    <option>Choose Column</option>
-                </select>
-
-                <label class="label">Cluster Attribute: <span style="color: red;">*</span></label>
-                <select class="dropdown">
-                    <option>Choose Column</option>
-                </select>
-
-                <label class="label">Time Stamp: <span style="color: red;">*</span></label>
-                <select class="dropdown">
-                    <option>Choose Trend</option>
-                </select>
-            </div>
+    <nav>
+        <div class="logo">AMRSuite</div>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <img src="/api/placeholder/30/30" alt="Lab Logo" />
         </div>
+    </nav>
+
+    <div class="upload-container">
         <form action="/dataset_upload" method="POST" enctype="multipart/form-data">
-            {% csrf_token %}
-            <input type="file" name="csv_file" accept=".csv" required><br><br>
-            <button class="next-button" type="submit">Upload</button>
+            <h1>Uploading your Dataset</h1>
+            
+            <div class="drop-zone">
+                <h3>Drag and drop file here</h3>
+                <p>Drag and drop or browse your file to get started</p>
+                <button class="browse-btn">Browse</button>
+            </div>
+
+            <button class="upload-btn" type="submit">Upload Dataset</button>
         </form>
     </div>
-
 </body>
 </html>
