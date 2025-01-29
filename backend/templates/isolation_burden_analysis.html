@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Isolation Burden Analysis</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        body {
+            background-color: #1a1a1a;
+            color: white;
+            min-height: 100vh;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background-color: #1a1a1a;
+            border-bottom: 1px solid #333;
+        }
+
+        .logo {
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .main-content {
+            padding: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        .back-button {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            margin-right: 20px;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+        }
+
+        .analysis-container {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 40px;
+        }
+
+        .controls-section {
+            background-color: #2a2f3b;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            color: #ccc;
+        }
+
+        .select-wrapper {
+            position: relative;
+            background-color: #e0e0e0;
+            border-radius: 5px;
+        }
+
+        select {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            background-color: #e0e0e0;
+            font-size: 1rem;
+            appearance: none;
+            cursor: pointer;
+        }
+
+        .select-wrapper::after {
+            content: '▼';
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            pointer-events: none;
+            color: #333;
+        }
+
+        .generate-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #1a2133;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .generate-btn:hover {
+            background-color: #2a3143;
+        }
+
+        .graph-section {
+            background-color: #2a2f3b;
+            padding: 20px;
+            border-radius: 10px;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .graph-placeholder {
+            width: 100%;
+            height: 400px;
+            background-color: #1a1a1a;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        #graph-image {
+            max-width: 100%;
+            height: auto;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">AMRSuite</div>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <img src="/api/placeholder/30/30" alt="Lab Logo" />
+        </div>
+    </nav>
+
+    <div class="main-content">
+        <div class="header">
+            <button class="back-button" onclick="history.back()">←</button>
+            <h1>Isolation Burden Analysis</h1>
+        </div>
+
+        <div class="analysis-container">
+            <div class="controls-section">
+                <form id="analysis-form">
+                    <div class="form-group">
+                        <label>Choose Attribute:</label>
+                        <div class="select-wrapper">
+                            <select name="attribute" required>
+                                <option value="">Choose Column</option>
+                                {% for column in columns %}
+                                    <option value="{{ column }}">{{ column }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Choose Source:</label>
+                        <div class="select-wrapper">
+                            <select name="source" required>
+                                <option value="">Choose Column</option>
+                                {% for column in columns %}
+                                    <option value="{{ column }}">{{ column }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="generate-btn">Generate</button>
+                </form>
+            </div>
+
+            <div class="graph-section">
+                <div class="graph-placeholder" id="placeholder-text">
+                    Select attributes and generate to view the graph
+                </div>
+                <img id="graph-image" alt="Isolation Burden Graph">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('analysis-form').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const placeholder = document.querySelector('.graph-placeholder');
+            const graphImage = document.getElementById('graph-image');
+            
+            // Show loading state
+            placeholder.textContent = 'Generating graph...';
+            placeholder.style.display = 'flex';
+            graphImage.style.display = 'none';
+
+            const formData = new FormData(this);
+            
+            try {
+                const response = await fetch('/generate_isolation_graph', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                if (response.ok) {
+                    const imageBlob = await response.blob();
+                    const imageUrl = URL.createObjectURL(imageBlob);
+                    
+                    // Show the graph
+                    graphImage.src = imageUrl;
+                    graphImage.style.display = 'block';
+                    placeholder.style.display = 'none';
+                } else {
+                    placeholder.textContent = 'Error generating graph. Please try again.';
+                }
+            } catch (error) {
+                placeholder.textContent = 'Error generating graph. Please try again.';
+            }
+        });
+    </script>
+</body>
+</html> 

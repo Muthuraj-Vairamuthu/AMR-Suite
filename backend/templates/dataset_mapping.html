@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dataset Mapping</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        body {
+            background-color: #1a1a1a;
+            color: white;
+            min-height: 100vh;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background-color: #1a1a1a;
+        }
+
+        .logo {
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .main-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 50px;
+        }
+
+        .mapping-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .mapping-section {
+            background-color: #2a2f3b;
+            border-radius: 10px;
+            padding: 30px;
+        }
+
+        .mapping-section h2 {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            color: white;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 1rem;
+        }
+
+        .form-group label span.required {
+            color: #ff4444;
+            margin-left: 4px;
+        }
+
+        .select-wrapper {
+            position: relative;
+            background-color: #e0e0e0;
+            border-radius: 5px;
+        }
+
+        select {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            background-color: #e0e0e0;
+            font-size: 1rem;
+            appearance: none;
+            cursor: pointer;
+        }
+
+        .select-wrapper::after {
+            content: '▼';
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            pointer-events: none;
+            color: #333;
+        }
+
+        .next-btn {
+            background-color: #1a2133;
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            width: 200px;
+            display: block;
+            margin: 0 auto;
+            transition: background-color 0.3s ease;
+        }
+
+        .next-btn:hover {
+            background-color: #2a3143;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">AMRSuite</div>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <img src="/api/placeholder/30/30" alt="Lab Logo" />
+        </div>
+    </nav>
+
+    <div class="main-content">
+        <h1>Processing your Dataset</h1>
+        
+        <form action="/mapping_dataset" method="POST" class="mapping-form">
+            {% csrf_token %}
+            <div class="mapping-container">
+                <div class="mapping-section">
+                    <h2>Map Dataset Columns</h2>
+                    
+                    <div class="form-group">
+                        <label>Bacterial Infection<span class="required">*</span></label>
+                        <div class="select-wrapper">
+                            <select name="bacterial_infection" required>
+                                <option value="">Choose Column</option>
+                                {% for column in columns %}
+                                    <option value="{{ column }}">{{ column }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Source Input<span class="required">*</span></label>
+                        <div class="select-wrapper">
+                            <select name="source_input" required>
+                                <option value="">Choose Column</option>
+                                {% for column in columns %}
+                                    <option value="{{ column }}">{{ column }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Antibiotic Format<span class="required">*</span></label>
+                        <div class="select-wrapper">
+                            <input type="text" name="antibiotic_format" required 
+                                   placeholder="Enter antibiotic format" 
+                                   style="width: 100%; padding: 12px; border: none; 
+                                          border-radius: 5px; background-color: #e0e0e0; 
+                                          font-size: 1rem;">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mapping-section">
+                    <h2>Dataset Details</h2>
+                    
+                    <div class="form-group">
+                        <label>Dataset Format<span class="required">*</span></label>
+                        <div class="select-wrapper">
+                            <select name="dataset_format" required>
+                                <option value="">Choose Column</option>
+                                <option value="Long">Long</option>
+                                <option value="Wide">Wide</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Cluster Attribute<span class="required">*</span></label>
+                        <div class="select-wrapper">
+                            <select name="cluster_attribute" required>
+                                <option value="">Choose Column</option>
+                                {% for column in columns %}
+                                    <option value="{{ column }}">{{ column }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Time Stamp<span class="required">*</span></label>
+                        <div class="select-wrapper">
+                            <select name="time_stamp" required>
+                                <option value="">Choose Trend</option>
+                                <option value="Year">Year</option>
+                                <option value="Month">Month</option>
+                                <option value="Day">Day</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit" class="next-btn" id="submit-button">Next</button>
+        </form>
+    </div>
+</body>
+</html>
+
+<script>
+    document.getElementById('submit-button').addEventListener('click', function(event) {
+        document.getElementById('mapping-form').submit();
+    });
+</script>

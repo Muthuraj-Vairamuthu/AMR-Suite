@@ -54,12 +54,19 @@
         }
 
         .drop-zone {
+            position: relative;
+            transition: all 0.3s ease;
             background-color: #2a2f3b;
             border: 2px dashed #3a4155;
             border-radius: 8px;
             padding: 60px 20px;
             text-align: center;
             margin-bottom: 30px;
+        }
+
+        .drop-zone.dragover {
+            background-color: rgba(42, 49, 67, 0.1);
+            border: 2px dashed #2a3143;
         }
 
         .drop-zone p {
@@ -92,6 +99,21 @@
         button:hover {
             background-color: #2a3143;
         }
+
+        .file-info {
+            display: none;
+            margin-top: 10px;
+        }
+        
+        .file-info.visible {
+            display: block;
+            animation: fadeIn 0.3s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
     </style>
 </head>
 <body>
@@ -105,16 +127,60 @@
 
     <div class="upload-container">
         <form action="/dataset_upload" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
             <h1>Uploading your Dataset</h1>
             
-            <div class="drop-zone">
+            <div class="drop-zone" id="dropZone">
                 <h3>Drag and drop file here</h3>
                 <p>Drag and drop or browse your file to get started</p>
-                <button class="browse-btn">Browse</button>
+                <input type="file" name="csv_file" id="csv_file" style="display: none;" required accept=".csv">
+                <button type="button" class="browse-btn" onclick="document.getElementById('csv_file').click()">Browse</button>
+                <div class="file-info" id="fileInfo">
+                    <p>Selected file: <span id="fileName">No file chosen</span></p>
+                </div>
             </div>
 
             <button class="upload-btn" type="submit">Upload Dataset</button>
         </form>
     </div>
+
+    <script>
+        const dropZone = document.getElementById('dropZone');
+        const fileInput = document.getElementById('csv_file');
+        const fileInfo = document.getElementById('fileInfo');
+        const fileNameSpan = document.getElementById('fileName');
+
+        // Handle file selection
+        fileInput.addEventListener('change', (e) => {
+            const file = e.target.files[0];
+            if (file) {
+                fileNameSpan.textContent = file.name;
+                fileInfo.classList.add('visible');
+            }
+        });
+
+        // Handle drag and drop
+        dropZone.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            dropZone.classList.add('dragover');
+        });
+
+        dropZone.addEventListener('dragleave', (e) => {
+            e.preventDefault();
+            dropZone.classList.remove('dragover');
+        });
+
+        dropZone.addEventListener('drop', (e) => {
+            e.preventDefault();
+            dropZone.classList.remove('dragover');
+            
+            const files = e.dataTransfer.files;
+            if (files.length > 0) {
+                fileInput.files = files;
+                fileNameSpan.textContent = files[0].name;
+                fileInfo.classList.add('visible');
+            }
+        });
+    </script>
 </body>
 </html>

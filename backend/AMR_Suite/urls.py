@@ -22,5 +22,8 @@ urlpatterns = [
     path('', include('api.urls')),
     path('login', include('api.urls')),
     path('upload_dataset', include('api.urls')),
-    path('dataset_upload', include('api.urls'))
+    path('dataset_upload', include('api.urls')),
+    path('mapping_dataset', include('api.urls')),
+    path('isolation_burden_analysis', include('api.urls')),
+    path('generate_isolation_graph', include('api.urls'))
 ]
