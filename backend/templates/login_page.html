@@ -1,7 +1,10 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to AMRSuite</title>
     <style>
@@ -13,73 +16,119 @@
         }
 
         body {
-            background-color: #1a1a1a;
+            background-color: #1E1E1E;
             color: white;
             min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
 
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px 30px;
+            padding: 0 80px;
+            background-color: #141619;
+            height: 107px;
+            width: 100%;
         }
 
         .logo {
             font-weight: bold;
-            font-size: 1.2rem;
+            font-size: 1.5rem;
+            color: white;
+            margin-left: 0;
         }
 
         .nav-links {
             display: flex;
-            gap: 20px;
+            gap: 30px;
             align-items: center;
+            margin-right: 0;
         }
 
         .nav-links a {
             color: white;
             text-decoration: none;
+            font-size: 1.3rem;
         }
 
-        .main-container {
+        .nav-links img {
+            height: 65px;
+            width: auto;
+        }
+
+        .page-container {
+            display: flex;
+            flex: 1;
+        }
+
+        .left-half {
+            width: 50%;
+            background-color: #22252B;
             display: flex;
             justify-content: center;
-            align-items: flex-start;
+            align-items: center;
             padding: 40px;
-            gap: 100px;
-            max-width: 1200px;
-            margin: 0 auto;
+        }
+
+        .right-half {
+            width: 50%;
+            background-color: #191D23;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
         }
 
         .login-section {
-            flex: 1;
             max-width: 400px;
+            width: 100%;
         }
 
         .signup-section {
-            flex: 1;
             max-width: 400px;
+            width: 100%;
             text-align: center;
-            padding-top: 60px;
+        }
+
+        .main-container {
+            display: none; /* Remove the old container */
+        }
+
+        .welcome-text {
+            color: white;
+            font-size: 32px;
+            margin-bottom: 35px;
+            font-weight: bold;
+            text-align: center;
+            width: 100%;
         }
 
         h1 {
-            margin-bottom: 30px;
-            font-size: 2rem;
+            margin-bottom: 25px;
+            font-size: 18px;
+            font-weight: normal;
+            text-align: left;
         }
 
         .login-form {
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            gap: 20px;
+        }
+
+        .login-form > *:not(.forgot-password) {
+            margin: 0;  /* Reset margins for other elements */
         }
 
         input {
             padding: 12px;
-            border-radius: 5px;
+            border-radius: 4px;
             border: none;
-            background-color: #e0e0e0;
+            background-color: #E8E8E8;
             font-size: 1rem;
+            width: 100%;
         }
 
         .forgot-password {
@@ -87,6 +136,7 @@
             text-decoration: none;
             font-size: 0.9rem;
             margin-top: -5px;
+            margin-bottom: 15px;  /* Added margin-bottom to create space */
         }
 
         .sign-in-btn {
@@ -94,17 +144,18 @@
             color: white;
             border: none;
             padding: 12px;
-            border-radius: 5px;
+            border-radius: 20px;
             cursor: pointer;
             font-size: 1rem;
-            margin: 10px 0;
+            width: 100%;
         }
 
         .divider {
             display: flex;
             align-items: center;
             text-align: center;
-            margin: 20px 0;
+            margin: 30px 0;
+            color: #FFFFFF;
         }
 
         .divider::before,
@@ -120,33 +171,46 @@
         }
 
         .google-btn {
-            background-color: #db4437;
+            background-color: #B7392D;
             color: white;
             border: none;
             padding: 12px;
-            border-radius: 5px;
+            border-radius: 20px;
             cursor: pointer;
             font-size: 1rem;
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 10px;
+            width: 100%;
         }
 
-        .signup-btn {
-            background-color: #2a3143;
+        .google-btn img {
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+        }
+
+        .signup-section h2 {
             color: white;
-            border: none;
-            padding: 12px 40px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1rem;
-            margin-top: 20px;
+            font-size: 24px;
+            margin-bottom: 25px;
         }
 
         .signup-text {
-            color: #888;
-            margin-bottom: 20px;
+            color: white;
+            margin-bottom: 35px;
+        }
+
+        .signup-btn {
+            background-color: #464F62;
+            color: white;
+            border: none;
+            padding: 12px 40px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 1rem;
+            width: 100%;
         }
 
         button:hover {
@@ -159,38 +223,41 @@
         <div class="logo">AMRSuite</div>
         <div class="nav-links">
             <a href="#">Home</a>
-            <img src="/api/placeholder/30/30" alt="Lab Logo" />
+            <img src="{% static 'media/tavlab.logo.png' %}" alt="Tav Lab Logo" />
         </div>
     </nav>
 
-    <div class="main-container">
-        <section class="login-section">
-            <h1>Welcome to AMRSuite</h1>
-            <form class="login-form" method="POST" action="/login">
-                {% csrf_token %}
-                <input type="text" name="username" class="input-box" placeholder="Username" required>
-                <input type="password" name="password" class="input-box" placeholder="Password" required>
-                <a href="#" class="forgot-password">Forgot password?</a>
-                <button type="submit" class="sign-in-btn" id="login-button">Sign in</button>
-                
-                <div class="divider">
-                    <span>or</span>
-                </div>
-                
-                <button type="button" class="google-btn">
-                    <svg height="20" width="20" viewBox="0 0 24 24" fill="white">
-                        <path d="M12.545,12.151L12.545,12.151c0,1.054,0.855,1.909,1.909,1.909h3.536c-0.229,1.213-0.951,2.268-1.981,2.932 C15.045,17.624,13.685,18,12.226,18c-2.585,0-4.824-1.581-5.772-3.829c-0.255-0.607-0.397-1.274-0.397-1.975 c0-0.701,0.142-1.368,0.397-1.975c0.948-2.248,3.187-3.829,5.772-3.829c1.459,0,2.819,0.376,3.783,1.008 c0.829,0.545,1.492,1.31,1.916,2.227h-3.536C13.4,10.242,12.545,11.097,12.545,12.151z M12,0C5.372,0,0,5.372,0,12 c0,6.627,5.372,12,12,12c6.627,0,12-5.372,12-12C24,5.372,18.627,0,12,0z M12.226,16.364c1.459,0,2.819-0.376,3.783-1.008 c1.03-0.664,1.752-1.719,1.981-2.932h-3.536c-1.054,0-1.909-0.855-1.909-1.909c0-1.054,0.855-1.909,1.909-1.909h3.536 c-0.229-1.213-0.951-2.268-1.981-2.932c-0.964-0.632-2.324-1.008-3.783-1.008c-2.585,0-4.824,1.581-5.772,3.829 C6.142,9.757,6,10.424,6,11.125c0,0.701,0.142,1.368,0.397,1.975C7.345,14.783,9.584,16.364,12.226,16.364z"/>
-                    </svg>
-                    Sign in with Google
-                </button>
-            </form>
-        </section>
+    <div class="page-container">
+        <div class="left-half">
+            <section class="login-section">
+                <div class="welcome-text">Welcome to AMRSuite</div>
+                <h1>Login</h1>
+                <form class="login-form" method="POST" action="/login">
+                    {% csrf_token %}
+                    <input type="text" name="username" class="input-box" placeholder="Username" required>
+                    <input type="password" name="password" class="input-box" placeholder="Password" required>
+                    <a href="#" class="forgot-password">Forgot password?</a>
+                    <button type="submit" class="sign-in-btn" id="login-button">Sign in</button>
+                    
+                    <div class="divider">
+                        <span>or</span>
+                    </div>
+                    
+                    <button type="button" class="google-btn">
+                        <img src="{% static 'media/google.logo.png' %}" alt="Google logo" width="20" height="20">
+                        Sign in with Google
+                    </button>
+                </form>
+            </section>
+        </div>
 
-        <section class="signup-section">
-            <h2>New Here?</h2>
-            <p class="signup-text">Sign up to explore and analyze your AMST data!</p>
-            <button class="signup-btn">Sign up</button>
-        </section>
+        <div class="right-half">
+            <section class="signup-section">
+                <h2>New Here?</h2>
+                <p class="signup-text">Sign up to explore and analyze your AMST data!</p>
+                <button class="signup-btn">Sign up</button>
+            </section>
+        </div>
     </div>
 </body>
 </html>
