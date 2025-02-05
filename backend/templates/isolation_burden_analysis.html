@@ -181,13 +181,26 @@
         <div class="analysis-container">
             <div class="controls-section">
                 <form id="analysis-form">
+                    {% csrf_token %}
                     <div class="form-group">
-                        <label>Choose Attribute:</label>
+                        <label>Choose Infection:</label>
                         <div class="select-wrapper">
-                            <select name="attribute" required>
-                                <option value="">Choose Column</option>
-                                {% for column in columns %}
-                                    <option value="{{ column }}">{{ column }}</option>
+                            <select name="infection" required>
+                                <option value="">Choose Infection</option>
+                                {% for infection in infection_columns %}
+                                    <option value="{{ infection }}">{{ infection }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Choose Antibiotic:</label>
+                        <div class="select-wrapper">
+                            <select name="antibiotic" required>
+                                <option value="">Choose Antibiotic</option>
+                                {% for antibiotic in antibiotic_columns %}
+                                    <option value="{{ antibiotic }}">{{ antibiotic }}</option>
                                 {% endfor %}
                             </select>
                         </div>
@@ -197,9 +210,9 @@
                         <label>Choose Source:</label>
                         <div class="select-wrapper">
                             <select name="source" required>
-                                <option value="">Choose Column</option>
-                                {% for column in columns %}
-                                    <option value="{{ column }}">{{ column }}</option>
+                                <option value="">Choose Source</option>
+                                {% for source in source_columns %}
+                                    <option value="{{ source }}">{{ source }}</option>
                                 {% endfor %}
                             </select>
                         </div>
@@ -235,7 +248,10 @@
             try {
                 const response = await fetch('/generate_isolation_graph', {
                     method: 'POST',
-                    body: formData
+                    body: formData,
+                    headers: {
+                        'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value
+                    }
                 });
 
                 if (response.ok) {

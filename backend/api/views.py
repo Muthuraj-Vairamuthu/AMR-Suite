@@ -7,6 +7,12 @@ import pandas as pd
 import csv
 import numpy as np
 import json
+from io import BytesIO
+from . analysis_code import *
+import matplotlib
+matplotlib.use('Agg')  # Set the backend to Agg before importing pyplot
+import matplotlib.pyplot as plt
+
 
 # Create your views here.
 
@@ -61,9 +67,6 @@ def mapping_dataset(request):
             # Store mapping data in session
             request.session['mapping_data'] = mapping_data
             
-            print("Received mapping data:", mapping_data)
-            print("Dataset shape:", dataset.shape)
-            
             return render(request, 'main_results.html')
         else:
             return HttpResponse('No dataset found in session')
@@ -77,23 +80,48 @@ def isolation_burden_analysis(request):
     if dataset_json:
         dataset = pd.read_json(dataset_json)
         columns = dataset.columns.tolist()
-        return render(request, 'isolation_burden_analysis.html', {'columns': columns})
+
+        infection_columns = dataset[request.session['mapping_data']['bacterial_infection']].unique()
+        source_columns = dataset[request.session['mapping_data']['source_input']].unique()
+        antibiotic_columns = []
+
+        for column in columns:
+            antibiotic_format = request.session['mapping_data']['antibiotic_format']
+            antibiotic_format = antibiotic_format.replace('Antibiotic', '')
+            if column.endswith(antibiotic_format):
+                antibiotic_columns.append(column)
+        return render(request, 'isolation_burden_analysis.html', {
+            'infection_columns': infection_columns, 
+            'source_columns': source_columns, 
+            'antibiotic_columns': antibiotic_columns, 
+            'columns': columns
+        })
     return redirect('upload_dataset')
 
 def generate_isolation_graph(request):
     if request.method == 'POST':
         # Get form data
-        attribute = request.POST.get('attribute')
         source = request.POST.get('source')
+        infection = request.POST.get('infection')
+        antibiotic = request.POST.get('antibiotic')
         
         # Get dataset from session
         dataset_json = request.session.get('dataset')
         if dataset_json:
             dataset = pd.read_json(dataset_json)
+            mappings = request.session.get('mapping_data')
             
-            # TODO: Generate your graph here using matplotlib or plotly
-            # For now, returning a placeholder response
-            return HttpResponse('Graph generation endpoint')
+            # Generate the plot
+            fig = isolation_burden_analysis_graph(dataset, source, infection, antibiotic, mappings)
+            
+            # Convert plot to image
+            buffer = BytesIO()
+            fig.savefig(buffer, format='png', bbox_inches='tight', transparent=True)
+            buffer.seek(0)
+            plt.close(fig)  # Close the specific figure
+            
+            # Return the image
+            return HttpResponse(buffer.getvalue(), content_type='image/png')
             
     return HttpResponse('Invalid request', status=400)
 
