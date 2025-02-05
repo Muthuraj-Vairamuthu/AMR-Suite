@@ -81,6 +81,46 @@ def isolation_burden_analysis(request):
         dataset = pd.read_json(dataset_json)
         columns = dataset.columns.tolist()
 
+        source_columns = dataset[request.session['mapping_data']['source_input']].unique()
+
+        return render(request, 'isolation_burden_analysis.html', {
+            'source_columns': source_columns, 
+            'columns': columns
+        })
+    return redirect('upload_dataset')
+
+def generate_isolation_graph(request):
+    if request.method == 'POST':
+        # Get form data
+        source = request.POST.get('source')
+        attribute = request.POST.get('attribute')
+        
+        # Get dataset from session
+        dataset_json = request.session.get('dataset')
+        if dataset_json:
+            dataset = pd.read_json(dataset_json)
+            mappings = request.session.get('mapping_data')
+            
+            # Generate the plot
+            fig = isolation_burden_analysis_graph(dataset, source,attribute, mappings)
+            
+            # Convert plot to image
+            buffer = BytesIO()
+            fig.savefig(buffer, format='png', bbox_inches='tight', transparent=True)
+            buffer.seek(0)
+            plt.close(fig)  # Close the specific figure
+            
+            # Return the image
+            return HttpResponse(buffer.getvalue(), content_type='image/png')
+            
+    return HttpResponse('Invalid request', status=400)
+
+def resistance_analysis(request):
+    dataset_json = request.session.get('dataset')
+    if dataset_json:
+        dataset = pd.read_json(dataset_json)
+        columns = dataset.columns.tolist()
+
         infection_columns = dataset[request.session['mapping_data']['bacterial_infection']].unique()
         source_columns = dataset[request.session['mapping_data']['source_input']].unique()
         antibiotic_columns = []
@@ -98,7 +138,7 @@ def isolation_burden_analysis(request):
         })
     return redirect('upload_dataset')
 
-def generate_isolation_graph(request):
+def generate_resistance_graph(request):
     if request.method == 'POST':
         # Get form data
         source = request.POST.get('source')
@@ -112,7 +152,7 @@ def generate_isolation_graph(request):
             mappings = request.session.get('mapping_data')
             
             # Generate the plot
-            fig = isolation_burden_analysis_graph(dataset, source, infection, antibiotic, mappings)
+            fig = resistance_analysis_graph(dataset, source, infection, antibiotic, mappings)
             
             # Convert plot to image
             buffer = BytesIO()
@@ -124,9 +164,6 @@ def generate_isolation_graph(request):
             return HttpResponse(buffer.getvalue(), content_type='image/png')
             
     return HttpResponse('Invalid request', status=400)
-
-def resistance_analysis(request):
-    return render(request, 'resistance_analysis.html')
 
 def scorecards(request):
     return render(request, 'scorecards.html')
