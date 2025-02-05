@@ -12,30 +12,77 @@ from . analysis_code import *
 import matplotlib
 matplotlib.use('Agg')  # Set the backend to Agg before importing pyplot
 import matplotlib.pyplot as plt
-
+from django.contrib.auth import login, authenticate, logout
+from django.contrib.auth.decorators import login_required
+from django.contrib import messages
+from django.contrib.auth.models import User
+from social_django.utils import load_strategy, load_backend
+from social_core.backends.oauth import BaseOAuth2
+from social_core.exceptions import MissingBackend, AuthAlreadyAssociated
 
 # Create your views here.
 
 
-def login_page(request):
+def login_view(request):
+    # Clear any existing messages when first loading the page
+    if request.method == 'GET':
+        storage = messages.get_messages(request)
+        storage.used = True
+
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        user = authenticate(request, username=username, password=password)
+        
+        if user is not None:
+            login(request, user)
+            print(f"{username} logged in successfully")
+            return redirect('upload_dataset')
+        else:
+            messages.error(request, 'Invalid username or password.')
+            return redirect('login')
+    
     return render(request, 'login_page.html')
 
-def login_user(request):
-    login_credentials = {
-        'noel': '1234',
-        'muthu': '1234',
-        'rishi': '1234'
-    }
-    username = request.POST['username']
-    password = request.POST['password']
+def signup_view(request):
+    if request.method == 'POST':
+        first_name = request.POST.get('first_name')
+        last_name = request.POST.get('last_name')
+        username = request.POST.get('username')
+        email = request.POST.get('email')
+        password = request.POST.get('password')
+        
+        try:
+            user = User.objects.create_user(
+                username=username,
+                email=email,
+                password=password,
+                first_name=first_name,
+                last_name=last_name
+            )
+            messages.success(request, 'Account created successfully. Please login.')
+            return redirect('login')
+        except Exception as e:
+            messages.error(request, 'Error creating account. Please try again.')
+            return redirect('signup')
+    
+    return render(request, 'signup_page.html')
 
-    if username in login_credentials and login_credentials[username] == password:
-        return redirect('/upload_dataset')
-    else:
-        return HttpResponse('Login failed')
+def logout_view(request):
+    if request.user.is_authenticated:
+        print(f"Logging out user: {request.user.username}")
+        logout(request)
+    return redirect('login')
 
+
+@login_required
 def upload_dataset(request):
-    return render(request, 'upload_dataset.html')
+    if not request.user.is_authenticated:
+        return redirect('login')
+        
+    return render(request, 'upload_dataset.html', {
+        'welcome_message': f'Welcome, {request.user.username}!'
+    })
 
 def dataset_upload(request):
     file = request.FILES['csv_file']
@@ -167,3 +214,28 @@ def generate_resistance_graph(request):
 
 def scorecards(request):
     return render(request, 'scorecards.html')
+
+def google_callback(request):
+    if request.user.is_authenticated:
+        return redirect('upload_dataset')
+    
+    try:
+        strategy = load_strategy(request)
+        backend = load_backend(strategy=strategy, name='google-oauth2', redirect_uri=None)
+        
+        if 'code' in request.GET:
+            try:
+                user = backend.complete(request=request)
+                if user and user.is_active:
+                    login(request, user)
+                    print(f"Successfully authenticated Google user: {user.email}")
+                    messages.success(request, f'Welcome, {user.first_name}!')
+                    return redirect('upload_dataset')
+            except Exception as e:
+                print(f"Error completing Google authentication: {str(e)}")
+                messages.error(request, f'Google authentication error: {str(e)}')
+    except Exception as e:
+        print(f"Error in Google callback: {str(e)}")
+        messages.error(request, 'An error occurred during Google authentication.')
+    
+    return redirect('login')

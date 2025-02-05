@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,33 +15,59 @@
         }
 
         body {
-            background-color: #1a1a1a;
+            background-color: #1E1E1E;
             color: white;
             min-height: 100vh;
-            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logout-btn {
+            background-color: #1a2133;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .logout-btn:hover {
+            background-color: #2a3143;
         }
 
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 10px 20px;
-            margin-bottom: 40px;
+            padding: 0 80px;
+            background-color: #141619;
+            height: 107px;
+            width: 100%;
         }
 
         .logo {
             font-weight: bold;
-            font-size: 1.2rem;
+            font-size: 1.5rem;
+            color: white;
+            margin-left: 0;
         }
 
         .nav-links {
             display: flex;
-            gap: 20px;
+            gap: 30px;
+            align-items: center;
+            margin-right: 0;
         }
 
         .nav-links a {
             color: white;
             text-decoration: none;
+            font-size: 1.3rem;
+        }
+
+        .nav-links img {
+            height: 65px;
+            width: auto;
         }
 
         h1 {
@@ -114,6 +142,15 @@
             from { opacity: 0; transform: translateY(-10px); }
             to { opacity: 1; transform: translateY(0); }
         }
+
+        .welcome-banner {
+            background-color: #1a2133;
+            color: white;
+            padding: 15px 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            font-size: 1.2rem;
+        }
     </style>
 </head>
 <body>
@@ -121,11 +158,16 @@
         <div class="logo">AMRSuite</div>
         <div class="nav-links">
             <a href="#">Home</a>
-            <img src="/api/placeholder/30/30" alt="Lab Logo" />
+            <a href="{% url 'logout' %}" class="logout-btn">Logout</a>
+            <img src="{% static 'media/tavlab.logo.png' %}" alt="Lab Logo" />
         </div>
     </nav>
 
     <div class="upload-container">
+        <div class="welcome-banner">
+            {{ welcome_message }}
+        </div>
+
         <form action="/dataset_upload" method="POST" enctype="multipart/form-data">
             {% csrf_token %}
             <h1>Uploading your Dataset</h1>
@@ -181,6 +223,32 @@
                 fileInfo.classList.add('visible');
             }
         });
+
+        // Handle browser back button
+        window.addEventListener('popstate', function(event) {
+            // Make a request to logout
+            fetch('{% url "logout" %}', {
+                method: 'GET',
+                credentials: 'same-origin',
+                headers: {
+                    'X-CSRFToken': '{{ csrf_token }}'
+                }
+            }).then(() => {
+                // Redirect to login page after logout
+                window.location.href = '{% url "login" %}';
+            });
+        });
+
+        // Also handle the actual back button click
+        window.onbeforeunload = function() {
+            fetch('{% url "logout" %}', {
+                method: 'GET',
+                credentials: 'same-origin',
+                headers: {
+                    'X-CSRFToken': '{{ csrf_token }}'
+                }
+            });
+        };
     </script>
 </body>
 </html>

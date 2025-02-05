@@ -1,0 +1,245 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - AMRSuite</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        body {
+            background-color: #1E1E1E;
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 80px;
+            background-color: #141619;
+            height: 107px;
+            width: 100%;
+        }
+
+        .logo {
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: white;
+            margin-left: 0;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            margin-right: 0;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.3rem;
+        }
+
+        .nav-links img {
+            height: 65px;
+            width: auto;
+        }
+
+        .page-container {
+            display: flex;
+            flex: 1;
+        }
+
+        .left-half {
+            width: 50%;
+            background-color: #22252B;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+        }
+
+        .right-half {
+            width: 50%;
+            background-color: #191D23;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+        }
+
+        .signup-section {
+            max-width: 400px;
+            width: 100%;
+        }
+
+        .login-section {
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .login-section h2 {
+            color: white;
+            font-size: 28px;
+            margin-bottom: 30px;
+        }
+
+        .login-section .signup-text {
+            color: #9ba1b0;
+            font-size: 18px;
+            margin-bottom: 50px;
+            line-height: 1.5;
+        }
+
+        .welcome-text {
+            color: white;
+            font-size: 32px;
+            margin-bottom: 35px;
+            font-weight: bold;
+            text-align: center;
+            width: 100%;
+        }
+
+        h1 {
+            margin-bottom: 25px;
+            font-size: 18px;
+            font-weight: normal;
+            text-align: left;
+        }
+
+        .signup-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        input {
+            padding: 12px;
+            border-radius: 4px;
+            border: none;
+            background-color: #E8E8E8;
+            font-size: 1rem;
+            width: 100%;
+        }
+
+        .sign-up-btn {
+            background-color: #1a2133;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 1rem;
+            width: 100%;
+        }
+
+        .login-btn {
+            background-color: #464F62;
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            width: 100%;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        button:hover, .login-btn:hover {
+            opacity: 0.9;
+        }
+
+        .alert {
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid transparent;
+            border-radius: 4px;
+            position: relative;
+        }
+
+        .alert-error {
+            color: #721c24;
+            background-color: #f8d7da;
+            border-color: #f5c6cb;
+        }
+
+        .alert-success {
+            color: #155724;
+            background-color: #d4edda;
+            border-color: #c3e6cb;
+        }
+
+        .alert .close {
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 15px;
+            cursor: pointer;
+            background: none;
+            border: 0;
+            font-size: 1.5em;
+            font-weight: bold;
+            line-height: 1;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">AMRSuite</div>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <img src="{% static 'media/tavlab.logo.png' %}" alt="Tav Lab Logo" />
+        </div>
+    </nav>
+
+    <div class="page-container">
+        <div class="left-half">
+            <section class="signup-section">
+                <div class="welcome-text">Create Account</div>
+                {% if messages %}
+                    {% for message in messages %}
+                        <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %}">
+                            {{ message }}
+                            <button type="button" class="close" onclick="this.parentElement.style.display='none'">&times;</button>
+                        </div>
+                    {% endfor %}
+                {% endif %}
+                <h1>Sign Up</h1>
+                <form class="signup-form" method="POST" action="{% url 'signup' %}">
+                    {% csrf_token %}
+                    <input type="text" name="first_name" placeholder="First Name" required>
+                    <input type="text" name="last_name" placeholder="Last Name" required>
+                    <input type="text" name="username" placeholder="Username" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <input type="password" name="password" placeholder="Password" required>
+                    <button type="submit" class="sign-up-btn">Create Account</button>
+                </form>
+            </section>
+        </div>
+
+        <div class="right-half">
+            <section class="login-section">
+                <h2>Already have an account?</h2>
+                <p class="signup-text">Sign in to continue your work!</p>
+                <a href="{% url 'login' %}" class="login-btn">Login</a>
+            </section>
+        </div>
+    </div>
+</body>
+</html> 

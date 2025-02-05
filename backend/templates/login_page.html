@@ -23,6 +23,19 @@
             flex-direction: column;
         }
 
+        .logout-btn {
+            background-color: #1a2133;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .logout-btn:hover {
+            background-color: #2a3143;
+        }
+
         nav {
             display: flex;
             justify-content: space-between;
@@ -216,6 +229,39 @@
         button:hover {
             opacity: 0.9;
         }
+
+        .alert {
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid transparent;
+            border-radius: 4px;
+            position: relative;
+        }
+
+        .alert-error {
+            color: #721c24;
+            background-color: #f8d7da;
+            border-color: #f5c6cb;
+        }
+
+        .alert-success {
+            color: #155724;
+            background-color: #d4edda;
+            border-color: #c3e6cb;
+        }
+
+        .alert .close {
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 15px;
+            cursor: pointer;
+            background: none;
+            border: 0;
+            font-size: 1.5em;
+            font-weight: bold;
+            line-height: 1;
+        }
     </style>
 </head>
 <body>
@@ -231,8 +277,16 @@
         <div class="left-half">
             <section class="login-section">
                 <div class="welcome-text">Welcome to AMRSuite</div>
+                {% if messages %}
+                    {% for message in messages %}
+                        <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %}">
+                            {{ message }}
+                            <button type="button" class="close" onclick="this.parentElement.style.display='none'">&times;</button>
+                        </div>
+                    {% endfor %}
+                {% endif %}
                 <h1>Login</h1>
-                <form class="login-form" method="POST" action="/login">
+                <form class="login-form" method="POST" action="{% url 'login' %}">
                     {% csrf_token %}
                     <input type="text" name="username" class="input-box" placeholder="Username" required>
                     <input type="password" name="password" class="input-box" placeholder="Password" required>
@@ -243,10 +297,10 @@
                         <span>or</span>
                     </div>
                     
-                    <button type="button" class="google-btn">
+                    <a href="{% url 'social:begin' 'google-oauth2' %}" class="google-btn" style="text-decoration: none;">
                         <img src="{% static 'media/google.logo.png' %}" alt="Google logo" width="20" height="20">
-                        Sign in with Google
-                    </button>
+                        <span>Sign in with Google</span>
+                    </a>
                 </form>
             </section>
         </div>
@@ -255,7 +309,9 @@
             <section class="signup-section">
                 <h2>New Here?</h2>
                 <p class="signup-text">Sign up to explore and analyze your AMST data!</p>
-                <button class="signup-btn">Sign up</button>
+                <a href="{% url 'signup' %}">
+                    <button type="button" class="signup-btn">Sign up</button>
+                </a>
             </section>
         </div>
     </div>

@@ -1,16 +1,17 @@
 from django.urls import path
-from .views import (login_page, login_user, upload_dataset, dataset_upload, 
-                mapping_dataset, isolation_burden_analysis, generate_isolation_graph,
-                resistance_analysis, generate_resistance_graph)
+from . import views
 
 urlpatterns = [
-    path('', login_page),
-    path('login', login_user),
-    path('upload_dataset', upload_dataset),
-    path('dataset_upload', dataset_upload),
-    path('mapping_dataset', mapping_dataset),
-    path('isolation_burden_analysis', isolation_burden_analysis),
-    path('generate_isolation_graph', generate_isolation_graph),
-    path('resistance_analysis', resistance_analysis),
-    path('generate_resistance_graph', generate_resistance_graph)
+    path('', views.login_view, name='login'),  # Default route goes to login
+    path('login/', views.login_view, name='login'),
+    path('signup/', views.signup_view, name='signup'),
+    path('logout/', views.logout_view, name='logout'),
+    path('upload-dataset/', views.upload_dataset, name='upload_dataset'),
+    path('dataset_upload', views.dataset_upload, name='dataset_upload'),
+    path('mapping_dataset', views.mapping_dataset, name='mapping_dataset'),
+    path('isolation_burden_analysis', views.isolation_burden_analysis, name='isolation_burden_analysis'),
+    path('generate_isolation_graph', views.generate_isolation_graph, name='generate_isolation_graph'),
+    path('resistance_analysis', views.resistance_analysis, name='resistance_analysis'),
+    path('generate_resistance_graph', views.generate_resistance_graph, name='generate_resistance_graph'),
+    path('oauth/callback/google/', views.google_callback, name='google_callback'),
 ]

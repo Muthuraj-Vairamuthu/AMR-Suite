@@ -19,13 +19,6 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('api.urls')),
-    path('login', include('api.urls')),
-    path('upload_dataset', include('api.urls')),
-    path('dataset_upload', include('api.urls')),
-    path('mapping_dataset', include('api.urls')),
-    path('isolation_burden_analysis', include('api.urls')),
-    path('generate_isolation_graph', include('api.urls')),
-    path('resistance_analysis', include('api.urls')),
-    path('generate_resistance_graph', include('api.urls'))
+    path('', include('api.urls')),  # All routes will be handled by api.urls
+    path('social-auth/', include('social_django.urls', namespace='social')),
 ]

@@ -1,1 +1,38 @@
-virt/
+# Django
+*.log
+*.pot
+*.pyc
+__pycache__/
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+media
+
+# Sensitive settings
+backend/AMR_Suite/oauth_settings.py
+
+# Environment variables
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Database
+db.sqlite3
+
+# Python compiled files
+*.pyc
+__pycache__/

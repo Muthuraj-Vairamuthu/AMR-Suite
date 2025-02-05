@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+    <div class="alert alert-info">
+        {{ welcome_message }}
+    </div>
+    
+    <!-- Add your upload dataset form here -->
+    <h2>Upload Dataset</h2>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <!-- Add your file upload fields here -->
+    </form>
+</div>
+
+<script>
+    // Handle browser back button
+    window.addEventListener('popstate', function(event) {
+        window.location.href = "{% url 'logout' %}";
+    });
+</script>
+{% endblock %} 
