@@ -29,7 +29,6 @@ def home2(request):
 def scorecard_info(request):
     return render(request, 'scorecard_info.html') 
 
-<<<<<<< Updated upstream
 def login_view(request):
     # Clear any existing messages when first loading the page
     if request.method == 'GET':
@@ -49,13 +48,11 @@ def login_view(request):
             messages.error(request, 'Invalid username or password.')
             return redirect('login')
     
-=======
 def resistance_info(request):
     return render(request,'resistance_info.html')
 def isolation_info(request):
     return render(request,'isolation_info.html')
 def login_page(request):
->>>>>>> Stashed changes
     return render(request, 'login_page.html')
 
 def signup_view(request):
