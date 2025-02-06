@@ -22,7 +22,14 @@ from social_core.exceptions import MissingBackend, AuthAlreadyAssociated
 
 # Create your views here.
 
+def home(request):
+    return render(request, 'home.html') 
+def home2(request):
+    return render(request,'home2.html')
+def scorecard_info(request):
+    return render(request, 'scorecard_info.html') 
 
+<<<<<<< Updated upstream
 def login_view(request):
     # Clear any existing messages when first loading the page
     if request.method == 'GET':
@@ -42,6 +49,13 @@ def login_view(request):
             messages.error(request, 'Invalid username or password.')
             return redirect('login')
     
+=======
+def resistance_info(request):
+    return render(request,'resistance_info.html')
+def isolation_info(request):
+    return render(request,'isolation_info.html')
+def login_page(request):
+>>>>>>> Stashed changes
     return render(request, 'login_page.html')
 
 def signup_view(request):

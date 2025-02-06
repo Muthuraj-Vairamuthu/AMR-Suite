@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AMRSuite</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            overflow-x: hidden;
+            background-color: #1a1a1a;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+        }
+
+        .logo {
+            color: white;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #4a90e2;
+        }
+
+        section {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .carousel-container {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .carousel-slide {
+            min-width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .content {
+            max-width: 1000px;
+            padding: 40px;
+            color: white;
+            background: rgba(0, 0, 0, 0.75);
+            border-radius: 20px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s ease;
+            z-index: 2;
+        }
+
+        .content.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        h1 {
+            font-size: 4em;
+            margin-bottom: 30px;
+            font-weight: 700;
+        }
+
+        p {
+            font-size: 1.6em;
+            line-height: 1.6;
+        }
+
+        #section1 .carousel-slide:nth-child(1) {
+            background-image: url('../static/media/hp3.jpg');
+        }
+
+        #section1 .carousel-slide:nth-child(2) {
+            background-image: url('https://images.unsplash.com/photo-1581093588401-fbb62a02f120?auto=format&fit=crop&q=80');
+        }
+        #section1 .carousel-slide:nth-child(3) {
+            background-image: url('../static/media/hp4.jpg');
+        }
+        #section1 .carousel-slide:nth-child(4) {
+            background-image: url('../static/media/hp5.jpg');
+        }
+        
+
+        .carousel-dots {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 12px;
+            z-index: 10;
+        }
+
+        .dot {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .dot.active {
+            background: #4a90e2;
+            transform: scale(1.2);
+        }
+
+        .carousel-arrows {
+            position: absolute;
+            width: 100%;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            justify-content: space-between;
+            padding: 0 30px;
+            z-index: 10;
+        }
+
+        .arrow {
+            width: 60px;
+            height: 60px;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            color: white;
+            font-size: 28px;
+            transition: all 0.3s ease;
+        }
+
+        .arrow:hover {
+            background: rgba(0, 0, 0, 0.9);
+            transform: scale(1.1);
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        .highlight {
+            color: #4a90e2;
+            font-weight: bold;
+        }
+
+        #section3 {
+            background: #1a1a1a;
+            position: relative;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            padding: 80px 20px;
+        }
+
+        #section3 h1 {
+            text-align: center;
+            color: white;
+            font-size: 48px;
+            margin-bottom: 60px;
+        }
+
+        .chart-carousel {
+            position: relative;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            height: 600px;
+            overflow: hidden;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 20px;
+        }
+
+        .chart-wrapper {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            height: 100%;
+        }
+
+        .chart-container {
+            flex: 0 0 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+       .chart-container img {
+    max-width: 80%;
+    border-radius: 10px;
+    transition: transform 0.5s ease-in-out, opacity 0.3s;
+}
+
+.chart-container img:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+
+        .chart-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            background: rgba(74, 144, 226, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            color: white;
+            font-size: 24px;
+            transition: all 0.3s ease;
+            z-index: 10;
+        }
+
+        .chart-arrow.prev {
+            left: 20px;
+        }
+
+        .chart-arrow.next {
+            right: 20px;
+        }
+
+        .chart-arrow:hover {
+            background: rgba(74, 144, 226, 0.4);
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .chart-dots {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            z-index: 10;
+        }
+
+        .chart-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .chart-dot.active {
+            background: #4a90e2;
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">AMRSuite</div>
+        <div class="nav-links">
+            <a href="#section1">Home</a>
+            <a href="#section3">Insights</a>
+            <a href="{% url 'login' %}">Login</a>
+        </div>
+    </nav>
+
+    <section id="section1">
+        <div class="carousel-container">
+            <div class="carousel-slide">
+                <div class="overlay"></div>
+                <div class="content">
+                    <h1>AMR is a global health threat</h1>
+                    <p>causing 1.27M deaths in 2019 and contributing to 4.95M deaths.</p>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <div class="overlay"></div>
+                <div class="content">
+                    <h1>Modern medicine at risk</h1>
+                    <p>AMR makes infections harder to treat, increasing risks in surgeries, cancer treatment, and childbirth.</p>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <div class="overlay"></div>
+                <div class="content">
+                    <h1>Misuse fuels resistance</h1>
+                    <p>Overuse of antimicrobials in humans, animals, and plants drives drug-resistant pathogens.</p>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <div class="overlay"></div>
+                <div class="content">
+                    <h1>Antibiotics crisis</h1>
+                    <p>Weak R&D pipeline and rising resistance demand urgent action for equitable access to medicines and vaccines.</p>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-dots"></div>
+        <div class="carousel-arrows">
+            <div class="arrow prev">❮</div>
+            <div class="arrow next">❯</div>
+        </div>
+    </section>
+
+    <section id="section3">
+        <h1>Data-driven decision making proves for <span class="highlight">efficient</span> decision making.</h1>
+        
+        <div class="chart-carousel">
+            <div class="chart-wrapper">
+                <div class="chart-container">
+                    <img src="../static/media/img6.png" alt="Graph 1" data-link="{% url 'home2' %}">
+                </div>
+                <div class="chart-container">
+                    <img src="../static/media/img7.png" alt="Graph 2" data-link="{% url 'home2' %}">
+                </div>
+                <div class="chart-container">
+                    <img src="../static/media/image 3.png" alt="Graph 3" data-link="{% url 'home2' %}">
+                </div>
+                
+            </div>
+            
+            <div class="chart-arrow prev">❮</div>
+            <div class="chart-arrow next">❯</div>
+            
+            <div class="chart-dots"></div>
+        </div>
+    </section>
+
+    <script>
+        class Carousel {
+            constructor(section) {
+                this.section = section;
+                this.container = section.querySelector('.carousel-container');
+                this.slides = section.querySelectorAll('.carousel-slide');
+                this.dotsContainer = section.querySelector('.carousel-dots');
+                this.prevButton = section.querySelector('.prev');
+                this.nextButton = section.querySelector('.next');
+                this.currentSlide = 0;
+                this.dots = [];
+                this.autoPlayInterval = null;
+
+                this.init();
+                this.startAutoPlay();
+            }
+
+            init() {
+                this.slides.forEach((_, index) => {
+                    const dot = document.createElement('div');
+                    dot.classList.add('dot');
+                    if (index === 0) dot.classList.add('active');
+                    dot.addEventListener('click', () => this.goToSlide(index));
+                    this.dotsContainer.appendChild(dot);
+                    this.dots.push(dot);
+                });
+
+                this.prevButton.addEventListener('click', () => {
+                    this.prevSlide();
+                    this.resetAutoPlay();
+                });
+                this.nextButton.addEventListener('click', () => {
+                    this.nextSlide();
+                    this.resetAutoPlay();
+                });
+
+                this.section.addEventListener('mouseenter', () => this.stopAutoPlay());
+                this.section.addEventListener('mouseleave', () => this.startAutoPlay());
+
+                this.slides[0].querySelector('.content').classList.add('visible');
+            }
+
+            goToSlide(index) {
+                this.slides[this.currentSlide].querySelector('.content').classList.remove('visible');
+                
+                this.currentSlide = index;
+                this.container.style.transform = `translateX(-${index * 100}%)`;
+                
+                this.dots.forEach((dot, i) => {
+                    dot.classList.toggle('active', i === index);
+                });
+
+                setTimeout(() => {
+                    this.slides[index].querySelector('.content').classList.add('visible');
+                }, 300);
+            }
+
+            prevSlide() {
+                const index = (this.currentSlide - 1 + this.slides.length) % this.slides.length;
+                this.goToSlide(index);
+            }
+
+            nextSlide() {
+                const index = (this.currentSlide + 1) % this.slides.length;
+                this.goToSlide(index);
+            }
+
+            startAutoPlay() {
+                this.autoPlayInterval = setInterval(() => this.nextSlide(), 5000);
+            }
+
+            stopAutoPlay() {
+                if (this.autoPlayInterval) {
+                    clearInterval(this.autoPlayInterval);
+                    this.autoPlayInterval = null;
+                }
+            }
+
+            resetAutoPlay() {
+                this.stopAutoPlay();
+                this.startAutoPlay();
+            }
+        }
+
+        class ChartCarousel {
+            constructor() {
+                this.wrapper = document.querySelector('.chart-wrapper');
+                this.slides = document.querySelectorAll('.chart-container');
+                this.prevButton = document.querySelector('.chart-carousel .prev');
+                this.nextButton = document.querySelector('.chart-carousel .next');
+                this.dotsContainer = document.querySelector('.chart-dots');
+                this.currentSlide = 0;
+                this.dots = [];
+
+                this.init();
+            }
+
+            init() {
+                this.slides.forEach((_, index) => {
+                    const dot = document.createElement('div');
+                    dot.classList.add('chart-dot');
+                    if (index === 0) dot.classList.add('active');
+                    dot.addEventListener('click', () => this.goToSlide(index));
+                    this.dotsContainer.appendChild(dot);
+                    this.dots.push(dot);
+                });
+
+                this.prevButton.addEventListener('click', () => this.prevSlide());
+                this.nextButton.addEventListener('click', () => this.nextSlide());
+
+                this.updateSlide();
+            }
+
+            goToSlide(index) {
+                this.currentSlide = index;
+                this.updateSlide();
+            }
+
+            prevSlide() {
+                this.currentSlide = (this.currentSlide - 1 + this.slides.length) % this.slides.length;
+                this.updateSlide();
+            }
+
+            nextSlide() {
+                this.currentSlide = (this.currentSlide + 1) % this.slides.length;
+                this.updateSlide();
+            }
+
+            updateSlide() {
+                this.wrapper.style.transform = `translateX(-${this.currentSlide * 100}%)`;
+                this.dots.forEach((dot, i) => {
+                    dot.classList.toggle('active', i === this.currentSlide);
+                });
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const section1Carousel = new Carousel(document.querySelector('#section1'));
+            
+            const chartCarousel = new ChartCarousel();
+
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        }
+    
+    
+    
+    );
+    document.querySelectorAll('.chart-container img').forEach(img => {
+    img.addEventListener('mouseenter', function() {
+        const link = this.getAttribute('data-link'); // Get Django-generated URL
+        setTimeout(() => {
+            window.location.href = link; // Redirect after delay
+        }, 500); // Delay of 500ms for smooth effect
+    });
+});
+
+    </script>
+</body>
+</html>

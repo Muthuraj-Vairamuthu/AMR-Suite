@@ -1,0 +1,257 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMRSuite - Home</title>
+
+    <!-- Swiper CSS for Carousel -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+            text-align: center;
+            background-color: #1E1E1E;
+        }
+
+        /* Navigation Bar */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 80px;
+            background-color: #191D23;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 10;
+            height: 80px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .logo {
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.3rem;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .nav-links a:hover {
+            color: #4299E1;
+        }
+
+        .nav-links img {
+            height: 55px;
+            width: auto;
+        }
+
+        /* Static Header */
+        .static-header {
+            position: fixed;
+            top: 80px;
+            width: 100%;
+            background-color: #22252B;
+            padding: 25px 0;
+            z-index: 9;
+            transition: top 0.3s ease-in-out;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .static-header h1 {
+            font-size: 2.5em;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .static-header h2 {
+            font-size: 1.3em;
+            font-weight: normal;
+        }
+
+        /* Hide header on scroll */
+        .hide-header {
+            top: -100px;
+        }
+
+        /* Background Image Slideshow */
+        .background-slider {
+            position: absolute;
+            top: 140px;
+            left: 0;
+            width: 100%;
+            height: calc(100vh - 140px);
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .bg-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            animation: fade 50s infinite;
+        }
+
+        /* Assign Background Images */
+        .image1 { background-image: url("{% static 'media/img10.png' %}"); animation-delay: 0s; }
+        .image2 { background-image: url("{% static 'media/img2.png' %}"); animation-delay: 10s; }
+        .image3 { background-image: url("{% static 'media/img3.jpg' %}"); animation-delay: 20s; }
+        .image4 { background-image: url("{% static 'media/img4.jpg' %}"); animation-delay: 30s; }
+        .image5 { background-image: url("{% static 'media/img5.jpg' %}"); animation-delay: 40s; }
+        .image6 { background-image: url("{% static 'media/img6.jpg' %}"); animation-delay: 50s; }
+        .image7 { background-image: url("{% static 'media/img7.jpg' %}"); animation-delay: 60s; }
+
+        /* Smooth Background Transition Animation */
+        @keyframes fade {
+            0% { opacity: 0; }
+            20% { opacity: 1; }
+            60% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+
+        /* SCROLL-DOWN TRIGGERED SECTION */
+        .scroll-section {
+            margin-top: 100vh;
+            padding: 80px 0;
+            background-color: #1E1E1E;
+            text-align: center;
+        }
+
+        .scroll-section h2 {
+            font-size: 2.3em;
+            font-weight: bold;
+        }
+
+        /* Swiper Carousel */
+        .swiper-container {
+            width: 60%;
+            margin: 50px auto;
+        }
+
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: white;
+            border-radius: 15px;
+            padding: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .swiper-slide:hover {
+            transform: scale(1.03);
+        }
+
+        .swiper-slide img {
+            width: 75%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        /* Swiper Pagination */
+        .swiper-pagination {
+            bottom: 15px !important;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">AMRSuite</div>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="{% url 'login' %}">Log In</a>
+            <img src="{% static 'media/tavlab.logo.png' %}" alt="Tav Lab Logo" />
+        </div>
+    </nav>
+
+    <!-- Static Header -->
+    <section class="static-header" id="header">
+        <h1>AMRSuite</h1>
+        <h2>Obtain actionable insights into your AMST Dataset</h2>
+    </section>
+
+    <!-- Background Image Slider -->
+    <div class="background-slider">
+        <div class="bg-image image1"></div>
+        <div class="bg-image image2"></div>
+        <div class="bg-image image3"></div>
+        <div class="bg-image image4"></div>
+        <div class="bg-image image5"></div>
+        <div class="bg-image image6"></div>
+        <div class="bg-image image7"></div>
+    </div>
+
+    <!-- Scroll-Triggered Section (Carousel) -->
+    <section class="scroll-section">
+        <h2>Data-driven decision making proves for <span style="color: #4299E1;">efficient</span> decision making.</h2>
+
+        <!-- Swiper Carousel -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" onclick="window.location.href='{% url "home2" %}';">
+                    <img src="{% static 'media/img5.png' %}" alt="Carousel Image 1">
+                </div>
+                <div class="swiper-slide" onclick="window.location.href='{% url "home2" %}';">
+                    <img src="{% static 'media/img6.png' %}" alt="Carousel Image 2">
+                </div>
+                <div class="swiper-slide" onclick="window.location.href='{% url "home2" %}';">
+                    <img src="{% static 'media/img7.png' %}" alt="Carousel Image 3">
+                </div>
+                <div class="swiper-slide" onclick="window.location.href='{% url "home2" %}';">
+                    <img src="{% static 'media/img8.jpg' %}" alt="Carousel Image 3">
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            effect: 'coverflow',
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            coverflowEffect: { rotate: 0, stretch: 80, depth: 300, slideShadows: false },
+            loop: true,
+            pagination: { el: '.swiper-pagination', clickable: true },
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMRSuite - Scorecards</title>
+    <style>
+        :root {
+            --primary-color: #22252B;
+            --secondary-color: #191D23;
+            --accent-color: #3b82f6;
+            --text-color: #ffffff;
+            --text-secondary: rgba(255, 255, 255, 0.7);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        body {
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            min-height: 100vh;
+        }
+
+        .navbar {
+            background: rgba(26, 32, 44, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            padding: 1rem 2rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-left {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .nav-separator {
+            color: var(--text-secondary);
+        }
+
+        .logo img {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 7rem 2rem 2rem;
+        }
+
+        .back-button {
+            margin-bottom: 2rem;
+        }
+
+        .btn-back {
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            color: var(--text-color);
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .btn-back:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateX(-5px);
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: linear-gradient(to right, #60a5fa, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            color: var(--text-secondary);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .graph-section {
+            margin-bottom: 3rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 5rem auto 0;
+            padding: 2rem;
+            text-align: center;
+        }
+        
+
+        .graph-image {
+            width: 75%;
+            height: auto;
+            max-height: 400px;
+            border-radius: 12px;
+            transition: transform 0.3s ease;
+        }
+
+        .graph-container:hover .graph-image {
+            transform: scale(1.02);
+        }
+
+        .description {
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            text-align: center;
+            line-height: 1.7;
+            color: var(--text-secondary);
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .btn-primary, .btn-secondary {
+            padding: 0.75rem 1.5rem;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+        }
+
+        .btn-primary {
+            background: var(--accent-color);
+            color: white;
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--text-color);
+        }
+
+        .btn-primary:hover, .btn-secondary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        .btn-primary:hover {
+            background: #2563eb;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 6rem 1rem 1rem;
+            }
+
+            .title {
+                font-size: 2.5rem;
+            }
+
+            .subtitle {
+                font-size: 1.25rem;
+            }
+
+            .graph-container {
+                padding: 1rem;
+            }
+
+            .action-buttons {
+                flex-direction: column;
+            }
+
+            .btn-primary, .btn-secondary {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-content">
+            <div class="nav-left">
+                <h1>AMRSuite</h1>
+                <span class="nav-separator">|</span>
+                <h2>Home</h2>
+            </div>
+            <div class="logo">
+                <img src="https://images.unsplash.com/photo-1585435557343-3b092031a831?auto=format&fit=crop&w=100" alt="Lab Logo">
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="back-button">
+    <button class="btn-back" onclick="window.location.href='{% url 'home2' %}'">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 12H5M12 19l-7-7 7-7"/>
+        </svg>
+    </button>
+</div>
+
+
+        <section class="hero">
+            <h1 class="title">Scorecards</h1>
+            <p class="subtitle">Empowering Decision-Making with Clear Resistance Insights</p>
+        </section>
+
+        <section class="graph-section">
+            <div class="graph-container">
+                <img src="../static/media/image 3.png" alt="Graph Placeholder" class="graph-image">
+            </div>
+        </section>
+
+        <section class="description">
+            <p>Dynamic scorecards visualize pathogen resistance trends against antimicrobials. These tools, in the form of videos, depict temporal AMR trends and clustering and provide clear and efficient insights, supporting professional decision-making. By showcasing resistance patterns over time and across different groups, these scorecards enhance understanding and inform effective interventions.</p>
+        </section>
+
+        <div class="action-buttons">
+            <button class="btn-primary">View Details</button>
+            <button class="btn-secondary">Download Report</button>
+        </div>
+    </main>
+</body>
+</html>

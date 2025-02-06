@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMRSuite - Resistance Patterns</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        body {
+            background-color: #191D23;
+            color: white;
+            min-height: 100vh;
+        }
+
+        header {
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #333;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-size: 1.25rem;
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        .title-section {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .title-section h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .title-section h2 {
+            color: #999;
+            font-size: 1.25rem;
+            font-weight: normal;
+        }
+
+        .carousel {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #2a2a2a;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .slides {
+            display: flex;
+            overflow: hidden;
+            aspect-ratio: 16/9;
+        }
+
+        .slide {
+            min-width: 100%;
+            position: relative;
+            transition: transform 0.5s ease;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .slide-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 2rem;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+        }
+
+        .slide-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .carousel-nav {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+            padding-bottom: 1rem;
+        }
+
+        .nav-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #666;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .nav-dot:hover {
+            background: #999;
+        }
+
+        .nav-dot.active {
+            background: white;
+            transform: scale(1.2);
+        }
+
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            backdrop-filter: blur(4px);
+            transition: background-color 0.3s ease;
+            color: white;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+        }
+
+        .carousel-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .carousel-btn.prev {
+            left: 1rem;
+        }
+
+        .carousel-btn.next {
+            right: 1rem;
+        }
+
+        .description {
+            max-width: 800px;
+            margin: 3rem auto 0;
+            text-align: center;
+            line-height: 1.6;
+            color: #999;
+        }
+
+        .slides-container {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .back-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+    transition: transform 0.2s ease;
+}
+
+.back-button:hover {
+    transform: scale(1.2);
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+                    <button class="back-button" onclick="window.location.href='{% url 'home2' %}'">←</button>
+            <span>AMRSuite</span>
+        </div>
+        <div class="nav">
+            <span>⌂</span>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="title-section">
+            <h1>Resistance Patterns</h1>
+            <h2>Decoding Resistance Trends for Smarter Antibiotic Use</h2>
+        </div>
+
+        <div class="carousel">
+            <div class="slides">
+                <div class="slides-container">
+                    <div class="slide">
+                        <img src="../static/media/img5.png" alt="Graph 1">
+                        <div class="slide-content">
+                            <h3>Antibiotic Resistance Trends 2023</h3>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="../static/media/img6.png" alt="Graph 2">
+                        <div class="slide-content">
+                            <h3>Regional Distribution Analysis</h3>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="../static/media/img7.png" alt="Graph 3">
+                        <div class="slide-content">
+                            <h3>Pathogen Response Patterns</h3>
+                        </div>
+                    </div>
+                    <!-- <div class="slide">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop&q=80" alt="Graph 4">
+                        <div class="slide-content">
+                            <h3>Treatment Effectiveness Data</h3>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?w=800&auto=format&fit=crop&q=80" alt="Graph 5">
+                        <div class="slide-content">
+                            <h3>Demographic Analysis</h3>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+
+            <button class="carousel-btn prev">←</button>
+            <button class="carousel-btn next">→</button>
+
+            <div class="carousel-nav">
+                <button class="nav-dot active"></button>
+                <button class="nav-dot"></button>
+                <button class="nav-dot"></button>
+                <!-- <button class="nav-dot"></button>
+                <button class="nav-dot"></button> -->
+            </div>
+        </div>
+
+        <div class="description">
+            <p>
+                Analyzing resistance patterns decodes trends for optimized antibiotic use. Tracking
+                pathogen responses to antimicrobials across demographics, samples, and regions
+                reveals correlations between resistance and external factors. This informs antibiotic
+                stewardship by identifying threats and guiding treatment based on resistance trends
+                and influencing factors.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const slidesContainer = document.querySelector('.slides-container');
+            const slides = document.querySelectorAll('.slide');
+            const prevButton = document.querySelector('.carousel-btn.prev');
+            const nextButton = document.querySelector('.carousel-btn.next');
+            const dots = document.querySelectorAll('.nav-dot');
+            let currentSlide = 0;
+            const totalSlides = slides.length;
+
+            function updateSlidePosition() {
+                slidesContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
+                
+                // Update dots
+                dots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === currentSlide);
+                });
+            }
+
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % totalSlides;
+                updateSlidePosition();
+            }
+
+            function prevSlide() {
+                currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+                updateSlidePosition();
+            }
+
+            // Event listeners for buttons
+            nextButton.addEventListener('click', nextSlide);
+            prevButton.addEventListener('click', prevSlide);
+
+            // Event listeners for dots
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    currentSlide = index;
+                    updateSlidePosition();
+                });
+            });
+
+            // Auto-advance slides
+            let slideInterval = setInterval(nextSlide, 5000);
+
+            // Pause on hover
+            const carousel = document.querySelector('.carousel');
+            carousel.addEventListener('mouseenter', () => {
+                clearInterval(slideInterval);
+            });
+
+            carousel.addEventListener('mouseleave', () => {
+                slideInterval = setInterval(nextSlide, 5000);
+            });
+
+            // Initialize first slide
+            updateSlidePosition();
+        });
+    </script>
+</body>
+</html>
