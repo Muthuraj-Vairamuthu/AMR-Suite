@@ -236,7 +236,9 @@
         }
 
        .chart-container img {
-    max-width: 80%;
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
     border-radius: 10px;
     transition: transform 0.5s ease-in-out, opacity 0.3s;
 }
@@ -358,13 +360,13 @@
         <div class="chart-carousel">
             <div class="chart-wrapper">
                 <div class="chart-container">
-                    <img src="../static/media/img6.png" alt="Graph 1" data-link="{% url 'home2' %}">
+                    <img src="../static/media/resistance/e1.png" alt="Graph 1" data-link="{% url 'home2' %}">
                 </div>
                 <div class="chart-container">
-                    <img src="../static/media/img7.png" alt="Graph 2" data-link="{% url 'home2' %}">
+                    <img src="../static/media/isolation/ag.png" alt="Graph 2" data-link="{% url 'home2' %}">
                 </div>
                 <div class="chart-container">
-                    <img src="../static/media/image 3.png" alt="Graph 3" data-link="{% url 'home2' %}">
+                    <img src="../static/media/sc1.png" alt="Graph 3" data-link="{% url 'home2' %}">
                 </div>
                 
             </div>
@@ -531,13 +533,14 @@
     
     );
     document.querySelectorAll('.chart-container img').forEach(img => {
-    img.addEventListener('mouseenter', function() {
+    img.addEventListener('click', function() {
         const link = this.getAttribute('data-link'); // Get Django-generated URL
-        setTimeout(() => {
-            window.location.href = link; // Redirect after delay
-        }, 500); // Delay of 500ms for smooth effect
+        if (link) {
+            window.location.href = link; // Redirect immediately on click
+        }
     });
 });
+
 
     </script>
 </body>

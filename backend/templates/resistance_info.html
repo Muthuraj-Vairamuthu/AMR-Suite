@@ -9,61 +9,69 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
         }
 
         body {
-            background-color: #191D23;
+            background: linear-gradient(135deg, #000000 0%, #000000 100%);
             color: white;
             min-height: 100vh;
         }
 
         header {
-            padding: 1rem;
+            padding: 1.5rem 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 1px solid #333;
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .logo {
             display: flex;
             align-items: center;
-            gap: 1rem;
-            font-size: 1.25rem;
-            font-weight: bold;
+            gap: 1.5rem;
+            font-size: 1.5rem;
+            font-weight: 600;
+            letter-spacing: -0.5px;
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
-            padding: 2rem 1rem;
+            padding: 3rem 2rem;
         }
 
         .title-section {
             text-align: center;
-            margin-bottom: 3rem;
+            margin-bottom: 4rem;
         }
 
         .title-section h1 {
             font-size: 2.5rem;
             margin-bottom: 1rem;
+            background: linear-gradient(to right, #fff, #cbd5e1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.5px;
         }
 
         .title-section h2 {
-            color: #999;
-            font-size: 1.25rem;
-            font-weight: normal;
+            color: #94a3b8;
+            font-size: 1.5rem;
+            font-weight: 400;
         }
 
         .carousel {
             position: relative;
-            max-width: 1000px;
+            max-width: 1200px;
             margin: 0 auto;
-            background: #2a2a2a;
-            border-radius: 1rem;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 1.5rem;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.05);
         }
 
         .slides {
@@ -75,13 +83,14 @@
         .slide {
             min-width: 100%;
             position: relative;
-            transition: transform 0.5s ease;
         }
 
         .slide img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: contain;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 1rem;
         }
 
         .slide-content {
@@ -89,35 +98,38 @@
             bottom: 0;
             left: 0;
             right: 0;
-            padding: 2rem;
-            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+            padding: 3rem 2rem 2rem;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
         }
 
         .slide-content h3 {
-            font-size: 1.5rem;
+            font-size: 1.75rem;
             margin-bottom: 0.5rem;
+            font-weight: 500;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
         }
 
         .carousel-nav {
             display: flex;
             justify-content: center;
-            gap: 0.5rem;
+            gap: 0.75rem;
             margin-top: 1rem;
-            padding-bottom: 1rem;
+            padding: 1rem 0;
+            background: rgba(0, 0, 0, 0.3);
         }
 
         .nav-dot {
-            width: 12px;
-            height: 12px;
+            width: 10px;
+            height: 10px;
             border-radius: 50%;
-            background: #666;
+            background: rgba(255, 255, 255, 0.2);
             border: none;
             cursor: pointer;
             transition: all 0.3s ease;
         }
 
         .nav-dot:hover {
-            background: #999;
+            background: rgba(255, 255, 255, 0.4);
         }
 
         .nav-dot.active {
@@ -131,63 +143,109 @@
             transform: translateY(-50%);
             background: rgba(255, 255, 255, 0.1);
             border: none;
-            width: 40px;
-            height: 40px;
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
             cursor: pointer;
-            backdrop-filter: blur(4px);
-            transition: background-color 0.3s ease;
+            backdrop-filter: blur(8px);
+            transition: all 0.3s ease;
             color: white;
             font-size: 1.5rem;
             display: flex;
             align-items: center;
             justify-content: center;
             z-index: 10;
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .carousel-btn:hover {
             background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-50%) scale(1.1);
         }
 
         .carousel-btn.prev {
-            left: 1rem;
+            left: 1.5rem;
         }
 
         .carousel-btn.next {
-            right: 1rem;
+            right: 1.5rem;
         }
 
         .description {
-            max-width: 800px;
-            margin: 3rem auto 0;
+            max-width: 900px;
+            margin: 4rem auto 0;
             text-align: center;
-            line-height: 1.6;
-            color: #999;
+            line-height: 1.8;
+            color: #cbd5e1;
+            font-size: 1.125rem;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.05);
         }
 
         .slides-container {
             display: flex;
-            transition: transform 0.5s ease-in-out;
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
         }
+
         .back-button {
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    color: white;
-    transition: transform 0.2s ease;
-}
+            background: none;
+            border: none;
+            font-size: 28px;
+            cursor: pointer;
+            color: white;
+            transition: all 0.3s ease;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.05);
+        }
 
-.back-button:hover {
-    transform: scale(1.2);
-}
+        .back-button:hover {
+            transform: scale(1.1);
+            background: rgba(255, 255, 255, 0.1);
+        }
 
+        .nav span {
+            font-size: 1.5rem;
+            color: white;
+            cursor: pointer;
+            transition: opacity 0.3s ease;
+        }
+
+        .nav span:hover {
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            .title-section h1 {
+                font-size: 2rem;
+            }
+            
+            .title-section h2 {
+                font-size: 1.25rem;
+            }
+
+            .carousel-btn {
+                width: 40px;
+                height: 40px;
+                font-size: 1.25rem;
+            }
+
+            .slide-content h3 {
+                font-size: 1.5rem;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
         <div class="logo">
-                    <button class="back-button" onclick="window.location.href='{% url 'home2' %}'">←</button>
+            <button class="back-button" onclick="window.location.href='{% url 'home2' %}'">←</button>
             <span>AMRSuite</span>
         </div>
         <div class="nav">
@@ -205,7 +263,7 @@
             <div class="slides">
                 <div class="slides-container">
                     <div class="slide">
-                        <img src="../static/media/img5.png" alt="Graph 1">
+                        <img src="../static/media/resistance/eb-sample-ci1 (1).png" alt="Graph 1">
                         <div class="slide-content">
                             <h3>Antibiotic Resistance Trends 2023</h3>
                         </div>
@@ -217,23 +275,11 @@
                         </div>
                     </div>
                     <div class="slide">
-                        <img src="../static/media/img7.png" alt="Graph 3">
+                        <img src="../static/media/resistance/ef-sample-ci3 (1).png" alt="Graph 3">
                         <div class="slide-content">
                             <h3>Pathogen Response Patterns</h3>
                         </div>
                     </div>
-                    <!-- <div class="slide">
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop&q=80" alt="Graph 4">
-                        <div class="slide-content">
-                            <h3>Treatment Effectiveness Data</h3>
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <img src="https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?w=800&auto=format&fit=crop&q=80" alt="Graph 5">
-                        <div class="slide-content">
-                            <h3>Demographic Analysis</h3>
-                        </div>
-                    </div> -->
                 </div>
             </div>
 
@@ -244,8 +290,6 @@
                 <button class="nav-dot active"></button>
                 <button class="nav-dot"></button>
                 <button class="nav-dot"></button>
-                <!-- <button class="nav-dot"></button>
-                <button class="nav-dot"></button> -->
             </div>
         </div>
 

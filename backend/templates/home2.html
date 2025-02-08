@@ -4,19 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AMRSuite Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #4a90e2;
-            --background: #191D23;
-            --card-bg: rgba(255, 255, 255, 0.05);
-            --text: #e2e8f0;
+            --primary: #ffffff;
+            --primary-light: #ffffff;
+            --background: #0A0C14;
+            --card-bg: rgba(255, 255, 255, 0.03);
+            --text: #E5E5E5;
+            --gold-gradient: linear-gradient(135deg, #ffffff, #ffffff);
         }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
         }
 
         body {
@@ -24,11 +28,15 @@
             color: var(--text);
             min-height: 100vh;
             overflow-x: hidden;
+            font-family: 'Inter', sans-serif;
+            background-image: 
+                radial-gradient(circle at 20% 20%, rgba(184, 134, 11, 0.03) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(218, 165, 32, 0.03) 0%, transparent 50%);
         }
 
         .navbar {
-            background: rgba(15, 23, 42, 0.8);
-            padding: 1.25rem 2rem;
+            background: rgba(10, 12, 20, 0.95);
+            padding: 1.5rem 4rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -36,31 +44,36 @@
             width: 100%;
             top: 0;
             z-index: 1000;
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(184, 134, 11, 0.1);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
         }
 
         .navbar-brand {
-            font-size: 1.5rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
             font-weight: 700;
-            color: var(--primary);
+            color: rgb(112, 87, 87);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
             text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
+            letter-spacing: 1px;
         }
 
         .nav-links {
             display: flex;
-            gap: 2rem;
+            gap: 3rem;
         }
 
         .nav-link {
             color: var(--text);
             text-decoration: none;
             font-weight: 500;
-            transition: color 0.3s ease;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
             position: relative;
+            padding: 0.5rem 0;
         }
 
         .nav-link::after {
@@ -68,10 +81,15 @@
             position: absolute;
             width: 0;
             height: 2px;
-            bottom: -4px;
-            left: 0;
-            background-color: var(--primary);
-            transition: width 0.3s ease;
+            bottom: 0;
+            left: 50%;
+            background: var(--gold-gradient);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        .nav-link:hover {
+            color: var(--primary-light);
         }
 
         .nav-link:hover::after {
@@ -79,17 +97,17 @@
         }
 
         .main-content {
-            margin-top: 100px;
-            padding: 0 2rem;
+            margin-top: 120px;
+            padding: 0 4rem;
         }
 
         .cards-container {
             display: flex;
-            gap: 2rem;
+            gap: 3rem;
             scroll-behavior: smooth;
             scroll-snap-type: x mandatory;
             overflow-x: auto;
-            padding: 1rem 0;
+            padding: 2rem 0;
             -ms-overflow-style: none;
             scrollbar-width: none;
         }
@@ -100,28 +118,34 @@
 
         .card {
             flex: 0 0 auto;
-            width: calc(100vw - 4rem);
-            max-width: 900px;
+            width: calc(100vw - 8rem);
+            max-width: 1000px;
             background: var(--card-bg);
-            border-radius: 24px;
-            padding: 2rem;
+            border-radius: 30px;
+            padding: 3rem;
             scroll-snap-align: center;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: all 0.3s ease;
+            border: 1px solid rgba(184, 134, 11, 0.1);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
             overflow: hidden;
+            backdrop-filter: blur(10px);
         }
 
         .card::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 100%;
-            background: linear-gradient(45deg, transparent, rgba(74, 144, 226, 0.1), transparent);
+            inset: 0;
+            background: linear-gradient(45deg, transparent, rgba(184, 134, 11, 0.05), transparent);
             transform: translateX(-100%);
-            transition: transform 0.6s ease;
+            transition: transform 0.8s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(184, 134, 11, 0.2);
+            box-shadow: 
+                0 20px 40px rgba(0, 0, 0, 0.2),
+                0 0 100px rgba(184, 134, 11, 0.1);
         }
 
         .card:hover::before {
@@ -129,99 +153,117 @@
         }
 
         .graph-container {
-            background: white;
-            border-radius: 16px;
-            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 20px;
+            padding: 2rem;
             width: 100%;
-            height: 400px;
-            margin-bottom: 1.5rem;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
+            height: 450px;
+            margin-bottom: 2rem;
+            box-shadow: 
+                0 10px 30px rgba(0, 0, 0, 0.1),
+                inset 0 0 0 1px rgba(184, 134, 11, 0.1);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            overflow: hidden;
         }
 
         .graph-container:hover {
             transform: scale(1.02);
+            box-shadow: 
+                0 20px 40px rgba(0, 0, 0, 0.2),
+                inset 0 0 0 1px rgba(184, 134, 11, 0.2);
         }
 
         .graph-container img {
             width: 100%;
             height: 100%;
             object-fit: contain;
-            border-radius: 8px;
+            border-radius: 12px;
+            transition: all 0.5s ease;
         }
 
         .description {
-            font-size: 1.1rem;
-            line-height: 1.7;
-            color: rgba(255, 255, 255, 0.9);
-            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: rgba(229, 229, 229, 0.9);
+            margin-bottom: 2rem;
+            font-weight: 300;
         }
 
         .card-button {
-            background: var(--primary);
-            color: white;
-            padding: 1rem 2rem;
-            border-radius: 12px;
+            background: var(--gold-gradient);
+            color: var(--background);
+            padding: 1.2rem 2.5rem;
+            border-radius: 15px;
             text-decoration: none;
             display: inline-block;
-            font-weight: 500;
-            transition: all 0.3s ease;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             border: none;
             cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(184, 134, 11, 0.2);
+        }
+
+        .card-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), transparent);
+            transform: translateX(-100%);
+            transition: transform 0.6s ease;
         }
 
         .card-button:hover {
             transform: translateY(-2px);
-            box-shadow: 0 4px 20px rgba(74, 144, 226, 0.4);
+            box-shadow: 0 8px 25px rgba(184, 134, 11, 0.3);
+        }
+
+        .card-button:hover::before {
+            transform: translateX(100%);
         }
 
         .navigation-controls {
             position: fixed;
-            bottom: 2rem;
+            bottom: 3rem;
             left: 50%;
             transform: translateX(-50%);
             display: flex;
-            gap: 1rem;
+            gap: 1.5rem;
             z-index: 1000;
-            pointer-events: none;
         }
 
         .nav-button {
-            width: 50px;
-            height: 50px;
+            width: 60px;
+            height: 60px;
             border-radius: 50%;
-            background: rgba(74, 144, 226, 0.2);
-            border: 1px solid rgba(74, 144, 226, 0.3);
-            color: white;
+            background: rgba(10, 12, 20, 0.8);
+            border: 1px solid rgba(184, 134, 11, 0.2);
+            color: var(--primary);
             display: flex;
             align-items: center;
             justify-content: center;
             cursor: pointer;
-            transition: all 0.3s ease;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             backdrop-filter: blur(10px);
-            pointer-events: auto;
             font-size: 1.5rem;
-            line-height: 1;
-            padding: 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
 
         .nav-button:hover {
-            background: rgba(74, 144, 226, 0.4);
+            background: rgba(184, 134, 11, 0.1);
+            border-color: rgba(184, 134, 11, 0.4);
             transform: scale(1.1);
-        }
-
-        .nav-button:active {
-            transform: scale(0.95);
-        }
-
-        .nav-button:focus {
-            outline: none;
-            box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.5);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
         }
 
         .progress-bar {
             position: fixed;
-            bottom: 1rem;
+            bottom: 2rem;
             left: 50%;
             transform: translateX(-50%);
             width: 200px;
@@ -233,14 +275,22 @@
 
         .progress {
             height: 100%;
-            background: var(--primary);
+            background: var(--gold-gradient);
             width: 33.33%;
-            transition: transform 0.3s ease;
+            transition: transform 0.4s ease;
         }
 
         @media (max-width: 768px) {
+            .navbar {
+                padding: 1.2rem;
+            }
+
+            .main-content {
+                padding: 0 1.2rem;
+            }
+
             .card {
-                width: calc(100vw - 3rem);
+                width: calc(100vw - 2.4rem);
                 padding: 1.5rem;
             }
 
@@ -248,8 +298,12 @@
                 font-size: 1rem;
             }
 
-            .navbar {
-                padding: 1rem;
+            .nav-links {
+                gap: 1.5rem;
+            }
+
+            .navbar-brand {
+                font-size: 1.5rem;
             }
         }
     </style>
@@ -259,8 +313,6 @@
         <a href="#" class="navbar-brand">AMRSuite</a>
         <div class="nav-links">
             <a href="{% url 'home' %}" class="nav-link">Home</a>
-
-
             <a href="#" class="nav-link">Dashboard</a>
         </div>
     </nav>
@@ -269,38 +321,35 @@
         <div class="cards-container" id="cards-container">
             <div class="card">
                 <div class="graph-container">
-    <img src="../static/media/img7.png" alt="Species Distribution Graph">
-</div>
-<p class="description">
-    Identify the frequency and distribution of pathogen isolates across various clinical samples, 
-    enabling a clearer understanding of infection trends and patterns in antimicrobial resistance.
-</p>
-<a href="{% url 'isolation_info' %}" class="card-button">Explore Analysis</a>
+                    <img src="../static/media/img7.png" alt="Species Distribution Graph">
+                </div>
+                <p class="description">
+                    Identify the frequency and distribution of pathogen isolates across various clinical samples, 
+                    enabling a clearer understanding of infection trends and patterns in antimicrobial resistance.
+                </p>
+                <a href="{% url 'isolation_info' %}" class="card-button">Explore Analysis</a>
+            </div>
 
-</div>
+            <div class="card">
+                <div class="graph-container">
+                    <img src="../static/media/img6.png" alt="Resistance Trends Graph">
+                </div>
+                <p class="description">
+                    Explore resistance trends across pathogens with respect to age, source, and region, 
+                    identifying common patterns and emerging threats in antimicrobial resistance.
+                </p>
+                <a href="{% url 'resistance_info' %}" class="card-button">View Trends</a>
+            </div>
 
-<div class="card">
-    <div class="graph-container">
-        <img src="../static/media/img6.png" alt="Resistance Trends Graph">
-    </div>
-    <p class="description">
-        Explore resistance trends across pathogens with respect to age, source, and region, 
-        identifying common patterns and emerging threats in antimicrobial resistance.
-    </p>
-    <a href="{% url 'resistance_info' %}" class="card-button">View Trends</a>
-</div>
-
-<div class="card">
-    <div class="graph-container">
-        <img src="../static/media/img5.png" alt="Monitoring Graph">
-    </div>
-    <p class="description">
-        Track antimicrobial resistance changes over time to support data-driven decision making 
-        in infection control and treatment strategies.
-    </p>
-    <a href="{% url 'scorecard_info' %}" class="card-button">Monitor Changes</a>
-</div>
-
+            <div class="card">
+                <div class="graph-container">
+                    <img src="../static/media/img5.png" alt="Monitoring Graph">
+                </div>
+                <p class="description">
+                    Track antimicrobial resistance changes over time to support data-driven decision making 
+                    in infection control and treatment strategies.
+                </p>
+                <a href="{% url 'scorecard_info' %}" class="card-button">Monitor Changes</a>
             </div>
         </div>
     </main>
@@ -328,32 +377,20 @@
         }
 
         function navigate(direction) {
-            // Prevent default behavior
             event.preventDefault();
-            
-            // Calculate new card index
             currentCard = Math.max(0, Math.min(currentCard + direction, totalCards - 1));
-            
-            // Calculate exact scroll position
             const cardWidth = container.querySelector('.card').offsetWidth;
-            const scrollPosition = currentCard * (cardWidth + 32); // 32px is the gap between cards
+            const gap = 48; // 3rem gap
+            const scrollPosition = currentCard * (cardWidth + gap);
             
-            // Smooth scroll to position
             container.scrollTo({
                 left: scrollPosition,
                 behavior: 'smooth'
             });
             
-            // Update progress immediately
             updateProgress();
         }
 
-        function showDetails(index) {
-            // Placeholder for detailed view functionality
-            console.log(`Showing details for card ${index}`);
-        }
-
-        // Touch handling with improved precision
         let startX;
         let scrollLeft;
         let isDragging = false;
@@ -374,20 +411,14 @@
 
         container.addEventListener('touchend', () => {
             isDragging = false;
-            startX = null;
-            
-            // Snap to nearest card
             const cardWidth = container.querySelector('.card').offsetWidth;
             currentCard = Math.round(container.scrollLeft / cardWidth);
-            navigate(0); // This will snap to the current card
+            navigate(0);
         });
 
-        // Improved scroll handling
         let scrollTimeout;
         container.addEventListener('scroll', () => {
             updateProgress();
-            
-            // Update current card based on scroll position with debouncing
             clearTimeout(scrollTimeout);
             scrollTimeout = setTimeout(() => {
                 const cardWidth = container.querySelector('.card').offsetWidth;
@@ -395,7 +426,6 @@
             }, 100);
         });
 
-        // Prevent scroll chaining
         container.addEventListener('wheel', (e) => {
             const delta = Math.abs(e.deltaY);
             if (delta > 0) {
@@ -404,15 +434,13 @@
             }
         }, { passive: false });
 
-        // Initialize
-        updateProgress();
-
-        // Prevent default behavior for arrow buttons
         document.querySelectorAll('.nav-button').forEach(button => {
             button.addEventListener('click', (e) => {
                 e.preventDefault();
             });
         });
+
+        updateProgress();
     </script>
 </body>
 </html>

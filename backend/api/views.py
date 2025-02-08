@@ -94,6 +94,9 @@ def upload_dataset(request):
     return render(request, 'upload_dataset.html', {
         'welcome_message': f'Welcome, {request.user.username}!'
     })
+def login_user(request):
+    # Your login logic here
+    return HttpResponse("Login Successful")
 
 def dataset_upload(request):
     file = request.FILES['csv_file']
