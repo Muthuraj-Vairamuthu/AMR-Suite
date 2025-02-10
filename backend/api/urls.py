@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import (home,home2,scorecard_info,resistance_info,isolation_info,login_page, login_user, upload_dataset, dataset_upload, 
+from .views import (home,home2,scorecard_info,resistance_info,isolation_info,login_page,signup_view, login_user, upload_dataset, dataset_upload, 
                 mapping_dataset, isolation_burden_analysis, generate_isolation_graph,
                 resistance_analysis, generate_resistance_graph)
 
@@ -12,6 +12,7 @@ urlpatterns = [
 
     path('home2', home2, name='home2'),
     path('login/', login_page, name='login'),
+    path('signup/', signup_view, name='signup'), 
     path('login-user/', login_user, name='login_user'),
     path('isolation-info/', isolation_info, name='isolation_info'),
     path('resistance-info/', resistance_info, name='resistance_info'),
