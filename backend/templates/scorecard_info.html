@@ -133,26 +133,24 @@
 
         .graph-section {
     display: flex;
-    justify-content: center;  /* Center the container horizontally */
-    align-items: center;      /* Center the container vertically if needed */
-    padding: 2rem 0;          /* Add spacing around */
+    justify-content: center; /* Center horizontally */
+    align-items: center;
+    padding: 2rem 0;
 }
 
-        .graph-container {
-    max-width: 1000px;  /* Make the container more compact */
-    width: 90%;        /* Ensure responsiveness */
-    text-align: center; /* Ensures everything inside is centered */
+.graph-container {
+    max-width: 900px; /* Reduce max-width for better alignment */
+    width: 100%;
+    text-align: center;
     background: rgba(255, 255, 255, 0.03);
     border-radius: 1.5rem;
     padding: 1.5rem;
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
     border: 1px solid rgba(255, 255, 255, 0.05);
-    transition: transform 0.3s ease;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
 
   .graph-container:hover {
     transform: translateY(-5px);
@@ -160,24 +158,25 @@
 
 .graph-image {
     width: 100%;
-    max-width: 900px; /* Set a max-width so it doesn’t get too large */
-    height: auto; /* Maintain aspect ratio */
-    object-fit: contain; /* Ensure the full image is visible */
+    max-width: 800px; /* Reduce size so it doesn’t dominate the screen */
+    height: auto;
+    object-fit: contain;
     border-radius: 1rem;
 }
 
-        .description {
-            max-width: 900px;
-            margin: 4rem auto;
-            text-align: center;
-            line-height: 1.8;
-            color: var(--text-secondary);
-            font-size: 1.125rem;
-            padding: 2rem;
-            background: rgba(255, 255, 255, 0.03);
-            border-radius: 1rem;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-        }
+
+       .description {
+    max-width: 800px; /* Reduce width for better alignment */
+    margin: 3rem auto; /* Adjust spacing */
+    text-align: center;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    font-size: 1.125rem;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
 
         .action-buttons {
             display: flex;

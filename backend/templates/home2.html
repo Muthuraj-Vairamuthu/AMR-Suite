@@ -34,37 +34,30 @@
                 radial-gradient(circle at 80% 80%, rgba(218, 165, 32, 0.03) 0%, transparent 50%);
         }
 
-        .navbar {
-            background: rgba(10, 12, 20, 0.95);
-            padding: 1.5rem 4rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(184, 134, 11, 0.1);
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        }
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 4rem;
+}
 
-        .navbar-brand {
-            font-family: 'Playfair Display', serif;
-            font-size: 2rem;
-            font-weight: 700;
-            color: rgb(112, 87, 87);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            text-decoration: none;
-            letter-spacing: 1px;
-        }
+.navbar-brand {
+   font-family: 'Arial', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--text); /* Uses the theme color */
+    text-decoration: none;
+    letter-spacing: 1px;
+    background: var(--gold-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
 
-        .nav-links {
-            display: flex;
-            gap: 3rem;
-        }
+.nav-links {
+    display: flex;
+    gap: 3rem;
+}
 
         .nav-link {
             color: var(--text);
@@ -97,7 +90,7 @@
         }
 
         .main-content {
-            margin-top: 120px;
+            /* margin-top: 10px; */
             padding: 0 4rem;
         }
 
@@ -130,6 +123,13 @@
             overflow: hidden;
             backdrop-filter: blur(10px);
         }
+        .card-title {
+    font-size: 25px; /* Adjust heading size */
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 1rem;
+    text-align: center;
+}
 
         .card::before {
             content: '';
@@ -304,55 +304,60 @@
 
             .navbar-brand {
                 font-size: 1.5rem;
+                color: #ffffff;
             }
         }
     </style>
 </head>
 <body>
     <nav class="navbar">
-        <a href="#" class="navbar-brand">AMRSuite</a>
-        <div class="nav-links">
-            <a href="{% url 'home' %}" class="nav-link">Home</a>
-            <a href="#" class="nav-link">Dashboard</a>
+    <a href="#" class="navbar-brand">AMRSuite</a>
+    <div class="nav-links">
+        <a href="{% url 'home' %}" class="nav-link">Home</a>
+        <a href="#" class="nav-link">Dashboard</a>
+    </div>
+</nav>
+
+
+   <main class="main-content">
+    <div class="cards-container" id="cards-container">
+        <div class="card">
+            <h2 class="card-title">Isolation Rates</h2>
+            <div class="graph-container">
+                <img src="../static/media/isolation/gs.png" alt="Species Distribution Graph">
+            </div>
+            <p class="description">
+                Identify the frequency and distribution of pathogen isolates across various clinical samples, 
+                enabling a clearer understanding of infection trends and patterns in antimicrobial resistance.
+            </p>
+            <a href="{% url 'isolation_info' %}" class="card-button">Explore Analysis</a>
         </div>
-    </nav>
 
-    <main class="main-content">
-        <div class="cards-container" id="cards-container">
-            <div class="card">
-                <div class="graph-container">
-                    <img src="../static/media/img7.png" alt="Species Distribution Graph">
-                </div>
-                <p class="description">
-                    Identify the frequency and distribution of pathogen isolates across various clinical samples, 
-                    enabling a clearer understanding of infection trends and patterns in antimicrobial resistance.
-                </p>
-                <a href="{% url 'isolation_info' %}" class="card-button">Explore Analysis</a>
+        <div class="card">
+            <h2 class="card-title">Resistance Analysis</h2>
+            <div class="graph-container">
+                <img src="../static/media/resistance/eb-sample-ci1 (1).png" alt="Resistance Trends Graph">
             </div>
-
-            <div class="card">
-                <div class="graph-container">
-                    <img src="../static/media/img6.png" alt="Resistance Trends Graph">
-                </div>
-                <p class="description">
-                    Explore resistance trends across pathogens with respect to age, source, and region, 
-                    identifying common patterns and emerging threats in antimicrobial resistance.
-                </p>
-                <a href="{% url 'resistance_info' %}" class="card-button">View Trends</a>
-            </div>
-
-            <div class="card">
-                <div class="graph-container">
-                    <img src="../static/media/img5.png" alt="Monitoring Graph">
-                </div>
-                <p class="description">
-                    Track antimicrobial resistance changes over time to support data-driven decision making 
-                    in infection control and treatment strategies.
-                </p>
-                <a href="{% url 'scorecard_info' %}" class="card-button">Monitor Changes</a>
-            </div>
+            <p class="description">
+                Explore resistance trends across pathogens with respect to age, source, and region, 
+                identifying common patterns and emerging threats in antimicrobial resistance.
+            </p>
+            <a href="{% url 'resistance_info' %}" class="card-button">View Trends</a>
         </div>
-    </main>
+
+        <div class="card">
+            <h2 class="card-title">Scorecard Trends</h2>
+            <div class="graph-container">
+                <img src="../static/media/sc1.png" alt="Monitoring Graph">
+            </div>
+            <p class="description">
+                Track antimicrobial resistance changes over time to support data-driven decision making 
+                in infection control and treatment strategies.
+            </p>
+            <a href="{% url 'scorecard_info' %}" class="card-button">Monitor Changes</a>
+        </div>
+    </div>
+</main>
 
     <div class="navigation-controls">
         <button class="nav-button" onclick="navigate(-1)">←</button>
@@ -365,82 +370,84 @@
 
     <script>
         const container = document.getElementById('cards-container');
-        const progress = document.getElementById('progress');
-        let currentCard = 0;
-        const totalCards = document.querySelectorAll('.card').length;
+const progress = document.getElementById('progress');
+let currentCard = 0;
+const totalCards = document.querySelectorAll('.card').length;
 
-        function updateProgress() {
-            const scrollPosition = container.scrollLeft;
-            const maxScroll = container.scrollWidth - container.clientWidth;
-            const percentage = (scrollPosition / maxScroll) * 100;
-            progress.style.transform = `translateX(${percentage}%)`;
-        }
+function updateProgress() {
+    const scrollPosition = container.scrollLeft;
+    const maxScroll = container.scrollWidth - container.clientWidth;
+    const percentage = (scrollPosition / maxScroll) * 100;
+    progress.style.width = `${percentage}%`;
+}
 
-        function navigate(direction) {
-            event.preventDefault();
-            currentCard = Math.max(0, Math.min(currentCard + direction, totalCards - 1));
-            const cardWidth = container.querySelector('.card').offsetWidth;
-            const gap = 48; // 3rem gap
-            const scrollPosition = currentCard * (cardWidth + gap);
-            
-            container.scrollTo({
-                left: scrollPosition,
-                behavior: 'smooth'
-            });
-            
-            updateProgress();
-        }
+function navigate(direction) {
+    event.preventDefault();
+    currentCard = Math.max(0, Math.min(currentCard + direction, totalCards - 1));
+    const cardWidth = container.querySelector('.card').offsetWidth;
+    const gap = 48; // 3rem gap
+    const scrollPosition = currentCard * (cardWidth + gap);
 
-        let startX;
-        let scrollLeft;
-        let isDragging = false;
+    container.scrollTo({
+        left: scrollPosition,
+        behavior: 'smooth'
+    });
+}
 
-        container.addEventListener('touchstart', (e) => {
-            isDragging = true;
-            startX = e.touches[0].pageX - container.offsetLeft;
-            scrollLeft = container.scrollLeft;
+// Handle touch-based scrolling (mobile devices)
+let startX, scrollLeft, isDragging = false;
+
+container.addEventListener('touchstart', (e) => {
+    isDragging = true;
+    startX = e.touches[0].pageX - container.offsetLeft;
+    scrollLeft = container.scrollLeft;
+});
+
+container.addEventListener('touchmove', (e) => {
+    if (!isDragging) return;
+    e.preventDefault();
+    const x = e.touches[0].pageX - container.offsetLeft;
+    const walk = (startX - x) * 2;
+    container.scrollLeft = scrollLeft + walk;
+});
+
+container.addEventListener('touchend', () => {
+    isDragging = false;
+    const cardWidth = container.querySelector('.card').offsetWidth + 48; // Include gap
+    currentCard = Math.round(container.scrollLeft / cardWidth);
+    navigate(0);
+});
+
+// Handle scroll event with smooth snapping
+let isScrolling;
+container.addEventListener('scroll', () => {
+    updateProgress();
+    window.clearTimeout(isScrolling);
+    isScrolling = setTimeout(() => {
+        const cardWidth = container.querySelector('.card').offsetWidth + 48; // Include gap
+        currentCard = Math.round(container.scrollLeft / cardWidth);
+    }, 100);
+});
+
+// Enable smooth horizontal scrolling with mouse wheel
+container.addEventListener('wheel', (e) => {
+    if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) { 
+        e.preventDefault();
+        container.scrollBy({
+            left: e.deltaY > 0 ? 200 : -200,
+            behavior: 'smooth'
         });
+    }
+}, { passive: false });
 
-        container.addEventListener('touchmove', (e) => {
-            if (!isDragging) return;
-            e.preventDefault();
-            const x = e.touches[0].pageX - container.offsetLeft;
-            const walk = (startX - x) * 2;
-            container.scrollLeft = scrollLeft + walk;
-        });
+document.querySelectorAll('.nav-button').forEach(button => {
+    button.addEventListener('click', (e) => {
+        e.preventDefault();
+    });
+});
 
-        container.addEventListener('touchend', () => {
-            isDragging = false;
-            const cardWidth = container.querySelector('.card').offsetWidth;
-            currentCard = Math.round(container.scrollLeft / cardWidth);
-            navigate(0);
-        });
+updateProgress();
 
-        let scrollTimeout;
-        container.addEventListener('scroll', () => {
-            updateProgress();
-            clearTimeout(scrollTimeout);
-            scrollTimeout = setTimeout(() => {
-                const cardWidth = container.querySelector('.card').offsetWidth;
-                currentCard = Math.round(container.scrollLeft / cardWidth);
-            }, 100);
-        });
-
-        container.addEventListener('wheel', (e) => {
-            const delta = Math.abs(e.deltaY);
-            if (delta > 0) {
-                e.preventDefault();
-                navigate(e.deltaY > 0 ? 1 : -1);
-            }
-        }, { passive: false });
-
-        document.querySelectorAll('.nav-button').forEach(button => {
-            button.addEventListener('click', (e) => {
-                e.preventDefault();
-            });
-        });
-
-        updateProgress();
     </script>
 </body>
 </html>
