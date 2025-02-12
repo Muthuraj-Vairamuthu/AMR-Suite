@@ -6,7 +6,6 @@ __pycache__/
 local_settings.py
 db.sqlite3
 db.sqlite3-journal
-media
 
 # Sensitive settings
 backend/AMR_Suite/oauth_settings.py
