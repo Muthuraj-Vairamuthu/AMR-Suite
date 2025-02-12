@@ -110,3 +110,8 @@ def resistance_analysis_graph(dataset, source, infection, antibiotic, mappings):
 
     return fig
     
+def scorecard_analysis(dataset, source, infection, antibiotic):
+    scorecard_dataset = dataset.sort_values(by='Year')
+    scorecard_dataset = scorecard_dataset[(scorecard_dataset[mappings['source_input']] == source) & (scorecard_dataset[mappings['bacterial_infection']] == infection)]
+    valid_values = ['Resistant', 'Intermediate', 'Susceptible']
+    

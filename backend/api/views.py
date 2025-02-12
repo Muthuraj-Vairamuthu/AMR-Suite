@@ -43,7 +43,7 @@ def login_view(request):
         if user is not None:
             login(request, user)
             print(f"{username} logged in successfully")
-            return redirect('upload_dataset')
+            return redirect('upload_dataset/')
         else:
             messages.error(request, 'Invalid username or password.')
             return redirect('login')
@@ -191,7 +191,7 @@ def resistance_analysis(request):
             antibiotic_format = antibiotic_format.replace('Antibiotic', '')
             if column.endswith(antibiotic_format):
                 antibiotic_columns.append(column)
-        return render(request, 'isolation_burden_analysis.html', {
+        return render(request, 'resistance_analysis.html', {
             'infection_columns': infection_columns, 
             'source_columns': source_columns, 
             'antibiotic_columns': antibiotic_columns, 
@@ -227,7 +227,30 @@ def generate_resistance_graph(request):
     return HttpResponse('Invalid request', status=400)
 
 def scorecards(request):
-    return render(request, 'scorecards.html')
+    dataset_json = request.session.get('dataset')
+    if dataset_json:
+        dataset = pd.read_json(dataset_json)
+        columns = dataset.columns.tolist()
+
+        infection_columns = dataset[request.session['mapping_data']['bacterial_infection']].unique()
+        source_columns = dataset[request.session['mapping_data']['source_input']].unique()
+        antibiotic_columns = []
+
+        for column in columns:
+            antibiotic_format = request.session['mapping_data']['antibiotic_format']
+            antibiotic_format = antibiotic_format.replace('Antibiotic', '')
+            if column.endswith(antibiotic_format):
+                antibiotic_columns.append(column)
+        return render(request, 'scorecard_analysis.html', {
+            'infection_columns': infection_columns, 
+            'source_columns': source_columns, 
+            'antibiotic_columns': antibiotic_columns, 
+            'columns': columns
+        })
+    return redirect('upload_dataset')
+
+def generate_scorecard_graph(request):
+    
 
 def google_callback(request):
     if request.user.is_authenticated:
@@ -253,3 +276,4 @@ def google_callback(request):
         messages.error(request, 'An error occurred during Google authentication.')
     
     return redirect('login')
+
