@@ -101,13 +101,17 @@ def login_user(request):
 def dataset_upload(request):
     file = request.FILES['csv_file']
     dataset = pd.read_csv(file)
-    dataset = dataset.sort_values(by='Year')
+    #dataset = dataset.sort_values(by='Year')
     
     # Store dataset in session
     request.session['dataset'] = dataset.to_json()
     
     columns = dataset.columns.tolist()
     return render(request, 'dataset_mapping.html', {'columns': columns})
+
+import pandas as pd
+from django.http import HttpResponse, JsonResponse
+from django.shortcuts import render, redirect
 
 def mapping_dataset(request):
     if request.method == 'POST':
@@ -116,6 +120,7 @@ def mapping_dataset(request):
         if dataset_json:
             dataset = pd.read_json(dataset_json)
             
+            # Retrieve mapping data from user input
             mapping_data = {
                 'bacterial_infection': request.POST.get('bacterial_infection'),
                 'source_input': request.POST.get('source_input'),
@@ -124,15 +129,62 @@ def mapping_dataset(request):
                 'cluster_attribute': request.POST.get('cluster_attribute'),
                 'time_stamp': request.POST.get('time_stamp')
             }
-            
-            # Store mapping data in session
+
             request.session['mapping_data'] = mapping_data
+
+            if mapping_data['dataset_format'].lower() == 'long':
+                # Transform long-format dataset to wide-format
+                temp_dataset = transform_long_to_wide(dataset, mapping_data['antibiotic_format'])
+                
+                # Update dataset format to wide
+                request.session['mapping_data']['dataset_format'] = 'wide'
+                # Print transformed dataset column names
+                print(temp_dataset.columns)
+
+            else:
+                temp_dataset = dataset
             
-            return render(request, 'main_results.html')
+            # Save the transformed dataset in session for downstream analysis
+            request.session['dataset'] = temp_dataset.to_json(orient='records')
+            return render(request, 'main_results.html', {'columns': temp_dataset.columns.tolist()})
         else:
             return HttpResponse('No dataset found in session')
     
     return redirect('upload_dataset')
+
+def transform_long_to_wide(dataset, antibiotic_column):
+    """ Convert a long-format dataset to wide-format and map remarks to the antibiotic variable. """
+    
+    # Create a unique identifier for each sample
+    dataset["unique_id"] = dataset["id"].astype(str) + "_" + dataset["organism_name"]
+
+    # Pivot the dataset to wide format with antibiotic value and remarks
+    wide_df = dataset.pivot_table(
+        index=["unique_id", "id", "organism_name", "country", "state", "gender", "hospital_department", "sample_type", "collection_date"],
+        columns="antibiotic_name",
+        values=["value", "remarks"],
+        aggfunc="first"
+    )
+
+    # Flatten the multi-index for columns
+    wide_df.columns = [f"{col[1]}_{col[0]}" for col in wide_df.columns]
+    wide_df.reset_index(inplace=True)
+
+    # Combine value and remarks for each antibiotic into a single column if remarks exist
+    for col in wide_df.columns:
+        if col.endswith("_value"):
+            antibiotic = col.replace("_value", "")
+            remarks_col = f"{antibiotic}_remarks"
+            if remarks_col in wide_df.columns:
+                wide_df[antibiotic] = wide_df[col].astype(str) + " (" + wide_df[remarks_col].fillna("") + ")"
+            else:
+                wide_df[antibiotic] = wide_df[col]
+
+    # Filter only the mapped antibiotic columns
+    antibiotic_columns = [col for col in wide_df.columns if col not in ["unique_id", "id", "organism_name", "collection_date"] and not col.endswith(("_value", "_remarks"))]
+    
+    return wide_df[["unique_id", "id", "organism_name", "collection_date"] + antibiotic_columns]
+
 
 
 def isolation_burden_analysis(request):
@@ -181,50 +233,50 @@ def resistance_analysis(request):
     if dataset_json:
         dataset = pd.read_json(dataset_json)
         columns = dataset.columns.tolist()
-
+        
+        # Retrieve unique infection and source columns
         infection_columns = dataset[request.session['mapping_data']['bacterial_infection']].unique()
         source_columns = dataset[request.session['mapping_data']['source_input']].unique()
-        antibiotic_columns = []
 
-        for column in columns:
-            antibiotic_format = request.session['mapping_data']['antibiotic_format']
-            antibiotic_format = antibiotic_format.replace('Antibiotic', '')
-            if column.endswith(antibiotic_format):
-                antibiotic_columns.append(column)
+        # Identify antibiotic columns
+        antibiotic_format = request.session['mapping_data']['antibiotic_format'].replace('Antibiotic', '')
+        antibiotic_columns = [col for col in columns if not col.endswith(("_value", "_remarks")) and col not in ["unique_id", "id", "organism_name", "collection_date"]]
+        
         return render(request, 'resistance_analysis.html', {
-            'infection_columns': infection_columns, 
-            'source_columns': source_columns, 
-            'antibiotic_columns': antibiotic_columns, 
+            'infection_columns': infection_columns,
+            'source_columns': source_columns,
+            'antibiotic_columns': antibiotic_columns,  # Pass the list of columns as antibiotics
             'columns': columns
         })
     return redirect('upload_dataset')
+
 
 def generate_resistance_graph(request):
     if request.method == 'POST':
         # Get form data
         source = request.POST.get('source')
         infection = request.POST.get('infection')
-        antibiotic = request.POST.get('antibiotic')
+        antibiotic = request.POST.get('antibiotic')  # This is now a column name in wide format
         
         # Get dataset from session
         dataset_json = request.session.get('dataset')
         if dataset_json:
             dataset = pd.read_json(dataset_json)
-            mappings = request.session.get('mapping_data')
             
-            # Generate the plot
-            fig = resistance_analysis_graph(dataset, source, infection, antibiotic, mappings)
+            # Generate the plot using the wide-format column for the selected antibiotic
+            fig = resistance_analysis_graph(dataset, source, infection, antibiotic)
             
             # Convert plot to image
             buffer = BytesIO()
             fig.savefig(buffer, format='png', bbox_inches='tight', transparent=True)
             buffer.seek(0)
-            plt.close(fig)  # Close the specific figure
+            plt.close(fig)
             
             # Return the image
             return HttpResponse(buffer.getvalue(), content_type='image/png')
             
     return HttpResponse('Invalid request', status=400)
+
 
 def scorecards(request):
     dataset_json = request.session.get('dataset')
@@ -250,6 +302,7 @@ def scorecards(request):
     return redirect('upload_dataset')
 
 def generate_scorecard_graph(request):
+    pass
     
 
 def google_callback(request):
