@@ -20,6 +20,7 @@
             min-height: 100vh;
             display: flex;
             flex-direction: column;
+            align-items: center;
         }
 
         .logout-btn {
@@ -70,9 +71,13 @@
             width: auto;
         }
         .main-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 20px;
+            width: 90%;
+            max-width: 1600px;
+            margin: 80px auto 40px;
+            padding: 40px 60px;
+            background-color: #252932;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
         }
 
         h1 {
@@ -83,15 +88,24 @@
 
         .mapping-container {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            margin-bottom: 40px;
+            grid-template-columns: repeat(3, minmax(300px, 1fr));
+            gap: 50px;
+            justify-content: center;
+            width: 100%;
+            margin-bottom: 50px;
         }
 
         .mapping-section {
+            flex: 1;
+            min-width: 0;
             background-color: #2a2f3b;
-            border-radius: 10px;
-            padding: 30px;
+            border-radius: 12px;
+            padding: 35px;
+            transition: transform 0.2s ease;
+        }
+
+        .mapping-section:hover {
+            transform: translateY(-5px);
         }
 
         .mapping-section h2 {
@@ -152,12 +166,46 @@
             cursor: pointer;
             width: 200px;
             display: block;
-            margin: 0 auto;
+            margin: 50px auto 20px;
             transition: background-color 0.3s ease;
         }
 
         .next-btn:hover {
             background-color: #2a3143;
+        }
+
+        .dynamic-section {
+            background-color: transparent;
+            padding: 0;
+            margin-top: 15px;
+        }
+
+        /* Make wide format input match select styling */
+        #wideFields input {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            background-color: #e0e0e0;
+            font-size: 1rem;
+            color: #333;
+        }
+
+        /* Add wrapper for input to match select styling */
+        .input-wrapper {
+            position: relative;
+            background-color: #e0e0e0;
+            border-radius: 5px;
+        }
+
+        .input-wrapper::after {
+            content: '';
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            pointer-events: none;
+            color: #333;
         }
     </style>
 </head>
@@ -172,19 +220,31 @@
     </nav>
 
     <div class="main-content">
-        <h1>Processing your Dataset</h1>
+        <h1>Dataset Mapping</h1>
         
-        <form action="/mapping_dataset" method="POST" class="mapping-form">
+        <form action="{% url 'mapping_dataset' %}" method="POST">
             {% csrf_token %}
             <div class="mapping-container">
+                <!-- Section 1: Core Fields -->
                 <div class="mapping-section">
-                    <h2>Map Dataset Columns</h2>
+                    <h2>Core Details</h2>
                     
+                    <div class="form-group">
+                        <label>Dataset Format<span class="required">*</span></label>
+                        <div class="select-wrapper">
+                            <select name="dataset_format" required id="formatSelect" title="Select your dataset structure format">
+                                <option value="">Choose Format</option>
+                                <option value="Wide" {% if format == 'Wide' %}selected{% endif %}>Wide (Multiple Antibiotic Columns)</option>
+                                <option value="Long" {% if format == 'Long' %}selected{% endif %}>Long (Single Antibiotic Column)</option>
+                            </select>
+                        </div>
+                    </div>
+
                     <div class="form-group">
                         <label>Bacterial Infection<span class="required">*</span></label>
                         <div class="select-wrapper">
                             <select name="bacterial_infection" required>
-                                <option value="">Choose Column</option>
+                                <option value="">Select Bacterial Species Column</option>
                                 {% for column in columns %}
                                     <option value="{{ column }}">{{ column }}</option>
                                 {% endfor %}
@@ -196,45 +256,70 @@
                         <label>Source Input<span class="required">*</span></label>
                         <div class="select-wrapper">
                             <select name="source_input" required>
-                                <option value="">Choose Column</option>
+                                <option value="">Select Patient/Sample Source</option>
                                 {% for column in columns %}
                                     <option value="{{ column }}">{{ column }}</option>
                                 {% endfor %}
                             </select>
                         </div>
                     </div>
+                </div>
 
-                    <div class="form-group">
-                        <label>Antibiotic Format<span class="required">*</span></label>
-                        <div class="select-wrapper">
-                            <input type="text" name="antibiotic_format" required 
-                                   placeholder="Enter antibiotic format" 
-                                   style="width: 100%; padding: 12px; border: none; 
-                                          border-radius: 5px; background-color: #e0e0e0; 
-                                          font-size: 1rem;">
+                <!-- Section 2: Dynamic Fields -->
+                <div class="mapping-section">
+                    <h2>Antibiotic Details</h2>
+                    
+                    <div class="dynamic-section" id="longFields" 
+                         style="display: {% if format == 'Long' %}block{% else %}none{% endif %};">
+                        <div class="form-group">
+                            <label>Antibiotic Name Column<span class="required">*</span></label>
+                            <div class="select-wrapper">
+                                <select name="antibiotic_name_col" {% if format == 'Long' %}required{% endif %}>
+                                    <option value="">Select Antibiotic Names Column</option>
+                                    {% for column in columns %}
+                                        <option value="{{ column }}">{{ column }}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Antibiotic Result Column<span class="required">*</span></label>
+                            <div class="select-wrapper">
+                                <select name="antibiotic_result_col" {% if format == 'Long' %}required{% endif %}>
+                                    <option value="">Select Susceptibility Results</option>
+                                    {% for column in columns %}
+                                        <option value="{{ column }}">{{ column }}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dynamic-section" id="wideFields" 
+                         style="display: {% if format == 'Wide' %}block{% else %}none{% endif %};">
+                        <div class="form-group">
+                            <label>Antibiotic Column Format<span class="required">*</span></label>
+                            <div class="input-wrapper">
+                                <input type="text" name="antibiotic_format" 
+                                       placeholder="Format: Antibiotic_[suffix] (e.g.: Antibiotic_I)"
+                                       pattern="^Antibiotic[_a-zA-Z]+$"
+                                       title="Must start with 'Antibiotic' followed by your suffix (e.g. Antibiotic_I)"
+                                       {% if format == 'Wide' %}required{% endif %}>
+                            </div>
                         </div>
                     </div>
                 </div>
 
+                <!-- Section 3: Temporal/Cluster -->
                 <div class="mapping-section">
-                    <h2>Dataset Details</h2>
+                    <h2>Clustering Details</h2>
                     
-                    <div class="form-group">
-                        <label>Dataset Format<span class="required">*</span></label>
-                        <div class="select-wrapper">
-                            <select name="dataset_format" required>
-                                <option value="">Choose Column</option>
-                                <option value="Long">Long</option>
-                                <option value="Wide">Wide</option>
-                            </select>
-                        </div>
-                    </div>
-
                     <div class="form-group">
                         <label>Cluster Attribute<span class="required">*</span></label>
                         <div class="select-wrapper">
-                            <select name="cluster_attribute" required>
-                                <option value="">Choose Column</option>
+                            <select name="cluster_attribute" required title="Select column containing cluster/group identifiers">
+                                <option value="">Select Grouping Column</option>
                                 {% for column in columns %}
                                     <option value="{{ column }}">{{ column }}</option>
                                 {% endfor %}
@@ -246,24 +331,34 @@
                         <label>Time Stamp<span class="required">*</span></label>
                         <div class="select-wrapper">
                             <select name="time_stamp" required>
-                                <option value="">Choose Trend</option>
+                                <option value="">Select Temporal Granularity</option>
                                 <option value="Year">Year</option>
                                 <option value="Month">Month</option>
-                                <option value="Day">Day</option>
+                                <option value="Date">Date</option>
+                                {% for column in columns %}
+                                    <option value="{{ column }}">{{ column }}</option>
+                                {% endfor %}
                             </select>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <button type="submit" class="next-btn" id="submit-button">Next</button>
+            <button type="submit" class="next-btn">Process Dataset</button>
         </form>
     </div>
+
+    <script>
+        // Dynamic field visibility
+        document.getElementById('formatSelect').addEventListener('change', function() {
+            const format = this.value;
+            document.getElementById('longFields').style.display = format === 'Long' ? 'block' : 'none';
+            document.getElementById('wideFields').style.display = format === 'Wide' ? 'block' : 'none';
+            
+            // Toggle required attributes
+            document.querySelectorAll('#longFields select').forEach(el => el.required = format === 'Long');
+            document.querySelector('#wideFields input').required = format === 'Wide';
+        });
+    </script>
 </body>
 </html>
-
-<script>
-    document.getElementById('submit-button').addEventListener('click', function(event) {
-        document.getElementById('mapping-form').submit();
-    });
-</script>

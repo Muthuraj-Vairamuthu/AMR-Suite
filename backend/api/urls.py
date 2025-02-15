@@ -21,7 +21,7 @@ urlpatterns = [
 
     path('upload_dataset/', upload_dataset, name='upload_dataset'),
     path('dataset_upload', dataset_upload, name='dataset_upload'),
-    path('mapping_dataset', mapping_dataset, name='mapping_dataset'),
+    path('process_mapping/', mapping_dataset, name='mapping_dataset'),
     path('isolation_burden_analysis', isolation_burden_analysis, name='isolation_burden_analysis'),
     path('generate_isolation_graph', generate_isolation_graph, name='generate_isolation_graph'),
     path('resistance_analysis', resistance_analysis, name='resistance_analysis'),

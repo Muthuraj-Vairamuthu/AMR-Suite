@@ -77,9 +77,14 @@
         }
 
         .upload-container {
-            max-width: 90%;
+            max-width: 1400px;
             margin: 40px auto;
-            padding: 0 40px;
+            padding: 0 20px;
+            width: 90%;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .drop-zone {
@@ -88,10 +93,16 @@
             background-color: #2a2f3b;
             border: 2px dashed #3a4155;
             border-radius: 8px;
-            padding: 100px 40px;
+            padding: 150px 60px;
             text-align: center;
-            margin-bottom: 40px;
+            margin: 0 auto 40px;
             width: 100%;
+            max-width: 1200px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
 
         .drop-zone.dragover {
@@ -125,12 +136,14 @@
             background-color: #1a2133;
             color: white;
             border: none;
-            padding: 25px 50px;
+            padding: 15px 30px;
             border-radius: 5px;
             cursor: pointer;
-            width: 100%;
-            font-size: 1.2rem;
+            width: auto;
+            font-size: 1rem;
             margin-top: 20px;
+            min-width: 200px;
+            align-self: center;
         }
 
         button:hover {
@@ -155,10 +168,36 @@
         .welcome-banner {
             background-color: #1a2133;
             color: white;
-            padding: 15px 20px;
-            margin-bottom: 20px;
-            border-radius: 5px;
+            padding: 25px 40px;
+            margin: 0 auto 40px;
+            border-radius: 8px;
             font-size: 1.2rem;
+            max-width: 1200px;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* For dataset mapping page */
+        .main-content {
+            width: 94%;
+            max-width: 1800px;
+            margin: 80px auto 40px;
+            padding: 40px 60px;
+        }
+
+        .mapping-container {
+            gap: 40px;
+        }
+
+        .mapping-section {
+            padding: 30px;
+        }
+
+        form {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
     </style>
 </head>
