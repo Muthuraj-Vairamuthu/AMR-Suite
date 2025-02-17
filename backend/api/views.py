@@ -121,12 +121,33 @@ def mapping_dataset(request):
                 'dataset_format': request.POST.get('dataset_format'),
                 'cluster_attribute': request.POST.get('cluster_attribute'),
                 'time_stamp': request.POST.get('time_stamp'),
-                'antibiotic_format': request.POST.get('antibiotic_format'),  # Store the format
+                'antibiotic_format': request.POST.get('antibiotic_format'),
                 'antibiotic_name_col': request.POST.get('antibiotic_name_col'),
                 'antibiotic_result_col': request.POST.get('antibiotic_result_col')
             }
             
             request.session['mapping_data'] = mapping_data
+
+            if mapping_data['dataset_format'] == 'Wide':
+                suffix = mapping_data['antibiotic_format'].replace('Antibiotic', '')
+                antibiotic_columns = [col for col in dataset.columns if col.endswith(suffix)]
+                antibiotic_columns = sorted(list(set(antibiotic_columns)))
+
+                request.session['antibiotic_columns'] = antibiotic_columns
+
+            else:
+                antibiotic_columns = dataset[mapping_data['antibiotic_name_col']].unique().tolist()
+                request.session['antibiotic_columns'] = antibiotic_columns
+
+                dataset[antibiotic_columns] = None
+
+                for index, row in dataset.iterrows():
+                    antibiotic_name = row[mapping_data['antibiotic_name_col']]
+                    result = row[mapping_data['antibiotic_result_col']]
+                    dataset.loc[index, antibiotic_name] = result
+
+                request.session['dataset'] = dataset.to_json()
+
             return render(request, 'main_results.html')
     return redirect('upload_dataset')
 
@@ -174,40 +195,15 @@ def generate_isolation_graph(request):
 
 def resistance_analysis(request):
     dataset_json = request.session.get('dataset')
+    mapping_data = request.session.get('mapping_data', {})
     if dataset_json:
         dataset = pd.read_json(dataset_json)
         columns = dataset.columns.tolist()
-        mapping_data = request.session.get('mapping_data', {})
-
-        dataset_format = mapping_data.get('dataset_format')
-        antibiotic_columns = []
-
-        if dataset_format == 'Wide':
-            # Get the format pattern (e.g. "Antibiotic_I")
-            format_pattern = mapping_data.get('antibiotic_format', 'Antibiotic_I')
-            # Extract the suffix by removing 'Antibiotic' from the pattern
-            suffix = format_pattern.replace('Antibiotic', '', 1)  # Get "_I" from "Antibiotic_I"
-            
-            # Find all columns matching the pattern and extract antibiotic names
-            antibiotic_columns = []
-            for col in columns:
-                if col.endswith(suffix):
-                    # Remove the suffix to get the base antibiotic name
-                    antibiotic_name = col[:-len(suffix)] if suffix else col
-                    antibiotic_columns.append(antibiotic_name)
-            
-            # Remove duplicates and sort
-            antibiotic_columns = sorted(list(set(antibiotic_columns)))
-
-        elif dataset_format == 'Long':
-            antibiotic_name_col = mapping_data.get('antibiotic_name_col')
-            if antibiotic_name_col:
-                antibiotic_columns = dataset[antibiotic_name_col].unique().tolist()
 
         return render(request, 'resistance_analysis.html', {
             'infection_columns': dataset[mapping_data['bacterial_infection']].unique(),
             'source_columns': dataset[mapping_data['source_input']].unique(),
-            'antibiotic_columns': antibiotic_columns,
+            'antibiotic_columns': request.session['antibiotic_columns'],
             'columns': columns
         })
     return redirect('upload_dataset')
@@ -225,15 +221,7 @@ def generate_resistance_graph(request):
         if dataset_json:
             dataset = pd.read_json(dataset_json)
             
-            # Handle wide format suffix
-            if mappings.get('dataset_format') == 'Wide':
-                suffix = mappings.get('antibiotic_format', 'Antibiotic_I').replace('Antibiotic', '', 1)
-                antibiotic_column = f"{antibiotic}{suffix}"
-            else:
-                antibiotic_column = mappings.get('antibiotic_result_col')
-
-            # Generate the plot using the correct column name
-            fig = resistance_analysis_graph(dataset, source, infection, antibiotic_column, mappings)
+            fig = resistance_analysis_graph(dataset, source, infection, antibiotic, mappings)
             
             # Convert plot to image
             buffer = BytesIO()
