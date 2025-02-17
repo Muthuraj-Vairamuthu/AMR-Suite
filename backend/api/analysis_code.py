@@ -1,7 +1,6 @@
 import matplotlib.pyplot as plt
 
 def isolation_burden_analysis_graph(dataset, source, attribute, mappings):
-    print(source, attribute, mappings)
     isolation_dataset = dataset[dataset[mappings['source_input']] == source]
     isolation_dataset = isolation_dataset[attribute].value_counts().sort_values(ascending=False).to_dict()
 
@@ -50,24 +49,99 @@ def resistance_analysis_graph(dataset, source, infection, antibiotic_column, map
     ].copy()
     
     # Convert year to integer and sort
-    resistant_dataset['Year'] = resistant_dataset[mappings['time_stamp']].astype(int)
-    resistant_dataset = resistant_dataset.sort_values(by='Year')
+    date_format = mappings['date_format']
+    date_column = mappings['date_column']
+    granularity = mappings['resistance_granularity']
+
+    if date_format == 'DD/MM/YYYY':
+        result = resistant_dataset[date_column].str.split('/')
+        resistant_dataset['Year'] = result.str[2].astype(int)
+        resistant_dataset['Month'] = result.str[1].astype(int)
+        resistant_dataset['Day'] = result.str[0].astype(int)
+
+    elif date_format == 'MM/DD/YYYY':
+        result = resistant_dataset[date_column].str.split('/')
+        resistant_dataset['Year'] = result.str[2].astype(int)
+        resistant_dataset['Month'] = result.str[0].astype(int)
+        resistant_dataset['Day'] = result.str[1].astype(int)
+
+    elif date_format == 'YYYY/MM/DD':
+        result = resistant_dataset[date_column].str.split('/')
+        resistant_dataset['Year'] = result.str[0].astype(int)
+        resistant_dataset['Month'] = result.str[1].astype(int)
+        resistant_dataset['Day'] = result.str[2].astype(int)
+
+    elif date_format == 'YYYY-MM-DD':
+        result = resistant_dataset[date_column].str.split('-')
+        resistant_dataset['Year'] = result.str[0].astype(int)
+        resistant_dataset['Month'] = result.str[1].astype(int)
+        resistant_dataset['Day'] = result.str[2].astype(int)
+
+    elif date_format == 'MM-DD-YYYY':
+        result = resistant_dataset[date_column].str.split('-')
+        resistant_dataset['Year'] = result.str[2].astype(int)
+        resistant_dataset['Month'] = result.str[0].astype(int)
+        resistant_dataset['Day'] = result.str[1].astype(int)
+
+    elif date_format == 'DD-MM-YYYY':
+        result = resistant_dataset[date_column].str.split('-')
+        resistant_dataset['Year'] = result.str[2].astype(int)
+        resistant_dataset['Month'] = result.str[1].astype(int)
+        resistant_dataset['Day'] = result.str[0].astype(int)
+        
+    elif date_format == 'YYYY':
+        resistant_dataset['Year'] = resistant_dataset[date_column].astype(int)
+        resistant_dataset['Month'] = 0
+        resistant_dataset['Day'] = 0
+
+    elif date_format == 'MM':
+        resistant_dataset['Year'] = 0
+        resistant_dataset['Month'] = resistant_dataset[date_column].astype(int)
+        resistant_dataset['Day'] = 0
+
+    elif date_format == 'DD':
+        resistant_dataset['Year'] = 0
+        resistant_dataset['Month'] = 0
+        resistant_dataset['Day'] = resistant_dataset[date_column].astype(int)
+
+
+    resistant_dataset = resistant_dataset.sort_values(by=['Year', 'Month', 'Day'])
+
+    if granularity == 'yearly':
+        antibiotic_data = resistant_dataset.groupby('Year')[antibiotic_column].value_counts().unstack(fill_value=0)
     
-    # Group by year and count resistance statuses
-    antibiotic_data = resistant_dataset.groupby('Year')[antibiotic_column].value_counts().unstack(fill_value=0)
-    
+    elif granularity == 'monthly':
+        antibiotic_data = resistant_dataset.groupby(['Year', 'Month'])[antibiotic_column].value_counts().unstack(fill_value=0)
+
+    elif granularity == 'daily':
+        antibiotic_data = resistant_dataset.groupby(['Year', 'Month', 'Day'])[antibiotic_column].value_counts().unstack(fill_value=0)
+
     # Calculate resistance rate
-    if 'Resistant' in antibiotic_data.columns:
+    values = resistant_dataset[antibiotic_column].unique()
+    resistant_value = [i for i in values if i and i.startswith('R')][0]
+
+    if resistant_value in antibiotic_data.columns:
         antibiotic_data['Total'] = antibiotic_data.sum(axis=1)
-        antibiotic_data['Resistance Rate'] = (antibiotic_data['Resistant'] / antibiotic_data['Total']) * 100
+        antibiotic_data['Resistance Rate'] = (antibiotic_data[resistant_value] / antibiotic_data['Total']) * 100
     else:
         antibiotic_data['Resistance Rate'] = 0.0
     
     # Filter valid years with data
     valid_data = antibiotic_data[antibiotic_data['Total'] > 0]
-    years = valid_data.index.tolist()
-    resistant_rates = valid_data['Resistance Rate'].tolist()
-    
+    if granularity == 'yearly':
+        years = valid_data.index.tolist()
+        resistant_rates = valid_data['Resistance Rate'].tolist()
+
+    elif granularity == 'monthly':
+        res = valid_data.index.tolist()
+        years = [f'{r[0]}-{r[1]}' for r in res]
+        resistant_rates = valid_data['Resistance Rate'].tolist()
+
+    elif granularity == 'daily':
+        res = valid_data.index.tolist()
+        years = [f'{r[0]}-{r[1]}-{r[2]}' for r in res]
+        resistant_rates = valid_data['Resistance Rate'].tolist()
+
     # Create figure with dark background
     fig = plt.figure(figsize=(12, 6))
     ax = fig.add_subplot(111)

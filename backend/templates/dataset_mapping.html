@@ -239,7 +239,7 @@
                             </select>
                         </div>
                     </div>
-
+    
                     <div class="form-group">
                         <label>Bacterial Infection<span class="required">*</span></label>
                         <div class="select-wrapper">
@@ -251,7 +251,7 @@
                             </select>
                         </div>
                     </div>
-
+    
                     <div class="form-group">
                         <label>Source Input<span class="required">*</span></label>
                         <div class="select-wrapper">
@@ -263,11 +263,8 @@
                             </select>
                         </div>
                     </div>
-                </div>
-
-                <!-- Section 2: Dynamic Fields -->
-                <div class="mapping-section">
-                    <h2>Antibiotic Details</h2>
+    
+                    <h3 style="font-size: 1.3rem; margin: 30px 0 20px; color: white;">Antibiotic Details</h3>
                     
                     <div class="dynamic-section" id="longFields" 
                          style="display: {% if format == 'Long' %}block{% else %}none{% endif %};">
@@ -282,7 +279,7 @@
                                 </select>
                             </div>
                         </div>
-
+    
                         <div class="form-group">
                             <label>Antibiotic Result Column<span class="required">*</span></label>
                             <div class="select-wrapper">
@@ -295,7 +292,7 @@
                             </div>
                         </div>
                     </div>
-
+    
                     <div class="dynamic-section" id="wideFields" 
                          style="display: {% if format == 'Wide' %}block{% else %}none{% endif %};">
                         <div class="form-group">
@@ -310,8 +307,58 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Section 3: Temporal/Cluster -->
+    
+                <!-- Section 2: Date Fields -->
+                <div class="mapping-section">
+                    <h2>Date Details</h2>
+                    <div class="form-group">
+                        <label>Date Column<span class="required">*</span></label>
+                        <div class="select-wrapper">
+                            <select name="date_column" required>
+                                <option value="">Select Date Column</option>
+                                {% for column in columns %}
+                                    <option value="{{ column }}">{{ column }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                    </div>
+                
+                    <div class="form-group">
+                        <label>Date Format<span class="required">*</span></label>
+                        <div class="select-wrapper">
+                            <select name="date_format" required>
+                                <option value="">Select Date Format</option>
+                                <optgroup label="Full Date Formats">
+                                    <option value="YYYY-MM-DD">YYYY-MM-DD</option>
+                                    <option value="DD-MM-YYYY">DD-MM-YYYY</option>
+                                    <option value="MM-DD-YYYY">MM-DD-YYYY</option>
+                                    <option value="YYYY/MM/DD">YYYY/MM/DD</option>
+                                    <option value="DD/MM/YYYY">DD/MM/YYYY</option>
+                                    <option value="MM/DD/YYYY">MM/DD/YYYY</option>
+                                </optgroup>
+                                <optgroup label="Single Format">
+                                    <option value="YYYY">Year Only (YYYY)</option>
+                                    <option value="MM">Month Only (MM)</option>
+                                    <option value="DD">Day Only (DD)</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                    </div>
+                
+                    <div class="form-group">
+                        <label>Resistance Analysis Granularity<span class="required">*</span></label>
+                        <div class="select-wrapper">
+                            <select name="resistance_granularity" required>
+                                <option value="">Select Time Granularity</option>
+                                <option value="yearly">Yearly Analysis</option>
+                                <option value="monthly">Monthly Analysis</option>
+                                <option value="daily">Daily Analysis</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Section 3: Clustering Details -->
                 <div class="mapping-section">
                     <h2>Clustering Details</h2>
                     
@@ -326,7 +373,7 @@
                             </select>
                         </div>
                     </div>
-
+    
                     <div class="form-group">
                         <label>Time Stamp<span class="required">*</span></label>
                         <div class="select-wrapper">
@@ -335,15 +382,12 @@
                                 <option value="Year">Year</option>
                                 <option value="Month">Month</option>
                                 <option value="Date">Date</option>
-                                {% for column in columns %}
-                                    <option value="{{ column }}">{{ column }}</option>
-                                {% endfor %}
                             </select>
                         </div>
                     </div>
                 </div>
             </div>
-
+    
             <button type="submit" class="next-btn">Process Dataset</button>
         </form>
     </div>

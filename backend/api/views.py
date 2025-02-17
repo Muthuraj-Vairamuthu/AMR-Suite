@@ -123,9 +123,12 @@ def mapping_dataset(request):
                 'time_stamp': request.POST.get('time_stamp'),
                 'antibiotic_format': request.POST.get('antibiotic_format'),
                 'antibiotic_name_col': request.POST.get('antibiotic_name_col'),
-                'antibiotic_result_col': request.POST.get('antibiotic_result_col')
+                'antibiotic_result_col': request.POST.get('antibiotic_result_col'),
+                'date_format': request.POST.get('date_format'),
+                'date_column': request.POST.get('date_column'),
+                'resistance_granularity': request.POST.get('resistance_granularity')
             }
-            
+
             request.session['mapping_data'] = mapping_data
 
             if mapping_data['dataset_format'] == 'Wide':
