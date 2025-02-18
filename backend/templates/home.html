@@ -19,38 +19,59 @@
         }
 
         nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            padding: 20px 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: rgba(0, 0, 0, 0.9);
-            z-index: 1000;
-        }
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+}
 
-        .logo {
-            color: white;
-            font-size: 28px;
-            font-weight: bold;
-        }
+/* Left-side Text Logo */
+.logo {
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+}
 
-        .nav-links {
-            display: flex;
-            gap: 30px;
-        }
+/* Centered Navigation Links */
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
 
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-            transition: color 0.3s ease;
-        }
+/* Navigation Link Styling */
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
 
-        .nav-links a:hover {
-            color: #4a90e2;
-        }
+.nav-links a:hover {
+    color: #4a90e2;
+}
+
+/* Right-side Logo */
+.nav-logo {
+    margin-left: 20px; /* Add spacing from links */
+}
+
+.nav-logo img {
+    height: 40px; /* Adjust size as needed */
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+/* Hover Effect */
+.nav-logo img:hover {
+    transform: scale(1.1);
+}
+
 
         section {
             height: 100vh;
@@ -192,129 +213,211 @@
             font-weight: bold;
         }
 
-        #section3 {
-            background: #1a1a1a;
-            position: relative;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            padding: 80px 20px;
-        }
+        /* Section 3 Styling */
+#section3 {
+    background: #1a1a1a;
+    position: relative;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    padding: 60px 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
 
-        #section3 h1 {
-            text-align: center;
-            color: white;
-            font-size: 48px;
-            margin-bottom: 60px;
-        }
+#section3 h1 {
+    text-align: center;
+    color: white;
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+}
 
-        .chart-carousel {
-            position: relative;
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            height: 600px;
-            overflow: hidden;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 20px;
-            padding: 20px;
-        }
+/* Chart Carousel */
+.chart-carousel {
+    position: relative;
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    height: auto;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
 
-        .chart-wrapper {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-            height: 100%;
-        }
+/* Wrapper for Smooth Sliding */
+.chart-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
 
-        .chart-container {
-            flex: 0 0 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
+/* Individual Chart Containers */
+.chart-container {
+    flex: 0 0 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
 
-       .chart-container img {
+/* Chart Titles */
+.chart-title {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Image Wrapper */
+.chart-image-wrapper {
+    position: relative;
+    display: inline-block; /* Ensure it wraps tightly around the image */
+    width: auto;
+    max-width: 100%;
+    max-height: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Image */
+.chart-container img {
+    max-width: 100%;
+    max-height: 500px;
+    object-fit: contain;
+    display: block; /* Remove extra space below images */
+    border-radius: 10px;
+}
+
+
+/* Hover Effect for Image */
+.chart-container img:hover {
+    transform: scale(1.05);
+}
+
+/* "Click to Know More" Overlay */
+.hover-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    object-fit: contain; 
-    border-radius: 10px;
-    transition: transform 0.5s ease-in-out, opacity 0.3s;
-}
-
-.chart-container img:hover {
-    transform: scale(1.1);
-    opacity: 0.8;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
     cursor: pointer;
+    border-radius: 10px;
+    pointer-events: none; /* Prevents it from interfering when not hovered */
 }
 
 
-        .chart-arrow {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 50px;
-            height: 50px;
-            background: rgba(74, 144, 226, 0.2);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            color: white;
-            font-size: 24px;
-            transition: all 0.3s ease;
-            z-index: 10;
-        }
+/* Styled Hover Text */
+.hover-text {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 12px 25px;
+    border: 2px solid white;
+    border-radius: 30px;
+    background: rgba(74, 144, 226, 0.4);
+    backdrop-filter: blur(6px);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
 
-        .chart-arrow.prev {
-            left: 20px;
-        }
+/* Show Overlay on Hover */
+.chart-image-wrapper:hover .hover-overlay {
+    opacity: 1;
+    pointer-events: auto;
+}
 
-        .chart-arrow.next {
-            right: 20px;
-        }
+/* Scale Text on Hover */
+.chart-image-wrapper:hover .hover-text {
+    transform: scale(1.1);
+}
 
-        .chart-arrow:hover {
-            background: rgba(74, 144, 226, 0.4);
-            transform: translateY(-50%) scale(1.1);
-        }
+/* Navigation Buttons */
+.chart-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    z-index: 10;
+    font-size: 28px;
+    color: white;
+}
 
-        .chart-dots {
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            gap: 10px;
-            z-index: 10;
-        }
+/* Left Arrow */
+.chart-arrow.prev {
+    left: 15px;
+}
 
-        .chart-dot {
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.3);
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
+/* Right Arrow */
+.chart-arrow.next {
+    right: 15px;
+}
 
-        .chart-dot.active {
-            background: #4a90e2;
-            transform: scale(1.2);
-        }
+/* Hover Effects for Navigation */
+.chart-arrow:hover {
+    background: rgba(255, 255, 255, 0.4);
+    /* transform: scale(1.2); */
+}
+
+/* Dots for Carousel */
+.chart-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.chart-dot {
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.chart-dot.active {
+    background: #4a90e2;
+    transform: scale(1.2);
+}
+
+
+</style>
     </style>
 </head>
 <body>
     <nav>
-        <div class="logo">AMRSuite</div>
-        <div class="nav-links">
-            <a href="#section1">Home</a>
-            <a href="#section3">Insights</a>
-            <a href="{% url 'login' %}">Login</a>
-        </div>
-    </nav>
+    <div class="logo">AMRSuite</div>
+    <div class="nav-links">
+        <a href="#section1">Home</a>
+        <a href="#section3">Insights</a>
+        <a href="{% url 'login' %}">Login</a>
+    </div>
+    <div class="nav-logo">
+        <img src="../static/media/tavlab.logo.png" alt="Company Logo">
+    </div>
+</nav>
+
 
     <section id="section1">
         <div class="carousel-container">
@@ -360,15 +463,32 @@
         <div class="chart-carousel">
             <div class="chart-wrapper">
                 <div class="chart-container">
-                    <img src="../static/media/resistance/e1.png" alt="Graph 1" data-link="{% url 'home2' %}">
+                    <h2 class="chart-title">Isolation Rates</h2>
+                    <div class="chart-image-wrapper">
+                        <img src="../static/media/isolation/gs.png" alt="Isolation Rates" data-link="{% url 'isolation_info' %}">
+                        <div class="hover-overlay">
+                            <span class="hover-text">Click to know more</span>
+                        </div>
+                    </div>
                 </div>
                 <div class="chart-container">
-                    <img src="../static/media/isolation/ag.png" alt="Graph 2" data-link="{% url 'home2' %}">
+                    <h2 class="chart-title">Resistance Analysis</h2>
+                    <div class="chart-image-wrapper">
+                        <img src="../static/media/resistance/e1.png" alt="Resistance Analysis" data-link="{% url 'resistance_info' %}">
+                        <div class="hover-overlay">
+                            <span class="hover-text">Click to know more</span>
+                        </div>
+                    </div>
                 </div>
                 <div class="chart-container">
-                    <img src="../static/media/sc1.png" alt="Graph 3" data-link="{% url 'home2' %}">
+                    <h2 class="chart-title">Scorecard Insights</h2>
+                    <div class="chart-image-wrapper">
+                        <img src="../static/media/sc1.png" alt="Scorecard Insights" data-link="{% url 'scorecard_info' %}">
+                        <div class="hover-overlay">
+                            <span class="hover-text">Click to know more</span>
+                        </div>
+                    </div>
                 </div>
-                
             </div>
             
             <div class="chart-arrow prev">❮</div>
@@ -463,61 +583,97 @@
         }
 
         class ChartCarousel {
-            constructor() {
-                this.wrapper = document.querySelector('.chart-wrapper');
-                this.slides = document.querySelectorAll('.chart-container');
-                this.prevButton = document.querySelector('.chart-carousel .prev');
-                this.nextButton = document.querySelector('.chart-carousel .next');
-                this.dotsContainer = document.querySelector('.chart-dots');
-                this.currentSlide = 0;
-                this.dots = [];
+    constructor() {
+        this.wrapper = document.querySelector('.chart-wrapper');
+        this.slides = document.querySelectorAll('.chart-container');
+        this.prevButton = document.querySelector('.chart-carousel .prev');
+        this.nextButton = document.querySelector('.chart-carousel .next');
+        this.dotsContainer = document.querySelector('.chart-dots');
+        this.currentSlide = 0;
+        this.dots = [];
+        this.autoPlayInterval = null; // Stores the autoplay interval
 
-                this.init();
-            }
+        this.init();
+        this.startAutoPlay(); // Start automatic sliding
+    }
 
-            init() {
-                this.slides.forEach((_, index) => {
-                    const dot = document.createElement('div');
-                    dot.classList.add('chart-dot');
-                    if (index === 0) dot.classList.add('active');
-                    dot.addEventListener('click', () => this.goToSlide(index));
-                    this.dotsContainer.appendChild(dot);
-                    this.dots.push(dot);
-                });
+    init() {
+        this.slides.forEach((_, index) => {
+            const dot = document.createElement('div');
+            dot.classList.add('chart-dot');
+            if (index === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => {
+                this.goToSlide(index);
+                this.resetAutoPlay(); // Reset autoplay when user manually clicks
+            });
+            this.dotsContainer.appendChild(dot);
+            this.dots.push(dot);
+        });
 
-                this.prevButton.addEventListener('click', () => this.prevSlide());
-                this.nextButton.addEventListener('click', () => this.nextSlide());
+        this.prevButton.addEventListener('click', () => {
+            this.prevSlide();
+            this.resetAutoPlay();
+        });
 
-                this.updateSlide();
-            }
+        this.nextButton.addEventListener('click', () => {
+            this.nextSlide();
+            this.resetAutoPlay();
+        });
 
-            goToSlide(index) {
-                this.currentSlide = index;
-                this.updateSlide();
-            }
+        this.updateSlide();
+    }
 
-            prevSlide() {
-                this.currentSlide = (this.currentSlide - 1 + this.slides.length) % this.slides.length;
-                this.updateSlide();
-            }
+    goToSlide(index) {
+        this.currentSlide = index;
+        this.updateSlide();
+    }
 
-            nextSlide() {
-                this.currentSlide = (this.currentSlide + 1) % this.slides.length;
-                this.updateSlide();
-            }
+    prevSlide() {
+        this.currentSlide = (this.currentSlide - 1 + this.slides.length) % this.slides.length;
+        this.updateSlide();
+    }
 
-            updateSlide() {
-                this.wrapper.style.transform = `translateX(-${this.currentSlide * 100}%)`;
-                this.dots.forEach((dot, i) => {
-                    dot.classList.toggle('active', i === this.currentSlide);
-                });
-            }
-        }
+    nextSlide() {
+        this.currentSlide = (this.currentSlide + 1) % this.slides.length;
+        this.updateSlide();
+    }
+
+    updateSlide() {
+        this.wrapper.style.transform = `translateX(-${this.currentSlide * 100}%)`;
+        this.dots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === this.currentSlide);
+        });
+    }
+
+    // Auto-Play: Move to next slide every 5 seconds
+    startAutoPlay() {
+        this.autoPlayInterval = setInterval(() => {
+            this.nextSlide();
+        }, 5000); // 5000ms = 5 seconds
+    }
+
+    // Stop Auto-Play
+    stopAutoPlay() {
+        clearInterval(this.autoPlayInterval);
+    }
+
+    // Reset Auto-Play when user interacts (clicks manually)
+    resetAutoPlay() {
+        this.stopAutoPlay();
+        this.startAutoPlay();
+    }
+}
+
+// Initialize on Page Load
+document.addEventListener('DOMContentLoaded', function () {
+    new ChartCarousel();
+});
+
 
         document.addEventListener('DOMContentLoaded', function() {
             const section1Carousel = new Carousel(document.querySelector('#section1'));
             
-            const chartCarousel = new ChartCarousel();
+            // const chartCarousel = new ChartCarousel();
 
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function(e) {
@@ -532,14 +688,15 @@
     
     
     );
-    document.querySelectorAll('.chart-container img').forEach(img => {
-    img.addEventListener('click', function() {
-        const link = this.getAttribute('data-link'); // Get Django-generated URL
-        if (link) {
-            window.location.href = link; // Redirect immediately on click
-        }
-    });
-});
+    document.querySelectorAll('.chart-image-wrapper').forEach(wrapper => {
+            wrapper.addEventListener('click', function() {
+                const img = this.querySelector('img');
+                const link = img.getAttribute('data-link');
+                if (link) {
+                    window.location.href = link;
+                }
+            });
+        });
 
 
     </script>

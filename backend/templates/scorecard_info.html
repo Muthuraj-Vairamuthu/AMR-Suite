@@ -3,119 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AMRSuite - Scorecards</title>
+    <title>AMRSuite - Resistance Patterns</title>
     <style>
-        :root {
-            --primary-gradient: linear-gradient(135deg, #000000 0%, #000000 100%);
-            --accent-gradient: linear-gradient(to right, #60a5fa, #3b82f6);
-            --text-color: #ffffff;
-            --text-secondary: #94a3b8;
-        }
-
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
         }
 
         body {
-            background: var(--primary-gradient);
-            color: var(--text-color);
+            background: linear-gradient(135deg, #000000 0%, #000000 100%);
+            color: white;
             min-height: 100vh;
         }
 
-        .navbar {
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(10px);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
+        header {
             padding: 1.5rem 2rem;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .nav-content {
-            max-width: 1400px;
-            margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        .nav-left {
-            display: flex;
-            align-items: center;
-            gap: 1.5rem;
-        }
+       .logo {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+}
 
-        .nav-left h1 {
-            font-size: 1.5rem;
-            font-weight: 600;
-            letter-spacing: -0.5px;
-        }
+/* Back Button Styling */
+.back-button {
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: white;
+    transition: transform 0.2s ease, opacity 0.3s ease;
+}
 
-        .nav-left h2 {
-            font-size: 1.25rem;
-            font-weight: 400;
-            color: var(--text-secondary);
-        }
+/* Button Hover Effect */
+.back-button:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
 
-        .nav-separator {
-            color: rgba(255, 255, 255, 0.2);
-        }
+/* Right-side Logo */
+.header-logo img {
+    height: 45px; /* Adjust size as needed */
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
 
-        .logo img {
-            width: 44px;
-            height: 44px;
-            border-radius: 12px;
-            border: 2px solid rgba(255, 255, 255, 0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .logo img:hover {
-            transform: scale(1.05);
-        }
+/* Hover Effect */
+.header-logo img:hover {
+    transform: scale(1.1);
+}
 
         .container {
             max-width: 1400px;
             margin: 0 auto;
-            padding: 7rem 2rem 2rem;
+            padding: 3rem 2rem;
         }
 
-        .back-button {
-            margin-bottom: 3rem;
-        }
-
-        .btn-back {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            color: var(--text-color);
-            width: 48px;
-            height: 48px;
-            border-radius: 12px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s ease;
-            backdrop-filter: blur(8px);
-        }
-
-        .btn-back:hover {
-            background: rgba(255, 255, 255, 0.1);
-            transform: translateX(-5px);
-        }
-
-        .hero {
+        .title-section {
             text-align: center;
             margin-bottom: 4rem;
         }
 
-        .title {
-            font-size: 3.5rem;
-            font-weight: 700;
+        .title-section h1 {
+            font-size: 2.5rem;
             margin-bottom: 1rem;
             background: linear-gradient(to right, #fff, #cbd5e1);
             -webkit-background-clip: text;
@@ -123,54 +86,129 @@
             letter-spacing: -0.5px;
         }
 
-        .subtitle {
+        .title-section h2 {
+            color: #94a3b8;
             font-size: 1.5rem;
-            color: var(--text-secondary);
-            max-width: 800px;
-            margin: 0 auto;
-            line-height: 1.4;
+            font-weight: 400;
         }
 
-        .graph-section {
-    display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center;
-    padding: 2rem 0;
-}
-
-.graph-container {
-    max-width: 900px; /* Reduce max-width for better alignment */
-    width: 100%;
-    text-align: center;
+        .carousel {
+    position: relative;
+    max-width: 1000px; /* Reduced max width for better alignment */
+    margin: 0 auto;
     background: rgba(255, 255, 255, 0.03);
     border-radius: 1.5rem;
-    padding: 1.5rem;
+    overflow: hidden;
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
     border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+        .slides {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    overflow: hidden;
+    max-height: 500px; /* Set max height to prevent covering text */
 }
 
-  .graph-container:hover {
-    transform: translateY(-5px);
-}
 
-.graph-image {
+        .slide {
+            min-width: 100%;
+            position: relative;
+        }
+
+        .slide img {
     width: 100%;
-    max-width: 800px; /* Reduce size so it doesn’t dominate the screen */
-    height: auto;
-    object-fit: contain;
-    border-radius: 1rem;
+    height: auto; /* Ensure image scales properly */
+    object-fit: contain; /* Prevent cropping */
+    padding: 1rem;
 }
 
 
-       .description {
+        .slide-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem 2rem;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.85));
+    text-align: center;
+}
+
+
+        .slide-content h3 {
+            font-size: 1.75rem;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .carousel-nav {
+            display: flex;
+            justify-content: center;
+            gap: 0.75rem;
+            margin-top: 1rem;
+            padding: 1rem 0;
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        .nav-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .nav-dot:hover {
+            background: rgba(255, 255, 255, 0.4);
+        }
+
+        .nav-dot.active {
+            background: white;
+            transform: scale(1.2);
+        }
+
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            backdrop-filter: blur(8px);
+            transition: all 0.3s ease;
+            color: white;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .carousel-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .carousel-btn.prev {
+            left: 1.5rem;
+        }
+
+        .carousel-btn.next {
+            right: 1.5rem;
+        }
+
+        .description {
     max-width: 800px; /* Reduce width for better alignment */
-    margin: 3rem auto; /* Adjust spacing */
+    margin: 3rem auto 0; /* Adjust margin to ensure spacing */
     text-align: center;
     line-height: 1.6;
-    color: var(--text-secondary);
+    color: #cbd5e1;
     font-size: 1.125rem;
     padding: 1.5rem;
     background: rgba(255, 255, 255, 0.03);
@@ -178,117 +216,180 @@
     border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-        .action-buttons {
+
+        .slides-container {
             display: flex;
-            gap: 1.5rem;
-            justify-content: center;
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        .btn-primary, .btn-secondary {
-            padding: 1rem 2rem;
-            border-radius: 12px;
-            font-size: 1.125rem;
-            font-weight: 500;
+        .back-button {
+            background: none;
+            border: none;
+            font-size: 28px;
             cursor: pointer;
-            transition: all 0.3s ease;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(8px);
-        }
-
-        .btn-primary {
-            background: var(--accent-gradient);
             color: white;
+            transition: all 0.3s ease;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.05);
         }
 
-        .btn-secondary {
-            background: rgba(255, 255, 255, 0.03);
-            color: var(--text-color);
-        }
-
-        .btn-primary:hover, .btn-secondary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 15px 30px -8px rgba(0, 0, 0, 0.3);
-        }
-
-        .btn-secondary:hover {
+        .back-button:hover {
+            transform: scale(1.1);
             background: rgba(255, 255, 255, 0.1);
         }
 
+        .nav span {
+            font-size: 1.5rem;
+            color: white;
+            cursor: pointer;
+            transition: opacity 0.3s ease;
+        }
+
+        .nav span:hover {
+            opacity: 0.8;
+        }
+
         @media (max-width: 768px) {
-            .container {
-                padding: 6rem 1rem 1rem;
+            .title-section h1 {
+                font-size: 2rem;
             }
-
-            .title {
-                font-size: 2.5rem;
-            }
-
-            .subtitle {
+            
+            .title-section h2 {
                 font-size: 1.25rem;
             }
 
-            .graph-container {
-                padding: 1rem;
+            .carousel-btn {
+                width: 40px;
+                height: 40px;
+                font-size: 1.25rem;
             }
 
-            .action-buttons {
-                flex-direction: column;
-            }
-
-            .btn-primary, .btn-secondary {
-                width: 100%;
-            }
-
-            .nav-left h2 {
-                display: none;
+            .slide-content h3 {
+                font-size: 1.5rem;
             }
         }
     </style>
 </head>
 <body>
-    <header class="navbar">
-        <div class="nav-content">
-            <div class="nav-left">
-                <h1>AMRSuite</h1>
-                <span class="nav-separator">|</span>
-                <h2>Scorecards</h2>
-            </div>
-            <div class="logo">
-                <img src="https://images.unsplash.com/photo-1585435557343-3b092031a831?auto=format&fit=crop&w=100" alt="Lab Logo">
-            </div>
-        </div>
-    </header>
+    <header>
+    <div class="logo">
+        <button class="back-button" onclick="window.location.href='{% url 'home' %}'">←</button>
+        <span>AMRSuite</span>
+    </div>
+    <div class="header-logo">
+        <img src="../static/media/tavlab.logo.png" alt="Company Logo">
+    </div>
+</header>
 
-    <main class="container">
-        <div class="back-button">
-            <button class="btn-back" onclick="window.location.href='{% url 'home2' %}'">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M19 12H5M12 19l-7-7 7-7"/>
-                </svg>
-            </button>
+    <div class="container">
+        <div class="title-section">
+            <h1>Scorecards</h1>
+            <h2>Empowering Decision-Making with Clear Resistance Insights</h2>
         </div>
 
-        <section class="hero">
-            <h1 class="title">Scorecards</h1>
-            <p class="subtitle">Empowering Decision-Making with Clear Resistance Insights</p>
-        </section>
-
-        <section class="graph-section">
-            <div class="graph-container">
-                <img src="../static/media/sc1.png" alt="Graph Placeholder" class="graph-image">
+        <div class="carousel">
+            <div class="slides">
+                <div class="slides-container">
+                    <div class="slide">
+                        <img src="../static/media/sc1.png" alt="Graph 1">
+                        <div class="slide-content">
+                            <h3>Scorecard Pseudomonas aeruginosa - Amikacin</h3>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="../static/media/sc2.png" alt="Graph 2">
+                        <div class="slide-content">
+                            <h3>Scorecard Klebsiella pneumonia - Amikacin</h3>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="../static/media/sc3.png" alt="Graph 3">
+                        <div class="slide-content">
+                            <h3>Scorecard Acinetobacter baumannii - Amikacin</h3>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </section>
 
-        <section class="description">
+            <button class="carousel-btn prev">←</button>
+            <button class="carousel-btn next">→</button>
+
+            <div class="carousel-nav">
+                <button class="nav-dot active"></button>
+                <button class="nav-dot"></button>
+                <button class="nav-dot"></button>
+            </div>
+        </div>
+
+        <div class="description">
             <p>
-                Dynamic scorecards visualize pathogen resistance trends against antimicrobials. These tools, in the form of videos, depict temporal AMR trends and clustering and provide clear and efficient insights, supporting professional decision-making. By showcasing resistance patterns over time and across different groups, these scorecards enhance understanding and inform effective interventions.
+                Dynamic scorecards visualize pathogen resistance trends against antimicrobials. These tools, in the form of videos, depict temporal AMR trends and clustering and provide clear and efficient insights, supporting professional decision-making. By showcasing resistance patterns over time and across different groups, these scorecards enhance understanding and inform effective interventions. 
             </p>
-        </section>
-
-        <div class="action-buttons">
-            <button class="btn-primary">View Details</button>
-            <button class="btn-secondary">Download Report</button>
         </div>
-    </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const slidesContainer = document.querySelector('.slides-container');
+            const slides = document.querySelectorAll('.slide');
+            const prevButton = document.querySelector('.carousel-btn.prev');
+            const nextButton = document.querySelector('.carousel-btn.next');
+            const dots = document.querySelectorAll('.nav-dot');
+            let currentSlide = 0;
+            const totalSlides = slides.length;
+
+            function updateSlidePosition() {
+                slidesContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
+                
+                // Update dots
+                dots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === currentSlide);
+                });
+            }
+
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % totalSlides;
+                updateSlidePosition();
+            }
+
+            function prevSlide() {
+                currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+                updateSlidePosition();
+            }
+
+            // Event listeners for buttons
+            nextButton.addEventListener('click', nextSlide);
+            prevButton.addEventListener('click', prevSlide);
+
+            // Event listeners for dots
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    currentSlide = index;
+                    updateSlidePosition();
+                });
+            });
+
+            // Auto-advance slides
+            let slideInterval = setInterval(nextSlide, 5000);
+
+            // Pause on hover
+            const carousel = document.querySelector('.carousel');
+            carousel.addEventListener('mouseenter', () => {
+                clearInterval(slideInterval);
+            });
+
+            carousel.addEventListener('mouseleave', () => {
+                slideInterval = setInterval(nextSlide, 5000);
+            });
+
+            // Initialize first slide
+            updateSlidePosition();
+        });
+    </script>
 </body>
 </html>

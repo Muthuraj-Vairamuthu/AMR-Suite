@@ -29,13 +29,42 @@
         }
 
         .logo {
-            display: flex;
-            align-items: center;
-            gap: 1.5rem;
-            font-size: 1.5rem;
-            font-weight: 600;
-            letter-spacing: -0.5px;
-        }
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+}
+
+/* Back Button Styling */
+.back-button {
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: white;
+    transition: transform 0.2s ease, opacity 0.3s ease;
+}
+
+/* Button Hover Effect */
+.back-button:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+/* Right-side Logo */
+.header-logo img {
+    height: 45px; /* Adjust size as needed */
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+/* Hover Effect */
+.header-logo img:hover {
+    transform: scale(1.1);
+}
 
         .container {
             max-width: 1400px;
@@ -246,13 +275,15 @@
     </style>
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <button class="back-button" onclick="window.location.href='{% url 'home2' %}'">←</button>
-            <span>AMRSuite</span>
-        </div>
-     
-    </header>
+   <header>
+    <div class="logo">
+        <button class="back-button" onclick="window.location.href='{% url 'home' %}'">←</button>
+        <span>AMRSuite</span>
+    </div>
+    <div class="header-logo">
+        <img src="../static/media/tavlab.logo.png" alt="Company Logo">
+    </div>
+</header>
 
     <div class="container">
         <div class="title-section">
@@ -278,13 +309,13 @@
                     <div class="slide">
                         <img src="../static/media/isolation/gender-pathogen.png" alt="Graph 3">
                         <div class="slide-content">
-                            <h3>Bubble charts visualize bacterial species contributions.</h3>
+                            <h3>Visualize bacterial species contributions.</h3>
                         </div>
                     </div>
                     <div class="slide">
                         <img src="../static/media/isolation/gender-source-india.png" alt="Graph 4">
                         <div class="slide-content">
-                            <h3>Demographic stratification identifies at-risk populations.</h3>
+                            <h3>Gender specific isolation rates.</h3>
                         </div>
                     </div>
                     
