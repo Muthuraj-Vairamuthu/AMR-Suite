@@ -78,13 +78,17 @@
 
         .upload-container {
             max-width: 1400px;
-            margin: 40px auto;
+            margin-top: 20px;
+            padding-top: 0;
+            margin: 0 auto;
             padding: 0 20px;
             width: 90%;
             flex-grow: 1;
             display: flex;
             flex-direction: column;
             align-items: center;
+            min-height: auto;
+            justify-content: center;
         }
 
         .drop-zone {
@@ -93,9 +97,9 @@
             background-color: #2a2f3b;
             border: 2px dashed #3a4155;
             border-radius: 8px;
-            padding: 120px 60px;
+            padding: 100px 60px;
             text-align: center;
-            margin: 0 auto 30px;
+            margin: 0 auto 20px;
             width: 100%;
             max-width: 1200px;
             flex-grow: 1;
@@ -136,14 +140,15 @@
             background-color: #1a2133;
             color: white;
             border: none;
-            padding: 15px 30px;
+            padding: 12px 25px;
             border-radius: 5px;
             cursor: pointer;
             width: auto;
-            font-size: 1rem;
+            font-size: 0.95rem;
             margin-top: 10px;
             min-width: 200px;
             align-self: center;
+            transform: translateY(-10px);
         }
 
         button:hover {
@@ -168,10 +173,10 @@
         .welcome-banner {
             background-color: #1a2133;
             color: white;
-            padding: 25px 40px;
-            margin: 0 auto 40px;
+            padding: 15px 40px;
+            margin-bottom: 10px;
             border-radius: 8px;
-            font-size: 1.2rem;
+            font-size: 1rem;
             max-width: 1200px;
             width: 100%;
             text-align: center;
@@ -205,7 +210,7 @@
     <nav>
         <div class="logo">AMRSuite</div>
         <div class="nav-links">
-            <a href="#">Home</a>
+            <<a href="{% url 'home' %}">Home</a>
             <a href="{% url 'logout' %}" class="logout-btn">Logout</a>
             <img src="{% static 'media/tavlab.logo.png' %}" alt="Lab Logo" />
         </div>

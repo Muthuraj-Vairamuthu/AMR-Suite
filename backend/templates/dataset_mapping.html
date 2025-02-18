@@ -88,7 +88,7 @@
 
         .mapping-container {
             display: grid;
-            grid-template-columns: repeat(3, minmax(300px, 1fr));
+            grid-template-columns: repeat(4, minmax(250px, 1fr));
             gap: 50px;
             justify-content: center;
             width: 100%;
@@ -213,7 +213,7 @@
     <nav>
         <div class="logo">AMRSuite</div>
         <div class="nav-links">
-            <a href="#">Home</a>
+            <a href="{% url 'home' %}">Home </a>
             <a href="{% url 'logout' %}" class="logout-btn">Logout</a>
             <img src="{% static 'media/tavlab.logo.png' %}" alt="Lab Logo" />
         </div>
@@ -225,90 +225,88 @@
         <form action="{% url 'mapping_dataset' %}" method="POST">
             {% csrf_token %}
             <div class="mapping-container">
-                <!-- Section 1: Core Fields -->
+                <!-- Section 1: Core Details -->
                 <div class="mapping-section">
                     <h2>Core Details</h2>
-                    
                     <div class="form-group">
                         <label>Dataset Format<span class="required">*</span></label>
                         <div class="select-wrapper">
-                            <select name="dataset_format" required id="formatSelect" title="Select your dataset structure format">
+                            <select name="dataset_format" required id="formatSelect">
                                 <option value="">Choose Format</option>
-                                <option value="Wide" {% if format == 'Wide' %}selected{% endif %}>Wide (Multiple Antibiotic Columns)</option>
-                                <option value="Long" {% if format == 'Long' %}selected{% endif %}>Long (Single Antibiotic Column)</option>
+                                <option value="Wide" {% if format == 'Wide' %}selected{% endif %}>Wide</option>
+                                <option value="Long" {% if format == 'Long' %}selected{% endif %}>Long</option>
                             </select>
                         </div>
                     </div>
-    
                     <div class="form-group">
                         <label>Bacterial Infection<span class="required">*</span></label>
                         <div class="select-wrapper">
                             <select name="bacterial_infection" required>
-                                <option value="">Select Bacterial Species Column</option>
+                                <option value="">Select Column</option>
                                 {% for column in columns %}
                                     <option value="{{ column }}">{{ column }}</option>
                                 {% endfor %}
                             </select>
                         </div>
                     </div>
-    
                     <div class="form-group">
                         <label>Source Input<span class="required">*</span></label>
                         <div class="select-wrapper">
                             <select name="source_input" required>
-                                <option value="">Select Patient/Sample Source</option>
+                                <option value="">Select Column</option>
                                 {% for column in columns %}
                                     <option value="{{ column }}">{{ column }}</option>
                                 {% endfor %}
                             </select>
                         </div>
                     </div>
+                </div>
     
-                    <h3 style="font-size: 1.3rem; margin: 30px 0 20px; color: white;">Antibiotic Details</h3>
+                <!-- Section 2: Antibiotic Details -->
+                <div class="mapping-section">
+                    <h2>Antibiotic Details</h2>
                     
-                    <div class="dynamic-section" id="longFields" 
-                         style="display: {% if format == 'Long' %}block{% else %}none{% endif %};">
-                        <div class="form-group">
-                            <label>Antibiotic Name Column<span class="required">*</span></label>
-                            <div class="select-wrapper">
-                                <select name="antibiotic_name_col" {% if format == 'Long' %}required{% endif %}>
-                                    <option value="">Select Antibiotic Names Column</option>
-                                    {% for column in columns %}
-                                        <option value="{{ column }}">{{ column }}</option>
-                                    {% endfor %}
-                                </select>
-                            </div>
-                        </div>
-    
-                        <div class="form-group">
-                            <label>Antibiotic Result Column<span class="required">*</span></label>
-                            <div class="select-wrapper">
-                                <select name="antibiotic_result_col" {% if format == 'Long' %}required{% endif %}>
-                                    <option value="">Select Susceptibility Results</option>
-                                    {% for column in columns %}
-                                        <option value="{{ column }}">{{ column }}</option>
-                                    {% endfor %}
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-    
-                    <div class="dynamic-section" id="wideFields" 
-                         style="display: {% if format == 'Wide' %}block{% else %}none{% endif %};">
+                    <!-- Wide Format Fields (Visible by Default) -->
+                    <div class="dynamic-section" id="wideFields" style="display: block;">
                         <div class="form-group">
                             <label>Antibiotic Column Format<span class="required">*</span></label>
                             <div class="input-wrapper">
                                 <input type="text" name="antibiotic_format" 
-                                       placeholder="Format: Antibiotic_[suffix] (e.g.: Antibiotic_I)"
+                                       placeholder="Format: Antibiotic_[suffix]"
                                        pattern="^Antibiotic[_a-zA-Z]+$"
-                                       title="Must start with 'Antibiotic' followed by your suffix (e.g. Antibiotic_I)"
-                                       {% if format == 'Wide' %}required{% endif %}>
+                                       required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Long Format Fields (Hidden by Default) -->
+                    <div class="dynamic-section" id="longFields" style="display: none;">
+                        <div class="form-group">
+                            <label>Antibiotic Name Column<span class="required">*</span></label>
+                            <div class="select-wrapper">
+                                <select name="antibiotic_name_col">
+                                    <option value="">Select Column</option>
+                                    {% for column in columns %}
+                                        <option value="{{ column }}">{{ column }}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Antibiotic Result Column<span class="required">*</span></label>
+                            <div class="select-wrapper">
+                                <select name="antibiotic_result_col">
+                                    <option value="">Select Column</option>
+                                    {% for column in columns %}
+                                        <option value="{{ column }}">{{ column }}</option>
+                                    {% endfor %}
+                                </select>
                             </div>
                         </div>
                     </div>
                 </div>
     
-                <!-- Section 2: Date Fields -->
+                <!-- Section 3: Date Details -->
                 <div class="mapping-section">
                     <h2>Date Details</h2>
                     <div class="form-group">
@@ -358,7 +356,7 @@
                     </div>
                 </div>
     
-                <!-- Section 3: Clustering Details -->
+                <!-- Section 4: Clustering Details -->
                 <div class="mapping-section">
                     <h2>Clustering Details</h2>
                     
@@ -393,15 +391,23 @@
     </div>
 
     <script>
-        // Dynamic field visibility
-        document.getElementById('formatSelect').addEventListener('change', function() {
-            const format = this.value;
-            document.getElementById('longFields').style.display = format === 'Long' ? 'block' : 'none';
-            document.getElementById('wideFields').style.display = format === 'Wide' ? 'block' : 'none';
+        document.addEventListener('DOMContentLoaded', function() {
+            const formatSelect = document.getElementById('formatSelect');
             
-            // Toggle required attributes
-            document.querySelectorAll('#longFields select').forEach(el => el.required = format === 'Long');
-            document.querySelector('#wideFields input').required = format === 'Wide';
+            // Initial setup based on default selection
+            toggleAntibioticFields();
+            
+            formatSelect.addEventListener('change', toggleAntibioticFields);
+
+            function toggleAntibioticFields() {
+                const format = formatSelect.value;
+                document.getElementById('longFields').style.display = format === 'Long' ? 'block' : 'none';
+                document.getElementById('wideFields').style.display = format === 'Long' ? 'none' : 'block';
+                
+                // Toggle required attributes
+                document.querySelectorAll('#longFields select').forEach(el => el.required = format === 'Long');
+                document.querySelector('#wideFields input').required = format !== 'Long';
+            }
         });
     </script>
 </body>

@@ -8,7 +8,7 @@ urlpatterns = [
     # path('', scorecard_info, name='scorecard_info'),
     # path('', resistance_info, name='resistance_info'),
     # path('', isolation_info, name='isolation_info'),
-    path('',home, name='home'),
+    path('', home, name='home'),
 
     path('home2', home2, name='home2'),
     path('login/', login_page, name='login'),

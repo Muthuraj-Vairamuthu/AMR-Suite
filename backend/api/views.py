@@ -23,7 +23,9 @@ from social_core.exceptions import MissingBackend, AuthAlreadyAssociated
 # Create your views here.
 
 def home(request):
-    return render(request, 'home.html') 
+    """Renders the main home page"""
+    return render(request, 'home.html')
+
 def home2(request):
     return render(request,'home2.html')
 def scorecard_info(request):
