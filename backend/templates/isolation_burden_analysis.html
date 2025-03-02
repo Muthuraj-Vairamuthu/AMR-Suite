@@ -186,6 +186,51 @@
             height: auto;
             display: none;
         }
+
+        .toggle-switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+
+        .toggle-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .toggle-label {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #464F62;
+            transition: .4s;
+            border-radius: 34px;
+        }
+
+        .toggle-label:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked + .toggle-label {
+            background-color: #1a2133;
+        }
+
+        input:checked + .toggle-label:before {
+            transform: translateX(26px);
+        }
     </style>
 </head>
 <body>
@@ -209,12 +254,12 @@
                 <form id="analysis-form">
                     {% csrf_token %}
                     <div class="form-group">
-                        <label>Choose Attribute:</label>
+                        <label>Choose Bacteria:</label>
                         <div class="select-wrapper">
-                            <select name="attribute" required>
-                                <option value="">Choose Attribute</option>
-                                {% for attribute in columns %}
-                                    <option value="{{ attribute }}">{{ attribute }}</option>
+                            <select name="bacteria" required>
+                                <option value="">Choose Bacteria</option>
+                                {% for species in bacteria_species %}
+                                    <option value="{{ species }}">{{ species }}</option>
                                 {% endfor %}
                             </select>
                         </div>
@@ -229,6 +274,41 @@
                                     <option value="{{ source }}">{{ source }}</option>
                                 {% endfor %}
                             </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Choose Cluster Attribute:</label>
+                        <div class="select-wrapper">
+                            <select name="cluster_attribute" required>
+                                <option value="">Choose Cluster Attribute</option>
+                                {% for attribute in cluster_attributes %}
+                                    <option value="{{ attribute }}">{{ attribute }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                    </div> 
+
+                    <div class="form-group">
+                        <label>Choose Country:</label>
+                        <div class="select-wrapper">
+                            <select name="country" required>
+                                <option value="">Choose Country</option>
+                                {% for country in country_columns %}
+                                    <option value="{{ country }}">{{ country }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Gender Filter:</label>
+                        <div class="toggle-switch">
+                            <input type="checkbox" id="gender-filter" name="gender_filter" value="true">
+                            <label for="gender-filter" class="toggle-label">
+                                <span class="toggle-inner"></span>
+                                <span class="toggle-switch-outer"></span>
+                            </label>
                         </div>
                     </div>
 
@@ -258,6 +338,10 @@
             graphImage.style.display = 'none';
 
             const formData = new FormData(this);
+            // Explicitly add gender filter state
+            formData.append('gender_filter', 
+                document.getElementById('gender-filter').checked.toString()
+            );
             
             try {
                 const response = await fetch('/generate_isolation_graph', {

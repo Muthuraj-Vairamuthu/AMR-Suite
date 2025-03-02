@@ -160,15 +160,34 @@ def mapping_dataset(request):
 def isolation_burden_analysis(request):
     # Get dataset from session
     dataset_json = request.session.get('dataset')
+    mapping_data = request.session.get('mapping_data', {})
+    
     if dataset_json:
         dataset = pd.read_json(dataset_json)
-        columns = dataset.columns.tolist()
-
-        source_columns = dataset[request.session['mapping_data']['source_input']].unique()
+        
+        # Get unique bacteria species
+        bacteria_column = mapping_data.get('bacterial_infection')
+        source_column = mapping_data.get('source_input')
+        
+        # Get unique values for each column
+        bacteria_species = list(dataset[bacteria_column].unique())
+        source_columns = list(dataset[source_column].unique())
+        country_columns = list(dataset['Country'].unique()) if 'Country' in dataset.columns else []
+        
+        # Get all columns for cluster attribute selection
+        all_columns = dataset.columns.tolist()
+        
+        # Add 'All Bacteria', 'All Sources', 'All Countries', and 'None' options
+        bacteria_species.insert(0, 'All Bacteria')
+        source_columns.insert(0, 'All Sources')
+        country_columns.insert(0, 'All Countries')
+        all_columns.insert(0, 'None')  # Add None option for cluster attribute
 
         return render(request, 'isolation_burden_analysis.html', {
-            'source_columns': source_columns, 
-            'columns': columns
+            'bacteria_species': bacteria_species,
+            'source_columns': source_columns,
+            'country_columns': country_columns,
+            'cluster_attributes': all_columns  # All columns available for clustering
         })
     return redirect('upload_dataset')
 
@@ -176,16 +195,31 @@ def generate_isolation_graph(request):
     if request.method == 'POST':
         # Get form data
         source = request.POST.get('source')
-        attribute = request.POST.get('attribute')
+        country = request.POST.get('country')
+        bacteria = request.POST.get('bacteria')
+        cluster_attribute = request.POST.get('cluster_attribute')
+        gender_filter = request.POST.get('gender_filter') == 'true'
         
         # Get dataset from session
         dataset_json = request.session.get('dataset')
+        mappings = request.session.get('mapping_data')
+        
         if dataset_json:
             dataset = pd.read_json(dataset_json)
-            mappings = request.session.get('mapping_data')
+            
+            # Filter dataset based on selected bacteria
+            if bacteria != 'All Bacteria':
+                dataset = dataset[dataset[mappings['bacterial_infection']] == bacteria]
             
             # Generate the plot
-            fig = isolation_burden_analysis_graph(dataset, source,attribute, mappings)
+            fig = isolation_burden_analysis_graph(
+                dataset, 
+                source, 
+                country,
+                cluster_attribute,
+                gender_filter,
+                mappings
+            )
             
             # Convert plot to image
             buffer = BytesIO()
