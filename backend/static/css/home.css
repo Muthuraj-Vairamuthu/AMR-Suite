@@ -1,0 +1,397 @@
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            overflow-x: hidden;
+            background-color: #1a1a1a;
+        }
+
+        nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+}
+
+/* Left-side Text Logo */
+.logo {
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* Centered Navigation Links */
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+/* Navigation Link Styling */
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #4a90e2;
+}
+
+/* Right-side Logo */
+.nav-logo {
+    margin-left: 20px; /* Add spacing from links */
+}
+
+.nav-logo img {
+    height: 40px; /* Adjust size as needed */
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+/* Hover Effect */
+.nav-logo img:hover {
+    transform: scale(1.1);
+}
+
+
+        section {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .carousel-container {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .carousel-slide {
+            min-width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .content {
+            max-width: 1000px;
+            padding: 40px;
+            color: white;
+            background: rgba(0, 0, 0, 0.75);
+            border-radius: 20px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s ease;
+            z-index: 2;
+        }
+
+        .content.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        h1 {
+            font-size: 4em;
+            margin-bottom: 30px;
+            font-weight: 700;
+        }
+
+        p {
+            font-size: 1.6em;
+            line-height: 1.6;
+        }
+
+        #section1 .carousel-slide:nth-child(1) {
+            background-image: url('../media/hp3.jpg');
+        }
+
+        #section1 .carousel-slide:nth-child(2) {
+            background-image: url('https://images.unsplash.com/photo-1581093588401-fbb62a02f120?auto=format&fit=crop&q=80');
+        }
+        #section1 .carousel-slide:nth-child(3) {
+            background-image: url('../media/hp4.jpg');
+        }
+        #section1 .carousel-slide:nth-child(4) {
+            background-image: url('../media/hp5.jpg');
+        }
+        
+
+        .carousel-dots {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 12px;
+            z-index: 10;
+        }
+
+        .dot {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .dot.active {
+            background: #4a90e2;
+            transform: scale(1.2);
+        }
+
+        .carousel-arrows {
+            position: absolute;
+            width: 100%;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            justify-content: space-between;
+            padding: 0 30px;
+            z-index: 10;
+        }
+
+        .arrow {
+            width: 60px;
+            height: 60px;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            color: white;
+            font-size: 28px;
+            transition: all 0.3s ease;
+        }
+
+        .arrow:hover {
+            background: rgba(0, 0, 0, 0.9);
+            transform: scale(1.1);
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        .highlight {
+            color: #4a90e2;
+            font-weight: bold;
+        }
+
+        /* Section 3 Styling */
+#section3 {
+    background: #1a1a1a;
+    position: relative;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    padding: 60px 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#section3 h1 {
+    text-align: center;
+    color: white;
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+}
+
+/* Chart Carousel */
+.chart-carousel {
+    position: relative;
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    height: auto;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+/* Wrapper for Smooth Sliding */
+.chart-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+/* Individual Chart Containers */
+.chart-container {
+    flex: 0 0 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Chart Titles */
+.chart-title {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Image Wrapper */
+.chart-image-wrapper {
+    position: relative;
+    display: inline-block; /* Ensure it wraps tightly around the image */
+    width: auto;
+    max-width: 100%;
+    max-height: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Image */
+.chart-container img {
+    max-width: 100%;
+    max-height: 500px;
+    object-fit: contain;
+    display: block; /* Remove extra space below images */
+    border-radius: 10px;
+}
+
+
+/* Hover Effect for Image */
+.chart-container img:hover {
+    transform: scale(1.05);
+}
+
+/* "Click to Know More" Overlay */
+.hover-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+    border-radius: 10px;
+    pointer-events: none; /* Prevents it from interfering when not hovered */
+}
+
+
+/* Styled Hover Text */
+.hover-text {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 12px 25px;
+    border: 2px solid white;
+    border-radius: 30px;
+    background: rgba(74, 144, 226, 0.4);
+    backdrop-filter: blur(6px);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Show Overlay on Hover */
+.chart-image-wrapper:hover .hover-overlay {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Scale Text on Hover */
+.chart-image-wrapper:hover .hover-text {
+    transform: scale(1.1);
+}
+
+/* Navigation Buttons */
+.chart-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    z-index: 10;
+    font-size: 28px;
+    color: white;
+}
+
+/* Left Arrow */
+.chart-arrow.prev {
+    left: 15px;
+}
+
+/* Right Arrow */
+.chart-arrow.next {
+    right: 15px;
+}
+
+/* Hover Effects for Navigation */
+.chart-arrow:hover {
+    background: rgba(255, 255, 255, 0.4);
+    /* transform: scale(1.2); */
+}
+
+/* Dots for Carousel */
+.chart-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.chart-dot {
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.chart-dot.active {
+    background: #4a90e2;
+    transform: scale(1.2);
+}
+
+

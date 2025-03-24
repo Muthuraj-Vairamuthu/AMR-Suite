@@ -1,0 +1,255 @@
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        body {
+            background-color: #1E1E1E;
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logout-btn {
+            background-color: #1a2133;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .logout-btn:hover {
+            background-color: #2a3143;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 80px;
+            background-color: #141619;
+            height: 107px;
+            width: 100%;
+        }
+
+        .logo {
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: white;
+            margin-left: 0;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            margin-right: 0;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.3rem;
+        }
+
+        .nav-links img {
+            height: 65px;
+            width: auto;
+        }
+
+        .page-container {
+            display: flex;
+            flex: 1;
+        }
+
+        .left-half {
+            width: 50%;
+            background-color: #22252B;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+        }
+
+        .right-half {
+            width: 50%;
+            background-color: #191D23;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+        }
+
+        .login-section {
+            max-width: 400px;
+            width: 100%;
+        }
+
+        .signup-section {
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .main-container {
+            display: none; /* Remove the old container */
+        }
+
+        .welcome-text {
+            color: white;
+            font-size: 32px;
+            margin-bottom: 35px;
+            font-weight: bold;
+            text-align: center;
+            width: 100%;
+        }
+
+        h1 {
+            margin-bottom: 25px;
+            font-size: 18px;
+            font-weight: normal;
+            text-align: left;
+        }
+
+        .login-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .login-form > *:not(.forgot-password) {
+            margin: 0;  /* Reset margins for other elements */
+        }
+
+        input {
+            padding: 12px;
+            border-radius: 4px;
+            border: none;
+            background-color: #E8E8E8;
+            font-size: 1rem;
+            width: 100%;
+        }
+
+        .forgot-password {
+            color: white;
+            text-decoration: none;
+            font-size: 0.9rem;
+            margin-top: -5px;
+            margin-bottom: 15px;  /* Added margin-bottom to create space */
+        }
+
+        .sign-in-btn {
+            background-color: #1a2133;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 1rem;
+            width: 100%;
+        }
+
+        .divider {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            margin: 30px 0;
+            color: #FFFFFF;
+        }
+
+        .divider::before,
+        .divider::after {
+            content: '';
+            flex: 1;
+            border-bottom: 1px solid #555;
+        }
+
+        .divider span {
+            padding: 0 10px;
+            color: #888;
+        }
+
+        .google-btn {
+            background-color: #B7392D;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+        }
+
+        .google-btn img {
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+        }
+
+        .signup-section h2 {
+            color: white;
+            font-size: 24px;
+            margin-bottom: 25px;
+        }
+
+        .signup-text {
+            color: white;
+            margin-bottom: 35px;
+        }
+
+        .signup-btn {
+            background-color: #464F62;
+            color: white;
+            border: none;
+            padding: 12px 40px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 1rem;
+            width: 100%;
+        }
+
+        button:hover {
+            opacity: 0.9;
+        }
+
+        .alert {
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid transparent;
+            border-radius: 4px;
+            position: relative;
+        }
+
+        .alert-error {
+            color: #721c24;
+            background-color: #f8d7da;
+            border-color: #f5c6cb;
+        }
+
+        .alert-success {
+            color: #155724;
+            background-color: #d4edda;
+            border-color: #c3e6cb;
+        }
+
+        .alert .close {
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 15px;
+            cursor: pointer;
+            background: none;
+            border: 0;
+            font-size: 1.5em;
+            font-weight: bold;
+            line-height: 1;
+        }

@@ -1,0 +1,202 @@
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        body {
+            background-color: #1E1E1E;
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .logout-btn {
+            background-color: #1a2133;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .logout-btn:hover {
+            background-color: #2a3143;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 80px;
+            background-color: #141619;
+            height: 107px;
+            width: 100%;
+        }
+
+        .logo {
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: white;
+            margin-left: 0;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            margin-right: 0;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.3rem;
+        }
+
+        .nav-links img {
+            height: 65px;
+            width: auto;
+        }
+        .main-content {
+            width: 90%;
+            max-width: 1600px;
+            margin: 80px auto 40px;
+            padding: 40px 60px;
+            background-color: #252932;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 50px;
+        }
+
+        .mapping-container {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(250px, 1fr));
+            gap: 50px;
+            justify-content: center;
+            width: 100%;
+            margin-bottom: 50px;
+        }
+
+        .mapping-section {
+            flex: 1;
+            min-width: 0;
+            background-color: #2a2f3b;
+            border-radius: 12px;
+            padding: 35px;
+            transition: transform 0.2s ease;
+        }
+
+        .mapping-section:hover {
+            transform: translateY(-5px);
+        }
+
+        .mapping-section h2 {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            color: white;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 1rem;
+        }
+
+        .form-group label span.required {
+            color: #ff4444;
+            margin-left: 4px;
+        }
+
+        .select-wrapper {
+            position: relative;
+            background-color: #e0e0e0;
+            border-radius: 5px;
+        }
+
+        select {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            background-color: #e0e0e0;
+            font-size: 1rem;
+            appearance: none;
+            cursor: pointer;
+        }
+
+        .select-wrapper::after {
+            content: '▼';
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            pointer-events: none;
+            color: #333;
+        }
+
+        .next-btn {
+            background-color: #1a2133;
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            width: 200px;
+            display: block;
+            margin: 50px auto 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .next-btn:hover {
+            background-color: #2a3143;
+        }
+
+        .dynamic-section {
+            background-color: transparent;
+            padding: 0;
+            margin-top: 15px;
+        }
+
+        /* Make wide format input match select styling */
+        #wideFields input {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            background-color: #e0e0e0;
+            font-size: 1rem;
+            color: #333;
+        }
+
+        /* Add wrapper for input to match select styling */
+        .input-wrapper {
+            position: relative;
+            background-color: #e0e0e0;
+            border-radius: 5px;
+        }
+
+        .input-wrapper::after {
+            content: '';
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            pointer-events: none;
+            color: #333;
+        }
+ 
