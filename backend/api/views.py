@@ -19,9 +19,11 @@ from django.contrib.auth.models import User
 from social_django.utils import load_strategy, load_backend
 from social_core.backends.oauth import BaseOAuth2
 from social_core.exceptions import MissingBackend, AuthAlreadyAssociated
+import mimetypes
+import magic
+import io
 
 # Create your views here.
-
 def home(request):
     """Renders the main home page"""
     return render(request, 'home.html')
@@ -100,17 +102,6 @@ def login_user(request):
     # Your login logic here
     return HttpResponse("Login Successful")
 
-def dataset_upload(request):
-    file = request.FILES['csv_file']
-    dataset = pd.read_csv(file)
-    # dataset = dataset.sort_values(by='Year')
-    
-    # Store dataset in session
-    request.session['dataset'] = dataset.to_json()
-    
-    columns = dataset.columns.tolist()
-    return render(request, 'dataset_mapping.html', {'columns': columns})
-
 def mapping_dataset(request):
     if request.method == 'POST':
         dataset_json = request.session.get('dataset')
@@ -156,6 +147,119 @@ def mapping_dataset(request):
             return render(request, 'main_results.html')
     return redirect('upload_dataset')
 
+def validate_file_format(file):
+    """Validate CSV file format using extension, MIME type, and content inspection"""
+    errors = []
+    
+    # 1. Check File Extension
+    if not file.name.lower().endswith('.csv'):
+        errors.append("Invalid file extension. Only .csv files are supported")
+    
+    # 2. Verify MIME Type
+    valid_mime_types = ['text/csv']
+    
+    # First try Django's built-in MIME type detection
+    mime_type = getattr(file, 'content_type', mimetypes.guess_type(file.name)[0])
+    
+    # If not reliable, use python-magic for more accurate detection
+    if mime_type not in valid_mime_types:
+        file.seek(0)
+        mime_type = magic.from_buffer(file.read(1024), mime=True)
+        file.seek(0)
+    
+    if mime_type not in valid_mime_types:
+        errors.append(f"Invalid MIME type: {mime_type}. Only text/csv is supported")
+    
+    # Inspect File Content
+    try:
+        file.seek(0)
+        # Check if it's a valid CSV
+        sample = file.read(1024).decode('utf-8')
+        file.seek(0)
+        if not any(char in sample for char in [',', ';', '\t']):
+            errors.append("File content doesn't appear to be valid CSV")
+    except Exception as e:
+        errors.append(f"Error reading file content: {str(e)}")
+    
+    return errors
+
+def validate_dataset(dataset, mapping_data, file=None):
+    """Perform comprehensive validation checks on the dataset"""
+    errors = []
+    
+    # File Format Validation
+    if file:
+        format_errors = validate_file_format(file)
+        errors.extend(format_errors)
+    
+    # Dataset Structure Validation
+    
+    if len(dataset.columns) == 0:
+        errors.append("Dataset has no columns - invalid format")
+    elif len(dataset) == 0:
+        errors.append("Dataset is empty - invalid format")
+    
+    # Duplicate Records Check
+    if dataset.duplicated().any():
+        errors.append("Duplicate records found in the dataset")
+    
+    # Date Validity Check
+    if 'date_column' in mapping_data:
+        try:
+            dates = pd.to_datetime(dataset[mapping_data['date_column']])
+            if (dates.dt.year > pd.Timestamp.now().year).any():
+                errors.append("Future dates found in the dataset")
+        except:
+            errors.append("Invalid date format in date column")
+    
+    return errors
+
+def dataset_upload(request):
+    file = request.FILES['csv_file']
+    
+    # First validate file format
+    format_errors = validate_file_format(file)
+    if format_errors:
+        for error in format_errors:
+            messages.error(request, error)
+        return redirect('upload_dataset')
+    
+    # Then proceed with reading the file
+    try:
+        dataset = pd.read_csv(file)
+        
+        # Additional validation by checking if we can access basic file properties
+        if len(dataset.columns) == 0 or len(dataset) == 0:
+            messages.error(request, "The file appears to be corrupted or empty")
+            return redirect('upload_dataset')
+            
+        # Try to perform basic operations
+        try:
+            dataset.head()
+            dataset.columns
+            dataset.dtypes
+        except Exception as e:
+            messages.error(request, f"File corruption detected: {str(e)}")
+            return redirect('upload_dataset')
+            
+    except pd.errors.EmptyDataError:
+        messages.error(request, "The file appears to be empty")
+        return redirect('upload_dataset')
+    except pd.errors.ParserError:
+        messages.error(request, "The file could not be parsed - it may be corrupted")
+        return redirect('upload_dataset')
+    except UnicodeDecodeError:
+        messages.error(request, "The file encoding appears to be invalid")
+        return redirect('upload_dataset')
+    except Exception as e:
+        messages.error(request, f"Error reading file: {str(e)}")
+        return redirect('upload_dataset')
+    
+    # Store dataset in session
+    request.session['dataset'] = dataset.to_json()
+    
+    columns = dataset.columns.tolist()
+    return render(request, 'dataset_mapping.html', {'columns': columns})
 
 def isolation_burden_analysis(request):
     # Get dataset from session
