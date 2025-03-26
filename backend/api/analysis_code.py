@@ -5,46 +5,114 @@ import matplotlib.pyplot as plt
 import numpy as np
 from scikits.bootstrap import ci
 
-def isolation_burden_analysis_graph(dataset, source, country, cluster_attribute, gender_filter, mappings):
-    # Filter dataset based on source if not 'All Sources'
+def isolation_burden_analysis_graph(dataset, source, country, cluster_attribute, gender_filter, gender_column, mappings):
+    
+    custom_colors = ['#ff69b4', '#00bfff', '#90EE90']  # Pink, Blue, Green
+    
+    # source filter
     if source != 'All Sources':
         dataset = dataset[dataset[mappings['source_input']] == source]
     
-    # Filter dataset based on country if specific country selected
+    # country filter
     if country != 'All Countries':
         dataset = dataset[dataset['Country'] == country]
     
-    # If no cluster attribute is selected or it's 'None'
-    if cluster_attribute == 'None':
-        # If gender filter is on, just stratify by gender
-        if gender_filter and 'Gender' in dataset.columns:
-            gender_counts = dataset.groupby('Gender').size()
+    # cluster attribute is selected
+    if cluster_attribute != 'None':
+        # gender filter is on 
+        if gender_filter and gender_column != 'None':
+            # Get top 5 values for the cluster attribute
+            top_values = dataset[cluster_attribute].value_counts().nlargest(5).index
+            dataset_filtered = dataset[dataset[cluster_attribute].isin(top_values)]
+            grouped_data = dataset_filtered.groupby([cluster_attribute, gender_column]).size().unstack(fill_value=0)
             
-            # Create figure with dark background
+            # Create figure
+            fig, ax = plt.subplots(figsize=(14, 7))
+            ax.set_facecolor('#1a1a1a')
+            fig.patch.set_facecolor('#1a1a1a')
+            x = np.arange(len(grouped_data.index))
+            width = 0.8 / len(grouped_data.columns)  
+            colors = custom_colors[:len(grouped_data.columns)]
+            
+            # each gender category
+            for i, (gender_cat, color) in enumerate(zip(grouped_data.columns, colors)):
+                bars = ax.bar(x + i*width, grouped_data[gender_cat], width, 
+                            label=gender_cat, color=color)
+                
+                # Add count labels on top of bars
+                for j, v in enumerate(grouped_data[gender_cat]):
+                    if v > 0:
+                        ax.text(x[j] + i*width, v + 0.5, str(v), 
+                                color='white', ha='center', fontsize=9)
+            
+            # Customize 
+            source_text = f"Source: {source}" if source != 'All Sources' else "All Sources"
+            country_text = f", Country: {country}" if country != 'All Countries' else ""
+            ax.set_title(f'Isolation Burden Analysis by {cluster_attribute} and {gender_column}\n{source_text}{country_text}', 
+                        color='white', pad=20, fontsize=14)
+            ax.set_xlabel(cluster_attribute, color='white', fontsize=12)
+            ax.set_ylabel('Count', color='white', fontsize=12)
+            
+            
+            ax.set_xticks(x + width * (len(grouped_data.columns) - 1) / 2)
+            ax.set_xticklabels(grouped_data.index, color='white', rotation=45, ha='right')
+            
+            # Add legend
+            ax.legend(title=gender_column, facecolor='#1a1a1a', 
+                     edgecolor='white', labelcolor='white', 
+                     title_fontsize=10, fontsize=9)
+            
+        else:
+            
+            cluster_counts = dataset[cluster_attribute].value_counts().nlargest(5)
+            
             fig, ax = plt.subplots(figsize=(14, 7))
             ax.set_facecolor('#1a1a1a')
             fig.patch.set_facecolor('#1a1a1a')
             
-            # Create bars for each gender
-            gender_colors = ['#00bfff', '#ff69b4']  # Blue for male, pink for female
-            bars = ax.bar(range(len(gender_counts)), gender_counts.values, 
-                         color=gender_colors[:len(gender_counts)])
+            bars = ax.bar(range(len(cluster_counts)), cluster_counts.values, color='#00bfff')
             
-            # Add count labels on top of bars
-            for i, v in enumerate(gender_counts.values):
+            for i, v in enumerate(cluster_counts.values):
                 ax.text(i, v + 0.5, str(v), color='white', ha='center')
             
-            # Customize the plot
             source_text = f"Source: {source}" if source != 'All Sources' else "All Sources"
             country_text = f", Country: {country}" if country != 'All Countries' else ""
-            ax.set_title(f'Isolation Burden Analysis by Gender\n{source_text}{country_text}', 
+            ax.set_title(f'Isolation Burden Analysis by {cluster_attribute}\n{source_text}{country_text}', 
                         color='white', pad=20, fontsize=14)
-            ax.set_xlabel('Gender', color='white', fontsize=12)
+            ax.set_xlabel(cluster_attribute, color='white', fontsize=12)
             ax.set_ylabel('Count', color='white', fontsize=12)
             
-            # Set x-axis labels
+            ax.set_xticks(range(len(cluster_counts)))
+            ax.set_xticklabels(cluster_counts.index, color='white', rotation=45, ha='right')
+    else:
+        # gender filter is on 
+        if gender_filter and gender_column != 'None':
+            # Group 
+            gender_counts = dataset[gender_column].value_counts().nlargest(5)
+            
+            # Create figure
+            fig, ax = plt.subplots(figsize=(14, 7))
+            ax.set_facecolor('#1a1a1a')
+            fig.patch.set_facecolor('#1a1a1a')
+            colors = custom_colors[:len(gender_counts)]
+            bars = ax.bar(range(len(gender_counts)), gender_counts.values, color=colors)
+            
+            # count label
+            for i, v in enumerate(gender_counts.values):
+                if v > 0:
+                    ax.text(i, v + 0.5, str(v), color='white', ha='center', fontsize=9)
+            
+            # plot
+            source_text = f"Source: {source}" if source != 'All Sources' else "All Sources"
+            country_text = f", Country: {country}" if country != 'All Countries' else ""
+            ax.set_title(f'Isolation Burden Analysis by {gender_column}\n{source_text}{country_text}', 
+                        color='white', pad=20, fontsize=14)
+            ax.set_xlabel(gender_column, color='white', fontsize=12)
+            ax.set_ylabel('Count', color='white', fontsize=12)
+            
+            # x-axis labels
             ax.set_xticks(range(len(gender_counts)))
-            ax.set_xticklabels(gender_counts.index, color='white')
+            ax.set_xticklabels(gender_counts.index, color='white', rotation=45, ha='right')
             
         else:
             # Just show total count
@@ -54,11 +122,9 @@ def isolation_burden_analysis_graph(dataset, source, country, cluster_attribute,
             fig, ax = plt.subplots(figsize=(14, 7))
             ax.set_facecolor('#1a1a1a')
             fig.patch.set_facecolor('#1a1a1a')
-            
-            # Create single bar
             bars = ax.bar([0], [total_count], color='#00bfff')
             
-            # Add count label
+            # count label
             ax.text(0, total_count + 0.5, str(total_count), color='white', ha='center')
             
             # Customize the plot
@@ -72,84 +138,7 @@ def isolation_burden_analysis_graph(dataset, source, country, cluster_attribute,
             ax.set_xticks([0])
             ax.set_xticklabels(['Total'], color='white')
     
-    # If cluster attribute is selected
-    else:
-        # If gender filter is on, stratify by gender and cluster attribute
-        if gender_filter and 'Gender' in dataset.columns:
-            # Get top 5 values for the cluster attribute if more than 5 unique values
-            top_values = dataset[cluster_attribute].value_counts().nlargest(5).index
-            dataset_filtered = dataset[dataset[cluster_attribute].isin(top_values)]
-            
-            # Group by cluster attribute and gender
-            grouped_data = dataset_filtered.groupby([cluster_attribute, 'Gender']).size().unstack(fill_value=0)
-            
-            # Create figure with dark background
-            fig, ax = plt.subplots(figsize=(14, 7))
-            ax.set_facecolor('#1a1a1a')
-            fig.patch.set_facecolor('#1a1a1a')
-            
-            # Set up bar positions
-            x = np.arange(len(grouped_data.index))
-            width = 0.35
-            
-            # Create bars for each gender
-            gender_colors = ['#00bfff', '#ff69b4']  # Blue for male, pink for female
-            for i, gender in enumerate(grouped_data.columns):
-                if i < len(gender_colors):  # Ensure we don't exceed our color list
-                    bars = ax.bar(x + i*width, grouped_data[gender], width, 
-                                label=gender, color=gender_colors[i])
-                    
-                    # Add count labels on top of bars
-                    for j, v in enumerate(grouped_data[gender]):
-                        if v > 0:  # Only show label if value is greater than 0
-                            ax.text(x[j] + i*width, v + 0.5, str(v), 
-                                    color='white', ha='center', fontsize=9)
-            
-            # Customize the plot
-            source_text = f"Source: {source}" if source != 'All Sources' else "All Sources"
-            country_text = f", Country: {country}" if country != 'All Countries' else ""
-            ax.set_title(f'Isolation Burden Analysis by {cluster_attribute} and Gender\n{source_text}{country_text}', 
-                        color='white', pad=20, fontsize=14)
-            ax.set_xlabel(cluster_attribute, color='white', fontsize=12)
-            ax.set_ylabel('Count', color='white', fontsize=12)
-            
-            # Set x-axis labels
-            ax.set_xticks(x + width/2 if len(grouped_data.columns) > 1 else x)
-            ax.set_xticklabels(grouped_data.index, color='white', rotation=45, ha='right')
-            
-            # Add legend
-            ax.legend(facecolor='#1a1a1a', edgecolor='white', labelcolor='white')
-            
-        else:
-            # If gender filter is off, just group by cluster attribute
-            # Get top values for the cluster attribute
-            cluster_counts = dataset[cluster_attribute].value_counts().nlargest(5)
-            
-            # Create figure
-            fig, ax = plt.subplots(figsize=(14, 7))
-            ax.set_facecolor('#1a1a1a')
-            fig.patch.set_facecolor('#1a1a1a')
-            
-            # Create bars
-            bars = ax.bar(range(len(cluster_counts)), cluster_counts.values, color='#00bfff')
-            
-            # Add count labels on top of bars
-            for i, v in enumerate(cluster_counts.values):
-                ax.text(i, v + 0.5, str(v), color='white', ha='center')
-            
-            # Customize the plot
-            source_text = f"Source: {source}" if source != 'All Sources' else "All Sources"
-            country_text = f", Country: {country}" if country != 'All Countries' else ""
-            ax.set_title(f'Isolation Burden Analysis by {cluster_attribute}\n{source_text}{country_text}', 
-                        color='white', pad=20, fontsize=14)
-            ax.set_xlabel(cluster_attribute, color='white', fontsize=12)
-            ax.set_ylabel('Count', color='white', fontsize=12)
-            
-            # Set x-axis labels
-            ax.set_xticks(range(len(cluster_counts)))
-            ax.set_xticklabels(cluster_counts.index, color='white', rotation=45, ha='right')
-    
-    # Common styling for all plots
+    # Common styling
     ax.tick_params(axis='y', colors='white')
     ax.grid(True, linestyle='--', alpha=0.3, color='white', axis='y')
     for spine in ax.spines.values():

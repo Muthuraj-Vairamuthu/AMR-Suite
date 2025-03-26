@@ -23,14 +23,24 @@
         <div class="processing-section">
             <h1>Processing your Dataset</h1>
             
-            <div class="status-item">
-                <span class="check-icon">✓</span>
-                <span>Loaded the Dataset</span>
+            <div class="status-item" id="file-format-status">
+                <div class="loading-icon" id="file-format-loader"></div>
+                <span>Checking File Format</span>
+            </div>
+            
+            <div class="status-item" id="file-content-status">
+                <div class="loading-icon" id="file-content-loader"></div>
+                <span>Validating File Content</span>
+            </div>
+            
+            <div class="status-item" id="dataset-structure-status">
+                <div class="loading-icon" id="dataset-structure-loader"></div>
+                <span>Checking Dataset Structure</span>
             </div>
             
             <div class="status-item" id="mapping-status">
                 <div class="loading-icon" id="mapping-loader"></div>
-                <span>Created Mappings</span>
+                <span>Creating Mappings</span>
             </div>
         </div>
 
@@ -52,18 +62,32 @@
     </div>
 
     <script>
-        setTimeout(() => {
-            const mappingStatus = document.getElementById('mapping-status');
-            const loader = document.getElementById('mapping-loader');
+        // Simulate validation process
+        const updateStatus = (elementId, success = true) => {
+            const statusElement = document.getElementById(elementId);
+            const loader = statusElement.querySelector('.loading-icon');
             
-            // Replace loader with checkmark
-            loader.remove();
-            const checkmark = document.createElement('span');
-            checkmark.className = 'check-icon';
-            checkmark.textContent = '✓';
-            
-            mappingStatus.insertBefore(checkmark, mappingStatus.firstChild);
-        }, 5000); // 5 seconds delay
+            if (loader) {
+                loader.remove();
+                const icon = document.createElement('span');
+                icon.className = 'check-icon';
+                icon.textContent = '✓';
+                statusElement.insertBefore(icon, statusElement.firstChild);
+                
+                if (success) {
+                    statusElement.classList.add('success');
+                } else {
+                    statusElement.classList.add('error');
+                    icon.textContent = '✗';
+                }
+            }
+        };
+
+        // Simulate validation steps with delays
+        setTimeout(() => updateStatus('file-format-status'), 1000);
+        setTimeout(() => updateStatus('file-content-status'), 2000);
+        setTimeout(() => updateStatus('dataset-structure-status'), 3000);
+        setTimeout(() => updateStatus('mapping-status'), 5000);
     </script>
 </body>
 </html>
