@@ -3,118 +3,372 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scorecards analysis</title>
-    <link rel="stylesheet" href="{% static 'css/scorecard_analysis.css' %}">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scorecards Analysis</title>
+  <!-- Bootstrap CSS (via CDN) -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    }
+    body {
+      background-color: #1E1E1E;
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .logout-btn {
+      background-color: #1a2133;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+    .logout-btn:hover {
+      background-color: #2a3143;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 80px;
+      background-color: #141619;
+      height: 107px;
+      width: 100%;
+    }
+    .logo {
+      font-weight: bold;
+      font-size: 1.5rem;
+      color: white;
+    }
+    .nav-links {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+    }
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.3rem;
+    }
+    .nav-links img {
+      height: 65px;
+      width: auto;
+    }
+    .main-content {
+      padding: 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+    .back-button {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 24px;
+      cursor: pointer;
+      margin-right: 20px;
+    }
+    h1 {
+      font-size: 1.8rem;
+    }
+    .analysis-container {
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      gap: 40px;
+    }
+    .controls-section {
+      background-color: #2a2f3b;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+    .select-wrapper {
+      position: relative;
+      background-color: #e0e0e0;
+      border-radius: 5px;
+    }
+    select {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 5px;
+      background-color: #e0e0e0;
+      font-size: 1rem;
+      appearance: none;
+      cursor: pointer;
+    }
+    .select-wrapper::after {
+      content: '▼';
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      pointer-events: none;
+      color: #333;
+    }
+    .generate-btn {
+      width: 100%;
+      padding: 12px;
+      background-color: #1a2133;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background-color 0.3s ease;
+    }
+    .generate-btn:hover {
+      background-color: #2a3143;
+    }
+    .graph-section {
+      background-color: #2a2f3b;
+      padding: 20px;
+      border-radius: 10px;
+      min-height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    .graph-placeholder {
+      width: 100%;
+      height: 400px;
+      background-color: #1a1a1a;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #666;
+      font-size: 1.1rem;
+    }
+    .download-btn {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      background-color: #1a2133;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      z-index: 10;
+    }
+    .download-btn:hover {
+      background-color: #2a3143;
+    }
+    .download-btn:disabled {
+      background-color: #333;
+      cursor: not-allowed;
+    }
+  </style>
 </head>
 <body>
-    <nav>
-        <div class="logo">AMRSuite</div>
-        <div class="nav-links">
-            <a href="{% url 'home' %}">Home</a>
-            <a href="{% url 'logout' %}" class="logout-btn">Logout</a>
-            <img src="{% static 'media/tavlab.logo.png' %}" alt="Lab Logo" />
-        </div>
-    </nav>
+  <nav>
+    <div class="logo">AMRSuite</div>
+    <div class="nav-links">
+      <a href="{% url 'home' %}">Home</a>
+      <a href="{% url 'logout' %}" class="logout-btn">Logout</a>
+      <img src="{% static 'media/tavlab.logo.png' %}" alt="Lab Logo" />
+    </div>
+  </nav>
 
-    <div class="main-content">
-        <div class="header">
-            <button class="back-button" onclick="history.back()">←</button>
-            <h1>Isolation Burden Analysis</h1>
-        </div>
-
-        <div class="analysis-container">
-            <div class="controls-section">
-                <form id="analysis-form">
-                    {% csrf_token %}
-                    <div class="form-group">
-                        <label>Choose Infection:</label>
-                        <div class="select-wrapper">
-                            <select name="infection" required>
-                                <option value="">Choose Infection</option>
-                                {% for infection in infection_columns %}
-                                    <option value="{{ infection }}">{{ infection }}</option>
-                                {% endfor %}
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label>Choose Antibiotic:</label>
-                        <div class="select-wrapper">
-                            <select name="antibiotic" required>
-                                <option value="">Choose Antibiotic</option>
-                                {% for antibiotic in antibiotic_columns %}
-                                    <option value="{{ antibiotic }}">{{ antibiotic }}</option>
-                                {% endfor %}
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label>Choose Source:</label>
-                        <div class="select-wrapper">
-                            <select name="source" required>
-                                <option value="">Choose Source</option>
-                                {% for source in source_columns %}
-                                    <option value="{{ source }}">{{ source }}</option>
-                                {% endfor %}
-                            </select>
-                        </div>
-                    </div>
-
-                    <button type="submit" class="generate-btn">Generate</button>
-                </form>
-            </div>
-
-            <div class="graph-section">
-                <div class="graph-placeholder" id="placeholder-text">
-                    Select attributes and generate to view the graph
-                </div>
-                <img id="graph-image" alt="Isolation Burden Graph">
-            </div>
-        </div>
+  <div class="main-content">
+    <div class="header">
+      <button class="back-button" onclick="history.back()">←</button>
+      <h1>Scorecards Analysis</h1>
     </div>
 
-    <script>
-        document.getElementById('analysis-form').addEventListener('submit', async function(e) {
-            e.preventDefault();
-            
-            const placeholder = document.querySelector('.graph-placeholder');
-            const graphImage = document.getElementById('graph-image');
-            
-            // Show loading state
-            placeholder.textContent = 'Generating graph...';
-            placeholder.style.display = 'flex';
-            graphImage.style.display = 'none';
+    <div class="analysis-container">
+      <div class="controls-section">
+        <form id="analysis-form">
+          {% csrf_token %}
+          <div class="form-group">
+            <label>Choose Infection:</label>
+            <div class="select-wrapper">
+              <select name="infection" required>
+                <option value="">Choose Infection</option>
+                {% for infection in infection_columns %}
+                  <option value="{{ infection }}">{{ infection }}</option>
+                {% endfor %}
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Choose Antibiotic:</label>
+            <div class="select-wrapper">
+              <select name="antibiotic" required>
+                <option value="">Choose Antibiotic</option>
+                {% for antibiotic in antibiotic_columns %}
+                  <option value="{{ antibiotic }}">{{ antibiotic }}</option>
+                {% endfor %}
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Choose Source:</label>
+            <div class="select-wrapper">
+              <select name="source" required>
+                <option value="">Choose Source</option>
+                {% for source in source_columns %}
+                  <option value="{{ source }}">{{ source }}</option>
+                {% endfor %}
+              </select>
+            </div>
+          </div>
+          <button type="submit" class="generate-btn">Generate</button>
+        </form>
+      </div>
 
-            const formData = new FormData(this);
-            
-            try {
-                const response = await fetch('/generate_scorecard_graph', {
-                    method: 'POST',
-                    body: formData,
-                    headers: {
-                        'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value
-                    }
-                });
+      <div class="graph-section">
+        <!-- Carousel Container -->
+        <div id="carousel-container" class="carousel slide" data-ride="carousel" style="width: 100%;">
+          <ol class="carousel-indicators" id="carousel-indicators">
+          </ol>
+          <div class="carousel-inner" id="carousel-inner">
+            <div class="carousel-item active">
+              <div class="graph-placeholder">
+                Select attributes and generate to view the graph
+              </div>
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carousel-container" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carousel-container" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+          <button id="download-btn" class="download-btn" disabled>Download</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
-                if (response.ok) {
-                    const imageBlob = await response.blob();
-                    const imageUrl = URL.createObjectURL(imageBlob);
-                    
-                    // Show the graph
-                    graphImage.src = imageUrl;
-                    graphImage.style.display = 'block';
-                    placeholder.style.display = 'none';
-                } else {
-                    placeholder.textContent = 'Error generating graph. Please try again.';
-                }
-            } catch (error) {
-                placeholder.textContent = 'Error generating graph. Please try again.';
-            }
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script>
+    document.getElementById('analysis-form').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      
+      const carouselInner = document.getElementById('carousel-inner');
+      const carouselIndicators = document.getElementById('carousel-indicators');
+      const downloadBtn = document.getElementById('download-btn');
+      
+      // Clear previous carousel content
+      carouselInner.innerHTML = '';
+      carouselIndicators.innerHTML = '';
+
+      // Disable download button initially
+      downloadBtn.disabled = true;
+
+      // Create a loading placeholder
+      let loadingItem = document.createElement('div');
+      loadingItem.classList.add('carousel-item', 'active');
+      loadingItem.innerHTML = `<div class="graph-placeholder">Generating graphs...</div>`;
+      carouselInner.appendChild(loadingItem);
+
+      const formData = new FormData(this);
+      
+      try {
+        const response = await fetch('/generate_scorecards', {
+          method: 'POST',
+          body: formData,
+          headers: {
+            'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value
+          }
         });
-    </script>
+        if (response.ok) {
+          const data = await response.json();
+          const pngs = data.pngs; // Assuming this is an array of image blobs or base64 strings
+          
+          if (pngs.length === 0) {
+            loadingItem.innerHTML = `<div class="graph-placeholder">No graphs generated.</div>`;
+            return;
+          }
+
+          // Clear loading placeholder
+          carouselInner.innerHTML = '';
+          carouselIndicators.innerHTML = '';
+
+          let currentImageUrl = null;
+
+          pngs.forEach((png, index) => {
+            // Create indicator for each image
+            const indicator = document.createElement('li');
+            indicator.setAttribute('data-target', '#carousel-container');
+            indicator.setAttribute('data-slide-to', index);
+            if (index === 0) indicator.classList.add('active');
+            carouselIndicators.appendChild(indicator);
+
+            // Create a carousel item
+            const carouselItem = document.createElement('div');
+            carouselItem.classList.add('carousel-item');
+            if (index === 0) carouselItem.classList.add('active');
+
+            // If the image is a Base64 string, ensure you include the appropriate data URI prefix (e.g., 'data:image/png;base64,')
+            const imgUrl = png.startsWith('data:image') ? png : `data:image/png;base64,${png}`;
+
+            if (index === 0) {
+              currentImageUrl = imgUrl;
+            }
+
+            carouselItem.innerHTML = `<img src="${imgUrl}" class="d-block w-100" alt="Graph ${index+1}">`;
+            carouselInner.appendChild(carouselItem);
+          });
+
+          // Enable download button and set up download functionality
+          downloadBtn.disabled = false;
+          downloadBtn.onclick = function() {
+            const activeCarouselItem = document.querySelector('.carousel-item.active img');
+            if (activeCarouselItem) {
+              const downloadLink = document.createElement('a');
+              downloadLink.href = activeCarouselItem.src;
+              downloadLink.download = `graph_${new Date().toISOString().replace(/:/g, '-')}.png`;
+              downloadLink.click();
+            }
+          };
+
+          // Listen for carousel slide events to update current image
+          $('#carousel-container').on('slid.bs.carousel', function () {
+            const activeCarouselItem = document.querySelector('.carousel-item.active img');
+            if (activeCarouselItem) {
+              currentImageUrl = activeCarouselItem.src;
+            }
+          });
+
+        } else {
+          carouselInner.innerHTML = `<div class="graph-placeholder">Error generating graphs. Please try again.</div>`;
+          downloadBtn.disabled = true;
+        }
+      } catch (error) {
+        carouselInner.innerHTML = `<div class="graph-placeholder">Error generating graphs. Please try again.</div>`;
+        downloadBtn.disabled = true;
+      }
+    });
+  </script>
 </body>
-</html> 
+</html>

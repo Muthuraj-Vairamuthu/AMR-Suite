@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from rest_framework.views import APIView
 from . models import *
 from rest_framework.response import Response
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 import pandas as pd
 import csv
 import numpy as np
@@ -22,6 +22,9 @@ from social_core.exceptions import MissingBackend, AuthAlreadyAssociated
 import mimetypes
 import magic
 import io
+import base64
+from django.conf import settings
+
 
 # Create your views here.
 def home(request):
@@ -398,6 +401,7 @@ def scorecards(request):
         })
     return redirect('upload_dataset')
 
+
 def generate_scorecard_graph(request):
     pass
     
@@ -427,3 +431,31 @@ def google_callback(request):
     
     return redirect('login')
 
+def generate_scorecards(request):
+    if request.method == 'POST':
+        source = request.POST.get('source')
+        infection = request.POST.get('infection')
+        antibiotic = request.POST.get('antibiotic')
+
+        print(f"Generating scorecards for: {source}, {infection}, {antibiotic}")
+
+        dataset = pd.read_json(request.session['dataset'])
+
+        figures = scorecard_analysis(
+            dataset,
+            source,
+            infection,
+            antibiotic,
+            request.session['mapping_data']
+        )
+        
+        pngs = []
+        for fig in figures:
+            buffer = BytesIO()
+            fig.savefig(buffer, format='png', bbox_inches='tight', transparent=True)
+            buffer.seek(0)
+            image = base64.b64encode(buffer.getvalue()).decode('utf-8')
+            pngs.append(image)
+            plt.close(fig)
+
+        return JsonResponse({'pngs': pngs})

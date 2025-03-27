@@ -2,8 +2,11 @@ import matplotlib.pyplot as plt
 import numpy as np
 from scikits.bootstrap import ci
 import matplotlib.pyplot as plt
-import numpy as np
-from scikits.bootstrap import ci
+import matplotlib.colors as mcolors
+import os
+import re
+import pandas as pd
+import subprocess
 
 def isolation_burden_analysis_graph(dataset, source, country, cluster_attribute, gender_filter, gender_column, mappings):
     
@@ -722,7 +725,212 @@ import pandas as pd
 #     plt.tight_layout()
 #     return fig
 
-def scorecard_analysis(dataset, source, infection, antibiotic):
+def scorecard_analysis(dataset, source_input, infection, antibiotic, mappings):
     scorecard_dataset = dataset.sort_values(by='Year')
-    scorecard_dataset = scorecard_dataset[(scorecard_dataset[mappings['source_input']] == source) & (scorecard_dataset[mappings['bacterial_infection']] == infection)]
+    scorecard_dataset = scorecard_dataset[(scorecard_dataset[mappings['source_input']] == source_input) & (scorecard_dataset[mappings['bacterial_infection']] == infection)]
     valid_values = ['Resistant', 'Intermediate', 'Susceptible']
+
+    date_format = mappings['date_format']
+    date_column = mappings['date_column']
+
+    if date_format == 'DD/MM/YYYY':
+        result = scorecard_dataset[date_column].str.split('/')
+        scorecard_dataset['Year'] = result.str[2].astype(int)
+        scorecard_dataset['Month'] = result.str[1].astype(int)
+        scorecard_dataset['Day'] = result.str[0].astype(int)
+
+
+    elif date_format == 'MM/DD/YYYY':
+        result = scorecard_dataset[date_column].str.split('/')
+        scorecard_dataset['Year'] = result.str[2].astype(int)
+        scorecard_dataset['Month'] = result.str[0].astype(int)
+        scorecard_dataset['Day'] = result.str[1].astype(int)
+    
+    elif date_format == 'YYYY/MM/DD':
+        result = scorecard_dataset[date_column].str.split('/')
+        scorecard_dataset['Year'] = result.str[0].astype(int)
+        scorecard_dataset['Month'] = result.str[1].astype(int)
+        scorecard_dataset['Day'] = result.str[2].astype(int)
+    
+    elif date_format == 'YYYY-MM-DD':
+        result = scorecard_dataset[date_column].str.split('-')
+        scorecard_dataset['Year'] = result.str[0].astype(int)
+        scorecard_dataset['Month'] = result.str[1].astype(int)
+        scorecard_dataset['Day'] = result.str[2].astype(int)
+
+    elif date_format == 'MM-DD-YYYY':
+        result = scorecard_dataset[date_column].str.split('-')
+        scorecard_dataset['Year'] = result.str[2].astype(int)
+        scorecard_dataset['Month'] = result.str[0].astype(int)
+        scorecard_dataset['Day'] = result.str[1].astype(int)
+
+    elif date_format == 'DD-MM-YYYY':
+        result = scorecard_dataset[date_column].str.split('-')
+        scorecard_dataset['Year'] = result.str[2].astype(int)
+        scorecard_dataset['Month'] = result.str[1].astype(int)
+        scorecard_dataset['Day'] = result.str[0].astype(int)
+
+    elif date_format == 'YYYY':
+        scorecard_dataset['Year'] = scorecard_dataset[date_column].astype(int)
+        scorecard_dataset['Month'] = 0
+        scorecard_dataset['Day'] = 0
+
+    elif date_format == 'MM':
+        scorecard_dataset['Year'] = 0
+        scorecard_dataset['Month'] = scorecard_dataset[date_column].astype(int)
+        scorecard_dataset['Day'] = 0
+
+    elif date_format == 'DD':
+        scorecard_dataset['Year'] = 0
+        scorecard_dataset['Month'] = 0
+        scorecard_dataset['Day'] = scorecard_dataset[date_column].astype(int)
+
+    scorecard_dataset = scorecard_dataset.sort_values(by=['Year', 'Month', 'Day'])
+
+    cluster_granularity = mappings['time_stamp']
+
+    if cluster_granularity == 'Year':
+        start = scorecard_dataset['Year'].min()
+        end = scorecard_dataset['Year'].max()
+
+    elif cluster_granularity == 'Month':
+        start = scorecard_dataset['Month'].min()
+        end = scorecard_dataset['Month'].max()
+
+    elif cluster_granularity == 'Day':
+        start = scorecard_dataset['Day'].min()
+        end = scorecard_dataset['Day'].max()
+
+    
+    scorecard_dataset.to_csv('static/media/Data.csv', index=False)
+    dataset_path = "static/media/Data.csv"
+
+    # Path to the R script
+    r_script_path = "static/media/cluster_model_final.R"
+
+    # Construct the command
+    print(start, end)
+    cmd = [
+        'Rscript',  r_script_path, infection, antibiotic,
+        source_input, str(start), str(end), dataset_path,
+        mappings['cluster_attribute'], mappings['time_stamp']
+    ]
+    try:
+        result = subprocess.run(cmd, capture_output=True, text=True, check=True)
+        print(result.stdout)
+    except subprocess.CalledProcessError as e:
+        print(f"Exit code: {e.returncode}")
+        print(f"Error output: {e.stderr}")
+
+    figures = generate_scorecard_graph(source_input, infection, antibiotic, dataset, mappings)
+
+    return figures
+
+def generate_scorecard_graph(source, infection, antibiotic, dataset, mappings):
+    time_series_dir = 'Time series data'
+    folder = os.path.join(time_series_dir, infection, source, antibiotic)
+    files = os.listdir(folder)
+
+    if '.DS_Store' in files:
+        files.remove('.DS_Store')
+
+    cluster_attributes = dataset[mappings['cluster_attribute']].unique()
+
+    # Dynamically assign colors to cluster attributes using a color palette
+    colors = list(mcolors.TABLEAU_COLORS.values())  # Use Tableau colors for variety
+    if len(colors) < len(cluster_attributes):
+        # If we run out of colors, cycle through them
+        colors = colors * (len(cluster_attributes) // len(colors) + 1)
+    attribute_colors = {attr: colors[i] for i, attr in enumerate(cluster_attributes)}
+
+    # Regular expression to extract year from filenames
+    file_pattern = re.compile(r"(?P<organism>[^_]+)_(?P<antibiotic>[^_]+)_I_(?P<year>\d{4})")
+
+    # Create a list to store file paths and metadata
+    file_data = []
+    figures = []
+    for file_name in files:
+        match = file_pattern.match(file_name)
+        if match:
+            metadata = match.groupdict()
+            metadata['file_path'] = os.path.join(folder, file_name)
+            file_data.append(metadata)
+
+    if len(file_data) == 0:
+        print(f"No files found in {folder}")
+        return None
+
+    # Group files by organism and antibiotic
+    grouped_files = {}
+    for data in file_data:
+        key = (data['organism'], data['antibiotic'])
+        if key not in grouped_files:
+            grouped_files[key] = []
+        grouped_files[key].append(data)
+
+    # Process each organism-antibiotic combination
+    for (organism, antibiotic), files in grouped_files.items():
+        # Determine global min and max for consistent axes
+        global_intercept_min = float('inf')
+        global_intercept_max = float('-inf')
+        global_slope_min = float('inf')
+        global_slope_max = float('-inf')
+
+        json_results = []
+        for data in files:
+            df = pd.read_csv(data['file_path'])
+            assert(len(df) == len(df.dropna()))
+
+            country_data = df[df['Cluster'] != 'Global']
+            global_average = df[df['Cluster'] == 'Global'].iloc[0]
+
+            # Calculate new slope and intercept
+            country_data['slope'] += global_average['slope']
+            country_data['intercept'] += global_average['intercept']
+
+            # Update global min and max values
+            global_intercept_min = min(global_intercept_min, country_data['intercept'].min())
+            global_intercept_max = max(global_intercept_max, country_data['intercept'].max())
+            global_slope_min = min(global_slope_min, country_data['slope'].min())
+            global_slope_max = max(global_slope_max, country_data['slope'].max())
+
+        global_slope_max += 0.1
+        global_intercept_max += 0.1
+
+        for data in files:
+            df = pd.read_csv(data['file_path'])
+            year = data['year']
+
+            country_data = df[df['Cluster'] != 'Global']
+            global_average = df[df['Cluster'] == 'Global'].iloc[0]
+
+            # Calculate new slope and intercept
+            country_data['slope'] += global_average['slope']
+            country_data['intercept'] += global_average['intercept']
+
+            # Plotting
+            fig = plt.figure(figsize=(10, 8))
+            median_slope = country_data['slope'].median()
+            median_intercept = country_data['intercept'].median()
+            for index, row in country_data.iterrows():
+                # Use the cluster attribute (e.g., Country) to determine the color
+                attr_value = row["Cluster"]  # e.g., row['Country']
+                color = attribute_colors.get(attr_value, 'black')
+                plt.scatter(row['intercept'], row['slope'], color=color, s=120, label=attr_value, alpha=0.3, linewidth=0.5)
+
+            # Set global x and y limits
+            plt.axhline(y=median_slope, color='red', linestyle='--', label='Median Slope', alpha=0.5)
+            plt.axvline(x=median_intercept, color='green', linestyle='--', label='Median Intercept', alpha=0.5)
+
+            plt.xlim([global_intercept_min, global_intercept_max])
+            plt.ylim([global_slope_min, global_slope_max])
+
+            plt.title(f"{year} - {int(year) + 3}", fontsize=16)
+            plt.xlabel('Intercept', fontsize=12)
+            plt.ylabel('Slope', fontsize=12)
+            plt.legend(title=mappings['cluster_attribute'], title_fontsize='large', fontsize='small', loc='upper left', bbox_to_anchor=(1, 1))
+
+            # Save the plot to static/output/
+            figures.append(fig)
+
+    return figures

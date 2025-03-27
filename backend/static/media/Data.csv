@@ -1,0 +1,231 @@
+Isolate Id,Study,Species,Family,Country,State,Gender,Age Group,Speciality,Source,In / Out Patient,Year,Phenotype,Amikacin_I,Imipenem_I,Meropenem_I,Month,Day
+ID_16699,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Mexico,Georgia,Male,Unknown,Pediatric General,Urine,None Given,2014,ESBL,Intermediate,Susceptible,Susceptible,0,0
+ID_14707,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Germany,Illinois,Male,19 to 64 Years,Medicine ICU,Urine,Other,2014,ESBL,Resistant,Susceptible,Susceptible,0,0
+ID_20770,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Germany,,Male,Unknown,Clinic / Office,Urine,None Given,2014,,Susceptible,Intermediate,Susceptible,0,0
+ID_6794,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Finland,Georgia,Female,Unknown,Nursing Home / Rehab,Urine,,2014,ESBL,Susceptible,Intermediate,Intermediate,0,0
+ID_6837,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Czech Republic,North Dakota,Male,3 to 12 Years,Nursing Home / Rehab,Urine,None Given,2014,,Susceptible,Susceptible,Resistant,0,0
+ID_6193,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Hungary,Georgia,,0 to 2 Years,Surgery ICU,Urine,Inpatient,2014,ESBL,Susceptible,Resistant,Susceptible,0,0
+ID_6359,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Colombia,Pennsylvania,,85 and Over,Surgery ICU,Urine,Inpatient,2014,,Intermediate,Intermediate,Intermediate,0,0
+ID_7287,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Ireland,Michigan,Male,13 to 18 Years,Medicine ICU,Urine,Outpatient,2014,ESBL,Resistant,Resistant,Intermediate,0,0
+ID_12404,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Serbia,Wisconsin,Male,Unknown,General Unspecified ICU,Urine,Inpatient,2014,ESBL,Intermediate,Intermediate,Intermediate,0,0
+ID_12584,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Netherlands,New York,,65 to 84 Years,Nursing Home / Rehab,Urine,Other,2014,ESBL,Intermediate,Intermediate,Intermediate,0,0
+ID_12223,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Ukraine,Alabama,Male,19 to 64 Years,Pediatric ICU,Urine,,2014,,Susceptible,Resistant,Intermediate,0,0
+ID_12997,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Nigeria,Alabama,Female,Unknown,Surgery General,Urine,Inpatient,2014,,Resistant,Resistant,Susceptible,0,0
+ID_11443,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Greece,Minnesota,,0 to 2 Years,Pediatric ICU,Urine,None Given,2014,ESBL,Resistant,Intermediate,Susceptible,0,0
+ID_11794,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Singapore,Texas,,3 to 12 Years,Pediatric ICU,Urine,Other,2014,ESBL,Resistant,Intermediate,Susceptible,0,0
+ID_11839,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Austria,Alabama,,Unknown,Medicine General,Urine,None Given,2014,,Intermediate,Intermediate,Intermediate,0,0
+ID_10967,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,India,Michigan,,13 to 18 Years,General Unspecified ICU,Urine,Inpatient,2014,,Resistant,Intermediate,Susceptible,0,0
+ID_11146,Inform,Klebsiella pneumoniae,Enterobacteriaceae,South Africa,Ohio,Male,3 to 12 Years,Medicine ICU,Urine,Outpatient,2014,ESBL,Susceptible,Intermediate,Intermediate,0,0
+ID_31273,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Denmark,Wisconsin,Female,85 and Over,Surgery General,Urine,Inpatient,2014,,Susceptible,Intermediate,Susceptible,0,0
+ID_31883,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Latvia,Minnesota,,85 and Over,None Given,Urine,Outpatient,2014,ESBL,Intermediate,Intermediate,Intermediate,0,0
+ID_29528,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Russia,North Dakota,,85 and Over,Medicine General,Urine,,2014,ESBL,Susceptible,Intermediate,Resistant,0,0
+ID_28924,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Turkey,California,,85 and Over,Other,Urine,None Given,2014,,Susceptible,Resistant,Resistant,0,0
+ID_29110,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Serbia,New Jersey,Female,Unknown,Medicine ICU,Urine,Outpatient,2014,,Resistant,Susceptible,Resistant,0,0
+ID_29809,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Austria,Colorado,Male,0 to 2 Years,Medicine General,Urine,Outpatient,2014,,Intermediate,Resistant,Resistant,0,0
+ID_36604,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Finland,Minnesota,,3 to 12 Years,Surgery ICU,Urine,,2014,,Intermediate,Susceptible,Susceptible,0,0
+ID_36473,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Croatia,Wisconsin,,3 to 12 Years,Medicine General,Urine,,2014,,Susceptible,Resistant,Susceptible,0,0
+ID_33370,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Singapore,Texas,,85 and Over,Other,Urine,Other,2014,,Resistant,Susceptible,Susceptible,0,0
+ID_32895,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Hong Kong,California,Male,0 to 2 Years,None Given,Urine,Other,2014,,Intermediate,Resistant,Resistant,0,0
+ID_34315,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,China,Michigan,Male,0 to 2 Years,Medicine General,Urine,,2014,ESBL,Susceptible,Resistant,Intermediate,0,0
+ID_23372,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Serbia,,Male,3 to 12 Years,Other,Urine,Inpatient,2014,,Intermediate,Susceptible,Resistant,0,0
+ID_23250,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Ireland,Michigan,Female,65 to 84 Years,Medicine General,Urine,,2014,,Susceptible,Resistant,Susceptible,0,0
+ID_25023,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Dominican Republic,New York,,13 to 18 Years,Nursing Home / Rehab,Urine,None Given,2014,ESBL,Susceptible,Susceptible,Intermediate,0,0
+ID_24249,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Kuwait,,,3 to 12 Years,Pediatric General,Urine,,2014,ESBL,Susceptible,Susceptible,Intermediate,0,0
+ID_24167,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Poland,Pennsylvania,,85 and Over,Clinic / Office,Urine,Outpatient,2014,,Intermediate,Resistant,Resistant,0,0
+ID_23125,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Saudi Arabia,New York,Male,19 to 64 Years,Surgery ICU,Urine,Inpatient,2014,,Intermediate,Intermediate,Intermediate,0,0
+ID_21622,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Sweden,Washington,Female,85 and Over,Emergency Room,Urine,Outpatient,2014,ESBL,Susceptible,Intermediate,Susceptible,0,0
+ID_28576,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Turkey,Kentucky,,3 to 12 Years,Pediatric General,Urine,Inpatient,2014,,Resistant,Susceptible,Resistant,0,0
+ID_25337,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Morocco,Indiana,Female,13 to 18 Years,Pediatric General,Urine,Outpatient,2014,ESBL,Resistant,Resistant,Intermediate,0,0
+ID_26400,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Turkey,Wisconsin,Male,0 to 2 Years,Other,Urine,None Given,2014,,Susceptible,Resistant,Resistant,0,0
+ID_1454,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Singapore,Michigan,,Unknown,Surgery General,Urine,None Given,2014,ESBL,Resistant,Susceptible,Resistant,0,0
+ID_2699,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Colombia,New York,Female,85 and Over,Surgery ICU,Urine,,2014,,Susceptible,Susceptible,Intermediate,0,0
+ID_3492,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Ireland,Indiana,,65 to 84 Years,Nursing Home / Rehab,Urine,Other,2014,,Susceptible,Intermediate,Intermediate,0,0
+ID_2397,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,France,Indiana,,19 to 64 Years,None Given,Urine,Other,2014,,Intermediate,Susceptible,Intermediate,0,0
+ID_11941,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Sweden,Indiana,Male,0 to 2 Years,Emergency Room,Urine,Inpatient,2015,,Susceptible,Resistant,Resistant,0,0
+ID_16073,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,"Korea, South",Kentucky,Female,65 to 84 Years,Medicine ICU,Urine,Other,2015,ESBL,Intermediate,Intermediate,Resistant,0,0
+ID_21150,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Israel,North Dakota,Female,65 to 84 Years,Pediatric General,Urine,None Given,2015,ESBL,Susceptible,Susceptible,Susceptible,0,0
+ID_1608,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Italy,Texas,Female,Unknown,Emergency Room,Urine,Outpatient,2015,ESBL,Intermediate,Resistant,Intermediate,0,0
+ID_12335,Inform,Klebsiella pneumoniae,Enterobacteriaceae,"Korea, South",New Jersey,Female,85 and Over,Emergency Room,Urine,,2015,,Susceptible,Resistant,Susceptible,0,0
+ID_27308,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Costa Rica,Kentucky,,65 to 84 Years,General Unspecified ICU,Urine,,2015,ESBL,Intermediate,Resistant,Resistant,0,0
+ID_11157,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Latvia,California,Female,3 to 12 Years,Surgery ICU,Urine,Outpatient,2015,ESBL,Resistant,Resistant,Intermediate,0,0
+ID_1118,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Serbia,Michigan,Female,19 to 64 Years,Nursing Home / Rehab,Urine,,2015,,Resistant,Resistant,Susceptible,0,0
+ID_26866,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Israel,Alabama,,Unknown,Nursing Home / Rehab,Urine,,2015,ESBL,Resistant,Intermediate,Resistant,0,0
+ID_11012,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Greece,,Female,0 to 2 Years,Pediatric ICU,Urine,Other,2015,ESBL,Susceptible,Resistant,Intermediate,0,0
+ID_4973,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Nigeria,Illinois,Female,13 to 18 Years,Pediatric General,Urine,None Given,2015,,Susceptible,Susceptible,Susceptible,0,0
+ID_27084,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Netherlands,Washington,,85 and Over,None Given,Urine,Inpatient,2015,ESBL,Susceptible,Resistant,Susceptible,0,0
+ID_20074,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Kuwait,Wisconsin,Male,85 and Over,Surgery ICU,Urine,,2015,ESBL,Resistant,Resistant,Intermediate,0,0
+ID_27858,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Latvia,Colorado,Male,13 to 18 Years,Emergency Room,Urine,Outpatient,2015,ESBL,Resistant,Susceptible,Resistant,0,0
+ID_4184,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Mexico,Illinois,,19 to 64 Years,Clinic / Office,Urine,Other,2015,ESBL,Intermediate,Susceptible,Intermediate,0,0
+ID_19476,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Philippines,North Dakota,Male,65 to 84 Years,Pediatric General,Urine,Other,2015,ESBL,Susceptible,Susceptible,Intermediate,0,0
+ID_14384,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Belgium,Indiana,,65 to 84 Years,Medicine ICU,Urine,Outpatient,2015,ESBL,Intermediate,Intermediate,Resistant,0,0
+ID_19562,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Malaysia,North Dakota,,85 and Over,Medicine ICU,Urine,Outpatient,2015,,Intermediate,Susceptible,Resistant,0,0
+ID_14281,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Ukraine,Minnesota,,85 and Over,Pediatric ICU,Urine,Other,2015,,Intermediate,Susceptible,Resistant,0,0
+ID_1667,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Dominican Republic,Georgia,Female,Unknown,Emergency Room,Urine,Outpatient,2015,ESBL,Susceptible,Susceptible,Susceptible,0,0
+ID_15471,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Kuwait,North Dakota,Male,85 and Over,Pediatric ICU,Urine,Outpatient,2015,,Susceptible,Susceptible,Intermediate,0,0
+ID_4177,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Jordan,Nebraska,,13 to 18 Years,Surgery ICU,Urine,None Given,2015,ESBL,Resistant,Resistant,Susceptible,0,0
+ID_31614,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Ukraine,Wisconsin,Female,Unknown,General Unspecified ICU,Urine,Other,2015,ESBL,Resistant,Intermediate,Resistant,0,0
+ID_32019,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Israel,Kentucky,Male,13 to 18 Years,General Unspecified ICU,Urine,Inpatient,2015,,Susceptible,Susceptible,Intermediate,0,0
+ID_20331,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Serbia,Ohio,Female,Unknown,Pediatric General,Urine,Other,2015,ESBL,Intermediate,Intermediate,Resistant,0,0
+ID_13180,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Serbia,New Jersey,,Unknown,Emergency Room,Urine,,2015,,Resistant,Susceptible,Intermediate,0,0
+ID_35459,Inform,Klebsiella pneumoniae,Enterobacteriaceae,United States,Colorado,Female,19 to 64 Years,Surgery ICU,Urine,,2015,,Intermediate,Intermediate,Susceptible,0,0
+ID_5775,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,South Africa,Wisconsin,Male,3 to 12 Years,Pediatric ICU,Urine,Inpatient,2015,ESBL,Intermediate,Intermediate,Susceptible,0,0
+ID_8563,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Kuwait,Florida,Female,85 and Over,General Unspecified ICU,Urine,Outpatient,2015,ESBL,Resistant,Resistant,Susceptible,0,0
+ID_23473,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Latvia,Wisconsin,Male,3 to 12 Years,Pediatric General,Urine,,2015,ESBL,Intermediate,Resistant,Susceptible,0,0
+ID_8187,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,France,Ohio,,0 to 2 Years,Clinic / Office,Urine,Outpatient,2015,ESBL,Intermediate,Intermediate,Resistant,0,0
+ID_1371,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Hungary,Wisconsin,Male,85 and Over,None Given,Urine,None Given,2015,ESBL,Intermediate,Susceptible,Intermediate,0,0
+ID_15,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Guatemala,Pennsylvania,Female,3 to 12 Years,Surgery ICU,Urine,None Given,2015,,Intermediate,Intermediate,Intermediate,0,0
+ID_24685,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Lithuania,Minnesota,,13 to 18 Years,Nursing Home / Rehab,Urine,,2015,ESBL,Susceptible,Intermediate,Intermediate,0,0
+ID_36570,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Austria,Georgia,,85 and Over,Pediatric General,Urine,Inpatient,2015,,Resistant,Intermediate,Susceptible,0,0
+ID_6227,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Kuwait,Colorado,Male,85 and Over,Emergency Room,Urine,None Given,2015,ESBL,Intermediate,Susceptible,Resistant,0,0
+ID_36566,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Nigeria,Michigan,Male,Unknown,Pediatric General,Urine,Other,2015,,Susceptible,Susceptible,Susceptible,0,0
+ID_29318,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Guatemala,Nebraska,Male,85 and Over,Clinic / Office,Urine,Outpatient,2015,,Susceptible,Susceptible,Intermediate,0,0
+ID_24281,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Belgium,Georgia,Male,3 to 12 Years,Nursing Home / Rehab,Urine,Outpatient,2015,,Susceptible,Intermediate,Susceptible,0,0
+ID_3834,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Belgium,Michigan,Male,19 to 64 Years,None Given,Urine,None Given,2015,,Resistant,Resistant,Resistant,0,0
+ID_24244,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Kuwait,Alabama,Male,13 to 18 Years,None Given,Urine,None Given,2015,ESBL,Intermediate,Resistant,Resistant,0,0
+ID_26473,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Italy,New York,Male,85 and Over,Nursing Home / Rehab,Urine,Outpatient,2015,,Susceptible,Intermediate,Resistant,0,0
+ID_21951,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Spain,Georgia,Female,0 to 2 Years,Pediatric ICU,Urine,Outpatient,2015,ESBL,Resistant,Susceptible,Intermediate,0,0
+ID_9974,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Jordan,California,,13 to 18 Years,Medicine General,Urine,Inpatient,2015,,Susceptible,Intermediate,Susceptible,0,0
+ID_29190,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,India,,,Unknown,Medicine ICU,Urine,None Given,2015,ESBL,Resistant,Intermediate,Resistant,0,0
+ID_33668,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,United States,Wisconsin,,19 to 64 Years,Emergency Room,Urine,None Given,2015,ESBL,Intermediate,Resistant,Susceptible,0,0
+ID_8766,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Mexico,Georgia,,13 to 18 Years,Medicine ICU,Urine,,2015,ESBL,Intermediate,Intermediate,Resistant,0,0
+ID_8757,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Dominican Republic,Indiana,,0 to 2 Years,Surgery General,Urine,Other,2015,,Resistant,Resistant,Resistant,0,0
+ID_29146,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Austria,Michigan,,Unknown,None Given,Urine,Inpatient,2015,ESBL,Intermediate,Susceptible,Susceptible,0,0
+ID_26130,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,China,Illinois,Female,65 to 84 Years,Clinic / Office,Urine,Outpatient,2015,,Susceptible,Susceptible,Susceptible,0,0
+ID_2034,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Dominican Republic,Ohio,Female,65 to 84 Years,Nursing Home / Rehab,Urine,,2015,ESBL,Susceptible,Intermediate,Resistant,0,0
+ID_22849,Inform,Klebsiella pneumoniae,Enterobacteriaceae,United Kingdom,Pennsylvania,,85 and Over,None Given,Urine,Other,2015,,Resistant,Intermediate,Susceptible,0,0
+ID_22865,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Dominican Republic,Texas,Male,3 to 12 Years,Medicine ICU,Urine,Other,2015,,Resistant,Susceptible,Susceptible,0,0
+ID_1511,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Taiwan,Kentucky,Female,85 and Over,Medicine General,Urine,Other,2016,,Resistant,Resistant,Intermediate,0,0
+ID_29335,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Serbia,New Jersey,Male,65 to 84 Years,Medicine General,Urine,None Given,2016,ESBL,Intermediate,Resistant,Susceptible,0,0
+ID_18094,TEST,Klebsiella pneumoniae,Enterobacteriaceae,China,Colorado,Female,85 and Over,Surgery ICU,Urine,,2016,,Susceptible,Intermediate,Intermediate,0,0
+ID_18338,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Dominican Republic,New York,Male,85 and Over,Pediatric ICU,Urine,,2016,ESBL,Susceptible,Resistant,Susceptible,0,0
+ID_17593,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Kuwait,Georgia,,Unknown,Nursing Home / Rehab,Urine,Inpatient,2016,,Susceptible,Resistant,Resistant,0,0
+ID_18723,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Germany,Nebraska,,85 and Over,Clinic / Office,Urine,,2016,ESBL,Resistant,Resistant,Susceptible,0,0
+ID_2695,TEST,Klebsiella pneumoniae,Enterobacteriaceae,India,Illinois,,19 to 64 Years,Surgery General,Urine,None Given,2016,ESBL,Intermediate,Susceptible,Resistant,0,0
+ID_2068,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Russia,Pennsylvania,,19 to 64 Years,Pediatric General,Urine,Inpatient,2016,ESBL,Intermediate,Intermediate,Intermediate,0,0
+ID_22073,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Thailand,Alabama,,13 to 18 Years,None Given,Urine,Inpatient,2016,,Resistant,Intermediate,Resistant,0,0
+ID_22017,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Venezuela,Georgia,Female,Unknown,Medicine General,Urine,Inpatient,2016,ESBL,Intermediate,Intermediate,Susceptible,0,0
+ID_21837,TEST,Klebsiella pneumoniae,Enterobacteriaceae,"Korea, South",Pennsylvania,Male,65 to 84 Years,Surgery General,Urine,None Given,2016,,Resistant,Susceptible,Susceptible,0,0
+ID_2792,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Australia,California,Male,85 and Over,General Unspecified ICU,Urine,Outpatient,2016,ESBL,Intermediate,Resistant,Intermediate,0,0
+ID_2266,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Netherlands,Florida,,3 to 12 Years,Surgery ICU,Urine,None Given,2016,,Susceptible,Intermediate,Intermediate,0,0
+ID_24204,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Kuwait,Georgia,Male,65 to 84 Years,Surgery General,Urine,Other,2016,,Intermediate,Susceptible,Intermediate,0,0
+ID_24652,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Ukraine,Illinois,Male,65 to 84 Years,Surgery General,Urine,Inpatient,2016,,Resistant,Resistant,Intermediate,0,0
+ID_24750,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Turkey,New York,,0 to 2 Years,Medicine General,Urine,Other,2016,,Intermediate,Intermediate,Resistant,0,0
+ID_23682,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Kuwait,Colorado,Female,19 to 64 Years,Other,Urine,Other,2016,,Resistant,Resistant,Susceptible,0,0
+ID_23858,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Hong Kong,Kentucky,,85 and Over,Pediatric General,Urine,None Given,2016,,Intermediate,Intermediate,Susceptible,0,0
+ID_19853,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Dominican Republic,Alabama,Female,0 to 2 Years,Other,Urine,Outpatient,2016,,Intermediate,Susceptible,Resistant,0,0
+ID_3231,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Malaysia,Illinois,Female,0 to 2 Years,Surgery General,Urine,Outpatient,2016,ESBL,Intermediate,Resistant,Susceptible,0,0
+ID_27779,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,India,Kentucky,Male,13 to 18 Years,Surgery ICU,Urine,Outpatient,2016,ESBL,Resistant,Resistant,Resistant,0,0
+ID_19102,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Guatemala,New York,Female,Unknown,Emergency Room,Urine,Outpatient,2016,ESBL,Susceptible,Resistant,Susceptible,0,0
+ID_19598,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Philippines,Florida,,13 to 18 Years,Pediatric ICU,Urine,Outpatient,2016,,Susceptible,Susceptible,Susceptible,0,0
+ID_28271,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Thailand,Ohio,,13 to 18 Years,Surgery ICU,Urine,Other,2016,,Resistant,Resistant,Intermediate,0,0
+ID_20620,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Nigeria,Washington,Male,65 to 84 Years,Pediatric ICU,Urine,Other,2016,,Resistant,Susceptible,Susceptible,0,0
+ID_27414,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Sweden,Kentucky,,65 to 84 Years,Nursing Home / Rehab,Urine,Outpatient,2016,,Intermediate,Susceptible,Intermediate,0,0
+ID_5618,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Israel,New York,Male,19 to 64 Years,Medicine ICU,Urine,Other,2016,,Susceptible,Intermediate,Resistant,0,0
+ID_12782,Inform,Klebsiella pneumoniae,Enterobacteriaceae,South Africa,Michigan,,13 to 18 Years,Other,Urine,,2016,ESBL,Intermediate,Intermediate,Resistant,0,0
+ID_13050,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Colombia,Minnesota,Female,3 to 12 Years,Surgery ICU,Urine,,2016,ESBL,Resistant,Susceptible,Susceptible,0,0
+ID_34540,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Ireland,Florida,Female,85 and Over,Surgery General,Urine,Other,2016,,Resistant,Resistant,Susceptible,0,0
+ID_34339,TEST,Klebsiella pneumoniae,Enterobacteriaceae,South Africa,Pennsylvania,Male,0 to 2 Years,Medicine General,Urine,,2016,ESBL,Intermediate,Resistant,Intermediate,0,0
+ID_6539,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Turkey,Kentucky,,Unknown,Emergency Room,Urine,None Given,2016,,Intermediate,Resistant,Susceptible,0,0
+ID_4057,Inform,Klebsiella pneumoniae,Enterobacteriaceae,India,New York,,19 to 64 Years,Medicine General,Urine,Inpatient,2016,ESBL,Intermediate,Susceptible,Intermediate,0,0
+ID_36647,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Germany,Wisconsin,Female,13 to 18 Years,Pediatric General,Urine,Inpatient,2016,,Intermediate,Resistant,Resistant,0,0
+ID_29543,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Turkey,Illinois,Female,65 to 84 Years,General Unspecified ICU,Urine,Outpatient,2016,,Intermediate,Susceptible,Resistant,0,0
+ID_3960,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Greece,Pennsylvania,Female,19 to 64 Years,Medicine ICU,Urine,None Given,2016,ESBL,Intermediate,Intermediate,Susceptible,0,0
+ID_36497,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Italy,Alabama,,Unknown,Emergency Room,Urine,Other,2016,,Resistant,Resistant,Resistant,0,0
+ID_16702,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Taiwan,Illinois,Male,0 to 2 Years,General Unspecified ICU,Urine,Inpatient,2016,,Resistant,Intermediate,Susceptible,0,0
+ID_16779,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Taiwan,Indiana,Female,65 to 84 Years,General Unspecified ICU,Urine,Inpatient,2016,ESBL,Susceptible,Intermediate,Intermediate,0,0
+ID_14723,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Malaysia,Wisconsin,,65 to 84 Years,Pediatric ICU,Urine,Inpatient,2016,ESBL,Resistant,Intermediate,Resistant,0,0
+ID_4292,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Russia,Pennsylvania,,19 to 64 Years,Surgery ICU,Urine,Other,2016,,Intermediate,Intermediate,Intermediate,0,0
+ID_25163,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Dominican Republic,California,Male,0 to 2 Years,Surgery ICU,Urine,None Given,2017,ESBL,Intermediate,Resistant,Intermediate,0,0
+ID_35144,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Latvia,California,Male,0 to 2 Years,Clinic / Office,Urine,Other,2017,ESBL,Resistant,Susceptible,Susceptible,0,0
+ID_35326,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Panama,New Jersey,Male,Unknown,Emergency Room,Urine,,2017,,Susceptible,Intermediate,Intermediate,0,0
+ID_35092,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Venezuela,California,Male,65 to 84 Years,Surgery ICU,Urine,Outpatient,2017,ESBL,Susceptible,Intermediate,Resistant,0,0
+ID_27855,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,France,Illinois,Male,Unknown,Nursing Home / Rehab,Urine,Outpatient,2017,ESBL,Intermediate,Resistant,Intermediate,0,0
+ID_28138,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Philippines,Georgia,,19 to 64 Years,Surgery General,Urine,Outpatient,2017,ESBL,Intermediate,Resistant,Resistant,0,0
+ID_28767,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Kuwait,Pennsylvania,,19 to 64 Years,Medicine ICU,Urine,Other,2017,ESBL,Intermediate,Susceptible,Susceptible,0,0
+ID_28711,Inform,Klebsiella pneumoniae,Enterobacteriaceae,South Africa,California,Male,85 and Over,None Given,Urine,Outpatient,2017,,Resistant,Susceptible,Intermediate,0,0
+ID_1177,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Switzerland,New Jersey,,13 to 18 Years,Surgery ICU,Urine,Other,2017,ESBL,Susceptible,Intermediate,Intermediate,0,0
+ID_33338,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Saudi Arabia,,,13 to 18 Years,General Unspecified ICU,Urine,,2017,,Resistant,Resistant,Resistant,0,0
+ID_26960,Inform,Klebsiella pneumoniae,Enterobacteriaceae,France,New Jersey,,13 to 18 Years,Pediatric ICU,Urine,Other,2017,ESBL,Resistant,Intermediate,Susceptible,0,0
+ID_27555,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Belgium,North Dakota,Female,85 and Over,None Given,Urine,,2017,,Resistant,Intermediate,Intermediate,0,0
+ID_1716,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Russia,Wisconsin,Female,Unknown,Surgery General,Urine,,2017,,Intermediate,Resistant,Susceptible,0,0
+ID_27086,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Switzerland,California,Male,13 to 18 Years,Surgery General,Urine,Outpatient,2017,,Susceptible,Susceptible,Susceptible,0,0
+ID_33134,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Brazil,Michigan,Female,19 to 64 Years,Surgery General,Urine,Outpatient,2017,ESBL,Susceptible,Resistant,Susceptible,0,0
+ID_10494,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Australia,Texas,Female,0 to 2 Years,Medicine ICU,Urine,,2017,,Susceptible,Susceptible,Resistant,0,0
+ID_3749,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Hungary,New York,Female,13 to 18 Years,Surgery ICU,Urine,None Given,2017,,Susceptible,Intermediate,Intermediate,0,0
+ID_10599,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Italy,Illinois,Female,19 to 64 Years,Medicine ICU,Urine,Inpatient,2017,,Intermediate,Intermediate,Resistant,0,0
+ID_17608,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Colombia,Georgia,,Unknown,Medicine General,Urine,Inpatient,2017,,Intermediate,Resistant,Intermediate,0,0
+ID_5152,TEST,Klebsiella pneumoniae,Enterobacteriaceae,China,Ohio,Female,Unknown,Other,Urine,None Given,2017,,Intermediate,Resistant,Resistant,0,0
+ID_9281,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,France,Nebraska,,65 to 84 Years,Clinic / Office,Urine,Other,2017,,Intermediate,Intermediate,Susceptible,0,0
+ID_9031,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Kuwait,Nebraska,Male,65 to 84 Years,Nursing Home / Rehab,Urine,None Given,2017,ESBL,Susceptible,Intermediate,Susceptible,0,0
+ID_14581,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Romania,Washington,Female,13 to 18 Years,Other,Urine,None Given,2017,,Susceptible,Susceptible,Resistant,0,0
+ID_4336,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Canada,Ohio,Female,19 to 64 Years,Medicine General,Urine,Inpatient,2017,ESBL,Intermediate,Resistant,Resistant,0,0
+ID_4661,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Chile,Washington,,Unknown,Surgery ICU,Urine,Other,2017,,Intermediate,Resistant,Susceptible,0,0
+ID_13563,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Hungary,North Dakota,Male,Unknown,Surgery General,Urine,Outpatient,2017,,Susceptible,Intermediate,Intermediate,0,0
+ID_13883,TEST,Klebsiella pneumoniae,Enterobacteriaceae,India,Colorado,,0 to 2 Years,Pediatric General,Urine,Outpatient,2017,,Intermediate,Resistant,Intermediate,0,0
+ID_16056,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Croatia,,Male,85 and Over,Medicine ICU,Urine,Outpatient,2017,ESBL,Resistant,Susceptible,Resistant,0,0
+ID_12000,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Nigeria,Ohio,Male,85 and Over,Medicine General,Urine,Outpatient,2017,ESBL,Susceptible,Susceptible,Resistant,0,0
+ID_11695,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Colombia,Illinois,,13 to 18 Years,Nursing Home / Rehab,Urine,Inpatient,2017,,Susceptible,Susceptible,Resistant,0,0
+ID_5664,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Costa Rica,Florida,,65 to 84 Years,Pediatric ICU,Urine,,2017,ESBL,Resistant,Susceptible,Susceptible,0,0
+ID_6535,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Venezuela,Minnesota,Male,85 and Over,Other,Urine,,2017,,Intermediate,Intermediate,Intermediate,0,0
+ID_2923,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Chile,Nebraska,Female,19 to 64 Years,Pediatric ICU,Urine,,2017,ESBL,Intermediate,Intermediate,Susceptible,0,0
+ID_7542,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Finland,,Male,3 to 12 Years,None Given,Urine,None Given,2017,ESBL,Intermediate,Intermediate,Intermediate,0,0
+ID_22389,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Saudi Arabia,Georgia,Female,85 and Over,Clinic / Office,Urine,None Given,2017,,Intermediate,Susceptible,Intermediate,0,0
+ID_7442,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Denmark,Colorado,Female,0 to 2 Years,Surgery ICU,Urine,Other,2017,,Intermediate,Resistant,Resistant,0,0
+ID_24407,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,United States,New Jersey,Male,19 to 64 Years,General Unspecified ICU,Urine,Outpatient,2017,ESBL,Resistant,Intermediate,Resistant,0,0
+ID_24478,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Nigeria,Illinois,,3 to 12 Years,Medicine General,Urine,,2017,ESBL,Susceptible,Susceptible,Intermediate,0,0
+ID_24653,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Sweden,Alabama,Male,13 to 18 Years,Other,Urine,Inpatient,2017,ESBL,Susceptible,Resistant,Susceptible,0,0
+ID_3021,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Chile,Texas,Male,Unknown,Medicine General,Urine,,2017,,Susceptible,Susceptible,Intermediate,0,0
+ID_21363,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Finland,Colorado,,19 to 64 Years,Medicine General,Urine,Outpatient,2017,ESBL,Intermediate,Resistant,Resistant,0,0
+ID_32503,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Dominican Republic,Washington,Female,Unknown,Clinic / Office,Urine,Other,2018,ESBL,Susceptible,Resistant,Resistant,0,0
+ID_36640,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Jordan,Florida,Female,85 and Over,General Unspecified ICU,Urine,Outpatient,2018,ESBL,Susceptible,Susceptible,Intermediate,0,0
+ID_7038,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Thailand,Minnesota,,65 to 84 Years,Emergency Room,Urine,,2018,ESBL,Susceptible,Susceptible,Intermediate,0,0
+ID_12963,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Russia,Texas,Male,19 to 64 Years,Other,Urine,Other,2018,ESBL,Intermediate,Intermediate,Susceptible,0,0
+ID_32702,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Romania,North Dakota,,85 and Over,Nursing Home / Rehab,Urine,Inpatient,2018,,Intermediate,Susceptible,Susceptible,0,0
+ID_36327,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Ukraine,Illinois,Female,65 to 84 Years,Clinic / Office,Urine,Other,2018,,Intermediate,Susceptible,Susceptible,0,0
+ID_32833,TEST,Klebsiella pneumoniae,Enterobacteriaceae,United Kingdom,North Dakota,Male,3 to 12 Years,Clinic / Office,Urine,Other,2018,ESBL,Intermediate,Resistant,Susceptible,0,0
+ID_12214,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Venezuela,Pennsylvania,,65 to 84 Years,Surgery ICU,Urine,Inpatient,2018,ESBL,Intermediate,Resistant,Intermediate,0,0
+ID_12576,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Belgium,Nebraska,,85 and Over,Medicine General,Urine,None Given,2018,,Susceptible,Resistant,Intermediate,0,0
+ID_34469,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Finland,Nebraska,Male,3 to 12 Years,Other,Urine,None Given,2018,ESBL,Susceptible,Resistant,Intermediate,0,0
+ID_34472,TEST,Klebsiella pneumoniae,Enterobacteriaceae,South Africa,Wisconsin,Female,65 to 84 Years,None Given,Urine,None Given,2018,ESBL,Susceptible,Intermediate,Susceptible,0,0
+ID_9595,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Chile,New York,,0 to 2 Years,None Given,Urine,None Given,2018,,Intermediate,Susceptible,Intermediate,0,0
+ID_34139,TEST,Klebsiella pneumoniae,Enterobacteriaceae,France,,Male,85 and Over,Pediatric General,Urine,Outpatient,2018,ESBL,Resistant,Intermediate,Susceptible,0,0
+ID_8115,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Serbia,Alabama,Female,3 to 12 Years,Other,Urine,,2018,,Susceptible,Resistant,Resistant,0,0
+ID_8892,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Serbia,Florida,Male,0 to 2 Years,Other,Urine,Outpatient,2018,,Susceptible,Susceptible,Intermediate,0,0
+ID_34848,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Belgium,Florida,Female,3 to 12 Years,Nursing Home / Rehab,Urine,,2018,ESBL,Resistant,Resistant,Intermediate,0,0
+ID_35845,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Ireland,Michigan,Male,3 to 12 Years,Emergency Room,Urine,None Given,2018,,Intermediate,Intermediate,Resistant,0,0
+ID_4984,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Brazil,Colorado,,13 to 18 Years,Clinic / Office,Urine,Inpatient,2018,,Resistant,Resistant,Susceptible,0,0
+ID_35893,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Switzerland,Georgia,,13 to 18 Years,Nursing Home / Rehab,Urine,,2018,ESBL,Susceptible,Susceptible,Resistant,0,0
+ID_7827,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Lithuania,Georgia,Female,Unknown,Surgery General,Urine,Outpatient,2018,ESBL,Susceptible,Intermediate,Intermediate,0,0
+ID_10475,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Russia,Florida,Male,65 to 84 Years,Emergency Room,Urine,Other,2018,ESBL,Susceptible,Susceptible,Susceptible,0,0
+ID_27183,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Czech Republic,,,19 to 64 Years,Emergency Room,Urine,None Given,2018,,Resistant,Resistant,Resistant,0,0
+ID_27097,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Venezuela,Alabama,Male,13 to 18 Years,Surgery General,Urine,Inpatient,2018,ESBL,Resistant,Resistant,Resistant,0,0
+ID_3170,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Czech Republic,New Jersey,Female,3 to 12 Years,Medicine General,Urine,Inpatient,2018,,Susceptible,Susceptible,Resistant,0,0
+ID_21907,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Pakistan,Pennsylvania,Male,85 and Over,Surgery ICU,Urine,,2018,ESBL,Intermediate,Intermediate,Susceptible,0,0
+ID_28261,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Czech Republic,Nebraska,Female,19 to 64 Years,Pediatric ICU,Urine,None Given,2018,ESBL,Resistant,Susceptible,Resistant,0,0
+ID_20347,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Hungary,Washington,Male,3 to 12 Years,Pediatric ICU,Urine,Outpatient,2018,ESBL,Intermediate,Resistant,Resistant,0,0
+ID_27669,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Panama,New York,,65 to 84 Years,Other,Urine,,2018,ESBL,Intermediate,Susceptible,Resistant,0,0
+ID_27814,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Singapore,New Jersey,Male,19 to 64 Years,Surgery ICU,Urine,Outpatient,2018,ESBL,Resistant,Susceptible,Intermediate,0,0
+ID_1723,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Pakistan,Minnesota,,65 to 84 Years,Surgery General,Urine,,2018,ESBL,Resistant,Susceptible,Intermediate,0,0
+ID_23737,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Switzerland,,Female,19 to 64 Years,General Unspecified ICU,Urine,Outpatient,2018,ESBL,Resistant,Susceptible,Susceptible,0,0
+ID_25223,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Spain,Minnesota,Male,3 to 12 Years,Pediatric ICU,Urine,,2018,,Intermediate,Susceptible,Susceptible,0,0
+ID_25226,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Hong Kong,California,Male,85 and Over,Clinic / Office,Urine,,2018,ESBL,Resistant,Susceptible,Resistant,0,0
+ID_25286,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Croatia,Michigan,Female,Unknown,Surgery General,Urine,Inpatient,2018,,Resistant,Resistant,Susceptible,0,0
+ID_25622,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Chile,Indiana,Female,85 and Over,Emergency Room,Urine,Inpatient,2018,ESBL,Resistant,Susceptible,Intermediate,0,0
+ID_2160,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Taiwan,California,Female,3 to 12 Years,Medicine General,Urine,Inpatient,2018,ESBL,Resistant,Intermediate,Susceptible,0,0
+ID_26413,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Germany,North Dakota,,19 to 64 Years,Clinic / Office,Urine,Inpatient,2018,ESBL,Susceptible,Resistant,Intermediate,0,0
+ID_22922,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Saudi Arabia,Minnesota,Male,0 to 2 Years,Medicine General,Urine,None Given,2018,ESBL,Susceptible,Resistant,Resistant,0,0
+ID_15463,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Brazil,Florida,Male,3 to 12 Years,Pediatric General,Urine,Inpatient,2018,ESBL,Resistant,Resistant,Resistant,0,0
+ID_15491,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Jordan,Indiana,Female,65 to 84 Years,Surgery General,Urine,Outpatient,2018,ESBL,Resistant,Susceptible,Susceptible,0,0
+ID_4126,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Thailand,Illinois,Female,0 to 2 Years,Pediatric ICU,Urine,Inpatient,2018,,Susceptible,Susceptible,Resistant,0,0
+ID_15752,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Argentina,Colorado,Female,19 to 64 Years,Clinic / Office,Urine,Other,2018,,Resistant,Resistant,Resistant,0,0
+ID_4484,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Ukraine,Pennsylvania,Male,19 to 64 Years,Surgery General,Urine,Other,2018,,Resistant,Intermediate,Susceptible,0,0
+ID_14007,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Finland,Alabama,,19 to 64 Years,Other,Urine,,2018,,Resistant,Intermediate,Resistant,0,0
+ID_31172,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Serbia,Ohio,,0 to 2 Years,General Unspecified ICU,Urine,,2018,,Intermediate,Susceptible,Intermediate,0,0
+ID_14710,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Ukraine,New Jersey,Male,85 and Over,Nursing Home / Rehab,Urine,None Given,2018,ESBL,Intermediate,Resistant,Resistant,0,0
+ID_18098,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Switzerland,Texas,Male,65 to 84 Years,General Unspecified ICU,Urine,Inpatient,2018,ESBL,Susceptible,Intermediate,Resistant,0,0
+ID_17661,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Jordan,New Jersey,,Unknown,Medicine ICU,Urine,,2018,ESBL,Intermediate,Susceptible,Resistant,0,0
+ID_28397,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Morocco,Indiana,Male,65 to 84 Years,Surgery ICU,Urine,,2018,ESBL,Susceptible,Susceptible,Susceptible,0,0
+ID_18976,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Serbia,Colorado,,13 to 18 Years,General Unspecified ICU,Urine,None Given,2018,ESBL,Intermediate,Susceptible,Resistant,0,0
+ID_18657,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Hong Kong,California,Female,13 to 18 Years,Pediatric ICU,Urine,Outpatient,2018,,Intermediate,Resistant,Intermediate,0,0
+ID_17599,Inform,Klebsiella pneumoniae,Enterobacteriaceae,India,Nebraska,Male,3 to 12 Years,Clinic / Office,Urine,Inpatient,2018,ESBL,Resistant,Resistant,Susceptible,0,0
+ID_29615,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Costa Rica,California,Female,Unknown,Medicine General,Urine,None Given,2018,,Susceptible,Susceptible,Susceptible,0,0
