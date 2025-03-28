@@ -1,0 +1,121 @@
+[{'2014'},            Country     intercept         slope
+1        Australia  0.000000e+00  1.998401e-15
+2          Belgium  0.000000e+00  2.997602e-15
+3            China  4.671283e+00  1.233927e+00
+4         Colombia  0.000000e+00  9.992007e-16
+5   Czech Republic  9.992007e-15 -2.997602e-15
+6           France  0.000000e+00  0.000000e+00
+7          Germany  0.000000e+00  9.992007e-16
+8           Israel  0.000000e+00  9.992007e-16
+9            Italy  4.722222e+00 -8.333333e-01
+10           Japan  0.000000e+00  0.000000e+00
+11    Korea, South  9.992007e-15 -9.992007e-16
+12     Philippines  0.000000e+00  9.992007e-16
+13          Poland  0.000000e+00  9.992007e-16
+14        Portugal  0.000000e+00  0.000000e+00
+15    South Africa  0.000000e+00  9.992007e-16
+16           Spain  0.000000e+00  9.992007e-16
+17          Taiwan  6.250000e-01  8.333333e-01
+18        Thailand  6.421569e+00 -8.333333e-01
+19          Turkey  8.571429e+00 -2.857143e+00
+20  United Kingdom  0.000000e+00  0.000000e+00, 'Correlation between slope and intercept for Escherichia coli with Imipenem in 2014: -0.6375 (p-value: 0.0025)\n', {'2016'},            Country     intercept         slope
+1        Australia  0.000000e+00  0.000000e+00
+2          Belgium -9.992007e-15  2.997602e-15
+3            China  7.136414e+00  1.312242e+00
+4         Colombia  0.000000e+00  0.000000e+00
+5   Czech Republic  0.000000e+00  2.997602e-15
+6           France  0.000000e+00 -9.992007e-16
+7          Germany  0.000000e+00  9.992007e-16
+8           Israel  0.000000e+00  0.000000e+00
+9            Italy  3.291667e+00 -8.888889e-01
+10           Japan  0.000000e+00  0.000000e+00
+11    Korea, South  0.000000e+00  0.000000e+00
+12     Philippines  0.000000e+00  0.000000e+00
+13          Poland  0.000000e+00  9.992007e-16
+14        Portugal  0.000000e+00  0.000000e+00
+15    South Africa  0.000000e+00  9.992007e-16
+16           Spain  0.000000e+00  9.992007e-16
+17          Taiwan  2.291667e+00  6.250000e-01
+18        Thailand  6.058590e+00  2.121849e+00
+19          Turkey  3.809524e+00 -2.857143e+00
+20  United Kingdom  0.000000e+00  0.000000e+00, 'Correlation between slope and intercept for Escherichia coli with Imipenem in 2016: 0.2498 (p-value: 0.2882)\n', {'2017'},            Country     intercept         slope
+1        Australia  4.761905e-01  1.428571e+00
+2          Belgium -9.992007e-15  4.996004e-15
+3            China  8.678227e+00 -1.067382e+00
+4         Colombia -9.992007e-15  9.992007e-16
+5   Czech Republic  0.000000e+00 -9.992007e-16
+6           France  0.000000e+00  0.000000e+00
+7          Germany  0.000000e+00  1.998401e-15
+8           Israel -9.992007e-15  1.998401e-15
+9            Italy  2.138889e+00 -4.166667e-02
+10           Japan  0.000000e+00  0.000000e+00
+11    Korea, South  0.000000e+00  1.998401e-15
+12     Philippines  0.000000e+00  0.000000e+00
+13          Poland -9.992007e-15  1.998401e-15
+14        Portugal  0.000000e+00  9.992007e-16
+15    South Africa  0.000000e+00  9.992007e-16
+16           Spain  0.000000e+00  9.992007e-16
+17          Taiwan  2.708333e+00  8.333333e-01
+18        Thailand  6.925770e+00  3.883053e+00
+19          Turkey  0.000000e+00  9.992007e-16
+20  United Kingdom  0.000000e+00 -9.992007e-16, 'Correlation between slope and intercept for Escherichia coli with Imipenem in 2017: 0.3394 (p-value: 0.1432)\n', {'2018'},            Country     intercept         slope
+1        Australia  1.428571e+00  1.904762e+00
+2          Belgium  0.000000e+00  4.996004e-15
+3            China  8.046268e+00 -2.542240e+00
+4         Colombia  0.000000e+00  0.000000e+00
+5   Czech Republic  0.000000e+00  1.998401e-15
+6           France  1.021405e-14 -9.992007e-16
+7          Germany  0.000000e+00  1.998401e-15
+8           Israel  0.000000e+00  9.992007e-16
+9            Italy  1.875000e+00 -6.250000e-01
+10           Japan  0.000000e+00  0.000000e+00
+11    Korea, South  0.000000e+00  2.997602e-15
+12     Philippines  1.021405e-14  0.000000e+00
+13          Poland  0.000000e+00  2.997602e-15
+14        Portugal  0.000000e+00  9.992007e-16
+15    South Africa  1.021405e-14  9.992007e-16
+16           Spain  1.021405e-14  9.992007e-16
+17          Taiwan  3.333333e+00  6.250000e-01
+18        Thailand  9.464286e+00  1.607143e+00
+19          Turkey  0.000000e+00  1.998401e-15
+20  United Kingdom  1.021405e-14  0.000000e+00, 'Correlation between slope and intercept for Escherichia coli with Imipenem in 2018: -0.0638 (p-value: 0.7892)\n', {'2019'},            Country     intercept         slope
+1        Australia  2.857143e+00  1.428571e+00
+2          Belgium -1.021405e-14  3.996803e-15
+3            China  5.737127e+00 -1.792162e+00
+4         Colombia  0.000000e+00  0.000000e+00
+5   Czech Republic  0.000000e+00  3.996803e-15
+6           France  0.000000e+00 -1.998401e-15
+7          Germany  0.000000e+00  1.998401e-15
+8           Israel  0.000000e+00  0.000000e+00
+9            Italy  1.458333e+00 -8.333333e-01
+10           Japan  0.000000e+00 -9.992007e-16
+11    Korea, South  0.000000e+00  2.997602e-15
+12     Philippines  0.000000e+00 -9.992007e-16
+13          Poland  0.000000e+00  1.998401e-15
+14        Portugal  0.000000e+00  9.992007e-16
+15    South Africa  0.000000e+00  9.992007e-16
+16           Spain  0.000000e+00  9.992007e-16
+17          Taiwan  4.166667e+00  1.998401e-15
+18        Thailand  1.244048e+01 -1.666667e+00
+19          Turkey  0.000000e+00  9.992007e-16
+20  United Kingdom  0.000000e+00  0.000000e+00, 'Correlation between slope and intercept for Escherichia coli with Imipenem in 2019: -0.6293 (p-value: 0.0029)\n', {'2015'},            Country     intercept         slope
+1        Australia  0.000000e+00  1.998401e-15
+2          Belgium  0.000000e+00  2.997602e-15
+3            China  5.720987e+00  2.314483e+00
+4         Colombia  0.000000e+00  0.000000e+00
+5   Czech Republic  9.992007e-15 -9.992007e-16
+6           France  0.000000e+00  0.000000e+00
+7          Germany  0.000000e+00  9.992007e-16
+8           Israel  0.000000e+00  9.992007e-16
+9            Italy  4.152778e+00 -1.152778e+00
+10           Japan  0.000000e+00  0.000000e+00
+11    Korea, South  9.992007e-15 -9.992007e-16
+12     Philippines  0.000000e+00  0.000000e+00
+13          Poland  0.000000e+00  9.992007e-16
+14        Portugal  0.000000e+00  0.000000e+00
+15    South Africa  0.000000e+00  0.000000e+00
+16           Spain  0.000000e+00  9.992007e-16
+17          Taiwan  1.250000e+00  6.250000e-01
+18        Thailand  5.890523e+00 -1.037582e+00
+19          Turkey  6.666667e+00 -3.809524e+00
+20  United Kingdom  0.000000e+00  9.992007e-16, 'Correlation between slope and intercept for Escherichia coli with Imipenem in 2015: -0.3907 (p-value: 0.0885)\n']

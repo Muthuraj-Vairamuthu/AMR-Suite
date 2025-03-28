@@ -1,0 +1,97 @@
+[{'2015'},            Country  intercept      slope
+1          Belgium  40.555556  -1.944444
+2           Brazil  90.375350  -1.492997
+3           Canada   2.111111   3.555556
+4          Croatia  99.895833  -0.312500
+5   Czech Republic  38.055556   1.666667
+6           France  21.631081  -0.855915
+7          Germany  28.888889  -2.222222
+8           Greece  99.814815  -0.555556
+9            Italy  84.486216   4.022556
+10          Kuwait  44.925926  11.444444
+11          Mexico  75.182359   2.955087
+12          Poland  75.641026  10.256410
+13        Portugal  87.018519  -5.888889
+14           Spain  49.501425   1.976496
+15  United Kingdom   5.000000   6.666667
+16   United States  39.065476  -4.460317, 'Correlation between slope and intercept for Acinetobacter baumannii with Piperacillin.tazobactam in 2015: -0.1616 (p-value: 0.5500)\n', {'2018'},            Country  intercept      slope
+1          Belgium  28.333333  -3.888889
+2           Brazil  90.798047   1.787194
+3           Canada   8.166667  -2.722222
+4          Croatia  99.004020   0.137061
+5   Czech Republic  41.944444  -4.722222
+6           France  35.107161   1.951919
+7          Germany  27.777778  -6.944444
+8           Greece  97.916667  -0.694444
+9            Italy  91.880117  -3.062657
+10          Kuwait  68.735294   1.369281
+11          Mexico  87.263928   2.627248
+12          Poland  84.648019  -0.539239
+13        Portugal  48.469697 -17.848485
+14           Spain  46.465201  -7.452686
+15  United Kingdom  12.000000  -5.666667
+16   United States  35.602300   1.572935, 'Correlation between slope and intercept for Acinetobacter baumannii with Piperacillin.tazobactam in 2018: 0.3712 (p-value: 0.1569)\n', {'2019'},            Country  intercept      slope
+1          Belgium  27.222222  -4.444444
+2           Brazil  92.865739   0.050492
+3           Canada   6.166667  -2.333333
+4          Croatia  99.095395   0.182749
+5   Czech Republic  37.222222  -3.611111
+6           France  39.922263  -4.191168
+7          Germany  24.444444 -10.000000
+8           Greece  97.453704  -0.925926
+9            Italy  89.185464  -2.370510
+10          Kuwait  67.452070   3.864924
+11          Mexico  90.441612   0.282977
+12          Poland  82.396270   3.435897
+13        Portugal  30.727273 -10.166667
+14           Spain  40.293040  -5.677656
+15  United Kingdom   7.666667  -3.666667
+16   United States  37.881889  -0.675357, 'Correlation between slope and intercept for Acinetobacter baumannii with Piperacillin.tazobactam in 2019: 0.6085 (p-value: 0.0124)\n', {'2017'},            Country  intercept      slope
+1          Belgium  40.000000 -10.555556
+2           Brazil  89.994405   1.976189
+3           Canada   7.666667  -0.333333
+4          Croatia  99.375000  -0.312500
+5   Czech Republic  36.111111   4.166667
+6           France  25.663811  10.694412
+7          Germany  29.166667   0.000000
+8           Greece  98.888889  -0.555556
+9            Italy  89.892648   0.931078
+10          Kuwait  59.633987   6.679739
+11          Mexico  83.297554   4.560261
+12          Poland  90.896659  -7.379953
+13        Portugal  67.318182 -19.409091
+14           Spain  51.036325  -5.384615
+15  United Kingdom  15.000000  -5.000000
+16   United States  34.525629   2.341317, 'Correlation between slope and intercept for Acinetobacter baumannii with Piperacillin.tazobactam in 2017: -0.0828 (p-value: 0.7604)\n', {'2016'},            Country  intercept      slope
+1          Belgium  39.444444  -1.111111
+2           Brazil  88.712517   0.927466
+3           Canada   4.666667   3.444444
+4          Croatia  99.687500  -0.416667
+5   Czech Republic  40.833333  -1.111111
+6           France  21.508563   8.222135
+7          Germany  24.166667   5.833333
+8           Greece  99.444444  -0.740741
+9            Italy  87.400167   3.261487
+10          Kuwait  54.444444   5.370370
+11          Mexico  76.864460   6.369895
+12          Poland  82.680653   3.170163
+13        Portugal  80.939394 -16.348485
+14           Spain  50.032051   0.737179
+15  United Kingdom  10.000000   5.000000
+16   United States  34.559283   0.387506, 'Correlation between slope and intercept for Acinetobacter baumannii with Piperacillin.tazobactam in 2016: -0.3590 (p-value: 0.1721)\n', {'2014'},            Country   intercept      slope
+1          Belgium   41.388889   3.333333
+2           Brazil   91.857143  -1.650794
+3           Canada    0.555556   1.666667
+4          Croatia  100.000000   0.000000
+5   Czech Republic   35.833333  -0.833333
+6           France   23.520202  -4.565657
+7          Germany   33.333333  -5.555556
+8           Greece  100.000000   0.000000
+9            Italy   82.585631   1.328321
+10          Kuwait   38.000000   5.666667
+11          Mexico   74.856061   0.210317
+12          Poland   70.000000  10.000000
+13        Portugal   88.574074  -0.018519
+14           Spain   48.935185   1.203704
+15  United Kingdom    1.666667   5.000000
+16   United States   42.738757  -4.720238, 'Correlation between slope and intercept for Acinetobacter baumannii with Piperacillin.tazobactam in 2014: -0.0175 (p-value: 0.9486)\n']

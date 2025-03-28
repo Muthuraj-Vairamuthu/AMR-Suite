@@ -1,0 +1,217 @@
+[{'2015'},            Country  intercept         slope
+1        Argentina  15.626398  3.004258e+00
+2        Australia   0.714286  9.523810e-01
+3          Belgium   7.619764 -2.828405e+00
+4           Brazil  32.476627  2.603603e+00
+5           Canada   0.163934  2.185792e-01
+6            Chile   1.351010 -4.924242e-01
+7            China  17.773647  1.426917e+00
+8         Colombia  15.488841  1.669516e+00
+9          Croatia   1.458886  3.227233e+00
+10  Czech Republic   0.000000 -9.992007e-15
+11         Denmark   0.000000  9.992007e-15
+12          France   0.040650  1.219512e-01
+13         Germany   1.808023  1.066185e+00
+14          Greece  65.310303  1.214013e+00
+15         Hungary   0.000000  0.000000e+00
+16         Ireland   0.634921 -4.761905e-01
+17          Israel   2.865801  2.406926e+00
+18           Italy  35.701525  3.299053e+00
+19           Japan   1.578947 -5.263158e-01
+20    Korea, South   1.818182  9.090909e-01
+21          Kuwait   2.380952  0.000000e+00
+22          Mexico   4.807325  1.473139e-01
+23     Netherlands   0.000000  0.000000e+00
+24          Panama   3.227513  2.539683e+00
+25     Philippines  11.224747  6.565657e-01
+26          Poland   3.360714  3.385714e+00
+27        Portugal   1.040505  1.672241e+00
+28    South Africa   5.905764  1.558379e+00
+29           Spain   5.256380  8.045581e-01
+30     Switzerland   0.909091  1.212121e+00
+31          Taiwan   3.968254  2.910053e+00
+32        Thailand   2.307692  4.358974e+00
+33          Turkey  43.198830  1.098538e+01
+34  United Kingdom   2.189011  1.593337e+00
+35   United States   1.863531 -3.960813e-01
+36       Venezuela   8.753307  2.814153e+00, 'Correlation between slope and intercept for Klebsiella pneumoniae with Meropenem in 2015: 0.4555 (p-value: 0.0052)\n', {'2018'},            Country     intercept         slope
+1        Argentina  3.442739e+01  9.760905e+00
+2        Australia  1.666667e+00 -9.523810e-01
+3          Belgium  1.354323e+00 -4.722639e-01
+4           Brazil  3.876572e+01  3.061477e+00
+5           Canada  5.158470e-01 -4.080146e-02
+6            Chile  5.330919e+00  5.141109e+00
+7            China  2.411160e+01  5.080425e-01
+8         Colombia  2.315372e+01  3.043335e+00
+9          Croatia  1.616943e+01  6.140255e+00
+10  Czech Republic  9.947598e-14 -3.019807e-14
+11         Denmark  0.000000e+00  0.000000e+00
+12          France  3.658537e-01 -1.219512e-01
+13         Germany  2.789181e+00 -1.060088e+00
+14          Greece  6.054124e+01 -7.648718e+00
+15         Hungary  0.000000e+00  0.000000e+00
+16         Ireland  0.000000e+00  3.996803e-14
+17          Israel  4.471163e+00 -2.084346e+00
+18           Italy  3.660066e+01 -2.897492e+00
+19           Japan  0.000000e+00  9.992007e-15
+20    Korea, South  1.783550e+00 -1.471861e-01
+21          Kuwait  1.020779e+01  9.389610e+00
+22          Mexico  7.125897e+00  4.095695e+00
+23     Netherlands  0.000000e+00  9.992007e-15
+24          Panama  1.017852e+01  2.426074e+00
+25     Philippines  1.494124e+01 -1.730769e+00
+26          Poland  1.515420e+01  1.905473e+00
+27        Portugal  6.059481e+00  2.116787e+00
+28    South Africa  1.681152e+01  1.118832e+01
+29           Spain  5.586967e+00 -1.429676e+00
+30     Switzerland  2.121212e+00 -1.212121e+00
+31          Taiwan  5.962085e+00 -1.542591e+00
+32        Thailand  1.715996e+01  5.503669e+00
+33          Turkey  5.351328e+01 -5.401253e+00
+34  United Kingdom  4.875831e+00 -1.999754e+00
+35   United States  2.400279e+00  7.219746e-01
+36       Venezuela  1.596825e+01 -6.798942e-01, 'Correlation between slope and intercept for Klebsiella pneumoniae with Meropenem in 2018: -0.1113 (p-value: 0.5181)\n', {'2019'},            Country     intercept         slope
+1        Argentina  4.306506e+01  6.369911e+00
+2        Australia  9.523810e-01 -7.142857e-01
+3          Belgium  7.246377e-01 -4.996004e-14
+4           Brazil  4.090859e+01  2.782952e+00
+5           Canada  4.852459e-01 -3.060109e-02
+6            Chile  9.332196e+00  4.119769e+00
+7            China  2.491454e+01 -6.675946e-01
+8         Colombia  2.649535e+01  6.310202e-01
+9          Croatia  2.173964e+01  4.354102e+00
+10  Czech Republic  9.947598e-14 -3.697043e-14
+11         Denmark  0.000000e+00  1.498801e-14
+12          France  2.845528e-01 -1.626016e-01
+13         Germany  1.885088e+00 -7.263158e-01
+14          Greece  5.371154e+01 -6.528846e+00
+15         Hungary  0.000000e+00  0.000000e+00
+16         Ireland  0.000000e+00  3.097522e-14
+17          Israel  2.335568e+00 -8.902388e-01
+18           Italy  3.305887e+01 -1.496589e+00
+19           Japan  0.000000e+00  5.995204e-15
+20    Korea, South  1.142857e+00  5.714286e-01
+21          Kuwait  1.777489e+01  7.047619e+00
+22          Mexico  1.028651e+01  3.304334e+00
+23     Netherlands  0.000000e+00  8.992806e-15
+24          Panama  1.202687e+01  2.119232e+00
+25     Philippines  1.381410e+01 -2.708333e+00
+26          Poland  1.770131e+01  4.996032e-01
+27        Portugal  7.687886e+00  1.982158e+00
+28    South Africa  2.576458e+01  1.018087e+01
+29           Spain  4.455655e+00 -1.126073e+00
+30     Switzerland  1.212121e+00 -9.090909e-01
+31          Taiwan  4.198524e+00 -2.836355e-01
+32        Thailand  2.153413e+01  4.443627e+00
+33          Turkey  4.710927e+01 -1.150877e+00
+34  United Kingdom  3.528373e+00 -1.960253e+00
+35   United States  3.172509e+00  2.182312e-01
+36       Venezuela  1.722222e+01 -2.777778e+00, 'Correlation between slope and intercept for Klebsiella pneumoniae with Meropenem in 2019: 0.1143 (p-value: 0.5067)\n', {'2016'},            Country     intercept         slope
+1        Argentina  1.840729e+01  6.541547e+00
+2        Australia  1.428571e+00  7.142857e-01
+3          Belgium  5.422131e+00 -2.823141e+00
+4           Brazil  3.534346e+01  7.682398e-01
+5           Canada  3.278689e-01  1.639344e-01
+6            Chile  5.448718e-01  9.401709e-01
+7            China  1.888080e+01  2.716178e+00
+8         Colombia  1.731413e+01  3.002465e+00
+9          Croatia  4.337409e+00  5.717798e+00
+10  Czech Republic  0.000000e+00 -9.769963e-15
+11         Denmark -9.947598e-14  1.021405e-14
+12          France  1.219512e-01  1.626016e-01
+13         Germany  2.646737e+00  5.261125e-01
+14          Greece  6.590932e+01 -2.121158e+00
+15         Hungary  0.000000e+00 -9.769963e-15
+16         Ireland -9.947598e-14  5.018208e-14
+17          Israel  4.883117e+00  3.203463e-01
+18           Italy  3.835839e+01 -1.393891e+00
+19           Japan  1.228070e+00 -7.017544e-01
+20    Korea, South  2.727273e+00 -9.090909e-01
+21          Kuwait  2.748918e+00  1.103896e+00
+22          Mexico  5.475828e+00 -5.169446e-01
+23     Netherlands  0.000000e+00  1.021405e-14
+24          Panama  5.923141e+00  1.631857e+00
+25     Philippines  1.103924e+01  2.246503e+00
+26          Poland  6.039655e+00  6.077299e+00
+27        Portugal  2.319978e+00  1.757408e+00
+28    South Africa  7.915884e+00  2.552163e+00
+29           Spain  5.812083e+00  4.868703e-01
+30     Switzerland  1.818182e+00  9.090909e-01
+31          Taiwan  6.646825e+00  9.920635e-02
+32        Thailand  5.588697e+00  5.227630e+00
+33          Turkey  5.312824e+01  1.168338e+00
+34  United Kingdom  3.055186e+00  2.142071e+00
+35   United States  1.538381e+00  3.200882e-01
+36       Venezuela  1.220172e+01  4.412698e+00, 'Correlation between slope and intercept for Klebsiella pneumoniae with Meropenem in 2016: -0.0839 (p-value: 0.6267)\n', {'2017'},            Country     intercept         slope
+1        Argentina  2.458124e+01  1.058718e+01
+2        Australia  2.142857e+00 -7.142857e-01
+3          Belgium  2.177464e+00 -8.928431e-01
+4           Brazil  3.674698e+01  2.245095e+00
+5           Canada  5.362477e-01 -3.060109e-02
+6            Chile  2.170330e+00  3.786630e+00
+7            China  2.093856e+01  3.353684e+00
+8         Colombia  2.061690e+01  3.784309e+00
+9          Croatia  9.393145e+00  6.492390e+00
+10  Czech Republic  0.000000e+00 -9.992007e-15
+11         Denmark  0.000000e+00  9.992007e-15
+12          France  2.439024e-01  1.219512e-01
+13         Germany  3.190262e+00 -6.479960e-01
+14          Greece  6.433975e+01 -3.360313e+00
+15         Hungary  0.000000e+00  0.000000e+00
+16         Ireland -9.947598e-14  6.994405e-14
+17          Israel  5.385281e+00 -1.593074e+00
+18           Italy  3.849451e+01 -1.641756e+00
+19           Japan  7.017544e-01 -5.263158e-01
+20    Korea, South  2.311688e+00 -6.406926e-01
+21          Kuwait  5.199134e+00  6.614719e+00
+22          Mexico  5.844536e+00  2.095153e+00
+23     Netherlands  0.000000e+00  9.992007e-15
+24          Panama  7.526660e+00  2.488083e+00
+25     Philippines  1.269474e+01  2.584984e+00
+26          Poland  1.121143e+01  3.436002e+00
+27        Portugal  4.371752e+00  1.515364e+00
+28    South Africa  1.120274e+01  5.462900e+00
+29           Spain  6.263944e+00 -9.027730e-01
+30     Switzerland  2.727273e+00 -9.090909e-01
+31          Taiwan  7.272013e+00 -1.894280e+00
+32        Thailand  1.124652e+01  5.796084e+00
+33          Turkey  5.563266e+01 -4.298747e+00
+34  United Kingdom  4.951466e+00 -4.215324e-01
+35   United States  1.759681e+00  8.668157e-01
+36       Venezuela  1.562963e+01  6.289683e-01, 'Correlation between slope and intercept for Klebsiella pneumoniae with Meropenem in 2017: -0.1184 (p-value: 0.4915)\n', {'2014'},            Country     intercept         slope
+1        Argentina  1.466532e+01 -3.859348e-02
+2        Australia  2.380952e-01  7.142857e-01
+3          Belgium  8.939397e+00 -1.864773e+00
+4           Brazil  3.038946e+01  2.586753e+00
+5           Canada  5.464481e-02  1.639344e-01
+6            Chile  2.121212e+00 -1.212121e+00
+7            China  1.736721e+01 -3.113914e-01
+8         Colombia  1.466026e+01  1.224359e+00
+9          Croatia  2.298851e-01  6.896552e-01
+10  Czech Republic  4.085621e-14 -1.998401e-14
+11         Denmark -3.907985e-14  1.998401e-14
+12          France -6.927792e-14  9.992007e-15
+13         Germany  1.196780e+00  8.040936e-01
+14          Greece  6.428386e+01  1.181818e+00
+15         Hungary -8.881784e-15  0.000000e+00
+16         Ireland  1.111111e+00 -6.349206e-01
+17          Israel  1.238095e+00  2.047619e+00
+18           Italy  3.316882e+01  3.291577e+00
+19           Japan  1.754386e+00  0.000000e+00
+20    Korea, South  9.090909e-01  1.212121e+00
+21          Kuwait  2.380952e+00  9.992007e-15
+22          Mexico  4.273372e+00  9.696970e-01
+23     Netherlands -8.881784e-15  9.992007e-15
+24          Panama  1.428571e+00  1.904762e+00
+25     Philippines  1.165404e+01 -1.527778e+00
+26          Poland  2.291667e+00  9.226190e-01
+27        Portugal  2.898551e-01  8.695652e-01
+28    South Africa  4.898450e+00  1.420155e+00
+29           Spain  4.859420e+00  5.711584e-01
+30     Switzerland  3.030303e-01  9.090909e-01
+31          Taiwan  1.798942e+00  3.015873e+00
+32        Thailand  5.128205e-01  1.538462e+00
+33          Turkey  3.527778e+01  1.000000e+01
+34  United Kingdom  1.779053e+00  4.351985e-01
+35   United States  2.201854e+00 -4.926043e-01
+36       Venezuela  7.003968e+00  2.857143e+00, 'Correlation between slope and intercept for Klebsiella pneumoniae with Meropenem in 2014: 0.4183 (p-value: 0.0111)\n']

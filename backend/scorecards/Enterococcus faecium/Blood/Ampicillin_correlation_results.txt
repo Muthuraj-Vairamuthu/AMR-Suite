@@ -1,0 +1,79 @@
+[{'2014'},            Country   intercept         slope
+1          Belgium   93.504902 -4.125817e+00
+2           Brazil   98.888889 -3.333333e+00
+3           Canada   85.289835  2.755952e+00
+4            Chile   95.757576  2.424242e+00
+5          Croatia  100.000000  4.996004e-16
+6           France   78.030159 -6.317460e-01
+7          Germany   92.144522  1.025641e+00
+8            Italy   89.732312  1.574668e+00
+9            Spain   87.481851  3.942724e-01
+10     Switzerland   90.000000 -4.444444e+00
+11          Taiwan   52.888889  1.311111e+01
+12  United Kingdom   93.757576 -2.424242e-01
+13   United States   80.971659 -3.531273e+00, 'Correlation between slope and intercept for Enterococcus faecium with Ampicillin in 2014: -0.7165 (p-value: 0.0059)\n', {'2016'},            Country  intercept      slope
+1          Belgium  87.500000   2.083333
+2           Brazil  89.962963  -8.444444
+3           Canada  90.844376   0.421111
+4            Chile  98.666667  -4.000000
+5          Croatia  99.090909  -1.212121
+6           France  77.677249  -0.142857
+7          Germany  92.424242  -2.020202
+8            Italy  92.070513   0.009615
+9            Spain  88.463380  -1.549588
+10     Switzerland  84.500000   3.500000
+11          Taiwan  76.166667  12.111111
+12  United Kingdom  93.696970   1.090909
+13   United States  75.866011   0.927783, 'Correlation between slope and intercept for Enterococcus faecium with Ampicillin in 2016: -0.5577 (p-value: 0.0477)\n', {'2017'},            Country  intercept     slope
+1          Belgium  88.017677  4.330808
+2           Brazil  82.518519 -2.259259
+3           Canada  90.685332 -2.312406
+4            Chile  96.000000 -5.333333
+5          Croatia  98.181818 -0.909091
+6           France  76.640873 -0.315476
+7          Germany  90.909091 -1.515152
+8            Italy  92.350427 -0.929487
+9            Spain  87.129600  0.610362
+10     Switzerland  86.222222  0.611111
+11          Taiwan  91.000000  2.166667
+12  United Kingdom  94.167832  0.685315
+13   United States  76.036661  5.068769, 'Correlation between slope and intercept for Enterococcus faecium with Ampicillin in 2017: -0.4492 (p-value: 0.1236)\n', {'2019'},            Country  intercept         slope
+1          Belgium  93.939394 -2.335859e+00
+2           Brazil  81.379630  4.555556e+00
+3           Canada  86.071429 -2.211134e+00
+4            Chile  86.666667 -2.303713e-15
+5          Croatia  96.628788 -4.545455e-01
+6           France  75.892857 -9.821429e-01
+7          Germany  91.722222  3.777778e+00
+8            Italy  90.981685 -1.868132e-01
+9            Spain  87.719561  1.226794e+00
+10     Switzerland  86.666667 -2.500000e+00
+11          Taiwan  95.396825  1.269841e+00
+12  United Kingdom  95.431235 -7.692308e-01
+13   United States  84.768383  1.929691e+00, 'Correlation between slope and intercept for Enterococcus faecium with Ampicillin in 2019: -0.1246 (p-value: 0.6851)\n', {'2018'},            Country  intercept     slope
+1          Belgium  90.719697  1.515152
+2           Brazil  79.472222  3.601852
+3           Canada  89.683123 -3.928571
+4            Chile  92.000000 -4.000000
+5          Croatia  96.856061 -0.340909
+6           France  76.875000 -1.309524
+7          Germany  89.833333  2.833333
+8            Italy  91.549451 -0.565324
+9            Spain  87.724373  0.751893
+10     Switzerland  88.055556 -2.500000
+11          Taiwan  93.428571  1.952381
+12  United Kingdom  94.745921  0.065268
+13   United States  79.813638  4.818481, 'Correlation between slope and intercept for Enterococcus faecium with Ampicillin in 2018: -0.3195 (p-value: 0.2873)\n', {'2015'},            Country  intercept      slope
+1          Belgium  90.514706  -3.823529
+2           Brazil  95.666667  -7.444444
+3           Canada  87.726433   3.250269
+4            Chile  97.575758   1.818182
+5          Croatia  99.696970  -0.909091
+6           France  77.864550  -0.408995
+7          Germany  92.408702  -0.745921
+8            Italy  90.765076   1.257123
+9            Spain  88.054612   0.087912
+10     Switzerland  87.333333  -1.333333
+11          Taiwan  62.166667  16.500000
+12  United Kingdom  93.575758  -0.181818
+13   United States  78.513896  -3.417373, 'Correlation between slope and intercept for Enterococcus faecium with Ampicillin in 2015: -0.6704 (p-value: 0.0121)\n']

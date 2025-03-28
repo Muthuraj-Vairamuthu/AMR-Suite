@@ -1,0 +1,7 @@
+[{'2016'},   Country  intercept     slope
+1   China   69.51354  5.438412, {'2017'},   Country  intercept     slope
+1   China   72.32539  3.953922, {'2014'},   Country  intercept     slope
+1   China  75.026199 -4.517361, {'2015'},   Country  intercept     slope
+1   China  71.973977 -2.441389, {'2019'},   Country  intercept     slope
+1   China  76.244017 -6.368294, {'2018'},   Country  intercept     slope
+1   China  75.150826 -2.115126]

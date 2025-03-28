@@ -1,0 +1,85 @@
+[{'2017'},            Country  intercept     slope
+1            China  62.583471  2.266666
+2   Czech Republic   9.939738  5.002363
+3           France  27.883598  1.507937
+4           Greece  90.580808  1.287879
+5            Italy  72.394180  2.500000
+6            Japan   6.000000 -2.000000
+7     Korea, South  73.343042 -1.873869
+8      Philippines  40.551587 -5.934524
+9         Portugal  34.230769 -6.923077
+10    South Africa  59.447517  8.023485
+11           Spain  31.297179  2.927981
+12          Taiwan  31.335675  8.316296
+13        Thailand  54.466933  6.717793
+14   United States  23.553366  5.033388, 'Correlation between slope and intercept for Acinetobacter baumannii with Amikacin in 2017: 0.0214 (p-value: 0.9420)\n', {'2016'},            Country  intercept      slope
+1            China  62.893851   1.477168
+2   Czech Republic   5.989011   3.650794
+3           France  16.428571  12.380952
+4           Greece  94.090909  -3.712121
+5            Italy  69.888075   3.304843
+6            Japan   4.000000   2.000000
+7     Korea, South  77.410902  -4.828061
+8      Philippines  46.152778  -7.523810
+9         Portugal  42.106227  -5.778388
+10    South Africa  47.033510  12.537427
+11           Spain  26.390242   6.405658
+12          Taiwan  28.451277   6.387701
+13        Thailand  53.924837   1.158263
+14   United States  22.525398   2.529870, 'Correlation between slope and intercept for Acinetobacter baumannii with Amikacin in 2016: -0.4494 (p-value: 0.1069)\n', {'2014'},            Country  intercept      slope
+1            China  71.250206  -4.980169
+2   Czech Republic   5.143288  -0.558069
+3           France   5.793651   3.492063
+4           Greece  96.250000  -0.833333
+5            Italy  80.484700  -6.137196
+6            Japan   0.666667   2.000000
+7     Korea, South  80.877525  -0.044192
+8      Philippines  44.309524   3.166667
+9         Portugal  64.123289 -11.635338
+10    South Africa  26.356421   9.574315
+11           Spain  21.041617   2.001792
+12          Taiwan  34.661319  -7.379679
+13        Thailand  62.551471  -5.715686
+14   United States  22.190253  -1.325494, 'Correlation between slope and intercept for Acinetobacter baumannii with Amikacin in 2014: -0.4705 (p-value: 0.0895)\n', {'2015'},            Country  intercept      slope
+1            China  67.278382  -5.228355
+2   Czech Republic   5.216189   1.696833
+3           France   9.603175  10.952381
+4           Greece  95.530303  -2.992424
+5            Italy  75.496170  -4.813520
+6            Japan   2.000000   2.666667
+7     Korea, South  79.634376  -4.373388
+8      Philippines  45.831349  -0.878968
+9         Portugal  55.023617 -12.524581
+10    South Africa  34.237873  13.557776
+11           Spain  22.693197   3.572423
+12          Taiwan  31.348782  -1.482472
+13        Thailand  58.544818  -5.015056
+14   United States  21.992654  -0.056357, 'Correlation between slope and intercept for Acinetobacter baumannii with Amikacin in 2015: -0.5950 (p-value: 0.0248)\n', {'2018'},            Country  intercept      slope
+1            China  63.325146  -0.221505
+2   Czech Republic  14.672693   4.575801
+3           France  31.666667  -6.322751
+4           Greece  91.136364   3.838384
+5            Italy  73.908730   2.083333
+6            Japan   4.666667  -2.666667
+7     Korea, South  70.434408   4.057708
+8      Philippines  32.958333  -6.263889
+9         Portugal  26.666667 -11.666667
+10    South Africa  67.960636   5.691940
+11           Spain  33.054144  -3.372846
+12          Taiwan  40.694192   1.054823
+13        Thailand  59.290505   5.929007
+14   United States  28.901876   4.324675, 'Correlation between slope and intercept for Acinetobacter baumannii with Amikacin in 2018: 0.4857 (p-value: 0.0783)\n', {'2019'},            Country  intercept      slope
+1            China  65.440911  -3.882803
+2   Czech Republic  18.435740   3.311277
+3           France  27.063492  -5.714286
+4           Greece  93.939394   3.409091
+5            Italy  77.400794  -0.833333
+6            Japan   2.666667  -2.000000
+7     Korea, South  73.953776   3.538420
+8      Philippines  26.875000  -5.000000
+9         Portugal  18.333333 -11.666667
+10    South Africa  73.771667   3.123543
+11           Spain  32.692365  -6.997549
+12          Taiwan  42.539900  -0.984952
+13        Thailand  65.269503   2.213124
+14   United States  32.991342   2.877345, 'Correlation between slope and intercept for Acinetobacter baumannii with Amikacin in 2019: 0.5097 (p-value: 0.0626)\n']

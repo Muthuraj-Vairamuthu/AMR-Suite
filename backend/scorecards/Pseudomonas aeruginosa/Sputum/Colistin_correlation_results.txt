@@ -1,0 +1,181 @@
+[{'2018'},            Country     intercept         slope
+1        Argentina  0.000000e+00  0.000000e+00
+2        Australia  1.234568e-01  3.703704e-01
+3          Belgium  2.127660e-01  2.836879e-01
+4           Brazil  0.000000e+00  3.108624e-15
+5            Chile  0.000000e+00  2.109424e-15
+6            China  9.964644e+00 -4.812348e+00
+7         Colombia  0.000000e+00  9.992007e-16
+8   Czech Republic  7.092199e-02  2.127660e-01
+9          Denmark  0.000000e+00  0.000000e+00
+10          France  2.150538e-01 -1.612903e-01
+11         Germany  1.832993e+00 -2.219880e-01
+12          Greece -9.992007e-15  9.992007e-16
+13         Hungary  0.000000e+00  0.000000e+00
+14          Israel  0.000000e+00 -1.998401e-15
+15           Italy  1.234568e-01  3.703704e-01
+16           Japan  0.000000e+00  0.000000e+00
+17    Korea, South  0.000000e+00  0.000000e+00
+18          Kuwait  1.304348e+00 -4.347826e-01
+19          Mexico  0.000000e+00  2.109424e-15
+20     Netherlands -9.992007e-15  2.109424e-15
+21     Philippines  0.000000e+00  9.992007e-16
+22          Poland  3.333333e+00  4.444444e+00
+23        Portugal  0.000000e+00  0.000000e+00
+24    South Africa  0.000000e+00  2.109424e-15
+25           Spain  0.000000e+00  9.992007e-16
+26          Taiwan  9.523810e-02  1.269841e-01
+27        Thailand  0.000000e+00  9.992007e-16
+28          Turkey  7.142857e-01  3.571429e-01
+29  United Kingdom  9.523810e-01 -5.442177e-01
+30       Venezuela  0.000000e+00  9.992007e-16, 'Correlation between slope and intercept for Pseudomonas aeruginosa with Colistin in 2018: -0.5033 (p-value: 0.0046)\n', {'2019'},            Country     intercept         slope
+1        Argentina  0.000000e+00  9.992007e-16
+2        Australia  3.703704e-01  4.938272e-01
+3          Belgium  4.255319e-01  2.127660e-01
+4           Brazil  0.000000e+00  1.998401e-15
+5            Chile  0.000000e+00  9.992007e-16
+6            China  5.541447e+00 -3.142911e+00
+7         Colombia  0.000000e+00  9.992007e-16
+8   Czech Republic  2.127660e-01  2.836879e-01
+9          Denmark  0.000000e+00  0.000000e+00
+10          France  0.000000e+00  0.000000e+00
+11         Germany  1.780881e+00 -3.135498e-01
+12          Greece -1.021405e-14  9.992007e-16
+13         Hungary  0.000000e+00  0.000000e+00
+14          Israel  0.000000e+00 -9.992007e-16
+15           Italy  3.703704e-01  4.938272e-01
+16           Japan  0.000000e+00  0.000000e+00
+17    Korea, South  0.000000e+00  9.992007e-16
+18          Kuwait  1.014493e+00 -5.797101e-01
+19          Mexico  0.000000e+00  9.992007e-16
+20     Netherlands -1.021405e-14  1.998401e-15
+21     Philippines  0.000000e+00  0.000000e+00
+22          Poland  6.666667e+00  3.333333e+00
+23        Portugal  0.000000e+00  0.000000e+00
+24    South Africa  0.000000e+00  0.000000e+00
+25           Spain  0.000000e+00  9.992007e-16
+26          Taiwan  1.904762e-01  9.523810e-02
+27        Thailand  0.000000e+00  9.992007e-16
+28          Turkey  1.190476e+00  0.000000e+00
+29  United Kingdom  5.442177e-01 -4.081633e-01
+30       Venezuela  0.000000e+00  9.992007e-16, 'Correlation between slope and intercept for Pseudomonas aeruginosa with Colistin in 2019: 0.0932 (p-value: 0.6242)\n', {'2015'},            Country     intercept         slope
+1        Argentina  8.333333e-01 -6.250000e-01
+2        Australia  2.666667e+00 -2.000000e+00
+3          Belgium  3.495331e+00 -2.133124e+00
+4           Brazil  1.904762e+00 -1.428571e+00
+5            Chile -9.769963e-15 -4.996004e-15
+6            China  6.481267e+00  4.328673e+00
+7         Colombia  3.333333e+00 -2.500000e+00
+8   Czech Republic  2.702381e+00 -1.714286e+00
+9          Denmark  1.185185e+00 -8.888889e-01
+10          France  1.726089e+00 -8.913413e-01
+11         Germany  2.007797e+00 -4.093567e-01
+12          Greece  2.666667e+00 -2.000000e+00
+13         Hungary  0.000000e+00  0.000000e+00
+14          Israel  7.291667e-01 -4.166667e-01
+15           Italy  8.641975e-01 -4.938272e-01
+16           Japan  5.797101e-01 -4.347826e-01
+17    Korea, South -9.769963e-15  0.000000e+00
+18          Kuwait  1.449275e-01  4.347826e-01
+19          Mexico  6.637681e+00 -4.434783e+00
+20     Netherlands  1.481481e+00 -1.111111e+00
+21     Philippines  0.000000e+00 -9.992007e-16
+22          Poland  0.000000e+00  1.998401e-15
+23        Portugal  1.333333e+00 -1.000000e+00
+24    South Africa  5.128205e-01 -3.846154e-01
+25           Spain  5.555556e-01 -4.166667e-01
+26          Taiwan  2.515723e+00 -1.886792e+00
+27        Thailand  2.352941e+00 -1.764706e+00
+28          Turkey  0.000000e+00  1.998401e-15
+29  United Kingdom  1.224490e+00 -6.802721e-02
+30       Venezuela  3.333333e+00 -2.500000e+00, 'Correlation between slope and intercept for Pseudomonas aeruginosa with Colistin in 2015: -0.2559 (p-value: 0.1722)\n', {'2014'},            Country     intercept         slope
+1        Argentina  1.458333e+00 -8.333333e-01
+2        Australia  4.666667e+00 -2.666667e+00
+3          Belgium  5.098628e+00 -2.121212e+00
+4           Brazil  3.333333e+00 -1.904762e+00
+5            Chile -2.975398e-14 -2.997602e-15
+6            China  3.951230e+00  3.035010e+00
+7         Colombia  5.833333e+00 -3.333333e+00
+8   Czech Republic  3.916667e+00 -1.702381e+00
+9          Denmark  2.074074e+00 -1.185185e+00
+10          France  2.617431e+00 -1.188455e+00
+11         Germany  2.768031e+00 -9.551657e-01
+12          Greece  4.666667e+00 -2.666667e+00
+13         Hungary  0.000000e+00 -1.998401e-15
+14          Israel  9.375000e-01 -3.125000e-01
+15           Italy  1.111111e+00 -3.703704e-01
+16           Japan  1.014493e+00 -5.797101e-01
+17    Korea, South  0.000000e+00 -2.997602e-15
+18          Kuwait  0.000000e+00 -2.997602e-15
+19          Mexico  1.078261e+01 -5.333333e+00
+20     Netherlands  2.592593e+00 -1.481481e+00
+21     Philippines -1.998401e-14  7.993606e-15
+22          Poland  0.000000e+00 -1.998401e-15
+23        Portugal  2.333333e+00 -1.333333e+00
+24    South Africa  8.974359e-01 -5.128205e-01
+25           Spain  9.722222e-01 -5.555556e-01
+26          Taiwan  4.402516e+00 -2.515723e+00
+27        Thailand  4.117647e+00 -2.352941e+00
+28          Turkey  0.000000e+00  0.000000e+00
+29  United Kingdom  1.564626e+00 -4.081633e-01
+30       Venezuela  5.833333e+00 -3.333333e+00, 'Correlation between slope and intercept for Pseudomonas aeruginosa with Colistin in 2014: -0.7803 (p-value: 0.0000)\n', {'2016'},            Country     intercept         slope
+1        Argentina  9.992007e-15  0.000000e+00
+2        Australia  0.000000e+00  2.997602e-15
+3          Belgium  1.248332e+00 -8.576329e-01
+4           Brazil  0.000000e+00  9.992007e-16
+5            Chile  0.000000e+00 -9.992007e-16
+6            China  9.758930e+00  1.511484e+00
+7         Colombia  9.992007e-15  0.000000e+00
+8   Czech Republic  1.000000e+00 -7.500000e-01
+9          Denmark  0.000000e+00  0.000000e+00
+10          France  4.838710e-01 -1.612903e-01
+11         Germany  1.117991e+00  7.223942e-01
+12          Greece  0.000000e+00  9.992007e-16
+13         Hungary  9.992007e-15  0.000000e+00
+14          Israel  4.166667e-01 -3.125000e-01
+15           Italy  4.938272e-01 -3.703704e-01
+16           Japan  9.992007e-15  0.000000e+00
+17    Korea, South  9.992007e-15  9.992007e-16
+18          Kuwait  4.347826e-01  5.797101e-01
+19          Mexico  1.014493e+00 -5.797101e-01
+20     Netherlands  0.000000e+00  1.998401e-15
+21     Philippines  0.000000e+00  0.000000e+00
+22          Poland  9.992007e-15  0.000000e+00
+23        Portugal  9.992007e-15 -9.992007e-16
+24    South Africa  9.992007e-15  9.992007e-16
+25           Spain  9.992007e-15  0.000000e+00
+26          Taiwan  0.000000e+00  9.992007e-16
+27        Thailand  9.992007e-15  0.000000e+00
+28          Turkey  1.190476e-01  3.571429e-01
+29  United Kingdom  8.163265e-01  4.081633e-01
+30       Venezuela  9.992007e-15  0.000000e+00, 'Correlation between slope and intercept for Pseudomonas aeruginosa with Colistin in 2016: 0.5908 (p-value: 0.0006)\n', {'2017'},            Country     intercept         slope
+1        Argentina  0.000000e+00  1.998401e-15
+2        Australia  0.000000e+00  4.996004e-15
+3          Belgium  3.224943e-01  2.408671e-02
+4           Brazil -1.998401e-14  3.996803e-15
+5            Chile  0.000000e+00  3.996803e-15
+6            China  1.142090e+01 -2.462345e+00
+7         Colombia  0.000000e+00  9.992007e-16
+8   Czech Republic  1.998401e-14 -1.099121e-14
+9          Denmark  0.000000e+00  9.992007e-16
+10          France  3.763441e-01 -2.150538e-01
+11         Germany  1.845948e+00 -5.211192e-02
+12          Greece  0.000000e+00  1.998401e-15
+13         Hungary  0.000000e+00  1.998401e-15
+14          Israel  9.992007e-15 -9.992007e-16
+15           Italy  0.000000e+00  9.992007e-16
+16           Japan  0.000000e+00  9.992007e-16
+17    Korea, South  9.992007e-15  9.992007e-16
+18          Kuwait  8.695652e-01  4.347826e-01
+19          Mexico  5.797101e-01 -4.347826e-01
+20     Netherlands  0.000000e+00  1.998401e-15
+21     Philippines  0.000000e+00  9.992007e-16
+22          Poland  1.111111e+00  3.333333e+00
+23        Portugal  0.000000e+00  0.000000e+00
+24    South Africa  0.000000e+00  1.998401e-15
+25           Spain  0.000000e+00  9.992007e-16
+26          Taiwan  3.174603e-02  9.523810e-02
+27        Thailand  0.000000e+00  9.992007e-16
+28          Turkey  3.571429e-01  4.761905e-01
+29  United Kingdom  1.224490e+00 -4.081633e-01
+30       Venezuela  0.000000e+00  9.992007e-16, 'Correlation between slope and intercept for Pseudomonas aeruginosa with Colistin in 2017: -0.5285 (p-value: 0.0027)\n']

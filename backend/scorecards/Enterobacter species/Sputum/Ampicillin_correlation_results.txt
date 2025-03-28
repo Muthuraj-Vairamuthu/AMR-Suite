@@ -1,0 +1,109 @@
+[{'2016'},            Country  intercept     slope
+1          Belgium  89.994200 -2.381563
+2           Canada  83.214286 -0.238095
+3            China  94.780473  0.024797
+4   Czech Republic  85.408907 -1.859360
+5           France  91.238536 -4.306878
+6          Germany  84.405779  8.152218
+7          Ireland  97.142857 -3.809524
+8           Israel  83.053030 -1.446970
+9            Italy  84.214731 -1.533474
+10           Japan  87.142857 -4.444444
+11    Korea, South  85.078530 -3.613617
+12     Philippines  84.565140 -5.738315
+13           Spain  81.634857 -0.848998
+14          Taiwan  87.782017 -2.524260
+15        Thailand  90.726165 -1.870887
+16          Turkey  85.833333 -0.833333
+17  United Kingdom  84.009804  0.330065
+18   United States  83.730315  0.274443, 'Correlation between slope and intercept for Enterobacter species with Ampicillin in 2016: -0.2733 (p-value: 0.2725)\n', {'2017'},            Country  intercept     slope
+1          Belgium  87.992063 -2.472222
+2           Canada  84.666667 -0.484127
+3            China  94.454616  1.437129
+4   Czech Republic  83.825622  0.696067
+5           France  88.277778 -2.646825
+6          Germany  89.743590  1.495726
+7          Ireland  94.285714 -2.857143
+8           Israel  82.628788  0.045455
+9            Italy  83.143911  1.713705
+10           Japan  83.952381 -2.904762
+11    Korea, South  82.896653 -0.036021
+12     Philippines  80.573525 -3.313982
+13           Spain  80.883017  3.714995
+14          Taiwan  86.114087 -2.257937
+15        Thailand  89.737877 -0.973972
+16          Turkey  86.944444 -7.222222
+17  United Kingdom  83.303922  3.588235
+18   United States  84.090090  0.037323, 'Correlation between slope and intercept for Enterobacter species with Ampicillin in 2017: -0.2045 (p-value: 0.4157)\n', {'2014'},            Country   intercept         slope
+1          Belgium   91.360322  2.945377e-01
+2           Canada   84.793651  9.523810e-02
+3            China   97.290534 -1.647425e+00
+4   Czech Republic   84.939560  3.846154e-02
+5           France   95.408730 -1.306878e+00
+6          Germany   79.091649  5.894106e-01
+7          Ireland  100.000000 -9.992007e-16
+8           Israel   82.853535  2.651515e-01
+9            Italy   85.948058 -1.494827e+00
+10           Japan   86.428571  1.746032e+00
+11    Korea, South   90.574074 -1.611111e+00
+12     Philippines   86.584750  2.897547e-01
+13           Spain   85.943560 -2.465981e+00
+14          Taiwan   90.054068 -2.131610e-01
+15        Thailand   93.329455 -1.128852e+00
+16          Turkey   84.166667  3.888889e+00
+17  United Kingdom   89.635747 -3.370287e+00
+18   United States   83.899378 -6.964765e-02, 'Correlation between slope and intercept for Enterobacter species with Ampicillin in 2014: -0.3593 (p-value: 0.1431)\n', {'2015'},            Country  intercept     slope
+1          Belgium  90.937758 -1.663712
+2           Canada  84.198413 -0.261905
+3            China  96.147343 -1.590548
+4   Czech Republic  85.331502 -0.131868
+5           France  94.061287 -2.575838
+6          Germany  80.710956  5.164280
+7          Ireland  99.047619 -2.857143
+8           Israel  83.151515  0.338384
+9            Italy  85.395549 -0.753569
+10           Japan  87.142857 -0.873016
+11    Korea, South  88.436508 -4.227513
+12     Philippines  86.289421 -2.042120
+13           Spain  84.028571 -3.242807
+14          Taiwan  89.301725 -1.726850
+15        Thailand  92.450902 -1.089440
+16          Turkey  85.000000  0.833333
+17  United Kingdom  86.955254 -4.236048
+18   United States  83.809400  0.061810, 'Correlation between slope and intercept for Enterobacter species with Ampicillin in 2015: -0.5169 (p-value: 0.0280)\n', {'2018'},            Country  intercept     slope
+1          Belgium  85.968254  1.833333
+2           Canada  84.150794  4.039683
+3            China  95.530229  1.236344
+4   Czech Republic  84.620108  0.995951
+5           France  85.869048  0.980159
+6          Germany  93.504274 -4.387464
+7          Ireland  91.428571  2.857143
+8           Israel  82.982323  1.964646
+9            Italy  84.970760  1.842105
+10           Japan  80.865079  0.611111
+11    Korea, South  80.306223  1.250217
+12     Philippines  77.357576  1.224242
+13           Spain  83.692412  6.327913
+14          Taiwan  83.744709  0.657077
+15        Thailand  89.130804  0.969782
+16          Turkey  80.555556  1.388889
+17  United Kingdom  82.411765 -5.558824
+18   United States  84.059126 -0.036263, 'Correlation between slope and intercept for Enterobacter species with Ampicillin in 2018: -0.1280 (p-value: 0.6126)\n', {'2019'},            Country  intercept      slope
+1          Belgium  87.190476   2.841270
+2           Canada  86.833333   4.666667
+3            China  96.850095   0.401216
+4   Czech Republic  84.601889   1.730769
+5           France  85.305556   3.000000
+6          Germany  91.111111  -4.444444
+7          Ireland  93.333333   3.809524
+8           Israel  83.444444   3.250000
+9            Italy  85.380117   2.631579
+10           Japan  80.420635   2.015873
+11    Korea, South  81.698773  -0.667600
+12     Philippines  76.686869   3.595960
+13           Spain  89.074074   4.722222
+14          Taiwan  83.867725   1.444444
+15        Thailand  88.902753   2.388592
+16          Turkey  81.666667   3.333333
+17  United Kingdom  80.722222 -11.722222
+18   United States  84.076135  -0.130719, 'Correlation between slope and intercept for Enterobacter species with Ampicillin in 2019: 0.1071 (p-value: 0.6723)\n']

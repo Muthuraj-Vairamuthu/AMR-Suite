@@ -1,0 +1,163 @@
+[{'2017'},            Country  intercept     slope
+1        Argentina  22.725309 -1.438272
+2        Australia   2.625641 -0.413675
+3          Belgium  16.864887  0.701591
+4           Brazil  19.218403 -0.665818
+5            Chile  44.694865 -8.476431
+6            China  24.347229 -2.376034
+7         Colombia  28.344444  2.070370
+8   Czech Republic  33.251082 -2.151515
+9           France  15.742480  1.178488
+10         Germany  23.421692 -2.090391
+11          Greece  39.203349 -0.430888
+12         Hungary  41.544444 -0.811111
+13          Israel  11.415547  4.332112
+14           Italy  22.675549 -2.227615
+15           Japan   9.256653 -0.826219
+16    Korea, South  25.867854  2.677631
+17          Kuwait  26.493788 -1.451237
+18          Mexico  50.693602 -4.641015
+19     Netherlands   5.151515  1.881313
+20     Philippines  14.986111 -2.263889
+21          Poland  26.816495  1.967466
+22        Portugal  33.311460 -3.681241
+23    South Africa  33.967745 -0.587098
+24           Spain  33.266125 -2.540093
+25        Thailand  36.379121 -4.989621
+26          Turkey  20.228730  1.813811
+27       Venezuela  16.287594  7.493734, 'Correlation between slope and intercept for Pseudomonas aeruginosa with Imipenem in 2017: -0.5644 (p-value: 0.0022)\n', {'2016'},            Country  intercept     slope
+1        Argentina  23.972222 -2.342593
+2        Australia   7.026618 -3.616117
+3          Belgium  16.203226  0.322939
+4           Brazil  22.773190 -2.572635
+5            Chile  51.542508 -5.613777
+6            China  26.205015 -2.151900
+7         Colombia  29.925926  0.611111
+8   Czech Republic  38.880231 -6.000000
+9           France  16.327117 -0.829578
+10         Germany  21.662568  2.221342
+11          Greece  41.941520 -3.203216
+12         Hungary  45.800000 -8.433333
+13          Israel  11.591372  0.331705
+14           Italy  22.860376 -0.904361
+15           Japan  11.645161 -2.250896
+16    Korea, South  31.853318 -5.859459
+17          Kuwait  26.801316  0.301530
+18          Mexico  52.923312 -3.052185
+19     Netherlands   5.784822  0.159490
+20     Philippines  18.460317 -3.984127
+21          Poland  23.073027  3.324439
+22        Portugal  31.114862  1.675653
+23    South Africa  28.963675  3.656899
+24           Spain  42.716060 -9.966791
+25        Thailand  35.269841 -1.531746
+26          Turkey  21.067405  0.134033
+27       Venezuela  16.416667  0.162698, 'Correlation between slope and intercept for Pseudomonas aeruginosa with Imipenem in 2016: -0.5018 (p-value: 0.0077)\n', {'2014'},            Country  intercept      slope
+1        Argentina  23.120370   1.045414
+2        Australia  15.653178  -4.676751
+3          Belgium  16.427599   0.561171
+4           Brazil  24.419458  -0.715577
+5            Chile  59.409091  -3.212121
+6            China  26.421911   0.128205
+7         Colombia  45.166667 -10.333333
+8   Czech Republic  44.177489  -2.424242
+9           France  17.100060  -0.706146
+10         Germany  20.902269   0.411295
+11          Greece  40.555556   1.527778
+12         Hungary  40.166667   4.849206
+13          Israel  11.798942  -0.714286
+14           Italy  21.828949   1.516259
+15           Japan  11.367521  -0.014245
+16    Korea, South  38.245504  -3.251748
+17          Kuwait  32.903404  -4.248453
+18          Mexico  48.002297   3.546366
+19     Netherlands  11.213450  -3.274854
+20     Philippines  28.656085  -3.873016
+21          Poland  18.034216   2.647020
+22        Portugal  25.724003   2.954212
+23    South Africa  25.515873   1.481481
+24           Spain  52.545924  -3.506020
+25        Thailand  24.841270   6.984127
+26          Turkey  26.882716  -3.078002
+27       Venezuela  16.773810  -0.333333, 'Correlation between slope and intercept for Pseudomonas aeruginosa with Imipenem in 2014: -0.2018 (p-value: 0.3127)\n', {'2015'},            Country  intercept     slope
+1        Argentina  23.772487  0.318783
+2        Australia  12.127300 -5.943460
+3          Belgium  16.207885 -0.761649
+4           Brazil  23.792476 -2.649686
+5            Chile  56.472503 -5.506734
+6            China  26.591100 -0.147706
+7         Colombia  38.500000 -7.000000
+8   Czech Republic  42.421356 -4.157287
+9           France  16.859733 -0.433369
+10         Germany  21.082260  1.380369
+11          Greece  41.361111 -0.916667
+12         Hungary  43.528571  1.561905
+13          Israel  11.544567 -1.080586
+14           Italy  22.370487  0.333664
+15           Japan  11.710780 -0.337745
+16    Korea, South  35.788378 -6.339910
+17          Kuwait  30.370911 -1.652151
+18          Mexico  50.522319  2.344943
+19     Netherlands   8.731393 -3.411085
+20     Philippines  24.444444 -7.089947
+21          Poland  19.936504  3.426313
+22        Portugal  28.130286  4.753344
+23    South Africa  26.964286  4.900794
+24           Spain  48.956327 -9.193970
+25        Thailand  29.785714  6.738095
+26          Turkey  24.151235 -4.271886
+27       Venezuela  16.293651 -2.607143, 'Correlation between slope and intercept for Pseudomonas aeruginosa with Imipenem in 2015: -0.1699 (p-value: 0.3968)\n', {'2019'},            Country  intercept      slope
+1        Argentina  22.194444   3.805556
+2        Australia   3.888889   2.222222
+3          Belgium  21.323373   3.509357
+4           Brazil  19.971442   1.185079
+5            Chile  32.830247  -2.728395
+6            China  21.641768   1.775599
+7         Colombia  27.992593  -4.800000
+8   Czech Republic  27.610390  -1.303030
+9           France  16.474765   0.296747
+10         Germany  19.608767  -3.155542
+11          Greece  33.576821  -5.974747
+12         Hungary  43.000000  11.500000
+13          Israel  17.639869   0.650472
+14           Italy  19.777729  -0.171172
+15           Japan   7.414467   0.335071
+16    Korea, South  31.983144   5.007948
+17          Kuwait  21.782828  -3.111111
+18          Mexico  39.688855  -4.844007
+19     Netherlands  11.010101   3.232323
+20     Philippines  12.731481  -0.486111
+21          Poland  29.524006  -0.348970
+22        Portugal  26.768110  -1.563636
+23    South Africa  31.720085  -0.138889
+24           Spain  28.313146  -0.941940
+25        Thailand  27.298535   0.256410
+26          Turkey  26.320513   2.375000
+27       Venezuela  32.469431   7.522594, 'Correlation between slope and intercept for Pseudomonas aeruginosa with Imipenem in 2019: 0.0391 (p-value: 0.8463)\n', {'2018'},            Country  intercept      slope
+1        Argentina  21.938272   1.879630
+2        Australia   2.422222   1.933333
+3          Belgium  17.232893   4.411281
+4           Brazil  18.809427   1.144348
+5            Chile  38.133838  -6.042508
+6            China  23.117623  -0.479622
+7         Colombia  30.422222  -3.788889
+8   Czech Republic  30.523810  -2.389610
+9           France  16.556753   0.371658
+10         Germany  21.988600  -3.526574
+11          Greece  36.229931  -3.993620
+12         Hungary  40.611111   7.666667
+13          Israel  14.409871   3.083092
+14           Italy  20.294648  -0.578690
+15           Japan   8.945585  -0.927990
+16    Korea, South  27.290861   6.104740
+17          Kuwait  26.067398  -4.611576
+18          Mexico  46.010905  -6.705139
+19     Netherlands   7.171717   4.090909
+20     Philippines  10.995370   1.018519
+21          Poland  28.208870   0.947064
+22        Portugal  31.459452  -4.493759
+23    South Africa  34.430199  -1.997863
+24           Spain  28.215895   0.085208
+25        Thailand  32.359585  -3.547009
+26          Turkey  21.529429   4.353730
+27       Venezuela  21.866029  11.541069, 'Correlation between slope and intercept for Pseudomonas aeruginosa with Imipenem in 2018: -0.3975 (p-value: 0.0401)\n']

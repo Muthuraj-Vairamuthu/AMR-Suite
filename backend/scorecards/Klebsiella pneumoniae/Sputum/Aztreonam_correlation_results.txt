@@ -1,0 +1,151 @@
+[{'2016'},            Country  intercept     slope
+1        Argentina  19.666667  9.000000
+2        Australia   8.333333 -4.761905
+3          Belgium  24.287945 -0.896201
+4            China  38.116486  2.855694
+5         Colombia  20.855922 -4.599512
+6   Czech Republic  49.658534 -2.698884
+7           France  14.868538 -0.347594
+8          Germany   7.979853  0.532967
+9           Greece  61.977513 -8.207672
+10          Israel  41.294102  1.048621
+11           Italy  54.004962  0.398724
+12           Japan   5.318977 -1.110148
+13    Korea, South  37.208590 -7.507970
+14          Mexico  41.150794  4.424603
+15     Netherlands  13.518519 -1.574074
+16     Philippines  35.424147 -6.514449
+17        Portugal  40.352647  7.366078
+18         Romania  10.666667 -5.500000
+19    South Africa  37.665454 -1.341018
+20           Spain  27.136752 -0.656288
+21          Taiwan  31.751873  4.589363
+22        Thailand  38.906420 -2.729832
+23          Turkey  49.456259  6.604072
+24  United Kingdom  18.527580 -0.525587
+25       Venezuela  15.925556 -1.855182, 'Correlation between slope and intercept for Klebsiella pneumoniae with Aztreonam in 2016: 0.0634 (p-value: 0.7635)\n', {'2017'},            Country  intercept     slope
+1        Argentina  27.666667 -2.000000
+2        Australia   5.238095 -2.142857
+3          Belgium  24.186899 -4.669881
+4            China  40.628969  0.597748
+5         Colombia  18.751526  2.133700
+6   Czech Republic  47.338238 -0.004146
+7           France  15.970984  3.160279
+8          Germany   8.104618  0.226551
+9           Greece  54.287037 -4.407407
+10          Israel  42.963829  3.942717
+11           Italy  54.615896  4.597289
+12           Japan   3.879739 -0.094989
+13    Korea, South  29.965508 -3.663009
+14          Mexico  44.924603 -6.535714
+15     Netherlands  13.055556 -6.203704
+16     Philippines  29.245130 -4.495851
+17        Portugal  47.691309 -0.507493
+18         Romania   3.333333  6.666667
+19    South Africa  37.819093 -0.240004
+20           Spain  26.945462  0.179080
+21          Taiwan  35.673476 -0.068657
+22        Thailand  36.895768 -1.430913
+23          Turkey  55.291436  5.259678
+24  United Kingdom  17.483881 -2.514299
+25       Venezuela  15.046296  5.600649, 'Correlation between slope and intercept for Klebsiella pneumoniae with Aztreonam in 2017: -0.0228 (p-value: 0.9140)\n', {'2014'},            Country  intercept         slope
+1        Argentina   8.888889  6.666667e+00
+2        Australia  11.904762 -9.992007e-15
+3          Belgium  17.960784  4.235294e+00
+4            China  35.362824  1.726554e+00
+5         Colombia  24.888889 -1.761905e+00
+6   Czech Republic  55.806582 -3.024648e+00
+7           France   9.670826  2.928105e+00
+8          Germany   7.576923 -4.529915e-01
+9           Greece  69.678571 -2.809524e+00
+10          Israel  39.972264  9.786654e-01
+11           Italy  53.743687  2.777778e-01
+12           Japan   9.241782 -1.812052e+00
+13    Korea, South  50.220638 -6.098851e+00
+14          Mexico  35.305556  3.297619e+00
+15     Netherlands   9.351852  3.981481e+00
+16     Philippines  43.027594 -3.013367e+00
+17        Portugal  28.065268  6.446886e+00
+18         Romania  22.500000 -7.500000e+00
+19    South Africa  40.649626 -1.312370e-01
+20           Spain  26.309524  1.018519e+00
+21          Taiwan  26.803237  2.314985e+00
+22        Thailand  41.794336 -8.601934e-01
+23          Turkey  36.611111  4.833333e+00
+24  United Kingdom  19.073087 -1.017696e-02
+25       Venezuela  17.722833 -1.013431e+00, 'Correlation between slope and intercept for Klebsiella pneumoniae with Aztreonam in 2014: -0.3611 (p-value: 0.0762)\n', {'2015'},            Country  intercept      slope
+1        Argentina  12.666667   6.888889
+2        Australia  10.714286  -3.571429
+3          Belgium  20.927171   3.853408
+4            China  36.224929   1.491547
+5         Colombia  23.655678  -2.366300
+6   Czech Republic  53.355048  -3.867013
+7           France  11.980541   2.536988
+8          Germany   7.758242   0.774725
+9           Greece  67.018519  -6.384921
+10          Israel  40.335968  -0.007264
+11           Italy  53.644781  -1.176347
+12           Japan   7.544972  -2.916211
+13    Korea, South  45.209134  -8.563860
+14          Mexico  37.646825   5.619048
+15     Netherlands  11.388889   2.222222
+16     Philippines  40.297182  -5.547404
+17        Portugal  32.850927   8.789211
+18         Romania  17.500000 -10.000000
+19    South Africa  39.415095  -2.264751
+20           Spain  26.677859  -0.191290
+21          Taiwan  28.561596   3.810329
+22        Thailand  40.792175  -2.083369
+23          Turkey  41.686275   8.669935
+24  United Kingdom  18.871497  -0.501785
+25       Venezuela  16.991897  -2.310837, 'Correlation between slope and intercept for Klebsiella pneumoniae with Aztreonam in 2015: -0.1903 (p-value: 0.3621)\n', {'2018'},            Country  intercept      slope
+1        Argentina  27.222222   1.111111
+2        Australia   2.539683   5.238095
+3          Belgium  21.033461  -3.167443
+4            China  40.137702  -1.477962
+5         Colombia  19.813797   5.366300
+6   Czech Republic  46.603719   0.998712
+7           France  18.215983   4.383046
+8          Germany   8.784177  -1.948334
+9           Greece  47.666667  -6.768519
+10          Israel  46.474352   9.082640
+11           Italy  57.736842   7.201754
+12           Japan   3.155556   0.577778
+13    Korea, South  26.187895  -0.201431
+14          Mexico  42.043651  -5.714286
+15     Netherlands   8.981481   0.555556
+16     Philippines  24.499579  -2.847162
+17        Portugal  48.460466  -2.072813
+18         Romania   8.555556   9.000000
+19    South Africa  36.603749   5.281668
+20           Spain  26.253561   0.911681
+21          Taiwan  35.619825  -3.775800
+22        Thailand  35.793717   2.378771
+23          Turkey  61.268157  -0.430489
+24  United Kingdom  15.846347  -1.506651
+25       Venezuela  20.199014  12.349687, 'Correlation between slope and intercept for Klebsiella pneumoniae with Aztreonam in 2018: -0.1666 (p-value: 0.4261)\n', {'2019'},            Country  intercept         slope
+1        Argentina  30.555556 -1.898481e-14
+2        Australia   6.190476  5.873016e+00
+3          Belgium  17.315961 -1.400560e-01
+4            China  40.451308 -3.746897e+00
+5         Colombia  22.161172  6.242369e+00
+6   Czech Republic  47.215894  7.481109e-01
+7           France  21.035354  3.888889e+00
+8          Germany   6.919631 -1.415961e+00
+9           Greece  42.000000 -6.962963e+00
+10          Israel  54.083735  7.691509e+00
+11           Italy  64.394737  4.500000e+00
+12           Japan   4.237037 -4.000000e-01
+13    Korea, South  25.117193  1.371965e+00
+14          Mexico  37.063492 -1.805556e+00
+15     Netherlands   8.333333  4.166667e+00
+16     Philippines  21.475589 -1.351551e+00
+17        Portugal  47.420471 -1.823580e+00
+18         Romania  16.333333  6.222222e+00
+19    South Africa  41.066127  4.507422e+00
+20           Spain  27.293447  4.273504e-02
+21          Taiwan  33.688818 -4.842698e+00
+22        Thailand  36.981448  3.577557e+00
+23          Turkey  60.899493 -1.027926e+00
+24  United Kingdom  14.681254 -5.179616e-01
+25       Venezuela  29.436027  1.160354e+01, 'Correlation between slope and intercept for Klebsiella pneumoniae with Aztreonam in 2019: -0.0843 (p-value: 0.6886)\n']

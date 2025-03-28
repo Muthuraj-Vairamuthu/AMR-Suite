@@ -1,0 +1,181 @@
+[{'2016'},            Country  intercept     slope
+1        Argentina  28.644300 -1.215368
+2        Australia   6.321856 -2.587546
+3          Belgium   6.940303 -0.561230
+4           Brazil  19.686767 -5.355439
+5           Canada   9.732026  5.013072
+6            Chile  21.277557 -0.453042
+7            China  23.647131  3.334554
+8         Colombia  35.569935 -3.643137
+9          Croatia   6.657407  1.222222
+10  Czech Republic  28.436727 -3.917581
+11          France  16.027452  1.058445
+12         Germany   7.915962  0.072035
+13          Greece  16.967389  2.072102
+14         Hungary  27.351396 -4.711002
+15          Israel  12.197802  9.120879
+16           Italy  15.684562 -1.045115
+17           Japan   3.721273  0.277602
+18    Korea, South  22.142785 -0.665661
+19          Kuwait  19.323232  1.157828
+20          Mexico  43.431421 -5.559835
+21     Netherlands   1.997980  2.478788
+22     Philippines  14.575758 -6.146465
+23          Poland  17.644886  3.768679
+24        Portugal  26.962608 -0.768062
+25    South Africa  19.836159 -3.330104
+26           Spain  19.775004 -0.859094
+27        Thailand  37.111111 -2.317460
+28          Turkey  15.918965 -5.304973
+29   United States  11.052954 -0.075773
+30       Venezuela  16.846561  1.439153, 'Correlation between slope and intercept for Pseudomonas aeruginosa with Piperacillin.tazobactam in 2016: -0.4357 (p-value: 0.0161)\n', {'2017'},            Country  intercept     slope
+1        Argentina  27.226190  1.876984
+2        Australia   3.558974 -0.947009
+3          Belgium   7.263272  1.027364
+4           Brazil  13.498827 -0.189606
+5           Canada  14.019608  0.065359
+6            Chile  21.001984  3.531746
+7            China  25.820784  0.594221
+8         Colombia  31.109804  0.028758
+9          Croatia   7.722222  3.212963
+10  Czech Republic  26.334097 -4.342634
+11          France  16.307937  0.504497
+12         Germany   7.647073 -0.249674
+13          Greece  18.644591  4.783103
+14         Hungary  25.091954  7.550082
+15          Israel  19.474969  3.785104
+16           Italy  14.416628  0.753000
+17           Japan   4.289777 -0.798764
+18    Korea, South  21.470338  4.067459
+19          Kuwait  19.808081  4.247475
+20          Mexico  39.640541 -8.621953
+21     Netherlands   3.484848  3.131313
+22     Philippines   9.026094 -2.197811
+23          Poland  21.921843 -0.977418
+24        Portugal  27.522523  1.668297
+25    South Africa  17.129318 -3.532731
+26           Spain  18.145284  1.015378
+27        Thailand  36.493284 -8.297924
+28          Turkey  11.083916 -1.225233
+29   United States  11.105995 -0.395817
+30       Venezuela  16.849903  6.105263, 'Correlation between slope and intercept for Pseudomonas aeruginosa with Piperacillin.tazobactam in 2017: -0.2873 (p-value: 0.1236)\n', {'2014'},            Country  intercept      slope
+1        Argentina  30.384199  -1.001082
+2        Australia   7.649817  -0.361905
+3          Belgium   7.203293   0.102627
+4           Brazil  34.162162  -7.783784
+5           Canada   4.259259   2.777778
+6            Chile  37.174603  -8.846561
+7            China  21.871795  -0.282051
+8         Colombia  40.125792  -2.343590
+9          Croatia  14.444444  -4.444444
+10  Czech Republic  27.734897   1.828348
+11          France  14.335599   0.327833
+12         Germany   8.948981  -0.703406
+13          Greece  16.932026  -0.844444
+14         Hungary  25.774859   0.232804
+15          Israel   3.730159   3.650794
+16           Italy  20.087560  -2.306763
+17           Japan   8.116306  -2.526674
+18    Korea, South  23.644134  -1.256151
+19          Kuwait  24.600168  -4.614899
+20          Mexico  34.056246   6.438923
+21     Netherlands   3.144444  -1.511111
+22     Philippines  34.449495 -10.203704
+23          Poland  10.081197   4.039886
+24        Portugal  29.515958  -0.995475
+25    South Africa  20.639017   0.455197
+26           Spain  21.547847  -1.644338
+27        Thailand  29.484127   5.634921
+28          Turkey  19.304153  -0.785634
+29   United States  10.421789   0.587266
+30       Venezuela  14.275132  -0.190476, 'Correlation between slope and intercept for Pseudomonas aeruginosa with Piperacillin.tazobactam in 2014: -0.3443 (p-value: 0.0625)\n', {'2015'},            Country  intercept      slope
+1        Argentina  29.637446  -1.969697
+2        Australia   7.241026  -1.873993
+3          Belgium   7.160026  -0.118400
+4           Brazil  28.216481  -9.494701
+5           Canada   6.169935   3.880174
+6            Chile  30.239859  -8.239859
+7            China  22.410256   2.316239
+8         Colombia  38.323982  -4.390045
+9          Croatia  10.861111  -4.083333
+10  Czech Republic  28.512219   0.195503
+11          France  14.964699   1.015682
+12         Germany   8.487669  -0.519400
+13          Greece  16.681046  -0.041830
+14         Hungary  26.926473  -0.227696
+15          Israel   6.446886   5.451770
+16           Italy  18.193834  -2.985929
+17           Japan   6.279808  -1.229288
+18    Korea, South  22.954157  -1.681430
+19          Kuwait  22.251263  -1.802609
+20          Mexico  38.903048   5.089063
+21     Netherlands   2.347475  -0.457576
+22     Philippines  26.398990 -10.929293
+23          Poland  13.166529   5.760270
+24        Portugal  28.501563  -1.223177
+25    South Africa  20.631208  -0.983999
+26           Spain  20.824700  -1.325740
+27        Thailand  33.269841   5.087302
+28          Turkey  18.199355  -3.987795
+29   United States  10.693385   0.203496
+30       Venezuela  15.111111   0.412698, 'Correlation between slope and intercept for Pseudomonas aeruginosa with Piperacillin.tazobactam in 2015: -0.2296 (p-value: 0.2222)\n', {'2019'},            Country  intercept         slope
+1        Argentina  32.055556  3.250000e+00
+2        Australia   2.222222  2.997602e-14
+3          Belgium   8.796491  1.472320e+00
+4           Brazil  15.907631  3.572453e+00
+5           Canada  13.641784 -3.644651e+00
+6            Chile  28.578042  3.624339e+00
+7            China  23.668223 -4.729847e+00
+8         Colombia  28.511111 -3.800000e+00
+9          Croatia  13.752646  1.238095e+00
+10  Czech Republic  17.350649 -2.060606e+00
+11          France  16.447521 -1.203422e+00
+12         Germany   6.291859 -1.746338e+00
+13          Greece  23.115364 -2.550505e+00
+14         Hungary  33.916667  6.333333e+00
+15          Israel  26.339567 -2.955466e+00
+16           Italy  16.460426  9.704019e-01
+17           Japan   3.001648  1.769434e-01
+18    Korea, South  28.776207  3.533762e+00
+19          Kuwait  23.375421 -1.111111e+00
+20          Mexico  22.500947 -3.546798e+00
+21     Netherlands   7.676768 -1.212121e+00
+22     Philippines   5.833333  1.250000e+00
+23          Poland  19.650439 -1.530584e+00
+24        Portugal  32.066739  4.737374e+00
+25    South Africa  11.869658  1.388889e-01
+26           Spain  18.040513 -1.511489e+00
+27        Thailand  21.150183 -3.948718e+00
+28          Turkey  13.086538  5.750000e+00
+29   United States  10.540028 -2.836466e-01
+30       Venezuela  24.917597  8.506114e-02, 'Correlation between slope and intercept for Pseudomonas aeruginosa with Piperacillin.tazobactam in 2019: 0.1642 (p-value: 0.3860)\n', {'2018'},            Country  intercept     slope
+1        Argentina  28.821429  3.904762
+2        Australia   2.400000 -0.133333
+3          Belgium   7.620979  1.808389
+4           Brazil  13.281598  3.431744
+5           Canada  14.186332 -2.353859
+6            Chile  23.194444  5.843254
+7            China  26.975963 -4.586288
+8         Colombia  29.600000 -2.200000
+9          Croatia   9.670635  3.734127
+10  Czech Republic  21.426616 -3.703440
+11          France  17.225952 -1.182814
+12         Germany   7.285988 -1.513086
+13          Greece  21.534875  0.623498
+14         Hungary  30.130952  7.297619
+15          Israel  23.134760  0.600861
+16           Italy  14.682954  1.772487
+17           Japan   3.967676 -0.686019
+18    Korea, South  24.650140  5.003286
+19          Kuwait  23.627946 -0.143098
+20          Mexico  32.617153 -9.081407
+21     Netherlands   6.060606  0.757576
+22     Philippines   6.212963  0.444444
+23          Poland  21.742553 -2.387254
+24        Portugal  28.657759  4.888806
+25    South Africa  13.993659 -1.627723
+26           Spain  19.012328 -1.217348
+27        Thailand  29.638584 -8.312576
+28          Turkey   9.959499  4.761946
+29   United States  10.554741 -0.157922
+30       Venezuela  22.044657  2.625199, 'Correlation between slope and intercept for Pseudomonas aeruginosa with Piperacillin.tazobactam in 2018: -0.1386 (p-value: 0.4651)\n']

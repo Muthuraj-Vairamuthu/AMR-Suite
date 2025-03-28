@@ -1,0 +1,157 @@
+[{'2014'},            Country     intercept         slope
+1        Argentina  3.750000e+00 -1.250000e+00
+2        Australia  1.794872e+00 -1.025641e+00
+3          Belgium  2.522523e+00 -1.441441e+00
+4           Brazil  6.666667e+00  1.998401e-15
+5           Canada  0.000000e+00  1.998401e-15
+6            China  1.270915e+01  2.152505e+00
+7         Colombia  6.761799e+00 -1.658120e+00
+8   Czech Republic  1.791667e+00  1.666667e-01
+9           France  4.141414e+00 -1.717172e+00
+10         Germany  3.087830e+00 -2.289345e-01
+11          Greece -1.065814e-14  2.997602e-15
+12          Israel  6.301980e+00  1.183092e+00
+13           Italy  1.675335e+00 -8.053586e-01
+14          Kuwait  5.297714e+00  1.169591e-01
+15          Mexico  1.206909e+01 -3.115706e+00
+16     Netherlands  2.916667e+00 -1.666667e+00
+17     Philippines  5.070689e+00 -1.080543e+00
+18          Poland  1.794872e+00 -1.025641e+00
+19        Portugal  4.814248e+00 -7.323633e-01
+20    South Africa  7.692308e-01  1.025641e+00
+21           Spain  1.784611e+00 -6.491561e-03
+22          Taiwan  1.250000e+00 -4.166667e-01
+23        Thailand  2.263815e+00  9.090909e-01
+24          Turkey  5.555556e+00 -9.259259e-01
+25  United Kingdom  3.333333e-01  1.000000e+00
+26   United States  2.795206e+00 -3.430354e-02, 'Correlation between slope and intercept for Escherichia coli with Amikacin in 2014: -0.1187 (p-value: 0.5636)\n', {'2017'},            Country  intercept         slope
+1        Argentina   0.000000 -1.998401e-15
+2        Australia   0.238095  7.142857e-01
+3          Belgium   0.000000  9.992007e-16
+4           Brazil   7.666667  5.000000e-01
+5           Canada   0.833333  1.111111e+00
+6            China  13.268519 -4.962963e+00
+7         Colombia   3.659420  3.804348e-01
+8   Czech Republic   3.000000 -1.000000e+00
+9           France   1.250000  1.666667e+00
+10         Germany   3.126833  7.885305e-01
+11          Greece   0.000000  1.998401e-15
+12          Israel   6.653880 -2.509775e+00
+13           Italy   4.157895  2.912281e+00
+14          Kuwait   3.534290 -1.773525e+00
+15          Mexico   4.597664 -8.175825e-01
+16     Netherlands   0.000000  0.000000e+00
+17     Philippines   1.553216 -3.403509e-01
+18          Poland   2.182540  1.785714e+00
+19        Portugal   5.455424  2.456984e+00
+20    South Africa   5.128205  6.410256e-01
+21           Spain   1.447368  1.815302e-01
+22          Taiwan   0.000000  9.992007e-16
+23        Thailand   3.511586 -1.497326e+00
+24          Turkey   1.712963  5.092593e-01
+25  United Kingdom   3.000000 -1.000000e+00
+26   United States   2.978901 -7.877126e-01, 'Correlation between slope and intercept for Escherichia coli with Amikacin in 2017: -0.4938 (p-value: 0.0104)\n', {'2016'},            Country     intercept         slope
+1        Argentina  1.666667e+00 -1.250000e+00
+2        Australia  9.769963e-15  2.053913e-15
+3          Belgium  9.769963e-15  1.054712e-15
+4           Brazil  7.166667e+00  6.666667e-01
+5           Canada  2.777778e-01  8.333333e-01
+6            China  1.436765e+01 -2.477124e+00
+7         Colombia  4.304627e+00 -2.619844e-01
+8   Czech Republic  2.000000e+00  1.000000e+00
+9           France  1.628788e+00  3.409091e-01
+10         Germany  2.857788e+00 -2.691430e-02
+11          Greece  0.000000e+00  2.053913e-15
+12          Israel  7.770395e+00 -1.342109e+00
+13           Italy  2.195969e+00  2.892497e+00
+14          Kuwait  4.793195e+00 -1.393939e+00
+15          Mexico  6.280256e+00 -1.512868e+00
+16     Netherlands  0.000000e+00  1.054712e-15
+17     Philippines  2.762092e+00 -1.432680e+00
+18          Poland  9.523810e-01  1.269841e+00
+19        Portugal  4.819902e+00  1.104643e+00
+20    South Africa  3.974359e+00  1.452991e+00
+21           Spain  1.675824e+00 -1.466704e-01
+22          Taiwan  5.555556e-01 -4.166667e-01
+23        Thailand  3.190731e+00  1.247772e-01
+24          Turkey  3.888889e+00 -2.222222e+00
+25  United Kingdom  2.000000e+00  1.000000e+00
+26   United States  2.838258e+00  2.134672e-01, 'Correlation between slope and intercept for Escherichia coli with Amikacin in 2016: -0.4567 (p-value: 0.0190)\n', {'2019'},            Country     intercept         slope
+1        Argentina  0.000000e+00 -3.996803e-15
+2        Australia  1.428571e+00  7.142857e-01
+3          Belgium  0.000000e+00  9.992007e-16
+4           Brazil  5.833333e+00 -3.333333e+00
+5           Canada  2.777778e+00  1.998401e-15
+6            China  8.166667e+00  3.250000e+00
+7         Colombia  2.916667e+00 -1.666667e+00
+8   Czech Republic  1.333333e+00 -1.000000e+00
+9           France  4.166667e+00  0.000000e+00
+10         Germany  3.902330e+00  3.718638e-01
+11          Greece -9.769963e-15  0.000000e+00
+12          Israel  2.414530e+00 -7.692308e-01
+13           Italy  7.017544e+00 -2.105263e+00
+14          Kuwait  7.017544e-01 -5.263158e-01
+15          Mexico  2.907895e+00 -7.573099e-01
+16     Netherlands  0.000000e+00 -9.992007e-16
+17     Philippines  1.052632e+00  5.263158e-01
+18          Poland  3.888889e+00 -4.365079e-01
+19        Portugal  8.064103e+00 -7.222222e-01
+20    South Africa  3.888889e+00 -2.222222e+00
+21           Spain  3.156200e+00  1.739130e+00
+22          Taiwan  0.000000e+00  9.992007e-16
+23        Thailand  1.212121e+00 -9.090909e-01
+24          Turkey  4.852941e+00  4.387255e+00
+25  United Kingdom  1.333333e+00 -1.000000e+00
+26   United States  1.976939e+00  5.390836e-03, 'Correlation between slope and intercept for Escherichia coli with Amikacin in 2019: 0.0567 (p-value: 0.7834)\n', {'2018'},            Country     intercept         slope
+1        Argentina  9.769963e-15 -3.601286e-15
+2        Australia  7.142857e-01  9.523810e-01
+3          Belgium  0.000000e+00  8.985868e-16
+4           Brazil  7.500000e+00 -2.500000e+00
+5           Canada  1.666667e+00  8.333333e-01
+6            China  9.879630e+00 -2.222222e-01
+7         Colombia  3.750000e+00 -1.250000e+00
+8   Czech Republic  2.333333e+00 -1.333333e+00
+9           France  2.500000e+00  1.250000e+00
+10         Germany  3.656729e+00  5.168622e-01
+11          Greece  0.000000e+00  1.599415e-15
+12          Israel  4.711538e+00 -2.171474e+00
+13           Italy  6.736842e+00 -5.789474e-01
+14          Kuwait  1.929825e+00 -1.228070e+00
+15          Mexico  3.665205e+00 -8.940058e-01
+16     Netherlands  0.000000e+00 -1.200429e-15
+17     Philippines  1.059649e+00  3.017544e-01
+18          Poland  3.690476e+00  1.587302e-01
+19        Portugal  7.476733e+00  3.433048e-01
+20    South Africa  6.025641e+00 -2.435897e+00
+21           Spain  1.896771e+00  1.596745e+00
+22          Taiwan  0.000000e+00  8.014422e-16
+23        Thailand  2.121212e+00 -1.212121e+00
+24          Turkey  2.775054e+00  3.464052e+00
+25  United Kingdom  2.333333e+00 -1.333333e+00
+26   United States  2.717033e+00 -6.709731e-01, 'Correlation between slope and intercept for Escherichia coli with Amikacin in 2018: -0.3210 (p-value: 0.1098)\n', {'2015'},            Country     intercept         slope
+1        Argentina  2.916667e+00 -1.666667e+00
+2        Australia  1.025641e+00 -7.692308e-01
+3          Belgium  1.441441e+00 -1.081081e+00
+4           Brazil  6.833333e+00  5.000000e-01
+5           Canada  0.000000e+00  1.901257e-15
+6            China  1.378922e+01  1.187908e+00
+7         Colombia  5.709123e+00 -1.311873e+00
+8   Czech Republic  1.833333e+00  7.083333e-01
+9           France  2.929293e+00 -1.818182e+00
+10         Germany  3.010964e+00  4.828935e-02
+11          Greece -9.769963e-15  1.998401e-15
+12          Israel  7.111092e+00  7.255434e-01
+13           Italy  1.615362e+00  8.508150e-01
+14          Kuwait  5.215311e+00 -5.396066e-01
+15          Mexico  9.690773e+00 -3.172880e+00
+16     Netherlands  1.666667e+00 -1.250000e+00
+17     Philippines  4.198190e+00 -1.486878e+00
+18          Poland  1.343101e+00  1.831502e-01
+19        Portugal  4.691421e+00  1.050642e-01
+20    South Africa  2.094017e+00  2.435897e+00
+21           Spain  1.723738e+00 -3.072880e-01
+22          Taiwan  9.722222e-01 -5.555556e-01
+23        Thailand  2.673797e+00  6.238859e-01
+24          Turkey  5.000000e+00 -1.666667e+00
+25  United Kingdom  1.000000e+00  1.333333e+00
+26   United States  2.828774e+00  3.528544e-01, 'Correlation between slope and intercept for Escherichia coli with Amikacin in 2015: -0.1108 (p-value: 0.5902)\n']

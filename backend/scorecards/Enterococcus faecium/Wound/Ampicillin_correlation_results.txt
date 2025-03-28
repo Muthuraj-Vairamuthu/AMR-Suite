@@ -1,0 +1,31 @@
+[{'2014'},           Country  intercept     slope
+1  Czech Republic  91.111111 -5.833333
+2         Germany  91.606449 -0.705128
+3           Italy  87.111111  3.555556
+4           Spain  98.541667  0.833333
+5   United States  84.363095  3.327381, 'Correlation between slope and intercept for Enterococcus faecium with Ampicillin in 2014: -0.3667 (p-value: 0.5438)\n', {'2016'},           Country  intercept     slope
+1  Czech Republic  83.611111  2.222222
+2         Germany  90.720058  1.759740
+3           Italy  91.333333 -2.666667
+4           Spain  98.000000 -2.666667
+5   United States  89.901515  1.249459, 'Correlation between slope and intercept for Enterococcus faecium with Ampicillin in 2016: -0.7588 (p-value: 0.1369)\n', {'2017'},           Country  intercept     slope
+1  Czech Republic  84.444444  7.500000
+2         Germany  92.470418  1.083694
+3           Italy  89.333333 -2.000000
+4           Spain  96.000000 -2.000000
+5   United States  92.107684 -2.708333, 'Correlation between slope and intercept for Enterococcus faecium with Ampicillin in 2017: -0.7803 (p-value: 0.1195)\n', {'2019'},           Country  intercept     slope
+1  Czech Republic  96.666667  2.500000
+2         Germany  95.000000  0.952381
+3           Italy  87.238095  0.761905
+4           Spain  95.333333  2.666667
+5   United States  84.377706 -4.591450, 'Correlation between slope and intercept for Enterococcus faecium with Ampicillin in 2019: 0.8485 (p-value: 0.0692)\n', {'2018'},           Country  intercept     slope
+1  Czech Republic  90.833333  5.833333
+2         Germany  93.634921  1.380952
+3           Italy  86.857143  0.571429
+4           Spain  94.000000  2.000000
+5   United States  89.499459 -5.730519, 'Correlation between slope and intercept for Enterococcus faecium with Ampicillin in 2018: 0.3026 (p-value: 0.6206)\n', {'2015'},           Country  intercept     slope
+1  Czech Republic  87.500000 -4.166667
+2         Germany  91.073094  0.152070
+3           Italy  89.111111  0.666667
+4           Spain  98.500000 -1.375000
+5   United States  86.833874  4.400433, 'Correlation between slope and intercept for Enterococcus faecium with Ampicillin in 2015: -0.2624 (p-value: 0.6698)\n']

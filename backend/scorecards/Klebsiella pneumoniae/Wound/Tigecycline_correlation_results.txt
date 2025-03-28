@@ -1,0 +1,151 @@
+[{'2014'},            Country     intercept         slope
+1        Argentina  1.250000e+00  1.666667e+00
+2        Australia  0.000000e+00  0.000000e+00
+3          Belgium  0.000000e+00  0.000000e+00
+4           Brazil  0.000000e+00  0.000000e+00
+5           Canada  1.111111e+00  1.481481e+00
+6            China  0.000000e+00  0.000000e+00
+7         Colombia -9.992007e-16  1.026956e-15
+8   Czech Republic  9.992007e-16  0.000000e+00
+9           France  0.000000e+00  0.000000e+00
+10         Germany  0.000000e+00  1.026956e-15
+11          Greece  1.944444e+00 -1.111111e+00
+12          Israel  0.000000e+00  0.000000e+00
+13           Italy  0.000000e+00  0.000000e+00
+14          Kuwait  2.564103e-01  7.692308e-01
+15          Mexico  0.000000e+00  0.000000e+00
+16     Netherlands  0.000000e+00  0.000000e+00
+17     Philippines  0.000000e+00  0.000000e+00
+18          Poland  0.000000e+00  0.000000e+00
+19        Portugal  7.575758e-01  0.000000e+00
+20    South Africa  0.000000e+00  0.000000e+00
+21           Spain  6.666667e-01 -2.222222e-01
+22          Taiwan  1.388889e-01  4.166667e-01
+23        Thailand  0.000000e+00  0.000000e+00
+24          Turkey  9.090909e-01  1.212121e+00
+25   United States  0.000000e+00  0.000000e+00, 'Correlation between slope and intercept for Klebsiella pneumoniae with Tigecycline in 2014: 0.2234 (p-value: 0.2830)\n', {'2017'},            Country     intercept         slope
+1        Argentina  2.916667e+00 -1.666667e+00
+2        Australia  0.000000e+00  0.000000e+00
+3          Belgium -1.998401e-15  9.992007e-16
+4           Brazil -1.998401e-15  0.000000e+00
+5           Canada  2.592593e+00 -1.481481e+00
+6            China  1.851852e-01  5.555556e-01
+7         Colombia -1.998401e-15  1.998401e-15
+8   Czech Republic  1.998401e-15 -9.992007e-16
+9           France -9.992007e-16  0.000000e+00
+10         Germany  6.451613e-01  3.225806e-01
+11          Greece  0.000000e+00  0.000000e+00
+12          Israel -1.998401e-15  0.000000e+00
+13           Italy  9.992007e-16  0.000000e+00
+14          Kuwait  2.307692e+00 -7.692308e-01
+15          Mexico  5.555556e-01  1.666667e+00
+16     Netherlands -9.992007e-16  0.000000e+00
+17     Philippines  0.000000e+00  0.000000e+00
+18          Poland  0.000000e+00  0.000000e+00
+19        Portugal  3.030303e-01 -2.272727e-01
+20    South Africa -9.992007e-16  0.000000e+00
+21           Spain  0.000000e+00  0.000000e+00
+22          Taiwan  3.250000e+00  2.250000e+00
+23        Thailand -9.992007e-16  9.992007e-16
+24          Turkey  2.121212e+00 -1.212121e+00
+25   United States  0.000000e+00  0.000000e+00, 'Correlation between slope and intercept for Klebsiella pneumoniae with Tigecycline in 2017: -0.2058 (p-value: 0.3237)\n', {'2016'},            Country     intercept         slope
+1        Argentina  3.750000e+00 -1.250000e+00
+2        Australia  0.000000e+00  1.006140e-16
+3          Belgium -9.992007e-16  8.014422e-16
+4           Brazil  0.000000e+00  1.006140e-16
+5           Canada  3.333333e+00 -1.111111e+00
+6            China -9.992007e-16 -1.977585e-16
+7         Colombia -2.997602e-15  1.602884e-15
+8   Czech Republic  1.998401e-15 -6.973588e-16
+9           France  0.000000e+00 -1.977585e-16
+10         Germany  3.225806e-01  4.301075e-01
+11          Greece  0.000000e+00 -4.996004e-16
+12          Israel -9.992007e-16  0.000000e+00
+13           Italy  1.998401e-15 -6.973588e-16
+14          Kuwait  1.538462e+00  7.692308e-01
+15          Mexico -9.992007e-16  4.024558e-16
+16     Netherlands  0.000000e+00 -2.983724e-16
+17     Philippines  0.000000e+00 -1.977585e-16
+18          Poland  9.992007e-16 -1.977585e-16
+19        Portugal  5.303030e-01 -3.030303e-01
+20    South Africa  0.000000e+00  1.006140e-16
+21           Spain  2.962963e-01 -2.222222e-01
+22          Taiwan  1.500000e+00  2.416667e+00
+23        Thailand  0.000000e+00  9.020562e-16
+24          Turkey  2.727273e+00 -9.090909e-01
+25   United States  0.000000e+00  9.020562e-16, 'Correlation between slope and intercept for Klebsiella pneumoniae with Tigecycline in 2016: -0.3436 (p-value: 0.0926)\n', {'2018'},            Country     intercept         slope
+1        Argentina  1.666667e+00 -1.250000e+00
+2        Australia  9.992007e-16  0.000000e+00
+3          Belgium -9.992007e-16  0.000000e+00
+4           Brazil  0.000000e+00  0.000000e+00
+5           Canada  1.481481e+00 -1.111111e+00
+6            China  5.555556e-01  7.407407e-01
+7         Colombia -9.992007e-16  9.992007e-16
+8   Czech Republic  9.992007e-16  9.992007e-16
+9           France  0.000000e+00  9.992007e-16
+10         Germany  9.677419e-01 -3.225806e-01
+11          Greece  0.000000e+00  0.000000e+00
+12          Israel  9.992007e-16 -1.013079e-15
+13           Italy  9.992007e-16  0.000000e+00
+14          Kuwait  1.794872e+00 -1.025641e+00
+15          Mexico  1.666667e+00  2.222222e+00
+16     Netherlands  0.000000e+00  0.000000e+00
+17     Philippines  1.754386e-01  5.263158e-01
+18          Poland  9.992007e-16  0.000000e+00
+19        Portugal  0.000000e+00  9.992007e-16
+20    South Africa  0.000000e+00  0.000000e+00
+21           Spain  0.000000e+00  0.000000e+00
+22          Taiwan  4.972222e+00  1.444444e+00
+23        Thailand  0.000000e+00  9.992007e-16
+24          Turkey  1.212121e+00 -9.090909e-01
+25   United States  9.992007e-16  9.992007e-16, 'Correlation between slope and intercept for Klebsiella pneumoniae with Tigecycline in 2018: 0.2168 (p-value: 0.2979)\n', {'2019'},            Country     intercept         slope
+1        Argentina  9.992007e-16  0.000000e+00
+2        Australia  9.992007e-16 -4.024558e-16
+3          Belgium -9.992007e-16 -1.040834e-16
+4           Brazil  0.000000e+00  0.000000e+00
+5           Canada  2.053913e-15 -8.049117e-16
+6            China  1.111111e+00  5.555556e-01
+7         Colombia  9.992007e-16 -3.053113e-16
+8   Czech Republic -9.992007e-16  8.951173e-16
+9           France  0.000000e+00 -1.040834e-16
+10         Germany  7.526882e-01 -4.301075e-01
+11          Greece  9.992007e-16 -3.053113e-16
+12          Israel  2.053913e-15 -7.008283e-16
+13           Italy  2.053913e-15 -1.006140e-15
+14          Kuwait  1.025641e+00 -7.692308e-01
+15          Mexico  3.333333e+00  1.666667e+00
+16     Netherlands  0.000000e+00 -1.040834e-16
+17     Philippines  5.263158e-01  7.017544e-01
+18          Poland  9.992007e-16 -4.024558e-16
+19        Portugal  9.992007e-16 -2.012279e-16
+20    South Africa  9.992007e-16 -4.024558e-16
+21           Spain  9.992007e-16  0.000000e+00
+22          Taiwan  7.222222e+00 -4.166667e-01
+23        Thailand  0.000000e+00  1.942890e-16
+24          Turkey -9.992007e-16  5.967449e-16
+25   United States  0.000000e+00 -1.040834e-16, 'Correlation between slope and intercept for Klebsiella pneumoniae with Tigecycline in 2019: 0.1045 (p-value: 0.6191)\n', {'2015'},            Country     intercept         slope
+1        Argentina  2.500000e+00  1.250000e+00
+2        Australia  0.000000e+00  0.000000e+00
+3          Belgium -1.998401e-15  9.992007e-16
+4           Brazil  0.000000e+00  0.000000e+00
+5           Canada  2.222222e+00  1.111111e+00
+6            China -9.992007e-16  0.000000e+00
+7         Colombia -2.997602e-15  9.992007e-16
+8   Czech Republic  9.992007e-16  0.000000e+00
+9           France -1.998401e-15  0.000000e+00
+10         Germany  1.075269e-01  3.225806e-01
+11          Greece  1.111111e+00 -8.333333e-01
+12          Israel -9.992007e-16  0.000000e+00
+13           Italy  0.000000e+00  0.000000e+00
+14          Kuwait  7.692308e-01  1.025641e+00
+15          Mexico -9.992007e-16  0.000000e+00
+16     Netherlands  0.000000e+00  0.000000e+00
+17     Philippines  0.000000e+00  0.000000e+00
+18          Poland  0.000000e+00  0.000000e+00
+19        Portugal  6.818182e-01 -2.272727e-01
+20    South Africa -9.992007e-16  0.000000e+00
+21           Spain  5.185185e-01 -2.962963e-01
+22          Taiwan  4.166667e-01  5.555556e-01
+23        Thailand  0.000000e+00  0.000000e+00
+24          Turkey  1.818182e+00  9.090909e-01
+25   United States  0.000000e+00  0.000000e+00, 'Correlation between slope and intercept for Klebsiella pneumoniae with Tigecycline in 2015: 0.6593 (p-value: 0.0003)\n']

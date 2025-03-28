@@ -1,0 +1,31 @@
+[{'2015'},            Country     intercept         slope
+1          Belgium  0.000000e+00 -1.021405e-14
+2           Brazil -1.065814e-14  0.000000e+00
+3           Canada  0.000000e+00  0.000000e+00
+4            Chile  1.010101e+00 -1.515152e+00
+5          Croatia  0.000000e+00  0.000000e+00
+6           France  3.111111e+00 -4.666667e+00
+7          Germany  5.189255e+00 -6.410256e-01
+8           Greece  1.555556e+01 -3.333333e+00
+9        Hong Kong  1.005291e+01 -2.380952e+00
+10           Italy  3.098291e+00  1.282051e+00
+11           Spain  8.280423e+00 -2.777778e+00
+12     Switzerland  9.523810e+00  0.000000e+00
+13          Taiwan  7.407407e+00 -1.111111e+01
+14  United Kingdom  0.000000e+00  0.000000e+00
+15   United States  1.277850e+01 -4.285714e+00, 'Correlation between slope and intercept for Enterococcus faecium with Minocycline in 2015: -0.4499 (p-value: 0.0924)\n', {'2014'},            Country     intercept         slope
+1          Belgium -1.953993e-14  0.000000e+00
+2           Brazil  1.953993e-14 -1.021405e-14
+3           Canada  1.953993e-14 -1.998401e-14
+4            Chile  2.121212e+00 -1.212121e+00
+5          Croatia -1.065814e-14  0.000000e+00
+6           France  6.533333e+00 -3.733333e+00
+7          Germany  5.659341e+00 -5.128205e-01
+8           Greece  1.800000e+01 -2.666667e+00
+9        Hong Kong  1.179894e+01 -1.904762e+00
+10           Italy  2.158120e+00  1.025641e+00
+11           Spain  1.031746e+01 -2.222222e+00
+12     Switzerland  9.523810e+00 -1.021405e-14
+13          Taiwan  1.555556e+01 -8.888889e+00
+14  United Kingdom  1.065814e-14 -1.021405e-14
+15   United States  1.592136e+01 -3.428571e+00, 'Correlation between slope and intercept for Enterococcus faecium with Minocycline in 2014: -0.7039 (p-value: 0.0034)\n']

@@ -1,0 +1,175 @@
+[{'2018'},            Country     intercept         slope
+1        Argentina  9.714451e-17  0.000000e+00
+2        Australia  0.000000e+00  0.000000e+00
+3          Belgium  4.347826e-01  2.173913e-01
+4           Brazil  0.000000e+00  0.000000e+00
+5            Chile -1.040834e-16  9.999055e-17
+6            China  0.000000e+00  9.999055e-17
+7         Colombia -1.040834e-16  0.000000e+00
+8   Czech Republic  0.000000e+00  9.999055e-17
+9           France  9.714451e-17 -1.000177e-16
+10         Germany -2.983724e-16  9.999055e-17
+11          Greece  9.714451e-17  0.000000e+00
+12         Hungary  9.714451e-17  0.000000e+00
+13          Israel  1.639344e-01  2.185792e-01
+14           Italy -1.040834e-16  9.999055e-17
+15    Korea, South -1.040834e-16  9.999055e-17
+16          Kuwait  9.714451e-17  9.999055e-17
+17          Mexico  9.714451e-17  0.000000e+00
+18     Netherlands  0.000000e+00  9.999055e-17
+19     Philippines  0.000000e+00  0.000000e+00
+20          Poland  0.000000e+00  9.999055e-17
+21        Portugal  5.747126e-02  1.724138e-01
+22         Romania -1.040834e-16  9.999055e-17
+23    South Africa  0.000000e+00  0.000000e+00
+24           Spain -2.983724e-16  9.999055e-17
+25          Taiwan  9.714451e-17  0.000000e+00
+26        Thailand  2.351190e+00 -9.821429e-01
+27          Turkey  9.714451e-17 -1.000177e-16
+28  United Kingdom -6.036838e-16  5.000069e-16
+29       Venezuela  0.000000e+00 -1.000177e-16, 'Correlation between slope and intercept for Staphylococcus aureus with Ceftaroline in 2018: -0.8774 (p-value: 0.0000)\n', {'2019'},            Country     intercept         slope
+1        Argentina -2.983724e-16  9.974660e-17
+2        Australia  0.000000e+00  9.974660e-17
+3          Belgium  7.246377e-01 -1.006140e-16
+4           Brazil  0.000000e+00  0.000000e+00
+5            Chile  4.996004e-16 -4.007211e-16
+6            China  1.040834e-16  0.000000e+00
+7         Colombia  0.000000e+00  0.000000e+00
+8   Czech Republic  0.000000e+00  0.000000e+00
+9           France  1.040834e-16  0.000000e+00
+10         Germany -2.012279e-16  9.974660e-17
+11          Greece -9.714451e-17  0.000000e+00
+12         Hungary  2.012279e-16  0.000000e+00
+13          Israel  3.278689e-01  1.639344e-01
+14           Italy  0.000000e+00  0.000000e+00
+15    Korea, South  1.040834e-16  0.000000e+00
+16          Kuwait  0.000000e+00  0.000000e+00
+17          Mexico  1.040834e-16  0.000000e+00
+18     Netherlands  0.000000e+00  9.974660e-17
+19     Philippines  0.000000e+00  0.000000e+00
+20          Poland  1.040834e-16 -1.006140e-16
+21        Portugal  1.724138e-01  2.298851e-01
+22         Romania  0.000000e+00  0.000000e+00
+23    South Africa  0.000000e+00  0.000000e+00
+24           Spain  1.040834e-16  0.000000e+00
+25          Taiwan  0.000000e+00  0.000000e+00
+26        Thailand  1.458333e+00 -8.333333e-01
+27          Turkey  0.000000e+00  0.000000e+00
+28  United Kingdom -4.996004e-16  1.994932e-16
+29       Venezuela -9.714451e-17  0.000000e+00, 'Correlation between slope and intercept for Staphylococcus aureus with Ceftaroline in 2019: -0.7743 (p-value: 0.0000)\n', {'2015'},            Country     intercept         slope
+1        Argentina  9.714451e-17  0.000000e+00
+2        Australia  0.000000e+00  1.006140e-16
+3          Belgium -1.006140e-16  0.000000e+00
+4           Brazil -2.012279e-16  1.006140e-16
+5            Chile -1.006140e-16  0.000000e+00
+6            China -1.006140e-16  0.000000e+00
+7         Colombia -1.006140e-16  0.000000e+00
+8   Czech Republic  0.000000e+00  0.000000e+00
+9           France  0.000000e+00 -1.006140e-16
+10         Germany -1.006140e-16  0.000000e+00
+11          Greece  0.000000e+00  0.000000e+00
+12         Hungary  0.000000e+00  0.000000e+00
+13          Israel -1.006140e-16  0.000000e+00
+14           Italy  0.000000e+00  0.000000e+00
+15    Korea, South  0.000000e+00  0.000000e+00
+16          Kuwait  0.000000e+00  0.000000e+00
+17          Mexico  0.000000e+00  0.000000e+00
+18     Netherlands -1.006140e-16  0.000000e+00
+19     Philippines -1.006140e-16  0.000000e+00
+20          Poland  0.000000e+00  0.000000e+00
+21        Portugal -1.006140e-16  0.000000e+00
+22         Romania  0.000000e+00  0.000000e+00
+23    South Africa -1.006140e-16  0.000000e+00
+24           Spain  2.983724e-16 -1.006140e-16
+25          Taiwan -1.006140e-16  0.000000e+00
+26        Thailand  9.226190e-01  9.821429e-01
+27          Turkey -1.006140e-16  0.000000e+00
+28  United Kingdom -3.018419e-16  3.018419e-16
+29       Venezuela -1.006140e-16  1.006140e-16, 'Correlation between slope and intercept for Staphylococcus aureus with Ceftaroline in 2015: 1.0000 (p-value: 0.0000)\n', {'2014'},            Country     intercept         slope
+1        Argentina  0.000000e+00  0.000000e+00
+2        Australia -1.006140e-16  9.887924e-17
+3          Belgium  0.000000e+00  0.000000e+00
+4           Brazil  0.000000e+00  0.000000e+00
+5            Chile  0.000000e+00  0.000000e+00
+6            China  0.000000e+00  0.000000e+00
+7         Colombia  0.000000e+00  0.000000e+00
+8   Czech Republic  0.000000e+00  0.000000e+00
+9           France  0.000000e+00  0.000000e+00
+10         Germany  0.000000e+00  0.000000e+00
+11          Greece  9.887924e-17  0.000000e+00
+12         Hungary  0.000000e+00  0.000000e+00
+13          Israel  0.000000e+00  0.000000e+00
+14           Italy  0.000000e+00  0.000000e+00
+15    Korea, South  0.000000e+00  0.000000e+00
+16          Kuwait  0.000000e+00  0.000000e+00
+17          Mexico  0.000000e+00  0.000000e+00
+18     Netherlands  0.000000e+00  0.000000e+00
+19     Philippines  0.000000e+00  0.000000e+00
+20          Poland  0.000000e+00  0.000000e+00
+21        Portugal  0.000000e+00  0.000000e+00
+22         Romania -1.006140e-16  0.000000e+00
+23    South Africa  0.000000e+00  0.000000e+00
+24           Spain  1.994932e-16 -1.006140e-16
+25          Taiwan  0.000000e+00  0.000000e+00
+26        Thailand  3.571429e-01  4.761905e-01
+27          Turkey  0.000000e+00  9.887924e-17
+28  United Kingdom  9.887924e-17  0.000000e+00
+29       Venezuela  9.887924e-17  0.000000e+00, 'Correlation between slope and intercept for Staphylococcus aureus with Ceftaroline in 2014: 1.0000 (p-value: 0.0000)\n', {'2017'},            Country     intercept         slope
+1        Argentina  2.012279e-16  9.999055e-17
+2        Australia -2.012279e-16  1.999811e-16
+3          Belgium  2.173913e-01  2.898551e-01
+4           Brazil -9.714451e-17  9.999055e-17
+5            Chile  1.040834e-16 -1.000177e-16
+6            China  0.000000e+00  9.999055e-17
+7         Colombia -9.714451e-17  0.000000e+00
+8   Czech Republic  1.040834e-16  0.000000e+00
+9           France  0.000000e+00 -1.000177e-16
+10         Germany -2.983724e-16  9.999055e-17
+11          Greece  0.000000e+00  0.000000e+00
+12         Hungary  1.040834e-16  0.000000e+00
+13          Israel  5.464481e-02  1.639344e-01
+14           Italy -9.714451e-17  0.000000e+00
+15    Korea, South -9.714451e-17  0.000000e+00
+16          Kuwait  1.040834e-16  0.000000e+00
+17          Mexico -9.714451e-17  0.000000e+00
+18     Netherlands -9.714451e-17  9.999055e-17
+19     Philippines -9.714451e-17  0.000000e+00
+20          Poland  0.000000e+00  0.000000e+00
+21        Portugal  1.040834e-16 -1.000177e-16
+22         Romania  1.040834e-16  0.000000e+00
+23    South Africa  1.040834e-16  0.000000e+00
+24           Spain  2.012279e-16  0.000000e+00
+25          Taiwan -9.714451e-17  0.000000e+00
+26        Thailand  2.083333e+00  1.488095e-01
+27          Turkey  1.040834e-16 -1.000177e-16
+28  United Kingdom -5.967449e-16  3.999893e-16
+29       Venezuela -9.714451e-17  0.000000e+00, 'Correlation between slope and intercept for Staphylococcus aureus with Ceftaroline in 2017: 0.4682 (p-value: 0.0104)\n', {'2016'},            Country     intercept         slope
+1        Argentina  0.000000e+00  0.000000e+00
+2        Australia  9.714451e-17  1.001803e-16
+3          Belgium  7.246377e-02  2.173913e-01
+4           Brazil -1.040834e-16  1.001803e-16
+5            Chile -1.040834e-16 -9.996344e-17
+6            China  0.000000e+00  0.000000e+00
+7         Colombia  0.000000e+00 -9.996344e-17
+8   Czech Republic  9.714451e-17  0.000000e+00
+9           France  9.714451e-17 -9.996344e-17
+10         Germany -2.012279e-16  0.000000e+00
+11          Greece  9.714451e-17  0.000000e+00
+12         Hungary  9.714451e-17 -9.996344e-17
+13          Israel -2.012279e-16  1.001803e-16
+14           Italy  9.714451e-17  0.000000e+00
+15    Korea, South -1.040834e-16  0.000000e+00
+16          Kuwait  0.000000e+00  0.000000e+00
+17          Mexico  0.000000e+00  0.000000e+00
+18     Netherlands -2.012279e-16  0.000000e+00
+19     Philippines -1.040834e-16  0.000000e+00
+20          Poland  0.000000e+00 -9.996344e-17
+21        Portugal  0.000000e+00 -9.996344e-17
+22         Romania  0.000000e+00 -9.996344e-17
+23    South Africa  0.000000e+00  0.000000e+00
+24           Spain  9.714451e-17  0.000000e+00
+25          Taiwan  0.000000e+00  0.000000e+00
+26        Thailand  1.696429e+00  4.761905e-01
+27          Turkey  0.000000e+00 -9.996344e-17
+28  United Kingdom -4.996004e-16  3.001072e-16
+29       Venezuela -1.040834e-16 -9.996344e-17, 'Correlation between slope and intercept for Staphylococcus aureus with Ceftaroline in 2016: 0.9243 (p-value: 0.0000)\n']

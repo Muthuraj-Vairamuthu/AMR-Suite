@@ -1,0 +1,1365 @@
+[
+    {
+        "name": "Australia",
+        "years": [
+            {
+                "year": 2016,
+                "median_slope": -1.0408340855860843e-16,
+                "median_intercept": -9.71445146547012e-17,
+                "x": 1.942890293094024e-16,
+                "y": -1.0408340855860843e-16
+            },
+            {
+                "year": 2017,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 9.71445146547012e-17,
+                "y": 0.0
+            },
+            {
+                "year": 2014,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 0.0,
+                "y": 1.0061396160665481e-16
+            },
+            {
+                "year": 2015,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "year": 2018,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "year": 2019,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 1.0408340855860843e-16,
+                "y": 9.8879238130678e-17
+            }
+        ]
+    },
+    {
+        "name": "Belgium",
+        "years": [
+            {
+                "year": 2016,
+                "median_slope": -1.0408340855860843e-16,
+                "median_intercept": -9.71445146547012e-17,
+                "x": 0.2713178294573647,
+                "y": -0.1550387596899222
+            },
+            {
+                "year": 2017,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 0.1550387596899225,
+                "y": -0.11627906976744211
+            },
+            {
+                "year": 2014,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 0.387596899224806,
+                "y": 0.0
+            },
+            {
+                "year": 2015,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 0.348837209302325,
+                "y": -0.11627906976744179
+            },
+            {
+                "year": 2018,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "year": 2019,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 0.0,
+                "y": 0.0
+            }
+        ]
+    },
+    {
+        "name": "Brazil",
+        "years": [
+            {
+                "year": 2016,
+                "median_slope": -1.0408340855860843e-16,
+                "median_intercept": -9.71445146547012e-17,
+                "x": -1.942890293094024e-16,
+                "y": 9.71445146547012e-17
+            },
+            {
+                "year": 2017,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": -9.71445146547012e-17,
+                "y": 0.0
+            },
+            {
+                "year": 2014,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 0.0,
+                "y": 1.0061396160665481e-16
+            },
+            {
+                "year": 2015,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 0.0,
+                "y": 1.0061396160665481e-16
+            },
+            {
+                "year": 2018,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": -9.71445146547012e-17,
+                "y": 9.974659986866641e-17
+            },
+            {
+                "year": 2019,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 0.0,
+                "y": 9.8879238130678e-17
+            }
+        ]
+    },
+    {
+        "name": "Canada",
+        "years": [
+            {
+                "year": 2016,
+                "median_slope": -1.0408340855860843e-16,
+                "median_intercept": -9.71445146547012e-17,
+                "x": 9.71445146547012e-17,
+                "y": -2.0122792321330962e-16
+            },
+            {
+                "year": 2017,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 2.0816681711721685e-16,
+                "y": -1.0061396160665481e-16
+            },
+            {
+                "year": 2014,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 9.992007221626409e-16,
+                "y": -3.0010716134398763e-16
+            },
+            {
+                "year": 2015,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 0.0,
+                "y": -2.0122792321330962e-16
+            },
+            {
+                "year": 2018,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": -9.71445146547012e-17,
+                "y": 0.0
+            },
+            {
+                "year": 2019,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 0.0,
+                "y": 0.0
+            }
+        ]
+    },
+    {
+        "name": "Chile",
+        "years": [
+            {
+                "year": 2016,
+                "median_slope": -1.0408340855860843e-16,
+                "median_intercept": -9.71445146547012e-17,
+                "x": -9.71445146547012e-17,
+                "y": -1.0408340855860843e-16
+            },
+            {
+                "year": 2017,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": -9.71445146547012e-17,
+                "y": 0.0
+            },
+            {
+                "year": 2014,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "year": 2015,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "year": 2018,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": -9.71445146547012e-17,
+                "y": 0.0
+            },
+            {
+                "year": 2019,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": -9.71445146547012e-17,
+                "y": 0.0
+            }
+        ]
+    },
+    {
+        "name": "China",
+        "years": [
+            {
+                "year": 2016,
+                "median_slope": -1.0408340855860843e-16,
+                "median_intercept": -9.71445146547012e-17,
+                "x": 0.089058524173028,
+                "y": -0.0508905852417304
+            },
+            {
+                "year": 2017,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 0.050890585241730305,
+                "y": -0.0381679389312977
+            },
+            {
+                "year": 2014,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 0.261326079962564,
+                "y": -0.0766283524904216
+            },
+            {
+                "year": 2015,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 0.1911321692843142,
+                "y": -0.0956392032991138
+            },
+            {
+                "year": 2018,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "year": 2019,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 0.0,
+                "y": 0.0
+            }
+        ]
+    },
+    {
+        "name": "Colombia",
+        "years": [
+            {
+                "year": 2016,
+                "median_slope": -1.0408340855860843e-16,
+                "median_intercept": -9.71445146547012e-17,
+                "x": -1.942890293094024e-16,
+                "y": -1.0408340855860843e-16
+            },
+            {
+                "year": 2017,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": -1.942890293094024e-16,
+                "y": -1.0061396160665481e-16
+            },
+            {
+                "year": 2014,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 0.0,
+                "y": -9.974659986866641e-17
+            },
+            {
+                "year": 2015,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 0.0,
+                "y": -1.0061396160665481e-16
+            },
+            {
+                "year": 2018,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": -9.71445146547012e-17,
+                "y": 0.0
+            },
+            {
+                "year": 2019,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 0.0,
+                "y": 0.0
+            }
+        ]
+    },
+    {
+        "name": "Croatia",
+        "years": [
+            {
+                "year": 2016,
+                "median_slope": -1.0408340855860843e-16,
+                "median_intercept": -9.71445146547012e-17,
+                "x": 3.0531133177191805e-16,
+                "y": -3.0531133177191805e-16
+            },
+            {
+                "year": 2017,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 8.049116928532385e-16,
+                "y": 2.0122792321330962e-16
+            },
+            {
+                "year": 2014,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 9.992007221626409e-16,
+                "y": 0.0
+            },
+            {
+                "year": 2015,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 9.992007221626409e-16,
+                "y": -2.983724378680108e-16
+            },
+            {
+                "year": 2018,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 2.983724378680108e-16,
+                "y": 9.974659986866641e-17
+            },
+            {
+                "year": 2019,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 1.0408340855860843e-16,
+                "y": 0.0
+            }
+        ]
+    },
+    {
+        "name": "Czech Republic",
+        "years": [
+            {
+                "year": 2016,
+                "median_slope": -1.0408340855860843e-16,
+                "median_intercept": -9.71445146547012e-17,
+                "x": 9.71445146547012e-17,
+                "y": -4.0245584642661925e-16
+            },
+            {
+                "year": 2017,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 9.71445146547012e-17,
+                "y": -1.97758476261356e-16
+            },
+            {
+                "year": 2014,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 0.0,
+                "y": -1.9949319973733282e-16
+            },
+            {
+                "year": 2015,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 0.0,
+                "y": -2.0122792321330962e-16
+            },
+            {
+                "year": 2018,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "year": 2019,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 0.0,
+                "y": 0.0
+            }
+        ]
+    },
+    {
+        "name": "France",
+        "years": [
+            {
+                "year": 2016,
+                "median_slope": -1.0408340855860843e-16,
+                "median_intercept": -9.71445146547012e-17,
+                "x": 1.3247863247863296,
+                "y": -0.6247456247456252
+            },
+            {
+                "year": 2017,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 0.8716592049925392,
+                "y": -0.576583909917242
+            },
+            {
+                "year": 2014,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 1.28408628408629,
+                "y": 0.2469135802469135
+            },
+            {
+                "year": 2015,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 1.35938135938136,
+                "y": -0.144485144485144
+            },
+            {
+                "year": 2018,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 0.24691358024691362,
+                "y": -0.1851851851851847
+            },
+            {
+                "year": 2019,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": -9.71445146547012e-17,
+                "y": 9.8879238130678e-17
+            }
+        ]
+    },
+    {
+        "name": "Germany",
+        "years": [
+            {
+                "year": 2016,
+                "median_slope": -1.0408340855860843e-16,
+                "median_intercept": -9.71445146547012e-17,
+                "x": 3.0531133177191805e-16,
+                "y": -2.0122792321330962e-16
+            },
+            {
+                "year": 2017,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 2.0816681711721685e-16,
+                "y": -1.0061396160665481e-16
+            },
+            {
+                "year": 2014,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 9.992007221626409e-16,
+                "y": -1.9949319973733282e-16
+            },
+            {
+                "year": 2015,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 0.0,
+                "y": -2.0122792321330962e-16
+            },
+            {
+                "year": 2018,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 9.71445146547012e-17,
+                "y": 0.0
+            },
+            {
+                "year": 2019,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 2.0122792321330962e-16,
+                "y": 0.0
+            }
+        ]
+    },
+    {
+        "name": "Greece",
+        "years": [
+            {
+                "year": 2016,
+                "median_slope": -1.0408340855860843e-16,
+                "median_intercept": -9.71445146547012e-17,
+                "x": -2.4980018054066022e-15,
+                "y": 1.797173521111972e-15
+            },
+            {
+                "year": 2017,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": -1.096345236817342e-15,
+                "y": 8.014422459012849e-16
+            },
+            {
+                "year": 2014,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": -1.9984014443252818e-15,
+                "y": 1.5005358067199381e-15
+            },
+            {
+                "year": 2015,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": -1.9984014443252818e-15,
+                "y": 1.700029006457271e-15
+            },
+            {
+                "year": 2018,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": -4.0245584642661925e-16,
+                "y": 2.992397996059992e-16
+            },
+            {
+                "year": 2019,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 2.0122792321330962e-16,
+                "y": 0.0
+            }
+        ]
+    },
+    {
+        "name": "Ireland",
+        "years": [
+            {
+                "year": 2016,
+                "median_slope": -1.0408340855860843e-16,
+                "median_intercept": -9.71445146547012e-17,
+                "x": -4.0245584642661925e-16,
+                "y": 9.71445146547012e-17
+            },
+            {
+                "year": 2017,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": -3.0531133177191805e-16,
+                "y": 1.0061396160665481e-16
+            },
+            {
+                "year": 2014,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 0.0,
+                "y": 1.0061396160665481e-16
+            },
+            {
+                "year": 2015,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": -9.992007221626409e-16,
+                "y": 2.0122792321330962e-16
+            },
+            {
+                "year": 2018,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": -9.71445146547012e-17,
+                "y": 9.974659986866641e-17
+            },
+            {
+                "year": 2019,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": -9.71445146547012e-17,
+                "y": 9.8879238130678e-17
+            }
+        ]
+    },
+    {
+        "name": "Israel",
+        "years": [
+            {
+                "year": 2016,
+                "median_slope": -1.0408340855860843e-16,
+                "median_intercept": -9.71445146547012e-17,
+                "x": -1.942890293094024e-16,
+                "y": 9.71445146547012e-17
+            },
+            {
+                "year": 2017,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": -9.71445146547012e-17,
+                "y": 0.0
+            },
+            {
+                "year": 2014,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 0.0,
+                "y": 1.0061396160665481e-16
+            },
+            {
+                "year": 2015,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 0.0,
+                "y": 1.0061396160665481e-16
+            },
+            {
+                "year": 2018,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": -9.71445146547012e-17,
+                "y": 9.974659986866641e-17
+            },
+            {
+                "year": 2019,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 0.0,
+                "y": 9.8879238130678e-17
+            }
+        ]
+    },
+    {
+        "name": "Italy",
+        "years": [
+            {
+                "year": 2016,
+                "median_slope": -1.0408340855860843e-16,
+                "median_intercept": -9.71445146547012e-17,
+                "x": -9.71445146547012e-17,
+                "y": -1.0408340855860843e-16
+            },
+            {
+                "year": 2017,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "year": 2014,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "year": 2015,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "year": 2018,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "year": 2019,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 1.0408340855860843e-16,
+                "y": 0.0
+            }
+        ]
+    },
+    {
+        "name": "Japan",
+        "years": [
+            {
+                "year": 2016,
+                "median_slope": -1.0408340855860843e-16,
+                "median_intercept": -9.71445146547012e-17,
+                "x": -9.71445146547012e-17,
+                "y": 0.0
+            },
+            {
+                "year": 2017,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "year": 2014,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 0.0,
+                "y": 1.0061396160665481e-16
+            },
+            {
+                "year": 2015,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "year": 2018,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 0.0,
+                "y": 9.974659986866641e-17
+            },
+            {
+                "year": 2019,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 0.0,
+                "y": 0.0
+            }
+        ]
+    },
+    {
+        "name": "Korea, South",
+        "years": [
+            {
+                "year": 2016,
+                "median_slope": -1.0408340855860843e-16,
+                "median_intercept": -9.71445146547012e-17,
+                "x": -9.71445146547012e-17,
+                "y": 0.0
+            },
+            {
+                "year": 2017,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "year": 2014,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 0.0,
+                "y": 1.0061396160665481e-16
+            },
+            {
+                "year": 2015,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "year": 2018,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 0.0,
+                "y": 9.974659986866641e-17
+            },
+            {
+                "year": 2019,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 0.0,
+                "y": 9.8879238130678e-17
+            }
+        ]
+    },
+    {
+        "name": "Kuwait",
+        "years": [
+            {
+                "year": 2016,
+                "median_slope": -1.0408340855860843e-16,
+                "median_intercept": -9.71445146547012e-17,
+                "x": -3.0531133177191805e-16,
+                "y": 0.0
+            },
+            {
+                "year": 2017,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": -1.942890293094024e-16,
+                "y": 0.0
+            },
+            {
+                "year": 2014,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 0.0,
+                "y": 1.0061396160665481e-16
+            },
+            {
+                "year": 2015,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "year": 2018,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": -9.71445146547012e-17,
+                "y": 9.974659986866641e-17
+            },
+            {
+                "year": 2019,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 0.0,
+                "y": 9.8879238130678e-17
+            }
+        ]
+    },
+    {
+        "name": "Netherlands",
+        "years": [
+            {
+                "year": 2016,
+                "median_slope": -1.0408340855860843e-16,
+                "median_intercept": -9.71445146547012e-17,
+                "x": -3.0531133177191805e-16,
+                "y": 0.0
+            },
+            {
+                "year": 2017,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": -9.71445146547012e-17,
+                "y": 0.0
+            },
+            {
+                "year": 2014,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 0.0,
+                "y": 1.0061396160665481e-16
+            },
+            {
+                "year": 2015,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 0.0,
+                "y": 1.0061396160665481e-16
+            },
+            {
+                "year": 2018,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": -9.71445146547012e-17,
+                "y": 9.974659986866641e-17
+            },
+            {
+                "year": 2019,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 0.0,
+                "y": 0.0
+            }
+        ]
+    },
+    {
+        "name": "Philippines",
+        "years": [
+            {
+                "year": 2016,
+                "median_slope": -1.0408340855860843e-16,
+                "median_intercept": -9.71445146547012e-17,
+                "x": -9.71445146547012e-17,
+                "y": -1.0408340855860843e-16
+            },
+            {
+                "year": 2017,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "year": 2014,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "year": 2015,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "year": 2018,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "year": 2019,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 0.0,
+                "y": 0.0
+            }
+        ]
+    },
+    {
+        "name": "Portugal",
+        "years": [
+            {
+                "year": 2016,
+                "median_slope": -1.0408340855860843e-16,
+                "median_intercept": -9.71445146547012e-17,
+                "x": -9.71445146547012e-17,
+                "y": -1.0408340855860843e-16
+            },
+            {
+                "year": 2017,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "year": 2014,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "year": 2015,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "year": 2018,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "year": 2019,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 0.0,
+                "y": 0.0
+            }
+        ]
+    },
+    {
+        "name": "South Africa",
+        "years": [
+            {
+                "year": 2016,
+                "median_slope": -1.0408340855860843e-16,
+                "median_intercept": -9.71445146547012e-17,
+                "x": -1.942890293094024e-16,
+                "y": 0.0
+            },
+            {
+                "year": 2017,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": -9.71445146547012e-17,
+                "y": 0.0
+            },
+            {
+                "year": 2014,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "year": 2015,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "year": 2018,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": -9.71445146547012e-17,
+                "y": 0.0
+            },
+            {
+                "year": 2019,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 0.0,
+                "y": 0.0
+            }
+        ]
+    },
+    {
+        "name": "Spain",
+        "years": [
+            {
+                "year": 2016,
+                "median_slope": -1.0408340855860843e-16,
+                "median_intercept": -9.71445146547012e-17,
+                "x": -1.942890293094024e-16,
+                "y": -1.0408340855860843e-16
+            },
+            {
+                "year": 2017,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": -9.71445146547012e-17,
+                "y": 0.0
+            },
+            {
+                "year": 2014,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "year": 2015,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "year": 2018,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 0.0606060606060607,
+                "y": 0.1818181818181823
+            },
+            {
+                "year": 2019,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 0.1818181818181822,
+                "y": 0.2424242424242427
+            }
+        ]
+    },
+    {
+        "name": "Switzerland",
+        "years": [
+            {
+                "year": 2016,
+                "median_slope": -1.0408340855860843e-16,
+                "median_intercept": -9.71445146547012e-17,
+                "x": -9.71445146547012e-17,
+                "y": -1.0408340855860843e-16
+            },
+            {
+                "year": 2017,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": -9.71445146547012e-17,
+                "y": 0.0
+            },
+            {
+                "year": 2014,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "year": 2015,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "year": 2018,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "year": 2019,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 0.0,
+                "y": 0.0
+            }
+        ]
+    },
+    {
+        "name": "Taiwan",
+        "years": [
+            {
+                "year": 2016,
+                "median_slope": -1.0408340855860843e-16,
+                "median_intercept": -9.71445146547012e-17,
+                "x": -1.942890293094024e-16,
+                "y": -1.0408340855860843e-16
+            },
+            {
+                "year": 2017,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": -9.71445146547012e-17,
+                "y": 0.0
+            },
+            {
+                "year": 2014,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "year": 2015,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "year": 2018,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": -9.71445146547012e-17,
+                "y": 9.974659986866641e-17
+            },
+            {
+                "year": 2019,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": -9.71445146547012e-17,
+                "y": 9.8879238130678e-17
+            }
+        ]
+    },
+    {
+        "name": "Thailand",
+        "years": [
+            {
+                "year": 2016,
+                "median_slope": -1.0408340855860843e-16,
+                "median_intercept": -9.71445146547012e-17,
+                "x": -1.942890293094024e-16,
+                "y": -1.0408340855860843e-16
+            },
+            {
+                "year": 2017,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": -9.71445146547012e-17,
+                "y": -1.0061396160665481e-16
+            },
+            {
+                "year": 2014,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "year": 2015,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "year": 2018,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": -9.71445146547012e-17,
+                "y": 0.0
+            },
+            {
+                "year": 2019,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 0.0,
+                "y": 0.0
+            }
+        ]
+    },
+    {
+        "name": "Turkey",
+        "years": [
+            {
+                "year": 2016,
+                "median_slope": -1.0408340855860843e-16,
+                "median_intercept": -9.71445146547012e-17,
+                "x": -9.71445146547012e-17,
+                "y": -1.0408340855860843e-16
+            },
+            {
+                "year": 2017,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "year": 2014,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "year": 2015,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "year": 2018,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "year": 2019,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 1.0408340855860843e-16,
+                "y": 9.8879238130678e-17
+            }
+        ]
+    },
+    {
+        "name": "United Kingdom",
+        "years": [
+            {
+                "year": 2016,
+                "median_slope": -1.0408340855860843e-16,
+                "median_intercept": -9.71445146547012e-17,
+                "x": -9.71445146547012e-17,
+                "y": -1.0408340855860843e-16
+            },
+            {
+                "year": 2017,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "year": 2014,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "year": 2015,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "year": 2018,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "year": 2019,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 0.0,
+                "y": 0.0
+            }
+        ]
+    },
+    {
+        "name": "United States",
+        "years": [
+            {
+                "year": 2016,
+                "median_slope": -1.0408340855860843e-16,
+                "median_intercept": -9.71445146547012e-17,
+                "x": 0.020833333333333204,
+                "y": 0.06249999999999999
+            },
+            {
+                "year": 2017,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 0.0625,
+                "y": 0.083333333333333
+            },
+            {
+                "year": 2014,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "year": 2015,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "year": 2018,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 0.125,
+                "y": 0.0625
+            },
+            {
+                "year": 2019,
+                "median_slope": 0.0,
+                "median_intercept": 0.0,
+                "x": 0.2083333333333332,
+                "y": 9.8879238130678e-17
+            }
+        ]
+    }
+]

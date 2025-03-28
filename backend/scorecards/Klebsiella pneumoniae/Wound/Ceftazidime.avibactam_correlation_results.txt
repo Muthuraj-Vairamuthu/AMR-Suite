@@ -1,0 +1,139 @@
+[{'2015'},            Country     intercept         slope
+1        Argentina  0.000000e+00 -1.998401e-15
+2        Australia  1.818182e+00  9.090909e-01
+3          Belgium  0.000000e+00 -9.992007e-16
+4           Brazil  0.000000e+00  9.992007e-16
+5            China  0.000000e+00  9.992007e-16
+6         Colombia -1.021405e-14  1.998401e-15
+7   Czech Republic  0.000000e+00  1.998401e-15
+8           France  0.000000e+00 -1.998401e-15
+9          Germany  1.176471e+00  5.882353e-01
+10          Greece  7.863248e+00 -1.562882e+00
+11          Israel  0.000000e+00  0.000000e+00
+12           Italy  2.536232e+00 -5.175983e-01
+13          Kuwait  2.000000e+00  1.000000e+00
+14          Mexico  3.157895e+00 -1.052632e+00
+15     Netherlands  0.000000e+00  0.000000e+00
+16     Philippines  5.000000e+00 -6.250000e-01
+17          Poland  5.882353e-01  7.843137e-01
+18        Portugal  0.000000e+00  9.992007e-16
+19    South Africa  4.887681e+00 -1.014493e-01
+20           Spain  1.111111e+00 -6.349206e-01
+21          Taiwan  0.000000e+00  0.000000e+00
+22        Thailand  8.204231e+00 -1.622522e+00
+23          Turkey  2.142857e+00 -7.142857e-01, 'Correlation between slope and intercept for Klebsiella pneumoniae with Ceftazidime.avibactam in 2015: -0.6738 (p-value: 0.0004)\n', {'2019'},            Country     intercept         slope
+1        Argentina  1.033333e+01  2.666667e+00
+2        Australia -1.065814e-14  9.992007e-15
+3          Belgium  0.000000e+00 -9.992007e-15
+4           Brazil  5.555556e+00  9.992007e-15
+5            China  1.111111e+00  5.555556e-01
+6         Colombia -3.019807e-14  0.000000e+00
+7   Czech Republic -1.953993e-14  9.992007e-15
+8           France  0.000000e+00 -9.992007e-15
+9          Germany  8.823529e-01  1.176471e+00
+10          Greece  1.428571e+01  7.142857e+00
+11          Israel -1.065814e-14  0.000000e+00
+12           Italy  4.464286e+00  1.736111e+00
+13          Kuwait  6.093190e+00  1.935484e+00
+14          Mexico  3.333333e+00  1.666667e+00
+15     Netherlands -1.065814e-14  0.000000e+00
+16     Philippines  9.427831e+00 -5.582137e-02
+17          Poland  2.450980e+00 -5.882353e-01
+18        Portugal  0.000000e+00  0.000000e+00
+19    South Africa  5.151515e+00 -6.439394e-01
+20           Spain  7.692308e-01  3.846154e-01
+21          Taiwan -1.065814e-14  0.000000e+00
+22        Thailand  1.111111e+01  0.000000e+00
+23          Turkey  1.428571e+00  1.904762e+00, 'Correlation between slope and intercept for Klebsiella pneumoniae with Ceftazidime.avibactam in 2019: 0.6069 (p-value: 0.0021)\n', {'2018'},            Country     intercept         slope
+1        Argentina  5.666667e+00  4.500000e+00
+2        Australia  1.212121e+00 -9.090909e-01
+3          Belgium  9.769963e-15  0.000000e+00
+4           Brazil  3.333333e+00  1.666667e+00
+5            China  5.555556e-01  7.407407e-01
+6         Colombia -2.042810e-14  0.000000e+00
+7   Czech Republic -1.065814e-14  9.769963e-15
+8           France  9.769963e-15 -1.021405e-14
+9          Germany  1.078431e+00  2.941176e-01
+10          Greece  8.624339e+00  8.412698e+00
+11          Israel -1.065814e-14  9.769963e-15
+12           Italy  2.911059e+00  1.946170e+00
+13          Kuwait  4.602151e+00  2.247312e+00
+14          Mexico  1.666667e+00  2.222222e+00
+15     Netherlands  0.000000e+00  0.000000e+00
+16     Philippines  7.334530e+00  1.738437e+00
+17          Poland  2.372549e+00 -2.843137e-01
+18        Portugal  0.000000e+00  0.000000e+00
+19    South Africa  4.886364e+00 -3.030303e-01
+20           Spain  3.846154e-01  5.128205e-01
+21          Taiwan  0.000000e+00  0.000000e+00
+22        Thailand  8.045977e+00  2.298851e+00
+23          Turkey  4.761905e-01  1.428571e+00, 'Correlation between slope and intercept for Klebsiella pneumoniae with Ceftazidime.avibactam in 2018: 0.7260 (p-value: 0.0001)\n', {'2016'},            Country     intercept         slope
+1        Argentina  8.333333e-01  2.500000e+00
+2        Australia  2.727273e+00 -9.090909e-01
+3          Belgium  0.000000e+00  0.000000e+00
+4           Brazil  5.555556e-01  1.666667e+00
+5            China  0.000000e+00  0.000000e+00
+6         Colombia -9.769963e-15  0.000000e+00
+7   Czech Republic  0.000000e+00  9.992007e-15
+8           France  0.000000e+00  0.000000e+00
+9          Germany  1.764706e+00 -5.882353e-01
+10          Greece  7.032967e+00 -3.565324e+00
+11          Israel  0.000000e+00  0.000000e+00
+12           Italy  2.494824e+00 -4.347826e-01
+13          Kuwait  3.222222e+00 -3.333333e-01
+14          Mexico  2.456140e+00 -1.403509e+00
+15     Netherlands  0.000000e+00  0.000000e+00
+16     Philippines  4.583333e+00  1.250000e+00
+17          Poland  1.343137e+00  1.088235e+00
+18        Portugal  0.000000e+00  0.000000e+00
+19    South Africa  5.150856e+00  5.793808e-01
+20           Spain  6.349206e-01 -4.761905e-01
+21          Taiwan  0.000000e+00  0.000000e+00
+22        Thailand  8.214559e+00 -1.455939e-01
+23          Turkey  1.666667e+00 -9.523810e-01, 'Correlation between slope and intercept for Klebsiella pneumoniae with Ceftazidime.avibactam in 2016: -0.3462 (p-value: 0.1057)\n', {'2017'},            Country     intercept         slope
+1        Argentina  2.500000e+00  3.333333e+00
+2        Australia  2.121212e+00 -1.212121e+00
+3          Belgium  0.000000e+00  0.000000e+00
+4           Brazil  1.666667e+00  2.222222e+00
+5            China  1.851852e-01  5.555556e-01
+6         Colombia -1.065814e-14  0.000000e+00
+7   Czech Republic -1.065814e-14  1.021405e-14
+8           France  0.000000e+00 -9.769963e-15
+9          Germany  1.372549e+00 -7.843137e-01
+10          Greece  5.999186e+00  4.892145e+00
+11          Israel  0.000000e+00  1.021405e-14
+12           Italy  1.937112e+00  9.976708e-01
+13          Kuwait  3.645161e+00  1.491039e+00
+14          Mexico  1.959064e+00  6.140351e-01
+15     Netherlands  0.000000e+00  0.000000e+00
+16     Philippines  5.719697e+00  2.575758e+00
+17          Poland  2.264706e+00  7.843137e-02
+18        Portugal  0.000000e+00  0.000000e+00
+19    South Africa  5.238801e+00 -4.726614e-01
+20           Spain  1.282051e-01  3.846154e-01
+21          Taiwan  0.000000e+00  0.000000e+00
+22        Thailand  7.524904e+00  1.731801e+00
+23          Turkey  9.523810e-01 -7.142857e-01, 'Correlation between slope and intercept for Klebsiella pneumoniae with Ceftazidime.avibactam in 2017: 0.5781 (p-value: 0.0039)\n', {'2014'},            Country     intercept         slope
+1        Argentina  0.000000e+00 -9.992007e-16
+2        Australia  9.090909e-01  1.212121e+00
+3          Belgium  0.000000e+00 -9.992007e-16
+4           Brazil  0.000000e+00  1.998401e-15
+5            China  0.000000e+00  1.998401e-15
+6         Colombia -9.992007e-15  9.992007e-16
+7   Czech Republic -9.992007e-15  1.998401e-15
+8           France  0.000000e+00 -2.997602e-15
+9          Germany  5.882353e-01  7.843137e-01
+10          Greece  7.960928e+00  5.291005e-02
+11          Israel  0.000000e+00  1.998401e-15
+12           Italy  2.577640e+00 -1.345756e-01
+13          Kuwait  1.000000e+00  1.333333e+00
+14          Mexico  3.508772e+00  9.992007e-16
+15     Netherlands  0.000000e+00  0.000000e+00
+16     Philippines  5.625000e+00 -8.333333e-01
+17          Poland  1.960784e-01  5.882353e-01
+18        Portugal  0.000000e+00  1.998401e-15
+19    South Africa  4.865942e+00  2.500000e-01
+20           Spain  1.428571e+00 -4.761905e-01
+21          Taiwan  0.000000e+00  9.992007e-16
+22        Thailand  8.493420e+00  1.329335e-01
+23          Turkey  2.380952e+00  9.992007e-16, 'Correlation between slope and intercept for Klebsiella pneumoniae with Ceftazidime.avibactam in 2014: -0.1818 (p-value: 0.4065)\n']

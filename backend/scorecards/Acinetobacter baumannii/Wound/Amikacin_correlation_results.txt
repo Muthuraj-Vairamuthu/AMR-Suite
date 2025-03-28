@@ -1,0 +1,73 @@
+[{'2017'},            Country  intercept      slope
+1            Chile  28.333333 -15.000000
+2            China  83.212121 -20.060606
+3   Czech Republic  14.284314  10.883987
+4           France   3.212121   0.090909
+5          Germany  11.551227  -0.230880
+6          Hungary  45.888889   6.555556
+7            Italy  83.260582   0.972222
+8           Kuwait  64.318296 -12.897243
+9           Mexico  71.759259  -2.777778
+10    South Africa  17.309524  21.571429
+11           Spain  25.056020  -1.786944
+12   United States  12.491227  -0.964530, 'Correlation between slope and intercept for Acinetobacter baumannii with Amikacin in 2017: -0.4690 (p-value: 0.1240)\n', {'2016'},            Country  intercept      slope
+1            Chile  33.333333  -8.333333
+2            China  93.939394 -13.636364
+3   Czech Republic   7.178105   4.549020
+4           France   3.121212   0.121212
+5          Germany  13.845599  -1.789322
+6          Hungary  44.888889   4.111111
+7            Italy  82.169312   1.898148
+8           Kuwait  77.003759 -16.346178
+9           Mexico  68.425926   5.740741
+10    South Africa  12.738095   7.261905
+11           Spain  24.500647   1.313074
+12   United States  11.733658   0.415235, 'Correlation between slope and intercept for Acinetobacter baumannii with Amikacin in 2016: -0.4982 (p-value: 0.0993)\n', {'2014'},            Country  intercept      slope
+1            Chile  52.500000  -5.000000
+2            China  88.333333   6.666667
+3   Czech Republic   2.627451   2.000000
+4           France   6.919192  -2.222222
+5          Germany  17.393939  -2.111111
+6          Hungary  69.259259 -15.555556
+7            Italy  82.268519  -0.218254
+8           Kuwait  79.875000   2.125000
+9           Mexico  68.148148  -2.500000
+10    South Africa  19.666667  -7.666667
+11           Spain  24.777534  -0.338950
+12   United States  13.855604  -0.797536, 'Correlation between slope and intercept for Acinetobacter baumannii with Amikacin in 2014: 0.0680 (p-value: 0.8338)\n', {'2015'},            Country  intercept      slope
+1            Chile  45.000000 -10.833333
+2            China  92.424242   2.272727
+3   Czech Republic   4.181373   3.328431
+4           France   5.282828  -1.575758
+5          Germany  15.978355  -2.468975
+6          Hungary  58.111111 -11.962963
+7            Italy  81.964286  -0.238095
+8           Kuwait  80.304825  -4.293860
+9           Mexico  68.055556   4.166667
+10    South Africa  15.523810  -5.095238
+11           Spain  24.563292   0.429803
+12   United States  12.926240  -0.653837, 'Correlation between slope and intercept for Acinetobacter baumannii with Amikacin in 2015: -0.0177 (p-value: 0.9564)\n', {'2018'},            Country  intercept      slope
+1            Chile  11.666667  -6.666667
+2            China  66.984848 -15.106061
+3   Czech Republic  23.032051  14.929487
+4           France   3.000000  -1.000000
+5          Germany  11.793651   0.857143
+6          Hungary  52.481481   6.518519
+7            Italy  82.869769  -2.878788
+8           Kuwait  50.110276 -11.260652
+9           Mexico  70.666667 -17.166667
+10    South Africa  35.714286  20.595238
+11           Spain  24.214282  -2.576201
+12   United States  12.143559   1.708226, 'Correlation between slope and intercept for Acinetobacter baumannii with Amikacin in 2018: -0.3823 (p-value: 0.2200)\n', {'2019'},            Country  intercept      slope
+1            Chile   6.666667  -5.000000
+2            China  49.803030  -3.696970
+3   Czech Republic  34.985043  11.461538
+4           France   2.333333  -1.333333
+5          Germany  12.206349   1.460317
+6          Hungary  60.037037   2.888889
+7            Italy  82.081530  -5.405844
+8           Kuwait  37.563910  -5.929825
+9           Mexico  57.000000 -15.666667
+10    South Africa  55.333333  11.238095
+11           Spain  22.396093  -1.894460
+12   United States  13.378458   2.402930, 'Correlation between slope and intercept for Acinetobacter baumannii with Amikacin in 2019: -0.1124 (p-value: 0.7279)\n']

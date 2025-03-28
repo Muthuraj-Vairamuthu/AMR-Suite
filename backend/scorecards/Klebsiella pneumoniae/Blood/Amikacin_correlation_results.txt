@@ -1,0 +1,217 @@
+[{'2016'},            Country     intercept         slope
+1        Argentina  1.899676e+01  4.598462e+00
+2        Australia  1.428571e+00  7.142857e-01
+3          Belgium  6.841322e+00 -2.148002e+00
+4           Brazil  1.397781e+01 -2.009034e-01
+5           Canada  4.594478e-01  3.393730e-01
+6            Chile  3.362471e+00  4.734155e-01
+7            China  1.370833e+01  1.868833e+00
+8         Colombia  1.122998e+01  3.133201e+00
+9          Croatia  1.479049e+00  2.514071e+00
+10  Czech Republic  3.241803e+00 -9.417122e-01
+11         Denmark -3.019807e-14  1.998401e-14
+12          France  2.010022e+00 -8.384532e-01
+13         Germany  2.077632e+00  8.513158e-01
+14          Greece  4.856190e+01 -1.797279e+00
+15         Hungary  3.750000e+00 -1.250000e+00
+16         Ireland -4.973799e-14  2.997602e-14
+17          Israel  3.392157e+00  1.764706e-01
+18           Italy  1.951772e+01  7.728411e-02
+19           Japan  0.000000e+00  0.000000e+00
+20    Korea, South  4.208754e+00 -2.020202e+00
+21          Kuwait  4.287379e+00  1.873127e+00
+22          Mexico  9.355117e+00  4.142220e+00
+23     Netherlands  0.000000e+00  9.992007e-15
+24          Panama  5.572264e+00  5.792258e-01
+25     Philippines  7.500000e+00 -4.166667e-01
+26          Poland  6.178161e+00 -1.257184e+00
+27        Portugal  2.564103e-01  3.418803e-01
+28    South Africa  4.330032e+00  1.658741e+00
+29           Spain  7.420825e-01  4.278272e-02
+30     Switzerland  1.818182e+00  9.090909e-01
+31          Taiwan  4.841270e+00 -6.878307e-01
+32        Thailand  2.443747e+00  2.203035e+00
+33          Turkey  1.651267e+01  4.732943e+00
+34  United Kingdom  2.784553e+00  2.086721e+00
+35   United States  8.474292e-01  1.963718e-01
+36       Venezuela  1.987302e+01  6.904762e-01, 'Correlation between slope and intercept for Klebsiella pneumoniae with Amikacin in 2016: 0.0527 (p-value: 0.7600)\n', {'2017'},            Country     intercept         slope
+1        Argentina  2.387869e+01  4.695075e+00
+2        Australia  2.142857e+00 -7.142857e-01
+3          Belgium  5.088587e+00 -1.868861e+00
+4           Brazil  1.450474e+01  1.931465e+00
+5           Canada  7.549612e-01 -3.235548e-02
+6            Chile  3.864469e+00  2.573260e+00
+7            China  1.459455e+01  2.117348e+00
+8         Colombia  1.437299e+01  3.122916e+00
+9          Croatia  3.586332e+00  3.363750e+00
+10  Czech Republic  2.688069e+00 -3.852459e-01
+11         Denmark  0.000000e+00  1.021405e-14
+12          France  1.163641e+00 -2.970120e-01
+13         Germany  2.865058e+00 -4.040936e-01
+14          Greece  4.665283e+01 -5.753515e+00
+15         Hungary  2.916667e+00 -1.666667e+00
+16         Ireland -9.947598e-14  4.019007e-14
+17          Israel  3.628852e+00  5.924370e-01
+18           Italy  2.023768e+01  1.089962e+00
+19           Japan  0.000000e+00  0.000000e+00
+20    Korea, South  2.121212e+00 -1.212121e+00
+21          Kuwait  6.554446e+00  2.988345e+00
+22          Mexico  1.422533e+01  7.428464e+00
+23     Netherlands  0.000000e+00  1.021405e-14
+24          Panama  6.277950e+00  4.963389e-01
+25     Philippines  7.638889e+00 -3.472222e+00
+26          Poland  4.734880e+00 -1.949918e-02
+27        Portugal  5.128205e-01  2.564103e-01
+28    South Africa  6.691078e+00  3.074240e+00
+29           Spain  7.325300e-01  4.204296e-01
+30     Switzerland  2.727273e+00 -9.090909e-01
+31          Taiwan  4.444444e+00 -1.349206e+00
+32        Thailand  4.692914e+00  1.860007e+00
+33          Turkey  2.055127e+01  5.016374e+00
+34  United Kingdom  4.593496e+00 -1.422764e-01
+35   United States  9.278209e-01  7.110900e-01
+36       Venezuela  1.950000e+01  1.198413e+00, 'Correlation between slope and intercept for Klebsiella pneumoniae with Amikacin in 2017: 0.0461 (p-value: 0.7894)\n', {'2014'},            Country     intercept         slope
+1        Argentina  2.439329e+01 -4.619068e+00
+2        Australia  2.380952e-01  7.142857e-01
+3          Belgium  7.357496e+00  1.832319e-01
+4           Brazil  1.311990e+01  7.491586e-01
+5           Canada  4.569437e-01 -6.595063e-02
+6            Chile  5.865801e+00 -1.666667e+00
+7            China  1.490856e+01 -1.539689e+00
+8         Colombia  6.366453e+00  2.160256e+00
+9          Croatia  1.372549e+00 -7.843137e-01
+10  Czech Republic  8.682453e+00 -2.744384e+00
+11         Denmark -3.019807e-14  1.199041e-14
+12          France  3.225243e+00 -6.298397e-01
+13         Germany  3.837719e-01  8.040936e-01
+14          Greece  5.120532e+01 -1.121212e+00
+15         Hungary  3.842593e+00  1.851852e-01
+16         Ireland -3.019807e-14  8.992806e-15
+17          Israel  4.888889e+00 -8.888889e-01
+18           Italy  2.165847e+01 -1.054624e+00
+19           Japan  0.000000e+00  1.998401e-15
+20    Korea, South  4.242424e+00  1.010101e-01
+21          Kuwait  4.304029e+00 -1.831502e-01
+22          Mexico  4.885235e+00  1.246212e+00
+23     Netherlands  0.000000e+00  2.997602e-15
+24          Panama  1.428571e+00  1.904762e+00
+25     Philippines  5.972222e+00  1.250000e+00
+26          Poland  1.479167e+01 -4.434524e+00
+27        Portugal  0.000000e+00  4.996004e-15
+28    South Africa  9.643411e-01  1.730233e+00
+29           Spain  1.428164e+00 -4.672365e-01
+30     Switzerland  3.030303e-01  9.090909e-01
+31          Taiwan  5.317460e+00 -3.174603e-01
+32        Thailand  2.358974e+01 -1.256410e+01
+33          Turkey  1.318519e+01  6.666667e-01
+34  United Kingdom  1.011478e+00  5.834529e-01
+35   United States  1.337148e+00 -3.250423e-01
+36       Venezuela  1.992063e+01  6.349206e-01, 'Correlation between slope and intercept for Klebsiella pneumoniae with Amikacin in 2014: -0.4442 (p-value: 0.0066)\n', {'2015'},            Country     intercept         slope
+1        Argentina  2.180448e+01  7.758070e-02
+2        Australia  7.142857e-01  9.523810e-01
+3          Belgium  7.353795e+00 -6.290879e-01
+4           Brazil  1.347230e+01  4.458142e-02
+5           Canada  4.376791e-01  1.777444e-01
+6            Chile  4.693362e+00 -1.396104e+00
+7            China  1.417868e+01 -3.695433e-01
+8         Colombia  8.175451e+00  3.014601e+00
+9          Croatia  1.168929e+00  5.656109e-01
+10  Czech Republic  6.429721e+00 -2.641621e+00
+11         Denmark -1.953993e-14  9.992007e-15
+12          France  2.772108e+00 -8.178718e-01
+13         Germany  1.076316e+00  1.310088e+00
+14          Greece  5.037065e+01 -5.444238e-01
+15         Hungary  3.981481e+00  1.388889e-01
+16         Ireland -6.039613e-14  3.996803e-14
+17          Israel  4.222222e+00 -6.666667e-01
+18           Italy  2.074136e+01 -8.373444e-01
+19           Japan  1.065814e-14  0.000000e+00
+20    Korea, South  4.410774e+00 -5.723906e-01
+21          Kuwait  4.102564e+00  3.113553e-01
+22          Mexico  6.469024e+00  3.402880e+00
+23     Netherlands  0.000000e+00  9.992007e-15
+24          Panama  3.227513e+00  2.539683e+00
+25     Philippines  6.805556e+00  1.666667e+00
+26          Poland  1.110119e+01 -4.940476e+00
+27        Portugal  8.547009e-02  2.564103e-01
+28    South Africa  2.266271e+00  1.977107e+00
+29           Spain  1.119640e+00 -3.671699e-01
+30     Switzerland  9.090909e-01  1.212121e+00
+31          Taiwan  5.264550e+00  3.174603e-01
+32        Thailand  1.435897e+01 -8.205128e+00
+33          Turkey  1.414620e+01  2.438596e+00
+34  United Kingdom  1.645544e+00  1.840029e+00
+35   United States  1.076430e+00 -4.202150e-01
+36       Venezuela  1.956349e+01 -2.023810e+00, 'Correlation between slope and intercept for Klebsiella pneumoniae with Amikacin in 2015: -0.2309 (p-value: 0.1754)\n', {'2019'},            Country     intercept         slope
+1        Argentina  3.040481e+01  1.896768e+00
+2        Australia  9.523810e-01 -7.142857e-01
+3          Belgium  2.034314e+00  3.676471e-02
+4           Brazil  1.880402e+01  3.022015e+00
+5           Canada  5.255968e-01 -3.393730e-01
+6            Chile  8.729326e+00  2.135642e+00
+7            China  1.711424e+01 -1.265783e+00
+8         Colombia  1.841798e+01 -4.365419e-01
+9          Croatia  9.692347e+00  1.943729e+00
+10  Czech Republic  1.805556e+00 -1.388889e-01
+11         Denmark  0.000000e+00  4.093947e-15
+12          France  5.377174e-01 -3.601935e-02
+13         Germany  1.885088e+00 -7.263158e-01
+14          Greece  3.408547e+01 -6.423077e+00
+15         Hungary  0.000000e+00 -2.206568e-15
+16         Ireland -1.012523e-13  2.770006e-14
+17          Israel  5.281016e+00  1.217358e+00
+18           Italy  2.132160e+01  1.930205e-01
+19           Japan  0.000000e+00  4.593548e-15
+20    Korea, South  0.000000e+00 -2.081668e-16
+21          Kuwait  1.308625e+01  3.421245e+00
+22          Mexico  2.354514e+01  1.123126e+00
+23     Netherlands  0.000000e+00  2.900458e-15
+24          Panama  6.432540e+00  3.188750e-01
+25     Philippines  1.666667e+00 -1.250000e+00
+26          Poland  7.900657e+00  3.406746e+00
+27        Portugal  5.982906e-01 -3.418803e-01
+28    South Africa  1.504329e+01  6.408750e+00
+29           Spain  1.215023e+00 -6.936027e-02
+30     Switzerland  1.212121e+00 -9.090909e-01
+31          Taiwan  1.688453e+00 -2.178649e-01
+32        Thailand  6.812636e+00 -4.790823e-01
+33          Turkey  2.873450e+01  9.559454e-01
+34  United Kingdom  3.911924e+00 -1.197832e+00
+35   United States  2.283435e+00  2.984782e-01
+36       Venezuela  2.477778e+01  1.000000e+00, 'Correlation between slope and intercept for Klebsiella pneumoniae with Amikacin in 2019: 0.0552 (p-value: 0.7493)\n', {'2018'},            Country  intercept         slope
+1        Argentina  28.804879  2.387250e+00
+2        Australia   1.666667 -9.523810e-01
+3          Belgium   3.376859 -9.854632e-01
+4           Brazil  15.723627  3.842362e+00
+5           Canada   0.777251 -3.501582e-01
+6            Chile   5.921578  3.204296e+00
+7            China  16.617451 -1.604722e-01
+8         Colombia  16.780070  1.253029e+00
+9          Croatia   6.965124  2.963709e+00
+10  Czech Republic   1.885246 -2.504554e-02
+11         Denmark   0.000000  1.099121e-14
+12          France   0.852796 -2.234451e-01
+13         Germany   2.789181 -1.060088e+00
+14          Greece  41.735897 -8.736752e+00
+15         Hungary   1.666667 -1.250000e+00
+16         Ireland   0.000000  1.298961e-14
+17          Israel   4.258471  1.297822e+00
+18           Italy  20.506993  9.544527e-01
+19           Japan   0.000000  6.994405e-15
+20    Korea, South   1.212121 -9.090909e-01
+21          Kuwait   9.145521  4.554446e+00
+22          Mexico  19.846253  4.106798e+00
+23     Netherlands   0.000000  1.199041e-14
+24          Panama   7.181992 -3.199621e-01
+25     Philippines   5.138889 -3.333333e+00
+26          Poland   4.892378  3.502737e+00
+27        Portugal   0.769231 -2.564103e-01
+28    South Africa  10.024814  6.603545e+00
+29           Spain   1.012246  1.677392e-01
+30     Switzerland   2.121212 -1.212121e+00
+31          Taiwan   3.702148 -1.591970e+00
+32        Thailand   6.234680  3.676774e-01
+33          Turkey  25.189864  3.183626e+00
+34  United Kingdom   4.998645 -1.467480e+00
+35   United States   1.424325  7.936428e-01
+36       Venezuela  19.746032  3.801587e+00, 'Correlation between slope and intercept for Klebsiella pneumoniae with Amikacin in 2018: 0.0022 (p-value: 0.9900)\n']

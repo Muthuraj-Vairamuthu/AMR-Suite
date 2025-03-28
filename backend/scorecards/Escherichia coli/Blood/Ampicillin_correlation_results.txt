@@ -1,0 +1,211 @@
+[{'2015'},            Country  intercept     slope
+1        Argentina  63.854320  1.675174
+2        Australia  52.044584  8.282393
+3          Belgium  60.787771  1.003225
+4           Brazil  66.021081 -3.399646
+5           Canada  54.559451 -0.124618
+6            Chile  69.237464 -0.943362
+7            China  91.435649 -1.705963
+8         Colombia  75.423988 -1.183745
+9          Croatia  62.735032 -2.051796
+10  Czech Republic  51.966188 -0.873365
+11         Denmark  52.945945  1.358733
+12          France  63.380758 -3.061915
+13         Germany  62.352908 -3.139883
+14          Greece  52.772169  1.007121
+15         Hungary  59.731380 -3.626374
+16         Ireland  75.691441 -2.734234
+17          Israel  71.249851 -0.631759
+18           Italy  73.700390 -0.020776
+19           Japan  39.888889  7.523810
+20    Korea, South  69.641400 -0.628234
+21          Kuwait  71.388889  5.238095
+22          Mexico  83.237603  3.206673
+23     Netherlands  47.631700 -0.082816
+24          Panama  69.761905 -1.428571
+25     Philippines  81.928571 -2.428571
+26          Poland  61.337408  2.735803
+27        Portugal  58.115009 -1.627642
+28    South Africa  61.502787  6.762790
+29           Spain  68.982178  0.107490
+30     Switzerland  70.212759 -3.954212
+31          Taiwan  78.648630  1.789593
+32          Turkey  63.292607 -5.509085
+33  United Kingdom  65.955433 -0.460928
+34   United States  56.569016 -0.775121
+35       Venezuela  76.677237  0.788432, 'Correlation between slope and intercept for Escherichia coli with Ampicillin in 2015: -0.2809 (p-value: 0.1022)\n', {'2019'},            Country  intercept     slope
+1        Argentina  69.172552 -1.436552
+2        Australia  58.456349 -4.095238
+3          Belgium  61.440393 -1.788772
+4           Brazil  64.557966 -0.714378
+5           Canada  48.903476 -1.654022
+6            Chile  62.102767 -2.747475
+7            China  83.808074 -1.654015
+8         Colombia  81.527963  1.078764
+9          Croatia  58.461955 -0.723481
+10  Czech Republic  45.341442 -1.432544
+11         Denmark  49.383764  0.721697
+12          France  58.432413  0.763924
+13         Germany  57.668686 -2.789027
+14          Greece  45.871027 -1.740203
+15         Hungary  59.673882 -2.868687
+16         Ireland  69.613022  4.119574
+17          Israel  59.554876 -2.174009
+18           Italy  63.495237 -2.759864
+19           Japan  49.183007 -1.591970
+20    Korea, South  71.749031 -2.094172
+21          Kuwait  85.931013 -3.348596
+22          Mexico  83.404501 -1.600981
+23     Netherlands  32.010582 -8.597884
+24          Panama  65.571429  6.238095
+25     Philippines  74.809524  1.333333
+26          Poland  58.736055 -3.064571
+27        Portugal  55.526854 -0.631998
+28    South Africa  70.655885 -2.298933
+29           Spain  64.286375 -1.413716
+30     Switzerland  51.261075 -4.302968
+31          Taiwan  83.477786 -3.506132
+32          Turkey  76.785351 -1.250467
+33  United Kingdom  55.028229 -0.890868
+34   United States  57.217949  0.489134
+35       Venezuela  78.956229  0.681818, 'Correlation between slope and intercept for Escherichia coli with Ampicillin in 2019: 0.2814 (p-value: 0.1016)\n', {'2018'},            Country  intercept      slope
+1        Argentina  68.653001   0.057000
+2        Australia  62.693623  -5.338670
+3          Belgium  63.273669  -1.995831
+4           Brazil  63.796549   0.561343
+5           Canada  51.634572  -2.602161
+6            Chile  64.304662  -2.681724
+7            China  85.887685  -2.430277
+8         Colombia  77.824765   3.352211
+9          Croatia  59.438522  -1.024564
+10  Czech Republic  47.572891  -2.612837
+11         Denmark  50.203867  -1.058727
+12          France  57.484415   1.135743
+13         Germany  57.643585  -1.326538
+14          Greece  49.343424  -3.605171
+15         Hungary  57.765124   0.395493
+16         Ireland  68.925880   2.223997
+17          Israel  62.854002  -3.516870
+18           Italy  68.033810  -4.605108
+19           Japan  50.590103  -1.999533
+20    Korea, South  72.417364  -1.332861
+21          Kuwait  87.783883  -2.719780
+22          Mexico  86.457780  -3.038475
+23     Netherlands  40.925926 -10.952381
+24          Panama  64.000000   3.428571
+25     Philippines  74.968254   0.500000
+26          Poland  62.050625  -3.775228
+27        Portugal  55.571364   0.017343
+28    South Africa  72.413580  -2.163837
+29           Spain  66.643788  -2.577069
+30     Switzerland  55.966445  -5.576129
+31          Taiwan  83.618466  -1.607275
+32          Turkey  68.777444   5.093743
+33  United Kingdom  58.703048  -3.284972
+34   United States  56.519733   0.741133
+35       Venezuela  78.502331   0.738151, 'Correlation between slope and intercept for Escherichia coli with Ampicillin in 2018: 0.2967 (p-value: 0.0835)\n', {'2016'},            Country  intercept     slope
+1        Argentina  65.458210  1.800002
+2        Australia  59.266371  4.697405
+3          Belgium  60.645431  1.622803
+4           Brazil  62.723940 -0.413120
+5           Canada  54.075732 -1.541566
+6            Chile  68.413091 -1.959953
+7            China  89.393938 -1.277133
+8         Colombia  74.084703  2.101587
+9          Croatia  59.363388  0.288020
+10  Czech Republic  50.571915 -0.559642
+11         Denmark  54.131565 -0.025729
+12          France  61.066088 -2.675232
+13         Germany  59.749874 -0.227103
+14          Greece  53.142762 -0.967379
+15         Hungary  57.390720  0.181929
+16         Ireland  73.698198 -4.254505
+17          Israel  71.282383 -4.018271
+18           Italy  73.273637 -2.445019
+19           Japan  46.404762  4.531746
+20    Korea, South  68.115896  2.605332
+21          Kuwait  74.761905  7.817460
+22          Mexico  85.060353  1.645197
+23     Netherlands  45.638371  0.757994
+24          Panama  68.523810 -3.238095
+25     Philippines  81.246032 -4.793651
+26          Poland  64.143828 -0.402741
+27        Portugal  56.291656 -1.014960
+28    South Africa  64.684548  6.539708
+29           Spain  68.706102 -0.422863
+30     Switzerland  66.089876 -4.289897
+31          Taiwan  80.519047  2.993477
+32          Turkey  57.599681  8.121725
+33  United Kingdom  65.421245 -3.470696
+34   United States  56.122036 -0.141993
+35       Venezuela  77.652254  0.021870, 'Correlation between slope and intercept for Escherichia coli with Ampicillin in 2016: -0.1466 (p-value: 0.4008)\n', {'2017'},            Country  intercept     slope
+1        Argentina  67.499350  2.139740
+2        Australia  64.020028 -2.591170
+3          Belgium  62.023041  0.974912
+4           Brazil  61.289683  3.084372
+5           Canada  52.731988 -1.196526
+6            Chile  67.055650 -1.910408
+7            China  88.072659 -2.439821
+8         Colombia  76.668625  2.432128
+9          Croatia  59.873038 -0.506097
+10  Czech Republic  49.891253 -3.037665
+11         Denmark  54.977744 -5.839535
+12          France  58.670066 -0.473720
+13         Germany  58.686493 -0.311985
+14          Greece  52.709416 -4.120379
+15         Hungary  56.221001  3.247863
+16         Ireland  69.559378 -1.479525
+17          Israel  68.203654 -5.083779
+18           Italy  71.129571 -3.560268
+19           Japan  52.150794 -1.920635
+20    Korea, South  69.317057  2.779425
+21          Kuwait  79.880952  6.309524
+22          Mexico  87.109124 -1.507253
+23     Netherlands  45.052910 -5.846561
+24          Panama  66.285714 -3.761905
+25     Philippines  76.119048 -1.206349
+26          Poland  63.999681 -1.982129
+27        Portugal  55.804336  0.709926
+28    South Africa  74.193315 -1.132649
+29           Spain  68.040907 -2.132332
+30     Switzerland  62.377632 -6.094259
+31          Taiwan  82.981222  1.420078
+32          Turkey  63.104861  7.268558
+33  United Kingdom  62.529617 -4.554007
+34   United States  55.452352  0.983897
+35       Venezuela  77.748137  0.806839, 'Correlation between slope and intercept for Escherichia coli with Ampicillin in 2017: 0.2475 (p-value: 0.1517)\n', {'2014'},            Country  intercept     slope
+1        Argentina  62.916951  1.146455
+2        Australia  46.994514  6.661877
+3          Belgium  60.997091 -1.073671
+4           Brazil  68.596671 -4.319326
+5           Canada  54.566294 -0.333281
+6            Chile  69.528770  0.104167
+7            China  92.746442 -1.487771
+8         Colombia  76.884626 -1.267839
+9          Croatia  65.225982 -3.336257
+10  Czech Republic  52.865497 -0.884990
+11         Denmark  51.957680  3.015152
+12          France  64.846896 -1.458808
+13         Germany  64.497285 -2.462392
+14          Greece  52.154914  1.266968
+15         Hungary  61.897436 -3.025641
+16         Ireland  76.583333 -1.218468
+17          Israel  70.553030  2.000000
+18           Italy  73.471593  0.264953
+19           Japan  35.380952  6.777778
+20    Korea, South  71.203416 -3.322493
+21          Kuwait  69.880952 -1.071429
+22          Mexico  81.831657  1.562997
+23     Netherlands  48.995859 -2.310789
+24          Panama  70.142857  0.428571
+25     Philippines  81.865079  0.039683
+26          Poland  59.025847  3.077031
+27        Portugal  59.331557 -1.550524
+28    South Africa  59.549114  3.719807
+29           Spain  69.041752 -0.155756
+30     Switzerland  72.619353 -2.077839
+31          Taiwan  77.767157  1.184201
+32          Turkey  69.434524 -7.916667
+33  United Kingdom  65.673993  0.727717
+34   United States  56.963830 -0.838991
+35       Venezuela  75.938914  0.796703, 'Correlation between slope and intercept for Escherichia coli with Ampicillin in 2014: -0.3873 (p-value: 0.0215)\n']

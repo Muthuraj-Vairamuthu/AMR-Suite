@@ -1,0 +1,181 @@
+[{'2019'},            Country  intercept         slope
+1        Argentina  16.156806  4.819625e+00
+2        Australia   5.610494 -3.099475e-01
+3          Belgium   4.871573 -1.904762e-01
+4           Brazil  18.629637  3.071062e+00
+5           Canada  11.599679 -1.039103e+00
+6            Chile  36.746032  5.820106e-01
+7         Colombia  36.164502  5.353535e-01
+8          Croatia  19.336768  2.656642e+00
+9   Czech Republic  19.685211 -9.944938e-01
+10          France   4.953153 -1.080928e+00
+11         Germany   8.814965 -8.114493e-01
+12         Hungary  14.778708 -1.985646e+00
+13          Israel   6.183838 -5.242424e-01
+14           Italy  19.476627 -8.552189e-01
+15    Korea, South  16.666667  6.666667e+00
+16          Kuwait  17.695221 -4.592075e+00
+17          Mexico  43.754902  3.151961e+00
+18     Netherlands   0.000000  1.298961e-14
+19          Panama   5.185185 -2.962963e+00
+20     Philippines   3.492402  7.277321e-02
+21          Poland  12.256922 -3.444217e-01
+22        Portugal  13.596899  6.030552e-01
+23    South Africa  12.923602 -4.325038e-01
+24           Spain  15.194867 -8.226958e-01
+25     Switzerland   9.166667  1.755952e+00
+26          Taiwan   7.026646  1.065955e-01
+27        Thailand   9.843011 -1.050986e+00
+28          Turkey  16.069519  1.671123e+00
+29  United Kingdom   1.159420 -8.695652e-01
+30   United States   7.900895 -1.675627e-01, 'Correlation between slope and intercept for Pseudomonas aeruginosa with Meropenem in 2019: 0.3181 (p-value: 0.0867)\n', {'2018'},            Country  intercept     slope
+1        Argentina  15.060125  3.092833
+2        Australia   5.090764  0.373297
+3          Belgium   4.802309 -0.059163
+4           Brazil  15.281518  3.508891
+5           Canada  12.976175 -1.538355
+6            Chile  34.153439  3.055556
+7         Colombia  33.970418  2.698593
+8          Croatia  19.525202  1.251740
+9   Czech Republic  19.578874 -0.580018
+10          France   4.591586 -0.066968
+11         Germany  10.398390 -1.716807
+12         Hungary  19.234106 -4.116070
+13          Israel   7.202875 -1.039782
+14           Italy  17.917626  0.760160
+15    Korea, South  15.142857  3.920635
+16          Kuwait  23.293880 -6.236678
+17          Mexico  38.108343  5.468988
+18     Netherlands   2.222222 -1.666667
+19          Panama  10.000000 -4.722222
+20     Philippines   6.726437 -2.478861
+21          Poland  12.683158 -0.534513
+22        Portugal  13.658444  0.455723
+23    South Africa  12.437731  0.080686
+24           Spain  16.299577 -1.086438
+25     Switzerland   6.934524  2.896825
+26          Taiwan   6.861335  0.354929
+27        Thailand  10.791329 -1.254167
+28          Turkey  13.593201  2.453272
+29  United Kingdom   2.473430 -1.492754
+30   United States   7.397705  0.309516, 'Correlation between slope and intercept for Pseudomonas aeruginosa with Meropenem in 2018: 0.3599 (p-value: 0.0508)\n', {'2015'},            Country  intercept     slope
+1        Argentina  25.137085 -3.280423
+2        Australia   6.088879 -0.689849
+3          Belgium  10.328571 -2.827778
+4           Brazil  15.121795 -1.144796
+5           Canada  16.064555 -2.160555
+6            Chile  33.965812 -2.220391
+7         Colombia  23.016234  2.206169
+8          Croatia  17.954887  2.317043
+9   Czech Republic  21.828160 -2.986782
+10          France   5.628655 -1.864035
+11         Germany  13.339379 -0.164473
+12         Hungary  22.081688  1.282737
+13          Israel   8.288732 -0.045430
+14           Italy  21.618541 -3.571446
+15    Korea, South   9.714286  2.357143
+16          Kuwait  29.975482  0.984096
+17          Mexico  19.828365  5.600457
+18     Netherlands   3.333333  1.666667
+19          Panama  20.092593 -2.222222
+20     Philippines  14.963698 -1.734446
+21          Poland  13.509376  1.071482
+22        Portugal  17.493131 -2.221056
+23    South Africa  14.133138 -1.081768
+24           Spain  19.648870 -1.297900
+25     Switzerland   3.779762 -0.119048
+26          Taiwan   5.829365 -0.180556
+27        Thailand  18.524809 -2.584083
+28          Turkey  24.691099 -6.731248
+29  United Kingdom   5.267081 -0.233954
+30   United States   8.374554 -1.433374, 'Correlation between slope and intercept for Pseudomonas aeruginosa with Meropenem in 2015: -0.2008 (p-value: 0.2873)\n', {'2014'},            Country  intercept     slope
+1        Argentina  25.723906  0.115440
+2        Australia   6.526831 -0.224432
+3          Belgium  11.876984 -1.833333
+4           Brazil  15.674585 -0.182127
+5           Canada  18.425490 -3.699801
+6            Chile  34.313187 -1.330891
+7         Colombia  22.416126 -0.757576
+8          Croatia  16.309524  2.539683
+9   Czech Republic  25.790053 -5.251878
+10          France   7.638889 -2.777778
+11         Germany  13.282305  0.323002
+12         Hungary  21.315698  0.756567
+13          Israel   8.219502 -0.095153
+14           Italy  24.008328 -3.023135
+15    Korea, South   8.690476  0.476190
+16          Kuwait  28.335684  2.749795
+17          Mexico  16.610261  3.721088
+18     Netherlands   1.666667  2.222222
+19          Panama  21.018519 -1.296296
+20     Philippines  16.033183 -1.295261
+21          Poland  12.081953  2.589457
+22        Portugal  19.178079 -2.319609
+23    South Africa  14.656298 -0.424347
+24           Spain  20.239378 -1.013468
+25     Switzerland   3.958333 -0.625000
+26          Taiwan   6.033730 -0.797619
+27        Thailand  20.069930 -0.970696
+28          Turkey  28.557423 -4.325397
+29  United Kingdom   5.509317  0.154589
+30   United States   9.669544 -1.855252, 'Correlation between slope and intercept for Pseudomonas aeruginosa with Meropenem in 2014: -0.2651 (p-value: 0.1568)\n', {'2016'},            Country  intercept     slope
+1        Argentina  23.030303 -6.666667
+2        Australia   5.491503 -0.292223
+3          Belgium   8.026840 -1.990909
+4           Brazil  14.700809  0.356198
+5           Canada  12.922651  0.218408
+6            Chile  33.341270 -2.357143
+7         Colombia  24.419372  3.415043
+8          Croatia  19.596584 -0.984684
+9   Czech Republic  17.057526  2.510783
+10          France   3.182261  0.847953
+11         Germany  13.162329 -0.980992
+12         Hungary  22.411607 -1.557458
+13          Israel   8.253718 -0.496621
+14           Italy  18.712860 -0.339555
+15    Korea, South  10.904762  0.809524
+16          Kuwait  31.281799 -3.295946
+17          Mexico  25.695978  7.112778
+18     Netherlands   5.000000 -1.666667
+19          Panama  17.777778 -4.537037
+20     Philippines  12.609351 -3.450062
+21          Poland  15.192073 -1.017539
+22        Portugal  14.897704 -1.582592
+23    South Africa  13.517678 -0.312351
+24           Spain  18.561568 -1.607263
+25     Switzerland   3.630952  0.327381
+26          Taiwan   5.580087  0.093434
+27        Thailand  16.022541 -2.365278
+28          Turkey  19.225646 -3.795985
+29  United Kingdom   4.739130 -0.606625
+30   United States   6.795712  0.305045, 'Correlation between slope and intercept for Pseudomonas aeruginosa with Meropenem in 2016: -0.1069 (p-value: 0.5739)\n', {'2017'},            Country  intercept     slope
+1        Argentina  17.979798 -2.626263
+2        Australia   5.605843  0.191381
+3          Belgium   5.801154 -0.730736
+4           Brazil  14.753709  0.266886
+5           Canada  12.497241 -0.082599
+6            Chile  30.769841  5.444444
+7         Colombia  27.840368  7.257576
+8          Croatia  20.480646 -0.985427
+9   Czech Republic  19.115683  0.152549
+10          France   3.879457  1.282620
+11         Germany  12.210705 -2.228458
+12         Hungary  21.491324 -2.902766
+13          Israel   7.513364 -0.643279
+14           Italy  17.523608  1.126145
+15    Korea, South  12.111111  0.857143
+16          Kuwait  28.596430 -5.271023
+17          Mexico  31.936741  5.935774
+18     Netherlands   3.888889 -2.222222
+19          Panama  13.611111 -3.611111
+20     Philippines   9.756895 -3.898703
+21          Poland  14.766239 -1.801644
+22        Portugal  13.764052  0.269281
+23    South Africa  12.922692 -0.248885
+24           Spain  16.755411 -0.377104
+25     Switzerland   4.414683  3.422619
+26          Taiwan   5.442641  1.522727
+27        Thailand  14.431258 -3.052694
+28          Turkey  15.088235 -0.785714
+29  United Kingdom   4.529331 -2.171153
+30   United States   6.747090  0.764838, 'Correlation between slope and intercept for Pseudomonas aeruginosa with Meropenem in 2017: 0.2873 (p-value: 0.1237)\n']

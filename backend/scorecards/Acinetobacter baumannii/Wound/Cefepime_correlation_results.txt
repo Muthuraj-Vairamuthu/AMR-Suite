@@ -1,0 +1,73 @@
+[{'2014'},            Country  intercept      slope
+1            Chile  39.722222 -10.000000
+2            China  88.333333   6.666667
+3   Czech Republic   4.588235   2.000000
+4           France   5.185185  -2.962963
+5          Germany  23.227273  -2.666667
+6          Hungary  60.000000 -10.000000
+7            Italy  81.712963  -1.884921
+8           Kuwait  76.750000   5.250000
+9           Mexico  85.462963  -6.111111
+10    South Africa  49.000000 -11.333333
+11           Spain  38.192430  -0.724298
+12   United States  32.319702  -3.761239, 'Correlation between slope and intercept for Acinetobacter baumannii with Cefepime in 2014: 0.1443 (p-value: 0.6545)\n', {'2016'},            Country  intercept      slope
+1            Chile  15.555556  -8.888889
+2            China  95.757576 -11.212121
+3   Czech Republic   9.870098   4.598039
+4           France   2.833333   5.166667
+5          Germany  18.726551  -3.813131
+6          Hungary  46.888889  12.333333
+7            Italy  78.835979   0.231481
+8           Kuwait  84.090226  -9.724937
+9           Mexico  75.277778  -3.796296
+10    South Africa  35.000000  -3.333333
+11           Spain  39.031221   5.633085
+12   United States  24.510084  -1.433518, 'Correlation between slope and intercept for Acinetobacter baumannii with Cefepime in 2016: -0.4143 (p-value: 0.1806)\n', {'2017'},            Country  intercept      slope
+1            Chile   8.888889  -6.666667
+2            China  87.181818 -17.242424
+3   Czech Republic  17.151961   9.948529
+4           France   7.166667   7.333333
+5          Germany  14.577922   1.111111
+6          Hungary  56.555556   6.333333
+7            Italy  78.399471   3.055556
+8           Kuwait  75.796992  -1.393484
+9           Mexico  71.851852   0.277778
+10    South Africa  29.333333  13.000000
+11           Spain  43.766522   2.429177
+12   United States  23.816461   0.554404, 'Correlation between slope and intercept for Acinetobacter baumannii with Cefepime in 2017: -0.4278 (p-value: 0.1653)\n', {'2019'},            Country  intercept         slope
+1            Chile   0.000000 -4.996004e-15
+2            China  56.045455 -5.121212e+00
+3   Czech Republic  34.573718  9.987179e+00
+4           France  22.000000  6.000000e+00
+5          Germany  18.430014  4.611833e+00
+6          Hungary  63.666667 -7.333333e+00
+7            Italy  82.510823 -8.982684e-01
+8           Kuwait  64.481203 -7.508772e+00
+9           Mexico  68.666667 -1.500000e+00
+10    South Africa  52.333333  1.200000e+01
+11           Spain  45.915630 -3.242077e+00
+12   United States  27.558985  4.410256e+00, 'Correlation between slope and intercept for Acinetobacter baumannii with Cefepime in 2019: -0.4393 (p-value: 0.1530)\n', {'2018'},            Country  intercept         slope
+1            Chile   0.000000 -3.297362e-14
+2            China  73.439394 -1.559091e+01
+3   Czech Republic  25.580128  1.215705e+01
+4           France  14.666667  8.166667e+00
+5          Germany  16.008658  3.924242e+00
+6          Hungary  62.333333 -2.444444e+00
+7            Italy  80.003608  1.717172e+00
+8           Kuwait  70.786967 -6.624060e+00
+9           Mexico  71.500000 -2.166667e+00
+10    South Africa  42.333333  1.366667e+01
+11           Spain  46.239515 -1.725787e+00
+12   United States  24.084353  4.537598e+00, 'Correlation between slope and intercept for Acinetobacter baumannii with Cefepime in 2018: -0.5595 (p-value: 0.0585)\n', {'2015'},            Country  intercept      slope
+1            Chile  30.000000 -14.166667
+2            China  93.030303   4.090909
+3   Czech Republic   6.571078   4.615196
+4           France   3.629630  -0.222222
+5          Germany  21.533911  -3.857864
+6          Hungary  53.222222  -2.555556
+7            Italy  80.297619  -2.460317
+8           Kuwait  80.732456   0.114035
+9           Mexico  81.481481  -5.092593
+10    South Africa  43.000000  -9.333333
+11           Spain  38.088941   2.288801
+12   United States  29.041792  -4.227948, 'Correlation between slope and intercept for Acinetobacter baumannii with Cefepime in 2015: 0.0897 (p-value: 0.7815)\n']

@@ -1,0 +1,109 @@
+[{'2014'},            Country  intercept     slope
+1        Australia  17.500000 -1.666667
+2          Belgium  33.126837 -5.522925
+3           Brazil  38.555556 -0.259259
+4            Chile  35.694444 -8.194444
+5            China  44.714286  4.761905
+6           France  12.330487 -3.683598
+7          Germany  31.748698 -3.696991
+8           Israel  22.577778 -3.822222
+9            Italy   0.416667  1.250000
+10    Korea, South  20.833333  4.166667
+11          Kuwait  18.378788  2.939394
+12          Mexico  66.515152 -4.314574
+13     Philippines  11.666667 -6.666667
+14        Portugal   6.111111  2.222222
+15           Spain   9.887028 -0.116959
+16        Thailand  58.611111  1.428571
+17          Turkey   9.053613  0.051282
+18  United Kingdom   5.000000 -1.666667, 'Correlation between slope and intercept for Staphylococcus aureus with Clindamycin in 2014: -0.1056 (p-value: 0.6766)\n', {'2017'},            Country  intercept      slope
+1        Australia   9.833333  -1.333333
+2          Belgium  18.460317  -0.253968
+3           Brazil  25.439153  -6.645503
+4            Chile  13.333333  -1.666667
+5            China  38.444156  -8.365945
+6           France   2.004470  -0.276501
+7          Germany  15.934744  -5.194004
+8           Israel  10.388889   0.611111
+9            Italy   4.662698   0.892857
+10    Korea, South  24.555556  -2.166667
+11          Kuwait  20.878788  -8.575758
+12          Mexico  39.555556 -11.888889
+13     Philippines   0.000000   0.000000
+14        Portugal   6.803030  -2.924242
+15           Spain   7.396332   0.318979
+16        Thailand  37.023810 -14.523810
+17          Turkey   4.751360  -0.839161
+18  United Kingdom   0.000000   0.000000, 'Correlation between slope and intercept for Staphylococcus aureus with Clindamycin in 2017: -0.8638 (p-value: 0.0000)\n', {'2016'},            Country  intercept      slope
+1        Australia  16.166667  -4.833333
+2          Belgium  23.242764  -4.118581
+3           Brazil  36.000000 -10.650794
+4            Chile  20.000000  -5.972222
+5            China  49.133333 -11.171429
+6           France   5.397373  -3.276957
+7          Germany  22.954823  -7.560033
+8           Israel  13.800000  -4.100000
+9            Italy   2.619048   1.607143
+10    Korea, South  28.500000  -4.500000
+11          Kuwait  21.757576  -0.939394
+12          Mexico  51.969697 -16.060606
+13     Philippines   0.000000   0.000000
+14        Portugal   8.666667  -3.166667
+15           Spain   9.172869  -1.402180
+16        Thailand  55.119048 -17.976190
+17          Turkey   8.342657  -4.144522
+18  United Kingdom   2.222222  -1.666667, 'Correlation between slope and intercept for Staphylococcus aureus with Clindamycin in 2016: -0.9186 (p-value: 0.0000)\n', {'2019'},            Country  intercept         slope
+1        Australia   4.666667 -2.666667e+00
+2          Belgium  16.126984 -2.095238e+00
+3           Brazil  18.095238  5.079365e+00
+4            Chile   9.777778 -1.777778e+00
+5            China  25.950938 -6.926407e-02
+6           France   1.666667  8.333333e-01
+7          Germany   6.706349 -1.111111e+00
+8           Israel  12.333333  2.000000e+00
+9            Italy   6.190476  4.166667e-01
+10    Korea, South  16.000000 -3.666667e+00
+11          Kuwait   6.666667 -5.000000e+00
+12          Mexico  15.666667 -4.666667e+00
+13     Philippines   0.000000 -1.998401e-15
+14        Portugal   1.818182  9.090909e-01
+15           Spain   8.333333 -3.996803e-15
+16        Thailand  13.968254 -3.333333e+00
+17          Turkey   6.333333  5.666667e+00
+18  United Kingdom   0.000000 -2.997602e-15, 'Correlation between slope and intercept for Staphylococcus aureus with Clindamycin in 2019: -0.1038 (p-value: 0.6819)\n', {'2018'},            Country  intercept     slope
+1        Australia   9.333333 -4.500000
+2          Belgium  17.333333 -1.571429
+3           Brazil  21.058201 -0.317460
+4            Chile  10.666667 -1.333333
+5            China  30.632035 -3.753247
+6           France   1.425926  0.666667
+7          Germany  10.789242 -3.478836
+8           Israel   9.222222  3.500000
+9            Italy   5.297619  0.912698
+10    Korea, South  22.333333 -5.777778
+11          Kuwait  14.333333 -8.666667
+12          Mexico  25.888889 -9.000000
+13     Philippines   0.000000  0.000000
+14        Portugal   4.242424 -1.287879
+15           Spain   7.105263  0.921053
+16        Thailand  23.492063 -9.087302
+17          Turkey   4.717949  3.683761
+18  United Kingdom   0.000000  0.000000, 'Correlation between slope and intercept for Staphylococcus aureus with Clindamycin in 2018: -0.6526 (p-value: 0.0033)\n', {'2015'},            Country  intercept      slope
+1        Australia  17.333333  -2.166667
+2          Belgium  29.130768  -6.434911
+3           Brazil  38.396825  -4.253968
+4            Chile  29.305556 -10.000000
+5            China  47.536508  -1.850794
+6           France   9.573946  -4.529940
+7          Germany  28.644759  -6.009922
+8           Israel  19.011111  -6.300000
+9            Italy   1.250000   1.666667
+10    Korea, South  24.666667   3.166667
+11          Kuwait  20.090909   2.621212
+12          Mexico  61.839827  -9.826840
+13     Philippines   6.666667  -5.000000
+14        Portugal   7.611111   1.166667
+15           Spain   9.588871  -1.644958
+16        Thailand  58.571429  -7.817460
+17          Turkey   9.107226  -1.582751
+18  United Kingdom   3.888889  -2.222222, 'Correlation between slope and intercept for Staphylococcus aureus with Clindamycin in 2015: -0.5399 (p-value: 0.0207)\n']

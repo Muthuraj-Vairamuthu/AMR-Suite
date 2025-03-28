@@ -1,0 +1,79 @@
+[{'2015'},            Country  intercept         slope
+1          Belgium   3.284314  2.745098e+00
+2           Brazil  82.666667 -7.000000e+00
+3           Canada  42.664781  4.161926e+00
+4            Chile  78.964646  8.484848e+00
+5          Croatia  19.318182  3.787879e+00
+6           France   0.533333 -4.000000e-01
+7          Germany  10.076923  2.858974e+00
+8            Italy  16.053214  1.878723e+00
+9            Spain   0.969697  5.281385e-01
+10     Switzerland   0.000000  2.398082e-14
+11          Taiwan  36.805556  1.291667e+01
+12  United Kingdom  18.090909 -3.151515e+00
+13   United States  69.404730 -2.320794e+00, 'Correlation between slope and intercept for Enterococcus faecium with Vancomycin in 2015: -0.0249 (p-value: 0.9357)\n', {'2018'},            Country  intercept         slope
+1          Belgium   7.833333 -2.333333e+00
+2           Brazil  53.722222 -3.092593e+00
+3           Canada  45.632703 -8.040616e+00
+4            Chile  82.000000 -6.666667e-01
+5          Croatia  36.951872  4.839572e+00
+6           France   0.266667  8.000000e-01
+7          Germany  16.571429 -8.809524e-01
+8            Italy  26.910756  1.868631e+00
+9            Spain   2.727273 -9.090909e-01
+10     Switzerland   0.000000  1.398881e-14
+11          Taiwan  54.095238 -4.380952e+00
+12  United Kingdom  20.619270  3.536131e+00
+13   United States  64.948264  1.357500e+00, 'Correlation between slope and intercept for Enterococcus faecium with Vancomycin in 2018: -0.2008 (p-value: 0.5106)\n', {'2019'},            Country  intercept         slope
+1          Belgium   6.666667 -2.500000e+00
+2           Brazil  49.500000 -1.111111e-01
+3           Canada  40.003501 -8.447129e+00
+4            Chile  78.888889  4.444444e+00
+5          Croatia  43.707665 -6.060606e-01
+6           France   0.800000  1.066667e+00
+7          Germany  16.952381 -2.000000e+00
+8            Italy  29.492174 -1.088911e+00
+9            Spain   2.121212 -1.212121e+00
+10     Switzerland   0.000000  9.992007e-15
+11          Taiwan  50.730159 -2.730159e+00
+12  United Kingdom  23.470862  2.871795e+00
+13   United States  66.115890  7.291916e-01, 'Correlation between slope and intercept for Enterococcus faecium with Vancomycin in 2019: 0.1816 (p-value: 0.5527)\n', {'2017'},            Country  intercept         slope
+1          Belgium   8.500000 -1.166667e+00
+2           Brazil  66.185185 -1.088889e+01
+3           Canada  48.808258 -2.877640e+00
+4            Chile  89.333333 -8.666667e+00
+5          Croatia  31.203209  7.513369e+00
+6           France   0.000000 -1.998401e-14
+7          Germany  16.119048  3.809524e-01
+8            Italy  21.394328  6.476107e+00
+9            Spain   1.818182  9.090909e-01
+10     Switzerland   0.000000  1.998401e-14
+11          Taiwan  57.000000 -4.416667e+00
+12  United Kingdom  13.442113  6.184926e+00
+13   United States  65.774545  6.364151e-02, 'Correlation between slope and intercept for Enterococcus faecium with Vancomycin in 2017: -0.6231 (p-value: 0.0229)\n', {'2016'},            Country  intercept         slope
+1          Belgium   5.333333  3.500000e+00
+2           Brazil  79.222222 -1.566667e+01
+3           Canada  46.109567  2.916882e+00
+4            Chile  85.333333 -9.444444e-01
+5          Croatia  23.885918  8.400178e+00
+6           France   0.000000  2.997602e-14
+7          Germany  12.928571  3.785714e+00
+8            Italy  17.844794  4.595474e+00
+9            Spain   1.290043  9.264069e-01
+10     Switzerland   0.000000  2.997602e-14
+11          Taiwan  48.083333  7.444444e+00
+12  United Kingdom  15.272727  8.181818e-01
+13   United States  68.168932 -2.655131e+00, 'Correlation between slope and intercept for Enterococcus faecium with Vancomycin in 2016: -0.4784 (p-value: 0.0981)\n', {'2014'},            Country     intercept         slope
+1          Belgium  2.205882e+00  1.715686e+00
+2           Brazil  8.300000e+01  2.333333e+00
+3           Canada  4.034890e+01  3.345238e+00
+4            Chile  7.325758e+01  9.924242e+00
+5          Croatia  1.750000e+01  2.500000e+00
+6           France  9.333333e-01 -5.333333e-01
+7          Germany  8.551282e+00  2.256410e+00
+8            Italy  1.552162e+01 -4.733769e-01
+9            Spain  8.571429e-01 -2.857143e-01
+10     Switzerland -9.947598e-14  2.019912e-14
+11          Taiwan  2.894444e+01  1.155556e+01
+12  United Kingdom  2.057576e+01 -5.646465e+00
+13   United States  7.007934e+01 -4.852963e-01, 'Correlation between slope and intercept for Enterococcus faecium with Vancomycin in 2014: 0.3547 (p-value: 0.2344)\n']

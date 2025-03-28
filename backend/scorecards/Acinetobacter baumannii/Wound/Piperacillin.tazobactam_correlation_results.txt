@@ -1,0 +1,73 @@
+[{'2015'},            Country  intercept      slope
+1            Chile  48.333333 -13.333333
+2            China  93.030303   4.090909
+3   Czech Republic  22.002451   0.026961
+4           France   7.097643  -1.686869
+5          Germany  26.639250  -4.223665
+6          Hungary  72.666667  -4.500000
+7            Italy  88.472222  -3.730159
+8           Kuwait  87.574561  -4.359649
+9           Mexico  87.314815  -2.870370
+10    South Africa  48.571429 -12.619048
+11           Spain  37.256114  -2.297592
+12   United States  33.447108  -7.652301, 'Correlation between slope and intercept for Acinetobacter baumannii with Piperacillin.tazobactam in 2015: 0.1586 (p-value: 0.6225)\n', {'2018'},            Country  intercept      slope
+1            Chile  11.666667  -6.666667
+2            China  73.439394 -15.590909
+3   Czech Republic  32.426282  11.862179
+4           France  14.666667   8.166667
+5          Germany  20.254690   2.971861
+6          Hungary  75.666667  -3.277778
+7            Italy  84.309163   0.050505
+8           Kuwait  73.418546  -5.746867
+9           Mexico  78.000000  -3.500000
+10    South Africa  49.476190  15.452381
+11           Spain  42.846896   2.543274
+12   United States  25.204674   5.212227, 'Correlation between slope and intercept for Acinetobacter baumannii with Piperacillin.tazobactam in 2018: -0.4406 (p-value: 0.1517)\n', {'2019'},            Country  intercept      slope
+1            Chile   6.666667  -5.000000
+2            China  56.045455  -5.121212
+3   Czech Republic  41.556624  10.038462
+4           France  22.000000   6.000000
+5          Germany  22.485570   3.008658
+6          Hungary  75.888889  -7.333333
+7            Italy  85.566378  -2.148268
+8           Kuwait  67.814536  -7.157895
+9           Mexico  74.000000  -1.333333
+10    South Africa  62.333333  11.047619
+11           Spain  46.876666  -1.419928
+12   United States  29.781090   3.582418, 'Correlation between slope and intercept for Acinetobacter baumannii with Piperacillin.tazobactam in 2019: -0.2877 (p-value: 0.3645)\n', {'2017'},            Country  intercept      slope
+1            Chile  28.333333 -15.000000
+2            China  87.181818 -17.242424
+3   Czech Republic  24.769608   8.471405
+4           France   8.378788   6.424242
+5          Germany  19.962482   0.356421
+6          Hungary  70.722222   5.222222
+7            Italy  85.019841   0.694444
+8           Kuwait  77.200501   0.185464
+9           Mexico  80.833333  -3.333333
+10    South Africa  33.261905  17.047619
+11           Spain  38.239776   5.915402
+12   United States  23.718807   2.643368, 'Correlation between slope and intercept for Acinetobacter baumannii with Piperacillin.tazobactam in 2017: -0.3816 (p-value: 0.2209)\n', {'2016'},            Country  intercept      slope
+1            Chile  33.333333  -8.333333
+2            China  95.757576 -11.212121
+3   Czech Republic  22.187092   1.647059
+4           France   4.954545   3.954545
+5          Germany  23.421356  -3.134199
+6          Hungary  66.055556   8.166667
+7            Italy  84.761905   0.416667
+8           Kuwait  84.616541  -9.023183
+9           Mexico  82.870370  -2.777778
+10    South Africa  36.547619   0.119048
+11           Spain  34.431847   5.132187
+12   United States  26.053901  -2.317385, 'Correlation between slope and intercept for Acinetobacter baumannii with Piperacillin.tazobactam in 2016: -0.3982 (p-value: 0.1999)\n', {'2014'},            Country  intercept      slope
+1            Chile  58.333333  -8.333333
+2            China  88.333333   6.666667
+3   Czech Republic  22.215686  -1.000000
+4           France   9.511785  -3.703704
+5          Germany  28.787879  -2.777778
+6          Hungary  79.166667 -10.000000
+7            Italy  91.527778  -3.392857
+8           Kuwait  88.416667  -1.416667
+9           Mexico  90.000000  -3.611111
+10    South Africa  58.333333 -16.666667
+11           Spain  40.436630  -4.675458
+12   United States  38.950016  -7.034632, 'Correlation between slope and intercept for Acinetobacter baumannii with Piperacillin.tazobactam in 2014: 0.1161 (p-value: 0.7193)\n']

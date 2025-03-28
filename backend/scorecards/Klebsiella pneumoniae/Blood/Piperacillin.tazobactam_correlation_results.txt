@@ -1,0 +1,217 @@
+[{'2014'},            Country  intercept         slope
+1        Argentina  50.784462 -2.577187e+00
+2        Australia   1.992481  7.142857e-01
+3          Belgium  17.714992 -6.335362e-01
+4           Brazil  47.702509  3.656427e+00
+5           Canada   6.222779 -2.533940e-01
+6            Chile  32.294372 -8.852814e+00
+7            China  20.264447  9.169060e-01
+8         Colombia  36.497863  5.192308e-01
+9          Croatia  21.029170  9.235970e+00
+10  Czech Republic  23.942255 -4.961333e+00
+11         Denmark   6.208812  2.055556e+00
+12          France  15.356831  1.256120e+00
+13         Germany   8.686184  4.295221e-01
+14          Greece  70.779221  3.030303e-01
+15         Hungary  24.490741 -5.840456e-01
+16         Ireland  18.333333  6.190476e+00
+17          Israel  26.230159 -3.253968e+00
+18           Italy  45.580099  5.788102e+00
+19           Japan   1.754386  0.000000e+00
+20    Korea, South  10.601917  3.043771e+00
+21          Kuwait  50.473138 -5.723443e+00
+22          Mexico  24.828354 -7.015693e-01
+23     Netherlands   0.000000  1.998401e-14
+24          Panama  24.319131  1.528822e+00
+25     Philippines  30.063131  5.972222e+00
+26          Poland  44.962121 -2.451299e+00
+27        Portugal  30.618166 -1.425208e+00
+28    South Africa  46.587597 -8.105426e+00
+29           Spain  27.828134 -5.945654e-01
+30     Switzerland   0.303030  9.090909e-01
+31          Taiwan  20.026455 -6.349206e-01
+32        Thailand  36.427350 -1.071795e+01
+33          Turkey  57.055556  8.666667e+00
+34  United Kingdom   8.593000  2.343376e-01
+35   United States   6.202080 -5.595341e-01
+36       Venezuela  25.063492 -1.396825e+00, 'Correlation between slope and intercept for Klebsiella pneumoniae with Piperacillin.tazobactam in 2014: -0.1144 (p-value: 0.5066)\n', {'2016'},            Country  intercept      slope
+1        Argentina  47.044956   0.488328
+2        Australia   3.459111   1.494013
+3          Belgium  16.700761  -2.324989
+4           Brazil  54.325883   0.405134
+5           Canada   5.700435   0.727550
+6            Chile  22.445887  11.240981
+7            China  25.635147   5.458259
+8         Colombia  37.976132   2.635661
+9          Croatia  38.427519   6.177152
+10  Czech Republic  16.620777   0.815021
+11         Denmark   8.966929   2.029341
+12          France  18.360770   1.767561
+13         Germany  10.048709   2.477679
+14          Greece  70.847863  -3.134066
+15         Hungary  21.189344  -3.846498
+16         Ireland  27.490842  -3.424908
+17          Israel  21.636746  -1.648205
+18           Italy  54.331267  -2.530786
+19           Japan   1.942356   0.250627
+20    Korea, South  16.894069   1.871018
+21          Kuwait  36.417471  -5.913438
+22          Mexico  22.213202  -1.178273
+23     Netherlands   1.805556   3.333333
+24          Panama  24.536341  -6.521860
+25     Philippines  39.397824  -3.839355
+26          Poland  43.378892  -0.401202
+27        Portugal  28.095484   1.190719
+28    South Africa  33.225997   1.649540
+29           Spain  26.214633  -0.162032
+30     Switzerland   1.818182   0.909091
+31          Taiwan  18.849206   2.182540
+32        Thailand  19.747602   7.148788
+33          Turkey  72.027151  -0.088137
+34  United Kingdom   9.853042   3.750545
+35   United States   5.784480   1.730662
+36       Venezuela  23.301587   2.880952, 'Correlation between slope and intercept for Klebsiella pneumoniae with Piperacillin.tazobactam in 2016: -0.2675 (p-value: 0.1147)\n', {'2017'},            Country  intercept      slope
+1        Argentina  47.563026   4.747918
+2        Australia   4.696463   0.302608
+3          Belgium  14.294021   0.188908
+4           Brazil  55.637698   2.930636
+5           Canada   6.381814  -0.573665
+6            Chile  32.142857  14.285714
+7            China  29.973529   5.630731
+8         Colombia  40.951900   2.846836
+9          Croatia  45.923211   2.774892
+10  Czech Republic  17.403891   2.186110
+11         Denmark  11.391712  -1.464106
+12          France  19.518668   1.418005
+13         Germany  11.898717   0.064167
+14          Greece  68.458425  -3.467216
+15         Hungary  18.750218  -4.183246
+16         Ireland  25.636447  -8.163919
+17          Israel  18.665648  -2.186784
+18           Italy  53.736248  -3.880748
+19           Japan   2.130326   0.187970
+20    Korea, South  18.590743  -0.544789
+21          Kuwait  32.732268   1.030081
+22          Mexico  22.022656   0.454662
+23     Netherlands   4.166667   3.472222
+24          Panama  18.462332  -3.802644
+25     Philippines  36.558372  -8.021076
+26          Poland  41.839202   5.592842
+27        Portugal  29.801517   1.711890
+28    South Africa  35.485564   4.021796
+29           Spain  26.049144  -0.451948
+30     Switzerland   2.727273  -0.909091
+31          Taiwan  21.637466  -0.762204
+32        Thailand  26.454231   5.069129
+33          Turkey  72.135255  -4.841103
+34  United Kingdom  13.886918   1.255386
+35   United States   7.326605   2.566624
+36       Venezuela  24.981481   3.674603, 'Correlation between slope and intercept for Klebsiella pneumoniae with Piperacillin.tazobactam in 2017: -0.0332 (p-value: 0.8477)\n', {'2018'},            Country  intercept      slope
+1        Argentina  51.401472   6.097147
+2        Australia   4.814815  -0.767196
+3          Belgium  14.802603   1.591486
+4           Brazil  57.554236   3.010065
+5           Canada   5.705188  -1.569461
+6            Chile  45.248918  10.746753
+7            China  35.327740  -0.235049
+8         Colombia  42.469430   0.426565
+9          Croatia  49.097709   2.406139
+10  Czech Republic  19.599446   0.763642
+11         Denmark  10.301170  -0.192982
+12          France  20.776695   0.113363
+13         Germany  12.183705  -1.508293
+14          Greece  64.875641  -6.712821
+15         Hungary  14.744911  -1.724332
+16         Ireland  19.198718  -8.681319
+17          Israel  18.375494  -2.487473
+18           Italy  50.159199  -3.874063
+19           Japan   2.142857  -0.714286
+20    Korea, South  18.445887  -3.536797
+21          Kuwait  30.775891   7.176712
+22          Mexico  22.266097   4.935336
+23     Netherlands   7.083333   0.416667
+24          Panama  15.448514   2.321267
+25     Philippines  31.052350  -7.564103
+26          Poland  47.310223   4.704354
+27        Portugal  31.312775   3.256848
+28    South Africa  40.373755   9.166313
+29           Spain  25.094260  -0.726748
+30     Switzerland   2.121212  -1.212121
+31          Taiwan  21.542495  -0.173602
+32        Thailand  32.467207   7.010809
+33          Turkey  68.787274  -6.536675
+34  United Kingdom  15.376777   0.189725
+35   United States   9.322783   2.343062
+36       Venezuela  27.158730   1.806878, 'Correlation between slope and intercept for Klebsiella pneumoniae with Piperacillin.tazobactam in 2018: 0.0995 (p-value: 0.5637)\n', {'2019'},            Country  intercept     slope
+1        Argentina  56.642213  4.238858
+2        Australia   4.717813 -1.455026
+3          Belgium  15.466185  2.355115
+4           Brazil  59.817862  1.959905
+5           Canada   4.690332 -1.757217
+6            Chile  56.143579  4.884560
+7            China  35.854739 -2.242146
+8         Colombia  43.554361 -1.684066
+9          Croatia  50.766792  2.346754
+10  Czech Republic  19.888730  0.653718
+11         Denmark  10.450292  0.020468
+12          France  21.494107 -0.892946
+13         Germany  11.634051 -2.045614
+14          Greece  58.294872 -4.878205
+15         Hungary  12.193367  0.391159
+16         Ireland   9.899267 -3.658425
+17          Israel  15.636413 -0.163036
+18           Italy  45.300398 -1.156144
+19           Japan   1.666667 -0.952381
+20    Korea, South  15.507937 -3.079365
+21          Kuwait  36.673697  5.022385
+22          Mexico  25.962442  4.969595
+23     Netherlands   8.472222 -1.666667
+24          Panama  16.157655  4.702964
+25     Philippines  22.425214 -1.875000
+26          Poland  50.958621  3.627778
+27        Portugal  33.974945  2.737399
+28    South Africa  47.093643  9.494953
+29           Spain  24.929014 -1.354272
+30     Switzerland   1.212121 -0.909091
+31          Taiwan  21.130431  0.652362
+32        Thailand  38.923282  5.715863
+33          Turkey  62.591395 -3.706043
+34  United Kingdom  15.706236 -0.098348
+35   United States  11.837652  0.847049
+36       Venezuela  30.666667 -1.888889, 'Correlation between slope and intercept for Klebsiella pneumoniae with Piperacillin.tazobactam in 2019: 0.2943 (p-value: 0.0814)\n', {'2015'},            Country  intercept      slope
+1        Argentina  49.026855  -2.354011
+2        Australia   2.478418   0.981621
+3          Belgium  17.457590  -1.341509
+4           Brazil  50.520801   3.081346
+5           Canada   5.950905   0.119592
+6            Chile  26.933622  -2.099567
+7            China  22.114231   4.144429
+8         Colombia  36.899573   1.414530
+9          Croatia  28.151613  10.961650
+10  Czech Republic  20.772425  -2.579187
+11         Denmark   7.257814   2.147005
+12          France  16.446615   1.474020
+13         Germany   9.049872   1.299608
+14          Greece  71.245199   0.387834
+15         Hungary  23.511396  -1.777066
+16         Ireland  22.893773   5.586081
+17          Israel  24.422799  -2.326840
+18           Italy  49.794595   4.931677
+19           Japan   1.817043   0.187970
+20    Korea, South  13.238021   4.083398
+21          Kuwait  44.779202  -9.297924
+22          Mexico  23.775328  -1.757020
+23     Netherlands   0.416667   1.250000
+24          Panama  24.915065  -2.406015
+25     Philippines  34.709596   5.328283
+26          Poland  44.202814  -1.725974
+27        Portugal  29.432509  -0.726488
+28    South Africa  40.716801  -5.232025
+29           Spain  27.114870  -1.027644
+30     Switzerland   0.909091   1.212121
+31          Taiwan  19.444444   1.058201
+32        Thailand  28.641026  -5.102564
+33          Turkey  63.678363   7.979532
+34  United Kingdom   8.894468   2.382167
+35   United States   5.810711  -0.147489
+36       Venezuela  23.849206  -1.547619, 'Correlation between slope and intercept for Klebsiella pneumoniae with Piperacillin.tazobactam in 2015: -0.0036 (p-value: 0.9835)\n']

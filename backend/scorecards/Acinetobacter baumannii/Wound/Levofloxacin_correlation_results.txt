@@ -1,0 +1,73 @@
+[{'2018'},            Country  intercept      slope
+1            Chile  11.666667  -6.666667
+2            China  48.689394  -4.840909
+3   Czech Republic  31.092949  16.195513
+4           France  10.000000   4.761905
+5          Germany  18.968975   3.876623
+6          Hungary  62.333333   3.388889
+7            Italy  84.006133  -0.858586
+8           Kuwait  37.067669 -11.378446
+9           Mexico  81.333333  -6.000000
+10    South Africa  29.428571  19.357143
+11           Spain  41.674242   1.629615
+12   United States  25.635687   6.265646, 'Correlation between slope and intercept for Acinetobacter baumannii with Levofloxacin in 2018: -0.2802 (p-value: 0.3777)\n', {'2019'},            Country  intercept      slope
+1            Chile   6.666667  -5.000000
+2            China  39.462121   2.212121
+3   Czech Republic  44.445513  12.038462
+4           France  13.238095   5.904762
+5          Germany  22.437951   2.945166
+6          Hungary  68.111111  -0.666667
+7            Italy  84.657287  -3.360390
+8           Kuwait  25.007519  -5.754386
+9           Mexico  74.000000  -1.333333
+10    South Africa  48.000000  11.142857
+11           Spain  44.658559  -1.338095
+12   United States  31.673642   3.838828, 'Correlation between slope and intercept for Acinetobacter baumannii with Levofloxacin in 2019: -0.0688 (p-value: 0.8319)\n', {'2015'},            Country  intercept      slope
+1            Chile  45.000000 -10.833333
+2            China  76.363636  -4.242424
+3   Czech Republic  11.473039   0.203431
+4           France   9.438672  -0.580087
+5          Germany  18.922799  -2.246753
+6          Hungary  58.888889  -5.555556
+7            Italy  85.138889  -2.619048
+8           Kuwait  72.775689  -7.803885
+9           Mexico  88.981481   0.740741
+10    South Africa  20.380952 -10.523810
+11           Spain  36.788403  -1.283142
+12   United States  33.863359  -8.546084, 'Correlation between slope and intercept for Acinetobacter baumannii with Levofloxacin in 2015: 0.0133 (p-value: 0.9672)\n', {'2014'},            Country  intercept      slope
+1            Chile  52.500000  -5.000000
+2            China  73.333333   3.333333
+3   Czech Republic  14.294118  -4.666667
+4           France  10.425685  -0.793651
+5          Germany  20.227273  -1.944444
+6          Hungary  66.666667 -10.000000
+7            Italy  87.824074  -3.392857
+8           Kuwait  74.988095  -1.166667
+9           Mexico  88.796296  -0.277778
+10    South Africa  29.000000 -13.000000
+11           Spain  38.583639  -2.820513
+12   United States  40.474957  -7.958708, 'Correlation between slope and intercept for Acinetobacter baumannii with Levofloxacin in 2014: 0.2526 (p-value: 0.4283)\n', {'2016'},            Country  intercept      slope
+1            Chile  33.333333  -8.333333
+2            China  75.757576 -21.212121
+3   Czech Republic   9.330882   7.882353
+4           France   8.099567   0.337662
+5          Germany  17.432900  -0.194084
+6          Hungary  50.833333   9.166667
+7            Italy  82.169312   1.898148
+8           Kuwait  66.160401 -16.587719
+9           Mexico  87.777778  -3.796296
+10    South Africa  11.309524   5.357143
+11           Spain  35.559991   4.007799
+12   United States  25.340710  -1.056039, 'Correlation between slope and intercept for Acinetobacter baumannii with Levofloxacin in 2016: -0.4917 (p-value: 0.1045)\n', {'2017'},            Country  intercept      slope
+1            Chile  28.333333 -15.000000
+2            China  56.848485  -8.242424
+3   Czech Republic  18.867647  13.870098
+4           France   9.376623  -0.246753
+5          Germany  16.585859   2.492063
+6          Hungary  58.055556   4.444444
+7            Italy  83.538360   1.805556
+8           Kuwait  51.944862 -14.491228
+9           Mexico  85.185185  -5.555556
+10    South Africa  13.785714  18.142857
+11           Spain  38.060796   4.318940
+12   United States  24.357560   2.710320, 'Correlation between slope and intercept for Acinetobacter baumannii with Levofloxacin in 2017: -0.3770 (p-value: 0.2270)\n']

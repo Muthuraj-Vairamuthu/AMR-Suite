@@ -1,0 +1,97 @@
+[{'2015'},            Country  intercept      slope
+1          Belgium  37.222222  -6.388889
+2           Brazil  90.375350  -1.492997
+3           Canada   0.444444   1.333333
+4          Croatia  99.895833  -0.312500
+5   Czech Republic  11.111111   8.333333
+6           France  16.323755  -1.862069
+7          Germany  28.888889  -2.222222
+8           Greece  99.814815  -0.555556
+9            Italy  84.200501   3.661445
+10          Kuwait  41.592593  13.944444
+11          Mexico  82.801407   5.574134
+12          Poland  98.974359  -3.076923
+13        Portugal  87.018519  -5.888889
+14           Spain  42.022792  -3.792735
+15  United Kingdom   5.000000   6.666667
+16   United States  41.732143  -6.460317, 'Correlation between slope and intercept for Acinetobacter baumannii with Meropenem in 2015: -0.2280 (p-value: 0.3958)\n', {'2018'},            Country  intercept      slope
+1          Belgium  20.555556   0.555556
+2           Brazil  90.419880   1.968481
+3           Canada   4.277778  -0.500000
+4          Croatia  99.004020   0.137061
+5   Czech Republic  20.555556  -2.222222
+6           France  30.103852   3.939554
+7          Germany  37.777778  -1.944444
+8           Greece  97.916667  -0.694444
+9            Italy  92.451546  -2.776942
+10          Kuwait  69.323529   2.153595
+11          Mexico  92.577937  -0.271303
+12          Poland  76.041958  -5.953380
+13        Portugal  45.969697 -21.181818
+14           Spain  33.681319  -0.612027
+15  United Kingdom  12.000000  -5.666667
+16   United States  34.693209   1.118389, 'Correlation between slope and intercept for Acinetobacter baumannii with Meropenem in 2018: 0.0809 (p-value: 0.7659)\n', {'2019'},            Country  intercept      slope
+1          Belgium  22.777778  -1.111111
+2           Brazil  92.432990   0.643085
+3           Canada   3.944444  -0.666667
+4          Croatia  99.095395   0.182749
+5   Czech Republic  16.111111   1.111111
+6           France  36.924178  -3.271627
+7          Germany  41.111111 -10.000000
+8           Greece  97.453704  -0.925926
+9            Italy  90.137845  -2.370510
+10          Kuwait  68.628540   4.453159
+11          Mexico  91.890888   0.282977
+12          Poland  67.608392   2.102564
+13        Portugal  25.727273 -12.666667
+14           Spain  33.180708  -1.556777
+15  United Kingdom   7.666667  -3.666667
+16   United States  36.366738  -0.675357, 'Correlation between slope and intercept for Acinetobacter baumannii with Meropenem in 2019: 0.3372 (p-value: 0.2015)\n', {'2017'},            Country  intercept         slope
+1          Belgium  30.000000 -7.222222e+00
+2           Brazil  89.731247  1.625311e+00
+3           Canada   2.666667  1.333333e+00
+4          Croatia  99.375000 -3.125000e-01
+5   Czech Republic  19.444444  9.769963e-15
+6           France  20.163289  1.188355e+01
+7          Germany  34.166667  6.666667e+00
+8           Greece  98.888889 -5.555556e-01
+9            Italy  89.437622  1.867586e+00
+10          Kuwait  59.830065  7.267974e+00
+11          Mexico  91.510114  6.955262e-01
+12          Poland  86.815851 -1.356177e+01
+13        Portugal  66.484848 -2.190909e+01
+14           Spain  35.331197 -4.273504e-02
+15  United Kingdom  15.000000 -5.000000e+00
+16   United States  34.071084  1.735257e+00, 'Correlation between slope and intercept for Acinetobacter baumannii with Meropenem in 2017: -0.1996 (p-value: 0.4587)\n', {'2016'},            Country  intercept      slope
+1          Belgium  32.777778  -4.444444
+2           Brazil  88.624797   0.664308
+3           Canada   1.333333   1.777778
+4          Croatia  99.687500  -0.416667
+5   Czech Republic  18.333333  -0.555556
+6           France  15.276820   8.656130
+7          Germany  25.833333  10.833333
+8           Greece  99.444444  -0.740741
+9            Italy  86.580061   4.002228
+10          Kuwait  54.444444   5.370370
+11          Mexico  87.009387   3.471344
+12          Poland  94.801865 -10.466200
+13        Portugal  80.939394 -16.348485
+14           Spain  39.540598  -4.455128
+15  United Kingdom  10.000000   5.000000
+16   United States  34.407768  -0.067039, 'Correlation between slope and intercept for Acinetobacter baumannii with Meropenem in 2016: -0.3899 (p-value: 0.1354)\n', {'2014'},            Country   intercept         slope
+1          Belgium   40.277778  2.020606e-14
+2           Brazil   91.857143 -1.650794e+00
+3           Canada    0.000000 -9.992007e-15
+4          Croatia  100.000000  0.000000e+00
+5   Czech Republic    5.000000  6.666667e+00
+6           France   19.055556 -5.333333e+00
+7          Germany   33.333333 -5.555556e+00
+8           Greece  100.000000  0.000000e+00
+9            Italy   82.840922  3.283208e-01
+10          Kuwait   32.166667  9.000000e+00
+11          Mexico   79.856061  3.702381e+00
+12          Poland  100.000000  0.000000e+00
+13        Portugal   88.574074 -1.851852e-02
+14           Spain   43.379630 -1.574074e+00
+15  United Kingdom    1.666667  5.000000e+00
+16   United States   47.405423 -7.386905e+00, 'Correlation between slope and intercept for Acinetobacter baumannii with Meropenem in 2014: -0.1545 (p-value: 0.5678)\n']

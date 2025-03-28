@@ -1,0 +1,85 @@
+[{'2018'},            Country  intercept      slope
+1            China  67.872621  -0.008935
+2   Czech Republic  23.006026   0.943322
+3           France  33.888889  -3.359788
+4           Greece  93.939394   3.409091
+5            Italy  86.900132  -0.688492
+6            Japan   6.095238  -0.761905
+7     Korea, South  85.443240   1.733947
+8      Philippines  30.958333  -7.263889
+9         Portugal  53.777778 -21.444444
+10    South Africa  56.698214   9.867589
+11           Spain  58.987077  -0.584076
+12          Taiwan  36.527912   1.421920
+13        Thailand  66.292489   2.807975
+14   United States  58.252165   1.492605, 'Correlation between slope and intercept for Acinetobacter baumannii with Levofloxacin in 2018: 0.1954 (p-value: 0.5032)\n', {'2019'},            Country  intercept      slope
+1            China  70.645830  -4.803995
+2   Czech Republic  23.578190   1.288485
+3           France  31.507937  -3.492063
+4           Greece  97.878788   1.212121
+5            Italy  86.914683  -1.269841
+6            Japan   5.523810  -0.571429
+7     Korea, South  86.975607   1.537829
+8      Philippines  23.541667  -5.000000
+9         Portugal  33.444444 -13.000000
+10    South Africa  68.282682   2.675658
+11           Spain  60.738265  -3.439542
+12          Taiwan  38.015524   0.390967
+13        Thailand  68.783391   1.236934
+14   United States  60.444324  -0.139490, 'Correlation between slope and intercept for Acinetobacter baumannii with Levofloxacin in 2019: 0.3308 (p-value: 0.2481)\n', {'2015'},            Country  intercept     slope
+1            China  58.562734 -0.757641
+2   Czech Republic  18.200771  1.178482
+3           France  24.603175  5.952381
+4           Greece  94.696970 -3.409091
+5            Italy  87.903763 -1.390276
+6            Japan   5.333333  1.555556
+7     Korea, South  93.744896 -3.613798
+8      Philippines  48.498016 -2.878968
+9         Portugal  93.333333 -5.317460
+10    South Africa  31.624376  1.280053
+11           Spain  55.053857 -1.417481
+12          Taiwan  30.335710 -1.335413
+13        Thailand  57.957983 -0.055789
+14   United States  53.403431 -0.956094, 'Correlation between slope and intercept for Acinetobacter baumannii with Levofloxacin in 2015: -0.7601 (p-value: 0.0016)\n', {'2014'},            Country  intercept     slope
+1            China  60.326499 -3.643912
+2   Czech Republic  18.572147 -1.101056
+3           France  22.460317  3.492063
+4           Greece  97.500000 -3.333333
+5            Italy  89.420209 -2.044992
+6            Japan   4.370370  2.000000
+7     Korea, South  94.747475 -0.353535
+8      Philippines  48.976190  0.500000
+9         Portugal  95.158730 -0.238095
+10    South Africa  34.112554 -4.783550
+11           Spain  57.720430 -3.565114
+12          Taiwan  32.912953 -5.680333
+13        Thailand  58.805556 -3.313725
+14   United States  55.507037 -3.518196, 'Correlation between slope and intercept for Acinetobacter baumannii with Levofloxacin in 2014: -0.2194 (p-value: 0.4510)\n', {'2016'},            Country  intercept      slope
+1            China  58.136927   6.783758
+2   Czech Republic  18.100122   2.733415
+3           France  28.095238   5.714286
+4           Greece  91.590909   1.287879
+5            Italy  86.207977   1.104599
+6            Japan   6.592593   0.518519
+7     Korea, South  91.875304  -4.209678
+8      Philippines  45.819444  -8.523810
+9         Portugal  87.095238 -14.904762
+10    South Africa  31.809787  14.277179
+11           Spain  52.982505   5.701327
+12          Taiwan  27.823827   4.015152
+13        Thailand  57.605509   3.124650
+14   United States  51.595804   4.139052, 'Correlation between slope and intercept for Acinetobacter baumannii with Levofloxacin in 2016: -0.4370 (p-value: 0.1182)\n', {'2017'},            Country  intercept      slope
+1            China  61.745891   7.113424
+2   Czech Republic  20.657686   1.557919
+3           France  35.291005  -1.269841
+4           Greece  92.348485   2.424242
+5            Italy  86.669312   0.193122
+6            Japan   7.957672  -1.682540
+7     Korea, South  87.888852  -1.770571
+8      Philippines  39.551587  -7.267857
+9         Portugal  74.333333 -22.000000
+10    South Africa  43.283506  14.437948
+11           Spain  56.842395   2.404783
+12          Taiwan  29.546802   6.086929
+13        Thailand  58.926317   7.182779
+14   United States  54.439313   3.652162, 'Correlation between slope and intercept for Acinetobacter baumannii with Levofloxacin in 2017: -0.1611 (p-value: 0.5822)\n']

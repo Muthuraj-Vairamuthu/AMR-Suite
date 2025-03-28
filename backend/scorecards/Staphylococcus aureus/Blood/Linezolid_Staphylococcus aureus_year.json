@@ -1,0 +1,1094 @@
+[
+    {
+        "year": "2016",
+        "median_slope": 0.0,
+        "median_intercept": 0.0,
+        "countries": [
+            {
+                "name": "Argentina",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Australia",
+                "x": -9.8879238130678e-17,
+                "y": 1.0061396160665481e-16
+            },
+            {
+                "name": "Belgium",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Brazil",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Canada",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Chile",
+                "x": -9.8879238130678e-17,
+                "y": 0.0
+            },
+            {
+                "name": "China",
+                "x": -9.8879238130678e-17,
+                "y": 0.0
+            },
+            {
+                "name": "Colombia",
+                "x": -9.8879238130678e-17,
+                "y": 0.0
+            },
+            {
+                "name": "Croatia",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Czech Republic",
+                "x": -9.8879238130678e-17,
+                "y": 0.0
+            },
+            {
+                "name": "Denmark",
+                "x": -9.8879238130678e-17,
+                "y": 0.0
+            },
+            {
+                "name": "France",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Germany",
+                "x": -9.8879238130678e-17,
+                "y": 0.0
+            },
+            {
+                "name": "Greece",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Hungary",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Israel",
+                "x": -9.8879238130678e-17,
+                "y": 0.0
+            },
+            {
+                "name": "Italy",
+                "x": -9.8879238130678e-17,
+                "y": 0.0
+            },
+            {
+                "name": "Japan",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Korea, South",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Kuwait",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Mexico",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Netherlands",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Panama",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Philippines",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Poland",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Portugal",
+                "x": -9.8879238130678e-17,
+                "y": 0.0
+            },
+            {
+                "name": "South Africa",
+                "x": -9.8879238130678e-17,
+                "y": 0.0
+            },
+            {
+                "name": "Spain",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Switzerland",
+                "x": -9.8879238130678e-17,
+                "y": 0.0
+            },
+            {
+                "name": "Taiwan",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Thailand",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Turkey",
+                "x": -9.8879238130678e-17,
+                "y": 0.0
+            },
+            {
+                "name": "United Kingdom",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "United States",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Venezuela",
+                "x": 0.0,
+                "y": 0.0
+            }
+        ]
+    },
+    {
+        "year": "2017",
+        "median_slope": 0.0,
+        "median_intercept": 0.0,
+        "countries": [
+            {
+                "name": "Argentina",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Australia",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Belgium",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Brazil",
+                "x": 1.0061396160665481e-16,
+                "y": 0.0
+            },
+            {
+                "name": "Canada",
+                "x": 1.0061396160665481e-16,
+                "y": 0.0
+            },
+            {
+                "name": "Chile",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "China",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Colombia",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Croatia",
+                "x": 1.0061396160665481e-16,
+                "y": -1.0061396160665481e-16
+            },
+            {
+                "name": "Czech Republic",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Denmark",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "France",
+                "x": 1.0061396160665481e-16,
+                "y": -1.0061396160665481e-16
+            },
+            {
+                "name": "Germany",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Greece",
+                "x": 1.0061396160665481e-16,
+                "y": 0.0
+            },
+            {
+                "name": "Hungary",
+                "x": 1.0061396160665481e-16,
+                "y": -1.0061396160665481e-16
+            },
+            {
+                "name": "Israel",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Italy",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Japan",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Korea, South",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Kuwait",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Mexico",
+                "x": 1.0061396160665481e-16,
+                "y": 0.0
+            },
+            {
+                "name": "Netherlands",
+                "x": 1.0061396160665481e-16,
+                "y": 0.0
+            },
+            {
+                "name": "Panama",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Philippines",
+                "x": 1.0061396160665481e-16,
+                "y": 0.0
+            },
+            {
+                "name": "Poland",
+                "x": 1.0061396160665481e-16,
+                "y": 0.0
+            },
+            {
+                "name": "Portugal",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "South Africa",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Spain",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Switzerland",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Taiwan",
+                "x": 1.0061396160665481e-16,
+                "y": 0.0
+            },
+            {
+                "name": "Thailand",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Turkey",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "United Kingdom",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "United States",
+                "x": 1.0061396160665481e-16,
+                "y": 0.0
+            },
+            {
+                "name": "Venezuela",
+                "x": 1.0061396160665481e-16,
+                "y": 0.0
+            }
+        ]
+    },
+    {
+        "year": "2014",
+        "median_slope": 0.0,
+        "median_intercept": 0.0,
+        "countries": [
+            {
+                "name": "Argentina",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Australia",
+                "x": -1.0018028073766061e-16,
+                "y": 1.0061396160665481e-16
+            },
+            {
+                "name": "Belgium",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Brazil",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Canada",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Chile",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "China",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Colombia",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Croatia",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Czech Republic",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Denmark",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "France",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Germany",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Greece",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Hungary",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Israel",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Italy",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Japan",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Korea, South",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Kuwait",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Mexico",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Netherlands",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Panama",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Philippines",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Poland",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Portugal",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "South Africa",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Spain",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Switzerland",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Taiwan",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Thailand",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Turkey",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "United Kingdom",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "United States",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Venezuela",
+                "x": 0.0,
+                "y": 0.0
+            }
+        ]
+    },
+    {
+        "year": "2015",
+        "median_slope": 0.0,
+        "median_intercept": 0.0,
+        "countries": [
+            {
+                "name": "Argentina",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Australia",
+                "x": 0.0,
+                "y": 9.8879238130678e-17
+            },
+            {
+                "name": "Belgium",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Brazil",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Canada",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Chile",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "China",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Colombia",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Croatia",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Czech Republic",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Denmark",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "France",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Germany",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Greece",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Hungary",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Israel",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Italy",
+                "x": 0.0,
+                "y": 9.8879238130678e-17
+            },
+            {
+                "name": "Japan",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Korea, South",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Kuwait",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Mexico",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Netherlands",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Panama",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Philippines",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Poland",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Portugal",
+                "x": 0.0,
+                "y": 9.8879238130678e-17
+            },
+            {
+                "name": "South Africa",
+                "x": 0.0,
+                "y": 9.8879238130678e-17
+            },
+            {
+                "name": "Spain",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Switzerland",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Taiwan",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Thailand",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Turkey",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "United Kingdom",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "United States",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Venezuela",
+                "x": 0.0,
+                "y": 0.0
+            }
+        ]
+    },
+    {
+        "year": "2018",
+        "median_slope": 0.0,
+        "median_intercept": 0.0,
+        "countries": [
+            {
+                "name": "Argentina",
+                "x": 0.0,
+                "y": 9.8879238130678e-17
+            },
+            {
+                "name": "Australia",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Belgium",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Brazil",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Canada",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Chile",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "China",
+                "x": -1.0061396160665481e-16,
+                "y": 0.0
+            },
+            {
+                "name": "Colombia",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Croatia",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Czech Republic",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Denmark",
+                "x": 0.0,
+                "y": 9.8879238130678e-17
+            },
+            {
+                "name": "France",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Germany",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Greece",
+                "x": 0.0,
+                "y": 9.8879238130678e-17
+            },
+            {
+                "name": "Hungary",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Israel",
+                "x": 0.0,
+                "y": 9.8879238130678e-17
+            },
+            {
+                "name": "Italy",
+                "x": 0.0,
+                "y": 9.8879238130678e-17
+            },
+            {
+                "name": "Japan",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Korea, South",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Kuwait",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Mexico",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Netherlands",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Panama",
+                "x": 0.0,
+                "y": 9.8879238130678e-17
+            },
+            {
+                "name": "Philippines",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Poland",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Portugal",
+                "x": 0.0,
+                "y": 9.8879238130678e-17
+            },
+            {
+                "name": "South Africa",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Spain",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Switzerland",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Taiwan",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Thailand",
+                "x": 0.0,
+                "y": 9.8879238130678e-17
+            },
+            {
+                "name": "Turkey",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "United Kingdom",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "United States",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Venezuela",
+                "x": 0.0,
+                "y": 0.0
+            }
+        ]
+    },
+    {
+        "year": "2019",
+        "median_slope": 0.0,
+        "median_intercept": 0.0,
+        "countries": [
+            {
+                "name": "Argentina",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Australia",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Belgium",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Brazil",
+                "x": 9.8879238130678e-17,
+                "y": 0.0
+            },
+            {
+                "name": "Canada",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Chile",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "China",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Colombia",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Croatia",
+                "x": 9.8879238130678e-17,
+                "y": 0.0
+            },
+            {
+                "name": "Czech Republic",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Denmark",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "France",
+                "x": 9.8879238130678e-17,
+                "y": 0.0
+            },
+            {
+                "name": "Germany",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Greece",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Hungary",
+                "x": 9.8879238130678e-17,
+                "y": 0.0
+            },
+            {
+                "name": "Israel",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Italy",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Japan",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Korea, South",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Kuwait",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Mexico",
+                "x": 9.8879238130678e-17,
+                "y": 0.0
+            },
+            {
+                "name": "Netherlands",
+                "x": 9.8879238130678e-17,
+                "y": 0.0
+            },
+            {
+                "name": "Panama",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Philippines",
+                "x": 9.8879238130678e-17,
+                "y": 0.0
+            },
+            {
+                "name": "Poland",
+                "x": 9.8879238130678e-17,
+                "y": 0.0
+            },
+            {
+                "name": "Portugal",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "South Africa",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Spain",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Switzerland",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Taiwan",
+                "x": 9.8879238130678e-17,
+                "y": 0.0
+            },
+            {
+                "name": "Thailand",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Turkey",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "United Kingdom",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "United States",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Venezuela",
+                "x": 0.0,
+                "y": 0.0
+            }
+        ]
+    }
+]

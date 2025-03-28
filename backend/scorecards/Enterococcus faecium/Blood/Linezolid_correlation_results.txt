@@ -1,0 +1,79 @@
+[{'2014'},            Country     intercept         slope
+1          Belgium -1.998401e-15 -8.049117e-16
+2           Brazil -7.993606e-15  5.696832e-15
+3           Canada  2.997602e-15 -1.505740e-15
+4            Chile  1.000000e+01  1.333333e+01
+5          Croatia -3.996803e-15  4.100886e-15
+6           France  6.994405e-15 -4.503342e-15
+7          Germany -1.998401e-15  2.095546e-15
+8            Italy  2.997602e-15  7.008283e-16
+9            Spain  0.000000e+00  1.595946e-15
+10     Switzerland -1.998401e-15  2.900458e-15
+11          Taiwan  0.000000e+00  1.998401e-15
+12  United Kingdom  0.000000e+00  2.095546e-15
+13   United States  0.000000e+00  2.296774e-15, 'Correlation between slope and intercept for Enterococcus faecium with Linezolid in 2014: 1.0000 (p-value: 0.0000)\n', {'2016'},            Country     intercept         slope
+1          Belgium -1.998401e-15  0.000000e+00
+2           Brazil  1.000000e+00  1.333333e+00
+3           Canada -1.998401e-15 -1.998401e-15
+4            Chile  3.000000e+01 -1.000000e+01
+5          Croatia  6.994405e-15 -5.023759e-15
+6           France -1.998401e-15  1.998401e-15
+7          Germany  9.992007e-16 -1.998401e-15
+8            Italy  0.000000e+00 -9.992007e-16
+9            Spain  1.998401e-15 -1.998401e-15
+10     Switzerland  1.998401e-15 -1.998401e-15
+11          Taiwan  0.000000e+00 -9.992007e-16
+12  United Kingdom  9.992007e-16 -1.998401e-15
+13   United States  1.998401e-15 -1.998401e-15, 'Correlation between slope and intercept for Enterococcus faecium with Linezolid in 2016: -0.9866 (p-value: 0.0000)\n', {'2017'},            Country     intercept         slope
+1          Belgium  2.997602e-15 -4.996004e-15
+2           Brazil  2.000000e+00  1.000000e+00
+3           Canada  0.000000e+00 -2.997602e-15
+4            Chile  2.333333e+01 -1.333333e+01
+5          Croatia  5.995204e-15 -4.996004e-15
+6           France -9.992007e-16  1.998401e-15
+7          Germany  9.992007e-16 -1.998401e-15
+8            Italy  2.222222e-01  6.666667e-01
+9            Spain  1.998401e-15 -1.998401e-15
+10     Switzerland -9.992007e-16 -9.992007e-16
+11          Taiwan -9.992007e-16 -9.992007e-16
+12  United Kingdom  9.992007e-16 -1.998401e-15
+13   United States  1.998401e-15 -1.998401e-15, 'Correlation between slope and intercept for Enterococcus faecium with Linezolid in 2017: -0.9864 (p-value: 0.0000)\n', {'2018'},            Country     intercept         slope
+1          Belgium -9.992007e-16  1.998401e-15
+2           Brazil  3.000000e+00 -1.000000e+00
+3           Canada  0.000000e+00 -1.998401e-15
+4            Chile  1.333333e+01 -1.000000e+01
+5          Croatia  2.083333e-01  6.250000e-01
+6           France  3.996803e-15 -1.998401e-15
+7          Germany  0.000000e+00 -9.992007e-16
+8            Italy  7.619048e-01  1.174603e+00
+9            Spain  1.998401e-15  0.000000e+00
+10     Switzerland  0.000000e+00  9.992007e-16
+11          Taiwan -9.992007e-16  9.992007e-16
+12  United Kingdom -9.992007e-16  9.992007e-16
+13   United States  0.000000e+00  0.000000e+00, 'Correlation between slope and intercept for Enterococcus faecium with Linezolid in 2018: -0.9783 (p-value: 0.0000)\n', {'2019'},            Country     intercept         slope
+1          Belgium  9.992007e-16  0.000000e+00
+2           Brazil  2.333333e+00 -1.333333e+00
+3           Canada -9.992007e-16  9.992007e-16
+4            Chile  0.000000e+00  9.992007e-16
+5          Croatia  6.250000e-01  8.333333e-01
+6           France  0.000000e+00  9.992007e-16
+7          Germany -9.992007e-16  9.992007e-16
+8            Italy  1.619048e+00  1.047619e+00
+9            Spain  0.000000e+00  0.000000e+00
+10     Switzerland -9.992007e-16  9.992007e-16
+11          Taiwan  0.000000e+00  9.992007e-16
+12  United Kingdom  0.000000e+00  9.992007e-16
+13   United States  0.000000e+00  9.992007e-16, 'Correlation between slope and intercept for Enterococcus faecium with Linezolid in 2019: -0.2206 (p-value: 0.4689)\n', {'2015'},            Country     intercept         slope
+1          Belgium  9.992007e-16  9.992007e-16
+2           Brazil  3.333333e-01  1.000000e+00
+3           Canada  2.997602e-15  0.000000e+00
+4            Chile  2.000000e+01  1.000000e+01
+5          Croatia -1.998401e-15  3.996803e-15
+6           France  1.601497e-14 -6.994405e-15
+7          Germany  6.022960e-15  0.000000e+00
+8            Italy  6.022960e-15  9.992007e-16
+9            Spain  1.998401e-15  1.998401e-15
+10     Switzerland  1.998401e-15  1.998401e-15
+11          Taiwan  4.996004e-15  9.992007e-16
+12  United Kingdom  3.996803e-15  1.998401e-15
+13   United States  2.997602e-15  9.992007e-16, 'Correlation between slope and intercept for Enterococcus faecium with Linezolid in 2015: 0.9965 (p-value: 0.0000)\n']

@@ -1,0 +1,175 @@
+[{'2014'},            Country  intercept     slope
+1        Argentina  24.684345  2.612285
+2        Australia  29.363329 -3.025234
+3          Belgium  43.468295 -0.452979
+4           Brazil  50.716475 -4.050505
+5            Chile  48.719004  0.263618
+6            China  70.792338 -1.186800
+7         Colombia  18.299351  2.794273
+8   Czech Republic  49.176710 -2.264335
+9           France  25.662997  2.659829
+10         Germany  47.717544 -4.408365
+11          Greece  38.940453  0.242557
+12         Hungary  50.668453 -2.770094
+13          Israel  43.154362  0.787059
+14           Italy  45.062141 -2.355927
+15    Korea, South  49.749865  0.190817
+16          Kuwait  33.016693 -0.368398
+17          Mexico  57.558666 -9.800653
+18     Netherlands  21.290678  0.102564
+19     Philippines  13.143894  0.299194
+20          Poland  45.998498 -1.293644
+21        Portugal  56.785698 -2.923266
+22         Romania  54.287579  5.140780
+23    South Africa  39.886136 -5.206674
+24           Spain  50.173638 -4.033411
+25          Taiwan  58.206305 -0.339804
+26        Thailand  44.043469  0.426649
+27          Turkey  26.023199  0.106449
+28  United Kingdom  35.759159 -0.335715
+29       Venezuela  48.382590 -0.784860, 'Correlation between slope and intercept for Staphylococcus aureus with Erythromycin in 2014: -0.3926 (p-value: 0.0352)\n', {'2017'},            Country  intercept     slope
+1        Argentina  32.696160  2.089298
+2        Australia  18.047779 -2.385394
+3          Belgium  38.708127 -3.527110
+4           Brazil  44.343733  3.012042
+5            Chile  48.898446 -3.895449
+6            China  62.302672 -2.083150
+7         Colombia  27.922084  2.459386
+8   Czech Republic  34.121012 -4.632507
+9           France  29.860768 -0.144512
+10         Germany  28.133324 -5.709808
+11          Greece  33.564116 -3.393302
+12         Hungary  41.451011 -2.495950
+13          Israel  42.994116 -1.525133
+14           Italy  36.293884 -0.654716
+15    Korea, South  53.965963 -3.258064
+16          Kuwait  27.235340 -1.980481
+17          Mexico  33.844718 -0.620026
+18     Netherlands  18.101533  0.971900
+19     Philippines  12.748883  0.311642
+20          Poland  38.227228 -3.233019
+21        Portugal  43.177647 -5.951474
+22         Romania  61.034984 -4.614275
+23    South Africa  21.179287 -5.174366
+24           Spain  37.263243 -2.923355
+25          Taiwan  58.180627  1.096482
+26        Thailand  37.532308 -7.892568
+27          Turkey  20.259629 -3.349021
+28  United Kingdom  28.963803 -3.748658
+29       Venezuela  48.023903  0.273078, 'Correlation between slope and intercept for Staphylococcus aureus with Erythromycin in 2017: -0.0669 (p-value: 0.7302)\n', {'2016'},            Country  intercept     slope
+1        Argentina  30.231379  2.615275
+2        Australia  23.012952 -5.087526
+3          Belgium  41.220472 -2.614717
+4           Brazil  44.136886  0.695228
+5            Chile  50.421749 -1.663577
+6            China  66.666129 -4.380261
+7         Colombia  24.081605  4.088474
+8   Czech Republic  42.769072 -9.043306
+9           France  29.748388 -0.200374
+10         Germany  36.842839 -9.371471
+11          Greece  36.860720 -4.012483
+12         Hungary  45.530377 -3.768557
+13          Israel  44.074438 -1.171867
+14           Italy  39.716542 -3.551737
+15    Korea, South  51.483513  2.852217
+16          Kuwait  30.355955 -4.245889
+17          Mexico  39.374149 -4.765619
+18     Netherlands  21.391358 -3.411596
+19     Philippines  13.192357 -0.857667
+20          Poland  41.850147 -4.418354
+21        Portugal  49.460613 -6.644410
+22         Romania  63.118894 -2.949648
+23    South Africa  28.433180 -7.271115
+24           Spain  41.452329 -4.453429
+25          Taiwan  57.557930  1.139243
+26        Thailand  42.946342 -6.148643
+27          Turkey  23.940689 -4.787990
+28  United Kingdom  33.021285 -4.961300
+29       Venezuela  47.032225  1.356317, 'Correlation between slope and intercept for Staphylococcus aureus with Erythromycin in 2016: 0.0169 (p-value: 0.9306)\n', {'2019'},            Country  intercept     slope
+1        Argentina  35.448614 -0.443271
+2        Australia  14.794606  1.395444
+3          Belgium  33.520329 -0.895800
+4           Brazil  50.601794  2.257419
+5            Chile  37.184149 -5.733230
+6            China  60.016375  0.259240
+7         Colombia  31.403091 -1.176725
+8   Czech Republic  27.128060  1.155194
+9           France  31.386688  2.213990
+10         Germany  18.807180 -0.280977
+11          Greece  28.420361 -0.657544
+12         Hungary  36.176209 -1.529915
+13          Israel  39.711276 -1.436978
+14           Italy  37.566562  3.279428
+15    Korea, South  43.365963 -8.397940
+16          Kuwait  25.363003  2.632325
+17          Mexico  33.412821  0.165507
+18     Netherlands  18.193547  0.164835
+19     Philippines  13.031377  0.360000
+20          Poland  31.080031 -2.447552
+21        Portugal  32.772829 -1.923028
+22         Romania  52.399059 -0.213120
+23    South Africa  13.000238 -0.873632
+24           Spain  33.183472  0.414015
+25          Taiwan  60.732337 -0.196184
+26        Thailand  22.169860 -4.050802
+27          Turkey  15.910629  1.739510
+28  United Kingdom  22.868655  0.016162
+29       Venezuela  47.336893 -2.732468, 'Correlation between slope and intercept for Staphylococcus aureus with Erythromycin in 2019: -0.1553 (p-value: 0.4211)\n', {'2018'},            Country  intercept     slope
+1        Argentina  34.516655  0.593238
+2        Australia  16.017273 -0.287353
+3          Belgium  35.565208 -2.153675
+4           Brazil  46.798482  3.887509
+5            Chile  46.302901 -9.117230
+6            China  59.542924  0.401123
+7         Colombia  29.843515  0.665279
+8   Czech Republic  29.586201 -1.271148
+9           France  29.893549  1.984362
+10         Germany  22.179187 -2.582415
+11          Greece  29.593870 -1.201970
+12         Hungary  39.359805 -3.030859
+13          Israel  41.478417 -1.952669
+14           Italy  35.586194  2.867020
+15    Korea, South  51.656385 -9.949481
+16          Kuwait  24.992607  1.535542
+17          Mexico  32.505450  0.766898
+18     Netherlands  18.165212  0.518046
+19     Philippines  12.510598  0.707258
+20          Poland  34.251278 -3.233136
+21        Portugal  37.677009 -4.604448
+22         Romania  58.288586 -4.525683
+23    South Africa  16.196767 -2.900079
+24           Spain  34.370716 -0.764665
+25          Taiwan  58.799437  1.245898
+26        Thailand  30.843678 -8.347498
+27          Turkey  16.931187  0.020445
+28  United Kingdom  25.110474 -1.618103
+29       Venezuela  47.678788 -1.471573, 'Correlation between slope and intercept for Staphylococcus aureus with Erythromycin in 2018: -0.2201 (p-value: 0.2512)\n', {'2015'},            Country  intercept      slope
+1        Argentina  26.839984   3.219284
+2        Australia  27.062271  -4.444862
+3          Belgium  42.734450  -1.742006
+4           Brazil  47.708464  -3.630094
+5            Chile  49.867990   2.420072
+6            China  69.272361  -4.161452
+7         Colombia  20.403827   3.577517
+8   Czech Republic  47.163226  -5.928263
+9           France  27.421169   1.608826
+10         Germany  43.825581  -7.883063
+11          Greece  38.362819  -2.394357
+12         Hungary  48.803894  -3.270801
+13          Israel  43.672612   0.213907
+14           Italy  42.985195  -4.130509
+15    Korea, South  50.478604   3.481188
+16          Kuwait  32.245976  -2.429409
+17          Mexico  49.985215 -10.799678
+18     Netherlands  21.575286  -1.436776
+19     Philippines  13.227074  -0.337611
+20          Poland  44.626580  -2.948647
+21        Portugal  54.257361  -4.895848
+22         Romania  58.581769   4.909929
+23    South Africa  35.554397  -7.566157
+24           Spain  46.788833  -5.367943
+25          Taiwan  57.726535  -0.753797
+26        Thailand  44.300446  -0.801444
+27          Turkey  25.573094  -2.141303
+28  United Kingdom  35.044488  -2.465051
+29       Venezuela  47.642793  -0.510967, 'Correlation between slope and intercept for Staphylococcus aureus with Erythromycin in 2015: -0.1765 (p-value: 0.3598)\n']

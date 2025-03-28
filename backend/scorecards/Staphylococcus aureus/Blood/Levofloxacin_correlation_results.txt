@@ -1,0 +1,211 @@
+[{'2016'},            Country  intercept         slope
+1        Argentina   9.945562  1.085139e+00
+2        Australia  17.210256 -6.324359e+00
+3          Belgium  20.022003 -3.481481e+00
+4           Brazil  24.489630 -1.331115e+00
+5           Canada  16.428100  1.577637e+00
+6            Chile  35.726685 -1.068182e+01
+7            China  27.414871 -5.194055e+00
+8         Colombia   1.977734  3.260933e-01
+9          Croatia  17.913048 -1.553626e+00
+10  Czech Republic  38.044798 -8.782333e+00
+11         Denmark   0.000000  9.769963e-15
+12          France  28.782160 -8.549306e+00
+13         Germany  36.921165 -1.067562e+01
+14          Greece  28.765829  5.987177e-01
+15         Hungary  38.109844 -1.177472e+01
+16          Israel  38.512553 -8.665762e+00
+17           Italy  43.535668 -2.912533e+00
+18           Japan  54.234829 -6.470862e+00
+19    Korea, South  45.804687 -3.211778e-01
+20          Kuwait  25.977910  5.877546e+00
+21          Mexico  37.369107 -6.169046e+00
+22     Netherlands  13.833333 -1.277778e+00
+23          Panama  66.662393 -1.917949e+01
+24     Philippines   7.777531 -6.654915e-01
+25          Poland  21.661002 -5.589818e+00
+26        Portugal  50.028753 -1.241654e+01
+27    South Africa  33.733263 -1.414993e+01
+28           Spain  32.446199 -3.667438e+00
+29     Switzerland   3.386243  1.031746e+00
+30          Taiwan  30.012779  1.620789e+00
+31        Thailand  51.288978 -1.868242e+01
+32          Turkey  22.673248  4.877963e-01
+33  United Kingdom  22.121909 -6.713031e+00
+34   United States  37.728599 -3.129055e+00
+35       Venezuela  10.075882  3.122357e-01, 'Correlation between slope and intercept for Staphylococcus aureus with Levofloxacin in 2016: -0.6817 (p-value: 0.0000)\n', {'2017'},            Country  intercept      slope
+1        Argentina  11.305252  -2.231807
+2        Australia  11.316667  -4.383333
+3          Belgium  16.608728  -2.353106
+4           Brazil  23.537703  -1.665665
+5           Canada  17.319745   1.292042
+6            Chile  26.460175  -8.350608
+7            China  22.615225  -4.094581
+8         Colombia   2.446475  -0.398705
+9          Croatia  16.236559   3.268369
+10  Czech Republic  31.068502  -8.764825
+11         Denmark   0.083333   0.250000
+12          France  21.558574  -6.610925
+13         Germany  27.330741  -7.465930
+14          Greece  29.770333  -2.436720
+15         Hungary  26.060835  -5.829084
+16          Israel  31.029225  -6.345281
+17           Italy  40.783660  -4.344034
+18           Japan  47.513429  -1.094374
+19    Korea, South  45.736003  -8.718739
+20          Kuwait  30.382904   3.560752
+21          Mexico  31.032383  -4.036762
+22     Netherlands  12.772727  -0.848485
+23          Panama  52.604827 -19.941931
+24     Philippines   6.854624  -0.431150
+25          Poland  18.009900  -3.612916
+26        Portugal  39.222776 -11.235145
+27    South Africa  20.193816  -7.130268
+28           Spain  28.464958  -1.788458
+29     Switzerland   4.006211   2.494824
+30          Taiwan  32.065889   1.618105
+31        Thailand  33.634193 -10.575401
+32          Turkey  23.690485  -4.846058
+33  United Kingdom  15.029990  -4.860348
+34   United States  34.587762  -0.739552
+35       Venezuela  10.163511  -0.620330, 'Correlation between slope and intercept for Staphylococcus aureus with Levofloxacin in 2017: -0.5573 (p-value: 0.0005)\n', {'2014'},            Country     intercept         slope
+1        Argentina  1.064917e+01  6.240673e-02
+2        Australia  1.468974e+01  2.492308e+00
+3          Belgium  2.325760e+01 -1.437970e+00
+4           Brazil  3.551152e+01 -5.958188e+00
+5           Canada  1.990800e+01 -2.105825e+00
+6            Chile  5.152365e+01 -6.141475e+00
+7            China  4.143434e+01 -7.214550e+00
+8         Colombia  1.250707e+00  5.263158e-01
+9          Croatia  2.524779e+01 -4.331403e+00
+10  Czech Republic  4.869241e+01 -3.648210e+00
+11         Denmark -9.947598e-14  1.021405e-14
+12          France  3.747123e+01 -2.606304e+00
+13         Germany  4.748807e+01 -3.737466e+00
+14          Greece  2.646022e+01  1.371450e+00
+15         Hungary  5.934720e+01 -9.642193e+00
+16          Israel  5.805010e+01 -8.042044e+00
+17           Italy  4.773626e+01 -1.415704e+00
+18           Japan  6.056541e+01 -2.295935e+00
+19    Korea, South  3.474279e+01  6.777544e+00
+20          Kuwait  2.372487e+01  1.108466e+00
+21          Mexico  4.655055e+01 -3.982130e+00
+22     Netherlands  8.833333e+00  2.333333e+00
+23          Panama  5.433333e+01  1.300000e+01
+24     Philippines  9.833800e+00 -9.470919e-01
+25          Poland  1.941916e+01  2.634259e+00
+26        Portugal  6.333256e+01 -4.076743e+00
+27    South Africa  4.381352e+01 -2.314574e+00
+28           Spain  3.942188e+01 -3.785791e+00
+29     Switzerland  3.571429e+00 -3.968254e-01
+30          Taiwan  1.913462e+01  5.427350e+00
+31        Thailand  6.079415e+01 -2.239638e+00
+32          Turkey  1.440009e+01  5.447203e+00
+33  United Kingdom  2.553680e+01 -1.119711e+00
+34   United States  4.405892e+01 -2.857703e+00
+35       Venezuela  8.393293e+00  8.225108e-01, 'Correlation between slope and intercept for Staphylococcus aureus with Levofloxacin in 2014: -0.4019 (p-value: 0.0167)\n', {'2015'},            Country  intercept         slope
+1        Argentina  10.308714  4.723370e-01
+2        Australia  16.334615 -7.269231e-01
+3          Belgium  22.185994 -2.347556e+00
+4           Brazil  30.952065 -4.741077e+00
+5           Canada  18.175174 -1.845290e+00
+6            Chile  45.650269 -1.027795e+01
+7            China  35.925181 -7.208924e+00
+8         Colombia   1.551529  5.515875e-01
+9          Croatia  22.105562 -4.687242e+00
+10  Czech Republic  45.009271 -6.304627e+00
+11         Denmark   0.000000  9.769963e-15
+12          France  34.477389 -6.432812e+00
+13         Germany  43.874184 -7.885986e+00
+14          Greece  27.537971  2.303891e+00
+15         Hungary  50.988753 -1.493023e+01
+16          Israel  50.266266 -1.232378e+01
+17           Italy  46.204490 -2.564896e+00
+18           Japan  58.172235 -6.624498e+00
+19    Korea, South  39.815311  7.073312e+00
+20          Kuwait  23.929755  7.575188e-01
+21          Mexico  43.048215 -6.643415e+00
+22     Netherlands  11.222222  2.833333e+00
+23          Panama  61.611111  2.055556e+00
+24     Philippines   8.955670 -1.521722e+00
+25          Poland  20.987784  2.336514e-01
+26        Portugal  58.702855 -9.542746e+00
+27    South Africa  40.432582 -1.095667e+01
+28           Spain  36.727530 -4.295202e+00
+29     Switzerland   3.306878 -5.291005e-01
+30          Taiwan  23.780375  6.152380e+00
+31        Thailand  58.250727 -1.051428e+01
+32          Turkey  18.048932  4.859051e+00
+33  United Kingdom  24.626201 -3.753156e+00
+34   United States  41.502877 -4.586425e+00
+35       Venezuela   9.109519  9.942778e-01, 'Correlation between slope and intercept for Staphylococcus aureus with Levofloxacin in 2015: -0.5921 (p-value: 0.0002)\n', {'2019'},            Country  intercept     slope
+1        Argentina   7.721648 -1.809472
+2        Australia   4.692982  0.701754
+3          Belgium  11.901625 -1.055195
+4           Brazil  20.026141 -1.061041
+5           Canada  18.350348 -2.767359
+6            Chile  12.713149 -1.816778
+7            China  14.925005 -1.285465
+8         Colombia   1.659609 -0.478423
+9          Croatia  23.048777  3.969456
+10  Czech Republic  16.138810 -1.819508
+11         Denmark   0.717391  0.539855
+12          France  11.348488 -0.292325
+13         Germany  14.634078 -1.282451
+14          Greece  25.788385 -0.523268
+15         Hungary  17.621834 -0.998867
+16          Israel  22.791073 -0.135802
+17           Italy  33.670126 -2.067559
+18           Japan  46.608042  0.491696
+19    Korea, South  29.956097 -5.497098
+20          Kuwait  38.294950 -1.199466
+21          Mexico  25.755588  0.191825
+22     Netherlands   8.858586 -1.404040
+23          Panama  20.052036 -1.758170
+24     Philippines   7.099497  0.445946
+25          Poland  13.105199  3.275819
+26        Portugal  22.106376 -1.289124
+27    South Africa  10.328573  0.073022
+28           Spain  23.756971 -2.207462
+29     Switzerland   9.092212  1.615703
+30          Taiwan  31.787047 -1.515722
+31        Thailand  18.118484  2.478086
+32          Turkey  17.122106 -0.825920
+33  United Kingdom   6.240611 -2.087176
+34   United States  34.077720  0.446264
+35       Venezuela  10.832112  1.785104, 'Correlation between slope and intercept for Staphylococcus aureus with Levofloxacin in 2019: -0.1579 (p-value: 0.3650)\n', {'2018'},            Country  intercept      slope
+1        Argentina   9.336509  -2.238074
+2        Australia   7.475439  -1.823684
+3          Belgium  14.386266  -2.271580
+4           Brazil  21.898520  -1.823579
+5           Canada  17.633422  -0.669448
+6            Chile  17.362559  -4.271170
+7            China  18.839387  -3.450005
+8         Colombia   2.023089  -0.503798
+9          Croatia  18.770142   5.190354
+10  Czech Republic  22.454952  -5.544100
+11         Denmark   0.322464   0.550725
+12          France  14.514442  -2.511411
+13         Germany  19.522267  -4.143500
+14          Greece  28.446254  -2.408925
+15         Hungary  18.936827  -1.501512
+16          Israel  23.247863  -0.555556
+17           Italy  36.745992  -3.442250
+18           Japan  44.911727   1.596407
+19    Korea, South  39.693993 -10.324877
+20          Kuwait  32.782444   3.178843
+21          Mexico  27.075159  -1.101568
+22     Netherlands  12.484848  -3.075758
+23          Panama  33.049522 -10.542232
+24     Philippines   6.461851   0.541297
+25          Poland  14.670488   0.457691
+26        Portugal  27.943621  -5.192773
+27    South Africa  11.222002  -0.634185
+28           Spain  26.503507  -2.893274
+29     Switzerland   6.084568   2.984552
+30          Taiwan  33.485478  -1.539679
+31        Thailand  23.427146  -2.870371
+32          Turkey  20.348613  -3.291195
+33  United Kingdom  10.608534  -4.272503
+34   United States  33.124643   0.936428
+35       Venezuela  10.552059   0.742091, 'Correlation between slope and intercept for Staphylococcus aureus with Levofloxacin in 2018: -0.2843 (p-value: 0.0979)\n']

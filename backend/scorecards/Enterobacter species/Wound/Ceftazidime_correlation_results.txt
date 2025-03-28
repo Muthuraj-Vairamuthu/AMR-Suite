@@ -1,0 +1,133 @@
+[{'2016'},            Country  intercept     slope
+1        Australia  26.295752 -5.790033
+2          Belgium  22.068170  5.577354
+3           Canada  29.112554  3.342246
+4            China  23.217949 -3.230769
+5          Croatia  50.134615 -5.910256
+6   Czech Republic  16.671123 -0.524927
+7           France  32.520418 -0.928775
+8          Germany  18.295254  1.637075
+9          Hungary  22.843137 -4.649860
+10          Israel  27.413165 -0.235994
+11           Italy  33.023993 -2.972894
+12          Kuwait  24.472611  2.347236
+13     Netherlands  14.173789 -1.139601
+14     Philippines  29.901515 -6.848485
+15          Poland  51.877104  3.232323
+16        Portugal  16.744519 -0.043887
+17    South Africa   4.666667  1.222222
+18           Spain  20.060045  4.273181
+19     Switzerland  26.757576  3.606061
+20        Thailand  32.179894  2.151455
+21  United Kingdom   9.961014  4.054581
+22   United States  12.956653  1.228698, 'Correlation between slope and intercept for Enterobacter species with Ceftazidime in 2016: -0.2505 (p-value: 0.2608)\n', {'2017'},            Country  intercept      slope
+1        Australia  20.067810  -2.255719
+2          Belgium  26.419486   1.417609
+3           Canada  31.830490   0.374332
+4            China  19.940171  -3.705128
+5          Croatia  47.521368 -12.724359
+6   Czech Republic  15.421276  -0.282989
+7           France  32.299145  -0.937322
+8          Germany  19.403353   0.064374
+9          Hungary  16.447246   0.205415
+10          Israel  28.262372  -0.415966
+11           Italy  28.601465  -1.879670
+12          Kuwait  25.857245  -3.184778
+13     Netherlands  13.703704  -6.111111
+14     Philippines  25.959596  -9.053030
+15          Poland  53.383838  -2.264310
+16        Portugal  16.216178  -2.871243
+17    South Africa   5.666667   0.333333
+18           Spain  24.067023   4.786002
+19     Switzerland  30.333333  -3.393939
+20        Thailand  32.092593  -1.063492
+21  United Kingdom  14.941520   2.426901
+22   United States  14.023475   2.154323, 'Correlation between slope and intercept for Enterobacter species with Ceftazidime in 2017: -0.3880 (p-value: 0.0744)\n', {'2014'},            Country  intercept      slope
+1        Australia  30.218137  -1.763889
+2          Belgium  23.334189  -1.697168
+3           Canada  24.051506   2.420021
+4            China  25.384615  -1.089744
+5          Croatia  36.747863   8.833333
+6   Czech Republic  13.798206   1.613521
+7           France  32.081197   0.084656
+8          Germany  19.283479  -0.760305
+9          Hungary  48.569094 -14.411765
+10          Israel  23.897059   2.475490
+11           Italy  37.734615  -1.461905
+12          Kuwait  21.068487   1.721575
+13     Netherlands  20.455840  -1.880342
+14     Philippines  26.454545   4.845238
+15          Poland  49.138047   0.949495
+16        Portugal  20.438130  -2.179358
+17    South Africa   4.888889  -0.888889
+18           Spain  17.023868   0.385899
+19     Switzerland  17.969697   3.151515
+20        Thailand  39.987434  -5.136905
+21  United Kingdom   9.746589  -0.389864
+22   United States  11.069492   0.578064, 'Correlation between slope and intercept for Enterobacter species with Ceftazidime in 2014: -0.3068 (p-value: 0.1649)\n', {'2015'},            Country  intercept      slope
+1        Australia  28.961601  -4.075163
+2          Belgium  22.297389   1.081008
+3           Canada  25.938777   3.257274
+4            China  24.833333  -1.141026
+5          Croatia  43.673077   9.331197
+6   Czech Republic  15.000283   0.472937
+7           France  32.492742   1.045923
+8          Germany  18.694233  -0.112220
+9          Hungary  37.651727 -14.810924
+10          Israel  25.495098   2.000000
+11           Italy  35.658059  -5.453480
+12          Kuwait  22.387279   2.685204
+13     Netherlands  17.905983  -2.692308
+14     Philippines  28.730519   1.018398
+15          Poland  50.035354   2.193603
+16        Portugal  18.926375  -1.057088
+17    South Africa   4.777778   1.000000
+18           Spain  17.975697   2.779285
+19     Switzerland  21.878788   8.515152
+20        Thailand  36.351190  -3.515873
+21  United Kingdom   9.610136   2.319688
+22   United States  11.754432   1.046731, 'Correlation between slope and intercept for Enterobacter species with Ceftazidime in 2015: -0.1430 (p-value: 0.5256)\n', {'2018'},            Country  intercept      slope
+1        Australia  18.069444  -0.722222
+2          Belgium  27.362422  -4.344897
+3           Canada  32.749767  -0.653595
+4            China  19.333333   1.888889
+5          Croatia  40.972222  -4.861111
+6   Czech Republic  16.257015   2.769360
+7           France  32.666667   0.777778
+8          Germany  19.270523  -1.754121
+9          Hungary  14.705882  -2.450980
+10          Israel  26.743697  -1.865079
+11           Italy  25.878571   0.730952
+12          Kuwait  22.955840  -8.322650
+13     Netherlands   7.777778  -4.444444
+14     Philippines  19.583333   3.194444
+15          Poland  51.708754  -7.415825
+16        Portugal  13.659420  -6.226708
+17    South Africa   6.333333  -2.666667
+18           Spain  28.953554   3.431863
+19     Switzerland  28.909091 -13.424242
+20        Thailand  32.507937  -1.880952
+21  United Kingdom  16.929825   0.643275
+22   United States  15.997052   1.613019, 'Correlation between slope and intercept for Enterobacter species with Ceftazidime in 2018: -0.2363 (p-value: 0.2896)\n', {'2019'},            Country  intercept     slope
+1        Australia  16.722222  0.652778
+2          Belgium  25.526826 -6.553544
+3           Canada  32.857143 -1.031746
+4            China  18.833333  6.500000
+5          Croatia  30.972222  7.500000
+6   Czech Republic  18.434343  3.535354
+7           France  31.814815  3.222222
+8          Germany  18.558419 -2.576512
+9          Hungary  14.117647 -5.032680
+10          Israel  25.161064 -2.352941
+11           Italy  28.197619 -1.133333
+12          Kuwait  17.072650 -8.290598
+13     Netherlands   4.444444 -3.333333
+14     Philippines  19.166667  9.583333
+15          Poland  46.944444 -7.777778
+16        Portugal   8.690476 -5.476190
+17    South Africa   3.888889 -2.222222
+18           Spain  31.960521  2.273504
+19     Switzerland  16.424242 -9.818182
+20        Thailand  32.000000 -1.777778
+21  United Kingdom  17.504873 -0.165692
+22   United States  17.465338  0.895835, 'Correlation between slope and intercept for Enterobacter species with Ceftazidime in 2019: 0.0922 (p-value: 0.6834)\n']

@@ -1,0 +1,175 @@
+[{'2014'},            Country  intercept      slope
+1        Argentina  52.753399  -0.755149
+2        Australia  62.324010  -4.111439
+3          Belgium  56.821867  -3.446280
+4           Brazil  42.497620  -7.803591
+5            Chile  50.496025  -1.411915
+6            China  55.221800   2.649833
+7         Colombia  42.176531   2.187557
+8   Czech Republic  47.376719  -2.666078
+9           France  68.141399  -7.080879
+10         Germany  66.338342  -7.208517
+11          Greece  59.015133  -2.324302
+12         Hungary  56.485927  -2.791649
+13          Israel  57.762459  -2.595701
+14           Italy  62.758971  -3.870379
+15    Korea, South  58.977127   2.155980
+16          Kuwait  54.355685  -2.944962
+17          Mexico  53.322051 -10.884917
+18     Netherlands  22.149533   0.000000
+19     Philippines  62.004573  -2.524851
+20          Poland  43.802098  -1.952717
+21        Portugal  60.968397  -3.031215
+22         Romania  56.753875   6.525580
+23    South Africa  55.755185  -7.253058
+24           Spain  68.946135  -5.767161
+25          Taiwan  62.803458  -3.790388
+26        Thailand  39.044665   0.211280
+27          Turkey  49.327839   0.225719
+28  United Kingdom  60.297579  -4.136933
+29       Venezuela  58.587103   2.726207, 'Correlation between slope and intercept for Staphylococcus aureus with Oxacillin in 2014: -0.2791 (p-value: 0.1426)\n', {'2016'},            Country  intercept      slope
+1        Argentina  51.336161  -3.715036
+2        Australia  49.325844 -14.748831
+3          Belgium  44.437296 -12.623629
+4           Brazil  27.159613  -6.583391
+5            Chile  45.484123  -9.591241
+6            China  53.662596 -12.592528
+7         Colombia  50.047568   9.335262
+8   Czech Republic  39.108476 -10.908733
+9           France  50.840421 -15.189259
+10         Germany  46.910135 -19.925148
+11          Greece  48.872270 -10.358398
+12         Hungary  48.891136  -8.403969
+13          Israel  49.621120 -11.723455
+14           Italy  54.680479  -5.676521
+15    Korea, South  63.184219   2.003914
+16          Kuwait  46.147830  -6.600048
+17          Mexico  32.945921  -5.902624
+18     Netherlands  18.060228  -9.526480
+19     Philippines  54.899906  -7.344861
+20          Poland  36.426257  -9.877290
+21        Portugal  53.192785  -8.394562
+22         Romania  64.847253  -8.135315
+23    South Africa  38.571827 -13.772392
+24           Spain  52.782268 -15.046288
+25          Taiwan  51.444002  -9.417922
+26        Thailand  38.296391  -5.929071
+27          Turkey  45.782699  -5.659729
+28  United Kingdom  47.114600 -15.417637
+29       Venezuela  59.065999  -3.360169, 'Correlation between slope and intercept for Staphylococcus aureus with Oxacillin in 2016: 0.1520 (p-value: 0.4313)\n', {'2017'},            Country  intercept      slope
+1        Argentina  47.927448  -1.133756
+2        Australia  36.425954 -11.697418
+3          Belgium  33.263590 -12.169038
+4           Brazil  20.295673  -2.203126
+5            Chile  36.598129  -9.425093
+6            China  43.246596 -12.511089
+7         Colombia  57.661854   4.417613
+8   Czech Republic  29.079985  -7.769430
+9           France  36.128846  -7.323654
+10         Germany  28.578544 -12.865920
+11          Greece  40.180602  -8.071161
+12         Hungary  40.932407  -7.426392
+13          Israel  38.819426  -7.044965
+14           Italy  48.327951  -7.350112
+15    Korea, South  64.298685  -7.638818
+16          Kuwait  40.352223  -6.174811
+17          Mexico  25.816872  -1.295228
+18     Netherlands  10.478861  -3.454384
+19     Philippines  48.006330  -6.255558
+20          Poland  27.941436  -8.619992
+21        Portugal  45.248914  -8.149980
+22         Romania  59.160601 -11.081947
+23    South Africa  25.184600  -8.731686
+24           Spain  39.150178 -10.840428
+25          Taiwan  43.722189  -6.190779
+26        Thailand  32.676768  -7.775523
+27          Turkey  41.108836  -3.300385
+28  United Kingdom  33.310989 -12.032867
+29       Venezuela  57.191138 -10.319039, 'Correlation between slope and intercept for Staphylococcus aureus with Oxacillin in 2017: 0.0121 (p-value: 0.9503)\n', {'2019'},            Country  intercept     slope
+1        Argentina  44.399557 -0.333828
+2        Australia  18.368583  0.395382
+3          Belgium  14.067725 -2.786018
+4           Brazil  16.788475 -0.102139
+5            Chile  18.965812 -3.529915
+6            China  23.016883 -2.011272
+7         Colombia  63.199862 -3.147285
+8   Czech Republic  15.763497 -1.246697
+9           France  23.873437 -0.989383
+10         Germany   7.415702 -0.829912
+11          Greece  31.402846  3.227878
+12         Hungary  27.086699 -3.440171
+13          Israel  25.376024 -2.255629
+14           Italy  33.613455 -6.285646
+15    Korea, South  50.678326 -6.209753
+16          Kuwait  29.312882 -2.696031
+17          Mexico  23.874359 -1.282601
+18     Netherlands   5.714286  2.857143
+19     Philippines  38.779872  0.084795
+20          Poland  12.596737 -2.442890
+21        Portugal  30.543452 -2.936753
+22         Romania  38.311140 -3.360687
+23    South Africa  10.737514 -1.649701
+24           Spain  23.284837  0.741058
+25          Taiwan  37.557366  4.646788
+26        Thailand  17.215909 -4.318182
+27          Turkey  37.592431  0.745921
+28  United Kingdom  13.594493 -1.485000
+29       Venezuela  41.642713 -3.132468, 'Correlation between slope and intercept for Staphylococcus aureus with Oxacillin in 2019: -0.1870 (p-value: 0.3313)\n', {'2018'},            Country  intercept      slope
+1        Argentina  46.817204  -1.662408
+2        Australia  25.322636  -5.141453
+3          Belgium  21.052328  -6.766163
+4           Brazil  17.451537  -0.456234
+5            Chile  28.495726  -8.743590
+6            China  31.074750  -7.097168
+7         Colombia  62.908080  -1.371749
+8   Czech Republic  21.432701  -4.746152
+9           France  27.473446  -2.919486
+10         Germany  15.432161  -6.250710
+11          Greece  31.773946   0.802135
+12         Hungary  33.829720  -6.590385
+13          Israel  31.167765  -5.051304
+14           Italy  41.953101  -9.266928
+15    Korea, South  59.828784 -10.438514
+16          Kuwait  33.920442  -4.657984
+17          Mexico  23.549280  -0.351749
+18     Netherlands   5.523810   1.809524
+19     Philippines  42.455446  -2.924831
+20          Poland  19.391554  -6.113207
+21        Portugal  38.097936  -7.067019
+22         Romania  49.696117  -9.962518
+23    South Africa  16.156446  -4.798383
+24           Spain  28.381217  -3.647938
+25          Taiwan  37.556487   1.885814
+26        Thailand  26.553932  -9.001623
+27          Turkey  36.344114   1.229312
+28  United Kingdom  21.450095  -6.583533
+29       Venezuela  48.122944  -6.903896, 'Correlation between slope and intercept for Staphylococcus aureus with Oxacillin in 2018: -0.2048 (p-value: 0.2866)\n', {'2015'},            Country  intercept      slope
+1        Argentina  52.516571  -1.357946
+2        Australia  58.092470  -9.606653
+3          Belgium  52.603937  -9.213352
+4           Brazil  36.351562  -9.737838
+5            Chile  49.344675  -3.766335
+6            China  55.756070  -3.640758
+7         Colombia  44.789419   6.625251
+8   Czech Republic  44.792910  -6.774477
+9           France  61.843240 -13.671597
+10         Germany  59.688913 -14.835963
+11          Greece  55.464258  -8.336806
+12         Hungary  54.006101  -5.458199
+13          Israel  55.274561  -7.202621
+14           Italy  59.844422  -4.757444
+15    Korea, South  60.858364   4.432534
+16          Kuwait  51.430323  -5.379375
+17          Mexico  44.844898 -12.591457
+18     Netherlands  21.156802  -5.200415
+19     Philippines  59.606088  -5.218743
+20          Poland  41.581175  -5.517155
+21        Portugal  58.461720  -5.121140
+22         Romania  61.306281   4.003803
+23    South Africa  49.477606 -12.442945
+24           Spain  63.270694 -11.958215
+25          Taiwan  58.707601  -8.106411
+26        Thailand  39.444238  -0.487665
+27          Turkey  48.151349  -4.436230
+28  United Kingdom  56.012748 -10.147348
+29       Venezuela  59.259748   0.584302, 'Correlation between slope and intercept for Staphylococcus aureus with Oxacillin in 2015: -0.0613 (p-value: 0.7520)\n']

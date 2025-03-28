@@ -1,0 +1,109 @@
+[{'2014'},            Country     intercept         slope
+1          Belgium  1.071429e+00  7.142857e-01
+2           Canada  0.000000e+00  1.301043e-15
+3            China  5.275149e+00 -5.984503e-01
+4   Czech Republic  0.000000e+00  1.200429e-15
+5           France  9.992007e-15 -1.998401e-15
+6          Germany  0.000000e+00  2.012279e-16
+7          Ireland  0.000000e+00 -2.983724e-16
+8           Israel  9.090909e-01  1.212121e+00
+9            Italy  4.923634e+00 -1.435897e+00
+10           Japan  0.000000e+00  6.002143e-16
+11    Korea, South  0.000000e+00 -6.973588e-16
+12     Philippines  4.688889e+00 -1.155556e+00
+13           Spain  1.276596e+00 -4.255319e-01
+14          Taiwan  0.000000e+00 -5.967449e-16
+15        Thailand  0.000000e+00  1.006140e-16
+16          Turkey  0.000000e+00 -2.983724e-16
+17  United Kingdom  0.000000e+00  0.000000e+00
+18   United States  8.884079e-01  6.738817e-01, 'Correlation between slope and intercept for Enterobacter species with Meropenem in 2014: -0.6592 (p-value: 0.0029)\n', {'2016'},            Country     intercept         slope
+1          Belgium  2.011905e+00  3.809524e-01
+2           Canada  1.111111e+00  1.944444e+00
+3            China  4.261330e+00  1.407899e+00
+4   Czech Republic -9.992007e-15  9.992007e-16
+5           France  0.000000e+00 -9.992007e-16
+6          Germany  4.761905e-01  1.428571e+00
+7          Ireland  0.000000e+00  0.000000e+00
+8           Israel  2.727273e+00 -9.090909e-01
+9            Italy  2.040134e+00 -1.348941e+00
+10           Japan -9.992007e-15  9.992007e-16
+11    Korea, South  1.754386e-01  5.263158e-01
+12     Philippines  2.400000e+00 -8.000000e-01
+13           Spain  5.673759e-01 -4.255319e-01
+14          Taiwan -9.992007e-15  9.992007e-16
+15        Thailand  0.000000e+00  0.000000e+00
+16          Turkey  0.000000e+00  0.000000e+00
+17  United Kingdom  0.000000e+00  0.000000e+00
+18   United States  2.038142e+00  2.774853e-01, 'Correlation between slope and intercept for Enterobacter species with Meropenem in 2016: 0.0233 (p-value: 0.9269)\n', {'2017'},            Country     intercept         slope
+1          Belgium  2.476190e+00 -9.642857e-01
+2           Canada  2.500000e+00  1.944444e+00
+3            China  5.143723e+00  4.441558e-01
+4   Czech Republic -9.992007e-15  0.000000e+00
+5           France  0.000000e+00 -2.997602e-15
+6          Germany  1.428571e+00  1.904762e+00
+7          Ireland  0.000000e+00  0.000000e+00
+8           Israel  2.121212e+00 -1.212121e+00
+9            Italy  5.797101e-01 -4.347826e-01
+10           Japan  0.000000e+00  9.992007e-16
+11    Korea, South  7.223942e-01  1.289990e+00
+12     Philippines  1.866667e+00 -1.066667e+00
+13           Spain  0.000000e+00  9.992007e-16
+14          Taiwan  6.666667e-01  2.000000e+00
+15        Thailand  3.333333e-01  1.000000e+00
+16          Turkey  0.000000e+00  9.992007e-16
+17  United Kingdom  0.000000e+00  9.992007e-16
+18   United States  2.536937e+00  3.349635e-01, 'Correlation between slope and intercept for Enterobacter species with Meropenem in 2017: 0.0077 (p-value: 0.9759)\n', {'2019'},            Country  intercept         slope
+1          Belgium   0.952381 -7.142857e-01
+2           Canada   4.722222 -1.111111e+00
+3            China   6.176046 -1.060606e+00
+4   Czech Republic   0.000000 -1.797174e-15
+5           France   0.000000 -2.997602e-15
+6          Germany   4.761905  2.012279e-16
+7          Ireland   0.000000 -3.955170e-16
+8           Israel   0.000000  4.024558e-16
+9            Italy   0.000000  7.979728e-16
+10           Japan   0.000000 -2.012279e-16
+11    Korea, South   2.930857  5.882353e-01
+12     Philippines   0.000000 -2.983724e-16
+13           Spain   0.000000  4.024558e-16
+14          Taiwan   4.000000  2.000000e+00
+15        Thailand   2.000000  1.000000e+00
+16          Turkey   0.000000 -5.967449e-16
+17  United Kingdom   0.000000 -9.714451e-17
+18   United States   3.093493  3.555556e-01, 'Correlation between slope and intercept for Enterobacter species with Meropenem in 2019: -0.0531 (p-value: 0.8344)\n', {'2018'},            Country  intercept         slope
+1          Belgium   1.666667 -9.523810e-01
+2           Canada   4.166667  9.992007e-16
+3            China   5.331890  1.443001e-02
+4   Czech Republic   0.000000 -1.998401e-15
+5           France   0.000000 -2.997602e-15
+6          Germany   2.857143  1.428571e+00
+7          Ireland   0.000000 -9.992007e-16
+8           Israel   1.212121 -9.090909e-01
+9            Italy   0.000000  0.000000e+00
+10           Japan   0.000000 -9.992007e-16
+11    Korea, South   1.640867  1.310630e+00
+12     Philippines   1.066667 -8.000000e-01
+13           Spain   0.000000 -9.992007e-16
+14          Taiwan   2.000000  2.666667e+00
+15        Thailand   1.000000  1.333333e+00
+16          Turkey   0.000000  0.000000e+00
+17  United Kingdom   0.000000  0.000000e+00
+18   United States   2.758530  4.586301e-01, 'Correlation between slope and intercept for Enterobacter species with Meropenem in 2018: 0.1903 (p-value: 0.4494)\n', {'2015'},            Country     intercept         slope
+1          Belgium  1.464286e+00  7.023810e-01
+2           Canada  2.777778e-01  8.333333e-01
+3            China  4.650256e+00 -5.497855e-01
+4   Czech Republic  0.000000e+00  8.985868e-16
+5           France  9.992007e-15 -2.699230e-15
+6          Germany  0.000000e+00  1.006140e-16
+7          Ireland  0.000000e+00 -1.006140e-16
+8           Israel  1.818182e+00  9.090909e-01
+9            Italy  3.765886e+00 -1.960424e+00
+10           Japan  0.000000e+00  3.989864e-16
+11    Korea, South  0.000000e+00 -3.018419e-16
+12     Philippines  3.822222e+00 -8.666667e-01
+13           Spain  9.929078e-01 -5.673759e-01
+14          Taiwan  0.000000e+00  1.006140e-16
+15        Thailand  0.000000e+00  1.006140e-16
+16          Turkey  0.000000e+00 -3.018419e-16
+17  United Kingdom  0.000000e+00  0.000000e+00
+18   United States  1.369408e+00  6.762867e-01, 'Correlation between slope and intercept for Enterobacter species with Meropenem in 2015: -0.5196 (p-value: 0.0271)\n']

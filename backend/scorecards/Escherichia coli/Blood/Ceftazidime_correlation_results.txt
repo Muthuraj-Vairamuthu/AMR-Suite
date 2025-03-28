@@ -1,0 +1,211 @@
+[{'2018'},            Country  intercept     slope
+1        Argentina  19.304835 -1.720361
+2        Australia   6.538588 -1.054735
+3          Belgium   7.672620 -0.453059
+4           Brazil  14.543430  1.029359
+5           Canada   8.168620  0.343039
+6            Chile  27.656064 -3.415835
+7            China  30.435574  2.128875
+8         Colombia  24.532771 -0.577329
+9          Croatia  12.408256 -0.540713
+10  Czech Republic   9.135204 -1.890450
+11         Denmark   8.121964 -2.967442
+12          France   4.418524  0.944871
+13         Germany   6.746429  0.389403
+14          Greece   7.358983  1.971633
+15         Hungary   5.112221  0.709069
+16         Ireland   2.710893  0.761671
+17          Israel  23.344580  1.718233
+18           Italy  20.608687 -1.593288
+19           Japan   8.207283  0.336134
+20    Korea, South  19.412285 -1.775464
+21          Kuwait  27.039072 -3.009768
+22          Mexico  51.393059 -1.696537
+23     Netherlands   1.458333 -0.833333
+24          Panama  14.000000  6.226190
+25     Philippines  19.063492  0.702381
+26          Poland   8.086714  1.627874
+27        Portugal   8.434295  0.116876
+28    South Africa  14.163192  0.659948
+29           Spain   9.288874 -0.110181
+30     Switzerland   7.952899 -1.995342
+31          Taiwan  28.311918 -1.898041
+32          Turkey  38.615807  0.605914
+33  United Kingdom   4.623790 -0.418941
+34   United States  12.827780  1.212867
+35       Venezuela  26.079837  1.226107, 'Correlation between slope and intercept for Escherichia coli with Ceftazidime in 2018: -0.1614 (p-value: 0.3542)\n', {'2019'},            Country  intercept     slope
+1        Argentina  18.771258 -3.886774
+2        Australia   5.412698 -0.746032
+3          Belgium   7.413860 -0.734424
+4           Brazil  15.560187  0.064892
+5           Canada   8.745303  0.005582
+6            Chile  24.684108 -2.900433
+7            China  34.341025 -1.799469
+8         Colombia  24.389965 -1.634762
+9          Croatia  12.051627 -0.191606
+10  Czech Republic   7.645834 -1.353617
+11         Denmark   5.565891 -1.689922
+12          France   5.415735  0.340377
+13         Germany   7.429742  0.123173
+14          Greece   9.058506  1.927443
+15         Hungary   5.842158  0.854257
+16         Ireland   3.439803  0.368550
+17          Israel  25.171887  0.296028
+18           Italy  19.185702 -1.180228
+19           Japan   8.431373  0.448179
+20    Korea, South  18.185958 -1.883254
+21          Kuwait  24.172772 -1.565934
+22          Mexico  50.516340 -2.540206
+23     Netherlands   0.833333 -0.625000
+24          Panama  18.190476  7.190476
+25     Philippines  19.761905  0.714286
+26          Poland  10.050879  0.307302
+27        Portugal   8.739926 -0.358795
+28    South Africa  14.889971  0.122587
+29           Spain   9.527819 -0.552120
+30     Switzerland   6.560559 -2.225673
+31          Taiwan  27.442599 -1.883040
+32          Turkey  41.015484 -2.556197
+33  United Kingdom   4.537263 -0.777003
+34   United States  14.212564  0.184939
+35       Venezuela  27.232323  0.143939, 'Correlation between slope and intercept for Escherichia coli with Ceftazidime in 2019: -0.2991 (p-value: 0.0809)\n', {'2015'},            Country  intercept     slope
+1        Argentina   5.755018  5.104954
+2        Australia   1.934866  2.356322
+3          Belgium   5.197225  0.873111
+4           Brazil   7.901053  1.856951
+5           Canada   6.634840  0.390866
+6            Chile  19.936418  6.361833
+7            China  26.852534 -3.375240
+8         Colombia  17.942382  2.855699
+9          Croatia   8.507380  2.957393
+10  Czech Republic  13.038543 -0.877060
+11         Denmark   8.685998  1.624869
+12          France   5.509615 -1.171565
+13         Germany   8.318899 -0.580650
+14          Greece   3.769063  1.013072
+15         Hungary   8.111111 -1.916667
+16         Ireland   1.998874 -0.112613
+17          Israel  26.923648 -3.446227
+18           Italy  19.824207  1.333545
+19           Japan   5.904762  1.285714
+20    Korea, South  17.831431  0.980811
+21          Kuwait  30.166667  0.341270
+22          Mexico  45.569979  1.361610
+23     Netherlands   1.259921  0.357143
+24          Panama  24.309524 -3.559524
+25     Philippines  36.595238 -8.011905
+26          Poland  11.535778 -2.825185
+27        Portugal  10.298386 -1.202903
+28    South Africa   5.430447  4.187208
+29           Spain   7.304682  0.501835
+30     Switzerland  12.368742 -1.439255
+31          Taiwan  19.209255  5.102313
+32          Turkey  38.511182 -4.155099
+33  United Kingdom   4.040904 -0.160562
+34   United States   8.916475  0.473045
+35       Venezuela  23.380503  0.105868, 'Correlation between slope and intercept for Escherichia coli with Ceftazidime in 2015: -0.3763 (p-value: 0.0259)\n', {'2014'},            Country  intercept     slope
+1        Argentina   3.232020  2.070044
+2        Australia   0.689655  0.919540
+3          Belgium   4.826655  0.121156
+4           Brazil   7.201322  0.271144
+5           Canada   6.575310  0.197457
+6            Chile  15.749008  5.729167
+7            China  30.962007 -5.713720
+8         Colombia  16.620354  1.567535
+9          Croatia   6.449457  3.070175
+10  Czech Republic  13.554094 -0.309942
+11         Denmark   7.831243  1.459596
+12          France   6.097940 -0.697342
+13         Germany   8.690327  0.263543
+14          Greece   3.540305  0.435730
+15         Hungary   9.583333 -1.666667
+16         Ireland   2.055180 -0.084459
+17          Israel  29.368687 -3.055556
+18           Italy  18.873302  1.215688
+19           Japan   4.809524  1.333333
+20    Korea, South  17.236703  0.432701
+21          Kuwait  29.746032  0.547619
+22          Mexico  46.451622 -1.893247
+23     Netherlands   1.319444 -0.009921
+24          Panama  24.630952  1.809524
+25     Philippines  40.892857 -4.126984
+26          Poland  13.148841 -1.620448
+27        Portugal  11.390001 -1.071373
+28    South Africa   2.420827  3.639291
+29           Spain   7.286234 -0.033726
+30     Switzerland  13.649267 -1.039377
+31          Taiwan  16.389706  3.759992
+32          Turkey  42.032967 -5.448718
+33  United Kingdom   4.371184 -0.610501
+34   United States   8.832977 -0.309369
+35       Venezuela  22.709276  0.114469, 'Correlation between slope and intercept for Escherichia coli with Ceftazidime in 2014: -0.5287 (p-value: 0.0011)\n', {'2016'},            Country  intercept     slope
+1        Argentina  10.164233  5.717607
+2        Australia   3.735632  1.532567
+3          Belgium   5.883676  1.079612
+4           Brazil   9.298442  2.550461
+5           Canada   6.955276  1.054526
+6            Chile  25.604414  2.428771
+7            China  22.843511  5.145057
+8         Colombia  20.133809  2.819844
+9          Croatia  11.421542  1.410267
+10  Czech Republic  12.159698 -0.935843
+11         Denmark   9.737931  0.506897
+12          France   4.756277 -0.489950
+13         Germany   7.887055 -0.019041
+14          Greece   4.404223  1.774761
+15         Hungary   6.170940 -0.376068
+16         Ireland   2.004505  0.185811
+17          Israel  23.700238 -0.891266
+18           Italy  21.020904  0.169117
+19           Japan   7.428571  0.380952
+20    Korea, South  18.792196  0.889467
+21          Kuwait  30.357143 -1.190476
+22          Mexico  45.136849  4.470432
+23     Netherlands   1.250000  0.625000
+24          Panama  22.702381 -6.773810
+25     Philippines  29.940476 -6.488095
+26          Poland   9.465463 -0.970811
+27        Portugal   8.851756 -0.084720
+28    South Africa   9.878535  2.483369
+29           Spain   7.615781  1.342888
+30     Switzerland  10.496032 -0.654762
+31          Taiwan  23.767085  4.678057
+32          Turkey  34.900012  2.620318
+33  United Kingdom   3.781593  0.712912
+34   United States   9.449978  1.656063
+35       Venezuela  24.403972 -0.179864, 'Correlation between slope and intercept for Escherichia coli with Ceftazidime in 2016: 0.0138 (p-value: 0.9372)\n', {'2017'},            Country  intercept     slope
+1        Argentina  15.053427  4.843184
+2        Australia   5.053640  1.080460
+3          Belgium   6.675536  0.969910
+4           Brazil  11.689200  3.104669
+5           Canada   7.905986  0.240983
+6            Chile  29.022837 -1.370224
+7            China  26.450328  5.146427
+8         Colombia  23.325097  1.828728
+9          Croatia  13.115335 -1.061619
+10  Czech Republic  11.186698 -2.238399
+11         Denmark  10.370881 -3.055939
+12          France   4.141617  0.661654
+13         Germany   8.187957 -1.213095
+14          Greece   6.330431  0.673882
+15         Hungary   5.592186 -0.744811
+16         Ireland   2.194922  0.728911
+17          Israel  22.855021  1.579026
+18           Italy  21.266791 -0.824459
+19           Japan   7.714286  0.285714
+20    Korea, South  19.107443  0.120814
+21          Kuwait  29.047619 -2.738095
+22          Mexico  49.130519  2.150855
+23     Netherlands   1.875000 -0.625000
+24          Panama  18.345238 -3.476190
+25     Philippines  23.980159 -3.873016
+26          Poland   8.401677  0.587160
+27        Portugal   9.122169 -0.186480
+28    South Africa  12.252131  1.856471
+29           Spain   8.723785  0.567377
+30     Switzerland  10.408903 -1.809006
+31          Taiwan  27.924828 -0.539825
+32          Turkey  34.989693  4.278542
+33  United Kingdom   4.127904  0.508711
+34   United States  10.625826  2.418263
+35       Venezuela  23.524853  3.054447, 'Correlation between slope and intercept for Escherichia coli with Ceftazidime in 2017: 0.1598 (p-value: 0.3592)\n']

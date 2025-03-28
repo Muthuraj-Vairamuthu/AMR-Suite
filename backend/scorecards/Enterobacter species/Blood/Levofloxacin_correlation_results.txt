@@ -1,0 +1,139 @@
+[{'2018'},            Country     intercept         slope
+1          Belgium  9.092593e+00  3.851852e+00
+2           Brazil  1.896270e+01 -4.242424e+00
+3           Canada  4.988728e+00 -9.598546e-01
+4            Chile  7.944444e+00  6.888889e+00
+5         Colombia  7.967172e+00 -5.197811e-01
+6          Croatia  2.888889e+01 -1.666667e+01
+7           France  8.426791e+00 -2.038428e-01
+8          Germany  1.350731e+01 -3.081871e+00
+9           Greece  1.738462e+01 -2.760684e+00
+10          Israel  8.095238e+00  4.761905e-01
+11           Italy  1.184117e+01 -4.610591e+00
+12    Korea, South  2.194444e+01 -1.194444e+01
+13          Kuwait  5.925926e+00 -4.444444e+00
+14          Mexico  6.016992e+00  1.387877e+00
+15     Netherlands  1.111111e+00  3.333333e+00
+16          Panama  1.542593e+01  3.518519e-01
+17          Poland  2.925000e+01  1.777778e+00
+18        Portugal  4.833333e+00  3.333333e-01
+19           Spain  9.160052e+00 -1.437476e+00
+20     Switzerland  2.500000e+00  1.250000e+00
+21          Turkey -8.881784e-15 -9.992007e-16
+22  United Kingdom  2.111111e+00 -1.305556e+00
+23   United States  2.323077e+00  3.763388e-01, 'Correlation between slope and intercept for Enterobacter species with Levofloxacin in 2018: -0.5787 (p-value: 0.0038)\n', {'2019'},            Country     intercept         slope
+1          Belgium  1.314815e+01  1.388889e+00
+2           Brazil  1.731935e+01 -6.258741e+00
+3           Canada  4.052928e+00 -8.751940e-01
+4            Chile  1.311111e+01  5.166667e+00
+5         Colombia  7.504209e+00 -8.249158e-01
+6          Croatia  1.266667e+01 -8.666667e+00
+7           France  8.244848e+00 -9.191389e-03
+8          Germany  1.116667e+01 -3.861111e+00
+9           Greece  1.418519e+01  7.037037e-01
+10          Israel  8.095238e+00  2.857143e+00
+11           Italy  7.893622e+00 -2.872044e+00
+12    Korea, South  1.027778e+01 -6.666667e+00
+13          Kuwait -1.065814e-14  0.000000e+00
+14          Mexico  7.204969e+00  1.325052e+00
+15     Netherlands  3.333333e+00  4.444444e+00
+16          Panama  1.481481e+01  1.388889e+00
+17          Poland  3.333333e+01 -4.583333e+00
+18        Portugal  5.000000e+00  8.333333e-01
+19           Spain  8.028329e+00 -1.558623e+00
+20     Switzerland  4.166667e+00  9.992007e-16
+21          Turkey -1.065814e-14  0.000000e+00
+22  United Kingdom  8.888889e-01 -6.666667e-01
+23   United States  2.788677e+00  2.334007e-01, 'Correlation between slope and intercept for Enterobacter species with Levofloxacin in 2019: -0.3570 (p-value: 0.0945)\n', {'2015'},            Country  intercept         slope
+1          Belgium   6.330891 -1.540497e+00
+2           Brazil  18.016706 -1.379176e+00
+3           Canada   3.459837  1.172887e+00
+4            Chile  17.000000 -7.055556e+00
+5         Colombia   5.309764  6.262626e-01
+6          Croatia  20.000000  1.666667e+01
+7           France  12.620369 -1.822732e+00
+8          Germany   7.288081  2.446951e+00
+9           Greece  16.908573  2.990121e+00
+10          Israel   9.523810 -1.190476e+00
+11           Italy  14.409504  1.682731e+00
+12    Korea, South  20.833333  6.944444e+00
+13          Kuwait  22.222222 -1.388889e+00
+14          Mexico   4.495533  3.819213e-01
+15     Netherlands   0.000000  4.996004e-15
+16          Panama  26.888889 -2.296296e+00
+17          Poland  23.916667 -4.500000e+00
+18        Portugal  11.207094 -5.389016e+00
+19           Spain  12.003420 -6.883916e-01
+20     Switzerland   3.333333 -1.111111e+00
+21          Turkey   0.000000  0.000000e+00
+22  United Kingdom   2.310811  1.035285e+00
+23   United States   3.526925 -1.055319e+00, 'Correlation between slope and intercept for Enterobacter species with Levofloxacin in 2015: 0.0796 (p-value: 0.7182)\n', {'2014'},            Country     intercept         slope
+1          Belgium  8.135938e+00 -1.965812e+00
+2           Brazil  2.128788e+01 -4.318182e+00
+3           Canada  2.827123e+00  6.931480e-01
+4            Chile  2.027778e+01 -4.166667e+00
+5         Colombia  5.727273e+00 -1.000000e+00
+6          Croatia  8.666667e+00  1.488889e+01
+7           France  1.384512e+01 -1.234350e+00
+8          Germany  6.793512e+00 -4.702033e-01
+9           Greece  1.559041e+01  1.912754e+00
+10          Israel  1.261905e+01 -3.809524e+00
+11           Italy  1.324219e+01  2.020424e+00
+12    Korea, South  1.777778e+01  3.333333e+00
+13          Kuwait  2.027778e+01  3.425926e+00
+14          Mexico  3.809290e+00  7.910751e-01
+15     Netherlands  0.000000e+00 -9.992007e-16
+16          Panama  2.548148e+01  3.111111e+00
+17          Poland  2.791667e+01 -7.083333e+00
+18        Portugal  1.643669e+01 -7.554920e+00
+19           Spain  1.199594e+01  1.076657e-01
+20     Switzerland  3.703704e+00  1.998401e-15
+21          Turkey -9.947598e-14 -1.998401e-15
+22  United Kingdom  1.539790e+00  1.222222e+00
+23   United States  4.351353e+00 -1.044696e+00, 'Correlation between slope and intercept for Enterobacter species with Levofloxacin in 2014: -0.2226 (p-value: 0.3073)\n', {'2017'},            Country     intercept         slope
+1          Belgium  7.119048e+00  3.341270e+00
+2           Brazil  1.889277e+01  3.846154e-01
+3           Canada  4.989940e+00  1.031610e-01
+4            Chile  6.500000e+00  3.666667e+00
+5         Colombia  6.702441e+00  1.388889e+00
+6          Croatia  3.755556e+01 -1.288889e+01
+7           France  9.770847e+00 -1.227770e+00
+8          Germany  1.126378e+01  2.500627e+00
+9           Greece  1.970085e+01 -4.829060e+00
+10          Israel  8.571429e+00 -2.857143e+00
+11           Italy  1.546484e+01 -4.567102e+00
+12    Korea, South  2.666667e+01 -7.500000e+00
+13          Kuwait  1.370370e+01 -8.425926e+00
+14          Mexico  5.115970e+00  6.572039e-01
+15     Netherlands  8.881784e-15  0.000000e+00
+16          Panama  2.044444e+01 -3.944444e+00
+17          Poland  2.152778e+01  1.041667e+01
+18        Portugal  3.500000e+00  5.000000e-01
+19           Spain  1.032768e+01 -7.471072e-01
+20     Switzerland  2.731481e+00  5.555556e-01
+21          Turkey  0.000000e+00  9.992007e-16
+22  United Kingdom  3.332583e+00 -1.492492e+00
+23   United States  2.238385e+00  3.653023e-02, 'Correlation between slope and intercept for Enterobacter species with Levofloxacin in 2017: -0.5097 (p-value: 0.0130)\n', {'2016'},            Country  intercept         slope
+1          Belgium   4.555556  2.158730e+00
+2           Brazil  14.794095  5.308858e+00
+3           Canada   4.274919  4.545591e-01
+4            Chile  11.833333 -6.166667e+00
+5         Colombia   4.955808  1.651936e+00
+6          Croatia  34.000000  2.000000e+00
+7           France  10.782066 -1.213881e+00
+8          Germany   8.388471  3.275272e+00
+9           Greece  18.456654  1.043549e+00
+10          Israel   5.714286  2.857143e+00
+11           Italy  15.692078 -3.061282e-01
+12    Korea, South  24.166667  1.666667e+00
+13          Kuwait  22.500000 -1.027778e+01
+14          Mexico   5.505806 -1.847688e-02
+15     Netherlands   0.000000  2.997602e-15
+16          Panama  27.277778 -8.166667e+00
+17          Poland  20.166667  4.250000e+00
+18        Portugal   4.318841  9.420290e-02
+19           Spain  11.769093 -1.428755e+00
+20     Switzerland   3.009259 -2.314815e-01
+21          Turkey   0.000000 -1.998401e-15
+22  United Kingdom   3.213964 -1.103604e-01
+23   United States   2.494058 -3.178037e-02, 'Correlation between slope and intercept for Enterobacter species with Levofloxacin in 2016: -0.2262 (p-value: 0.2994)\n']

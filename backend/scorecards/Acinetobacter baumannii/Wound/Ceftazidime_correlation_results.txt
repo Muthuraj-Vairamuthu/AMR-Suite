@@ -1,0 +1,73 @@
+[{'2018'},            Country  intercept      slope
+1            Chile  11.666667  -6.666667
+2            China  73.439394 -15.590909
+3   Czech Republic  37.682692  15.131410
+4           France  14.666667   8.166667
+5          Germany  16.694805   2.735931
+6          Hungary  77.666667  -2.277778
+7            Italy  82.364719   1.161616
+8           Kuwait  73.418546  -5.746867
+9           Mexico  78.000000  -3.500000
+10    South Africa  47.333333  16.166667
+11           Spain  37.543273  -2.010737
+12   United States  21.743148   5.166446, 'Correlation between slope and intercept for Acinetobacter baumannii with Ceftazidime in 2018: -0.3803 (p-value: 0.2226)\n', {'2019'},            Country  intercept      slope
+1            Chile   6.666667  -5.000000
+2            China  56.045455  -5.121212
+3   Czech Republic  50.659188  11.064103
+4           France  22.000000   6.000000
+5          Germany  18.222944   3.734488
+6          Hungary  75.222222   0.666667
+7            Italy  84.455267  -1.314935
+8           Kuwait  67.814536  -7.157895
+9           Mexico  74.000000  -1.333333
+10    South Africa  60.666667  12.000000
+11           Spain  36.656523  -2.933194
+12   United States  27.116073   2.608059, 'Correlation between slope and intercept for Acinetobacter baumannii with Ceftazidime in 2019: -0.0868 (p-value: 0.7885)\n', {'2015'},            Country  intercept      slope
+1            Chile  48.333333 -13.333333
+2            China  93.030303   4.090909
+3   Czech Republic  33.963235  -6.737745
+4           France   9.084175  -2.040404
+5          Germany  24.313853  -3.422078
+6          Hungary  82.000000  -1.500000
+7            Italy  87.003968  -4.365079
+8           Kuwait  87.574561  -4.359649
+9           Mexico  83.981481  -1.759259
+10    South Africa  40.333333  -7.333333
+11           Spain  35.825173   0.992004
+12   United States  34.096182 -10.181393, 'Correlation between slope and intercept for Acinetobacter baumannii with Ceftazidime in 2015: 0.3292 (p-value: 0.2961)\n', {'2014'},            Country  intercept     slope
+1            Chile  58.333333 -8.333333
+2            China  88.333333  6.666667
+3   Czech Republic  39.764706 -7.666667
+4           France  11.245791 -2.962963
+5          Germany  25.232323 -0.944444
+6          Hungary  84.166667 -3.333333
+7            Italy  90.138889 -3.591270
+8           Kuwait  88.416667 -1.416667
+9           Mexico  86.296296 -3.611111
+10    South Africa  44.333333 -8.666667
+11           Spain  35.223932  0.900122
+12   United States  41.236973 -8.528139, 'Correlation between slope and intercept for Acinetobacter baumannii with Ceftazidime in 2014: 0.2743 (p-value: 0.3884)\n', {'2017'},            Country  intercept      slope
+1            Chile  28.333333 -15.000000
+2            China  87.181818 -17.242424
+3   Czech Republic  29.622549  10.040033
+4           France   9.590909   5.515152
+5          Germany  17.651515  -1.139971
+6          Hungary  78.388889  -3.444444
+7            Italy  82.519841   1.527778
+8           Kuwait  77.200501   0.185464
+9           Mexico  79.351852  -2.222222
+10    South Africa  31.833333  16.333333
+11           Spain  37.970846  -0.069907
+12   United States  21.606956   1.750418, 'Correlation between slope and intercept for Acinetobacter baumannii with Ceftazidime in 2017: -0.3865 (p-value: 0.2146)\n', {'2016'},            Country  intercept      slope
+1            Chile  33.333333  -8.333333
+2            China  95.757576 -11.212121
+3   Czech Republic  27.138072   1.794118
+4           France   7.075758   2.742424
+5          Germany  22.334055  -4.769120
+6          Hungary  79.055556   0.500000
+7            Italy  83.095238  -0.416667
+8           Kuwait  84.616541  -9.023183
+9           Mexico  80.277778  -1.296296
+10    South Africa  35.833333  -0.833333
+11           Spain  36.977686   1.443332
+12   United States  24.690409  -2.694755, 'Correlation between slope and intercept for Acinetobacter baumannii with Ceftazidime in 2016: -0.4199 (p-value: 0.1741)\n']

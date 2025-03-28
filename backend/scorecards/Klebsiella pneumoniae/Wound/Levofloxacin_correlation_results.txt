@@ -1,0 +1,151 @@
+[{'2019'},            Country  intercept         slope
+1        Argentina  59.722222  6.944444e+00
+2        Australia   5.751634  9.803922e-02
+3          Belgium  22.601399 -2.090909e+00
+4           Brazil  71.730159 -3.301587e+00
+5           Canada   4.017094  1.937322e+00
+6            China  46.111111 -7.698413e+00
+7         Colombia  24.222222 -8.444444e+00
+8   Czech Republic  24.153439 -4.126984e+00
+9           France  13.333333  2.500000e+00
+10         Germany   8.859993  5.024831e-01
+11          Greece  83.333333  1.190476e+01
+12          Israel  17.171569 -1.427288e+00
+13           Italy  60.882275 -4.300926e+00
+14          Kuwait  23.250620 -5.511442e+00
+15          Mexico  37.970085  6.111111e+00
+16     Netherlands   0.000000 -6.994405e-15
+17     Philippines  26.461324  1.443381e+00
+18          Poland  58.745098 -8.582633e+00
+19        Portugal  26.270153  4.607843e-01
+20    South Africa  23.712121  8.712121e-01
+21           Spain  25.848254 -1.609148e+00
+22          Taiwan  30.900178  8.177362e-01
+23        Thailand  44.930556 -1.000000e+01
+24          Turkey  53.582011  1.054762e+01
+25   United States  16.206211  3.610831e+00, 'Correlation between slope and intercept for Klebsiella pneumoniae with Levofloxacin in 2019: 0.1195 (p-value: 0.5693)\n', {'2018'},            Country  intercept         slope
+1        Argentina  58.333333  4.166667e+00
+2        Australia   8.077837 -1.687463e+00
+3          Belgium  24.106967 -1.843823e+00
+4           Brazil  71.698413 -9.761905e-01
+5           Canada   4.529915  3.418803e-01
+6            China  49.682540 -6.838624e+00
+7         Colombia  27.904762 -6.761905e+00
+8   Czech Republic  25.023718 -2.134191e+00
+9           France  10.462963  3.611111e+00
+10         Germany   9.029610 -6.338335e-02
+11          Greece  68.278388  1.783883e+01
+12          Israel  20.691786 -3.657932e+00
+13           Italy  60.956502 -2.024420e+00
+14          Kuwait  30.382134 -7.637717e+00
+15          Mexico  31.176687  8.428382e+00
+16     Netherlands   0.000000 -7.993606e-15
+17     Philippines  27.254785  7.037480e-01
+18          Poland  61.389356 -5.838936e+00
+19        Portugal  23.410675  2.375272e+00
+20    South Africa  24.767316 -7.251082e-01
+21           Spain  27.249453 -1.494073e+00
+22          Taiwan  27.298128  3.505348e+00
+23        Thailand  47.180556 -5.958333e+00
+24          Turkey  42.403319  1.390188e+01
+25   United States  12.506696  4.478838e+00, 'Correlation between slope and intercept for Klebsiella pneumoniae with Levofloxacin in 2018: 0.1219 (p-value: 0.5616)\n', {'2015'},            Country  intercept      slope
+1        Argentina  52.537037   4.324074
+2        Australia  19.136364  -2.792929
+3          Belgium  20.352437   3.883399
+4           Brazil  62.333333   2.000000
+5           Canada  24.589744  -9.564103
+6            China  28.538240  12.054113
+7         Colombia  22.875661   2.965608
+8   Czech Republic  23.359446  -1.614231
+9           France  12.391382  -1.162749
+10         Germany  13.147849  -2.251670
+11          Greece  66.303297  -9.872161
+12          Israel  27.173924  -0.832373
+13           Italy  54.525091   1.922688
+14          Kuwait  26.448065   6.311429
+15          Mexico  29.497406  -1.720414
+16     Netherlands  15.378917  -6.854701
+17     Philippines  48.428363  -9.777047
+18          Poland  55.572506  -0.250808
+19        Portugal  29.205307  -5.444244
+20    South Africa  24.190115   1.078644
+21           Spain  24.398299   1.610487
+22          Taiwan  30.563725  -4.142157
+23        Thailand  41.120773   1.103865
+24          Turkey  40.820587  -3.584416
+25   United States   8.629462  -0.367270, 'Correlation between slope and intercept for Klebsiella pneumoniae with Levofloxacin in 2015: -0.0825 (p-value: 0.6952)\n', {'2014'},            Country  intercept     slope
+1        Argentina  49.027778  4.444444
+2        Australia  19.373737  0.090909
+3          Belgium  17.125604  4.790660
+4           Brazil  61.888889 -1.000000
+5           Canada  30.444444 -7.185185
+6            China  22.348485  8.383838
+7         Colombia  21.650794  1.460317
+8   Czech Republic  25.917960 -4.389775
+9           France  11.933761  1.381766
+10         Germany  14.806891 -2.252583
+11          Greece  71.845299 -9.169231
+12          Israel  27.445342 -0.286301
+13           Italy  54.648699  0.114510
+14          Kuwait  22.143499  5.179901
+15          Mexico  29.805121  0.346327
+16     Netherlands  18.849003 -3.481481
+17     Philippines  52.752193 -5.833333
+18          Poland  57.735546 -4.681750
+19        Portugal  32.788721 -4.566138
+20    South Africa  22.648509  1.206710
+21           Spain  23.652814  0.498033
+22          Taiwan  31.944444 -2.083333
+23        Thailand  40.239130 -0.176329
+24          Turkey  39.389129  1.548822
+25   United States   9.329275 -1.050636, 'Correlation between slope and intercept for Klebsiella pneumoniae with Levofloxacin in 2014: -0.4054 (p-value: 0.0444)\n', {'2017'},            Country  intercept      slope
+1        Argentina  57.166667  -0.166667
+2        Australia  11.830660  -3.826203
+3          Belgium  25.869982  -0.975265
+4           Brazil  66.769841   5.587302
+5           Canada   8.131054  -3.712251
+6            China  49.621693  -1.253968
+7         Colombia  28.666667  -0.626984
+8   Czech Republic  22.421401   3.396388
+9           France  11.018519   0.995370
+10         Germany   9.384339  -0.824741
+11          Greece  55.518926  16.007326
+12          Israel  23.655842  -4.269009
+13           Italy  60.397589   1.333181
+14          Kuwait  32.940703  -3.300096
+15          Mexico  29.018147   4.452128
+16     Netherlands   4.102564  -3.076923
+17     Philippines  29.896332  -1.210128
+18          Poland  57.347806   3.927171
+19        Portugal  22.564617   1.828580
+20    South Africa  23.867845  -0.726912
+21           Spain  26.530885   0.940195
+22          Taiwan  25.122252   3.994207
+23        Thailand  44.388889   4.000000
+24          Turkey  36.168110   8.797739
+25   United States   9.698245   3.045791, 'Correlation between slope and intercept for Klebsiella pneumoniae with Levofloxacin in 2017: 0.4790 (p-value: 0.0154)\n', {'2016'},            Country  intercept      slope
+1        Argentina  56.592593  -1.055556
+2        Australia  17.621212  -6.151515
+3          Belgium  24.531857   0.287490
+4           Brazil  63.833333   4.277778
+5           Canada  15.547009  -7.418803
+6            China  38.771284  11.804473
+7         Colombia  25.526455   4.793651
+8   Czech Republic  20.591254   2.873769
+9           France  12.615741  -2.777778
+10         Germany  10.794919  -1.015250
+11          Greece  59.429548  -2.783394
+12          Israel  26.272603  -2.179245
+13           Italy  55.446276   5.304284
+14          Kuwait  31.740189   0.664972
+15          Mexico  28.962717  -1.785904
+16     Netherlands   9.846154  -6.102564
+17     Philippines  40.752924 -11.184211
+18          Poland  54.224556   6.520542
+19        Portugal  24.635456  -1.236730
+20    South Africa  26.106301  -0.880832
+21           Spain  25.419158   0.945642
+22          Taiwan  28.718954  -2.772876
+23        Thailand  43.611111   4.166667
+24          Turkey  42.336700  -6.193362
+25   United States   8.049837   1.392923, 'Correlation between slope and intercept for Klebsiella pneumoniae with Levofloxacin in 2016: 0.3128 (p-value: 0.1280)\n']

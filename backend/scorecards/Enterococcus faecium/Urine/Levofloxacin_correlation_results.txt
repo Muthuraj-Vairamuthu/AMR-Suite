@@ -1,0 +1,67 @@
+[{'2016'},           Country  intercept     slope
+1         Belgium  95.250000 -2.166667
+2          Canada  92.023810  1.071429
+3          France  69.595960 -3.939394
+4          Greece  92.500000 -5.833333
+5           Italy  82.521368  5.897436
+6    Korea, South  96.090226 -2.832080
+7        Portugal  96.000000 -2.000000
+8           Spain  97.777778  1.666667
+9     Switzerland  95.555556 -0.833333
+10       Thailand  95.028749 -3.631702
+11  United States  90.870284 -1.989122, 'Correlation between slope and intercept for Enterococcus faecium with Levofloxacin in 2016: -0.0409 (p-value: 0.9049)\n', {'2017'},           Country   intercept         slope
+1         Belgium   95.000000 -4.583333e+00
+2          Canada   92.738095  1.428571e+00
+3          France   66.303030 -2.808081e+00
+4          Greece   86.666667 -2.500000e+00
+5           Italy   86.452991  2.307692e+00
+6    Korea, South   93.352612 -3.932909e-01
+7        Portugal   94.000000  2.000000e+00
+8           Spain  100.000000 -2.997602e-15
+9     Switzerland   96.666667 -4.444444e+00
+10       Thailand   91.855478  4.226884e-01
+11  United States   90.112772 -1.870247e+00, 'Correlation between slope and intercept for Enterococcus faecium with Levofloxacin in 2017: 0.1296 (p-value: 0.7041)\n', {'2014'},           Country  intercept     slope
+1         Belgium  90.111111  4.222222
+2          Canada  95.378788 -2.121212
+3          France  69.448166  1.311005
+4          Greece  98.888889 -3.333333
+5           Italy  86.888889 -3.222222
+6    Korea, South  97.968254 -0.539683
+7        Portugal  99.333333 -2.000000
+8           Spain  95.000000  1.666667
+9     Switzerland  92.500000  2.500000
+10       Thailand  99.333333 -2.000000
+11  United States  89.526602  1.047340, 'Correlation between slope and intercept for Enterococcus faecium with Levofloxacin in 2014: -0.3636 (p-value: 0.2717)\n', {'2015'},           Country  intercept     slope
+1         Belgium  92.694444  3.083333
+2          Canada  93.787879 -1.590909
+3          France  69.820308 -1.405635
+4          Greece  96.666667 -4.444444
+5           Italy  84.333333 -1.444444
+6    Korea, South  97.331662 -2.290727
+7        Portugal  98.000000 -2.666667
+8           Spain  96.111111  2.222222
+9     Switzerland  94.166667  3.333333
+10       Thailand  97.743590 -3.435897
+11  United States  90.439475  1.282817, 'Correlation between slope and intercept for Enterococcus faecium with Levofloxacin in 2015: -0.0594 (p-value: 0.8622)\n', {'2019'},           Country  intercept         slope
+1         Belgium  88.750000  1.666667e+00
+2          Canada  95.238095 -3.996803e-15
+3          France  65.111111  3.851852e+00
+4          Greece  80.222222 -1.833333e+00
+5           Italy  89.102564 -5.555556e+00
+6    Korea, South  94.100636  2.062849e+00
+7        Portugal  94.000000 -2.444444e+00
+8           Spain  96.666667 -4.444444e+00
+9     Switzerland  88.888889 -2.997602e-15
+10       Thailand  93.518260  3.025641e+00
+11  United States  84.534893 -1.408090e+00, 'Correlation between slope and intercept for Enterococcus faecium with Levofloxacin in 2019: -0.3531 (p-value: 0.2868)\n', {'2018'},           Country  intercept     slope
+1         Belgium  91.250000 -1.250000
+2          Canada  93.809524  1.071429
+3          France  63.993266  2.282828
+4          Greece  84.055556 -3.388889
+5           Italy  87.905983 -1.880342
+6    Korea, South  92.739541  1.931752
+7        Portugal  94.222222 -0.666667
+8           Spain  98.888889 -3.333333
+9     Switzerland  93.333333 -3.333333
+10       Thailand  91.813520  2.829837
+11  United States  88.171013 -2.986306, 'Correlation between slope and intercept for Enterococcus faecium with Levofloxacin in 2018: -0.3046 (p-value: 0.3625)\n']

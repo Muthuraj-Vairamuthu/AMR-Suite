@@ -1,0 +1,59 @@
+[{'2015'},            Country     intercept         slope
+1        Australia  0.000000e+00  1.998401e-15
+2          Belgium  1.333333e+00  0.000000e+00
+3           Brazil  0.000000e+00 -2.997602e-15
+4           Canada  9.769963e-15  0.000000e+00
+5            Chile  9.769963e-15 -3.996803e-15
+6            China  1.222438e+01  2.380952e+00
+7         Colombia  0.000000e+00  3.996803e-15
+8   Czech Republic  9.769963e-15 -6.994405e-15
+9           France  0.000000e+00  9.992007e-16
+10         Germany  0.000000e+00  1.998401e-15
+11          Greece  0.000000e+00 -1.998401e-15
+12         Hungary  0.000000e+00 -2.997602e-15
+13          Israel  0.000000e+00  9.992007e-16
+14           Italy  0.000000e+00 -2.997602e-15
+15           Japan  2.068413e+01 -1.468254e+00
+16    Korea, South  1.574074e+01  5.555556e+00
+17          Kuwait  9.769963e-15 -1.199041e-14
+18          Mexico  9.769963e-15 -1.199041e-14
+19     Philippines  0.000000e+00 -1.998401e-15
+20          Poland  0.000000e+00  0.000000e+00
+21        Portugal  1.872202e+00 -4.273504e-01
+22    South Africa  0.000000e+00 -3.996803e-15
+23           Spain  0.000000e+00 -2.997602e-15
+24          Taiwan  2.222222e+00  1.666667e+00
+25        Thailand  3.052503e+01  1.465201e+00
+26          Turkey  7.668998e+00  1.282051e+00
+27  United Kingdom  0.000000e+00 -1.998401e-15
+28   United States  3.831418e-01 -5.747126e-01
+29       Venezuela  0.000000e+00 -9.992007e-16, 'Correlation between slope and intercept for Staphylococcus aureus with Minocycline in 2015: 0.4392 (p-value: 0.0172)\n', {'2014'},            Country     intercept         slope
+1        Australia  0.000000e+00  1.998401e-15
+2          Belgium  1.333333e+00  0.000000e+00
+3           Brazil -9.769963e-15  4.996004e-15
+4           Canada  1.021405e-14  0.000000e+00
+5            Chile -9.769963e-15  9.992007e-16
+6            China  1.047835e+01  1.904762e+00
+7         Colombia  0.000000e+00 -2.997602e-15
+8   Czech Republic  0.000000e+00  1.998401e-15
+9           France  0.000000e+00 -3.996803e-15
+10         Germany -9.769963e-15  3.996803e-15
+11          Greece  1.021405e-14 -1.998401e-15
+12         Hungary  1.021405e-14 -4.996004e-15
+13          Israel -9.769963e-15  3.996803e-15
+14           Italy  0.000000e+00  1.998401e-15
+15           Japan  2.176085e+01 -1.174603e+00
+16    Korea, South  1.166667e+01  4.444444e+00
+17          Kuwait  0.000000e+00  1.998401e-15
+18          Mexico  0.000000e+00 -4.996004e-15
+19     Philippines  0.000000e+00  1.998401e-15
+20          Poland  0.000000e+00 -9.992007e-16
+21        Portugal  2.185592e+00 -3.418803e-01
+22    South Africa  0.000000e+00  0.000000e+00
+23           Spain  0.000000e+00  0.000000e+00
+24          Taiwan  1.000000e+00  1.333333e+00
+25        Thailand  2.945055e+01  1.172161e+00
+26          Turkey  6.728827e+00  1.025641e+00
+27  United Kingdom  0.000000e+00  1.998401e-15
+28   United States  8.045977e-01 -4.597701e-01
+29       Venezuela  0.000000e+00  9.992007e-16, 'Correlation between slope and intercept for Staphylococcus aureus with Minocycline in 2014: 0.3328 (p-value: 0.0777)\n']

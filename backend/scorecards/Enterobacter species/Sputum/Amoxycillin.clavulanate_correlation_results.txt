@@ -1,0 +1,109 @@
+[{'2016'},            Country  intercept     slope
+1          Belgium  93.451770 -3.878510
+2           Canada  89.500000 -4.555556
+3            China  94.872320 -1.663135
+4   Czech Republic  98.101504 -2.520886
+5           France  96.672840 -3.962963
+6          Germany  91.253968 -1.873016
+7          Ireland  96.753247 -2.813853
+8           Israel  95.537879 -3.424242
+9            Italy  91.307497 -3.689433
+10           Japan  97.380952 -1.904762
+11    Korea, South  92.419799 -6.510443
+12     Philippines  95.873016 -2.460317
+13           Spain  93.419375 -1.067994
+14          Taiwan  95.830688 -7.322751
+15        Thailand  94.358883 -7.467023
+16          Turkey  94.166667  3.333333
+17  United Kingdom  97.000000 -1.222222
+18   United States  89.868102 -3.485017, 'Correlation between slope and intercept for Enterobacter species with Amoxycillin.clavulanate in 2016: 0.1389 (p-value: 0.5826)\n', {'2017'},            Country  intercept      slope
+1          Belgium  90.246032  -4.738095
+2           Canada  88.000000  -5.722222
+3            China  93.124596  -2.171981
+4   Czech Republic  95.696453  -3.418161
+5           France  93.333333  -5.833333
+6          Germany  88.698413 -10.809524
+7          Ireland  93.463203  -3.376623
+8           Israel  92.166667  -7.250000
+9            Italy  88.413679  -1.025172
+10           Japan  95.857143  -4.095238
+11    Korea, South  87.242592  -7.037889
+12     Philippines  95.000000  -3.888889
+13           Spain  92.785306  -0.551039
+14          Taiwan  89.603175 -10.343915
+15        Thailand  89.750446  -9.209745
+16          Turkey  96.944444  -2.222222
+17  United Kingdom  96.000000  -3.666667
+18   United States  86.571772  -6.805491, 'Correlation between slope and intercept for Enterobacter species with Amoxycillin.clavulanate in 2017: 0.5164 (p-value: 0.0282)\n', {'2014'},            Country  intercept     slope
+1          Belgium  95.326906  0.627779
+2           Canada  89.777778  2.666667
+3            China  97.153801 -1.003082
+4   Czech Republic  98.714286  0.309524
+5           France  98.888889  0.370370
+6          Germany  90.158730  1.428571
+7          Ireland  99.696970 -0.909091
+8           Israel  94.217172  2.159091
+9            Italy  92.380464 -0.626631
+10           Japan  89.841270  4.444444
+11    Korea, South  98.000000 -0.166667
+12     Philippines  95.714286  1.428571
+13           Spain  95.735449 -0.430837
+14          Taiwan  99.876543 -0.370370
+15        Thailand  96.803922  0.411765
+16          Turkey  91.666667  1.388889
+17  United Kingdom  96.102564  1.512821
+18   United States  92.013866 -0.056551, 'Correlation between slope and intercept for Enterobacter species with Amoxycillin.clavulanate in 2014: -0.6447 (p-value: 0.0039)\n', {'2015'},            Country  intercept     slope
+1          Belgium  94.831928 -2.212926
+2           Canada  90.166667 -0.611111
+3            China  96.337703 -1.347474
+4   Czech Republic  98.698413 -0.809524
+5           France  98.302469 -2.006173
+6          Germany  91.000000  1.571429
+7          Ireland  98.614719 -2.640693
+8           Israel  95.128788 -0.093434
+9            Italy  92.354417 -0.678905
+10           Japan  93.412698  4.047619
+11    Korea, South  96.087302 -5.071429
+12     Philippines  96.111111  0.238095
+13           Spain  94.759576 -1.926752
+14          Taiwan  98.962963 -2.493827
+15        Thailand  96.775401 -0.360071
+16          Turkey  92.500000  2.500000
+17  United Kingdom  96.598291  0.051282
+18   United States  91.480780 -1.312411, 'Correlation between slope and intercept for Enterobacter species with Amoxycillin.clavulanate in 2015: -0.4516 (p-value: 0.0599)\n', {'2018'},            Country  intercept      slope
+1          Belgium  84.047619  -5.595238
+2           Canada  79.277778  -6.611111
+3            China  91.249690  -2.288501
+4   Czech Republic  92.113851  -4.521663
+5           France  87.166667  -5.166667
+6          Germany  79.952381 -14.746032
+7          Ireland  89.902597  -3.668831
+8           Israel  84.861111  -9.027778
+9            Italy  86.865497  -3.526316
+10           Japan  92.035714  -7.940476
+11    Korea, South  78.023932  -5.474495
+12     Philippines  90.333333  -4.000000
+13           Spain  90.365854  -1.802168
+14          Taiwan  79.897707 -10.791887
+15        Thailand  82.566845  -4.973262
+16          Turkey  94.444444  -6.944444
+17  United Kingdom  89.666667 -11.000000
+18   United States  80.060888  -8.240331, 'Correlation between slope and intercept for Enterobacter species with Amoxycillin.clavulanate in 2018: 0.4197 (p-value: 0.0830)\n', {'2019'},            Country  intercept      slope
+1          Belgium  79.920635  -5.873016
+2           Canada  73.833333  -7.111111
+3            China  89.122352  -1.379322
+4   Czech Republic  88.266397  -3.706571
+5           France  82.833333  -4.000000
+6          Germany  67.476190 -10.666667
+7          Ireland  87.240260  -3.376623
+8           Israel  77.611111  -7.583333
+9            Italy  82.748538  -2.339181
+10           Japan  84.726190  -6.000000
+11    Korea, South  74.160647  -5.891690
+12     Philippines  86.555556  -3.111111
+13           Spain  89.814815  -3.703704
+14          Taiwan  69.553792  -6.629630
+15        Thailand  74.872252   1.800357
+16          Turkey  90.000000  -7.777778
+17  United Kingdom  82.111111 -13.111111
+18   United States  73.011035  -6.244880, 'Correlation between slope and intercept for Enterobacter species with Amoxycillin.clavulanate in 2019: 0.3151 (p-value: 0.2029)\n']

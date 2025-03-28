@@ -1,0 +1,175 @@
+[{'2018'},            Country   intercept         slope
+1        Argentina   85.000000  5.000000e+00
+2        Australia   87.738095 -1.071429e+00
+3          Belgium   94.260909  7.917229e-02
+4           Brazil   93.333333  3.809524e+00
+5           Canada   83.767677 -8.939394e-01
+6            China   98.524155 -8.875614e-01
+7         Colombia   88.803419  3.467643e+00
+8   Czech Republic   95.640440 -8.650290e-01
+9           France   87.175325  3.084416e+00
+10         Germany   84.782559 -1.644576e+00
+11          Greece   95.333333  2.666667e+00
+12         Ireland   96.416667 -3.333333e-01
+13          Israel   95.366284 -1.159770e+00
+14           Italy   92.484405  5.477583e-01
+15           Japan   95.030460 -1.460345e+00
+16    Korea, South   91.931169  7.622053e-01
+17          Mexico   95.396825 -4.285714e+00
+18     Netherlands   98.000000 -2.666667e+00
+19     Philippines   94.513468  1.895984e+00
+20        Portugal   97.575494 -4.282811e-01
+21         Romania   99.444444 -1.666667e+00
+22    South Africa   93.765152  8.409091e-01
+23           Spain   93.176638  5.291005e-02
+24          Taiwan   86.945652  1.201694e+00
+25        Thailand   94.975860 -7.857192e-01
+26          Turkey  100.000000  2.699230e-15
+27  United Kingdom   98.430049  9.581646e-01
+28   United States   88.392118  1.746973e+00
+29       Venezuela   92.205387 -2.760943e+00, 'Correlation between slope and intercept for Klebsiella pneumoniae with Ampicillin in 2018: -0.3484 (p-value: 0.0640)\n', {'2019'},            Country   intercept         slope
+1        Argentina   88.333333  6.666667e+00
+2        Australia   85.753968  1.904762e+00
+3          Belgium   93.847953  6.666667e-01
+4           Brazil   96.190476  2.857143e+00
+5           Canada   82.964646 -5.000000e-01
+6            China   97.889470 -8.825718e-01
+7         Colombia   90.691901  3.882784e+00
+8   Czech Republic   94.552945 -2.383086e-01
+9           France   89.166667  2.727273e+00
+10         Germany   82.782401  6.248824e-01
+11          Greece   97.333333  2.000000e+00
+12         Ireland   96.333333 -1.416667e+00
+13          Israel   93.999234 -1.670498e-01
+14           Italy   92.504873  1.388889e+00
+15           Japan   94.650000 -3.800000e+00
+16    Korea, South   92.113463  1.149183e+00
+17          Mexico   91.904762 -4.444444e+00
+18     Netherlands   96.000000 -2.000000e+00
+19     Philippines   95.796296  1.873016e+00
+20        Portugal   97.012195 -1.548587e-02
+21         Romania   98.333333 -2.222222e+00
+22    South Africa   94.053030  1.666667e+00
+23           Spain   92.938543  3.968254e-01
+24          Taiwan   87.366411  1.241415e+00
+25        Thailand   93.677517  7.110769e-01
+26          Turkey  100.000000 -2.997602e-15
+27  United Kingdom   99.298246  5.263158e-01
+28   United States   89.213101  2.247400e+00
+29       Venezuela   89.579125 -2.727273e+00, 'Correlation between slope and intercept for Klebsiella pneumoniae with Ampicillin in 2019: -0.2460 (p-value: 0.1984)\n', {'2015'},            Country   intercept         slope
+1        Argentina   98.333333 -5.000000e+00
+2        Australia   87.547619  3.595238e+00
+3          Belgium   90.351656  2.103197e+00
+4           Brazil   93.809524 -1.904762e+00
+5           Canada   77.083333  3.472222e+00
+6            China   97.739852  6.467863e-01
+7         Colombia   86.886447 -1.245421e+00
+8   Czech Republic   96.260590  2.262432e-01
+9           France   87.121373 -9.420855e-01
+10         Germany   96.483437 -2.035197e+00
+11          Greece   94.041667 -1.000000e+00
+12         Ireland   96.083333  3.333333e-01
+13          Israel   99.733333 -8.000000e-01
+14           Italy   95.025195 -3.680848e-01
+15           Japan   87.859418  2.499266e+00
+16    Korea, South   95.444346 -1.438215e+00
+17          Mexico   93.919414  3.049451e+00
+18     Netherlands   84.074074  8.703704e+00
+19     Philippines   94.048629 -8.096200e-01
+20        Portugal   90.846347  4.035458e+00
+21         Romania  100.000000  9.992007e-16
+22    South Africa   90.195076  2.611742e+00
+23           Spain   92.660256  4.522792e-01
+24          Taiwan   89.345243 -1.098233e+00
+25        Thailand   95.215324  1.502208e+00
+26          Turkey   94.166667  3.333333e+00
+27  United Kingdom   89.531039  4.054367e+00
+28   United States   89.300156 -1.189933e-01
+29       Venezuela   89.636845  2.640693e+00, 'Correlation between slope and intercept for Klebsiella pneumoniae with Ampicillin in 2015: -0.5401 (p-value: 0.0025)\n', {'2014'},            Country   intercept         slope
+1        Argentina  100.000000 -4.307665e-14
+2        Australia   84.571429  4.666667e+00
+3          Belgium   89.179306  1.077248e+00
+4           Brazil   94.761905 -1.428571e+00
+5           Canada   74.444444  2.500000e+00
+6            China   97.288402  4.995481e-01
+7         Colombia   87.936508 -2.857143e+00
+8   Czech Republic   96.194739 -1.137773e-01
+9           France   87.248889 -4.885311e-01
+10         Germany   96.471014  1.659420e+00
+11          Greece   94.680556 -1.375000e+00
+12         Ireland   94.916667  1.416667e+00
+13          Israel  100.000000 -5.995204e-15
+14           Italy   94.933739  5.470085e-01
+15           Japan   86.532323  1.198538e+00
+16    Korea, South   95.966161 -5.831160e-01
+17          Mexico   91.382784  3.467643e+00
+18     Netherlands   78.333333  7.222222e+00
+19     Philippines   94.688071 -1.230159e+00
+20        Portugal   88.402031  3.094385e+00
+21         Romania  100.000000  6.994405e-15
+22    South Africa   88.587121  2.484848e+00
+23           Spain   92.129630  4.273504e-01
+24          Taiwan   89.460353 -2.541129e-01
+25        Thailand   94.254170  1.566831e+00
+26          Turkey   92.500000  2.500000e+00
+27  United Kingdom   87.018026  3.022781e+00
+28   United States   88.720162  7.941595e-01
+29       Venezuela   87.645503  2.222222e+00, 'Correlation between slope and intercept for Klebsiella pneumoniae with Ampicillin in 2014: -0.5552 (p-value: 0.0018)\n', {'2017'},            Country   intercept         slope
+1        Argentina   90.000000 -5.000000e+00
+2        Australia   90.952381 -4.722222e+00
+3          Belgium   93.087719  7.408907e-01
+4           Brazil   91.428571  2.857143e+00
+5           Canada   81.550505  1.280303e+00
+6            China   98.582105 -1.439041e-01
+7         Colombia   84.334554  3.939764e+00
+8   Czech Republic   95.870336 -4.614826e-01
+9           France   85.470494  2.320289e+00
+10         Germany   91.198451 -6.793119e+00
+11          Greece   92.888889  2.833333e+00
+12         Ireland   96.250000  1.250000e+00
+13          Israel   97.451724 -2.255939e+00
+14           Italy   93.844331 -1.549184e+00
+15           Japan   92.951724  3.498851e+00
+16    Korea, South   92.536078 -4.030657e-01
+17          Mexico   97.460317 -1.269841e+00
+18     Netherlands   97.111111 -3.333333e-01
+19     Philippines   92.901082  1.530447e+00
+20        Portugal   96.964286  2.182540e-01
+21         Romania  100.000000  1.901257e-15
+22    South Africa   94.174242 -8.579545e-01
+23           Spain   92.747253  2.426740e-01
+24          Taiwan   86.852871  6.956786e-01
+25        Thailand   96.522505 -2.193770e+00
+26          Turkey  100.000000 -1.200429e-15
+27  United Kingdom   96.419253  1.920828e+00
+28   United States   88.329212  1.423921e-01
+29       Venezuela   92.489177  2.669553e-01, 'Correlation between slope and intercept for Klebsiella pneumoniae with Ampicillin in 2017: -0.1808 (p-value: 0.3480)\n', {'2016'},            Country   intercept         slope
+1        Argentina   95.000000 -6.666667e+00
+2        Australia   90.944444 -1.095238e+00
+3          Belgium   91.928230  9.711692e-01
+4           Brazil   92.380952 -1.428571e+00
+5           Canada   80.896465  1.717172e+00
+6            China   98.401330  3.739692e-01
+7         Colombia   85.368335 -5.494505e-01
+8   Czech Republic   96.154725 -4.206055e-01
+9           France   86.668158 -1.664154e+00
+10         Germany   95.411028 -5.314536e+00
+11          Greece   93.222222 -2.638889e-01
+12         Ireland   97.500000 -1.250000e+00
+13          Israel   98.922222 -1.900000e+00
+14           Italy   94.794774 -1.516621e+00
+15           Japan   90.207381  2.907683e+00
+16    Korea, South   94.327986 -2.178219e+00
+17          Mexico   97.069597 -1.831502e-01
+18     Netherlands   92.407407  5.000000e+00
+19     Philippines   93.185209 -2.026696e-01
+20        Portugal   94.317716  2.227983e+00
+21         Romania  100.000000  2.799844e-15
+22    South Africa   92.335227  9.924242e-01
+23           Spain   93.249389 -4.334554e-01
+24          Taiwan   88.712922 -2.419647e+00
+25        Thailand   96.181714 -4.043907e-01
+26          Turkey   96.666667  2.500000e+00
+27  United Kingdom   93.341045  2.919318e+00
+28   United States   89.680761 -1.877149e+00
+29       Venezuela   92.053872 -6.493506e-02, 'Correlation between slope and intercept for Klebsiella pneumoniae with Ampicillin in 2016: -0.1253 (p-value: 0.5173)\n']

@@ -1,0 +1,181 @@
+[{'2016'},           Country  intercept      slope
+1       Argentina   7.533333   0.155556
+2       Australia  15.794274  -1.756377
+3         Belgium   8.562013  -3.962308
+4          Brazil  14.263689   0.166372
+5          Canada  10.616923   1.912129
+6           Chile  11.104720   3.055524
+7           China  44.126788  -0.242572
+8        Colombia  24.076974  -5.029441
+9         Croatia  24.648107  -4.006431
+10         France  16.669536  -4.745064
+11        Germany  10.923829  -0.527837
+12         Greece  10.351888   1.784695
+13        Hungary  17.031822   2.918205
+14         Israel  18.803889  -2.045069
+15          Italy  17.592220  -2.860774
+16          Japan   8.797460   2.505817
+17   Korea, South  27.915703   0.507268
+18         Kuwait  32.196296  -2.546914
+19         Mexico  47.072511   2.299784
+20    Philippines  26.837295  -0.304615
+21         Poland  12.046105  -1.265217
+22       Portugal  23.826436  -2.544049
+23        Romania  15.173489  14.409357
+24   South Africa  11.681499   2.541723
+25          Spain  15.833185  -1.808927
+26         Taiwan  13.160258  -0.665326
+27       Thailand  40.867909  -5.293633
+28         Turkey  40.008334  -4.395418
+29  United States  16.347034  -2.600904
+30      Venezuela  21.980461   0.877761, 'Correlation between slope and intercept for Escherichia coli with Cefepime in 2016: -0.2434 (p-value: 0.1949)\n', {'2017'},           Country  intercept      slope
+1       Argentina   7.800000  -0.933333
+2       Australia  13.223351   0.244937
+3         Belgium   5.003034  -1.453181
+4          Brazil  14.254876   0.351205
+5          Canada  12.074231  -0.811715
+6           Chile  13.627016   0.574503
+7           China  43.876598  -2.179668
+8        Colombia  20.064016  -5.011050
+9         Croatia  21.007204  -3.808669
+10         France  12.164421   0.350773
+11        Germany   9.963036  -1.416594
+12         Greece  12.003535   0.972727
+13        Hungary  19.352472  -0.322625
+14         Israel  16.099255  -1.846140
+15          Italy  14.753734  -1.777571
+16          Japan  10.736361   3.819496
+17   Korea, South  27.996650  -1.163199
+18         Kuwait  28.272222  -0.312963
+19         Mexico  48.511905   5.238095
+20    Philippines  26.876722   0.349419
+21         Poland  11.380735  -0.243655
+22       Portugal  22.049489  -3.572793
+23        Romania  25.107769  14.270677
+24   South Africa  15.646582   4.122572
+25          Spain  14.219462  -1.281635
+26         Taiwan  12.945414   4.672448
+27       Thailand  37.453876  -5.228238
+28         Turkey  36.374484  -3.033064
+29  United States  14.545696  -4.267332
+30      Venezuela  23.496114   1.164934, 'Correlation between slope and intercept for Escherichia coli with Cefepime in 2017: 0.0092 (p-value: 0.9613)\n', {'2014'},           Country  intercept     slope
+1       Argentina   7.977778 -0.034921
+2       Australia  18.368931 -1.608423
+3         Belgium  12.558857 -1.427647
+4          Brazil  13.084571  0.552080
+5          Canada  10.621304  0.018591
+6           Chile   7.033889  1.446377
+7           China  39.741828  2.513629
+8        Colombia  26.774218  0.466667
+9         Croatia  26.547619 -0.164835
+10         France  21.466974 -2.517019
+11        Germany  14.031386 -1.525030
+12         Greece   7.086993  1.304296
+13        Hungary  17.391205 -1.152882
+14         Israel  23.883415 -2.580568
+15          Italy  19.043108 -0.332449
+16          Japan  10.489222 -2.569743
+17   Korea, South  27.236116  0.339831
+18         Kuwait  40.055556 -5.185185
+19         Mexico  45.064935  0.420532
+20    Philippines  27.622896 -0.262626
+21         Poland  13.925406 -0.207688
+22       Portugal  31.411081 -2.637576
+23        Romania   8.947712 -2.732026
+24   South Africa  12.270384 -0.367432
+25          Spain  15.251232  0.579851
+26         Taiwan  18.867629 -3.246523
+27       Thailand  37.792830  4.087302
+28         Turkey  37.827434  2.450768
+29  United States  11.174821  3.642156
+30      Venezuela  23.379747 -0.124530, 'Correlation between slope and intercept for Escherichia coli with Cefepime in 2014: 0.0830 (p-value: 0.6629)\n', {'2015'},           Country  intercept     slope
+1       Argentina   7.790476 -0.009524
+2       Australia  17.320424 -2.420460
+3         Belgium  11.132433 -3.383169
+4          Brazil  13.560999  0.440445
+5          Canada  10.440971  0.482609
+6           Chile   8.587892  3.275051
+7           China  41.725505  2.471963
+8        Colombia  26.021760 -2.957375
+9         Croatia  26.102971 -1.865079
+10         France  19.769397 -3.933363
+11        Germany  12.706397 -1.805078
+12         Greece   8.378401  2.321272
+13        Hungary  17.096529  1.638946
+14         Israel  21.813256 -3.367766
+15          Italy  18.644478 -1.697155
+16          Japan   9.599389  0.462444
+17   Korea, South  27.489916  0.498909
+18         Kuwait  36.849383 -4.618519
+19         Mexico  45.544836  0.116265
+20    Philippines  27.308081 -0.466330
+21         Poland  13.164345 -1.715803
+22       Portugal  28.327566 -4.458237
+23        Romania  10.361656  7.043573
+24   South Africa  11.825516  0.749428
+25          Spain  15.680475 -0.120839
+26         Taiwan  16.339626 -3.767240
+27       Thailand  39.596075 -0.092910
+28         Turkey  39.133723 -0.487804
+29  United States  13.756340  2.534612
+30      Venezuela  22.631772 -0.908182, 'Correlation between slope and intercept for Escherichia coli with Cefepime in 2015: -0.2285 (p-value: 0.2246)\n', {'2018'},           Country  intercept     slope
+1       Argentina   6.400000 -2.466667
+2       Australia  12.820874 -1.608476
+3         Belgium   3.539337  1.987694
+4          Brazil  14.146942 -1.214291
+5          Canada  11.407578 -1.686264
+6           Chile  14.667888 -2.653494
+7           China  42.003380 -4.217367
+8        Colombia  14.249460 -2.389932
+9         Croatia  18.088278 -0.588034
+10         France  12.093488  1.734257
+11        Germany   8.342151 -2.416523
+12         Greece  12.999242 -1.070455
+13        Hungary  19.413534 -5.393484
+14         Israel  14.362048 -1.759704
+15          Italy  12.992663 -0.867844
+16          Japan  14.098300 -1.570584
+17   Korea, South  27.401871 -1.374230
+18         Kuwait  28.287037 -2.870370
+19         Mexico  51.530303  1.555195
+20    Philippines  26.874176  0.818040
+21         Poland  10.663574  2.978490
+22       Portugal  18.015387 -0.102802
+23        Romania  38.462339 -5.707387
+24   South Africa  19.305936  7.538320
+25          Spain  13.156734 -0.711544
+26         Taiwan  15.924731  6.260510
+27       Thailand  31.167190 -1.991674
+28         Turkey  33.631481  1.063021
+29  United States  11.147533 -3.428834
+30      Venezuela  23.250583  2.041660, 'Correlation between slope and intercept for Escherichia coli with Cefepime in 2018: -0.1069 (p-value: 0.5740)\n', {'2019'},           Country  intercept      slope
+1       Argentina   4.688889  -2.822222
+2       Australia  11.941458  -2.453277
+3         Belgium   4.579465   2.822046
+4          Brazil  13.451253  -1.835761
+5          Canada  10.744987  -2.123304
+6           Chile  12.742106  -2.685586
+7           China  38.335370  -3.303447
+8        Colombia  12.145596  -1.677908
+9         Croatia  16.640212   1.685185
+10         France  12.628022   2.263950
+11        Germany   6.837838  -2.684685
+12         Greece  12.216919  -1.325253
+13        Hungary  15.238095  -5.238095
+14         Israel  13.134985  -1.505816
+15          Italy  11.955548  -0.159589
+16          Japan  12.900961  -2.668145
+17   Korea, South  26.408713  -0.906764
+18         Kuwait  25.771605  -2.391975
+19         Mexico  54.543290  -2.593074
+20    Philippines  27.511473   0.554113
+21         Poland  13.202527   2.586957
+22       Portugal  18.170337   0.097779
+23        Romania  36.496456 -11.711214
+24   South Africa  25.192214   6.580253
+25          Spain  12.080552   0.183074
+26         Taiwan  21.405450   3.837830
+27       Thailand  29.010144  -1.017388
+28         Turkey  33.634688   2.690881
+29  United States   7.181646  -0.831046
+30      Venezuela  25.780597   0.065707, 'Correlation between slope and intercept for Escherichia coli with Cefepime in 2019: -0.1556 (p-value: 0.4116)\n']

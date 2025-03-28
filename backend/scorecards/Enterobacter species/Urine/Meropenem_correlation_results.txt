@@ -1,0 +1,139 @@
+[{'2014'},           Country  intercept         slope
+1       Australia   0.000000 -9.992007e-16
+2         Belgium   1.292517 -2.040816e-01
+3          Brazil   5.485380 -1.871345e+00
+4          Canada   1.153846 -3.846154e-01
+5           China   4.286988 -7.754011e-01
+6         Croatia   2.121212 -1.212121e+00
+7          France   0.569106 -3.252033e-01
+8         Germany   0.119048  3.571429e-01
+9          Israel   0.666667  8.888889e-01
+10          Italy   0.621147  1.412992e+00
+11          Japan   0.000000  1.998401e-15
+12   Korea, South   0.333333  4.444444e-01
+13         Kuwait   0.555556  1.666667e+00
+14         Mexico   1.000000  1.333333e+00
+15         Poland   4.868421  2.105263e+00
+16       Portugal   0.707071 -4.040404e-01
+17   South Africa   3.333333 -9.992007e-16
+18          Spain   1.491430  1.387604e-01
+19    Switzerland   0.000000  1.998401e-15
+20         Taiwan   0.000000  0.000000e+00
+21       Thailand   8.236753  1.610845e+00
+22         Turkey   6.666667  8.888889e+00
+23  United States   0.083333  2.500000e-01, 'Correlation between slope and intercept for Enterobacter species with Meropenem in 2014: 0.4030 (p-value: 0.0566)\n', {'2016'},           Country  intercept         slope
+1       Australia   0.000000 -3.996803e-15
+2         Belgium   0.748299 -4.761905e-01
+3          Brazil   5.692504  5.051994e+00
+4          Canada   0.512821 -3.846154e-01
+5           China   4.869652  1.724599e+00
+6         Croatia   3.076923  4.102564e+00
+7          France   0.185185  5.555556e-01
+8         Germany   0.714286  3.571429e-01
+9          Israel   2.000000 -6.666667e-01
+10          Italy   4.142625  2.946863e+00
+11          Japan   0.000000  9.992007e-16
+12   Korea, South   1.000000 -3.333333e-01
+13         Kuwait   3.333333  1.666667e+00
+14         Mexico   3.555556  6.666667e-01
+15         Poland   7.127193  4.385965e-01
+16       Portugal   0.000000  9.992007e-16
+17   South Africa   2.333333 -1.333333e+00
+18          Spain   2.331343  5.168750e-01
+19    Switzerland   0.000000  3.996803e-15
+20         Taiwan   0.000000  0.000000e+00
+21       Thailand   8.952685 -1.469077e+00
+22         Turkey  21.481481  8.888889e+00
+23  United States   0.678571  4.880952e-01, 'Correlation between slope and intercept for Enterobacter species with Meropenem in 2016: 0.7269 (p-value: 0.0001)\n', {'2017'},           Country     intercept         slope
+1       Australia  0.000000e+00 -3.996803e-15
+2         Belgium  2.721088e-01 -2.040816e-01
+3          Brazil  1.016084e+01  6.441042e+00
+4          Canada -9.769963e-15  2.997602e-15
+5           China  6.181373e+00  3.286765e+00
+6         Croatia  6.153846e+00  3.076923e+00
+7          France  5.555556e-01  7.407407e-01
+8         Germany  1.071429e+00 -3.571429e-01
+9          Israel  1.555556e+00 -8.888889e-01
+10          Italy  6.559088e+00  7.659402e-01
+11          Japan -9.769963e-15  3.996803e-15
+12   Korea, South  1.148148e+00  6.666667e-01
+13         Kuwait  5.833333e+00  8.333333e-01
+14         Mexico  4.000000e+00  8.888889e-01
+15         Poland  7.982456e+00 -3.355263e+00
+16       Portugal -9.769963e-15  2.997602e-15
+17   South Africa  1.333333e+00 -1.000000e+00
+18          Spain  2.652188e+00  3.722384e-01
+19    Switzerland  0.000000e+00 -1.998401e-15
+20         Taiwan  0.000000e+00  1.998401e-15
+21       Thailand  9.140528e+00  9.817473e-01
+22         Turkey  3.000000e+01 -1.000000e+01
+23  United States  1.199735e+00  2.063492e-01, 'Correlation between slope and intercept for Enterobacter species with Meropenem in 2017: -0.5147 (p-value: 0.0120)\n', {'2019'},           Country     intercept         slope
+1       Australia  0.000000e+00  0.000000e+00
+2         Belgium  9.769963e-15  0.000000e+00
+3          Brazil  1.626263e+01 -2.626263e+00
+4          Canada  9.769963e-15  4.052314e-15
+5           China  1.058789e+01  8.165266e-01
+6         Croatia  7.179487e+00 -4.102564e+00
+7          France  1.851852e+00 -2.997602e-15
+8         Germany  4.761905e-01 -3.571429e-01
+9          Israel  9.769963e-15 -1.998401e-15
+10          Italy  8.365991e+00 -4.253057e-02
+11          Japan  1.428571e+00  1.904762e+00
+12   Korea, South  2.222222e+00  1.111111e+00
+13         Kuwait  7.222222e+00  8.333333e-01
+14         Mexico  5.555556e+00  0.000000e+00
+15         Poland  2.807018e+00 -2.105263e+00
+16       Portugal  0.000000e+00  9.992007e-16
+17   South Africa  0.000000e+00 -9.992007e-16
+18          Spain  2.121212e+00 -1.212121e+00
+19    Switzerland  9.769963e-15 -3.996803e-15
+20         Taiwan  9.769963e-15  2.053913e-15
+21       Thailand  1.658249e+01  9.090909e+00
+22         Turkey  1.333333e+01 -1.000000e+01
+23  United States  1.305556e+00 -2.103175e-01, 'Correlation between slope and intercept for Enterobacter species with Meropenem in 2019: -0.0400 (p-value: 0.8561)\n', {'2018'},           Country     intercept         slope
+1       Australia  0.000000e+00 -4.996004e-15
+2         Belgium  1.065814e-14 -2.997602e-15
+3          Brazil  1.548219e+01  6.344143e-02
+4          Canada  0.000000e+00  2.997602e-15
+5           China  9.473739e+00  1.435924e+00
+6         Croatia  9.230769e+00 -3.076923e+00
+7          France  1.111111e+00  5.555556e-01
+8         Germany  8.333333e-01 -4.761905e-01
+9          Israel  8.888889e-01 -6.666667e-01
+10          Italy  8.004091e+00  3.617767e-02
+11          Japan  4.761905e-01  1.428571e+00
+12   Korea, South  1.555556e+00  1.148148e+00
+13         Kuwait  6.388889e+00  1.111111e+00
+14         Mexico  4.666667e+00  6.666667e-01
+15         Poland  4.912281e+00 -2.807018e+00
+16       Portugal -9.769963e-15  0.000000e+00
+17   South Africa  0.000000e+00  0.000000e+00
+18          Spain  3.010961e+00 -1.121857e+00
+19    Switzerland  0.000000e+00 -2.997602e-15
+20         Taiwan  0.000000e+00  0.000000e+00
+21       Thailand  1.004519e+01  8.817119e+00
+22         Turkey  2.333333e+01 -1.333333e+01
+23  United States  1.396825e+00 -1.415344e-01, 'Correlation between slope and intercept for Enterobacter species with Meropenem in 2018: -0.4544 (p-value: 0.0294)\n', {'2015'},           Country     intercept         slope
+1       Australia  1.021405e-14 -3.996803e-15
+2         Belgium  1.088435e+00 -4.761905e-01
+3          Brazil  5.160659e+00  1.832855e+00
+4          Canada  8.974359e-01 -5.128205e-01
+5           China  4.395053e+00  8.411319e-01
+6         Croatia  2.237762e+00  2.167832e+00
+7          France  3.252033e-01 -2.439024e-01
+8         Germany  3.571429e-01  4.761905e-01
+9          Israel  1.333333e+00  6.666667e-01
+10          Italy  1.896202e+00  2.582870e+00
+11          Japan  0.000000e+00  1.998401e-15
+12   Korea, South  6.666667e-01  3.333333e-01
+13         Kuwait  1.666667e+00  2.222222e+00
+14         Mexico  2.000000e+00  1.000000e+00
+15         Poland  5.855263e+00  1.557018e+00
+16       Portugal  4.040404e-01 -3.030303e-01
+17   South Africa  3.000000e+00 -1.000000e+00
+18          Spain  1.826220e+00  6.754556e-01
+19    Switzerland  0.000000e+00  3.996803e-15
+20         Taiwan  0.000000e+00 -1.998401e-15
+21       Thailand  8.628389e+00 -4.837852e-01
+22         Turkey  1.259259e+01  1.185185e+01
+23  United States  3.095238e-01  5.119048e-01, 'Correlation between slope and intercept for Enterobacter species with Meropenem in 2015: 0.7108 (p-value: 0.0001)\n']

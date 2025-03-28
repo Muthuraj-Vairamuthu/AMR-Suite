@@ -1,0 +1,151 @@
+[{'2015'},            Country  intercept      slope
+1        Argentina  32.666667  16.888889
+2        Australia  15.357143  -3.035714
+3          Belgium  28.043697   2.287955
+4            China  45.130083   1.498029
+5         Colombia  36.512821  -5.937729
+6   Czech Republic  54.732654  -3.989515
+7           France  16.793375   3.428253
+8          Germany  17.053114  -2.750916
+9           Greece  67.759259  -4.162698
+10          Israel  42.853593   2.122516
+11           Italy  58.459596  -2.125421
+12           Japan  10.469099  -4.374012
+13    Korea, South  49.517290  -8.842632
+14          Mexico  41.785714   7.619048
+15     Netherlands  13.420635   2.761905
+16     Philippines  41.900357  -3.806663
+17        Portugal  40.920768   9.427306
+18         Romania  23.333333 -13.333333
+19    South Africa  49.693100   1.105707
+20           Spain  34.812780  -2.439967
+21          Taiwan  36.783293   3.443017
+22        Thailand  48.573907   0.080071
+23          Turkey  44.757353   9.133170
+24  United Kingdom  23.804359  -0.163211
+25       Venezuela  20.888741  -1.219275, 'Correlation between slope and intercept for Klebsiella pneumoniae with Ceftaroline in 2015: 0.0149 (p-value: 0.9437)\n', {'2018'},            Country  intercept      slope
+1        Argentina  40.555556  -8.888889
+2        Australia   4.206349   3.988095
+3          Belgium  27.653150   1.305216
+4            China  47.295756  -2.316334
+5         Colombia  23.940781   5.048840
+6   Czech Republic  49.110647   2.329854
+7           France  22.440954   4.689171
+8          Germany   9.383650  -0.907491
+9           Greece  62.111111   5.083333
+10          Israel  50.683976   7.412630
+11           Italy  59.922027   7.044347
+12           Japan   3.155556   0.577778
+13    Korea, South  29.850858  -0.534604
+14          Mexico  52.817460  -7.619048
+15     Netherlands  17.267196   4.460317
+16     Philippines  31.149772  -1.633357
+17        Portugal  56.984276  -2.414083
+18         Romania   8.555556   9.000000
+19    South Africa  50.987008   2.055605
+20           Spain  29.309117   1.414326
+21          Taiwan  41.892123  -4.606062
+22        Thailand  46.593376   0.101379
+23          Turkey  65.113671   0.871848
+24  United Kingdom  19.540582  -2.053017
+25       Venezuela  24.742865  10.232484, 'Correlation between slope and intercept for Klebsiella pneumoniae with Ceftaroline in 2018: -0.1895 (p-value: 0.3642)\n', {'2019'},            Country  intercept         slope
+1        Argentina  30.555556 -4.052314e-15
+2        Australia   6.190476  5.873016e+00
+3          Belgium  27.417871  4.495798e+00
+4            China  46.375164 -3.790904e+00
+5         Colombia  25.864876  6.242369e+00
+6   Czech Republic  50.991814  1.561428e+00
+7           France  25.094697  4.924242e+00
+8          Germany   8.263505 -3.817053e-01
+9           Greece  65.333333  5.629630e+00
+10          Israel  56.566939  6.857842e+00
+11           Italy  66.135478  5.277778e+00
+12           Japan   4.237037 -4.000000e-01
+13    Korea, South  28.532466  1.035022e+00
+14          Mexico  47.380952 -5.277778e+00
+15     Netherlands  19.666667  6.261905e+00
+16     Philippines  29.281987 -8.129509e-01
+17        Portugal  55.087138 -1.760088e+00
+18         Romania  16.333333  6.222222e+00
+19    South Africa  52.768525  1.828610e+00
+20           Spain  30.679691  4.792430e-01
+21          Taiwan  38.859833 -5.383265e+00
+22        Thailand  46.292986  1.612107e+00
+23          Turkey  65.403355  5.109923e-01
+24  United Kingdom  17.513335  3.341688e-01
+25       Venezuela  32.051066  1.002104e+01, 'Correlation between slope and intercept for Klebsiella pneumoniae with Ceftaroline in 2019: -0.0922 (p-value: 0.6611)\n', {'2017'},            Country  intercept      slope
+1        Argentina  51.000000 -15.333333
+2        Australia   9.107143  -4.523810
+3          Belgium  29.278995  -3.608295
+4            China  48.484239  -0.213743
+5         Colombia  25.418193   0.043753
+6   Czech Republic  49.143543   0.914256
+7           France  21.653298   1.668895
+8          Germany  11.589466  -1.818903
+9           Greece  60.583333   1.518519
+10          Israel  47.843240   2.882963
+11           Italy  57.254785   3.486178
+12           Japan   4.664052  -0.683224
+13    Korea, South  33.747842  -3.771384
+14          Mexico  53.436508  -4.214286
+15     Netherlands  17.246032  -0.775132
+16     Philippines  34.304654  -2.690296
+17        Portugal  55.540515   0.222666
+18         Romania   3.333333   6.666667
+19    South Africa  52.491746  -1.016102
+20           Spain  31.059219  -0.442613
+21          Taiwan  42.440152  -0.255217
+22        Thailand  48.370334  -2.744261
+23          Turkey  58.838277   5.667358
+24  United Kingdom  21.975109  -4.328835
+25       Venezuela  19.642256   5.186989, 'Correlation between slope and intercept for Klebsiella pneumoniae with Ceftaroline in 2017: -0.0525 (p-value: 0.8031)\n', {'2016'},            Country  intercept     slope
+1        Argentina  49.666667 -1.000000
+2        Australia  13.750000 -6.964286
+3          Belgium  30.714328 -1.949141
+4            China  46.814715  1.639416
+5         Colombia  30.734229 -8.139194
+6   Czech Republic  51.125412 -2.349399
+7           France  20.572638 -1.238859
+8          Germany  14.838828 -3.569597
+9           Greece  64.570106 -4.133598
+10          Israel  45.593120  1.357550
+11           Italy  57.847554 -0.573498
+12           Japan   6.691526 -1.894462
+13    Korea, South  41.272094 -7.691882
+14          Mexico  47.126984  8.325397
+15     Netherlands  15.835979 -0.335979
+16     Philippines  38.670179 -4.792227
+17        Portugal  49.182806  6.269253
+18         Romania  14.000000 -8.000000
+19    South Africa  50.803802  0.374479
+20           Spain  33.962149 -3.394383
+21          Taiwan  39.546649  3.188141
+22        Thailand  48.115471 -0.206624
+23          Turkey  53.002828  6.055053
+24  United Kingdom  23.680462 -1.044384
+25       Venezuela  20.743886 -1.756207, 'Correlation between slope and intercept for Klebsiella pneumoniae with Ceftaroline in 2016: 0.4133 (p-value: 0.0400)\n', {'2014'},            Country  intercept      slope
+1        Argentina  18.888889  20.000000
+2        Australia  15.535714   1.666667
+3          Belgium  25.593900   3.592157
+4            China  44.147581   1.783858
+5         Colombia  39.539683  -3.523810
+6   Czech Republic  57.225022  -3.024648
+7           France  13.592395   4.621509
+8          Germany  18.217949  -1.222222
+9           Greece  69.678571  -2.809524
+10          Israel  41.056883   2.783247
+11           Italy  59.137205  -0.555556
+12           Japan  13.231552  -2.971472
+13    Korea, South  54.694558  -6.350575
+14          Mexico  38.722222   3.547619
+15     Netherlands  11.351852   3.314815
+16     Philippines  43.641351  -1.886383
+17        Portugal  35.331935   6.961172
+18         Romania  30.000000 -10.000000
+19    South Africa  48.880433   2.223666
+20           Spain  35.132275   0.370370
+21          Taiwan  35.074304   2.102696
+22        Thailand  48.791630   0.298743
+23          Turkey  39.194444   5.500000
+24  United Kingdom  23.702463   0.400319
+25       Venezuela  20.868268  -0.459910, 'Correlation between slope and intercept for Klebsiella pneumoniae with Ceftaroline in 2014: -0.3162 (p-value: 0.1236)\n']

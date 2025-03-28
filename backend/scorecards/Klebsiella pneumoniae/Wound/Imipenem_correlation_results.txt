@@ -1,0 +1,139 @@
+[{'2017'},            Country  intercept         slope
+1        Argentina  20.000000  1.416667e+01
+2        Australia   2.121212 -1.212121e+00
+3          Belgium   2.373737  2.575758e+00
+4           Brazil  47.781441  9.540904e+00
+5            China  45.456858 -3.785104e+00
+6         Colombia  12.350427 -1.623932e+00
+7   Czech Republic   0.476190  1.428571e+00
+8           France   2.500000 -1.577381e+00
+9          Germany   1.372549 -7.843137e-01
+10          Greece  44.428164  1.482702e+01
+11          Israel   3.433645 -3.596257e-02
+12           Italy  44.466403  8.893281e-01
+13          Kuwait   5.367384  4.077061e-01
+14          Mexico   3.625731  1.447368e+00
+15     Netherlands   0.000000  1.021405e-14
+16     Philippines   9.837344  2.228164e-01
+17          Poland   7.294118  9.019608e-01
+18        Portugal   4.685895  1.620383e+00
+19    South Africa  13.306983  1.951581e+00
+20           Spain   8.612098 -5.411197e-01
+21          Taiwan   7.303030  1.909091e+00
+22        Thailand  15.829502 -1.227969e+00
+23          Turkey  23.058442  6.613997e+00, 'Correlation between slope and intercept for Klebsiella pneumoniae with Imipenem in 2017: 0.4548 (p-value: 0.0292)\n', {'2016'},            Country  intercept         slope
+1        Argentina  14.404762  5.515873e+00
+2        Australia   2.727273 -9.090909e-01
+3          Belgium   3.333333 -6.060606e-01
+4           Brazil  38.256410  1.319872e+01
+5            China  32.390110  1.337912e+01
+6         Colombia  19.529915 -6.794872e+00
+7   Czech Republic   0.000000 -9.769963e-15
+8           France   3.601190 -1.547619e+00
+9          Germany   1.764706 -5.882353e-01
+10          Greece  47.167277 -1.782662e+00
+11          Israel   2.673440  5.336898e-01
+12           Italy  39.270657  5.019449e+00
+13          Kuwait   7.097953 -2.441520e+00
+14          Mexico   3.289474 -2.923977e-01
+15     Netherlands   0.000000  0.000000e+00
+16     Philippines   9.877451 -5.147059e-01
+17          Poland   4.196078  3.764706e+00
+18        Portugal   4.710581  1.984575e-02
+19    South Africa   9.506917  5.314229e+00
+20           Spain   9.194861 -1.146552e+00
+21          Taiwan   4.000000  3.666667e+00
+22        Thailand  14.249042  2.009579e+00
+23          Turkey  28.414141 -2.831169e+00, 'Correlation between slope and intercept for Klebsiella pneumoniae with Imipenem in 2016: 0.3769 (p-value: 0.0762)\n', {'2014'},            Country     intercept         slope
+1        Argentina  6.785714e+00  1.904762e+00
+2        Australia  9.090909e-01  1.212121e+00
+3          Belgium  5.454545e+00 -1.818182e+00
+4           Brazil  2.493376e+01  2.472222e+00
+5            China  8.397436e+00  1.333333e+01
+6         Colombia  4.004274e+01 -1.000000e+01
+7   Czech Republic -8.881784e-15  0.000000e+00
+8           France  5.390212e+00 -5.291005e-01
+9          Germany  5.882353e-01  7.843137e-01
+10          Greece  6.683761e+01 -1.259259e+01
+11          Israel  2.259819e+00  2.747557e-01
+12           Italy  3.371908e+01  3.508075e+00
+13          Kuwait  7.713450e+00 -5.012531e-03
+14          Mexico  3.508772e+00  9.992007e-15
+15     Netherlands  0.000000e+00  0.000000e+00
+16     Philippines  7.389706e+00  1.519608e+00
+17          Poland  5.882353e-01  1.764706e+00
+18        Portugal  4.307612e+00  1.967963e-01
+19    South Africa  5.282609e+00  1.500000e+00
+20           Spain  8.390749e+00  1.153255e+00
+21          Taiwan  5.555556e-01  1.666667e+00
+22        Thailand  9.671581e+00  3.092704e+00
+23          Turkey  2.951900e+01 -2.087542e+00, 'Correlation between slope and intercept for Klebsiella pneumoniae with Imipenem in 2014: -0.6053 (p-value: 0.0022)\n', {'2015'},            Country     intercept         slope
+1        Argentina  9.444444e+00  3.928571e+00
+2        Australia  1.818182e+00  9.090909e-01
+3          Belgium  4.545455e+00 -1.515152e+00
+4           Brazil  2.958761e+01  1.046154e+01
+5            China  1.778388e+01  1.649267e+01
+6         Colombia  3.153846e+01 -1.329060e+01
+7   Czech Republic -1.065814e-14 -9.992007e-15
+8           France  4.785053e+00 -1.021825e+00
+9          Germany  1.176471e+00  5.882353e-01
+10          Greece  5.805861e+01 -1.300366e+01
+11          Israel  2.416866e+00  5.492040e-01
+12           Italy  3.562863e+01  3.641157e+00
+13          Kuwait  7.658521e+00 -1.034461e+00
+14          Mexico  3.435673e+00 -2.192982e-01
+15     Netherlands -1.065814e-14  0.000000e+00
+16     Philippines  8.529412e+00  1.139706e+00
+17          Poland  1.764706e+00  2.352941e+00
+18        Portugal  4.413922e+00 -3.385841e-01
+19    South Africa  6.554348e+00  2.815217e+00
+20           Spain  8.805390e+00 -2.417596e-01
+21          Taiwan  1.666667e+00  2.222222e+00
+22        Thailand  1.139389e+01  2.055639e+00
+23          Turkey  2.893747e+01 -4.168831e+00, 'Correlation between slope and intercept for Klebsiella pneumoniae with Imipenem in 2015: -0.3246 (p-value: 0.1307)\n', {'2018'},            Country  intercept      slope
+1        Argentina  32.833333  15.166667
+2        Australia   1.212121  -0.909091
+3          Belgium   4.393939   1.313131
+4           Brazil  57.746032  -6.523810
+5            China  43.452381  -8.465608
+6         Colombia   8.888889   1.666667
+7   Czech Republic   1.428571   1.904762
+8           France   0.952381  -0.714286
+9          Germany   1.176471   0.588235
+10          Greece  56.455026  20.158730
+11          Israel   3.403610  -0.005526
+12           Italy  44.287440  -0.229469
+13          Kuwait   5.268817   1.747312
+14          Mexico   4.166667   1.388889
+15     Netherlands   0.000000   0.000000
+16     Philippines   9.687471  -0.026269
+17          Poland   8.117647  -0.352941
+18        Portugal   6.186275   3.346405
+19    South Africa  15.340909  -0.946970
+20           Spain   7.693181   1.569543
+21          Taiwan   8.797980   0.989899
+22        Thailand  14.964080   0.495690
+23          Turkey  29.798701   9.168831, 'Correlation between slope and intercept for Klebsiella pneumoniae with Imipenem in 2018: 0.2325 (p-value: 0.2857)\n', {'2019'},            Country  intercept         slope
+1        Argentina  45.444444  1.105556e+01
+2        Australia   0.000000  7.993606e-15
+3          Belgium   5.454545  4.545455e-01
+4           Brazil  54.380952 -1.003175e+01
+5            China  38.611111 -8.571429e+00
+6         Colombia  11.111111 -2.309264e-14
+7   Czech Republic   2.857143  1.428571e+00
+8           France   0.000000 -1.409983e-14
+9          Germany   1.176471  1.568627e+00
+10          Greece  73.809524  1.428571e+01
+11          Israel   3.367647  3.676471e-02
+12           Italy  45.833333 -2.777778e+00
+13          Kuwait   6.093190  1.935484e+00
+14          Mexico   5.277778  5.555556e-01
+15     Netherlands   0.000000  5.995204e-15
+16     Philippines   9.427831 -5.582137e-02
+17          Poland   9.019608 -1.764706e+00
+18        Portugal   9.019608  2.794118e+00
+19    South Africa  16.250000 -2.954545e+00
+20           Spain   8.958231  1.441672e+00
+21          Taiwan  10.707071 -7.575758e-01
+22        Thailand  16.319444  3.996803e-15
+23          Turkey  37.603175  7.452381e+00, 'Correlation between slope and intercept for Klebsiella pneumoniae with Imipenem in 2019: 0.2288 (p-value: 0.2936)\n']

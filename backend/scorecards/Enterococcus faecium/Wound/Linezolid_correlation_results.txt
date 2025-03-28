@@ -1,0 +1,31 @@
+[{'2014'},           Country  intercept  slope
+1  Czech Republic        0.0    0.0
+2         Germany        0.0    0.0
+3           Italy        0.0    0.0
+4           Spain        0.0    0.0
+5   United States        0.0    0.0, 'Correlation between slope and intercept for Enterococcus faecium with Linezolid in 2014: nan (p-value: nan)\n', {'2016'},           Country     intercept         slope
+1  Czech Republic  9.992007e-16 -2.003606e-16
+2         Germany  0.000000e+00  9.974660e-17
+3           Italy  0.000000e+00  0.000000e+00
+4           Spain  0.000000e+00  0.000000e+00
+5   United States  0.000000e+00  2.003606e-16, 'Correlation between slope and intercept for Enterococcus faecium with Linezolid in 2016: -0.8292 (p-value: 0.0826)\n', {'2017'},           Country     intercept         slope
+1  Czech Republic  9.992007e-16 -2.012279e-16
+2         Germany  0.000000e+00  9.714451e-17
+3           Italy  9.992007e-16  0.000000e+00
+4           Spain  0.000000e+00  0.000000e+00
+5   United States  0.000000e+00  2.012279e-16, 'Correlation between slope and intercept for Enterococcus faecium with Linezolid in 2017: -0.7366 (p-value: 0.1557)\n', {'2018'},           Country     intercept         slope
+1  Czech Republic  9.992007e-16 -9.992007e-16
+2         Germany  0.000000e+00  0.000000e+00
+3           Italy  0.000000e+00  0.000000e+00
+4           Spain  0.000000e+00  0.000000e+00
+5   United States  0.000000e+00  0.000000e+00, 'Correlation between slope and intercept for Enterococcus faecium with Linezolid in 2018: -1.0000 (p-value: 0.0000)\n', {'2019'},           Country  intercept  slope
+1  Czech Republic        0.0    0.0
+2         Germany        0.0    0.0
+3           Italy        0.0    0.0
+4           Spain        0.0    0.0
+5   United States        0.0    0.0, 'Correlation between slope and intercept for Enterococcus faecium with Linezolid in 2019: nan (p-value: nan)\n', {'2015'},           Country     intercept  slope
+1  Czech Republic  9.992007e-16    0.0
+2         Germany  0.000000e+00    0.0
+3           Italy  9.992007e-16    0.0
+4           Spain  0.000000e+00    0.0
+5   United States  0.000000e+00    0.0, 'Correlation between slope and intercept for Enterococcus faecium with Linezolid in 2015: nan (p-value: nan)\n']

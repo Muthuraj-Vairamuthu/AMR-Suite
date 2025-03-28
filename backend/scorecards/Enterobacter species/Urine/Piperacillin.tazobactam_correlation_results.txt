@@ -1,0 +1,139 @@
+[{'2015'},           Country  intercept      slope
+1       Australia  17.372598   1.651351
+2         Belgium  24.264211  -4.504091
+3          Brazil  23.057288  -2.462295
+4          Canada  17.847050   3.737593
+5           China  27.166889   1.687834
+6         Croatia  41.961094  -0.217005
+7          France  29.790906  -0.482872
+8         Germany  20.101288  -0.774781
+9          Israel  13.232323   0.824916
+10          Italy  22.267698   0.768786
+11          Japan  14.217949   5.602564
+12   Korea, South  19.246753  -2.822511
+13         Kuwait  26.373821   4.321601
+14         Mexico  21.590743  -2.123969
+15         Poland  43.451008  -0.994357
+16       Portugal  36.505692   5.905690
+17   South Africa  11.000000   0.500000
+18          Spain  25.994218   4.682849
+19    Switzerland  18.042328  -4.867725
+20         Taiwan  37.811355  -2.721306
+21       Thailand  36.710969  -6.796030
+22         Turkey  28.269231  13.867521
+23  United States  16.315305   3.680504, 'Correlation between slope and intercept for Enterobacter species with Piperacillin.tazobactam in 2015: -0.1003 (p-value: 0.6489)\n', {'2018'},           Country  intercept      slope
+1       Australia  22.144250   5.151072
+2         Belgium  22.537913   7.315315
+3          Brazil  28.438331   4.999114
+4          Canada  23.869048  -3.392857
+5           China  48.669818   4.514356
+6         Croatia  38.453602  -3.995116
+7          France  36.218612   4.010610
+8         Germany  19.379121  -1.816850
+9          Israel  12.814815   7.518519
+10          Italy  27.717707   4.253016
+11          Japan  26.979853  -3.419414
+12   Korea, South  11.777778   9.354497
+13         Kuwait  19.119048  -7.047619
+14         Mexico  11.522876   2.264706
+15         Poland  48.107390  14.284955
+16       Portugal  58.921569  -6.691176
+17   South Africa   6.666667   7.500000
+18          Spain  29.124653 -10.160271
+19    Switzerland  11.071429   8.015873
+20         Taiwan  32.048840  12.233211
+21       Thailand  30.417863  15.166401
+22         Turkey  44.500000 -11.500000
+23  United States  26.939554   2.039262, 'Correlation between slope and intercept for Enterobacter species with Piperacillin.tazobactam in 2018: -0.2287 (p-value: 0.2940)\n', {'2019'},           Country  intercept      slope
+1       Australia  26.851852   2.777778
+2         Belgium  29.250000   4.902778
+3          Brazil  33.595960   0.207071
+4          Canada  22.023810  -3.273810
+5           China  56.398343  -4.791317
+6         Croatia  34.358974  -2.927350
+7          France  40.258621   1.681034
+8         Germany  19.413919  -3.525641
+9          Israel  16.481481  10.555556
+10          Italy  31.142250   3.176502
+11          Japan  24.674603  -2.841270
+12   Korea, South  17.460317  11.904762
+13         Kuwait  11.666667  -2.500000
+14         Mexico  11.846405   4.656863
+15         Poland  58.206628  14.678363
+16       Portugal  58.472222 -13.472222
+17   South Africa  10.000000  13.333333
+18          Spain  20.858161  -8.273491
+19    Switzerland  17.500000   6.666667
+20         Taiwan  41.396825  11.809524
+21       Thailand  41.535354  15.515152
+22         Turkey  35.944444  -9.111111
+23  United States  28.830460   0.938629, 'Correlation between slope and intercept for Enterobacter species with Piperacillin.tazobactam in 2019: -0.1421 (p-value: 0.5176)\n', {'2017'},           Country  intercept      slope
+1       Australia  23.055556   1.549708
+2         Belgium  20.171010   3.716055
+3          Brazil  22.736860   8.818235
+4          Canada  24.247312  -1.518817
+5           China  37.710784  14.705065
+6         Croatia  39.585470  -1.060440
+7          France  31.328691   5.540009
+8         Germany  20.657509  -0.683150
+9          Israel  12.703704  -0.777778
+10          Italy  24.985919   3.366822
+11          Japan  23.948718   1.012821
+12   Korea, South  13.726792  -2.398268
+13         Kuwait  28.557971 -10.495859
+14         Mexico  16.410364  -4.795518
+15         Poland  44.348751   3.988127
+16       Portugal  51.723856   7.745098
+17   South Africa   8.500000  -5.333333
+18          Spain  31.270495  -3.795013
+19    Switzerland  11.388889   1.428571
+20         Taiwan  34.926740  -1.080586
+21       Thailand  27.076378   3.339713
+22         Turkey  49.000000  -7.166667
+23  United States  23.442027   3.674567, 'Correlation between slope and intercept for Enterobacter species with Piperacillin.tazobactam in 2017: 0.2218 (p-value: 0.3092)\n', {'2016'},           Country  intercept      slope
+1       Australia  19.137427   1.125731
+2         Belgium  21.052353  -0.930433
+3          Brazil  21.022741   1.690281
+4          Canada  21.150744   4.214227
+5           China  29.845885  10.565954
+6         Croatia  40.788767  -1.580586
+7          France  29.643964   2.602902
+8         Germany  19.884671   1.629537
+9          Israel  14.026936  -3.946128
+10          Italy  22.806010   1.489377
+11          Japan  17.243590   7.991453
+12   Korea, South  17.766234  -6.571429
+13         Kuwait  30.149068  -4.200828
+14         Mexico  19.888029  -5.953020
+15         Poland  41.872231  -0.612706
+16       Portugal  42.500430  14.683093
+17   South Africa  12.166667  -5.166667
+18          Spain  28.500068   3.726878
+19    Switzerland  15.859788  -5.595238
+20         Taiwan  38.205128  -6.584249
+21       Thailand  32.419989  -6.294879
+22         Turkey  39.722222   9.444444
+23  United States  19.405339   3.933009, 'Correlation between slope and intercept for Enterobacter species with Piperacillin.tazobactam in 2016: 0.3065 (p-value: 0.1548)\n', {'2014'},           Country  intercept      slope
+1       Australia  16.208577   3.387636
+2         Belgium  26.906057  -2.939978
+3          Brazil  25.108531  -3.490368
+4          Canada  15.960160   2.510684
+5           China  27.335116  -1.773619
+6         Croatia  42.391775  -1.179654
+7          France  30.496225  -1.736685
+8         Germany  20.712121  -0.158009
+9          Israel  11.801347   2.424242
+10          Italy  22.088829   0.144412
+11          Japan  12.880342   0.606838
+12   Korea, South  19.385281   1.388167
+13         Kuwait  22.404187   7.042328
+14         Mexico  21.846562   1.265539
+15         Poland  44.474604  -0.433996
+16       Portugal  34.664329   0.586242
+17   South Africa   9.166667   3.333333
+18          Spain  24.299514   1.427876
+19    Switzerland  19.206349  -0.317460
+20         Taiwan  36.802503   4.294872
+21       Thailand  39.385788  -2.895268
+22         Turkey  20.512821  10.897436
+23  United States  14.511786   1.824666, 'Correlation between slope and intercept for Enterobacter species with Piperacillin.tazobactam in 2014: -0.3613 (p-value: 0.0903)\n']

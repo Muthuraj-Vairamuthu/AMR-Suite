@@ -1,0 +1,37 @@
+[{'2014'},            Country  intercept         slope
+1          Belgium   3.194444  0.000000e+00
+2           Canada   6.144713  4.914530e-01
+3            Chile  21.285714 -4.000000e+00
+4         Colombia  26.111111  5.185185e+00
+5          Croatia  13.920154  6.926407e-01
+6   Czech Republic   0.000000  9.992007e-16
+7           France   5.494253 -2.758621e+00
+8          Germany   6.326005  1.925134e+00
+9           Greece   0.000000  1.998401e-15
+10         Ireland   3.888889 -2.222222e+00
+11           Italy   0.952381  3.996803e-15
+12          Mexico   2.000000  2.666667e+00
+13     Netherlands  12.857143 -3.996803e-15
+14          Panama  10.000000  1.333333e+01
+15        Portugal  12.847222 -4.166667e+00
+16           Spain   7.250733 -7.255200e-01
+17     Switzerland   0.000000  0.000000e+00
+18   United States   5.530811 -4.290326e-01, 'Correlation between slope and intercept for Enterobacter species with Minocycline in 2014: 0.1072 (p-value: 0.6721)\n', {'2015'},            Country     intercept         slope
+1          Belgium  3.194444e+00  1.998401e-15
+2           Canada  6.595212e+00  6.143162e-01
+3            Chile  1.761905e+01 -5.000000e+00
+4         Colombia  3.086420e+01  6.481481e+00
+5          Croatia  1.455507e+01  8.658009e-01
+6   Czech Republic -1.065814e-14 -1.298961e-14
+7           France  2.965517e+00 -3.448276e+00
+8          Germany  8.090711e+00  2.406417e+00
+9           Greece  0.000000e+00 -9.992007e-16
+10         Ireland  1.851852e+00 -2.777778e+00
+11           Italy  9.523810e-01  4.996004e-15
+12          Mexico  4.444444e+00  3.333333e+00
+13     Netherlands  1.285714e+01  0.000000e+00
+14          Panama  2.222222e+01  1.666667e+01
+15        Portugal  9.027778e+00 -5.208333e+00
+16           Spain  6.585673e+00 -9.069001e-01
+17     Switzerland -1.065814e-14  1.998401e-15
+18   United States  5.137531e+00 -5.362907e-01, 'Correlation between slope and intercept for Enterobacter species with Minocycline in 2015: 0.5107 (p-value: 0.0303)\n']

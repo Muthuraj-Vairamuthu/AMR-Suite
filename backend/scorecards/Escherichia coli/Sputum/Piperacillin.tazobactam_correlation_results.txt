@@ -1,0 +1,133 @@
+[{'2015'},            Country  intercept         slope
+1        Australia   1.904762 -1.428571e+00
+2          Belgium  19.467176 -2.388181e+00
+3           Canada   0.000000  1.298961e-14
+4            China  21.302788  5.701473e-01
+5         Colombia  18.500000 -1.722222e+00
+6   Czech Republic  11.126984 -7.989418e-01
+7           France   5.233500  1.680033e+00
+8          Germany  12.091880 -5.833333e-01
+9           Israel   5.333333  3.500000e+00
+10           Italy  11.028898 -3.815131e+00
+11           Japan   0.000000  0.000000e+00
+12    Korea, South   9.166667  8.333333e-01
+13     Philippines   7.032828  5.492424e-01
+14          Poland  10.000000  1.333333e+01
+15        Portugal  21.507937 -1.428571e+00
+16    South Africa   2.000000  1.000000e+00
+17           Spain  14.678672 -3.234520e+00
+18          Taiwan  19.246176  3.330634e+00
+19        Thailand   7.535822 -1.977753e+00
+20          Turkey  14.245614 -8.240602e+00
+21  United Kingdom  16.788360 -1.883598e+00
+22   United States   9.754189  6.957857e-01, 'Correlation between slope and intercept for Escherichia coli with Piperacillin.tazobactam in 2015: -0.1827 (p-value: 0.4158)\n', {'2019'},            Country  intercept         slope
+1        Australia  21.190476  1.476190e+01
+2          Belgium  16.722222  1.666667e-01
+3           Canada   5.000000  2.500000e+00
+4            China  18.680634 -2.632270e+00
+5         Colombia   7.777778 -4.444444e+00
+6   Czech Republic   7.296296  7.777778e-01
+7           France  13.555556  4.285714e-01
+8          Germany  13.768116 -3.864734e+00
+9           Israel   2.333333 -1.333333e+00
+10           Italy  10.946970  8.333333e-01
+11           Japan  10.793651  7.248677e+00
+12    Korea, South  16.967033  3.602564e+00
+13     Philippines   5.833333 -3.333333e+00
+14          Poland  24.444444 -1.000000e+01
+15        Portugal  11.666667 -6.666667e+00
+16    South Africa   3.030303 -1.998401e-15
+17           Spain   7.308271 -1.002506e-01
+18          Taiwan  13.009158  8.315018e-01
+19        Thailand  13.440476 -3.333333e-01
+20          Turkey  12.415459  1.739130e+00
+21  United Kingdom   7.777778 -4.444444e+00
+22   United States  13.089351 -9.004022e-01, 'Correlation between slope and intercept for Escherichia coli with Piperacillin.tazobactam in 2019: 0.0803 (p-value: 0.7225)\n', {'2018'},            Country  intercept      slope
+1        Australia   9.761905  14.404762
+2          Belgium  15.111111   1.166667
+3           Canada   2.500000   3.333333
+4            China  21.049102  -3.076799
+5         Colombia  12.222222  -5.000000
+6   Czech Republic   7.629630  -0.074074
+7           France  12.026455   1.793651
+8          Germany  14.503902  -2.001115
+9           Israel   6.333333  -3.500000
+10           Italy   8.581002   2.607809
+11           Japan   5.026455   7.936508
+12    Korea, South  14.126374   3.120879
+13     Philippines   8.333333  -3.125000
+14          Poland  30.000000 -10.000000
+15        Portugal  17.666667  -7.000000
+16    South Africa   3.151515  -0.090909
+17           Spain   7.332331  -0.076525
+18          Taiwan  16.664835  -2.043040
+19        Thailand   9.797619   2.607143
+20          Turkey   7.101449   4.637681
+21  United Kingdom  11.142857  -4.190476
+22   United States  12.614913  -0.090383, 'Correlation between slope and intercept for Escherichia coli with Piperacillin.tazobactam in 2018: -0.5470 (p-value: 0.0084)\n', {'2017'},            Country  intercept     slope
+1        Australia   2.976190  4.761905
+2          Belgium  16.288530 -0.480287
+3           Canada   0.833333  2.500000
+4            China  21.734116 -1.185636
+5         Colombia  13.888889 -1.388889
+6   Czech Republic   9.777778 -2.333333
+7           France   8.931217  3.910053
+8          Germany  11.794872  3.279915
+9           Israel   7.833333 -2.333333
+10           Italy   6.678322  3.295455
+11           Japan   1.428571  4.285714
+12    Korea, South  12.518315  0.173993
+13     Philippines   7.670455  0.757576
+14          Poland  33.333333 -5.555556
+15        Portugal  16.571429  0.904762
+16    South Africa   3.242424 -0.121212
+17           Spain   9.051423 -1.306111
+18          Taiwan  20.074176 -3.623626
+19        Thailand   6.925770  3.883053
+20          Turkey   4.035088  3.918129
+21  United Kingdom  13.111111 -1.142857
+22   United States  11.611981  1.081292, 'Correlation between slope and intercept for Escherichia coli with Piperacillin.tazobactam in 2017: -0.7230 (p-value: 0.0001)\n', {'2016'},            Country  intercept         slope
+1        Australia   0.833333  2.500000e+00
+2          Belgium  18.704490 -2.045840e+00
+3           Canada   0.000000  1.498801e-14
+4            China  21.307366  9.443917e-01
+5         Colombia  16.388889 -2.222222e+00
+6   Czech Republic   9.888889 -8.888889e-01
+7           France   6.428571  2.182540e+00
+8          Germany  11.779915  1.675214e+00
+9           Israel   8.500000 -1.166667e+00
+10           Italy   6.967812 -5.237899e-01
+11           Japan   0.000000  2.997602e-15
+12    Korea, South   8.809524  3.928571e+00
+13     Philippines   6.496212  1.496212e+00
+14          Poland  21.111111  1.333333e+01
+15        Portugal  19.666667 -1.238095e+00
+16    South Africa   3.303030 -9.090909e-02
+17           Spain  12.515031 -3.291935e+00
+18          Taiwan  23.207827 -4.969973e+00
+19        Thailand   6.998761  1.416721e+00
+20          Turkey   8.053467 -1.654135e+00
+21  United Kingdom  14.423280 -1.412698e+00
+22   United States  10.593919  1.581630e+00, 'Correlation between slope and intercept for Escherichia coli with Piperacillin.tazobactam in 2016: -0.0114 (p-value: 0.9598)\n', {'2014'},            Country  intercept         slope
+1        Australia   3.333333 -1.904762e+00
+2          Belgium  19.993256 -3.508772e-02
+3           Canada   0.000000  1.110223e-14
+4            China  21.374889 -3.328327e-01
+5         Colombia  19.666667 -2.111111e+00
+6   Czech Republic  11.851852 -2.380952e-01
+7           France   4.616959  2.056530e-01
+8          Germany  12.730769 -2.000000e+00
+9           Israel   2.500000  3.333333e+00
+10           Italy  14.123817 -4.300014e+00
+11           Japan   0.000000 -1.998401e-15
+12    Korea, South  10.000000 -8.333333e-01
+13     Philippines   7.544192 -1.388889e+00
+14          Poland   3.333333  1.000000e+01
+15        Portugal  22.650794 -3.555556e+00
+16    South Africa   1.000000  1.333333e+00
+17           Spain  15.965374 -1.327988e+00
+18          Taiwan  15.209064  5.532164e+00
+19        Thailand   8.536953 -1.538462e+00
+20          Turkey  19.278195 -6.952381e+00
+21  United Kingdom  18.301587 -2.079365e+00
+22   United States   9.427520  2.653009e-01, 'Correlation between slope and intercept for Escherichia coli with Piperacillin.tazobactam in 2014: -0.4360 (p-value: 0.0425)\n']

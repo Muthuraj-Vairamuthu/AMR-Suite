@@ -1,0 +1,181 @@
+[{'2015'},            Country  intercept      slope
+1        Argentina  35.023449  -3.290043
+2        Australia  15.225991  -0.061622
+3          Belgium  18.285632  -0.216311
+4           Brazil  33.419184  -8.976683
+5           Canada  23.944444  -4.046296
+6            Chile  50.216490  -7.710317
+7            China  28.608849  -0.156360
+8         Colombia  41.717396  -5.045400
+9          Croatia  49.944444 -12.944444
+10  Czech Republic  46.937439  -4.667644
+11          France  26.584967  -1.671335
+12         Germany  24.683575  -3.819152
+13          Greece  38.095425   2.005229
+14         Hungary  43.357873   1.495348
+15          Israel  22.829670   7.576313
+16           Italy  34.944315  -2.137668
+17           Japan  11.804302  -0.827489
+18    Korea, South  38.745921  -1.559441
+19          Kuwait  21.175505   1.826178
+20          Mexico  48.157231   1.541223
+21     Netherlands  13.963393  -1.280246
+22     Philippines  27.436027  -5.225589
+23          Poland  20.961488   1.361543
+24        Portugal  39.508206  -1.758231
+25    South Africa  39.336534  -6.254352
+26           Spain  40.872096  -2.212260
+27        Thailand  37.174603   6.682540
+28          Turkey  31.139871   0.827020
+29   United States  25.213898  -2.179661
+30       Venezuela  33.888889  -8.253968, 'Correlation between slope and intercept for Pseudomonas aeruginosa with Levofloxacin in 2015: -0.3514 (p-value: 0.0569)\n', {'2018'},            Country  intercept      slope
+1        Argentina  30.845238   3.428571
+2        Australia  10.646970  -5.286364
+3          Belgium  23.923349   5.315753
+4           Brazil  17.385921   3.721849
+5           Canada  14.099025  -1.101072
+6            Chile  31.240741  -3.863757
+7            China  30.124853  -1.646835
+8         Colombia  27.722222  -4.055556
+9          Croatia  22.547619  -0.690476
+10  Czech Republic  33.177629   3.635898
+11          France  21.583489  -2.369462
+12         Germany  13.867727  -0.747782
+13          Greece  42.324189  -6.277299
+14         Hungary  41.773810   2.107143
+15          Israel  35.206799  -7.682411
+16           Italy  24.343076  -3.802626
+17           Japan   7.584351  -3.041420
+18    Korea, South  40.783135   3.704167
+19          Kuwait  26.895623  -3.168350
+20          Mexico  43.031241  -8.482327
+21     Netherlands  11.885522  -3.520924
+22     Philippines  15.620370  -2.259259
+23          Poland  25.228616   3.341920
+24        Portugal  33.259740  -0.213564
+25    South Africa  24.877998  -2.659567
+26           Spain  34.402939  -4.151192
+27        Thailand  36.026862  -6.382173
+28          Turkey  30.700466   2.263112
+29   United States  22.955609  -0.631719
+30       Venezuela  33.192451  15.805423, 'Correlation between slope and intercept for Pseudomonas aeruginosa with Levofloxacin in 2018: 0.0268 (p-value: 0.8881)\n', {'2019'},            Country  intercept      slope
+1        Argentina  34.000000   2.138889
+2        Australia   6.553030  -4.393939
+3          Belgium  28.734314   3.371637
+4           Brazil  19.941245   4.160689
+5           Canada  14.089669  -1.374269
+6            Chile  28.175485  -2.188713
+7            China  30.533769  -3.769063
+8         Colombia  23.914815  -3.088889
+9          Croatia  21.087302   0.523810
+10  Czech Republic  34.372294   4.696970
+11          France  19.414312  -1.921423
+12         Germany  13.076486  -0.123815
+13          Greece  38.779373  -9.060606
+14         Hungary  40.583333   3.833333
+15          Israel  29.677784  -7.391363
+16           Italy  20.729087  -1.962277
+17           Japan   4.735783  -2.012248
+18    Korea, South  43.824403   1.916511
+19          Kuwait  24.239057  -3.444444
+20          Mexico  35.105890  -5.993432
+21     Netherlands   9.379509  -3.583454
+22     Philippines  13.240741  -1.342593
+23          Poland  28.110205   2.843357
+24        Portugal  31.836941   1.535354
+25    South Africa  21.933761  -0.972222
+26           Spain  30.461963  -3.633452
+27        Thailand  28.117216  -1.179487
+28          Turkey  33.259615   1.958333
+29   United States  23.335553  -1.722354
+30       Venezuela  47.647528  10.313663, 'Correlation between slope and intercept for Pseudomonas aeruginosa with Levofloxacin in 2019: 0.3332 (p-value: 0.0720)\n', {'2016'},            Country  intercept     slope
+1        Argentina  33.456710 -2.741342
+2        Australia  15.303813 -0.914486
+3          Belgium  18.255198  1.961771
+4           Brazil  26.526535 -7.516315
+5           Canada  19.572222 -1.005556
+6            Chile  43.068783 -5.394621
+7            China  29.236802  2.443942
+8         Colombia  36.912200 -5.325490
+9          Croatia  37.055556 -9.666667
+10  Czech Republic  43.943388 -9.523698
+11          France  24.322934 -1.313960
+12         Germany  22.271919 -4.990348
+13          Greece  40.026006  3.195666
+14         Hungary  45.532020 -6.987685
+15          Israel  27.867318  7.813390
+16           Italy  32.826503 -3.834658
+17           Japan  10.542905 -1.263366
+18    Korea, South  38.354449 -1.090498
+19          Kuwait  22.207071  2.410354
+20          Mexico  49.010964 -2.345396
+21     Netherlands  11.935293  0.959672
+22     Philippines  21.575758 -3.664983
+23          Poland  22.223237  1.559240
+24        Portugal  37.983422 -4.077580
+25    South Africa  32.606907 -4.734964
+26           Spain  39.239362 -3.612093
+27        Thailand  43.111111 -3.841270
+28          Turkey  34.015313 -1.015929
+29   United States  22.883622  1.001820
+30       Venezuela  28.624339 -1.560847, 'Correlation between slope and intercept for Pseudomonas aeruginosa with Levofloxacin in 2016: -0.4373 (p-value: 0.0157)\n', {'2017'},            Country  intercept     slope
+1        Argentina  30.599206  1.281746
+2        Australia  13.666434 -3.549068
+3          Belgium  20.410910  4.366521
+4           Brazil  18.371868 -0.760315
+5           Canada  19.383333 -4.711111
+6            Chile  36.686508 -6.210317
+7            China  30.370091  0.310876
+8         Colombia  31.703268 -3.490414
+9          Croatia  28.333333 -4.722222
+10  Czech Republic  37.206377 -2.205334
+11          France  23.307937 -1.511376
+12         Germany  17.379298 -3.172367
+13          Greece  42.168928  1.749301
+14         Hungary  41.178161  1.884236
+15          Israel  34.935694 -0.931624
+16           Italy  29.646564 -5.563192
+17           Japan   9.161384 -1.949950
+18    Korea, South  36.754689  5.158485
+19          Kuwait  23.101010  3.343434
+20          Mexico  46.483464 -4.275925
+21     Netherlands  11.845523 -0.280246
+22     Philippines  18.174242 -2.345960
+23          Poland  24.582746  0.847539
+24        Portugal  34.358710 -1.445440
+25    South Africa  27.696296 -3.202174
+26           Spain  34.668174 -0.071074
+27        Thailand  41.368742 -7.004884
+28          Turkey  33.119172 -2.368881
+29   United States  23.304116 -0.004735
+30       Venezuela  27.124756  9.152047, 'Correlation between slope and intercept for Pseudomonas aeruginosa with Levofloxacin in 2017: -0.0486 (p-value: 0.7987)\n', {'2014'},            Country  intercept      slope
+1        Argentina  36.073232  -0.979437
+2        Australia  15.008725   0.403463
+3          Belgium  18.739509  -0.664340
+4           Brazil  37.846847  -5.648649
+5           Canada  27.175926  -2.222222
+6            Chile  54.968254  -5.465608
+7            China  28.752137   0.188034
+8         Colombia  44.544495  -3.512821
+9          Croatia  58.333333 -10.000000
+10  Czech Republic  47.762659   0.148192
+11          France  28.013662  -1.806477
+12         Germany  25.896330  -0.838059
+13          Greece  37.175163   0.688889
+14         Hungary  40.356778   3.060847
+15          Israel  19.854497   3.214286
+16           Italy  35.875604  -0.289855
+17           Japan  12.473964  -1.059997
+18    Korea, South  39.074592  -1.412587
+19          Kuwait  20.673401  -1.332071
+20          Mexico  46.867667   1.011042
+21     Netherlands  15.628237  -2.793651
+22     Philippines  31.264310  -4.944444
+23          Poland  20.243978   1.556851
+24        Portugal  39.959207  -0.862745
+25    South Africa  43.678187  -5.810036
+26           Spain  41.571770  -2.102871
+27        Thailand  31.507937   7.539683
+28          Turkey  29.046016   4.253648
+29   United States  27.248359  -2.405732
+30       Venezuela  38.386243  -5.079365, 'Correlation between slope and intercept for Pseudomonas aeruginosa with Levofloxacin in 2014: -0.4021 (p-value: 0.0276)\n']

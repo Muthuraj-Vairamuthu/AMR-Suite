@@ -1,0 +1,205 @@
+[{'2016'},            Country     intercept         slope
+1        Argentina -9.714451e-17  0.000000e+00
+2        Australia  0.000000e+00  0.000000e+00
+3          Belgium  2.012279e-16 -9.974660e-17
+4           Brazil  2.012279e-16 -9.974660e-17
+5           Canada -9.714451e-17  0.000000e+00
+6            Chile  0.000000e+00  0.000000e+00
+7            China  2.287582e-01 -1.307190e-01
+8         Colombia -9.714451e-17  0.000000e+00
+9          Croatia -9.714451e-17  0.000000e+00
+10  Czech Republic  0.000000e+00 -9.974660e-17
+11          France  9.714451e-17 -9.974660e-17
+12         Germany  2.012279e-16 -9.974660e-17
+13          Greece  9.714451e-17 -9.974660e-17
+14         Hungary  0.000000e+00  0.000000e+00
+15          Israel  9.714451e-17  0.000000e+00
+16           Italy  5.967449e-16 -9.974660e-17
+17    Korea, South  0.000000e+00 -9.974660e-17
+18          Kuwait  3.589744e-01 -2.051282e-01
+19          Mexico  0.000000e+00 -9.974660e-17
+20     Netherlands  2.983724e-16 -1.994932e-16
+21          Panama  9.714451e-17 -9.974660e-17
+22     Philippines  0.000000e+00  0.000000e+00
+23          Poland  9.714451e-17  0.000000e+00
+24        Portugal  9.714451e-17  0.000000e+00
+25         Romania  0.000000e+00  0.000000e+00
+26    South Africa  1.470588e-01  1.960784e-01
+27           Spain  0.000000e+00  0.000000e+00
+28     Switzerland -9.714451e-17  0.000000e+00
+29          Taiwan  0.000000e+00 -9.974660e-17
+30        Thailand  0.000000e+00 -9.974660e-17
+31          Turkey  0.000000e+00 -9.974660e-17
+32  United Kingdom  0.000000e+00  0.000000e+00
+33   United States  3.739316e-02 -2.136752e-02
+34       Venezuela  0.000000e+00  0.000000e+00, 'Correlation between slope and intercept for Staphylococcus aureus with Linezolid in 2016: -0.5331 (p-value: 0.0012)\n', {'2017'},            Country     intercept         slope
+1        Argentina -1.942890e-16  0.000000e+00
+2        Australia  0.000000e+00 -9.887924e-17
+3          Belgium  2.012279e-16 -9.887924e-17
+4           Brazil  1.040834e-16 -9.887924e-17
+5           Canada -1.942890e-16  0.000000e+00
+6            Chile -9.714451e-17  0.000000e+00
+7            China  1.307190e-01 -9.803922e-02
+8         Colombia -9.714451e-17 -9.887924e-17
+9          Croatia -9.714451e-17  0.000000e+00
+10  Czech Republic -9.714451e-17 -9.887924e-17
+11          France  0.000000e+00 -9.887924e-17
+12         Germany  2.012279e-16 -1.994932e-16
+13          Greece  0.000000e+00 -9.887924e-17
+14         Hungary  0.000000e+00  0.000000e+00
+15          Israel  1.040834e-16 -9.887924e-17
+16           Italy  2.012279e-16 -9.887924e-17
+17    Korea, South -9.714451e-17  0.000000e+00
+18          Kuwait  2.051282e-01 -1.538462e-01
+19          Mexico  0.000000e+00 -9.887924e-17
+20     Netherlands  0.000000e+00  0.000000e+00
+21          Panama  1.040834e-16 -9.887924e-17
+22     Philippines  0.000000e+00  0.000000e+00
+23          Poland  1.040834e-16 -9.887924e-17
+24        Portugal  2.012279e-16 -9.887924e-17
+25         Romania  0.000000e+00 -9.887924e-17
+26    South Africa  2.941176e-01  1.470588e-01
+27           Spain  0.000000e+00  0.000000e+00
+28     Switzerland  1.040834e-16 -9.887924e-17
+29          Taiwan  0.000000e+00 -9.887924e-17
+30        Thailand  0.000000e+00 -9.887924e-17
+31          Turkey  0.000000e+00 -9.887924e-17
+32  United Kingdom  0.000000e+00 -9.887924e-17
+33   United States  2.136752e-02 -1.602564e-02
+34       Venezuela  0.000000e+00  0.000000e+00, 'Correlation between slope and intercept for Staphylococcus aureus with Linezolid in 2017: 0.0100 (p-value: 0.9554)\n', {'2014'},            Country     intercept         slope
+1        Argentina -2.012279e-16  0.000000e+00
+2        Australia -1.006140e-16  0.000000e+00
+3          Belgium  1.006140e-16 -1.006140e-16
+4           Brazil  0.000000e+00  0.000000e+00
+5           Canada -2.012279e-16  0.000000e+00
+6            Chile  0.000000e+00  0.000000e+00
+7            China  3.267974e-01  0.000000e+00
+8         Colombia -1.006140e-16  0.000000e+00
+9          Croatia -2.012279e-16  0.000000e+00
+10  Czech Republic -1.006140e-16 -1.006140e-16
+11          France  0.000000e+00 -1.006140e-16
+12         Germany  1.006140e-16 -1.006140e-16
+13          Greece -1.006140e-16  0.000000e+00
+14         Hungary -1.006140e-16  0.000000e+00
+15          Israel  0.000000e+00 -1.006140e-16
+16           Italy -2.012279e-16  0.000000e+00
+17    Korea, South  0.000000e+00  0.000000e+00
+18          Kuwait  5.128205e-01 -1.006140e-16
+19          Mexico -1.006140e-16  0.000000e+00
+20     Netherlands -1.006140e-16  0.000000e+00
+21          Panama  0.000000e+00  0.000000e+00
+22     Philippines -1.006140e-16  0.000000e+00
+23          Poland  0.000000e+00  0.000000e+00
+24        Portugal  0.000000e+00  0.000000e+00
+25         Romania  0.000000e+00  0.000000e+00
+26    South Africa  0.000000e+00  0.000000e+00
+27           Spain  0.000000e+00  0.000000e+00
+28     Switzerland  0.000000e+00  0.000000e+00
+29          Taiwan  0.000000e+00  0.000000e+00
+30        Thailand  0.000000e+00  0.000000e+00
+31          Turkey  0.000000e+00  0.000000e+00
+32  United Kingdom  0.000000e+00  0.000000e+00
+33   United States  5.341880e-02  0.000000e+00
+34       Venezuela -1.006140e-16  0.000000e+00, 'Correlation between slope and intercept for Staphylococcus aureus with Linezolid in 2014: -0.2704 (p-value: 0.1219)\n', {'2015'},            Country     intercept         slope
+1        Argentina -2.012279e-16  0.000000e+00
+2        Australia -9.714451e-17  0.000000e+00
+3          Belgium  0.000000e+00  0.000000e+00
+4           Brazil  0.000000e+00  0.000000e+00
+5           Canada -2.012279e-16  1.006140e-16
+6            Chile -9.714451e-17  0.000000e+00
+7            China  2.941176e-01 -9.803922e-02
+8         Colombia -2.012279e-16  0.000000e+00
+9          Croatia -2.012279e-16  0.000000e+00
+10  Czech Republic -9.714451e-17 -1.006140e-16
+11          France  0.000000e+00  0.000000e+00
+12         Germany  9.714451e-17 -1.006140e-16
+13          Greece -9.714451e-17  0.000000e+00
+14         Hungary -9.714451e-17  0.000000e+00
+15          Israel  0.000000e+00  0.000000e+00
+16           Italy -9.714451e-17  0.000000e+00
+17    Korea, South  0.000000e+00  0.000000e+00
+18          Kuwait  4.615385e-01 -1.538462e-01
+19          Mexico -9.714451e-17  0.000000e+00
+20     Netherlands  0.000000e+00 -1.006140e-16
+21          Panama  0.000000e+00  0.000000e+00
+22     Philippines -9.714451e-17  0.000000e+00
+23          Poland  0.000000e+00  0.000000e+00
+24        Portugal  0.000000e+00  0.000000e+00
+25         Romania -9.714451e-17  0.000000e+00
+26    South Africa  4.901961e-02  1.470588e-01
+27           Spain -9.714451e-17  0.000000e+00
+28     Switzerland -9.714451e-17  0.000000e+00
+29          Taiwan -9.714451e-17  0.000000e+00
+30        Thailand -9.714451e-17  0.000000e+00
+31          Turkey -9.714451e-17  0.000000e+00
+32  United Kingdom -9.714451e-17  0.000000e+00
+33   United States  4.807692e-02 -1.602564e-02
+34       Venezuela -9.714451e-17  0.000000e+00, 'Correlation between slope and intercept for Staphylococcus aureus with Linezolid in 2015: -0.7263 (p-value: 0.0000)\n', {'2018'},            Country     intercept         slope
+1        Argentina -1.040834e-16  0.000000e+00
+2        Australia  9.714451e-17 -9.714451e-17
+3          Belgium  1.942890e-16 -9.714451e-17
+4           Brazil  9.714451e-17  0.000000e+00
+5           Canada -1.040834e-16  0.000000e+00
+6            Chile  0.000000e+00  0.000000e+00
+7            China  0.000000e+00 -9.714451e-17
+8         Colombia -1.040834e-16  0.000000e+00
+9          Croatia -1.040834e-16  0.000000e+00
+10  Czech Republic  0.000000e+00 -9.714451e-17
+11          France  9.714451e-17 -9.714451e-17
+12         Germany  9.714451e-17 -9.714451e-17
+13          Greece  0.000000e+00  0.000000e+00
+14         Hungary  0.000000e+00  0.000000e+00
+15          Israel  9.714451e-17 -9.714451e-17
+16           Italy  0.000000e+00  0.000000e+00
+17    Korea, South  0.000000e+00  0.000000e+00
+18          Kuwait  9.714451e-17 -9.714451e-17
+19          Mexico  0.000000e+00 -9.714451e-17
+20     Netherlands  0.000000e+00  0.000000e+00
+21          Panama  9.714451e-17 -9.714451e-17
+22     Philippines  0.000000e+00  0.000000e+00
+23          Poland  0.000000e+00  0.000000e+00
+24        Portugal  4.996004e-16 -9.714451e-17
+25         Romania  9.714451e-17  0.000000e+00
+26    South Africa  4.411765e-01 -1.470588e-01
+27           Spain  0.000000e+00  0.000000e+00
+28     Switzerland  0.000000e+00  0.000000e+00
+29          Taiwan  0.000000e+00  0.000000e+00
+30        Thailand  0.000000e+00  0.000000e+00
+31          Turkey  0.000000e+00  0.000000e+00
+32  United Kingdom  0.000000e+00  0.000000e+00
+33   United States  0.000000e+00  0.000000e+00
+34       Venezuela  0.000000e+00  0.000000e+00, 'Correlation between slope and intercept for Staphylococcus aureus with Linezolid in 2018: -1.0000 (p-value: 0.0000)\n', {'2019'},            Country     intercept         slope
+1        Argentina  0.000000e+00  0.000000e+00
+2        Australia  1.006140e-16  0.000000e+00
+3          Belgium  1.977585e-16  0.000000e+00
+4           Brazil  1.006140e-16  0.000000e+00
+5           Canada  0.000000e+00  0.000000e+00
+6            Chile  0.000000e+00  0.000000e+00
+7            China  1.006140e-16  0.000000e+00
+8         Colombia  0.000000e+00  0.000000e+00
+9          Croatia  0.000000e+00  0.000000e+00
+10  Czech Republic  0.000000e+00  0.000000e+00
+11          France  1.006140e-16  0.000000e+00
+12         Germany  1.977585e-16 -1.006140e-16
+13          Greece  0.000000e+00  0.000000e+00
+14         Hungary  0.000000e+00  0.000000e+00
+15          Israel  1.006140e-16  0.000000e+00
+16           Italy  0.000000e+00  0.000000e+00
+17    Korea, South  0.000000e+00  0.000000e+00
+18          Kuwait  1.006140e-16  0.000000e+00
+19          Mexico  0.000000e+00  0.000000e+00
+20     Netherlands  1.006140e-16  0.000000e+00
+21          Panama  1.006140e-16  0.000000e+00
+22     Philippines  0.000000e+00  0.000000e+00
+23          Poland  1.006140e-16  0.000000e+00
+24        Portugal  2.983724e-16 -1.006140e-16
+25         Romania  1.006140e-16  0.000000e+00
+26    South Africa  3.431373e-01 -1.960784e-01
+27           Spain  0.000000e+00  0.000000e+00
+28     Switzerland  1.006140e-16  0.000000e+00
+29          Taiwan  0.000000e+00  0.000000e+00
+30        Thailand  0.000000e+00  0.000000e+00
+31          Turkey  0.000000e+00  0.000000e+00
+32  United Kingdom  1.006140e-16  0.000000e+00
+33   United States  1.006140e-16  0.000000e+00
+34       Venezuela  0.000000e+00  0.000000e+00, 'Correlation between slope and intercept for Staphylococcus aureus with Linezolid in 2019: -1.0000 (p-value: 0.0000)\n']

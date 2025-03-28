@@ -1,0 +1,217 @@
+[{'2014'},            Country  intercept      slope
+1        Argentina  48.943580   0.285163
+2        Australia   0.238095   0.714286
+3          Belgium  22.889595   1.753550
+4           Brazil  52.542824   2.770999
+5           Canada   5.437428   0.113597
+6            Chile  46.385281  -8.679654
+7            China  29.724024   0.960264
+8         Colombia  30.353632   1.942308
+9          Croatia  41.222955   5.449910
+10  Czech Republic  55.098744   0.141405
+11         Denmark   6.569923   0.361111
+12          France  30.386406  -1.586559
+13         Germany  16.041513  -0.256940
+14          Greece  67.075242   0.848485
+15         Hungary  33.201567   7.564103
+16         Ireland  11.587302  -2.539683
+17          Israel  36.060847  -2.095238
+18           Italy  59.157425   3.792158
+19           Japan   5.061264  -0.529101
+20    Korea, South  13.781404   1.043771
+21          Kuwait  37.983313   4.029304
+22          Mexico  43.771668   2.826299
+23     Netherlands   2.222222   2.962963
+24          Panama  36.307435   4.160401
+25     Philippines  48.611111  -1.388889
+26          Poland  72.954545  -5.703463
+27        Portugal  31.984245   2.750541
+28    South Africa  63.944961  -6.517829
+29           Spain  26.619399  -0.653459
+30     Switzerland  12.375680  -2.616550
+31          Taiwan  18.624339   4.285714
+32        Thailand  18.162393  12.820513
+33          Turkey  53.537037   3.666667
+34  United Kingdom   6.256797   0.905468
+35   United States   6.316311   1.247548
+36       Venezuela  25.480159  -0.841270, 'Correlation between slope and intercept for Klebsiella pneumoniae with Cefepime in 2014: -0.1741 (p-value: 0.3099)\n', {'2017'},            Country  intercept      slope
+1        Argentina  53.136675   2.437096
+2        Australia   3.275755   1.449839
+3          Belgium  20.611369  -3.106740
+4           Brazil  56.823457   2.578221
+5           Canada   5.990011   0.168047
+6            Chile  46.141636  15.027473
+7            China  35.826984   4.973519
+8         Colombia  37.389616   3.980315
+9          Croatia  49.843473   0.142510
+10  Czech Republic  44.106554  -3.821482
+11         Denmark   5.755747  -2.129310
+12          France  22.433200   0.085775
+13         Germany  12.642542  -3.704327
+14          Greece  69.052669   0.510178
+15         Hungary  45.000816  -5.900846
+16         Ireland  10.746337   3.637057
+17          Israel  33.065006  -1.366268
+18           Italy  62.700819  -4.570457
+19           Japan   4.323308  -0.062657
+20    Korea, South  15.272061   2.618826
+21          Kuwait  50.186998   2.439671
+22          Mexico  56.587605   2.586326
+23     Netherlands   7.685185  -1.712963
+24          Panama  34.860681  -4.899995
+25     Philippines  38.760684  -8.504274
+26          Poland  65.571443   3.765532
+27        Portugal  38.871650  -1.164141
+28    South Africa  49.755154  -0.600456
+29           Spain  24.010585  -0.731988
+30     Switzerland   5.656566  -0.833333
+31          Taiwan  21.587676  -7.359988
+32        Thailand  48.072333  -1.348151
+33          Turkey  60.037121   1.892899
+34  United Kingdom  13.314834   1.314164
+35   United States  11.433014   1.849151
+36       Venezuela  34.000000   7.605159, 'Correlation between slope and intercept for Klebsiella pneumoniae with Cefepime in 2017: 0.1272 (p-value: 0.4596)\n', {'2016'},            Country  intercept      slope
+1        Argentina  50.571884   1.796586
+2        Australia   1.675485   1.455026
+3          Belgium  24.817570  -4.348637
+4           Brazil  57.257481  -1.293589
+5           Canada   5.528651   0.238218
+6            Chile  37.320180  11.581752
+7            China  33.056712   3.243472
+8         Colombia  33.936852   2.725799
+9          Croatia  50.433137  -1.358635
+10  Czech Republic  50.463202  -8.515965
+11         Denmark   5.718391  -0.589080
+12          France  26.730677  -4.415288
+13         Germany  13.555990  -1.718862
+14          Greece  69.864713  -0.630874
+15         Hungary  43.693479  -1.077681
+16         Ireland   8.577534   2.838828
+17          Israel  34.260405   0.361783
+18           Italy  64.887524  -3.209539
+19           Japan   4.260652   0.062657
+20    Korea, South  15.808599  -1.000777
+21          Kuwait  45.074000   3.038443
+22          Mexico  50.377731   5.308182
+23     Netherlands   7.916667  -0.555556
+24          Panama  39.039265  -5.800613
+25     Philippines  42.735043  -6.517094
+26          Poland  65.862487   1.875340
+27        Portugal  36.367393   1.760290
+28    South Africa  52.544243  -3.159081
+29           Spain  24.696708  -0.903006
+30     Switzerland   8.005051  -1.489899
+31          Taiwan  23.948413  -4.609788
+32        Thailand  40.224141   5.715158
+33          Turkey  60.458507  -0.953913
+34  United Kingdom   9.236598   4.618546
+35   United States   8.990219   2.404323
+36       Venezuela  28.019180   7.936508, 'Correlation between slope and intercept for Klebsiella pneumoniae with Cefepime in 2016: -0.1064 (p-value: 0.5367)\n', {'2018'},            Country  intercept     slope
+1        Argentina  55.510458  1.532473
+2        Australia   4.324619  1.356987
+3          Belgium  18.123079 -1.109228
+4           Brazil  58.572589  4.217959
+5           Canada   5.930186 -0.028346
+6            Chile  59.429737  9.485792
+7            China  39.402660  1.901741
+8         Colombia  39.303347  2.073072
+9          Croatia  50.376600  2.678722
+10  Czech Republic  38.497857  2.363734
+11         Denmark   3.416667 -1.000000
+12          France  21.978469  2.257441
+13         Germany   8.802326 -2.600553
+14          Greece  68.314957 -6.531624
+15         Hungary  39.927579 -3.155818
+16         Ireland  13.173077  0.073260
+17          Israel  33.441452 -3.783743
+18           Italy  58.880286 -5.382222
+19           Japan   4.147870 -0.902256
+20    Korea, South  17.281866  3.923521
+21          Kuwait  51.382950  0.975358
+22          Mexico  59.106879 -0.548080
+23     Netherlands   6.712963 -3.472222
+24          Panama  29.380403  1.891270
+25     Philippines  30.854701 -6.794872
+26          Poland  69.308688 -0.234184
+27        Portugal  37.856408 -1.471138
+28    South Africa  50.928390  4.420250
+29           Spain  22.790325 -0.591123
+30     Switzerland   4.848485 -2.121212
+31          Taiwan  15.902539 -5.204307
+32        Thailand  48.229890  0.909204
+33          Turkey  61.346951  1.262657
+34  United Kingdom  14.907751 -1.290133
+35   United States  13.277581  2.365409
+36       Venezuela  39.714286 -1.452381, 'Correlation between slope and intercept for Klebsiella pneumoniae with Cefepime in 2018: 0.1766 (p-value: 0.3030)\n', {'2019'},            Country  intercept     slope
+1        Argentina  56.161988  1.581516
+2        Australia   5.774458  0.462185
+3          Belgium  16.281666  0.837221
+4           Brazil  61.542838  3.608979
+5           Canada   5.938733 -0.229902
+6            Chile  70.377123  2.077922
+7            China  42.071193 -1.078809
+8         Colombia  41.971493 -0.972629
+9          Croatia  51.630221  3.773946
+10  Czech Republic  39.660502  2.784043
+11         Denmark   2.666667 -0.750000
+12          France  23.364555  2.335849
+13         Germany   6.524828 -1.744165
+14          Greece  62.995726 -7.288462
+15         Hungary  35.938155 -0.014313
+16         Ireland  14.392552 -2.541209
+17          Israel  30.033802 -2.084206
+18           Italy  52.931367 -2.375034
+19           Japan   3.421053 -0.952381
+20    Korea, South  20.142857  3.312169
+21          Kuwait  51.838495  0.065934
+22          Mexico  58.518076 -0.955238
+23     Netherlands   2.916667 -1.666667
+24          Panama  30.473674  2.942844
+25     Philippines  22.905983 -2.222222
+26          Poland  70.074220 -1.957143
+27        Portugal  36.563602 -1.033076
+28    South Africa  52.732862  7.336283
+29           Spain  22.474972 -0.895234
+30     Switzerland   3.333333 -2.121212
+31          Taiwan   8.903584  0.108110
+32        Thailand  48.047241  2.992271
+33          Turkey  61.836341  1.054971
+34  United Kingdom  14.610804 -2.120873
+35   United States  15.546098  1.616639
+36       Venezuela  41.111111 -6.666667, 'Correlation between slope and intercept for Klebsiella pneumoniae with Cefepime in 2019: 0.1391 (p-value: 0.4183)\n', {'2015'},            Country  intercept      slope
+1        Argentina  49.595646   2.128201
+2        Australia   0.714286   0.952381
+3          Belgium  24.100827  -0.442707
+4           Brazil  54.654592   1.456583
+5           Canada   5.467686   0.206614
+6            Chile  41.201299  -2.694805
+7            China  30.788177   1.758631
+8         Colombia  31.616097   2.075855
+9          Croatia  45.335531   3.911427
+10  Czech Republic  53.758892  -5.328156
+11         Denmark   6.276820  -0.379310
+12          France  29.103206  -3.713703
+13         Germany  15.172483  -1.214531
+14          Greece  68.398332   1.585430
+15         Hungary  38.055556   6.278490
+16         Ireland   9.975580  -1.025641
+17          Israel  35.298701  -0.334055
+18           Italy  62.092653   3.081987
+19           Japan   4.727096  -0.208855
+20    Korea, South  14.699560   0.262885
+21          Kuwait  40.934066   5.372405
+22          Mexico  46.334709   5.994317
+23     Netherlands   4.861111   3.472222
+24          Panama  37.917015  -1.119465
+25     Philippines  46.944444  -2.222222
+26          Poland  69.618615  -3.535931
+27        Portugal  33.818414   3.284197
+28    South Africa  59.380584  -5.471942
+29           Spain  25.851699  -1.276532
+30     Switzerland  10.571096  -2.814685
+31          Taiwan  21.640212   3.544974
+32        Thailand  27.435897  13.717949
+33          Turkey  56.614035   2.897661
+34  United Kingdom   7.174531   3.021016
+35   United States   7.245440   1.815634
+36       Venezuela  25.761243   2.568122, 'Correlation between slope and intercept for Klebsiella pneumoniae with Cefepime in 2015: -0.0641 (p-value: 0.7103)\n']

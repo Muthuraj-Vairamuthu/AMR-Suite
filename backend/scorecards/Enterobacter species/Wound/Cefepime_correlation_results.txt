@@ -1,0 +1,133 @@
+[{'2015'},            Country  intercept     slope
+1        Australia   0.625000  0.833333
+2          Belgium   4.438950 -1.206960
+3           Canada   4.322203  1.103003
+4            China  12.625000 -0.025641
+5          Croatia  36.557692  7.536325
+6   Czech Republic   6.342982 -2.150638
+7           France   9.052842 -0.465439
+8          Germany   4.860232 -0.734679
+9          Hungary   1.666667 -1.250000
+10          Israel  14.164216 -1.208333
+11           Italy   9.270513  1.132051
+12          Kuwait   7.623118  1.257631
+13     Netherlands   1.666667 -0.555556
+14     Philippines  20.348485 -1.643939
+15          Poland  13.550505  7.840067
+16        Portugal   2.068966 -0.689655
+17    South Africa   2.222222 -1.666667
+18           Spain   2.633423  1.526648
+19     Switzerland   3.393939  1.090909
+20        Thailand  25.482143 -4.515873
+21  United Kingdom   0.526316  0.701754
+22   United States   0.956991  0.363281, 'Correlation between slope and intercept for Enterobacter species with Cefepime in 2015: 0.2884 (p-value: 0.1930)\n', {'2018'},            Country  intercept         slope
+1        Australia   1.458333 -8.333333e-01
+2          Belgium   2.688645 -1.054945e+00
+3           Canada  12.173203  6.792717e+00
+4            China   8.625000 -1.833333e+00
+5          Croatia  28.472222 -1.597222e+01
+6   Czech Republic   0.493827 -3.703704e-01
+7           France   4.000000 -2.583333e+00
+8          Germany   1.977566 -8.976624e-01
+9          Hungary   0.000000  2.997602e-15
+10          Israel   6.973039 -3.958333e+00
+11           Italy   8.216667 -4.100000e+00
+12          Kuwait   9.423077 -1.912393e+00
+13     Netherlands   0.000000 -3.996803e-15
+14     Philippines   6.666667 -1.527778e+00
+15          Poland  29.385522 -3.956229e-01
+16        Portugal   0.000000 -1.998401e-15
+17    South Africa   0.000000  1.998401e-15
+18           Spain   6.324284 -7.083124e-01
+19     Switzerland   6.000000 -2.000000e+00
+20        Thailand  12.682540  1.738095e+00
+21  United Kingdom   6.228070  5.964912e+00
+22   United States   2.724020 -1.254559e-01, 'Correlation between slope and intercept for Enterobacter species with Cefepime in 2018: -0.4151 (p-value: 0.0547)\n', {'2019'},            Country  intercept         slope
+1        Australia   0.833333 -6.250000e-01
+2          Belgium   1.794872 -1.025641e+00
+3           Canada  17.539683  5.992063e+00
+4            China   5.666667  1.375000e+00
+5          Croatia  10.972222 -6.666667e+00
+6   Czech Republic   0.000000 -1.998401e-15
+7           France   1.333333 -1.000000e+00
+8          Germany   1.256354 -7.879448e-01
+9          Hungary   0.000000  2.997602e-15
+10          Israel   3.026961 -2.009804e+00
+11           Italy   4.516667 -2.866667e+00
+12          Kuwait   8.810541 -3.019943e+00
+13     Netherlands   0.000000 -3.996803e-15
+14     Philippines   3.333333  1.666667e+00
+15          Poland  29.351852  5.555556e-01
+16        Portugal   0.000000 -9.992007e-16
+17    South Africa   0.000000 -9.992007e-16
+18           Spain   5.803419 -1.094017e+00
+19     Switzerland   4.666667 -2.666667e+00
+20        Thailand  14.333333  2.444444e+00
+21  United Kingdom  10.701754  4.473684e+00
+22   United States   2.967833 -7.500252e-01, 'Correlation between slope and intercept for Enterobacter species with Cefepime in 2019: 0.2719 (p-value: 0.2209)\n', {'2017'},            Country     intercept         slope
+1        Australia  1.875000e+00 -6.250000e-01
+2          Belgium  2.205128e+00  3.882784e-01
+3           Canada  7.840803e+00  4.334734e+00
+4            China  9.708333e+00 -2.958333e+00
+5          Croatia  3.685897e+01 -1.201923e+01
+6   Czech Republic  2.134039e+00 -1.446208e+00
+7           France  6.942308e+00 -3.435897e+00
+8          Germany  3.341918e+00 -1.156559e+00
+9          Hungary -8.881784e-15  9.992007e-16
+10          Israel  1.023039e+01 -3.904412e+00
+11           Italy  9.529487e+00 -2.001282e+00
+12          Kuwait  1.062729e+01 -6.654457e-01
+13     Netherlands  7.407407e-01 -5.555556e-01
+14     Philippines  1.294192e+01 -6.060606e+00
+15          Poland  2.626263e+01  7.996633e-01
+16        Portugal  9.195402e-01 -6.896552e-01
+17    South Africa  0.000000e+00  9.992007e-16
+18           Spain  5.217278e+00  1.255153e+00
+19     Switzerland  5.212121e+00  1.090909e+00
+20        Thailand  1.775926e+01 -5.015873e+00
+21  United Kingdom  3.245614e+00  4.473684e+00
+22   United States  2.036226e+00  8.663351e-01, 'Correlation between slope and intercept for Enterobacter species with Cefepime in 2017: -0.6483 (p-value: 0.0011)\n', {'2016'},            Country     intercept     slope
+1        Australia  1.250000e+00  0.625000
+2          Belgium  3.054945e+00 -0.331502
+3           Canada  5.406162e+00  2.037815
+4            China  1.180128e+01 -2.080128
+5          Croatia  4.154487e+01 -6.358974
+6   Czech Republic  4.901961e+00 -2.816682
+7           France  8.038699e+00 -1.646011
+8          Germany  4.399862e+00 -1.185482
+9          Hungary -8.881784e-15  0.000000
+10          Israel  1.227206e+01 -2.338235
+11           Italy  9.630769e+00  0.103846
+12          Kuwait  9.049145e+00  1.730260
+13     Netherlands  1.296296e+00 -0.740741
+14     Philippines  2.028030e+01 -9.386364
+15          Poland  2.044613e+01  6.919192
+16        Portugal  1.609195e+00 -0.919540
+17    South Africa -8.881784e-15  0.000000
+18           Spain  3.652446e+00  1.576277
+19     Switzerland  4.121212e+00  1.454545
+20        Thailand  2.365608e+01 -5.979497
+21  United Kingdom  1.052632e+00  0.526316
+22   United States  1.374355e+00  0.967540, 'Correlation between slope and intercept for Enterobacter species with Cefepime in 2016: -0.4912 (p-value: 0.0203)\n', {'2014'},            Country  intercept         slope
+1        Australia   0.208333  6.250000e-01
+2          Belgium   5.444444 -1.801587e+00
+3           Canada   3.858789  3.276574e-01
+4            China  12.708333 -6.570513e-01
+5          Croatia  30.786325  6.333333e+00
+6   Czech Republic   7.074385 -6.826434e-01
+7           France   9.425214 -8.465608e-02
+8          Germany   5.046294  3.951522e-02
+9          Hungary   2.916667 -1.666667e+00
+10          Israel  15.073529 -1.053922e+00
+11           Italy   8.848718  2.000000e-01
+12          Kuwait   6.862027  1.538462e+00
+13     Netherlands   1.851852 -2.997602e-15
+14     Philippines  18.840909  3.000000e+00
+15          Poland   9.228956  4.959596e+00
+16        Portugal   2.298851 -6.994405e-15
+17    South Africa   3.888889 -2.222222e+00
+18           Spain   2.031935  3.968506e-01
+19     Switzerland   3.030303  0.000000e+00
+20        Thailand  26.285053  7.797619e-01
+21  United Kingdom   0.175439  5.263158e-01
+22   United States   0.827425  3.812701e-02, 'Correlation between slope and intercept for Enterobacter species with Cefepime in 2014: 0.5559 (p-value: 0.0072)\n']

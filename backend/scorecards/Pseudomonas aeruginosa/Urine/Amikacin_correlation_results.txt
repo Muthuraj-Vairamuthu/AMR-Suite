@@ -1,0 +1,181 @@
+[{'2016'},            Country     intercept         slope
+1        Argentina  1.267136e+01  2.227633e+00
+2        Australia -3.019807e-14  1.698641e-14
+3          Belgium  6.509439e+00 -1.840692e-01
+4           Brazil  1.225876e+01 -3.978878e+00
+5           Canada -1.065814e-14  0.000000e+00
+6            Chile  1.342813e+01 -9.634039e-01
+7            China  2.627451e+00 -3.856209e-01
+8         Colombia  2.350937e+01 -1.439216e+00
+9          Croatia  4.555556e+00 -3.000000e+00
+10  Czech Republic  1.254973e+01 -5.815110e-01
+11          France  3.764530e+00 -3.396011e-01
+12         Germany  7.600270e-01 -2.022245e-02
+13          Greece  1.864396e+01  9.482284e-01
+14         Hungary  7.423645e+00  1.778325e+00
+15          Israel  3.125763e+00  2.646520e+00
+16           Italy  8.956755e+00  4.326788e-01
+17           Japan -1.065814e-14  6.994405e-15
+18    Korea, South  1.484364e+01 -1.708396e+00
+19          Kuwait  1.308586e+01  2.811869e+00
+20          Mexico  3.284660e+01 -1.988207e+00
+21     Netherlands  1.228070e+00 -7.017544e-01
+22     Philippines  4.444444e+00  3.703704e-01
+23          Poland  1.110022e+01  1.773229e+00
+24        Portugal  2.572193e+00  6.844920e-01
+25    South Africa  8.602151e+00 -8.832565e-01
+26           Spain  2.020202e-01  6.060606e-01
+27        Thailand  2.750000e+01 -2.976190e+00
+28          Turkey  7.377622e+00  2.057110e+00
+29   United States  5.786705e-01 -1.554280e-02
+30       Venezuela  1.753439e+01  1.386243e+00, 'Correlation between slope and intercept for Pseudomonas aeruginosa with Amikacin in 2016: -0.2852 (p-value: 0.1266)\n', {'2017'},            Country     intercept         slope
+1        Argentina  1.422619e+01  3.492063e+00
+2        Australia -1.953993e-14  2.398082e-14
+3          Belgium  6.693129e+00 -9.978793e-01
+4           Brazil  7.645393e+00  3.811038e-01
+5           Canada  0.000000e+00  0.000000e+00
+6            Chile  1.201720e+01 -2.076720e+00
+7            China  2.032680e+00 -3.725490e-01
+8         Colombia  2.152810e+01 -9.978214e-02
+9          Croatia  1.333333e+00 -1.000000e+00
+10  Czech Republic  1.327923e+01 -3.039994e+00
+11          France  3.434921e+00 -3.896825e-01
+12         Germany  7.448601e-01 -1.516684e-02
+13          Greece  1.923492e+01 -4.170185e-01
+14         Hungary  8.793103e+00  1.083744e+00
+15          Israel  4.838828e+00  4.443223e+00
+16           Italy  9.785492e+00 -3.205080e+00
+17           Japan  0.000000e+00  6.994405e-15
+18    Korea, South  1.311577e+01  3.647634e+00
+19          Kuwait  1.430303e+01  2.101010e+00
+20          Mexico  3.080212e+01 -4.314555e+00
+21     Netherlands  7.017544e-01 -5.263158e-01
+22     Philippines  4.814815e+00 -3.703704e-01
+23          Poland  1.295034e+01 -7.241588e-01
+24        Portugal  3.042424e+00  1.878788e-01
+25    South Africa  8.826805e+00 -2.705453e+00
+26           Spain  6.060606e-01  8.080808e-01
+27        Thailand  2.650488e+01 -5.763126e+00
+28          Turkey  9.898019e+00 -1.133450e+00
+29   United States  6.306598e-01 -1.883649e-01
+30       Venezuela  1.868226e+01  6.046784e+00, 'Correlation between slope and intercept for Pseudomonas aeruginosa with Amikacin in 2017: -0.2159 (p-value: 0.2519)\n', {'2014'},            Country     intercept         slope
+1        Argentina  1.621392e+01 -2.494589e+00
+2        Australia -3.019807e-14  1.398881e-14
+3          Belgium  5.621503e+00  7.970717e-01
+4           Brazil  2.114414e+01 -4.585586e+00
+5           Canada -1.953993e-14  1.998401e-15
+6            Chile  1.514286e+01 -8.677249e-01
+7            China  3.222222e+00 -3.333333e-01
+8         Colombia  2.488778e+01 -7.846154e-01
+9          Croatia  8.333333e+00 -1.666667e+00
+10  Czech Republic  4.520039e+00  5.259042e+00
+11          France  4.540320e+00 -3.060410e-01
+12         Germany  1.461468e+00 -3.921569e-01
+13          Greece  2.071569e+01 -1.611111e+00
+14         Hungary  3.874293e+00  1.164021e+00
+15          Israel  2.500000e+00 -8.333333e-01
+16           Italy  5.475543e+00  2.433575e+00
+17           Japan  1.794872e+00 -1.025641e+00
+18    Korea, South  1.815540e+01 -1.628076e+00
+19          Kuwait  1.364689e+01 -1.672980e+00
+20          Mexico  2.716615e+01  3.543823e+00
+21     Netherlands  1.754386e+00  6.994405e-15
+22     Philippines  1.111111e+00  1.481481e+00
+23          Poland  6.401709e+00  2.723647e+00
+24        Portugal  3.359477e+00 -7.058824e-01
+25    South Africa  1.374040e+01 -1.917563e+00
+26           Spain -1.953993e-14  2.997602e-15
+27        Thailand  1.964286e+01  5.396825e+00
+28          Turkey  3.863636e+00  2.500000e+00
+29   United States  6.777459e-01  2.007470e-02
+30       Venezuela  1.369312e+01  1.238095e+00, 'Correlation between slope and intercept for Pseudomonas aeruginosa with Amikacin in 2014: -0.1170 (p-value: 0.5381)\n', {'2015'},            Country     intercept         slope
+1        Argentina  1.437229e+01 -1.877706e+00
+2        Australia  0.000000e+00  1.099121e-14
+3          Belgium  6.054470e+00  6.158593e-01
+4           Brazil  1.748437e+01 -6.600954e+00
+5           Canada -9.769963e-15 -1.998401e-15
+6            Chile  1.449647e+01 -9.902998e-01
+7            China  2.986928e+00 -4.836601e-01
+8         Colombia  2.435063e+01 -1.601207e+00
+9          Croatia  6.888889e+00 -3.222222e+00
+10  Czech Republic  8.179472e+00  4.604888e+00
+11          France  4.229830e+00 -4.961500e-01
+12         Germany  1.162295e+00 -3.092845e-01
+13          Greece  1.979412e+01 -2.091503e-01
+14         Hungary  5.299033e+00  2.528188e+00
+15          Israel  2.457265e+00  4.273504e-01
+16           Italy  7.037518e+00  2.484835e+00
+17           Japan  1.025641e+00 -7.692308e-01
+18    Korea, South  1.668221e+01 -3.558664e+00
+19          Kuwait  1.312247e+01  2.996633e-01
+20          Mexico  2.987786e+01  2.664114e+00
+21     Netherlands  1.578947e+00 -5.263158e-01
+22     Philippines  2.592593e+00  2.222222e+00
+23          Poland  8.305487e+00  2.907913e+00
+24        Portugal  2.975045e+00 -2.911468e-02
+25    South Africa  1.168715e+01 -1.894521e+00
+26           Spain -9.769963e-15  2.997602e-15
+27        Thailand  2.357143e+01  4.880952e+00
+28          Turkey  5.227273e+00  2.424242e+00
+29   United States  6.398966e-01 -2.111088e-02
+30       Venezuela  1.511111e+01  1.206349e+00, 'Correlation between slope and intercept for Pseudomonas aeruginosa with Amikacin in 2015: -0.0319 (p-value: 0.8670)\n', {'2018'},            Country  intercept         slope
+1        Argentina  17.761905  5.567460e+00
+2        Australia   0.000000  2.089995e-14
+3          Belgium   5.814254 -4.524299e-01
+4           Brazil   7.350399  2.562968e+00
+5           Canada   0.175439  5.263158e-01
+6            Chile  11.166667 -3.955026e-01
+7            China   1.660131 -7.385621e-01
+8         Colombia  20.244444 -3.377778e+00
+9          Croatia   0.238095  7.142857e-01
+10  Czech Republic  10.778523 -2.068380e+00
+11          France   3.010935 -2.035273e-01
+12         Germany   0.652174 -2.173913e-01
+13          Greece  18.622541 -4.097820e+00
+14         Hungary   9.904762 -2.428571e+00
+15          Israel   8.472527  1.223443e+00
+16           Italy   7.334451 -3.107680e+00
+17           Japan   0.000000  4.499873e-15
+18    Korea, South  15.626327  7.169066e+00
+19          Kuwait  16.471380 -2.572391e+00
+20          Mexico  27.210433 -6.109480e+00
+21     Netherlands   0.000000  9.797718e-15
+22     Philippines   4.814815 -2.222222e+00
+23          Poland  12.709901 -4.396589e-01
+24        Portugal   3.319192 -8.101010e-01
+25    South Africa   6.554659  4.659498e-01
+26           Spain   1.444679  1.303735e+00
+27        Thailand  21.744811 -5.543956e+00
+28          Turkey   9.288462  1.102564e+00
+29   United States   0.488507  1.056232e-01
+30       Venezuela  23.703349  5.846890e+00, 'Correlation between slope and intercept for Pseudomonas aeruginosa with Amikacin in 2018: -0.1497 (p-value: 0.4299)\n', {'2019'},            Country  intercept         slope
+1        Argentina  23.027778  4.083333e+00
+2        Australia   0.000000  2.099709e-14
+3          Belgium   5.260819  1.003899e-02
+4           Brazil   9.726720  1.755141e+00
+5           Canada   0.526316  7.017544e-01
+6            Chile  10.466490  1.139330e+00
+7            China   1.130719 -7.254902e-01
+8         Colombia  18.118519 -4.644444e+00
+9          Croatia   0.714286  9.523810e-01
+10  Czech Republic   8.138528 -1.515152e-01
+11          France   2.871252 -1.693122e-01
+12         Germany   0.507246 -2.898551e-01
+13          Greece  15.525784 -4.313131e+00
+14         Hungary   8.000000 -2.666667e+00
+15          Israel  10.351648 -1.051282e+00
+16           Italy   4.513872 -1.679805e+00
+17           Japan   0.000000  1.998401e-15
+18    Korea, South  21.896672  5.222199e+00
+19          Kuwait  15.239057 -3.777778e+00
+20          Mexico  21.631510 -4.121511e+00
+21     Netherlands   0.000000  1.100509e-14
+22     Philippines   2.592593 -1.481481e+00
+23          Poland  12.483950 -1.303714e-01
+24        Portugal   2.749495 -8.727273e-01
+25    South Africa   6.388889  1.805556e+00
+26           Spain   2.717876  9.302326e-01
+27        Thailand  15.124542 -1.604396e+00
+28          Turkey  10.397436  1.416667e+00
+29   United States   0.551544  1.924860e-01
+30       Venezuela  28.841042  3.561935e+00, 'Correlation between slope and intercept for Pseudomonas aeruginosa with Amikacin in 2019: 0.0890 (p-value: 0.6399)\n']

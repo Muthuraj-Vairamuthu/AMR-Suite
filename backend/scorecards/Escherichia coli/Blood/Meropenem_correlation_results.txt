@@ -1,0 +1,211 @@
+[{'2015'},            Country     intercept         slope
+1        Argentina  7.442151e-01  5.857828e-01
+2        Australia -9.992007e-16  9.992007e-16
+3          Belgium  0.000000e+00  0.000000e+00
+4           Brazil  3.125000e-01  4.166667e-01
+5           Canada  0.000000e+00 -9.992007e-16
+6            Chile  9.992007e-16  0.000000e+00
+7            China  2.719881e+00 -2.512413e-01
+8         Colombia  8.271713e-01  7.284397e-01
+9          Croatia  5.291005e-02  1.587302e-01
+10  Czech Republic -1.998401e-15  0.000000e+00
+11         Denmark -9.992007e-16  0.000000e+00
+12          France  9.992007e-16 -9.992007e-16
+13         Germany -9.992007e-16  0.000000e+00
+14          Greece  0.000000e+00  0.000000e+00
+15         Hungary  9.992007e-16 -9.992007e-16
+16         Ireland  0.000000e+00  0.000000e+00
+17          Israel  0.000000e+00  0.000000e+00
+18           Italy  3.117117e-01  2.684685e-01
+19           Japan  0.000000e+00  0.000000e+00
+20    Korea, South  4.878049e-01  2.439024e-01
+21          Kuwait  9.992007e-16  0.000000e+00
+22          Mexico  5.673759e-01 -4.255319e-01
+23     Netherlands  0.000000e+00  0.000000e+00
+24          Panama  9.992007e-16  0.000000e+00
+25     Philippines  0.000000e+00  0.000000e+00
+26          Poland -9.992007e-16  0.000000e+00
+27        Portugal -9.992007e-16  9.992007e-16
+28    South Africa  8.547009e-02  2.564103e-01
+29           Spain  4.166667e-02  1.250000e-01
+30     Switzerland -2.997602e-15 -9.992007e-16
+31          Taiwan  1.176471e+00  5.882353e-01
+32          Turkey  6.778003e+00 -1.781377e+00
+33  United Kingdom  9.992007e-16  0.000000e+00
+34   United States  2.568144e-01 -1.108573e-01
+35       Venezuela  5.128205e-01  2.564103e-01, 'Correlation between slope and intercept for Escherichia coli with Meropenem in 2015: -0.6995 (p-value: 0.0000)\n', {'2018'},            Country     intercept         slope
+1        Argentina  9.234939e-01 -5.857828e-01
+2        Australia  0.000000e+00  9.992007e-16
+3          Belgium  0.000000e+00  0.000000e+00
+4           Brazil  1.073994e+00  4.310345e-02
+5           Canada  0.000000e+00 -9.992007e-16
+6            Chile  0.000000e+00  0.000000e+00
+7            China  2.431621e+00 -2.307427e-01
+8         Colombia  2.438278e+00 -2.156192e-01
+9          Croatia  5.212355e-01 -2.359502e-02
+10  Czech Republic -9.992007e-15  9.992007e-16
+11         Denmark  8.000000e-01  4.000000e-01
+12          France  0.000000e+00 -1.998401e-15
+13         Germany  0.000000e+00  0.000000e+00
+14          Greece  7.692308e-01  3.846154e-01
+15         Hungary  0.000000e+00 -1.998401e-15
+16         Ireland  0.000000e+00  0.000000e+00
+17          Israel  0.000000e+00  9.992007e-16
+18           Italy  6.802706e-01 -1.390186e-01
+19           Japan  0.000000e+00 -9.992007e-16
+20    Korea, South  3.252033e-01 -2.439024e-01
+21          Kuwait  0.000000e+00 -9.992007e-16
+22          Mexico  2.273637e+00  1.966815e+00
+23     Netherlands  0.000000e+00  0.000000e+00
+24          Panama  6.666667e-01  2.000000e+00
+25     Philippines  0.000000e+00 -9.992007e-16
+26          Poland  6.250000e-01  3.125000e-01
+27        Portugal  0.000000e+00  0.000000e+00
+28    South Africa  7.692308e-01 -2.564103e-01
+29           Spain  3.750000e-01 -1.250000e-01
+30     Switzerland  0.000000e+00 -9.992007e-16
+31          Taiwan  7.843137e-01 -5.882353e-01
+32          Turkey  3.484930e+00 -1.218623e+00
+33  United Kingdom  0.000000e+00 -9.992007e-16
+34   United States  4.219409e-02  5.625879e-02
+35       Venezuela  1.917638e+00  2.955711e+00, 'Correlation between slope and intercept for Escherichia coli with Meropenem in 2018: 0.1286 (p-value: 0.4614)\n', {'2019'},            Country     intercept         slope
+1        Argentina  3.418803e-01 -2.564103e-01
+2        Australia  0.000000e+00  4.024558e-16
+3          Belgium  0.000000e+00  9.992007e-16
+4           Brazil  1.106322e+00  3.232759e-02
+5           Canada  0.000000e+00  0.000000e+00
+6            Chile  0.000000e+00  1.040834e-16
+7            China  2.502531e+00 -5.474892e-01
+8         Colombia  2.421502e+00 -4.472693e-01
+9          Croatia  5.055055e-01 -3.146003e-02
+10  Czech Republic  0.000000e+00  1.700029e-15
+11         Denmark  1.333333e+00  6.036838e-16
+12          France  9.992007e-15 -1.700029e-15
+13         Germany  0.000000e+00  1.040834e-16
+14          Greece  1.282051e+00  7.979728e-16
+15         Hungary  9.992007e-15 -1.595946e-15
+16         Ireland  0.000000e+00 -9.714451e-17
+17          Israel  0.000000e+00  7.979728e-16
+18           Italy  5.094901e-01 -8.309280e-02
+19           Japan  0.000000e+00  0.000000e+00
+20    Korea, South  0.000000e+00 -9.714451e-17
+21          Kuwait  0.000000e+00  7.008283e-16
+22          Mexico  4.211484e+00  1.266266e+00
+23     Netherlands  0.000000e+00 -2.983724e-16
+24          Panama  2.000000e+00  2.666667e+00
+25     Philippines  0.000000e+00 -3.955170e-16
+26          Poland  1.041667e+00 -3.955170e-16
+27        Portugal  0.000000e+00  2.012279e-16
+28    South Africa  5.982906e-01 -3.418803e-01
+29           Spain  2.916667e-01 -1.666667e-01
+30     Switzerland  0.000000e+00 -5.967449e-16
+31          Taiwan  0.000000e+00  0.000000e+00
+32          Turkey  2.587045e+00 -1.026541e+00
+33  United Kingdom  0.000000e+00 -2.983724e-16
+34   United States  8.438819e-02  4.219409e-02
+35       Venezuela  3.818182e+00  3.575758e+00, 'Correlation between slope and intercept for Escherichia coli with Meropenem in 2019: 0.4894 (p-value: 0.0028)\n', {'2017'},            Country     intercept         slope
+1        Argentina  1.338336e+00 -5.816135e-01
+2        Australia -2.997602e-15  9.992007e-16
+3          Belgium  0.000000e+00  0.000000e+00
+4           Brazil  1.052443e+00  3.232759e-02
+5           Canada  0.000000e+00  0.000000e+00
+6            Chile  0.000000e+00  0.000000e+00
+7            China  2.569669e+00 -2.698255e-02
+8         Colombia  2.124236e+00  3.304456e-01
+9          Croatia  3.174603e-01  1.587302e-01
+10  Czech Republic -3.996803e-15  1.998401e-15
+11         Denmark  4.000000e-01  5.333333e-01
+12          France  1.998401e-15 -9.992007e-16
+13         Germany -1.998401e-15  0.000000e+00
+14          Greece  3.846154e-01  5.128205e-01
+15         Hungary  1.998401e-15 -9.992007e-16
+16         Ireland -9.992007e-16  0.000000e+00
+17          Israel -1.998401e-15  9.992007e-16
+18           Italy  6.137438e-01  5.444474e-02
+19           Japan  0.000000e+00  0.000000e+00
+20    Korea, South  5.691057e-01 -3.252033e-01
+21          Kuwait  9.992007e-16  0.000000e+00
+22          Mexico  9.708193e-01  1.397306e+00
+23     Netherlands -9.992007e-16  0.000000e+00
+24          Panama  0.000000e+00  0.000000e+00
+25     Philippines  9.992007e-16  0.000000e+00
+26          Poland  3.125000e-01  4.166667e-01
+27        Portugal -9.992007e-16  9.992007e-16
+28    South Africa  5.128205e-01  2.564103e-01
+29           Spain  2.500000e-01  1.250000e-01
+30     Switzerland  0.000000e+00  0.000000e+00
+31          Taiwan  1.372549e+00 -7.843137e-01
+32          Turkey  3.360324e+00 -2.429150e-01
+33  United Kingdom  0.000000e+00  0.000000e+00
+34   United States  8.106637e-02 -8.057163e-03
+35       Venezuela  9.013209e-01  5.672106e-01, 'Correlation between slope and intercept for Escherichia coli with Meropenem in 2017: -0.0748 (p-value: 0.6695)\n', {'2016'},            Country     intercept         slope
+1        Argentina  1.244528e+00  1.250782e-02
+2        Australia -2.997602e-15  9.992007e-16
+3          Belgium  0.000000e+00  0.000000e+00
+4           Brazil  6.250000e-01  3.125000e-01
+5           Canada  0.000000e+00  0.000000e+00
+6            Chile  9.992007e-16  0.000000e+00
+7            China  2.680030e+00  1.048439e-01
+8         Colombia  1.600609e+00  6.659722e-01
+9          Croatia  1.587302e-01  2.116402e-01
+10  Czech Republic -1.998401e-15  9.992007e-16
+11         Denmark  1.333333e-01  4.000000e-01
+12          France  9.992007e-16 -9.992007e-16
+13         Germany -9.992007e-16  0.000000e+00
+14          Greece  1.282051e-01  3.846154e-01
+15         Hungary  2.997602e-15 -9.992007e-16
+16         Ireland -9.992007e-16  9.992007e-16
+17          Israel -9.992007e-16  9.992007e-16
+18           Italy  5.351351e-01  4.684685e-02
+19           Japan  0.000000e+00  0.000000e+00
+20    Korea, South  7.317073e-01 -2.439024e-01
+21          Kuwait  9.992007e-16  0.000000e+00
+22          Mexico  3.030303e-01  9.090909e-01
+23     Netherlands -9.992007e-16  0.000000e+00
+24          Panama  9.992007e-16  0.000000e+00
+25     Philippines  9.992007e-16  0.000000e+00
+26          Poland  1.041667e-01  3.125000e-01
+27        Portugal -9.992007e-16  9.992007e-16
+28    South Africa  2.564103e-01  3.418803e-01
+29           Spain  1.250000e-01  1.666667e-01
+30     Switzerland  0.000000e+00  0.000000e+00
+31          Taiwan  1.764706e+00 -5.882353e-01
+32          Turkey  5.398111e+00 -1.029015e+00
+33  United Kingdom  0.000000e+00  0.000000e+00
+34   United States  1.778590e-01 -1.124562e-01
+35       Venezuela  7.692308e-01 -2.564103e-01, 'Correlation between slope and intercept for Escherichia coli with Meropenem in 2016: -0.4953 (p-value: 0.0025)\n', {'2014'},            Country     intercept         slope
+1        Argentina  3.293725e-01  5.816135e-01
+2        Australia -1.998401e-15  0.000000e+00
+3          Belgium -9.992007e-16  0.000000e+00
+4           Brazil  1.041667e-01  3.125000e-01
+5           Canada  0.000000e+00 -9.992007e-16
+6            Chile  0.000000e+00  0.000000e+00
+7            China  2.815009e+00 -5.121294e-02
+8         Colombia  3.506148e-01  5.616484e-01
+9          Croatia -4.996004e-15  3.996803e-15
+10  Czech Republic -9.992007e-16  0.000000e+00
+11         Denmark -9.992007e-16  0.000000e+00
+12          France  9.992007e-16 -9.992007e-16
+13         Germany -9.992007e-16  0.000000e+00
+14          Greece  0.000000e+00  0.000000e+00
+15         Hungary  9.992007e-16 -9.992007e-16
+16         Ireland -9.992007e-16  0.000000e+00
+17          Israel  0.000000e+00  0.000000e+00
+18           Italy  1.333333e-01  1.777778e-01
+19           Japan  0.000000e+00  0.000000e+00
+20    Korea, South  2.439024e-01  3.252033e-01
+21          Kuwait  0.000000e+00  0.000000e+00
+22          Mexico  9.929078e-01 -5.673759e-01
+23     Netherlands -9.992007e-16  0.000000e+00
+24          Panama  0.000000e+00  0.000000e+00
+25     Philippines  9.992007e-16  0.000000e+00
+26          Poland  0.000000e+00  0.000000e+00
+27        Portugal  0.000000e+00  0.000000e+00
+28    South Africa  0.000000e+00  0.000000e+00
+29           Spain  0.000000e+00  0.000000e+00
+30     Switzerland -1.998401e-15  0.000000e+00
+31          Taiwan  5.882353e-01  7.843137e-01
+32          Turkey  7.756410e+00 -1.730769e+00
+33  United Kingdom  0.000000e+00 -9.992007e-16
+34   United States  3.038678e-01 -4.545455e-02
+35       Venezuela  2.564103e-01  3.418803e-01, 'Correlation between slope and intercept for Escherichia coli with Meropenem in 2014: -0.7491 (p-value: 0.0000)\n']

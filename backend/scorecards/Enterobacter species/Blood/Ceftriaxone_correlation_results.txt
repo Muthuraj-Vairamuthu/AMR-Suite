@@ -1,0 +1,41 @@
+[{'2014'},            Country  intercept     slope
+1          Belgium  31.079365 -2.370370
+2           Brazil  50.819001 -9.009009
+3           Canada  19.318975  0.877193
+4            Chile  56.666667 -6.666667
+5         Colombia  63.636364 -8.484848
+6          Croatia  64.444444  4.444444
+7           France  39.712288 -2.935951
+8          Germany  24.192584 -1.494058
+9           Greece  22.279202 -0.911681
+10       Hong Kong   8.592314  1.403509
+11         Ireland  56.666667 -6.984127
+12           Italy  32.662912  2.578726
+13          Mexico  23.231627  3.770115
+14     Netherlands  14.166667 -3.333333
+15          Panama  39.333333  8.000000
+16        Portugal  57.268519 -2.962963
+17           Spain  30.521670 -1.516607
+18     Switzerland  41.481481 -4.444444
+19  United Kingdom  17.882678  1.888889
+20   United States  19.344854  0.537634, 'Correlation between slope and intercept for Enterobacter species with Ceftriaxone in 2014: -0.4275 (p-value: 0.0601)\n', {'2015'},            Country  intercept      slope
+1          Belgium  28.906526  -2.962963
+2           Brazil  42.560743 -11.261261
+3           Canada  20.123069   1.096491
+4            Chile  50.555556  -8.333333
+5         Colombia  55.858586 -10.606061
+6          Croatia  68.518519   5.555556
+7           France  37.020999  -3.669939
+8          Germany  22.823032  -1.867572
+9           Greece  21.443495  -1.139601
+10       Hong Kong   9.878864   1.754386
+11         Ireland  50.264550  -8.730159
+12           Italy  35.026743   3.223407
+13          Mexico  26.687565   4.712644
+14     Netherlands  11.111111  -4.166667
+15          Panama  46.666667  10.000000
+16        Portugal  54.552469  -3.703704
+17           Spain  29.131447  -1.895758
+18     Switzerland  37.407407  -5.555556
+19  United Kingdom  19.614160   2.361111
+20   United States  19.837686   0.672043, 'Correlation between slope and intercept for Enterobacter species with Ceftriaxone in 2015: -0.2095 (p-value: 0.3754)\n']

@@ -1,0 +1,109 @@
+[{'2019'},            Country     intercept         slope
+1          Belgium  0.000000e+00  0.000000e+00
+2           Canada  8.888889e-01 -6.666667e-01
+3            China  3.571429e-01  4.761905e-01
+4   Czech Republic  0.000000e+00 -9.992007e-16
+5           France  0.000000e+00  0.000000e+00
+6          Germany  0.000000e+00  0.000000e+00
+7          Ireland  0.000000e+00  0.000000e+00
+8           Israel  0.000000e+00  0.000000e+00
+9            Italy  0.000000e+00  0.000000e+00
+10           Japan  9.992007e-16 -9.992007e-16
+11    Korea, South  0.000000e+00  0.000000e+00
+12     Philippines  2.000000e+00  2.666667e+00
+13           Spain  0.000000e+00  0.000000e+00
+14          Taiwan  9.992007e-16 -9.992007e-16
+15        Thailand  0.000000e+00  0.000000e+00
+16          Turkey  9.992007e-16 -9.992007e-16
+17  United Kingdom  0.000000e+00  0.000000e+00
+18   United States  0.000000e+00  0.000000e+00, 'Correlation between slope and intercept for Enterobacter species with Tigecycline in 2019: 0.7862 (p-value: 0.0001)\n', {'2018'},            Country     intercept         slope
+1          Belgium  0.000000e+00  0.000000e+00
+2           Canada  1.555556e+00 -8.888889e-01
+3            China  1.190476e-01  3.571429e-01
+4   Czech Republic  9.992007e-16 -4.996004e-16
+5           France  0.000000e+00  2.914335e-16
+6          Germany  0.000000e+00  9.714451e-17
+7          Ireland  0.000000e+00  9.714451e-17
+8           Israel  0.000000e+00  0.000000e+00
+9            Italy  4.444444e-01 -3.333333e-01
+10           Japan  0.000000e+00 -9.714451e-17
+11    Korea, South  0.000000e+00  0.000000e+00
+12     Philippines  6.666667e-01  2.000000e+00
+13           Spain  0.000000e+00 -9.714451e-17
+14          Taiwan  0.000000e+00 -3.053113e-16
+15        Thailand  0.000000e+00 -2.081668e-16
+16          Turkey  0.000000e+00 -9.714451e-17
+17  United Kingdom  0.000000e+00 -9.714451e-17
+18   United States  0.000000e+00  0.000000e+00, 'Correlation between slope and intercept for Enterobacter species with Tigecycline in 2018: -0.0913 (p-value: 0.7186)\n', {'2015'},            Country     intercept         slope
+1          Belgium -9.992007e-16  0.000000e+00
+2           Canada  6.666667e-01  8.888889e-01
+3            China  1.111111e+00 -8.333333e-01
+4   Czech Republic  0.000000e+00  0.000000e+00
+5           France  0.000000e+00  0.000000e+00
+6          Germany  0.000000e+00  0.000000e+00
+7          Ireland  0.000000e+00  0.000000e+00
+8           Israel  1.666667e+00 -1.250000e+00
+9            Italy  1.652174e+00 -1.340580e-01
+10           Japan -9.992007e-16  9.992007e-16
+11    Korea, South  0.000000e+00  0.000000e+00
+12     Philippines  0.000000e+00  0.000000e+00
+13           Spain  1.555556e+00 -7.037037e-01
+14          Taiwan -9.992007e-16  0.000000e+00
+15        Thailand  0.000000e+00  0.000000e+00
+16          Turkey  0.000000e+00  0.000000e+00
+17  United Kingdom -9.992007e-16  0.000000e+00
+18   United States -9.992007e-16  0.000000e+00, 'Correlation between slope and intercept for Enterobacter species with Tigecycline in 2015: -0.6111 (p-value: 0.0071)\n', {'2014'},            Country     intercept         slope
+1          Belgium -1.998401e-15  9.992007e-16
+2           Canada  2.222222e-01  6.666667e-01
+3            China  1.944444e+00 -1.111111e+00
+4   Czech Republic  0.000000e+00  0.000000e+00
+5           France  9.992007e-16  0.000000e+00
+6          Germany -1.998401e-15  9.992007e-16
+7          Ireland  0.000000e+00  9.992007e-16
+8           Israel  2.916667e+00 -1.666667e+00
+9            Italy  1.641304e+00  1.111111e-01
+10           Japan -9.992007e-16  9.992007e-16
+11    Korea, South  0.000000e+00  9.992007e-16
+12     Philippines  0.000000e+00  0.000000e+00
+13           Spain  2.012346e+00 -4.444444e-01
+14          Taiwan -9.992007e-16  9.992007e-16
+15        Thailand  0.000000e+00  9.992007e-16
+16          Turkey  0.000000e+00  0.000000e+00
+17  United Kingdom  0.000000e+00  9.992007e-16
+18   United States  0.000000e+00  9.992007e-16, 'Correlation between slope and intercept for Enterobacter species with Tigecycline in 2014: -0.7978 (p-value: 0.0001)\n', {'2016'},            Country     intercept         slope
+1          Belgium  0.000000e+00  1.942890e-16
+2           Canada  1.333333e+00  6.666667e-01
+3            China  0.000000e+00  9.714451e-17
+4   Czech Republic  9.992007e-16 -1.103284e-15
+5           France  0.000000e+00  1.942890e-16
+6          Germany  0.000000e+00 -1.040834e-16
+7          Ireland  0.000000e+00 -1.040834e-16
+8           Israel  0.000000e+00  9.714451e-17
+9            Italy  1.507246e+00 -6.231884e-01
+10           Japan  0.000000e+00  0.000000e+00
+11    Korea, South  9.992007e-16 -4.024558e-16
+12     Philippines  0.000000e+00  9.714451e-17
+13           Spain  8.641975e-01 -4.938272e-01
+14          Taiwan  0.000000e+00  1.942890e-16
+15        Thailand  0.000000e+00  2.983724e-16
+16          Turkey  0.000000e+00  0.000000e+00
+17  United Kingdom  0.000000e+00  9.714451e-17
+18   United States  0.000000e+00  9.714451e-17, 'Correlation between slope and intercept for Enterobacter species with Tigecycline in 2016: -0.1855 (p-value: 0.4612)\n', {'2017'},            Country     intercept         slope
+1          Belgium -9.992007e-16  0.000000e+00
+2           Canada  2.000000e+00 -6.666667e-01
+3            China  0.000000e+00  0.000000e+00
+4   Czech Republic  0.000000e+00 -9.992007e-16
+5           France -9.992007e-16  0.000000e+00
+6          Germany  0.000000e+00  0.000000e+00
+7          Ireland -9.992007e-16  0.000000e+00
+8           Israel -9.992007e-16  0.000000e+00
+9            Italy  1.067633e+00 -6.618357e-01
+10           Japan  0.000000e+00  0.000000e+00
+11    Korea, South  0.000000e+00  0.000000e+00
+12     Philippines  0.000000e+00  0.000000e+00
+13           Spain  4.938272e-01 -3.703704e-01
+14          Taiwan -9.992007e-16  0.000000e+00
+15        Thailand -9.992007e-16  0.000000e+00
+16          Turkey  0.000000e+00  0.000000e+00
+17  United Kingdom -9.992007e-16  0.000000e+00
+18   United States  0.000000e+00  0.000000e+00, 'Correlation between slope and intercept for Enterobacter species with Tigecycline in 2017: -0.9409 (p-value: 0.0000)\n']

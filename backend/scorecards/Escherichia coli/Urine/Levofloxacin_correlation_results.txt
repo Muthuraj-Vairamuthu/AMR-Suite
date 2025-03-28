@@ -1,0 +1,181 @@
+[{'2014'},           Country  intercept     slope
+1       Argentina  36.584314  0.747339
+2       Australia  18.947635  1.169355
+3         Belgium  34.326997 -3.271082
+4          Brazil  34.567489  2.067411
+5          Canada  36.002361 -3.979440
+6           Chile  32.706336  2.510145
+7           China  71.306656 -1.957639
+8        Colombia  50.782777 -0.175163
+9         Croatia  34.106227  2.959707
+10         France  28.814145 -3.306328
+11        Germany  35.475698 -4.043948
+12         Greece  30.446389 -0.739225
+13        Hungary  41.171489  5.087719
+14         Israel  35.214460 -1.392496
+15          Italy  47.307306  0.199828
+16          Japan  43.571391 -4.643711
+17   Korea, South  51.378047 -0.930040
+18         Kuwait  53.435185  0.138889
+19         Mexico  57.575758  3.393115
+20    Philippines  57.286195  0.595960
+21         Poland  34.485850 -3.010836
+22       Portugal  46.859203 -6.294153
+23        Romania  38.418301 -5.551198
+24   South Africa  32.299765 -0.294358
+25          Spain  45.142735  2.483835
+26         Taiwan  45.798678 -2.520530
+27       Thailand  68.653188 -1.547619
+28         Turkey  49.642751  3.774510
+29  United States  37.971724  3.333788
+30      Venezuela  43.477135  2.200780, 'Correlation between slope and intercept for Escherichia coli with Levofloxacin in 2014: 0.0255 (p-value: 0.8937)\n', {'2017'},           Country  intercept      slope
+1       Argentina  40.503922   7.732353
+2       Australia  19.744184  -0.782841
+3         Belgium  19.548348  -3.229971
+4          Brazil  36.942361  -1.196360
+5          Canada  26.624659  -4.055503
+6           Chile  35.971569  -4.482755
+7           China  64.550474  -2.876181
+8        Colombia  42.622676  -2.867048
+9         Croatia  38.906471  -2.253724
+10         France  19.934585   0.556087
+11        Germany  23.258144  -3.784249
+12         Greece  28.995815   1.381385
+13        Hungary  55.821979  -5.901572
+14         Israel  29.614616  -3.135489
+15          Italy  42.384752  -3.910794
+16          Japan  41.674199   2.674219
+17   Korea, South  49.656585  -0.949795
+18         Kuwait  50.915741  -2.567593
+19         Mexico  71.872316   4.446312
+20    Philippines  52.957417  -4.496732
+21         Poland  27.787871  -0.885353
+22       Portugal  30.413126  -1.133399
+23        Romania  38.491089  11.740323
+24   South Africa  34.838015   4.233824
+25          Spain  45.600895  -6.671121
+26         Taiwan  44.262587   4.462329
+27       Thailand  65.489829  -0.649140
+28         Turkey  52.844607  -5.423958
+29  United States  38.024436  -7.093565
+30      Venezuela  50.806778   2.831688, 'Correlation between slope and intercept for Escherichia coli with Levofloxacin in 2017: 0.0265 (p-value: 0.8894)\n', {'2016'},           Country  intercept     slope
+1       Argentina  38.690523 -0.299346
+2       Australia  21.162330 -0.582766
+3         Belgium  26.088596 -6.870496
+4          Brazil  36.700489 -0.209555
+5          Canada  27.236728 -1.311083
+6           Chile  37.087244 -1.553020
+7           China  66.274685 -1.982437
+8        Colombia  48.298296 -6.180615
+9         Croatia  39.692063 -0.693854
+10         France  22.676924 -3.001495
+11        Germany  26.555318 -3.116162
+12         Greece  29.795157 -0.890740
+13        Hungary  51.925723  4.884788
+14         Israel  31.993917 -2.851657
+15          Italy  46.006102 -3.887650
+16          Japan  37.766875  4.583372
+17   Korea, South  49.974202  0.050743
+18         Kuwait  53.344444 -2.142593
+19         Mexico  66.384199  5.732684
+20    Philippines  55.205783 -3.288374
+21         Poland  29.432016 -1.422453
+22       Portugal  32.655590 -1.722732
+23        Romania  34.820663  6.128655
+24   South Africa  32.714158  1.111468
+25          Spain  47.161517 -2.262081
+26         Taiwan  42.183876  2.839666
+27       Thailand  65.008017  0.453925
+28         Turkey  54.343843 -1.906692
+29  United States  41.716874 -4.773367
+30      Venezuela  47.264134  3.057413, 'Correlation between slope and intercept for Escherichia coli with Levofloxacin in 2016: 0.2130 (p-value: 0.2585)\n', {'2018'},           Country  intercept      slope
+1       Argentina  45.732353   8.128431
+2       Australia  18.878520  -2.382296
+3         Belgium  16.610629   2.477695
+4          Brazil  35.291132   0.467656
+5          Canada  23.158409  -2.077874
+6           Chile  33.078046  -5.729876
+7           China  61.680911  -1.398612
+8        Colombia  38.803228  -1.633568
+9         Croatia  37.808059  -3.086203
+10         France  20.692386   3.611892
+11        Germany  19.293282  -3.065494
+12         Greece  29.920346   0.048918
+13        Hungary  52.016291 -14.577694
+14         Israel  27.271030  -2.165847
+15          Italy  38.636246  -2.891884
+16          Japan  43.687973  -3.775008
+17   Korea, South  49.005663  -2.035285
+18         Kuwait  48.310185  -4.722222
+19         Mexico  75.393642  -2.387000
+20    Philippines  48.352545  -0.672212
+21         Poland  26.891670  -2.516974
+22       Portugal  26.933136   0.892869
+23        Romania  47.249032  -1.078718
+24   South Africa  38.618521   5.401987
+25          Spain  39.479665  -6.599517
+26         Taiwan  47.336974   3.582421
+27       Thailand  64.290577  -0.306755
+28         Turkey  48.103091  -4.576566
+29  United States  31.967217  -6.492301
+30      Venezuela  52.519599   2.936889, 'Correlation between slope and intercept for Escherichia coli with Levofloxacin in 2018: -0.0930 (p-value: 0.6249)\n', {'2019'},           Country  intercept      slope
+1       Argentina  51.603595   5.711111
+2       Australia  17.401434  -2.704173
+3         Belgium  17.719707   4.172119
+4          Brazil  36.089992   0.009271
+5          Canada  21.048183  -0.465295
+6           Chile  26.912380  -2.298020
+7           China  60.520180  -0.777564
+8        Colombia  36.997093  -1.132318
+9         Croatia  34.465608  -1.068783
+10         France  22.840659   4.362943
+11        Germany  17.026577  -2.602703
+12         Greece  29.649495  -0.191486
+13        Hungary  40.119048 -11.904762
+14         Israel  24.413823   0.060922
+15          Italy  35.752612  -1.442226
+16          Japan  41.513707  -5.551860
+17   Korea, South  47.391995  -1.680563
+18         Kuwait  44.305556  -4.004630
+19         Mexico  74.194933  -4.542144
+20    Philippines  47.552783   0.424242
+21         Poland  24.586027  -2.054348
+22       Portugal  30.075099  -2.716074
+23        Romania  48.613011  -7.443164
+24   South Africa  42.384157   4.839185
+25          Spain  33.652438  -4.387746
+26         Taiwan  51.861959   0.198142
+27       Thailand  64.754062  -1.215886
+28         Turkey  44.020200  -2.660671
+29  United States  25.042668  -2.721073
+30      Venezuela  55.811604   0.756737, 'Correlation between slope and intercept for Escherichia coli with Levofloxacin in 2019: -0.1044 (p-value: 0.5830)\n', {'2015'},           Country  intercept     slope
+1       Argentina  37.528151  0.932726
+2       Australia  19.889869  0.311021
+3         Belgium  31.284870 -6.492309
+4          Brazil  35.464653  0.568759
+5          Canada  32.431931 -3.577626
+6           Chile  34.938819  3.164114
+7           China  69.307883 -2.876711
+8        Colombia  50.188604 -3.480559
+9         Croatia  36.671958  3.074481
+10         France  26.400778 -3.896773
+11        Germany  31.863073 -5.256018
+12         Greece  30.252996 -0.484190
+13        Hungary  45.676312  8.660667
+14         Israel  34.172812 -1.523212
+15          Italy  47.098107 -1.657628
+16          Japan  40.741272 -0.644030
+17   Korea, South  50.786583 -0.469434
+18         Kuwait  53.605556 -0.507407
+19         Mexico  60.947434  6.280767
+20    Philippines  56.676768 -1.922559
+21         Poland  32.462198 -2.450172
+22       Portugal  40.601175 -9.176114
+23        Romania  36.180828 -0.978214
+24   South Africa  32.425563  0.874673
+25          Spain  46.327074  1.156288
+26         Taiwan  43.825285 -2.103075
+27       Thailand  66.998316 -1.849537
+28         Turkey  51.901786  2.062310
+29  United States  40.181119  1.666347
+30      Venezuela  44.794617  2.236271, 'Correlation between slope and intercept for Escherichia coli with Levofloxacin in 2015: 0.1598 (p-value: 0.3991)\n']

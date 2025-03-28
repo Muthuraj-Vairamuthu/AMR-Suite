@@ -1,0 +1,109 @@
+[{'2019'},            Country     intercept         slope
+1          Belgium  0.000000e+00  4.024558e-16
+2           Canada  9.992007e-15  2.012279e-16
+3            China  1.469439e+00  1.130064e+00
+4   Czech Republic  0.000000e+00  7.008283e-16
+5           France  0.000000e+00 -2.983724e-16
+6          Germany  0.000000e+00 -1.942890e-16
+7          Ireland  0.000000e+00 -9.714451e-17
+8           Israel  0.000000e+00  1.040834e-16
+9            Italy  7.017544e-01 -5.263158e-01
+10           Japan  0.000000e+00  1.040834e-16
+11    Korea, South  0.000000e+00  3.053113e-16
+12     Philippines  0.000000e+00  1.040834e-16
+13           Spain  6.666667e-01 -5.000000e-01
+14          Taiwan  2.049383e+00 -1.259259e+00
+15        Thailand  2.121212e+00 -1.212121e+00
+16          Turkey  0.000000e+00  0.000000e+00
+17  United Kingdom  0.000000e+00  1.040834e-16
+18   United States  9.009009e-01  4.024558e-16, 'Correlation between slope and intercept for Enterobacter species with Amikacin in 2019: -0.4894 (p-value: 0.0393)\n', {'2018'},            Country  intercept         slope
+1          Belgium   0.000000  6.938894e-16
+2           Canada   0.000000  8.049117e-16
+3            China   1.053660  6.734186e-01
+4   Czech Republic   0.000000  9.020562e-16
+5           France   0.000000  0.000000e+00
+6          Germany   0.000000  0.000000e+00
+7          Ireland   0.000000 -3.053113e-16
+8           Israel   0.000000  1.942890e-16
+9            Italy   1.672515 -1.035088e+00
+10           Japan   0.666667 -5.000000e-01
+11    Korea, South   0.000000 -4.024558e-16
+12     Philippines   0.533333 -4.000000e-01
+13           Spain   1.166667 -6.666667e-01
+14          Taiwan   2.864198 -1.160494e+00
+15        Thailand   2.727273 -9.090909e-01
+16          Turkey   3.333333 -2.500000e+00
+17  United Kingdom   0.000000 -5.967449e-16
+18   United States   0.921493 -1.544402e-02, 'Correlation between slope and intercept for Enterobacter species with Amikacin in 2018: -0.8289 (p-value: 0.0000)\n', {'2015'},            Country  intercept         slope
+1          Belgium   2.696581 -1.183761e+00
+2           Canada   0.000000 -9.992007e-16
+3            China   3.557056 -1.453436e+00
+4   Czech Republic   1.607143 -5.357143e-01
+5           France   1.111111 -8.333333e-01
+6          Germany   0.000000 -9.992007e-16
+7          Ireland   0.000000  0.000000e+00
+8           Israel   0.000000  0.000000e+00
+9            Italy   2.192982  2.850877e-01
+10           Japan   1.000000  5.000000e-01
+11    Korea, South   3.666667 -2.333333e+00
+12     Philippines   1.911111 -2.349206e-01
+13           Spain   0.996454  3.829787e-01
+14          Taiwan   1.376906  5.722585e-01
+15        Thailand   0.303030  9.090909e-01
+16          Turkey   5.000000  2.500000e+00
+17  United Kingdom   0.000000  0.000000e+00
+18   United States   0.740205  1.591320e-01, 'Correlation between slope and intercept for Enterobacter species with Amikacin in 2015: -0.0826 (p-value: 0.7445)\n', {'2014'},            Country     intercept         slope
+1          Belgium  3.205128e+00 -5.128205e-01
+2           Canada  0.000000e+00 -9.992007e-16
+3            China  4.528219e+00 -1.264151e+00
+4   Czech Republic  1.785714e+00  9.992007e-16
+5           France  1.944444e+00 -1.111111e+00
+6          Germany  0.000000e+00 -9.992007e-16
+7          Ireland  0.000000e+00  0.000000e+00
+8           Israel -1.021405e-14  0.000000e+00
+9            Italy  2.258772e+00 -2.923977e-02
+10           Japan  5.000000e-01  6.666667e-01
+11    Korea, South  5.333333e+00 -2.333333e+00
+12     Philippines  1.828571e+00  5.714286e-02
+13           Spain  8.049645e-01  2.872340e-01
+14          Taiwan  1.496006e+00 -4.139434e-01
+15        Thailand  0.000000e+00  9.992007e-16
+16          Turkey  2.500000e+00  3.333333e+00
+17  United Kingdom  0.000000e+00  0.000000e+00
+18   United States  5.810729e-01  2.121760e-01, 'Correlation between slope and intercept for Enterobacter species with Amikacin in 2014: -0.3949 (p-value: 0.1049)\n', {'2016'},            Country  intercept         slope
+1          Belgium   1.850427 -1.179487e+00
+2           Canada   0.000000  0.000000e+00
+3            China   2.159572 -7.900770e-01
+4   Czech Republic   1.250000 -7.142857e-01
+5           France   0.000000  0.000000e+00
+6          Germany   0.000000  0.000000e+00
+7          Ireland   0.000000 -9.992007e-16
+8           Israel   0.000000  0.000000e+00
+9            Italy   2.052632  1.929825e-01
+10           Japan   1.500000 -5.000000e-01
+11    Korea, South   1.333333 -1.000000e+00
+12     Philippines   1.834921 -8.761905e-01
+13           Spain   1.283688  2.872340e-01
+14          Taiwan   1.407407  1.259259e+00
+15        Thailand   0.909091  1.212121e+00
+16          Turkey   7.500000 -2.500000e+00
+17  United Kingdom   0.000000  0.000000e+00
+18   United States   0.947233 -1.544402e-02, 'Correlation between slope and intercept for Enterobacter species with Amikacin in 2016: -0.6840 (p-value: 0.0017)\n', {'2017'},            Country  intercept         slope
+1          Belgium   0.666667 -5.000000e-01
+2           Canada   0.000000  0.000000e+00
+3            China   1.162189 -4.985075e-01
+4   Czech Republic   0.714286 -5.357143e-01
+5           France   0.000000  0.000000e+00
+6          Germany   0.000000  0.000000e+00
+7          Ireland   0.000000  0.000000e+00
+8           Israel   0.000000  0.000000e+00
+9            Italy   2.356725 -9.707602e-01
+10           Japan   1.166667 -6.666667e-01
+11    Korea, South   0.000000 -9.992007e-16
+12     Philippines   0.933333 -5.333333e-01
+13           Spain   1.500000 -5.000000e-01
+14          Taiwan   2.444444  2.962963e-01
+15        Thailand   1.818182  9.090909e-01
+16          Turkey   5.833333 -3.333333e+00
+17  United Kingdom   0.000000  0.000000e+00
+18   United States   0.936937 -2.059202e-02, 'Correlation between slope and intercept for Enterobacter species with Amikacin in 2017: -0.7522 (p-value: 0.0003)\n']

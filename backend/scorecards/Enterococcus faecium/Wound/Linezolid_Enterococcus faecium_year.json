@@ -1,0 +1,194 @@
+[
+    {
+        "year": "2014",
+        "median_slope": 0.0,
+        "median_intercept": 0.0,
+        "countries": [
+            {
+                "name": "Czech Republic",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Germany",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Italy",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Spain",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "United States",
+                "x": 0.0,
+                "y": 0.0
+            }
+        ]
+    },
+    {
+        "year": "2016",
+        "median_slope": 0.0,
+        "median_intercept": 0.0,
+        "countries": [
+            {
+                "name": "Czech Republic",
+                "x": 9.992007221626409e-16,
+                "y": -2.0036056147532122e-16
+            },
+            {
+                "name": "Germany",
+                "x": 0.0,
+                "y": 9.974659986866641e-17
+            },
+            {
+                "name": "Italy",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Spain",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "United States",
+                "x": 0.0,
+                "y": 2.0036056147532122e-16
+            }
+        ]
+    },
+    {
+        "year": "2017",
+        "median_slope": 0.0,
+        "median_intercept": 0.0,
+        "countries": [
+            {
+                "name": "Czech Republic",
+                "x": 9.992007221626409e-16,
+                "y": -2.0122792321330962e-16
+            },
+            {
+                "name": "Germany",
+                "x": 0.0,
+                "y": 9.71445146547012e-17
+            },
+            {
+                "name": "Italy",
+                "x": 9.992007221626409e-16,
+                "y": 0.0
+            },
+            {
+                "name": "Spain",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "United States",
+                "x": 0.0,
+                "y": 2.0122792321330962e-16
+            }
+        ]
+    },
+    {
+        "year": "2018",
+        "median_slope": 0.0,
+        "median_intercept": 0.0,
+        "countries": [
+            {
+                "name": "Czech Republic",
+                "x": 9.992007221626409e-16,
+                "y": -9.992007221626409e-16
+            },
+            {
+                "name": "Germany",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Italy",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Spain",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "United States",
+                "x": 0.0,
+                "y": 0.0
+            }
+        ]
+    },
+    {
+        "year": "2019",
+        "median_slope": 0.0,
+        "median_intercept": 0.0,
+        "countries": [
+            {
+                "name": "Czech Republic",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Germany",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Italy",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Spain",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "United States",
+                "x": 0.0,
+                "y": 0.0
+            }
+        ]
+    },
+    {
+        "year": "2015",
+        "median_slope": 0.0,
+        "median_intercept": 0.0,
+        "countries": [
+            {
+                "name": "Czech Republic",
+                "x": 9.992007221626409e-16,
+                "y": 0.0
+            },
+            {
+                "name": "Germany",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "Italy",
+                "x": 9.992007221626409e-16,
+                "y": 0.0
+            },
+            {
+                "name": "Spain",
+                "x": 0.0,
+                "y": 0.0
+            },
+            {
+                "name": "United States",
+                "x": 0.0,
+                "y": 0.0
+            }
+        ]
+    }
+]

@@ -1,0 +1,211 @@
+[{'2015'},            Country  intercept     slope
+1        Argentina  10.280565 -4.050074
+2        Australia  15.446117 -1.230191
+3          Belgium  19.016566  0.486658
+4           Brazil  10.687040  0.911876
+5           Canada   9.540858  4.101197
+6            Chile  23.936508  3.952381
+7            China  32.297766  0.921765
+8         Colombia  28.623932 -7.461538
+9          Croatia  13.809524 -8.571429
+10  Czech Republic  27.356817 -2.922490
+11         Denmark  10.331936 -0.351520
+12          France  12.692747  0.474263
+13         Germany  10.328828 -2.212455
+14          Greece  11.768879  1.702742
+15         Hungary  24.178817 -4.904246
+16         Ireland  19.484127 -7.113997
+17          Israel   8.834446  2.959716
+18           Italy  15.985251  0.278114
+19           Japan  11.545976 -0.682481
+20    Korea, South  18.833988  1.254352
+21          Kuwait  42.447205  4.246377
+22          Mexico  21.112667 -1.635543
+23     Netherlands   8.229358  0.092074
+24     Philippines  21.269752 -6.620646
+25          Poland  18.158730  6.142857
+26        Portugal  30.095034 -4.388687
+27    South Africa  14.672107 -0.056323
+28           Spain  14.413003  0.467848
+29     Switzerland  13.644134 -2.249417
+30          Taiwan  17.442758  0.013600
+31        Thailand  25.417175 -1.113650
+32          Turkey  12.667115  0.198925
+33  United Kingdom  14.531913 -1.494866
+34   United States  13.211086  1.970306
+35       Venezuela   9.456349 -0.976190, 'Correlation between slope and intercept for Pseudomonas aeruginosa with Ceftazidime in 2015: -0.0928 (p-value: 0.5961)\n', {'2018'},            Country  intercept      slope
+1        Argentina   1.574074   1.944444
+2        Australia  10.845671  -3.243779
+3          Belgium  16.795880  -1.971336
+4           Brazil  16.325427   2.121457
+5           Canada  17.208850   0.124314
+6            Chile  30.182540   0.666667
+7            China  29.318778  -3.596798
+8         Colombia  18.604729   7.620713
+9          Croatia   8.195971   2.609890
+10  Czech Republic  19.386844  -0.148212
+11         Denmark  12.549145   0.094017
+12          France  12.897883  -1.402070
+13         Germany   9.214521   0.151485
+14          Greece  16.357143  -2.793651
+15         Hungary  14.553339   0.737579
+16         Ireland  11.855062   1.763570
+17          Israel  18.655615   2.612319
+18           Italy  15.586704  -1.431882
+19           Japan   9.182940  -0.500854
+20    Korea, South  17.721039  -2.322949
+21          Kuwait  34.439985 -12.348941
+22          Mexico  17.982260  -3.560224
+23     Netherlands   8.918086  -0.854669
+24     Philippines   9.678854  -0.149584
+25          Poland  34.844676  -7.364630
+26        Portugal  19.020002  -1.081172
+27    South Africa  14.115028  -0.882537
+28           Spain  13.303784  -1.920589
+29     Switzerland   9.403263  -0.028361
+30          Taiwan  18.920151   0.634623
+31        Thailand  24.326860   0.349645
+32          Turkey  18.128284   0.962233
+33  United Kingdom   8.160636   0.301319
+34   United States  18.228694   0.411288
+35       Venezuela   9.436364   3.531313, 'Correlation between slope and intercept for Pseudomonas aeruginosa with Ceftazidime in 2018: -0.5214 (p-value: 0.0013)\n', {'2019'},            Country  intercept     slope
+1        Argentina   2.500000  3.333333
+2        Australia   8.233382 -2.506188
+3          Belgium  14.694344 -1.050941
+4           Brazil  18.425243  0.275644
+5           Canada  17.595038 -0.204053
+6            Chile  30.904762  2.119048
+7            China  26.001266 -2.519699
+8         Colombia  25.231435  4.038184
+9          Croatia  10.961538  1.428571
+10  Czech Republic  18.812728  0.840984
+11         Denmark  13.239316 -1.361111
+12          France  11.669429 -1.191366
+13         Germany   9.671856 -0.691125
+14          Greece  15.280423 -4.462963
+15         Hungary  15.209143  1.082621
+16         Ireland  13.567599  1.340909
+17          Israel  21.133769  0.762963
+18           Italy  14.420271 -1.378235
+19           Japan   8.687207 -0.031451
+20    Korea, South  15.544666 -1.697319
+21          Kuwait  22.976589 -8.294314
+22          Mexico  15.751634 -4.635854
+23     Netherlands   8.104363 -0.622432
+24     Philippines   9.778555 -0.201465
+25          Poland  29.923527 -7.944862
+26        Portugal  17.657459 -0.189966
+27    South Africa  13.799138 -1.187913
+28           Spain  11.695504 -1.376689
+29     Switzerland   9.801865 -1.293706
+30          Taiwan  19.513228  0.219577
+31        Thailand  24.734596  0.528674
+32          Turkey  19.956281 -0.772578
+33  United Kingdom   8.350755  0.952381
+34   United States  18.741011  0.088119
+35       Venezuela  12.242424  2.878788, 'Correlation between slope and intercept for Pseudomonas aeruginosa with Ceftazidime in 2019: -0.2232 (p-value: 0.1974)\n', {'2016'},            Country  intercept      slope
+1        Argentina   6.761427  -3.833148
+2        Australia  14.247800  -1.091692
+3          Belgium  18.848008  -0.853128
+4           Brazil  11.819193   1.546188
+5           Canada  12.899943   3.417899
+6            Chile  28.190476   2.666667
+7            China  33.440842  -1.775288
+8         Colombia  22.897436  -5.538462
+9          Croatia   1.941392   3.443223
+10  Czech Republic  24.866894  -3.438815
+11         Denmark  10.037543   1.376128
+12          France  12.869154   0.232608
+13         Germany   7.813883   0.527156
+14          Greece  13.455988   3.168591
+15         Hungary  21.526578  -4.799199
+16         Ireland  11.847597  -0.766733
+17          Israel  12.220885   2.549952
+18           Italy  15.897100   0.194646
+19           Japan  10.844776  -0.697431
+20    Korea, South  20.156501  -0.995542
+21          Kuwait  44.532091  -2.449275
+22          Mexico  18.835356   0.572362
+23     Netherlands   7.541240   0.924825
+24     Philippines  14.275480  -2.481141
+25          Poland  21.766789  10.062271
+26        Portugal  25.793812  -4.156504
+27    South Africa  14.594364   0.520236
+28           Spain  14.893572  -0.304793
+29     Switzerland  11.301088  -0.984071
+30          Taiwan  17.328554   0.629463
+31        Thailand  23.899369   0.565836
+32          Turkey  12.174731   4.084677
+33  United Kingdom  13.599755  -2.545723
+34   United States  14.867729   2.119523
+35       Venezuela   9.577778  -1.484921, 'Correlation between slope and intercept for Pseudomonas aeruginosa with Ceftazidime in 2016: -0.2400 (p-value: 0.1649)\n', {'2017'},            Country  intercept      slope
+1        Argentina   3.035427  -2.045089
+2        Australia  12.430884  -2.089317
+3          Belgium  18.851991  -2.036993
+4           Brazil  13.363042   4.025742
+5           Canada  17.038447   0.179840
+6            Chile  30.039683  -1.944444
+7            China  31.811122  -2.665541
+8         Colombia  19.860917   2.873349
+9          Croatia   4.395604   3.479853
+10  Czech Republic  21.747335  -2.437430
+11         Denmark  10.850553   2.324158
+12          France  13.013446  -0.216555
+13         Germany   7.651151   1.805607
+14          Greece  15.611111   1.198413
+15         Hungary  15.171626  -0.977193
+16         Ireland   9.530886   1.894356
+17          Israel  14.597793   4.869688
+18           Italy  16.262205  -0.547524
+19           Japan  10.179735  -1.215540
+20    Korea, South  19.606278  -1.798452
+21          Kuwait  44.530605 -10.655943
+22          Mexico  19.183940  -0.328665
+23     Netherlands   8.353865   0.295354
+24     Philippines  11.628860  -1.671861
+25          Poland  28.157509   4.527473
+26        Portugal  22.183791  -2.864841
+27    South Africa  15.071645  -0.823416
+28           Spain  14.413240  -1.422206
+29     Switzerland  11.304196  -0.370629
+30          Taiwan  17.871273   1.198741
+31        Thailand  24.194214  -0.284327
+32          Turkey  15.474846   2.835829
+33  United Kingdom  12.055565  -3.671353
+34   United States  16.863494   1.198753
+35       Venezuela   8.257143   1.723810, 'Correlation between slope and intercept for Pseudomonas aeruginosa with Ceftazidime in 2017: -0.4906 (p-value: 0.0028)\n', {'2014'},            Country  intercept      slope
+1        Argentina  12.435433  -2.464387
+2        Australia  16.192807  -1.130203
+3          Belgium  18.849743   0.530366
+4           Brazil  10.134611   0.240925
+5           Canada   7.388747   3.247239
+6            Chile  21.126984   3.936508
+7            China  31.072509   1.702434
+8         Colombia  32.444444  -3.222222
+9          Croatia  23.333333 -13.333333
+10  Czech Republic  28.747506  -1.351976
+11         Denmark  10.854102  -1.081723
+12          France  12.538572  -0.017606
+13         Germany  12.385718  -3.235300
+14          Greece  11.049784   0.681818
+15         Hungary  25.791170  -2.305636
+16         Ireland  25.335498  -8.517316
+17          Israel   6.720629   2.042298
+18           Italy  16.021449  -0.010498
+19           Japan  11.963706  -0.348817
+20    Korea, South  17.590502   1.849080
+21          Kuwait  39.857143   4.730159
+22          Mexico  22.920635  -2.349206
+23     Netherlands   8.808779  -1.118521
+24     Philippines  26.294217  -6.123565
+25          Poland  16.777778  -1.333333
+26        Portugal  32.722204  -2.893137
+27    South Africa  14.834065   0.146728
+28           Spain  13.970134   0.609534
+29     Switzerland  15.303030  -1.313131
+30          Taiwan  17.634454  -0.475554
+31        Thailand  26.663756  -1.608207
+32          Turkey  13.739695  -1.722222
+33  United Kingdom  14.881036   0.959707
+34   United States  12.246944   1.039393
+35       Venezuela   9.281746   0.305556, 'Correlation between slope and intercept for Pseudomonas aeruginosa with Ceftazidime in 2014: -0.2122 (p-value: 0.2210)\n']

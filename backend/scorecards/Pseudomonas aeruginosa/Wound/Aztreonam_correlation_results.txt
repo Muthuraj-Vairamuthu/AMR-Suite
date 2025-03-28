@@ -1,0 +1,151 @@
+[{'2014'},            Country  intercept     slope
+1        Argentina  31.351852 -3.325397
+2        Australia  13.553142 -2.032887
+3          Belgium  20.715488 -2.314815
+4           Brazil  19.578755  2.900596
+5            Chile  44.221205 -4.933638
+6         Colombia  31.310334  1.127584
+7   Czech Republic  25.768257 -4.806823
+8           France  10.819108  2.636565
+9          Germany  13.899793  0.010516
+10         Hungary  16.215222  3.177093
+11          Israel  15.360990 -0.089250
+12           Italy  26.403344 -0.763845
+13    Korea, South  16.111111 -1.666667
+14          Kuwait  22.064906  2.702522
+15          Mexico  20.392260  4.169775
+16     Netherlands  15.695378  0.142857
+17     Philippines  15.059395 -0.264967
+18          Poland  24.595960  2.996633
+19        Portugal  20.487338 -2.281242
+20    South Africa  12.410266  0.202637
+21           Spain  26.971322 -2.558380
+22          Taiwan  16.104497 -0.595238
+23        Thailand  23.960623 -1.446886
+24          Turkey  22.776611 -0.595238
+25  United Kingdom   8.226363  1.716126, 'Correlation between slope and intercept for Pseudomonas aeruginosa with Aztreonam in 2014: -0.4643 (p-value: 0.0194)\n', {'2016'},            Country  intercept      slope
+1        Argentina  24.282828  -1.570707
+2        Australia   8.473698  -1.749251
+3          Belgium  15.883838  -2.331650
+4           Brazil  25.073113   3.001606
+5            Chile  33.574044 -11.506447
+6         Colombia  33.165057  -0.194028
+7   Czech Republic  17.836036   2.935112
+8           France  14.883343   1.309779
+9          Germany  14.055814   0.928899
+10         Hungary  19.342903  -2.638269
+11          Israel  14.857254  -2.649934
+12           Italy  24.471313   0.576948
+13    Korea, South  15.962963   8.444444
+14          Kuwait  26.409896   0.200447
+15          Mexico  28.757587   2.858186
+16     Netherlands  14.649860  -4.425770
+17     Philippines  14.821047   0.931978
+18          Poland  27.460649  -2.430462
+19        Portugal  16.759816  -0.982758
+20    South Africa  12.985459   1.451800
+21           Spain  22.139068  -3.134311
+22          Taiwan  14.324194  -2.199375
+23        Thailand  20.805500  -0.746380
+24          Turkey  19.298786   0.587768
+25  United Kingdom   9.072464  -2.527260, 'Correlation between slope and intercept for Pseudomonas aeruginosa with Aztreonam in 2016: -0.1892 (p-value: 0.3651)\n', {'2017'},            Country  intercept     slope
+1        Argentina  23.808081  2.232323
+2        Australia   7.564918  0.038068
+3          Belgium  12.814815 -4.173401
+4           Brazil  27.783564  0.655528
+5            Chile  22.169772  0.515528
+6         Colombia  33.649173  4.113686
+7   Czech Republic  19.811127 -1.514103
+8           France  16.724783 -0.540578
+9          Germany  14.650090  0.317117
+10         Hungary  17.809779 -6.612898
+11          Israel  12.713209 -0.379409
+12           Italy  24.880240 -0.234132
+13    Korea, South  22.444444  2.333333
+14          Kuwait  26.530522 -1.543069
+15          Mexico  31.159628 -3.579311
+16     Netherlands  10.538324 -1.410237
+17     Philippines  15.747800 -0.895405
+18          Poland  25.631106 -2.834171
+19        Portugal  16.314681  1.166767
+20    South Africa  14.240933 -1.188626
+21           Spain  18.415036 -0.508213
+22          Taiwan  12.509620 -0.494228
+23        Thailand  20.411629  1.056594
+24          Turkey  21.186275  0.118114
+25  United Kingdom   7.653669 -3.565332, 'Correlation between slope and intercept for Pseudomonas aeruginosa with Aztreonam in 2017: 0.2920 (p-value: 0.1566)\n', {'2019'},            Country  intercept     slope
+1        Argentina  27.724868  2.258297
+2        Australia   8.406687  1.438868
+3          Belgium   5.718855 -3.037037
+4           Brazil  29.318914 -0.631502
+5            Chile  24.206349  5.026455
+6         Colombia  38.671861  0.337374
+7   Czech Republic  17.227884 -3.256437
+8           France  16.698717  0.543123
+9          Germany  15.200172 -0.742373
+10         Hungary   7.785088 -1.140351
+11          Israel  11.820202  1.293939
+12           Italy  24.895819 -0.940236
+13    Korea, South  30.000000  1.666667
+14          Kuwait  21.376748 -4.801865
+15          Mexico  21.901961 -6.622549
+16     Netherlands   8.484848  0.909091
+17     Philippines  13.722626 -1.233764
+18          Poland  21.094809 -1.708058
+19        Portugal  17.549476  1.337209
+20    South Africa  11.187641 -2.683635
+21           Spain  18.855015  1.530914
+22          Taiwan  12.742947  2.037493
+23        Thailand  23.031547  1.744829
+24          Turkey  23.700535  1.976530
+25  United Kingdom   2.635611  0.265355, 'Correlation between slope and intercept for Pseudomonas aeruginosa with Aztreonam in 2019: 0.1367 (p-value: 0.5148)\n', {'2018'},            Country  intercept     slope
+1        Argentina  24.237133  4.041366
+2        Australia   6.601911  2.139946
+3          Belgium   9.446128 -4.489899
+4           Brazil  28.572350  0.092341
+5            Chile  21.074074  5.126984
+6         Colombia  35.447064  3.207992
+7   Czech Republic  19.066559 -3.255363
+8           France  16.295799  0.428316
+9          Germany  14.851590 -0.144998
+10         Hungary  12.358512 -4.296296
+11          Israel  12.272339  0.445998
+12           Italy  24.216447 -0.027719
+13    Korea, South  27.000000  2.111111
+14          Kuwait  24.383741 -4.308469
+15          Mexico  28.932252 -8.433258
+16     Netherlands   8.718615  0.354978
+17     Philippines  15.274846 -1.788075
+18          Poland  21.925866 -1.435171
+19        Portugal  17.190348  1.169083
+20    South Africa  13.348213 -2.921931
+21           Spain  18.076392  1.170085
+22          Taiwan  12.000174  1.494750
+23        Thailand  20.785980  2.561701
+24          Turkey  19.951999  3.644512
+25  United Kingdom   4.169197 -1.127674, 'Correlation between slope and intercept for Pseudomonas aeruginosa with Aztreonam in 2018: 0.1029 (p-value: 0.6245)\n', {'2015'},            Country  intercept      slope
+1        Argentina  28.375902  -4.171236
+2        Australia  11.476367  -3.125119
+3          Belgium  18.838384  -2.853535
+4           Brazil  21.670437   3.251993
+5            Chile  40.386219 -10.244851
+6         Colombia  32.026729  -0.027040
+7   Czech Republic  22.123146  -2.429110
+8           France  12.491300   2.494610
+9          Germany  13.852090   0.079211
+10         Hungary  17.941476   1.788721
+11          Israel  15.401205  -0.817006
+12           Italy  25.463950  -1.142111
+13    Korea, South  15.296296   2.370370
+14          Kuwait  23.928006   2.070275
+15          Mexico  23.934846   6.102895
+16     Netherlands  15.577031  -2.235994
+17     Philippines  14.938480   0.679700
+18          Poland  25.986051   0.096200
+19        Portugal  19.010490  -1.614976
+20    South Africa  12.584787   1.122384
+21           Spain  25.068198  -3.862543
+22          Taiwan  15.515873  -1.567460
+23        Thailand  22.611208  -2.076326
+24          Turkey  21.167600  -1.850840
+25  United Kingdom   8.869565   0.080055, 'Correlation between slope and intercept for Pseudomonas aeruginosa with Aztreonam in 2015: -0.4370 (p-value: 0.0289)\n']

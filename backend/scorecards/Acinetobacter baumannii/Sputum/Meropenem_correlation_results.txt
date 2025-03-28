@@ -1,0 +1,85 @@
+[{'2015'},            Country  intercept         slope
+1            China  73.713946 -2.842227e+00
+2   Czech Republic  12.159209  4.746104e-01
+3           France   8.174603  9.047619e+00
+4           Greece  97.196970 -4.242424e+00
+5            Italy  86.835387 -1.176601e+00
+6            Japan   0.000000  9.769963e-15
+7     Korea, South  96.816033 -3.112508e+00
+8      Philippines  45.831349 -8.789683e-01
+9         Portugal  93.333333 -5.317460e+00
+10    South Africa  59.095127  3.302697e+00
+11           Spain  54.925692 -2.311734e+00
+12          Taiwan  35.052486 -3.797287e+00
+13        Thailand  90.312325  3.119748e-01
+14   United States  49.848366 -1.498468e+00, 'Correlation between slope and intercept for Acinetobacter baumannii with Meropenem in 2015: -0.5618 (p-value: 0.0366)\n', {'2018'},            Country  intercept         slope
+1            China  75.827653 -2.255265e+00
+2   Czech Republic  16.852180  3.849305e+00
+3           France  30.555556 -1.455026e+00
+4           Greece  91.439394  4.242424e+00
+5            Italy  88.775132  2.158730e+00
+6            Japan   0.000000  9.992007e-15
+7     Korea, South  87.811475  2.386819e-01
+8      Philippines  34.958333 -5.263889e+00
+9         Portugal  54.333333 -1.977778e+01
+10    South Africa  79.348283  4.804844e+00
+11           Spain  57.869430 -3.544860e+00
+12          Taiwan  42.844512  4.405009e+00
+13        Thailand  87.107869 -1.881969e+00
+14   United States  55.398629  2.621152e+00, 'Correlation between slope and intercept for Acinetobacter baumannii with Meropenem in 2018: 0.0905 (p-value: 0.7584)\n', {'2019'},            Country  intercept      slope
+1            China  76.867242  -6.490269
+2   Czech Republic  19.959956   3.539197
+3           France  29.603175  -2.063492
+4           Greece  94.545455   3.712121
+5            Italy  90.873016   1.230159
+6            Japan   0.000000   0.000000
+7     Korea, South  87.727551   0.849971
+8      Philippines  30.208333  -5.000000
+9         Portugal  35.111111 -10.777778
+10    South Africa  85.240812   0.739261
+11           Spain  58.091206  -8.276144
+12          Taiwan  47.130395   2.034933
+13        Thailand  84.670103  -0.576655
+14   United States  58.568021   1.180055, 'Correlation between slope and intercept for Acinetobacter baumannii with Meropenem in 2019: 0.1972 (p-value: 0.4992)\n', {'2017'},            Country  intercept      slope
+1            China  73.571437   3.431166
+2   Czech Republic  14.332900   2.241679
+3           France  24.338624   5.158730
+4           Greece  90.681818   1.590909
+5            Italy  86.484127   2.415344
+6            Japan   0.000000   0.000000
+7     Korea, South  90.820967  -2.677643
+8      Philippines  41.551587  -4.601190
+9         Portugal  74.333333 -22.000000
+10    South Africa  70.076573   9.474946
+11           Spain  56.368901   3.217419
+12          Taiwan  31.955831  10.176761
+13        Thailand  88.405821  -1.439867
+14   United States  50.645982   4.025269, 'Correlation between slope and intercept for Acinetobacter baumannii with Meropenem in 2017: -0.2245 (p-value: 0.4402)\n', {'2016'},            Country  intercept      slope
+1            China  70.799624   5.291593
+2   Czech Republic  12.117216   2.021164
+3           France  13.571429  10.952381
+4           Greece  94.090909  -3.712121
+5            Italy  85.253561   1.588930
+6            Japan   0.000000   0.000000
+7     Korea, South  95.028109  -4.551393
+8      Philippines  46.486111  -6.523810
+9         Portugal  87.095238 -14.904762
+10    South Africa  60.635803  11.078238
+11           Spain  51.646993   6.636694
+12          Taiwan  29.932759   5.276589
+13        Thailand  90.978525  -2.890756
+14   United States  47.079965   5.179663, 'Correlation between slope and intercept for Acinetobacter baumannii with Meropenem in 2016: -0.4624 (p-value: 0.0959)\n', {'2014'},            Country  intercept         slope
+1            China  77.089303 -4.738897e+00
+2   Czech Republic  12.493715 -5.580694e-01
+3           France   5.317460  2.063492e+00
+4           Greece  99.166667 -2.500000e+00
+5            Italy  88.337588 -2.301402e+00
+6            Japan   0.000000  1.998401e-14
+7     Korea, South  97.601010 -2.525253e-01
+8      Philippines  44.309524  3.166667e+00
+9         Portugal  95.158730 -2.380952e-01
+10    South Africa  59.725830 -2.236652e+00
+11           Spain  58.682597 -4.943847e+00
+12          Taiwan  39.939097 -9.601901e+00
+13        Thailand  89.272059  1.088235e+00
+14   United States  52.845032 -4.813686e+00, 'Correlation between slope and intercept for Acinetobacter baumannii with Meropenem in 2014: -0.1114 (p-value: 0.7045)\n']

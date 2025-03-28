@@ -1,0 +1,97 @@
+[{'2014'},            Country   intercept         slope
+1          Belgium   41.388889  3.333333e+00
+2           Brazil   92.690476 -5.396825e-01
+3           Canada    0.555556  1.666667e+00
+4          Croatia   94.166667  3.333333e+00
+5   Czech Republic    5.833333  9.166667e+00
+6           France   20.186869 -3.454545e+00
+7          Germany   25.555556 -1.111111e+00
+8           Greece  100.000000  1.998401e-14
+9            Italy   75.891674 -8.170426e-01
+10          Kuwait   32.500000  1.000000e+01
+11          Mexico   68.795455  2.103175e-01
+12          Poland   36.410256  9.230769e+00
+13        Portugal   84.824074  1.231481e+00
+14           Spain   53.101852  1.203704e+00
+15  United Kingdom    1.666667  5.000000e+00
+16   United States   34.706349 -6.595238e+00, 'Correlation between slope and intercept for Acinetobacter baumannii with Cefepime in 2014: -0.2595 (p-value: 0.3317)\n', {'2016'},            Country  intercept      slope
+1          Belgium  39.444444  -1.111111
+2           Brazil  91.212517   0.094132
+3           Canada   4.666667   3.444444
+4          Croatia  99.520833  -0.916667
+5   Czech Republic  27.500000   8.888889
+6           France  20.027081   9.333246
+7          Germany  25.833333  10.833333
+8           Greece  99.444444  -0.740741
+9            Italy  78.146477   5.618769
+10          Kuwait  56.444444   6.370370
+11          Mexico  70.792325   5.388340
+12          Poland  57.039627  14.708625
+13        Portugal  79.272727 -15.098485
+14           Spain  53.226496  -0.096154
+15  United Kingdom  10.000000   5.000000
+16   United States  25.008568   0.149711, 'Correlation between slope and intercept for Acinetobacter baumannii with Cefepime in 2016: -0.4054 (p-value: 0.1192)\n', {'2017'},            Country  intercept      slope
+1          Belgium  40.000000 -10.555556
+2           Brazil  91.938850   0.865077
+3           Canada   7.923077   0.435897
+4          Croatia  98.875000  -0.979167
+5   Czech Republic  36.111111   4.166667
+6           France  25.663811  10.694412
+7          Germany  34.166667   6.666667
+8           Greece  98.888889  -0.555556
+9            Italy  82.287246   4.489140
+10          Kuwait  62.830065   6.267974
+11          Mexico  76.438102   2.221366
+12          Poland  73.494949   1.953380
+13        Portugal  67.318182 -19.409091
+14           Spain  53.536325  -5.523504
+15  United Kingdom  15.000000  -5.000000
+16   United States  24.403575   4.913918, 'Correlation between slope and intercept for Acinetobacter baumannii with Cefepime in 2017: -0.1068 (p-value: 0.6939)\n', {'2019'},            Country  intercept      slope
+1          Belgium  27.222222  -4.444444
+2           Brazil  93.310183   0.643085
+3           Canada   7.705128  -1.564103
+4          Croatia  97.077851  -0.285088
+5   Czech Republic  35.555556  -5.833333
+6           France  39.922263  -4.191168
+7          Germany  41.111111 -10.000000
+8           Greece  97.453704  -0.925926
+9            Italy  87.355890  -2.078112
+10          Kuwait  69.961874   3.453159
+11          Mexico  78.733192  -1.062834
+12          Poland  78.242424   4.564103
+13        Portugal  30.727273 -10.166667
+14           Spain  41.642247  -7.582418
+15  United Kingdom   7.666667  -3.666667
+16   United States  29.770568  -0.852827, 'Correlation between slope and intercept for Acinetobacter baumannii with Cefepime in 2019: 0.5265 (p-value: 0.0361)\n', {'2018'},            Country  intercept      slope
+1          Belgium  28.333333  -3.888889
+2           Brazil  92.057306   1.398305
+3           Canada   8.935897  -1.696581
+4          Croatia  97.887061  -0.713816
+5   Czech Republic  41.388889  -6.388889
+6           France  35.107161   1.951919
+7          Germany  37.777778  -1.944444
+8           Greece  97.916667  -0.694444
+9            Italy  87.164996  -0.679198
+10          Kuwait  71.656863   0.820261
+11          Mexico  78.841371  -0.464378
+12          Poland  79.878788   0.366744
+13        Portugal  48.469697 -17.848485
+14           Spain  47.655678  -8.047924
+15  United Kingdom  12.000000  -5.666667
+16   United States  27.854334   1.624492, 'Correlation between slope and intercept for Acinetobacter baumannii with Cefepime in 2018: 0.2843 (p-value: 0.2858)\n', {'2015'},            Country  intercept      slope
+1          Belgium  40.555556  -1.944444
+2           Brazil  92.042017  -0.659664
+3           Canada   2.111111   3.555556
+4          Croatia  96.562500   2.187500
+5   Czech Republic  14.722222  15.000000
+6           France  19.038488   0.625566
+7          Germany  24.444444   1.111111
+8           Greece  99.814815  -0.555556
+9            Italy  76.388471   2.828739
+10          Kuwait  42.592593  15.277778
+11          Mexico  69.311147   3.523268
+12          Poland  44.615385  18.461538
+13        Portugal  84.101852  -4.222222
+14           Spain  53.251425   0.726496
+15  United Kingdom   5.000000   6.666667
+16   United States  30.419643  -5.050595, 'Correlation between slope and intercept for Acinetobacter baumannii with Cefepime in 2015: -0.3125 (p-value: 0.2386)\n']

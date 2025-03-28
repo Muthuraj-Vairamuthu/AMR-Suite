@@ -1,0 +1,157 @@
+[{'2016'},            Country     intercept         slope
+1        Argentina  9.714451e-17 -1.040834e-16
+2        Australia -1.110223e-16  0.000000e+00
+3          Belgium  9.714451e-17  0.000000e+00
+4           Brazil  9.714451e-17  0.000000e+00
+5           Canada  1.942890e-16  0.000000e+00
+6            China  0.000000e+00  0.000000e+00
+7         Colombia -1.110223e-16  0.000000e+00
+8   Czech Republic -1.110223e-16  0.000000e+00
+9           France  9.714451e-17  0.000000e+00
+10         Germany  0.000000e+00 -1.040834e-16
+11          Greece  0.000000e+00  0.000000e+00
+12          Israel  0.000000e+00  0.000000e+00
+13           Italy  0.000000e+00  0.000000e+00
+14          Kuwait  0.000000e+00  0.000000e+00
+15          Mexico  8.881784e-16  0.000000e+00
+16     Netherlands  0.000000e+00 -1.040834e-16
+17     Philippines  7.777778e-01 -4.444444e-01
+18          Poland  0.000000e+00  0.000000e+00
+19        Portugal  1.942890e-16 -2.012279e-16
+20    South Africa  9.714451e-17  9.714451e-17
+21           Spain -4.024558e-16  0.000000e+00
+22          Taiwan  0.000000e+00  9.714451e-17
+23        Thailand  8.571429e-01 -2.857143e-01
+24          Turkey  0.000000e+00  0.000000e+00
+25  United Kingdom -4.024558e-16  2.983724e-16
+26   United States  0.000000e+00  0.000000e+00, 'Correlation between slope and intercept for Escherichia coli with Tigecycline in 2016: -0.9630 (p-value: 0.0000)\n', {'2017'},            Country     intercept         slope
+1        Argentina  1.110223e-16 -9.996344e-17
+2        Australia  0.000000e+00  0.000000e+00
+3          Belgium  1.110223e-16  0.000000e+00
+4           Brazil  1.110223e-16  0.000000e+00
+5           Canada  1.110223e-16  0.000000e+00
+6            China  0.000000e+00  9.996344e-17
+7         Colombia -9.714451e-17  9.996344e-17
+8   Czech Republic  0.000000e+00  0.000000e+00
+9           France  1.110223e-16  0.000000e+00
+10         Germany  1.110223e-16  0.000000e+00
+11          Greece -9.714451e-17  0.000000e+00
+12          Israel  1.110223e-16  0.000000e+00
+13           Italy  1.110223e-16  0.000000e+00
+14          Kuwait -1.942890e-16  0.000000e+00
+15          Mexico  4.996004e-16  0.000000e+00
+16     Netherlands  0.000000e+00 -9.996344e-17
+17     Philippines  4.444444e-01 -3.333333e-01
+18          Poland -9.714451e-17  9.996344e-17
+19        Portugal  4.996004e-16 -4.000706e-16
+20    South Africa  0.000000e+00  9.996344e-17
+21           Spain  0.000000e+00 -9.996344e-17
+22          Taiwan  0.000000e+00  9.996344e-17
+23        Thailand  1.037037e+00  7.301587e-01
+24          Turkey  4.166667e-01  1.250000e+00
+25  United Kingdom -6.938894e-16  4.000706e-16
+26   United States -1.942890e-16  9.996344e-17, 'Correlation between slope and intercept for Escherichia coli with Tigecycline in 2017: 0.6088 (p-value: 0.0010)\n', {'2014'},            Country     intercept         slope
+1        Argentina  2.081668e-16 -9.887924e-17
+2        Australia  0.000000e+00  0.000000e+00
+3          Belgium  2.081668e-16 -9.887924e-17
+4           Brazil  1.110223e-16  0.000000e+00
+5           Canada  2.081668e-16  0.000000e+00
+6            China  2.081668e-16  0.000000e+00
+7         Colombia  1.110223e-16  0.000000e+00
+8   Czech Republic  0.000000e+00  0.000000e+00
+9           France  2.081668e-16 -9.887924e-17
+10         Germany  1.110223e-16 -9.887924e-17
+11          Greece  0.000000e+00  0.000000e+00
+12          Israel  1.110223e-16  0.000000e+00
+13           Italy  2.081668e-16 -9.887924e-17
+14          Kuwait  1.110223e-16  0.000000e+00
+15          Mexico  8.049117e-16 -9.887924e-17
+16     Netherlands -9.714451e-17 -9.887924e-17
+17     Philippines  1.111111e+00  2.012279e-16
+18          Poland  0.000000e+00 -9.887924e-17
+19        Portugal  0.000000e+00 -9.887924e-17
+20    South Africa  0.000000e+00  0.000000e+00
+21           Spain -9.714451e-17 -9.887924e-17
+22          Taiwan  0.000000e+00 -9.887924e-17
+23        Thailand  2.857143e-01  3.809524e-01
+24          Turkey  0.000000e+00  0.000000e+00
+25  United Kingdom -9.714451e-17  0.000000e+00
+26   United States  0.000000e+00  0.000000e+00, 'Correlation between slope and intercept for Escherichia coli with Tigecycline in 2014: 0.2124 (p-value: 0.2976)\n', {'2015'},            Country     intercept         slope
+1        Argentina  0.000000e+00 -1.006140e-16
+2        Australia -9.714451e-17  0.000000e+00
+3          Belgium  0.000000e+00  0.000000e+00
+4           Brazil  0.000000e+00  0.000000e+00
+5           Canada -9.714451e-17  0.000000e+00
+6            China -1.942890e-16  1.006140e-16
+7         Colombia -1.942890e-16  1.006140e-16
+8   Czech Republic -1.942890e-16  0.000000e+00
+9           France  0.000000e+00  0.000000e+00
+10         Germany -9.714451e-17  0.000000e+00
+11          Greece -1.942890e-16  0.000000e+00
+12          Israel  0.000000e+00  0.000000e+00
+13           Italy -9.714451e-17  0.000000e+00
+14          Kuwait -1.942890e-16  1.006140e-16
+15          Mexico  4.996004e-16  0.000000e+00
+16     Netherlands -9.714451e-17  0.000000e+00
+17     Philippines  1.000000e+00 -3.333333e-01
+18          Poland -3.053113e-16  0.000000e+00
+19        Portugal  9.714451e-17 -1.006140e-16
+20    South Africa -1.942890e-16  1.006140e-16
+21           Spain -3.053113e-16  0.000000e+00
+22          Taiwan -3.053113e-16  1.006140e-16
+23        Thailand  5.714286e-01  2.857143e-01
+24          Turkey -1.942890e-16  0.000000e+00
+25  United Kingdom -1.942890e-16  0.000000e+00
+26   United States -1.942890e-16  0.000000e+00, 'Correlation between slope and intercept for Escherichia coli with Tigecycline in 2015: -0.3432 (p-value: 0.0860)\n', {'2019'},            Country     intercept         slope
+1        Argentina  0.000000e+00 -9.714451e-17
+2        Australia  0.000000e+00  0.000000e+00
+3          Belgium  0.000000e+00  0.000000e+00
+4           Brazil -1.110223e-16  0.000000e+00
+5           Canada  1.942890e-16  0.000000e+00
+6            China -1.110223e-16 -9.714451e-17
+7         Colombia -2.081668e-16  1.040834e-16
+8   Czech Republic -4.996004e-16  0.000000e+00
+9           France -1.110223e-16 -2.012279e-16
+10         Germany  3.885781e-16 -2.012279e-16
+11          Greece -1.110223e-16  0.000000e+00
+12          Israel -1.110223e-16  0.000000e+00
+13           Italy -2.081668e-16  0.000000e+00
+14          Kuwait -1.110223e-16  0.000000e+00
+15          Mexico  2.914335e-16 -9.714451e-17
+16     Netherlands  9.714451e-17 -9.714451e-17
+17     Philippines -6.106227e-16  1.040834e-16
+18          Poland -4.024558e-16  0.000000e+00
+19        Portugal  0.000000e+00 -2.012279e-16
+20    South Africa  9.714451e-17 -2.012279e-16
+21           Spain  1.942890e-16 -4.996004e-16
+22          Taiwan -1.110223e-16  4.024558e-16
+23        Thailand  2.222222e+00  1.111111e+00
+24          Turkey  2.500000e+00  1.250000e+00
+25  United Kingdom -6.106227e-16  2.983724e-16
+26   United States  1.942890e-16 -2.012279e-16, 'Correlation between slope and intercept for Escherichia coli with Tigecycline in 2019: 1.0000 (p-value: 0.0000)\n', {'2018'},            Country     intercept         slope
+1        Argentina -1.942890e-16 -9.714451e-17
+2        Australia  2.012279e-16 -1.942890e-16
+3          Belgium -1.942890e-16  0.000000e+00
+4           Brazil -1.942890e-16  0.000000e+00
+5           Canada -9.714451e-17 -9.714451e-17
+6            China -9.714451e-17 -9.714451e-17
+7         Colombia -2.983724e-16  0.000000e+00
+8   Czech Republic -1.942890e-16  0.000000e+00
+9           France -9.714451e-17  0.000000e+00
+10         Germany  0.000000e+00 -9.714451e-17
+11          Greece -3.955170e-16 -9.714451e-17
+12          Israel -9.714451e-17  0.000000e+00
+13           Italy -2.983724e-16 -9.714451e-17
+14          Kuwait -1.942890e-16  0.000000e+00
+15          Mexico -9.714451e-17 -9.714451e-17
+16     Netherlands -1.942890e-16  0.000000e+00
+17     Philippines -3.955170e-16  0.000000e+00
+18          Poland -9.714451e-17 -9.714451e-17
+19        Portugal -1.942890e-16  1.040834e-16
+20    South Africa  0.000000e+00  0.000000e+00
+21           Spain -2.983724e-16 -9.714451e-17
+22          Taiwan  1.040834e-16 -9.714451e-17
+23        Thailand  1.492063e+00  1.195767e+00
+24          Turkey  1.250000e+00  1.666667e+00
+25  United Kingdom -7.979728e-16  2.012279e-16
+26   United States -5.967449e-16  2.012279e-16, 'Correlation between slope and intercept for Escherichia coli with Tigecycline in 2018: 0.9661 (p-value: 0.0000)\n']

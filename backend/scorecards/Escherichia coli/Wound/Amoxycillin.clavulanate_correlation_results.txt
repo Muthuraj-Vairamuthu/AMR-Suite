@@ -1,0 +1,157 @@
+[{'2016'},            Country  intercept      slope
+1        Argentina  15.194444  -3.722222
+2        Australia  14.888889  -2.277778
+3          Belgium   8.824561  -2.624060
+4           Brazil  13.595238  -1.476190
+5           Canada  16.736111  -6.875000
+6            China  23.462121   4.060606
+7         Colombia  20.189521  -5.721851
+8   Czech Republic   8.931700  -3.347254
+9           France   6.250000   1.388889
+10         Germany  12.343519  -2.098352
+11          Greece   7.926267  -0.837174
+12          Israel  16.748148  -2.614132
+13           Italy  15.558994  -4.169246
+14          Kuwait  17.135566   0.170654
+15          Mexico  18.298708  -5.122634
+16     Netherlands  12.425811   2.848516
+17     Philippines  36.481115  -3.321362
+18          Poland   5.527691  -2.852665
+19        Portugal  14.431013   0.493532
+20    South Africa  12.649573  -4.679487
+21           Spain  17.142191  -5.036664
+22          Taiwan  31.113757  -0.415344
+23        Thailand  19.411275  -6.029363
+24          Turkey  23.245614 -10.307018
+25  United Kingdom   6.375000  -1.500000
+26   United States   8.919254  -2.498319, 'Correlation between slope and intercept for Escherichia coli with Amoxycillin.clavulanate in 2016: -0.1739 (p-value: 0.3955)\n', {'2017'},            Country  intercept     slope
+1        Argentina  11.000000 -1.305556
+2        Australia  13.253968 -0.238095
+3          Belgium   6.360902 -1.832080
+4           Brazil  12.666667 -2.357143
+5           Canada  10.041667 -5.500000
+6            China  27.952020 -2.898990
+7         Colombia  14.311594 -3.442029
+8   Czech Republic   5.737304 -3.056087
+9           France   7.592593 -1.064815
+10         Germany  10.793616 -2.185234
+11          Greece   6.935484 -2.849462
+12          Israel  15.050643 -5.835750
+13           Italy  12.483957 -4.366310
+14          Kuwait  17.759171 -3.341308
+15          Mexico  14.019041 -4.852209
+16     Netherlands  14.585346 -0.406602
+17     Philippines  34.926316 -4.607018
+18          Poland   2.691571 -0.545977
+19        Portugal  15.566535 -0.820794
+20    South Africa  10.641026 -0.128205
+21           Spain  12.512317 -5.875381
+22          Taiwan  31.280423 -2.468254
+23        Thailand  14.265201 -4.142263
+24          Turkey  15.307018 -6.271930
+25  United Kingdom   4.805556 -2.180556
+26   United States   6.812836 -3.226021, 'Correlation between slope and intercept for Escherichia coli with Amoxycillin.clavulanate in 2017: -0.2397 (p-value: 0.2382)\n', {'2014'},            Country  intercept     slope
+1        Argentina  12.222222  1.944444
+2        Australia   9.944444  3.166667
+3          Belgium  11.337059 -1.037933
+4           Brazil   8.809524  2.857143
+5           Canada  23.541667 -2.500000
+6            China  12.388889  5.222222
+7         Colombia  21.981977 -0.632479
+8   Czech Republic  12.720996 -1.609950
+9           France   3.648990  1.519360
+10         Germany  13.513392 -0.187097
+11          Greece   6.561700  1.098310
+12          Israel  12.662036  3.517008
+13           Italy  14.729959  1.840855
+14          Kuwait   9.535354  4.169591
+15          Mexico  20.849608 -0.359231
+16     Netherlands   6.985852  3.267196
+17     Philippines  35.838311  2.344495
+18          Poland   9.181336 -1.977333
+19        Portugal  12.888322  0.831129
+20    South Africa   8.759947  2.915561
+21           Spain  21.389076 -1.086691
+22          Taiwan  27.342190  2.497585
+23        Thailand  21.516131  0.359640
+24          Turkey  26.517544  0.166667
+25  United Kingdom   9.175926 -1.175926
+26   United States  10.691762 -0.295262, 'Correlation between slope and intercept for Escherichia coli with Amoxycillin.clavulanate in 2014: -0.1880 (p-value: 0.3578)\n', {'2015'},            Country  intercept     slope
+1        Argentina  13.750000 -0.416667
+2        Australia  12.277778  1.555556
+3          Belgium  10.499086 -1.790354
+4           Brazil  11.119048  2.642857
+5           Canada  21.194444 -5.236111
+6            China  17.154040  8.962121
+7         Colombia  21.727796 -2.377926
+8   Czech Republic  11.416521 -2.415167
+9           France   4.684343  1.868687
+10         Germany  13.256085 -0.647190
+11          Greece   7.258065  0.640041
+12          Israel  14.776649  2.044435
+13           Italy  15.506018 -0.447883
+14          Kuwait  12.994684  5.044657
+15          Mexico  20.285672 -1.981421
+16     Netherlands   8.997585  2.622498
+17     Philippines  36.459427 -0.280845
+18          Poland   7.849851 -2.543606
+19        Portugal  13.627929  1.782313
+20    South Africa  11.016062  1.700560
+21           Spain  20.041330 -3.077982
+22          Taiwan  29.105590  2.377157
+23        Thailand  21.118098 -2.899062
+24          Turkey  26.149123 -3.438596
+25  United Kingdom   8.106481 -1.652778
+26   United States  10.193234 -1.169017, 'Correlation between slope and intercept for Escherichia coli with Amoxycillin.clavulanate in 2015: -0.1877 (p-value: 0.3584)\n', {'2019'},            Country  intercept         slope
+1        Argentina   8.888889 -6.994405e-15
+2        Australia  11.857143  9.523810e-02
+3          Belgium   2.333333 -1.333333e+00
+4           Brazil   5.833333 -3.333333e+00
+5           Canada   1.333333 -1.000000e+00
+6            China  17.606061 -7.143939e+00
+7         Colombia   5.833333 -3.333333e+00
+8   Czech Republic   1.051282  1.282051e-02
+9           France   5.833333 -1.250000e+00
+10         Germany   7.255696  2.204301e-01
+11          Greece   2.222222 -1.666667e+00
+12          Israel   6.143444 -9.480432e-01
+13           Italy   5.620915 -2.450980e-01
+14          Kuwait   9.473684 -3.771930e+00
+15          Mexico   6.018379 -2.280702e-01
+16     Netherlands  14.444444 -2.500000e+00
+17     Philippines  26.140351 -2.982456e+00
+18          Poland   1.666667  8.333333e-01
+19        Portugal  12.860399 -1.055556e+00
+20    South Africa  10.000000  5.000000e+00
+21           Spain   2.828829 -2.002574e+00
+22          Taiwan  25.571429 -2.611111e+00
+23        Thailand   7.979798  2.020202e-01
+24          Turkey   7.941176  6.421569e+00
+25  United Kingdom  11.333333  1.233333e+01
+26   United States   1.924418 -3.102725e-01, 'Correlation between slope and intercept for Escherichia coli with Amoxycillin.clavulanate in 2019: -0.1451 (p-value: 0.4795)\n', {'2018'},            Country  intercept     slope
+1        Argentina   9.777778 -0.666667
+2        Australia  12.428571 -0.095238
+3          Belgium   4.403509 -2.052632
+4           Brazil  10.357143 -4.642857
+5           Canada   4.833333 -3.208333
+6            China  26.497475 -9.712121
+7         Colombia  10.833333 -5.000000
+8   Czech Republic   3.284922 -1.774589
+9           France   6.898148 -1.527778
+10         Germany   8.959869 -1.184268
+11          Greece   4.749104 -2.867384
+12          Israel  10.285931 -3.833502
+13           Italy   8.169043 -2.054070
+14          Kuwait  15.421053 -6.105263
+15          Mexico   9.738513 -2.923141
+16     Netherlands  13.981481 -1.111111
+17     Philippines  29.080702 -3.389474
+18          Poland   2.212644  0.076628
+19        Portugal  14.939696 -1.897436
+20    South Africa  10.128205  2.820513
+21           Spain   7.097067 -4.289982
+22          Taiwan  28.944444 -3.642857
+23        Thailand   9.769120 -1.224146
+24          Turkey  10.147059  1.274510
+25  United Kingdom   6.222222  8.250000
+26   United States   4.062075 -1.876828, 'Correlation between slope and intercept for Escherichia coli with Amoxycillin.clavulanate in 2018: -0.4152 (p-value: 0.0349)\n']

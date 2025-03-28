@@ -1,0 +1,59 @@
+[{'2014'},            Country     intercept         slope
+1        Argentina  1.006140e-16 -9.974660e-17
+2        Australia  1.006140e-16 -9.974660e-17
+3          Belgium  1.006140e-16 -9.974660e-17
+4           Brazil  6.002143e-16 -9.974660e-17
+5            Chile  0.000000e+00 -9.974660e-17
+6            China  4.022989e-01 -2.298851e-01
+7         Colombia  0.000000e+00  0.000000e+00
+8   Czech Republic -1.994932e-16  1.001803e-16
+9           France  0.000000e+00  0.000000e+00
+10         Germany  0.000000e+00 -9.974660e-17
+11          Greece  1.006140e-16 -9.974660e-17
+12         Hungary  1.006140e-16 -9.974660e-17
+13          Israel  0.000000e+00  0.000000e+00
+14           Italy  1.006140e-16 -9.974660e-17
+15    Korea, South  1.006140e-16 -9.974660e-17
+16          Kuwait  1.006140e-16 -9.974660e-17
+17          Mexico  1.006140e-16 -9.974660e-17
+18     Netherlands  0.000000e+00 -9.974660e-17
+19     Philippines  0.000000e+00 -9.974660e-17
+20          Poland  1.006140e-16 -9.974660e-17
+21        Portugal  1.006140e-16 -9.974660e-17
+22         Romania  1.006140e-16 -9.974660e-17
+23    South Africa  1.006140e-16 -9.974660e-17
+24           Spain  1.006140e-16 -9.974660e-17
+25          Taiwan  1.006140e-16 -9.974660e-17
+26        Thailand  0.000000e+00 -9.974660e-17
+27          Turkey  1.006140e-16 -9.974660e-17
+28  United Kingdom  1.006140e-16 -9.974660e-17
+29       Venezuela  1.006140e-16 -9.974660e-17, 'Correlation between slope and intercept for Staphylococcus aureus with Teicoplanin in 2014: -1.0000 (p-value: 0.0000)\n', {'2015'},            Country     intercept         slope
+1        Argentina  0.000000e+00  0.000000e+00
+2        Australia  0.000000e+00 -9.974660e-17
+3          Belgium  0.000000e+00  0.000000e+00
+4           Brazil -1.999269e-16  0.000000e+00
+5            Chile  0.000000e+00  0.000000e+00
+6            China  2.298851e-01 -1.724138e-01
+7         Colombia  0.000000e+00  0.000000e+00
+8   Czech Republic -1.999269e-16  1.001803e-16
+9           France  0.000000e+00  0.000000e+00
+10         Germany  0.000000e+00  0.000000e+00
+11          Greece  0.000000e+00  0.000000e+00
+12         Hungary  0.000000e+00  0.000000e+00
+13          Israel  0.000000e+00  0.000000e+00
+14           Italy  0.000000e+00  0.000000e+00
+15    Korea, South  0.000000e+00  0.000000e+00
+16          Kuwait  0.000000e+00  0.000000e+00
+17          Mexico  0.000000e+00  0.000000e+00
+18     Netherlands  0.000000e+00  0.000000e+00
+19     Philippines  0.000000e+00  0.000000e+00
+20          Poland  0.000000e+00  0.000000e+00
+21        Portugal  0.000000e+00  0.000000e+00
+22         Romania  0.000000e+00  0.000000e+00
+23    South Africa  0.000000e+00  0.000000e+00
+24           Spain  0.000000e+00  0.000000e+00
+25          Taiwan  0.000000e+00  0.000000e+00
+26        Thailand  0.000000e+00  0.000000e+00
+27          Turkey  0.000000e+00  0.000000e+00
+28  United Kingdom  0.000000e+00  0.000000e+00
+29       Venezuela  0.000000e+00  0.000000e+00, 'Correlation between slope and intercept for Staphylococcus aureus with Teicoplanin in 2015: -1.0000 (p-value: 0.0000)\n']

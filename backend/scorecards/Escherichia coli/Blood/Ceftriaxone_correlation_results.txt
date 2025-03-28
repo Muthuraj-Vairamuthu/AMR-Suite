@@ -1,0 +1,37 @@
+[{'2015'},            Country  intercept     slope
+1          Belgium  10.546279 -0.606061
+2           Canada  15.683901 -0.436508
+3            Chile  43.754313 -8.333333
+4         Colombia  35.211558  2.549020
+5          Croatia  13.641047 -2.923977
+6           France  17.037375 -0.478032
+7          Germany  18.897367 -1.163109
+8           Greece   8.273954  2.188552
+9          Ireland  14.105856  1.216216
+10           Italy  35.988862  0.468328
+11          Mexico  55.327483  3.656126
+12     Netherlands  12.874780 -1.058201
+13          Panama  27.777778  8.333333
+14        Portugal  14.341029 -1.154401
+15           Spain  18.960026 -0.397099
+16     Switzerland  26.452991 -0.512821
+17  United Kingdom   7.182540  0.317460
+18   United States  16.012656  1.284428, 'Correlation between slope and intercept for Escherichia coli with Ceftriaxone in 2015: 0.0482 (p-value: 0.8493)\n', {'2014'},            Country  intercept     slope
+1          Belgium  10.990724 -0.484848
+2           Canada  16.004006 -0.349206
+3            Chile  49.865424 -6.666667
+4         Colombia  33.342277  2.039216
+5          Croatia  15.785297 -2.339181
+6           France  17.387932 -0.382426
+7          Germany  19.750314 -0.930487
+8           Greece   6.669016  1.750842
+9          Ireland  13.213964  0.972973
+10           Italy  35.645421  0.374663
+11          Mexico  52.646324  2.924901
+12     Netherlands  13.650794 -0.846561
+13          Panama  21.666667  6.666667
+14        Portugal  15.187590 -0.923521
+15           Spain  19.251232 -0.317679
+16     Switzerland  26.829060 -0.410256
+17  United Kingdom   6.949735  0.253968
+18   United States  15.070742  1.027542, 'Correlation between slope and intercept for Escherichia coli with Ceftriaxone in 2014: -0.1323 (p-value: 0.6009)\n']

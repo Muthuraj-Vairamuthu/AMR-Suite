@@ -1,0 +1,199 @@
+[{'2018'},            Country  intercept         slope
+1        Argentina  33.109067  2.619048e+00
+2        Australia   4.201229 -2.654890e+00
+3          Belgium  12.098077 -5.622436e+00
+4           Brazil  31.081560  1.573561e+00
+5           Canada   6.027778 -1.152778e+00
+6            Chile  19.353523 -5.720720e+00
+7            China  42.875504 -9.531503e+00
+8         Colombia  29.660151 -3.237315e+00
+9          Croatia  34.305556  1.527778e+00
+10  Czech Republic  16.166667 -2.055556e+00
+11          France   7.543600 -3.427731e+00
+12         Germany   6.363615 -2.494941e+00
+13          Greece  38.833333 -9.537037e-01
+14         Hungary  22.952076 -4.898352e+00
+15         Ireland   5.833333 -6.547619e-01
+16          Israel  15.139456 -7.455782e+00
+17           Italy  33.583130 -5.669439e+00
+18           Japan   1.071429 -3.571429e-01
+19          Kuwait  19.834183 -8.129346e-01
+20          Mexico  18.688582 -8.617280e+00
+21     Netherlands   8.425214  8.685897e-01
+22     Philippines  19.924298 -3.505495e+00
+23          Poland  23.556876 -8.322365e+00
+24        Portugal  39.702991 -5.055209e+00
+25    South Africa  46.813131 -1.101010e+00
+26           Spain  20.812786 -5.156064e+00
+27     Switzerland   0.000000  1.021405e-14
+28          Taiwan  22.685827  1.117720e+00
+29        Thailand  41.967677 -1.118788e+01
+30          Turkey  35.068370 -3.596578e+00
+31  United Kingdom  19.629630 -1.055556e+01
+32   United States   6.278380 -1.386161e+00
+33       Venezuela  10.660661 -6.606607e+00, 'Correlation between slope and intercept for Klebsiella pneumoniae with Amoxycillin.clavulanate in 2018: -0.1887 (p-value: 0.2929)\n', {'2019'},            Country  intercept         slope
+1        Argentina  34.534632  3.570827e+00
+2        Australia   0.873016 -1.587302e-01
+3          Belgium   6.305342 -2.518803e+00
+4           Brazil  31.875467  1.310758e+00
+5           Canada   4.750000 -3.333333e-01
+6            Chile  13.019343 -1.133903e+00
+7            China  35.868250 -9.260036e+00
+8         Colombia  26.792319 -2.606172e+00
+9          Croatia  36.805556  1.998401e-14
+10  Czech Republic  12.500000  9.992007e-15
+11          France   4.011258 -1.118077e+00
+12         Germany   4.092368 -1.810382e+00
+13          Greece  38.000000  3.888889e-01
+14         Hungary  17.049145  2.564103e-02
+15         Ireland   6.071429 -1.428571e+00
+16          Israel   8.031746 -4.277778e+00
+17           Italy  26.966527 -1.926262e+00
+18           Japan   0.833333 -4.761905e-01
+19          Kuwait  18.591866  2.051282e-02
+20          Mexico  10.317784 -5.068226e+00
+21     Netherlands   9.361111 -1.111111e-01
+22     Philippines  15.934066 -8.791209e-01
+23          Poland  15.033489 -3.162072e+00
+24        Portugal  35.744917 -5.005693e+00
+25    South Africa  46.996633 -2.335017e+00
+26           Spain  16.404793 -3.420980e+00
+27     Switzerland   0.000000  9.992007e-15
+28          Taiwan  22.374100  2.930640e+00
+29        Thailand  30.565657 -4.202020e+00
+30          Turkey  31.413575 -1.579919e+00
+31  United Kingdom  10.555556 -7.222222e+00
+32   United States   5.320010 -1.157917e+00
+33       Venezuela   4.444444 -3.333333e+00, 'Correlation between slope and intercept for Klebsiella pneumoniae with Amoxycillin.clavulanate in 2019: -0.0347 (p-value: 0.8481)\n', {'2015'},            Country  intercept         slope
+1        Argentina  39.643786 -3.054035e+00
+2        Australia   9.797797  3.470779e-01
+3          Belgium  19.972416  6.016261e-01
+4           Brazil  31.446648 -8.968519e-01
+5           Canada   6.933333  9.111111e-01
+6            Chile  33.725091 -7.744064e-01
+7            China  38.706367  4.039395e+00
+8         Colombia  42.721282 -4.336014e+00
+9          Croatia  22.583333  1.222222e+00
+10  Czech Republic  26.257576 -2.780303e+00
+11          France  18.278192 -1.943990e+00
+12         Germany  11.226377 -1.204789e+00
+13          Greece  43.571270 -1.504463e+00
+14         Hungary  24.505839  4.200869e+00
+15         Ireland   5.873016 -1.428571e+00
+16          Israel  24.323146  1.178753e-01
+17           Italy  32.826336  4.807115e+00
+18           Japan   0.119048  3.571429e-01
+19          Kuwait  19.673096  7.908682e-01
+20          Mexico  26.860243  2.998369e+00
+21     Netherlands   5.072218  3.958902e-01
+22     Philippines  34.167047 -1.408408e+00
+23          Poland  35.030973  1.303545e+00
+24        Portugal  35.815888  3.194580e+00
+25    South Africa  25.388889  9.592593e+00
+26           Spain  24.454856  2.261130e+00
+27     Switzerland   0.000000  1.021405e-14
+28          Taiwan  29.602965 -1.235152e+00
+29        Thailand  39.318603  1.135859e+01
+30          Turkey  38.686260  2.171358e+00
+31  United Kingdom  15.825926  7.649074e+00
+32   United States   4.440742  1.082346e+00
+33       Venezuela  20.590090 -1.037538e+00, 'Correlation between slope and intercept for Klebsiella pneumoniae with Amoxycillin.clavulanate in 2015: 0.0832 (p-value: 0.6452)\n', {'2014'},            Country     intercept         slope
+1        Argentina  4.089036e+01 -1.308648e+00
+2        Australia  8.709979e+00  1.591518e+00
+3          Belgium  1.893671e+01  1.751128e+00
+4           Brazil  3.175452e+01 -9.016860e-01
+5           Canada  6.318519e+00  1.177778e+00
+6            Chile  3.291755e+01  2.356272e+00
+7            China  3.752099e+01  9.132750e-01
+8         Colombia  4.515072e+01 -2.210863e+00
+9          Croatia  2.397222e+01 -3.500000e+00
+10  Czech Republic  2.646212e+01 -1.333333e+00
+11          France  1.854977e+01  3.638870e-01
+12         Germany  1.189671e+01 -8.281988e-01
+13          Greece  4.426187e+01 -7.517789e-01
+14         Hungary  2.074569e+01  4.414474e+00
+15         Ireland  8.253968e+00 -3.015873e+00
+16          Israel  2.356689e+01  1.045046e+00
+17           Italy  2.973371e+01  3.469081e+00
+18           Japan  0.000000e+00  9.769963e-15
+19          Kuwait  1.953115e+01  7.763569e-02
+20          Mexico  2.342007e+01  5.402882e+00
+21     Netherlands  5.204105e+00 -5.508502e-01
+22     Philippines  3.230483e+01  3.984630e+00
+23          Poland  3.328261e+01  3.075733e+00
+24        Portugal  3.330711e+01  2.214122e+00
+25    South Africa  2.027778e+01  5.833333e+00
+26           Spain  2.246639e+01  3.688047e+00
+27     Switzerland  9.947598e-14  9.769963e-15
+28          Taiwan  3.001847e+01  6.365445e-01
+29        Thailand  3.161406e+01  1.115109e+01
+30          Turkey  3.595693e+01  4.224025e+00
+31  United Kingdom  1.134722e+01  6.018519e+00
+32   United States  4.323980e+00  9.238666e-02
+33       Venezuela  2.164264e+01 -9.504505e-01, 'Correlation between slope and intercept for Klebsiella pneumoniae with Amoxycillin.clavulanate in 2014: 0.1032 (p-value: 0.5676)\n', {'2017'},            Country     intercept         slope
+1        Argentina  3.401535e+01 -1.032347e+00
+2        Australia  7.332309e+00 -3.963134e+00
+3          Belgium  1.725654e+01 -6.129902e+00
+4           Brazil  2.960940e+01  2.013803e+00
+5           Canada  7.699074e+00 -1.833333e+00
+6            Chile  2.777510e+01 -9.852698e+00
+7            China  4.439120e+01 -2.248542e+00
+8         Colombia  3.473785e+01 -4.249728e+00
+9          Croatia  2.750000e+01  5.416667e+00
+10  Czech Republic  1.726263e+01 -8.636364e-01
+11          France  1.253628e+01 -5.643883e+00
+12         Germany  8.234459e+00 -1.914714e+00
+13          Greece  4.033303e+01 -2.715054e+00
+14         Hungary  2.586460e+01 -5.859071e+00
+15         Ireland  5.535714e+00  2.380952e-01
+16          Israel  2.038312e+01 -6.476397e+00
+17           Italy  3.604532e+01 -3.924296e+00
+18           Japan  7.142857e-01  3.571429e-01
+19          Kuwait  2.021879e+01 -5.903027e-01
+20          Mexico  2.655595e+01 -8.490624e+00
+21     Netherlands  6.556624e+00  2.324786e+00
+22     Philippines  2.775599e+01 -7.674443e+00
+23          Poland  3.166788e+01 -1.020175e+01
+24        Portugal  3.909923e+01  2.833058e-01
+25    South Africa  4.230808e+01  3.590909e+00
+26           Spain  2.618375e+01 -5.843153e+00
+27     Switzerland -9.947598e-14  1.998401e-14
+28          Taiwan  2.642063e+01 -3.559875e+00
+29        Thailand  5.085253e+01 -1.233131e+01
+30          Turkey  3.929156e+01 -4.716303e+00
+31  United Kingdom  2.458519e+01 -7.096296e+00
+32   United States  6.360907e+00 -5.353963e-01
+33       Venezuela  1.612613e+01 -7.027027e+00, 'Correlation between slope and intercept for Klebsiella pneumoniae with Amoxycillin.clavulanate in 2017: -0.2552 (p-value: 0.1518)\n', {'2016'},            Country  intercept         slope
+1        Argentina  37.333053 -3.753357e+00
+2        Australia  10.319167 -3.527906e+00
+3          Belgium  20.259165 -3.716637e+00
+4           Brazil  30.759264 -1.419630e+00
+5           Canada   7.504630 -4.490741e-01
+6            Chile  33.114628 -6.643497e+00
+7            China  40.878937  4.630228e+00
+8         Colombia  38.569324 -4.644682e+00
+9          Croatia  22.416667  7.666667e+00
+10  Czech Republic  24.348485 -7.484848e+00
+11          France  16.908596 -4.694878e+00
+12         Germany   9.938639 -1.716313e+00
+13          Greece  42.481677 -1.320263e+00
+14         Hungary  28.536855 -2.506844e+00
+15         Ireland   3.273810  2.678571e+00
+16          Israel  24.266770 -3.832550e+00
+17           Italy  36.001037 -1.131923e+00
+18           Japan   0.357143  4.761905e-01
+19          Kuwait  19.634658 -3.417998e-02
+20          Mexico  29.999574 -4.784520e+00
+21     Netherlands   5.199786  1.438034e+00
+22     Philippines  34.917758 -8.467333e+00
+23          Poland  35.835090 -5.025939e+00
+24        Portugal  39.286168  1.061550e+00
+25    South Africa  33.851852  9.425926e+00
+26           Spain  26.619270 -1.187958e+00
+27     Switzerland   0.000000  6.994405e-15
+28          Taiwan  28.051140 -3.813095e+00
+29        Thailand  48.457576  2.527778e-01
+30          Turkey  41.538391 -2.918914e+00
+31  United Kingdom  21.681481  2.822222e+00
+32   United States   4.847246  1.718048e+00
+33       Venezuela  18.378378 -2.409910e+00, 'Correlation between slope and intercept for Klebsiella pneumoniae with Amoxycillin.clavulanate in 2016: -0.1584 (p-value: 0.3787)\n']
