@@ -162,7 +162,7 @@
     }
     .download-btn {
       position: absolute;
-      bottom: 40px;
+      bottom: 10px;
       right: 10px;
       background-color: #1a2133;
       color: white;
@@ -180,24 +180,6 @@
       background-color: #333;
       cursor: not-allowed;
     }
-
-
-    .carousel-inner {
-  margin-bottom: 60px;
-}
-
-/* Space between graph and legends */
-.carousel-item > div[id^="plot-"],
-#snapshot-plot {
-  margin-bottom: 25px;
-}
-
-/* Make sure carousel arrows don't block legends */
-.carousel-control-prev,
-.carousel-control-next {
-  top: 40%;
-  transform: translateY(-50%);
-}
   </style>
 </head>
 <body>
@@ -288,292 +270,105 @@
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-<script>
-const plotColors = [
-  '#1f77b4', '#ff7f0e', '#2ca02c', '#d62728',
-  '#9467bd', '#8c564b', '#e377c2', '#7f7f7f',
-  '#bcbd22', '#17becf', '#ff1493', '#00ffff',
-  '#ff6347', '#32cd32', '#ff4500', '#9acd32'
-];
-
-document.getElementById('analysis-form').addEventListener('submit', async function (e) {
-  e.preventDefault();
-
-  const carouselInner = document.getElementById('carousel-inner');
-  const carouselIndicators = document.getElementById('carousel-indicators');
-  const downloadBtn = document.getElementById('download-btn');
-
-  carouselInner.innerHTML = '';
-  carouselIndicators.innerHTML = '';
-  downloadBtn.disabled = true;
-
-  let loadingItem = document.createElement('div');
-  loadingItem.classList.add('carousel-item', 'active');
-  loadingItem.innerHTML = `<div class="graph-placeholder">Generating graph...</div>`;
-  carouselInner.appendChild(loadingItem);
-
-  const formData = new FormData(this);
-
-  try {
-    const params = new URLSearchParams({
-      infection: formData.get('infection'),
-      antibiotic: formData.get('antibiotic'),
-      source: formData.get('source')
-    });
-
-    const response = await fetch(`/check-scorecard-data/?${params.toString()}`);
-    const result = await response.json();
-
-    // If .json exists, render Plotly charts
-    if (response.ok && !result.error) {
-      if (result.mode === 'year_based') {
-        renderYearBased(result.data);
-      } else if (result.mode === 'snapshot') {
-        renderSnapshot(result.points, result.medians);
-      }
-    } else {
-      // Fallback to /generate_scorecards if not found
-      await fallbackToPng(formData, loadingItem, carouselInner, carouselIndicators, downloadBtn);
-    }
-
-  } catch (err) {
-    carouselInner.innerHTML = `<div class="graph-placeholder">Fetch error: ${err.message}</div>`;
-  }
-});
-
-async function fallbackToPng(formData, loadingItem, carouselInner, carouselIndicators, downloadBtn) {
-  try {
-    const responsePng = await fetch('/generate_scorecards', {
-      method: 'POST',
-      body: formData,
-      headers: {
-        'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value
-      }
-    });
-
-    if (responsePng.ok) {
-      const data = await responsePng.json();
-      const pngs = data.pngs || [];
-
-      if (pngs.length === 0) {
-        loadingItem.innerHTML = `<div class="graph-placeholder">No graphs generated.</div>`;
-        return;
-      }
-
+  <script>
+    document.getElementById('analysis-form').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      
+      const carouselInner = document.getElementById('carousel-inner');
+      const carouselIndicators = document.getElementById('carousel-indicators');
+      const downloadBtn = document.getElementById('download-btn');
+      
+      // Clear previous carousel content
       carouselInner.innerHTML = '';
       carouselIndicators.innerHTML = '';
 
-      pngs.forEach((png, index) => {
-        const indicator = document.createElement('li');
-        indicator.setAttribute('data-target', '#carousel-container');
-        indicator.setAttribute('data-slide-to', index);
-        if (index === 0) indicator.classList.add('active');
-        carouselIndicators.appendChild(indicator);
+      // Disable download button initially
+      downloadBtn.disabled = true;
 
-        const imgUrl = png.startsWith('data:image') ? png : `data:image/png;base64,${png}`;
-        const carouselItem = document.createElement('div');
-        carouselItem.classList.add('carousel-item');
-        if (index === 0) carouselItem.classList.add('active');
-        carouselItem.innerHTML = `<img src="${imgUrl}" class="d-block w-100" alt="Graph ${index + 1}">`;
-        carouselInner.appendChild(carouselItem);
-      });
+      // Create a loading placeholder
+      let loadingItem = document.createElement('div');
+      loadingItem.classList.add('carousel-item', 'active');
+      loadingItem.innerHTML = `<div class="graph-placeholder">Generating graphs...</div>`;
+      carouselInner.appendChild(loadingItem);
 
-      downloadBtn.disabled = false;
-      downloadBtn.onclick = function () {
-        const activeCarouselItem = document.querySelector('.carousel-item.active img');
-        if (activeCarouselItem) {
-          const downloadLink = document.createElement('a');
-          downloadLink.href = activeCarouselItem.src;
-          downloadLink.download = `graph_${new Date().toISOString().replace(/:/g, '-')}.png`;
-          downloadLink.click();
-        }
-      };
-    } else {
-      loadingItem.innerHTML = `<div class="graph-placeholder">Graph fallback failed.</div>`;
-    }
-
-  } catch (error) {
-    carouselInner.innerHTML = `<div class="graph-placeholder">Error during fallback: ${error.message}</div>`;
-  }
-}
-
-function renderSnapshot(points, medians) {
-  const trace = {
-    x: points.map(p => p.x),
-    y: points.map(p => p.y),
-    text: points.map(p => p.label),
-    mode: 'markers',
-    type: 'scatter',
-    marker: {
-      color: points.map((_, i) => plotColors[i % plotColors.length]),
-      size: 12
-    }
-  };
-
-  const layout = {
-    title: 'Snapshot Scorecard',
-    xaxis: { title: 'Intercept', gridcolor: '#444' },
-    yaxis: { title: 'Slope', gridcolor: '#444' },
-    plot_bgcolor: '#1a1a1a',
-    paper_bgcolor: '#1a1a1a',
-    font: { color: '#fff' },
-    shapes: [
-      {
-        type: 'line',
-        x0: medians.x, x1: medians.x,
-        y0: 0, y1: 1, yref: 'paper',
-        line: { color: 'green', dash: 'dash' }
-      },
-      {
-        type: 'line',
-        y0: medians.y, y1: medians.y,
-        x0: 0, x1: 1, xref: 'paper',
-        line: { color: 'red', dash: 'dash' }
-      }
-    ]
-  };
-
-  const graphDiv = document.createElement('div');
-  graphDiv.classList.add('carousel-item', 'active');
-  graphDiv.innerHTML = `<div id="snapshot-plot" style="width:100%; height:500px;"></div>`;
-  document.getElementById('carousel-inner').innerHTML = '';
-  document.getElementById('carousel-indicators').innerHTML = '';
-  document.getElementById('carousel-inner').appendChild(graphDiv);
-
-  Plotly.newPlot('snapshot-plot', [trace], layout, { responsive: true });
-
-  const downloadBtn = document.getElementById('download-btn');
-  downloadBtn.disabled = false;
-  downloadBtn.onclick = () => {
-    Plotly.downloadImage('snapshot-plot', {
-      format: 'png',
-      filename: 'amr_scorecard_snapshot'
-    });
-  };
-}
-
-function renderYearBased(data) {
-  const carouselInner = document.getElementById('carousel-inner');
-  const carouselIndicators = document.getElementById('carousel-indicators');
-  carouselInner.innerHTML = '';
-  carouselIndicators.innerHTML = '';
-
-  data.sort((a, b) => a.year - b.year);
-
-  // 🧠 Maintain color map for legends
-  const colorMap = {};
-
-  data.forEach((entry, index) => {
-    const plotId = `plot-${index}`;
-    const indicator = document.createElement('li');
-    indicator.setAttribute('data-target', '#carousel-container');
-    indicator.setAttribute('data-slide-to', index);
-    if (index === 0) indicator.classList.add('active');
-    carouselIndicators.appendChild(indicator);
-
-    const item = document.createElement('div');
-    item.classList.add('carousel-item');
-    if (index === 0) item.classList.add('active');
-    item.innerHTML = `
-      <div id="${plotId}" style="width:100%; height:500px;"></div>
-      <div class="legend-container" style="text-align:center; padding-top:10px;"></div>
-    `;
-    carouselInner.appendChild(item);
-
-    const points = entry.countries.map((country, i) => {
-      const color = plotColors[i % plotColors.length];
-      colorMap[country.name] = color;
-      return {
-        x: Math.max(0, country.x),
-        y: country.y,
-        label: country.name,
-        color
-      };
-    });
-
-    const trace = {
-      x: points.map(p => p.x),
-      y: points.map(p => p.y),
-      text: points.map(p => p.label),
-      mode: 'markers',
-      type: 'scatter',
-      marker: {
-        color: points.map(p => p.color),
-        size: 12
-      }
-    };
-
-    const layout = {
-      title: `${entry.year} Scorecard`,
-      xaxis: { title: 'Intercept', gridcolor: '#444' },
-      yaxis: { title: 'Slope', gridcolor: '#444' },
-      plot_bgcolor: '#1a1a1a',
-      paper_bgcolor: '#1a1a1a',
-      font: { color: '#fff' },
-      shapes: [
-        {
-          type: 'line',
-          x0: entry.median_intercept, x1: entry.median_intercept,
-          y0: 0, y1: 1, yref: 'paper',
-          line: { color: 'green', dash: 'dash' }
-        },
-        {
-          type: 'line',
-          y0: entry.median_slope, y1: entry.median_slope,
-          x0: 0, x1: 1, xref: 'paper',
-          line: { color: 'red', dash: 'dash' }
-        }
-      ]
-    };
-
-    setTimeout(() => {
-      Plotly.newPlot(plotId, [trace], layout, { responsive: true }).then(() => {
-        // 🖱️ After plot rendered → add legend
-        const legendContainer = item.querySelector('.legend-container');
-        points.forEach((point, idx) => {
-          const legendItem = document.createElement('span');
-          legendItem.innerText = point.label;
-          legendItem.style.margin = '0 8px';
-          legendItem.style.cursor = 'pointer';
-          legendItem.style.color = point.color;
-
-          legendItem.onmouseenter = () => {
-            Plotly.Fx.hover(plotId, [
-              { curveNumber: 0, pointNumber: idx }
-            ]);
-          };
-
-          legendItem.onclick = () => {
-            const newLayout = {
-              'xaxis.range': [point.x - 10, point.x + 10],
-              'yaxis.range': [point.y - 5, point.y + 5]
-            };
-            Plotly.relayout(plotId, newLayout);
-          };
-
-          legendContainer.appendChild(legendItem);
+      const formData = new FormData(this);
+      
+      try {
+        const response = await fetch('/generate_scorecards', {
+          method: 'POST',
+          body: formData,
+          headers: {
+            'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value
+          }
         });
-      });
-    }, 100);
-  });
+        if (response.ok) {
+          const data = await response.json();
+          const pngs = data.pngs; // Assuming this is an array of image blobs or base64 strings
+          
+          if (pngs.length === 0) {
+            loadingItem.innerHTML = `<div class="graph-placeholder">No graphs generated.</div>`;
+            return;
+          }
 
-  const downloadBtn = document.getElementById('download-btn');
-  downloadBtn.disabled = false;
-  downloadBtn.onclick = () => {
-    const activePlot = document.querySelector('.carousel-item.active div[id^="plot-"]');
-    if (activePlot) {
-      Plotly.downloadImage(activePlot.id, {
-        format: 'png',
-        filename: `amr_scorecard_${activePlot.id}`
-      });
-    }
-  };
-}
+          // Clear loading placeholder
+          carouselInner.innerHTML = '';
+          carouselIndicators.innerHTML = '';
 
+          let currentImageUrl = null;
 
-</script>
+          pngs.forEach((png, index) => {
+            // Create indicator for each image
+            const indicator = document.createElement('li');
+            indicator.setAttribute('data-target', '#carousel-container');
+            indicator.setAttribute('data-slide-to', index);
+            if (index === 0) indicator.classList.add('active');
+            carouselIndicators.appendChild(indicator);
 
-  
+            // Create a carousel item
+            const carouselItem = document.createElement('div');
+            carouselItem.classList.add('carousel-item');
+            if (index === 0) carouselItem.classList.add('active');
+
+            // If the image is a Base64 string, ensure you include the appropriate data URI prefix (e.g., 'data:image/png;base64,')
+            const imgUrl = png.startsWith('data:image') ? png : `data:image/png;base64,${png}`;
+
+            if (index === 0) {
+              currentImageUrl = imgUrl;
+            }
+
+            carouselItem.innerHTML = `<img src="${imgUrl}" class="d-block w-100" alt="Graph ${index+1}">`;
+            carouselInner.appendChild(carouselItem);
+          });
+
+          // Enable download button and set up download functionality
+          downloadBtn.disabled = false;
+          downloadBtn.onclick = function() {
+            const activeCarouselItem = document.querySelector('.carousel-item.active img');
+            if (activeCarouselItem) {
+              const downloadLink = document.createElement('a');
+              downloadLink.href = activeCarouselItem.src;
+              downloadLink.download = `graph_${new Date().toISOString().replace(/:/g, '-')}.png`;
+              downloadLink.click();
+            }
+          };
+
+          // Listen for carousel slide events to update current image
+          $('#carousel-container').on('slid.bs.carousel', function () {
+            const activeCarouselItem = document.querySelector('.carousel-item.active img');
+            if (activeCarouselItem) {
+              currentImageUrl = activeCarouselItem.src;
+            }
+          });
+
+        } else {
+          carouselInner.innerHTML = `<div class="graph-placeholder">Error generating graphs. Please try again.</div>`;
+          downloadBtn.disabled = true;
+        }
+      } catch (error) {
+        carouselInner.innerHTML = `<div class="graph-placeholder">Error generating graphs. Please try again.</div>`;
+        downloadBtn.disabled = true;
+      }
+    });
+  </script>
 </body>
 </html>
