@@ -35,6 +35,8 @@ def home2(request):
     return render(request,'home2.html')
 def scorecard_info(request):
     return render(request, 'scorecard_info.html') 
+def video(request):
+    return render(request, 'video.html')
 
 def login_view(request):
     # Clear any existing messages when first loading the page

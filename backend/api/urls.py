@@ -1,7 +1,7 @@
 from django.urls import path
 from .views import (home,home2,scorecard_info,resistance_info,isolation_info,login_page,signup_view, login_user, upload_dataset, dataset_upload, 
                 mapping_dataset, isolation_burden_analysis, generate_isolation_graph,
-                resistance_analysis, generate_resistance_graph, logout_view, scorecards, generate_scorecards)
+                resistance_analysis, generate_resistance_graph, logout_view, scorecards, generate_scorecards, video)
 
 urlpatterns = [
 
@@ -17,8 +17,7 @@ urlpatterns = [
     path('isolation-info/', isolation_info, name='isolation_info'),
     path('resistance-info/', resistance_info, name='resistance_info'),
     path('scorecard-info/', scorecard_info, name='scorecard_info'),
- 
-
+    path('video/', video, name='video'),
     path('upload_dataset/', upload_dataset, name='upload_dataset'),
     path('dataset_upload', dataset_upload, name='dataset_upload'),
     path('process_mapping/', mapping_dataset, name='mapping_dataset'),

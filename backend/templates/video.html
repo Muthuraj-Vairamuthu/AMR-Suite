@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>AMRSuite - Quick Start</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <style>
+        .video-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    padding: 20px;
+    overflow-x: auto; /* ✅ THIS FIXES THE SCROLL ISSUE */
+}
+
+        .video-title {
+    color: white;
+}
+
+
+        .video-container h1 {
+            margin-bottom: 15px;
+        }
+
+        video {
+            max-width: 80%;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .back-button {
+            margin-top: 20px;
+            text-decoration: none;
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 6px;
+            transition: background-color 0.3s;
+        }
+
+        .back-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="logo">AMRSuite</div>
+    <div class="nav-links">
+        <a href="{% url 'home' %}">Home</a>
+
+    </div>
+    <div class="nav-logo">
+        <img src="{% static 'media/tavlab.logo.png' %}" alt="Company Logo">
+    </div>
+</nav>
+
+<div class="video-container">
+    <h1 class="video-title">Get Started With AMR Suite</h1>
+
+    <video controls>
+        <source src="{% static 'media/tutorial/tutorial_video.mp4' %}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <a href="{% url 'home' %}" class="back-button">← Back to Home</a>
+</div>
+
+</body>
+</html>
