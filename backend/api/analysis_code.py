@@ -836,12 +836,10 @@ def generate_scorecard_graph(source, infection, antibiotic, dataset, mappings):
 
     cluster_attributes = dataset[mappings['cluster_attribute']].unique()
 
-    # Dynamically assign colors to cluster attributes using a color palette
-    colors = list(mcolors.TABLEAU_COLORS.values())  # Use Tableau colors for variety
-    if len(colors) < len(cluster_attributes):
-        # If we run out of colors, cycle through them
-        colors = colors * (len(cluster_attributes) // len(colors) + 1)
-    attribute_colors = {attr: colors[i] for i, attr in enumerate(cluster_attributes)}
+    # Create a colorful palette with distinct colors for each country/attribute
+    # Using more vibrant colors similar to the example image
+    color_palette = plt.cm.gist_rainbow(np.linspace(0, 1, len(cluster_attributes)))
+    attribute_colors = {attr: color_palette[i] for i, attr in enumerate(cluster_attributes)}
 
     # Regular expression to extract year from filenames
     file_pattern = re.compile(r"(?P<organism>[^_]+)_(?P<antibiotic>[^_]+)_I_(?P<year>\d{4})")
@@ -894,8 +892,11 @@ def generate_scorecard_graph(source, infection, antibiotic, dataset, mappings):
             global_slope_min = min(global_slope_min, country_data['slope'].min())
             global_slope_max = max(global_slope_max, country_data['slope'].max())
 
-        global_slope_max += 0.1
-        global_intercept_max += 0.1
+        # Add padding to the limits
+        global_slope_min -= 1.0
+        global_slope_max += 1.0
+        global_intercept_min = max(0, global_intercept_min - 1)  # Ensure it starts at 0 or slightly below
+        global_intercept_max += 5
 
         for data in files:
             df = pd.read_csv(data['file_path'])
@@ -908,29 +909,84 @@ def generate_scorecard_graph(source, infection, antibiotic, dataset, mappings):
             country_data['slope'] += global_average['slope']
             country_data['intercept'] += global_average['intercept']
 
-            # Plotting
-            fig = plt.figure(figsize=(10, 8))
+            # Create figure with dark background
+            fig, ax = plt.subplots(figsize=(12, 9), facecolor='#1a1a1a')
+            ax.set_facecolor('#1a1a1a')
+            
+            # Add grid
+            ax.grid(color='#444444', linestyle='-', linewidth=0.5, alpha=0.7)
+            
+            # Plot median lines
             median_slope = country_data['slope'].median()
             median_intercept = country_data['intercept'].median()
+            
+            # Plot each data point
+            handles = []
+            labels = []
             for index, row in country_data.iterrows():
-                # Use the cluster attribute (e.g., Country) to determine the color
-                attr_value = row["Cluster"]  # e.g., row['Country']
-                color = attribute_colors.get(attr_value, 'black')
-                plt.scatter(row['intercept'], row['slope'], color=color, s=120, label=attr_value, alpha=0.3, linewidth=0.5)
-
-            # Set global x and y limits
-            plt.axhline(y=median_slope, color='red', linestyle='--', label='Median Slope', alpha=0.5)
-            plt.axvline(x=median_intercept, color='green', linestyle='--', label='Median Intercept', alpha=0.5)
-
-            plt.xlim([global_intercept_min, global_intercept_max])
-            plt.ylim([global_slope_min, global_slope_max])
-
-            plt.title(f"{year} - {int(year) + 3}", fontsize=16)
-            plt.xlabel('Intercept', fontsize=12)
-            plt.ylabel('Slope', fontsize=12)
-            plt.legend(title=mappings['cluster_attribute'], title_fontsize='large', fontsize='small', loc='upper left', bbox_to_anchor=(1, 1))
-
-            # Save the plot to static/output/
+                attr_value = row["Cluster"]
+                color = attribute_colors.get(attr_value, 'white')
+                
+                # Increased dot size to 100 as requested
+                scatter = ax.scatter(row['intercept'], row['slope'], color=color, s=200, alpha=1.0, edgecolors='black', linewidth=0.5)
+                
+                # Add a label above each point with the country name
+                ax.annotate(attr_value, 
+                           (row['intercept'], row['slope']),
+                           xytext=(0, 7),  # Offset text 7 points above
+                           textcoords='offset points',
+                           ha='center',
+                           fontsize=8,
+                           color=color)
+                
+                # Only add to legend if not already there
+                if attr_value not in labels:
+                    handles.append(scatter)
+                    labels.append(attr_value)
+            
+            # Add reference lines for median slope and intercept
+            ax.axhline(y=0, color='#ff4444', linestyle='--', linewidth=1.5, alpha=0.8)
+            ax.axvline(x=median_intercept, color='#44ff44', linestyle='--', linewidth=1.5, alpha=0.8)
+            
+            # Set the axis limits
+            ax.set_xlim([global_intercept_min, global_intercept_max])
+            ax.set_ylim([global_slope_min, global_slope_max])
+            
+            # Set title and labels with white text
+            ax.set_title(f"{year} - {int(year) + 3} Scorecard", fontsize=24, color='white', pad=20)
+            ax.set_xlabel('Intercept', fontsize=16, color='white', labelpad=15)
+            ax.set_ylabel('Slope', fontsize=16, color='white', labelpad=15)
+            
+            # Set tick colors to white
+            ax.tick_params(colors='white', which='both')
+            for spine in ax.spines.values():
+                spine.set_color('#444444')
+            
+            # Create custom legend at the bottom of the plot with increased font size
+            legend_items = zip(labels, [attribute_colors[label] for label in labels])
+            
+            # Create a separate axis for the legend
+            legend_ax = fig.add_axes([0.1, 0.01, 0.8, 0.05], facecolor='#1a1a1a')
+            legend_ax.axis('off')
+            
+            # Place the legend items horizontally with increased font size to 12
+            x_positions = np.linspace(0, 1, len(labels))
+            for i, (label, color) in enumerate(legend_items):
+                legend_ax.text(x_positions[i], 0.5, label, 
+                               color=color, 
+                               fontsize=12,  # Increased from 10 to 12
+                               ha='center', 
+                               va='center', 
+                               fontweight='bold')
+            
+            
+            # Adjust layout
+            plt.tight_layout(rect=[0, 0.06, 1, 0.98])
+            
+            # Save the plot
             figures.append(fig)
-
+            
+            # You can add code here to save the figure to a file if needed
+            # plt.savefig(f'output/{year}_scorecard.png', dpi=300, bbox_inches='tight')
+            
     return figures

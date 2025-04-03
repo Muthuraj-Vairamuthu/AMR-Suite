@@ -27,7 +27,7 @@ urlpatterns = [
     path('resistance_analysis', resistance_analysis, name='resistance_analysis'),
     path('generate_resistance_graph', generate_resistance_graph, name='generate_resistance_graph'),
     path('scorecards/', scorecards, name='scorecards'),
-    path('generate_scorecards/', generate_scorecards, name='generate_scorecards'),
+    path('generate_scorecards', generate_scorecards, name='generate_scorecards'),
     path('check-scorecard-data/', check_scorecard_data, name='check_scorecard_data'),
 
     path('logout/', logout_view, name='logout'),
