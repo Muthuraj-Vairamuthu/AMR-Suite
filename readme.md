@@ -113,6 +113,33 @@ The AMR Suite is a web-based application designed to analyze antimicrobial resis
 
 ---
 
+### 6. Resistance Analysis
+
+#### How to Use
+- Select **Resistance Analysis** from the **Results Page**.
+- Choose the required filters:
+  - **Infection**: Bacterial species (e.g., *Klebsiella pneumoniae*).
+  - **Antibiotic**: Select the antibiotic (e.g., *Amikacin_I*).
+  - **Source**: Sample source (e.g., *Nails*).
+- Click **Generate** to view the resistance trends.
+
+#### What Happens Internally
+- The dataset is filtered based on the selected infection, antibiotic, and source.
+- Dates are parsed using the specified format and grouped by the chosen granularity (`yearly`, `monthly`, or `daily`).
+- The resistance rate is computed as:  
+  **Resistance Rate = (Resistant / Total) × 100**
+
+#### Confidence Intervals
+- The system uses **bootstrapping** (1000 samples) to compute a **95% confidence interval (CI)** for each resistance rate.
+- CIs are clipped between 0–100% to ensure clean visualization.
+
+#### Visualization
+- A line graph displays resistance rates over time, with shaded regions representing the confidence intervals.
+- Continuous lines show non-zero resistance periods, while standalone gray markers denote zero-resistance points.
+- The plot follows a dark theme with white gridlines for readability.
+
+---
+
 ## Common Errors and Resolutions
 
 1. **File Not Uploaded**
