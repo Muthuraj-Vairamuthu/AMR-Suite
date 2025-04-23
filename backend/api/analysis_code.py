@@ -7,6 +7,7 @@ import os
 import re
 import pandas as pd
 import subprocess
+import json
 
 def isolation_burden_analysis_graph(dataset, source, country, cluster_attribute, gender_filter, gender_column, mappings):
     
@@ -828,6 +829,7 @@ def scorecard_analysis(dataset, source_input, infection, antibiotic, mappings):
 
 def generate_scorecard_graph(source, infection, antibiotic, dataset, mappings):
     time_series_dir = 'Time series data'
+    json_output_dir = 'Scorecards JSONs'
     folder = os.path.join(time_series_dir, infection, source, antibiotic)
     files = os.listdir(folder)
 
@@ -985,6 +987,24 @@ def generate_scorecard_graph(source, infection, antibiotic, dataset, mappings):
             
             # Save the plot
             figures.append(fig)
+
+            year_json= {
+                "year": year,
+                "median_slope": median_slope,
+                "median_intercept": median_intercept,
+                "countries": [
+                    {
+                        "name": row['Cluster'],
+                        "x": row['intercept'],
+                        "y": row['slope']
+                    } for _, row in country_data.iterrows()
+                ]
+            }
+
+            os.makedirs(json_output_dir, exist_ok=True)
+            json_file_path = os.path.join(json_output_dir, f"{organism}_{antibiotic}_{year}_scorecard.json")
+            with open(json_file_path, 'w') as json_file:
+                json.dump(year_json, json_file, indent=4)
             
             # You can add code here to save the figure to a file if needed
             # plt.savefig(f'output/{year}_scorecard.png', dpi=300, bbox_inches='tight')
