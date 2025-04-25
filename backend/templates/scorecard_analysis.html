@@ -6,8 +6,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Scorecards Analysis</title>
-  <!-- Bootstrap CSS (via CDN) -->
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -32,6 +34,8 @@
     }
     .logout-btn:hover {
       background-color: #2a3143;
+      color: white;
+      text-decoration: none;
     }
     nav {
       display: flex;
@@ -62,14 +66,15 @@
       width: auto;
     }
     .main-content {
-      padding: 40px;
-      max-width: 1200px;
+      padding: 20px 40px;
+      max-width: 1600px;
       margin: 0 auto;
+      flex-grow: 1;
     }
     .header {
       display: flex;
       align-items: center;
-      margin-bottom: 40px;
+      margin-bottom: 30px;
     }
     .back-button {
       background: none;
@@ -82,15 +87,12 @@
     h1 {
       font-size: 1.8rem;
     }
-    .analysis-container {
-      display: grid;
-      grid-template-columns: 300px 1fr;
-      gap: 40px;
-    }
     .controls-section {
       background-color: #2a2f3b;
       padding: 20px;
       border-radius: 10px;
+      height: fit-content;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     }
     .form-group {
       margin-bottom: 20px;
@@ -100,11 +102,13 @@
       margin-bottom: 8px;
       font-size: 0.9rem;
       color: #ccc;
+      font-weight: 500;
     }
     .select-wrapper {
       position: relative;
       background-color: #e0e0e0;
       border-radius: 5px;
+      overflow: hidden;
     }
     select {
       width: 100%;
@@ -135,6 +139,7 @@
       cursor: pointer;
       font-size: 1rem;
       transition: background-color 0.3s ease;
+      font-weight: 500;
     }
     .generate-btn:hover {
       background-color: #2a3143;
@@ -143,15 +148,15 @@
       background-color: #2a2f3b;
       padding: 20px;
       border-radius: 10px;
-      min-height: 400px;
+      min-height: 100vh;
+      min-width: 150vh;
       display: flex;
-      align-items: center;
-      justify-content: center;
+      flex-direction: column;
       position: relative;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     }
     .graph-placeholder {
-      width: 100%;
-      height: 400px;
+      flex-grow: 1;
       background-color: #1a1a1a;
       border-radius: 5px;
       display: flex;
@@ -159,6 +164,7 @@
       justify-content: center;
       color: #666;
       font-size: 1.1rem;
+      min-height: 400px;
     }
     .download-btn {
       position: absolute;
@@ -180,6 +186,322 @@
       background-color: #333;
       cursor: not-allowed;
     }
+    
+    /* Modern additions */
+    .year-tabs {
+      display: flex;
+      justify-content: center;
+      overflow-x: auto;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+    }
+    .year-tab {
+      padding: 10px 16px;
+      margin: 0 5px;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+      transition: all 0.3s ease;
+    }
+    .year-tab.active {
+      border-bottom: 2px solid white;
+      font-weight: bold;
+    }
+    .year-tab:hover:not(.active) {
+      border-bottom: 2px solid rgba(255,255,255,0.3);
+    }
+    
+    /* Scatter chart styles */
+    .chart-container {
+      height: 100%;
+      width: 100%;
+      min-height: 60vh;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+    .svg-container {
+      flex-grow: 1;
+      background-color: white;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    svg {
+      display: block;
+      background-color: white;
+    }
+    .country-point {
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .country-point:hover {
+      stroke: #333;
+      stroke-width: 2px;
+    }
+    .reference-line {
+      stroke-dasharray: 7 7;
+      stroke-width: 1.5;
+    }
+    
+    /* Legend styles */
+    .legend-container {
+  background-color: white;
+  border-radius: 12px;
+  padding: 25px;
+  max-height: 75vh;
+  overflow-y: auto;
+  scrollbar-width: none;  /* Firefox */
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  margin-bottom: 20px;
+}
+
+    .legend-container::-webkit-scrollbar {
+      display: none;  /* Chrome, Safari, Edge */
+    }
+    .legend-title {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #eee;
+  font-size: 1.3rem;
+}
+    
+.legend-item {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+  border-radius: 10px;
+  color: #333;
+}
+
+    .legend-item:hover {
+      background-color: rgba(0, 0, 0, 0.05);
+      transform: translateX(3px);
+    }
+    .legend-item.selected {
+      background-color: rgba(0, 0, 0, 0.1);
+      font-weight: 500;
+    }
+    .legend-color {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  margin-right: 15px;
+  flex-shrink: 0;
+  border: 1px solid rgba(0,0,0,0.1);
+}
+.legend-label {
+  font-size: 1.05rem;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+    
+    /* Reference line legend */
+    .reference-legend {
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    .reference-legend-title {
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 15px;
+      font-size: 1.1rem;
+      text-align: center;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #eee;
+    }
+    .reference-legend div {
+      display: flex;
+      align-items: center;
+      margin: 12px 0;
+      color: #333;
+      font-size: 0.95rem;
+    }
+    .reference-legend-line {
+      height: 3px;
+      width: 30px;
+      margin-right: 15px;
+      flex-shrink: 0;
+    }
+    
+    /* Tooltip styles */
+    .tooltip {
+      position: absolute;
+      background-color: white;
+      border: 1px solid #ddd;
+      padding: 10px 15px;
+      border-radius: 6px;
+      pointer-events: none;
+      z-index: 1000;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      transition: opacity 0.3s;
+      font-size: 0.9rem;
+      min-width: 150px;
+      color: #333;
+    }
+    .tooltip-title {
+      font-weight: 600;
+      border-bottom: 1px solid #eee;
+      margin-bottom: 5px;
+      padding-bottom: 5px;
+    }
+    .tooltip-row {
+      display: flex;
+      justify-content: space-between;
+      margin: 3px 0;
+    }
+    .tooltip-hidden {
+      opacity: 0;
+      visibility: hidden;
+    }
+    
+    /* Country view button */
+    .back-to-all {
+      background-color: #4F6077;
+      color: white;
+      padding: 12px;
+      border-radius: 8px;
+      border: none;
+      width: 100%;
+      text-align: center;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      margin-top: 15px;
+      font-weight: 500;
+    }
+    .back-to-all:hover {
+      background-color: #5d7192;
+      transform: translateY(-2px);
+    }
+    
+    /* Info text at bottom */
+    .info-text {
+      display: flex;
+      align-items: center;
+      margin-top: 15px;
+      color: #ddd;
+      font-size: 0.9rem;
+    }
+    .info-text .material-icons {
+      margin-right: 8px;
+      font-size: 16px;
+    }
+    /* Carousel for country view */
+.country-carousel {
+  width: 100%;
+  height: 75vh;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.carousel-slide {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 20px;
+}
+
+.country-badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+  z-index: 10;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  font-weight: 600;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+  max-width: calc(100% - 160px);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+}
+    
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 992px) {
+      .analysis-container {
+        grid-template-columns: 1fr;
+      }
+      .legend-container {
+        max-height: 200px;
+        margin-top: 15px;
+      }
+    }
+    
+    /* Adjustments for empty state */
+    .empty-state {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+      text-align: center;
+    }
+    .empty-state h3 {
+      margin-bottom: 15px;
+    }
+    .empty-state button {
+      margin-top: 20px;
+      padding: 10px 20px;
+    }
+    
+    /* Year indicator for country specific view */
+    .year-indicator {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      background-color: rgba(0,0,0,0.7);
+      color: white;
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-weight: 500;
+      font-size: 0.9rem;
+    }
+    
+    /* Carousel controls */
+    .carousel-control-prev, .carousel-control-next {
+      background-color: rgba(0,0,0,0.5) !important;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0.7;
+      transition: all 0.3s ease;
+    }
+    .carousel-control-prev:hover, .carousel-control-next:hover {
+      opacity: 1;
+      background-color: rgba(0,0,0,0.7) !important;
+    }
   </style>
 </head>
 <body>
@@ -198,175 +520,1119 @@
       <h1>Scorecards Analysis</h1>
     </div>
 
-    <div class="analysis-container">
-      <div class="controls-section">
-        <form id="analysis-form">
-          {% csrf_token %}
-          <div class="form-group">
-            <label>Choose Infection:</label>
-            <div class="select-wrapper">
-              <select name="infection" required>
-                <option value="">Choose Infection</option>
-                {% for infection in infection_columns %}
-                  <option value="{{ infection }}">{{ infection }}</option>
-                {% endfor %}
-              </select>
+    <div class="row">
+      <div class="col-lg-3 mb-4">
+        <div class="controls-section">
+          <form id="analysis-form">
+            {% csrf_token %}
+            <div class="form-group">
+              <label>Choose Organism:</label>
+              <div class="select-wrapper">
+                <select name="infection" required>
+                  <option value="">Choose Organism</option>
+                  {% for infection in infection_columns %}
+                    <option value="{{ infection }}">{{ infection }}</option>
+                  {% endfor %}
+                </select>
+              </div>
             </div>
-          </div>
-          <div class="form-group">
-            <label>Choose Antibiotic:</label>
-            <div class="select-wrapper">
-              <select name="antibiotic" required>
-                <option value="">Choose Antibiotic</option>
-                {% for antibiotic in antibiotic_columns %}
-                  <option value="{{ antibiotic }}">{{ antibiotic }}</option>
-                {% endfor %}
-              </select>
+            <div class="form-group">
+              <label>Choose Antibiotic:</label>
+              <div class="select-wrapper">
+                <select name="antibiotic" required>
+                  <option value="">Choose Antibiotic</option>
+                  {% for antibiotic in antibiotic_columns %}
+                    <option value="{{ antibiotic }}">{{ antibiotic }}</option>
+                  {% endfor %}
+                </select>
+              </div>
             </div>
-          </div>
-          <div class="form-group">
-            <label>Choose Source:</label>
-            <div class="select-wrapper">
-              <select name="source" required>
-                <option value="">Choose Source</option>
-                {% for source in source_columns %}
-                  <option value="{{ source }}">{{ source }}</option>
-                {% endfor %}
-              </select>
+            <div class="form-group">
+              <label>Choose Sample Type:</label>
+              <div class="select-wrapper">
+                <select name="source" required>
+                  <option value="">Choose Sample Type</option>
+                  {% for source in source_columns %}
+                    <option value="{{ source }}">{{ source }}</option>
+                  {% endfor %}
+                </select>
+              </div>
             </div>
-          </div>
-          <button type="submit" class="generate-btn">Generate</button>
-        </form>
+            <button type="submit" class="generate-btn">Generate</button>
+          </form>
+        </div>
       </div>
 
-      <div class="graph-section">
-        <!-- Carousel Container -->
-        <div id="carousel-container" class="carousel slide" data-ride="carousel" style="width: 100%;">
-          <ol class="carousel-indicators" id="carousel-indicators">
-          </ol>
-          <div class="carousel-inner" id="carousel-inner">
-            <div class="carousel-item active">
-              <div class="graph-placeholder">
-                Select attributes and generate to view the graph
+      <div class="col-lg-9">
+        <div id="visualization-container" class="graph-section">
+          <div id="initial-placeholder" class="graph-placeholder">
+            Select attributes and generate to view the scorecard
+          </div>
+          
+          <!-- Year tabs will be added here dynamically -->
+          <div id="year-tabs-container" class="year-tabs" style="display: none;"></div>
+          
+          <!-- Main view for all countries -->
+          <div id="all-countries-view" style="display: none;" class="h-100">
+            <div class="row h-100">
+              <div class="col-lg-10">
+                <div id="scatter-chart-container" class="chart-container">
+                  <svg id="scatter-chart" width="100%" height="100%"></svg>
+                </div>
+              </div>
+              <div class="col-lg-2">
+                <div class="reference-legend">
+                  <div>
+                    <div class="reference-legend-line" style="background-color: green;"></div>
+                    <span>Median Intercept</span>
+                  </div>
+                  <div>
+                    <div class="reference-legend-line" style="background-color: red;"></div>
+                    <span>Median Slope</span>
+                  </div>
+                </div>
+                <div id="countries-legend" class="legend-container"></div>
+              </div>
+            </div>
+            <div class="info-text">
+              <span class="material-icons">info</span>
+              <span>Hover over a country from the legend to focus on it, or click to view its specific trends.</span>
+            </div>
+          </div>
+          
+          <!-- Country specific view -->
+          <div id="country-specific-view" style="display: none;" class="h-100">
+            <div class="row h-100">
+              <div class="col-lg-10">
+                <div id="country-carousel" class="country-carousel">
+                  <!-- Country slides will be added here dynamically -->
+                </div>
+              </div>
+              <div class="col-lg-2">
+                <div class="reference-legend">
+                  <div>
+                    <div class="reference-legend-line" style="background-color: green;"></div>
+                    <span>Median Intercept</span>
+                  </div>
+                  <div>
+                    <div class="reference-legend-line" style="background-color: red;"></div>
+                    <span>Median Slope</span>
+                  </div>
+                </div>
+                <button id="back-to-all" class="back-to-all">
+                  Back to all countries
+                </button>
               </div>
             </div>
           </div>
-          <a class="carousel-control-prev" href="#carousel-container" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="carousel-control-next" href="#carousel-container" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
-          <button id="download-btn" class="download-btn" disabled>Download</button>
+          
+          <!-- No data view -->
+          <div id="empty-state" class="empty-state" style="display: none;">
+            <h3>Sorry, no data is available for this selection.</h3>
+            <p>Please try a different combination of organism, antibiotic, and sample type.</p>
+          </div>
+          
+          <!-- Loading view -->
+          <!-- <div id="loading-view" style="display: none;" class="h-100 d-flex flex-column justify-content-center align-items-center">
+            <div class="loading-spinner"></div>
+            <p>Loading scorecard data...</p>
+          </div> -->
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Bootstrap JS and dependencies -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- Tooltip element for interactions -->
+  <div id="tooltip" class="tooltip tooltip-hidden"></div>
 
+  <!-- Required JS libraries -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+  
   <script>
-    document.getElementById('analysis-form').addEventListener('submit', async function(e) {
-      e.preventDefault();
+    // Define color palette similar to the Next.js version
+    const colors = [
+      "#FF6B6B", "#4ECDC4", "#FF9F1C", "#A5D8FF", "#845EC2", 
+      "#008F7A", "#D65DB1", "#2C73D2", "#FF8066", "#9F44D3",
+      "#F9F871", "#00C9A7", "#C34A36", "#0089BA", "#FFC75F",
+      "#E7BCFF", "#3A86FF", "#FF5722", "#4CAF50", "#9C27B0",
+      "#4B4453", "#B0A8B9", "#FFEAA7", "#FDA7DF", "#55EFC4"
+    ];
+    
+    // Application state
+    const state = {
+      selectedOrganism: "",
+      selectedAntibiotic: "",
+      selectedSampleType: "",
+      selectedYear: null,
+      selectedCountry: "All",
+      yearsData: [],
+      countriesData: [],
+      autoplayInterval: null,
+      hoveredCountry: null,
+      clickedCountry: null,
+      currentSlide: 0
+    };
+    
+    // DOM elements
+    const elements = {
+      form: document.getElementById('analysis-form'),
+      initialPlaceholder: document.getElementById('initial-placeholder'),
+      yearTabsContainer: document.getElementById('year-tabs-container'),
+      allCountriesView: document.getElementById('all-countries-view'),
+      countrySpecificView: document.getElementById('country-specific-view'),
+      emptyState: document.getElementById('empty-state'),
+      loadingView: document.getElementById('loading-view'),
+      scatterChartContainer: document.getElementById('scatter-chart-container'),
+      scatterChart: document.getElementById('scatter-chart'),
+      countriesLegend: document.getElementById('countries-legend'),
+      countryCarousel: document.getElementById('country-carousel'),
+      backToAllBtn: document.getElementById('back-to-all'),
+      tooltip: document.getElementById('tooltip')
+    };
+    
+    // Utility functions
+    function getCSRFToken() {
+      return document.querySelector('[name=csrfmiddlewaretoken]').value;
+    }
+    
+    function showElement(element) {
+      if (element) element.style.display = '';
+    }
+    
+    function hideElement(element) {
+      if (element) element.style.display = 'none';
+    }
+    
+    function showLoading() {
+      hideElement(elements.initialPlaceholder);
+      hideElement(elements.allCountriesView);
+      hideElement(elements.countrySpecificView);
+      hideElement(elements.emptyState);
+      showElement(elements.loadingView);
+    }
+    
+    function showEmptyState() {
+      hideElement(elements.initialPlaceholder);
+      hideElement(elements.allCountriesView);
+      hideElement(elements.countrySpecificView);
+      hideElement(elements.loadingView);
+      hideElement(elements.yearTabsContainer);
+      showElement(elements.emptyState);
+    }
+    
+    function showAllCountriesView() {
+      hideElement(elements.initialPlaceholder);
+      hideElement(elements.countrySpecificView);
+      hideElement(elements.emptyState);
+      hideElement(elements.loadingView);
+      showElement(elements.yearTabsContainer);
+      showElement(elements.allCountriesView);
+    }
+    
+    function showCountrySpecificView() {
+      hideElement(elements.initialPlaceholder);
+      hideElement(elements.allCountriesView);
+      hideElement(elements.emptyState);
+      hideElement(elements.loadingView);
+      hideElement(elements.yearTabsContainer);
+      showElement(elements.countrySpecificView);
+    }
+    
+    // Create enhanced tooltip functions
+    function showTooltip(x, y, content) {
+      const tooltip = elements.tooltip;
+      tooltip.innerHTML = content;
+      tooltip.style.left = `${x + 10}px`;
+      tooltip.style.top = `${y - 10}px`;
+      tooltip.classList.remove('tooltip-hidden');
+    }
+    
+    function hideTooltip() {
+      elements.tooltip.classList.add('tooltip-hidden');
+    }
+    
+    // Function to render year tabs
+    function renderYearTabs() {
+      const container = elements.yearTabsContainer;
+      container.innerHTML = '';
       
-      const carouselInner = document.getElementById('carousel-inner');
-      const carouselIndicators = document.getElementById('carousel-indicators');
-      const downloadBtn = document.getElementById('download-btn');
+      const years = state.yearsData.map(y => parseInt(y.year)).sort((a, b) => a - b);
       
-      // Clear previous carousel content
-      carouselInner.innerHTML = '';
-      carouselIndicators.innerHTML = '';
+      if (!state.selectedYear && years.length > 0) {
+        state.selectedYear = years[0];
+      }
+      
+      years.forEach(year => {
+        const tab = document.createElement('button');
+        tab.className = `year-tab ${year === state.selectedYear ? 'active' : ''}`;
+        tab.textContent = `${year}-${(year + 3).toString().slice(-2)}`;
+        tab.dataset.year = year;
+        tab.onclick = () => {
+          clearInterval(state.autoplayInterval);
+          state.selectedYear = year;
+          
+          document.querySelectorAll('.year-tab').forEach(t => {
+            t.classList.remove('active');
+          });
+          tab.classList.add('active');
+          
+          renderScatterPlot();
+        };
+        
+        container.appendChild(tab);
+      });
+      
+      showElement(container);
+      
+      // Start autoplay if no year is actively selected by user
+      startYearAutoplay();
+    }
+    
+    // Function to handle year autoplay
+    function startYearAutoplay() {
+      clearInterval(state.autoplayInterval);
+      
+      const years = state.yearsData.map(y => parseInt(y.year)).sort((a, b) => a - b);
+      if (years.length <= 1) return;
+      
+      let currentIndex = years.indexOf(state.selectedYear);
+      
+      state.autoplayInterval = setInterval(() => {
+        currentIndex = (currentIndex + 1) % years.length;
+        state.selectedYear = years[currentIndex];
+        
+        document.querySelectorAll('.year-tab').forEach(t => {
+          t.classList.remove('active');
+          if (parseInt(t.dataset.year) === state.selectedYear) {
+            t.classList.add('active');
+          }
+        });
+        
+        renderScatterPlot();
+      }, 2000);
+    }
+    
+    // Function to stop autoplay
+    function stopYearAutoplay() {
+      clearInterval(state.autoplayInterval);
+    }
+    
+    // Function to render legend for countries
+    function renderCountriesLegend(data) {
+  const legendContainer = elements.countriesLegend;
+  legendContainer.innerHTML = '';
+  
+  // Add legend title
+  const titleDiv = document.createElement('div');
+  titleDiv.className = 'legend-title';
+  titleDiv.textContent = 'Countries';
+  legendContainer.appendChild(titleDiv);
 
-      // Disable download button initially
-      downloadBtn.disabled = true;
-
-      // Create a loading placeholder
-      let loadingItem = document.createElement('div');
-      loadingItem.classList.add('carousel-item', 'active');
-      loadingItem.innerHTML = `<div class="graph-placeholder">Generating graphs...</div>`;
-      carouselInner.appendChild(loadingItem);
-
-      const formData = new FormData(this);
+  // Create a set to track unique country names
+  const uniqueCountries = new Set();
+  
+  console.log("Data received for legend rendering:", data);
+  
+  // Create a list of countries with their colors
+  data.forEach((country, index) => {
+    console.log(`Legend item: index=${index}, label=${country.label}`);
+    
+    // Skip if label is missing or if it's "Global"
+    if (!country.label || country.label.toLowerCase() === "global") {
+      console.log(`Skipping country at index ${index}: label=${country.label}`);
+      return;
+    }
+    
+    // Skip duplicate country names
+    if (uniqueCountries.has(country.label)) {
+      console.log(`Skipping duplicate country: ${country.label}`);
+      return;
+    }
+    uniqueCountries.add(country.label);
+    
+    const legendItem = document.createElement('div');
+    legendItem.className = `legend-item ${state.clickedCountry === country.label ? 'selected' : ''}`;
+    legendItem.dataset.country = country.label;
+    
+    const colorSpan = document.createElement('span');
+    colorSpan.className = 'legend-color';
+    colorSpan.style.backgroundColor = colors[index % colors.length];
+    
+    const labelSpan = document.createElement('span');
+    labelSpan.className = 'legend-label';
+    labelSpan.textContent = country.label || "Unknown Country"; // Fallback to "Unknown Country"
+    
+    console.log(`Added legend item: ${country.label}`);
+    
+    legendItem.appendChild(colorSpan);
+    legendItem.appendChild(labelSpan);
+    
+    // Modify click handler to only highlight country without switching views
+    legendItem.addEventListener('click', () => {
+      const countryName = country.label;
+      state.clickedCountry = state.clickedCountry === countryName ? null : countryName;
+      
+      // Update UI to show selected state
+      document.querySelectorAll('.legend-item').forEach(item => {
+        item.classList.remove('selected');
+      });
+      if (state.clickedCountry) {
+        legendItem.classList.add('selected');
+      }
+      
+      // Only re-render the scatter plot, don't change view
+      renderScatterPlot();
+    });
+    
+    // Enhanced hover effects with more visible feedback
+    legendItem.addEventListener('mouseenter', () => {
+      // Highlight all points with this country
+      document.querySelectorAll(`.country-point[data-country="${country.label}"]`).forEach(point => {
+        point.style.stroke = colors[index % colors.length];
+        point.style.strokeWidth = '3px';
+        point.style.opacity = '1';
+        point.style.r = '10'; // Slightly larger
+      });
+      
+      // Highlight the legend item
+      legendItem.style.backgroundColor = "rgba(0,0,0,0.1)";
+      legendItem.style.transform = "translateX(5px)";
+    });
+    
+    legendItem.addEventListener('mouseleave', () => {
+      // Reset point styles if not clicked
+      if (state.clickedCountry !== country.label) {
+        document.querySelectorAll(`.country-point[data-country="${country.label}"]`).forEach(point => {
+          point.style.stroke = 'none';
+          point.style.opacity = '0.8';
+          point.style.r = '8'; // Back to normal size
+        });
+      }
+      
+      // Reset legend item styles if not selected
+      if (state.clickedCountry !== country.label) {
+        legendItem.style.backgroundColor = "";
+        legendItem.style.transform = "";
+      }
+    });
+    
+    legendContainer.appendChild(legendItem);
+  });
+  
+  console.log(`Total unique countries rendered in legend: ${uniqueCountries.size}`);
+  
+  // Add a message if no countries were found
+  if (uniqueCountries.size === 0) {
+    const noData = document.createElement('div');
+    noData.style.padding = '20px';
+    noData.style.textAlign = 'center';
+    noData.style.color = '#666';
+    noData.textContent = 'No country data available';
+    legendContainer.appendChild(noData);
+  }
+}
+    // Function to render scatter plot for all countries
+    function renderScatterPlot() {
+  const svg = d3.select('#scatter-chart');
+  svg.selectAll("*").remove();
+  
+  const yearData = state.yearsData.find(y => parseInt(y.year) === state.selectedYear);
+  
+  if (!yearData) return;
+  
+  console.log("Year data for scatter plot:", yearData);
+  console.log("Countries in this year:", yearData.countries);
+  
+  const data = yearData.countries.map((country, index) => {
+    // Ensure we have a valid country name
+    const countryName = country.name || `Country ${index + 1}`;
+    console.log(`Processing country: index=${index}, name=${country.name}, using=${countryName}`);
+    
+    return {
+      x: Math.max(0, parseFloat((country.x || 0).toFixed(2))),
+      y: parseFloat((country.y || 0).toFixed(2)),
+      label: countryName,
+      color: colors[index % colors.length]
+    };
+  }).filter(d => d.x !== undefined && d.y !== undefined); // Filter out any invalid data points
+  
+  console.log("Processed data for scatter plot:", data);
+  
+  // Get dimensions based on container
+  const container = document.getElementById('scatter-chart');
+  const width = container.clientWidth;
+  const height = container.clientHeight;
+  
+  // Calculate domain for axes from all years to maintain consistent scale
+  const { maxX, maxY, minX, minY } = state.yearsData.reduce(
+    (acc, year) => {
+      year.countries.forEach(country => {
+        const x = Math.max(0, country.x || 0);
+        const y = country.y || 0;
+        acc.maxX = Math.max(acc.maxX, x);
+        acc.maxY = Math.max(acc.maxY, y);
+        acc.minX = Math.min(acc.minX, x);
+        acc.minY = Math.min(acc.minY, y);
+      });
+      return acc;
+    },
+    { maxX: -Infinity, maxY: -Infinity, minX: Infinity, minY: Infinity }
+  );
+  
+  // Create scales with some padding
+  const xScale = d3.scaleLinear()
+    .domain([Math.max(0, Math.floor(minX)), Math.ceil(maxX) + 1])
+    .range([50, width - 50]);
+  
+  const yScale = d3.scaleLinear()
+    .domain([Math.floor(minY) - 1, Math.ceil(maxY) + 1])
+    .range([height - 50, 30]);
+  
+  // Draw axes
+  const xAxis = d3.axisBottom(xScale).tickFormat(d => Math.round(d));
+  svg.append("g")
+    .attr("transform", `translate(0, ${height - 50})`)
+    .call(xAxis)
+    .attr("color", "#333");
+  
+  const yAxis = d3.axisLeft(yScale).tickFormat(d => Math.round(d));
+  svg.append("g")
+    .attr("transform", `translate(50, 0)`)
+    .call(yAxis)
+    .attr("color", "#333");
+  
+  // Add axis labels
+  svg.append("text")
+    .attr("x", width / 2)
+    .attr("y", height - 10)
+    .attr("text-anchor", "middle")
+    .text("Intercept")
+    .attr("fill", "#333")
+    .attr("font-weight", "500");
+  
+  svg.append("text")
+    .attr("transform", "rotate(-90)")
+    .attr("x", -height / 2)
+    .attr("y", 15)
+    .attr("text-anchor", "middle")
+    .text("Slope")
+    .attr("fill", "#333")
+    .attr("font-weight", "500");
+  
+  // Draw grid lines
+  svg.append('g')
+    .attr('class', 'grid')
+    .attr('transform', `translate(0, ${height - 50})`)
+    .call(d3.axisBottom(xScale)
+      .tickSize(-(height - 80))
+      .tickFormat('')
+    )
+    .attr("color", "#eee")
+    .attr("opacity", 0.7);
+  
+  svg.append('g')
+    .attr('class', 'grid')
+    .attr('transform', `translate(50, 0)`)
+    .call(d3.axisLeft(yScale)
+      .tickSize(-(width - 100))
+      .tickFormat('')
+    )
+    .attr("color", "#eee")
+    .attr("opacity", 0.7);
+  
+  // Draw reference lines
+  svg.append("line")
+    .attr("class", "reference-line")
+    .attr("x1", xScale(parseFloat(yearData.median_intercept.toFixed(2))))
+    .attr("y1", 30)
+    .attr("x2", xScale(parseFloat(yearData.median_intercept.toFixed(2))))
+    .attr("y2", height - 50)
+    .attr("stroke", "green")
+    .attr("stroke-dasharray", "5,5");
+  
+  svg.append("line")
+    .attr("class", "reference-line")
+    .attr("x1", 50)
+    .attr("y1", yScale(parseFloat(yearData.median_slope.toFixed(2))))
+    .attr("x2", width - 50)
+    .attr("y2", yScale(parseFloat(yearData.median_slope.toFixed(2))))
+    .attr("stroke", "red")
+    .attr("stroke-dasharray", "5,5");
+  
+  // Add year label to the chart
+  svg.append("text")
+    .attr("x", width - 15)
+    .attr("y", 25)
+    .attr("text-anchor", "end")
+    .attr("font-size", "18px")
+    .attr("font-weight", "bold")
+    .text(`${state.selectedYear}-${(state.selectedYear + 3).toString().slice(-2)}`)
+    .attr("fill", "#555");
+  
+  // Draw points with enhanced behavior
+  data.forEach((d, i) => {
+    // Determine if this country should be highlighted
+    let isHighlighted = true;
+    
+    // If a country is clicked, only highlight that one
+    if (state.clickedCountry) {
+      isHighlighted = d.label === state.clickedCountry;
+    }
+    // Otherwise, if a country is hovered, highlight only that one
+    else if (state.hoveredCountry) {
+      isHighlighted = d.label === state.hoveredCountry;
+    }
+    
+    // First draw a larger circle as a highlight/stroke effect
+    if (isHighlighted) {
+      svg.append("circle")
+        .attr("cx", xScale(d.x))
+        .attr("cy", yScale(d.y))
+        .attr("r", 10)
+        .attr("fill", "none")
+        .attr("stroke", d.color)
+        .attr("stroke-width", 1.5)
+        .attr("opacity", 0.6);
+    }
+    
+    svg.append("circle")
+      .attr("class", "country-point")
+      .attr("cx", xScale(d.x))
+      .attr("cy", yScale(d.y))
+      .attr("r", 8)
+      .attr("fill", d.color)
+      .attr("opacity", isHighlighted ? 1 : 0.2)
+      .attr("data-country", d.label)
+      .on("mouseenter", (event) => {
+        const content = `
+          <div class="tooltip-title" style="color: ${d.color};">${d.label}</div>
+          <div class="tooltip-row">
+            <span>Intercept:</span>
+            <span><b>${d.x.toFixed(2)}</b></span>
+          </div>
+          <div class="tooltip-row">
+            <span>Slope:</span>
+            <span><b>${d.y.toFixed(2)}</b></span>
+          </div>
+          <div class="tooltip-row">
+            <span>Year:</span>
+            <span><b>${state.selectedYear}-${(state.selectedYear + 3).toString().slice(-2)}</b></span>
+          </div>
+        `;
+        showTooltip(event.pageX, event.pageY, content);
+        
+        // Highlight in legend
+        const legendItem = document.querySelector(`.legend-item[data-country="${d.label}"]`);
+        if (legendItem) {
+          legendItem.style.backgroundColor = "rgba(0,0,0,0.1)";
+          legendItem.style.transform = "translateX(5px)";
+        }
+        
+        // Update state
+        state.hoveredCountry = d.label;
+        renderScatterPlot();
+      })
+      .on("mouseleave", () => {
+        hideTooltip();
+        
+        // Remove highlight from legend
+        const legendItem = document.querySelector(`.legend-item[data-country="${d.label}"]`);
+        if (legendItem && state.clickedCountry !== d.label) {
+          legendItem.style.backgroundColor = "";
+          legendItem.style.transform = "";
+        }
+        
+        // Update state
+        state.hoveredCountry = null;
+        renderScatterPlot();
+      })
+      .on("click", () => {
+        if (state.clickedCountry === d.label) {
+          state.clickedCountry = null;
+        } else {
+          state.clickedCountry = d.label;
+        }
+        renderScatterPlot();
+        
+        // Update legend
+        document.querySelectorAll('.legend-item').forEach(item => {
+          item.classList.remove('selected');
+          
+          if (item.dataset.country === state.clickedCountry) {
+            item.classList.add('selected');
+          }
+        });
+      });
+      // Removed the dblclick event handler that was causing navigation to country-specific view
+  });
+  
+  // Render the legend
+  renderCountriesLegend(data);
+}
+    
+    // Function to render country specific view
+    function renderCountryView() {
+  const countryData = state.countriesData.find(c => c.name === state.selectedCountry);
+  if (!countryData) return;
+  
+  const carouselContainer = elements.countryCarousel;
+  carouselContainer.innerHTML = '';
+  
+  // Sort years chronologically
+  const sortedYears = [...countryData.years].sort((a, b) => a.year - b.year);
+  
+  // Create a slide for each year
+  sortedYears.forEach((yearData, index) => {
+    const slide = document.createElement('div');
+    slide.className = 'carousel-slide';
+    slide.style.display = index === state.currentSlide ? 'block' : 'none';
+    slide.dataset.index = index;
+    
+    // Create badge showing the actual country name
+    const badge = document.createElement('div');
+    badge.className = 'country-badge';
+    badge.textContent = countryData.name; // This should display the proper country name
+    
+    // Find the index to maintain consistent color
+    const countryIndex = state.countriesData.findIndex(c => c.name === countryData.name);
+    badge.style.backgroundColor = colors[countryIndex % colors.length];
+    
+    slide.appendChild(badge);
+    
+    // Create year indicator
+    const yearIndicator = document.createElement('div');
+    yearIndicator.className = 'year-indicator';
+    yearIndicator.textContent = `${yearData.year}-${(yearData.year + 3).toString().slice(-2)}`;
+    slide.appendChild(yearIndicator);
+        
+        // Create SVG for the scatter plot
+        const svgContainer = document.createElement('div');
+        svgContainer.className = 'svg-container';
+        svgContainer.style.width = '100%';
+        svgContainer.style.height = '100%';
+        
+        const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+        svg.setAttribute('width', '100%');
+        svg.setAttribute('height', '100%');
+        svgContainer.appendChild(svg);
+        slide.appendChild(svgContainer);
+        
+        carouselContainer.appendChild(slide);
+        
+        // Now render the plot using D3
+        const d3svg = d3.select(svg);
+        
+        // Get dimensions
+        const width = svgContainer.clientWidth;
+        const height = svgContainer.clientHeight;
+        
+        // Create scales
+        const xScale = d3.scaleLinear()
+          .domain([Math.max(0, Math.floor(minX)), Math.ceil(maxX)])
+          .range([50, width - 50]);
+        
+        const yScale = d3.scaleLinear()
+          .domain([Math.floor(minY), Math.ceil(maxY)])
+          .range([height - 50, 30]);
+        
+        // Draw axes
+        const xAxis = d3.axisBottom(xScale).tickFormat(d => Math.round(d));
+        d3svg.append("g")
+          .attr("transform", `translate(0, ${height - 50})`)
+          .call(xAxis)
+          .attr("color", "#333");
+        
+        const yAxis = d3.axisLeft(yScale).tickFormat(d => Math.round(d));
+        d3svg.append("g")
+          .attr("transform", `translate(50, 0)`)
+          .call(yAxis)
+          .attr("color", "#333");
+        
+        // Add axis labels
+        d3svg.append("text")
+          .attr("x", width / 2)
+          .attr("y", height - 10)
+          .attr("text-anchor", "middle")
+          .text("Intercept")
+          .attr("fill", "#333")
+          .attr("font-weight", "500");
+        
+        d3svg.append("text")
+          .attr("transform", "rotate(-90)")
+          .attr("x", -height / 2)
+          .attr("y", 15)
+          .attr("text-anchor", "middle")
+          .text("Slope")
+          .attr("fill", "#333")
+          .attr("font-weight", "500");
+        
+        // Draw grid lines
+        d3svg.append('g')
+          .attr('class', 'grid')
+          .attr('transform', `translate(0, ${height - 50})`)
+          .call(d3.axisBottom(xScale)
+            .tickSize(-(height - 80))
+            .tickFormat('')
+          )
+          .attr("color", "#eee")
+          .attr("opacity", 0.7);
+        
+        d3svg.append('g')
+          .attr('class', 'grid')
+          .attr('transform', `translate(50, 0)`)
+          .call(d3.axisLeft(yScale)
+            .tickSize(-(width - 100))
+            .tickFormat('')
+          )
+          .attr("color", "#eee")
+          .attr("opacity", 0.7);
+        
+        // Draw reference lines
+        d3svg.append("line")
+          .attr("class", "reference-line")
+          .attr("x1", xScale(parseFloat(yearData.median_intercept.toFixed(2))))
+          .attr("y1", 30)
+          .attr("x2", xScale(parseFloat(yearData.median_intercept.toFixed(2))))
+          .attr("y2", height - 50)
+          .attr("stroke", "green")
+          .attr("stroke-dasharray", "5,5");
+        
+        d3svg.append("line")
+          .attr("class", "reference-line")
+          .attr("x1", 50)
+          .attr("y1", yScale(parseFloat(yearData.median_slope.toFixed(2))))
+          .attr("x2", width - 50)
+          .attr("y2", yScale(parseFloat(yearData.median_slope.toFixed(2))))
+          .attr("stroke", "red")
+          .attr("stroke-dasharray", "5,5");
+        
+        // Draw the point with a pulsing effect
+        const dataPoint = {
+          x: Math.max(0, parseFloat(yearData.x.toFixed(2))),
+          y: parseFloat(yearData.y.toFixed(2))
+        };
+        
+        // Add a highlight circle
+        const highlightCircle = d3svg.append("circle")
+          .attr("cx", xScale(dataPoint.x))
+          .attr("cy", yScale(dataPoint.y))
+          .attr("r", 12)
+          .attr("fill", "none")
+          .attr("stroke", colors[state.countriesData.indexOf(countryData) % colors.length])
+          .attr("stroke-width", 2)
+          .attr("opacity", 0.5);
+          
+        // Create a pulse animation
+        function pulseAnimation() {
+          highlightCircle.transition()
+            .duration(1000)
+            .attr("r", 15)
+            .attr("opacity", 0.2)
+            .transition()
+            .duration(1000)
+            .attr("r", 12)
+            .attr("opacity", 0.5)
+            .on("end", pulseAnimation);
+        }
+        pulseAnimation();
+        
+        d3svg.append("circle")
+          .attr("cx", xScale(dataPoint.x))
+          .attr("cy", yScale(dataPoint.y))
+          .attr("r", 8)
+          .attr("fill", colors[state.countriesData.indexOf(countryData) % colors.length])
+          .on("mouseenter", (event) => {
+            const content = `
+              <div class="tooltip-title" style="color: ${colors[state.countriesData.indexOf(countryData) % colors.length]};">${countryData.name}</div>
+              <div class="tooltip-row">
+                <span>Year:</span>
+                <span><b>${yearData.year}-${(yearData.year + 3).toString().slice(-2)}</b></span>
+              </div>
+              <div class="tooltip-row">
+                <span>Intercept:</span>
+                <span><b>${dataPoint.x.toFixed(2)}</b></span>
+              </div>
+              <div class="tooltip-row">
+                <span>Slope:</span>
+                <span><b>${dataPoint.y.toFixed(2)}</b></span>
+              </div>
+            `;
+            showTooltip(event.pageX, event.pageY, content);
+          })
+          .on("mouseleave", hideTooltip);
+      });
+      
+      // Add auto-rotation for carousel
+      let autoplayInterval = setInterval(() => {
+        state.currentSlide = (state.currentSlide + 1) % sortedYears.length;
+        updateCarouselSlide();
+      }, 2000);
+      
+      // Clear interval when leaving country view
+      elements.backToAllBtn.onclick = () => {
+        clearInterval(autoplayInterval);
+        state.selectedCountry = "All";
+        renderView();
+      };
+      
+      // Add navigation buttons
+      const prevBtn = document.createElement('button');
+      prevBtn.className = 'carousel-control-prev';
+      prevBtn.innerHTML = '❮';
+      prevBtn.style.position = 'absolute';
+      prevBtn.style.left = '10px';
+      prevBtn.style.top = '50%';
+      prevBtn.style.transform = 'translateY(-50%)';
+      prevBtn.style.zIndex = '100';
+      
+      prevBtn.onclick = () => {
+        clearInterval(autoplayInterval);
+        state.currentSlide = (state.currentSlide - 1 + sortedYears.length) % sortedYears.length;
+        updateCarouselSlide();
+        
+        // Restart autoplay
+        autoplayInterval = setInterval(() => {
+          state.currentSlide = (state.currentSlide + 1) % sortedYears.length;
+          updateCarouselSlide();
+        }, 2000);
+      };
+      
+      const nextBtn = document.createElement('button');
+      nextBtn.className = 'carousel-control-next';
+      nextBtn.innerHTML = '❯';
+      nextBtn.style.position = 'absolute';
+      nextBtn.style.right = '10px';
+      nextBtn.style.top = '50%';
+      nextBtn.style.transform = 'translateY(-50%)';
+      nextBtn.style.zIndex = '100';
+      
+      nextBtn.onclick = () => {
+        clearInterval(autoplayInterval);
+        state.currentSlide = (state.currentSlide + 1) % sortedYears.length;
+        updateCarouselSlide();
+        
+        // Restart autoplay
+        autoplayInterval = setInterval(() => {
+          state.currentSlide = (state.currentSlide + 1) % sortedYears.length;
+          updateCarouselSlide();
+        }, 2000);
+      };
+      
+      carouselContainer.appendChild(prevBtn);
+      carouselContainer.appendChild(nextBtn);
+      
+      // Update the reference legend in country view
+      const referenceContainer = document.querySelector('.reference-legend');
+      if (referenceContainer) {
+        referenceContainer.innerHTML = `
+          <div class="reference-legend-title">Reference Lines</div>
+          <div>
+            <div class="reference-legend-line" style="background-color: green;"></div>
+            <span>Median Intercept</span>
+          </div>
+          <div>
+            <div class="reference-legend-line" style="background-color: red;"></div>
+            <span>Median Slope</span>
+          </div>
+        `;
+      }
+    }
+    
+    // Function to update carousel slide
+    function updateCarouselSlide() {
+      const slides = document.querySelectorAll('.carousel-slide');
+      slides.forEach(slide => {
+        slide.style.display = parseInt(slide.dataset.index) === state.currentSlide ? 'block' : 'none';
+      });
+    }
+    
+    // Function to render the current view based on state
+    function renderView() {
+      if (state.yearsData.length === 0 && state.countriesData.length === 0) {
+        showEmptyState();
+        return;
+      }
+      
+      // Always show the all countries view regardless of selectedCountry
+      showAllCountriesView();
+      renderYearTabs();
+      renderScatterPlot();
+    }
+    
+    // Function to fetch data from server
+    async function fetchScorecardData(infection, antibiotic, source) {
+      showLoading();
       
       try {
+        const formData = new FormData();
+        formData.append('infection', infection);
+        formData.append('antibiotic', antibiotic);
+        formData.append('source', source);
+        
         const response = await fetch('/generate_scorecards', {
           method: 'POST',
           body: formData,
           headers: {
-            'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value
+            'X-CSRFToken': getCSRFToken()
           }
         });
-        if (response.ok) {
-          const data = await response.json();
-          const pngs = data.pngs; // Assuming this is an array of image blobs or base64 strings
-          
-          if (pngs.length === 0) {
-            loadingItem.innerHTML = `<div class="graph-placeholder">No graphs generated.</div>`;
-            return;
-          }
-
-          // Clear loading placeholder
-          carouselInner.innerHTML = '';
-          carouselIndicators.innerHTML = '';
-
-          let currentImageUrl = null;
-
-          pngs.forEach((png, index) => {
-            // Create indicator for each image
-            const indicator = document.createElement('li');
-            indicator.setAttribute('data-target', '#carousel-container');
-            indicator.setAttribute('data-slide-to', index);
-            if (index === 0) indicator.classList.add('active');
-            carouselIndicators.appendChild(indicator);
-
-            // Create a carousel item
-            const carouselItem = document.createElement('div');
-            carouselItem.classList.add('carousel-item');
-            if (index === 0) carouselItem.classList.add('active');
-
-            // If the image is a Base64 string, ensure you include the appropriate data URI prefix (e.g., 'data:image/png;base64,')
-            const imgUrl = png.startsWith('data:image') ? png : `data:image/png;base64,${png}`;
-
-            if (index === 0) {
-              currentImageUrl = imgUrl;
-            }
-
-            carouselItem.innerHTML = `<img src="${imgUrl}" class="d-block w-100" alt="Graph ${index+1}">`;
-            carouselInner.appendChild(carouselItem);
-          });
-
-          // Enable download button and set up download functionality
-          downloadBtn.disabled = false;
-          downloadBtn.onclick = function() {
-            const activeCarouselItem = document.querySelector('.carousel-item.active img');
-            if (activeCarouselItem) {
-              const downloadLink = document.createElement('a');
-              downloadLink.href = activeCarouselItem.src;
-              downloadLink.download = `graph_${new Date().toISOString().replace(/:/g, '-')}.png`;
-              downloadLink.click();
-            }
-          };
-
-          // Listen for carousel slide events to update current image
-          $('#carousel-container').on('slid.bs.carousel', function () {
-            const activeCarouselItem = document.querySelector('.carousel-item.active img');
-            if (activeCarouselItem) {
-              currentImageUrl = activeCarouselItem.src;
-            }
-          });
-
-        } else {
-          carouselInner.innerHTML = `<div class="graph-placeholder">Error generating graphs. Please try again.</div>`;
-          downloadBtn.disabled = true;
+        
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
         }
+        
+        const data = await response.json();
+        console.log("Raw data received from server:", data); // Log the complete raw data
+        
+        // Format data for our application
+        // First check if we have the new format data
+        if (data.years && data.countries) {
+          state.yearsData = data.years;
+          state.countriesData = data.countries;
+          
+          // Detailed debugging logs for country names
+          console.log("Countries data structure:", state.countriesData);
+          console.log("First year data structure:", state.yearsData[0]);
+          
+          if (state.yearsData[0] && state.yearsData[0].countries) {
+            console.log("Sample country data in first year:", state.yearsData[0].countries[0]);
+          }
+          
+          // Check if country names are properly set
+          const missingNames = state.yearsData.some(year => 
+            year.countries.some(country => !country.name || country.name === "Country 1")
+          );
+          
+          if (missingNames) {
+            console.warn("Some country names are missing or generic. Attempting to fix...");
+            
+            // Try to fix missing country names using index
+            state.yearsData.forEach(year => {
+              year.countries.forEach((country, index) => {
+                if (!country.name || country.name === "Country 1") {
+                  // Try to get a name from countriesData if possible
+                  const matchingCountry = state.countriesData[index];
+                  if (matchingCountry && matchingCountry.name) {
+                    country.name = matchingCountry.name;
+                    console.log(`Replaced generic name with: ${matchingCountry.name}`);
+                  } else {
+                    // Generate a distinct name based on index
+                    country.name = `Country ${index + 1}`;
+                    console.log(`Using generic name: ${country.name} as no match found`);
+                  }
+                }
+              });
+            });
+          }
+        } 
+        // Otherwise we have the old format with just PNGs
+        else if (data.pngs && data.pngs.length > 0) {
+          // Create a fallback view
+          showOldFormatPngs(data.pngs);
+          return;
+        }
+        else {
+          // No data
+          showEmptyState();
+          return;
+        }
+        
+        // Reset view state
+        state.selectedCountry = "All";
+        state.selectedYear = null;
+        state.hoveredCountry = null;
+        state.clickedCountry = null;
+        state.currentSlide = 0;
+        
+        // Render the view based on data
+        renderView();
+        
       } catch (error) {
-        carouselInner.innerHTML = `<div class="graph-placeholder">Error generating graphs. Please try again.</div>`;
-        downloadBtn.disabled = true;
+        console.error('Error fetching scorecard data:', error);
+        showEmptyState();
+      }
+    }
+    
+    // Function to handle the old PNG format data
+    function showOldFormatPngs(pngs) {
+      // We'll create a simple carousel with the PNG images
+      hideElement(elements.initialPlaceholder);
+      hideElement(elements.allCountriesView);
+      hideElement(elements.countrySpecificView);
+      hideElement(elements.emptyState);
+      hideElement(elements.loadingView);
+      hideElement(elements.yearTabsContainer);
+      
+      // Create carousel container
+      const container = document.createElement('div');
+      container.className = 'carousel slide';
+      container.id = 'old-format-carousel';
+      downloadBtn.className = 'download-btn';
+      downloadBtn.textContent = 'Download';
+      downloadBtn.onclick = function() {
+        const activeImg = document.querySelector('#old-format-carousel .carousel-item.active img');
+        if (activeImg) {
+          const link = document.createElement('a');
+          link.href = activeImg.src;
+          link.download = `scorecard_${new Date().toISOString().slice(0, 10)}.png`;
+          link.click();
+        }
+      };
+      
+      container.appendChild(downloadBtn);
+      
+      // Replace visualization content
+      const visualizationContainer = document.getElementById('visualization-container');
+      visualizationContainer.innerHTML = '';
+      visualizationContainer.appendChild(container);
+      
+      // Initialize the Bootstrap carousel
+      new bootstrap.Carousel(document.getElementById('old-format-carousel'));
+    }
+    
+    // Event listener for form submission
+    elements.form.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      
+      const infection = this.elements['infection'].value;
+      const antibiotic = this.elements['antibiotic'].value;
+      const source = this.elements['source'].value;
+      
+      // Update application state
+      state.selectedOrganism = infection;
+      state.selectedAntibiotic = antibiotic;
+      state.selectedSampleType = source;
+      
+      // Fetch data from server
+      await fetchScorecardData(infection, antibiotic, source);
+    });
+    
+    // Back to all countries button event
+    elements.backToAllBtn.addEventListener('click', function() {
+      state.selectedCountry = "All";
+      renderView();
+    });
+  </script>
+  
+  <!-- Update the DOM elements for improved structure -->
+  <script>
+    // Update reference legend when the page loads
+    document.addEventListener('DOMContentLoaded', function() {
+      const allCountriesLegend = document.querySelector('#all-countries-view .reference-legend');
+      if (allCountriesLegend) {
+        allCountriesLegend.innerHTML = `
+          <div class="reference-legend-title">Reference Lines</div>
+          <div>
+            <div class="reference-legend-line" style="background-color: green;"></div>
+            <span>Median Intercept</span>
+          </div>
+          <div>
+            <div class="reference-legend-line" style="background-color: red;"></div>
+            <span>Median Slope</span>
+          </div>
+        `;
       }
     });
   </script>

@@ -28,6 +28,7 @@ urlpatterns = [
     path('scorecards/', scorecards, name='scorecards'),
     path('generate_scorecards', generate_scorecards, name='generate_scorecards'),
     # path('check-scorecard-data/', check_scorecard_data, name='check_scorecard_data'),
+    # path('generate_scorecards_test/',generate_scorecards_test, name='generate_scorecards_test'),
 
     path('logout/', logout_view, name='logout'),
 ]

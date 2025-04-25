@@ -24,6 +24,8 @@ import magic
 import io
 import base64
 from django.conf import settings
+import os
+import re
 
 
 # Create your views here.
@@ -482,6 +484,35 @@ def google_callback(request):
     
     return redirect('login')
 
+# def generate_scorecards(request):
+#     if request.method == 'POST':
+#         source = request.POST.get('source')
+#         infection = request.POST.get('infection')
+#         antibiotic = request.POST.get('antibiotic')
+
+#         print(f"Generating scorecards for: {source}, {infection}, {antibiotic}")
+
+#         dataset = pd.read_json(request.session['dataset'])
+
+#         figures = scorecard_analysis(
+#             dataset,
+#             source,
+#             infection,
+#             antibiotic,
+#             request.session['mapping_data']
+#         )
+        
+#         pngs = []
+#         for fig in figures:
+#             buffer = BytesIO()
+#             fig.savefig(buffer, format='png', bbox_inches='tight', transparent=True)
+#             buffer.seek(0)
+#             image = base64.b64encode(buffer.getvalue()).decode('utf-8')
+#             pngs.append(image)
+#             plt.close(fig)
+
+#         return JsonResponse({'pngs': pngs})
+    
 def generate_scorecards(request):
     if request.method == 'POST':
         source = request.POST.get('source')
@@ -490,9 +521,75 @@ def generate_scorecards(request):
 
         print(f"Generating scorecards for: {source}, {infection}, {antibiotic}")
 
+        # First try to load the data from JSON files if they exist
+        json_dir = os.path.join(
+            os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+            'Scorecards JSONs',
+            infection,
+            source,
+            antibiotic
+        )
+        
+        print(f"Looking for scorecard JSONs in: {json_dir}")
+        
+        visualization_data = {
+            'years': [],
+            'countries': {}  # Use dict first for easier lookup, then convert to list
+        }
+        
+        # Check if directory exists and contains JSON files
+        if os.path.exists(json_dir):
+            try:
+                # Get all JSON files in the directory
+                json_files = [f for f in os.listdir(json_dir) if f.endswith('_scorecard.json')]
+                print(f"Found {len(json_files)} JSON files")
+                
+                # Process each JSON file
+                for json_file in json_files:
+                    try:
+                        with open(os.path.join(json_dir, json_file), 'r') as f:
+                            year_data = json.load(f)
+                            print(f"Loaded JSON data for year: {year_data.get('year', 'unknown')}")
+                            
+                            # Add year data to visualization_data
+                            visualization_data['years'].append(year_data)
+                            
+                            # Process each country in the year data
+                            for country in year_data['countries']:
+                                country_name = country['name']
+                                
+                                if country_name not in visualization_data['countries']:
+                                    visualization_data['countries'][country_name] = {
+                                        'name': country_name,
+                                        'years': []
+                                    }
+                                
+                                # Add this year's data to the country
+                                visualization_data['countries'][country_name]['years'].append({
+                                    'year': year_data['year'],
+                                    'x': country['x'],
+                                    'y': country['y'],
+                                    'median_intercept': year_data['median_intercept'],
+                                    'median_slope': year_data['median_slope']
+                                })
+                    except Exception as e:
+                        print(f"Error processing JSON file {json_file}: {str(e)}")
+                
+                # If we loaded data successfully from JSON files, convert countries dict to list and return
+                if visualization_data['years']:
+                    visualization_data['countries'] = list(visualization_data['countries'].values())
+                    print(f"Successfully processed JSON data: {len(visualization_data['years'])} years, {len(visualization_data['countries'])} countries")
+                    return JsonResponse(visualization_data)
+            except Exception as e:
+                print(f"Error loading JSON files: {str(e)}")
+        else:
+            print(f"JSON directory does not exist: {json_dir}")
+        
+        # If we couldn't load from JSON files, proceed with generating from the dataset
         dataset = pd.read_json(request.session['dataset'])
 
-        figures = scorecard_analysis(
+        # Call the updated scorecard_analysis function that returns both figures and data
+        figures, visualization_data = scorecard_analysis(
             dataset,
             source,
             infection,
@@ -500,13 +597,6 @@ def generate_scorecards(request):
             request.session['mapping_data']
         )
         
-        pngs = []
-        for fig in figures:
-            buffer = BytesIO()
-            fig.savefig(buffer, format='png', bbox_inches='tight', transparent=True)
-            buffer.seek(0)
-            image = base64.b64encode(buffer.getvalue()).decode('utf-8')
-            pngs.append(image)
-            plt.close(fig)
-
-        return JsonResponse({'pngs': pngs})
+        # Now we can directly use the structured data returned from the analysis function
+        print(f"Generated visualization data with {len(visualization_data['years'])} years and {len(visualization_data['countries'])} countries")
+        return JsonResponse(visualization_data)

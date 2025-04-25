@@ -823,10 +823,10 @@ def scorecard_analysis(dataset, source_input, infection, antibiotic, mappings):
         print(f"Exit code: {e.returncode}")
         print(f"Error output: {e.stderr}")
 
-    figures = generate_scorecard_graph(source_input, infection, antibiotic, dataset, mappings)
+    # Generate figures and structured data together
+    figures, visualization_data = generate_scorecard_graph(source_input, infection, antibiotic, dataset, mappings)
 
-    return figures
-
+    return figures, visualization_data
 def generate_scorecard_graph(source, infection, antibiotic, dataset, mappings):
     time_series_dir = 'Time series data'
     json_output_dir = 'Scorecards JSONs'
@@ -849,6 +849,13 @@ def generate_scorecard_graph(source, infection, antibiotic, dataset, mappings):
     # Create a list to store file paths and metadata
     file_data = []
     figures = []
+    
+    # Structured data for visualization
+    visualization_data = {
+        'years': [],
+        'countries': {}  # Use dict first for easier lookup, then convert to list
+    }
+    
     for file_name in files:
         match = file_pattern.match(file_name)
         if match:
@@ -858,7 +865,7 @@ def generate_scorecard_graph(source, infection, antibiotic, dataset, mappings):
 
     if len(file_data) == 0:
         print(f"No files found in {folder}")
-        return None
+        return None, None
 
     # Group files by organism and antibiotic
     grouped_files = {}
@@ -988,18 +995,45 @@ def generate_scorecard_graph(source, infection, antibiotic, dataset, mappings):
             # Save the plot
             figures.append(fig)
 
-            year_json= {
+            # Create the structured data for this year
+            year_data = {
                 "year": year,
-                "median_slope": median_slope,
-                "median_intercept": median_intercept,
-                "countries": [
-                    {
-                        "name": row['Cluster'],
-                        "x": row['intercept'],
-                        "y": row['slope']
-                    } for _, row in country_data.iterrows()
-                ]
+                "median_slope": float(median_slope),
+                "median_intercept": float(median_intercept),
+                "countries": []
             }
+            
+            # Add country data points
+            for _, row in country_data.iterrows():
+                country_name = row['Cluster']
+                x_value = float(row['intercept'])
+                y_value = float(row['slope'])
+                
+                # Add to year data
+                year_data["countries"].append({
+                    "name": country_name,
+                    "x": x_value,
+                    "y": y_value
+                })
+                
+                # Add to countries data structure
+                if country_name not in visualization_data['countries']:
+                    visualization_data['countries'][country_name] = {
+                        'name': country_name,
+                        'years': []
+                    }
+                
+                # Add this year's data to the country
+                visualization_data['countries'][country_name]['years'].append({
+                    'year': year,
+                    'x': x_value,
+                    'y': y_value,
+                    'median_intercept': float(median_intercept),
+                    'median_slope': float(median_slope)
+                })
+            
+            # Add year data to visualization structure
+            visualization_data['years'].append(year_data)
 
             # Construct the full output directory path
             output_path = os.path.join(json_output_dir, infection, source, antibiotic)
@@ -1008,9 +1042,12 @@ def generate_scorecard_graph(source, infection, antibiotic, dataset, mappings):
             # Save the JSON file inside the constructed path
             json_file_path = os.path.join(output_path, f"{organism}_{antibiotic}_{year}_scorecard.json")
             with open(json_file_path, 'w') as json_file:
-                json.dump(year_json, json_file, indent=4)
+                json.dump(year_data, json_file, indent=4)
             
             # You can add code here to save the figure to a file if needed
             # plt.savefig(f'output/{year}_scorecard.png', dpi=300, bbox_inches='tight')
-            
-    return figures
+    
+    # Convert countries dictionary to list for the final output
+    visualization_data['countries'] = list(visualization_data['countries'].values())
+    
+    return figures, visualization_data
