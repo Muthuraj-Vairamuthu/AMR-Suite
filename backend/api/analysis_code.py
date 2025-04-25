@@ -1001,8 +1001,12 @@ def generate_scorecard_graph(source, infection, antibiotic, dataset, mappings):
                 ]
             }
 
-            os.makedirs(json_output_dir, exist_ok=True)
-            json_file_path = os.path.join(json_output_dir, f"{organism}_{antibiotic}_{year}_scorecard.json")
+            # Construct the full output directory path
+            output_path = os.path.join(json_output_dir, infection, source, antibiotic)
+            os.makedirs(output_path, exist_ok=True)
+
+            # Save the JSON file inside the constructed path
+            json_file_path = os.path.join(output_path, f"{organism}_{antibiotic}_{year}_scorecard.json")
             with open(json_file_path, 'w') as json_file:
                 json.dump(year_json, json_file, indent=4)
             

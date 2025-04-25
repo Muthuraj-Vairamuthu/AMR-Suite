@@ -13,6 +13,7 @@ end_year          <- as.integer(args[5]) # e.g., 2022
 dataset_path      <- args[6]  # e.g., "../CSV_Files/Data_part1.csv"
 cluster_attribute <- args[7]  # e.g., "MyLocationCol"
 time_attribute    <- args[8]  # e.g., "SampleYear"
+baseline_attribute <- 'India'
 
 cat(organism, antibiotic, source_input, start_year, end_year, dataset_path, cluster_attribute, time_attribute, "\n")
 
@@ -132,6 +133,14 @@ for (start in seq(start_year, end_year - subset_years + 1)) {
   # If "Global" is present among the factor levels, make it the reference level
   if ("Global" %in% levels(subset_data[[cluster_attribute]])) {
     subset_data[[cluster_attribute]] <- relevel(subset_data[[cluster_attribute]], ref = "Global")
+    baseline_label <- "Global"
+  } else if (baseline_attribute %in% levels(subset_data[[cluster_attribute]])) {
+    subset_data[[cluster_attribute]] <- relevel(subset_data[[cluster_attribute]], ref = baseline_attribute)
+    baseline_label <- baseline_attribute
+  } else {
+    fallback <- levels(subset_data[[cluster_attribute]])[1]
+    subset_data[[cluster_attribute]] <- relevel(subset_data[[cluster_attribute]], ref = fallback)
+    baseline_label <- fallback
   }
   cat("Unique clusters:", unique(subset_data[[cluster_attribute]]), "\n")
   cat("Unique seq_num values:", unique(subset_data$seq_num), "\n")
@@ -207,7 +216,7 @@ for (start in seq(start_year, end_year - subset_years + 1)) {
   global_intercept <- coefficients["(Intercept)", "Estimate"]
   global_slope     <- coefficients["seq_num", "Estimate"]
 
-  names_vec <- c(names_vec, "Global")
+  names_vec <- c(names_vec, baseline_label)
   intercepts <- c(intercepts, global_intercept)
   slopes     <- c(slopes, global_slope)
 
