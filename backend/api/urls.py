@@ -1,7 +1,7 @@
 from django.urls import path
 from .views import (home,home2,scorecard_info,resistance_info,isolation_info,login_page,signup_view, login_user, upload_dataset, dataset_upload, 
                 mapping_dataset, isolation_burden_analysis, generate_isolation_graph,
-                resistance_analysis, generate_resistance_graph, logout_view, scorecards, generate_scorecards, video)
+                resistance_analysis, generate_resistance_graph, logout_view, scorecards, generate_scorecards, video, get_unique_values, get_columns_with_suffix)
 
 urlpatterns = [
 
@@ -31,4 +31,6 @@ urlpatterns = [
     # path('generate_scorecards_test/',generate_scorecards_test, name='generate_scorecards_test'),
 
     path('logout/', logout_view, name='logout'),
+    path('get_unique_values/', get_unique_values, name='get_unique_values'),
+    path('get_columns_with_suffix/', get_columns_with_suffix, name='get_columns_with_suffix'),
 ]

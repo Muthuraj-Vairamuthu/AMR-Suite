@@ -199,4 +199,57 @@
             pointer-events: none;
             color: #333;
         }
+
+        .section-description {
+            margin-bottom: 15px;
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        .resistance-category {
+            margin-bottom: 15px;
+        }
+
+        .multiselect-wrapper {
+            position: relative;
+        }
+
+        select.resistance-select {
+            width: 100%;
+            padding: 10px;
+            height: auto;
+            min-height: 100px;
+            background-color: #e0e0e0;
+            border: none;
+            border-radius: 5px;
+        }
+
+        select.resistance-select option {
+            padding: 5px;
+        }
+
+        .selected-values {
+            margin-top: 8px;
+            min-height: 30px;
+            padding: 5px;
+            background-color: #f5f5f5;
+            border-radius: 4px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+
+        .selected-tag {
+            background-color: #1a2133;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            display: inline-block;
+        }
+
+        .no-selection {
+            color: #888;
+            font-style: italic;
+        }
  

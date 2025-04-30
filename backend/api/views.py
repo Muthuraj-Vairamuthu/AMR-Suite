@@ -128,31 +128,70 @@ def mapping_dataset(request):
                 'date_column': request.POST.get('date_column'),
                 'resistance_granularity': request.POST.get('resistance_granularity')
             }
-
+            
+            # Get resistance value mappings
+            susceptible_values = request.POST.getlist('susceptible_values')
+            intermediate_values = request.POST.getlist('intermediate_values')
+            resistant_values = request.POST.getlist('resistant_values')
+            
+            # Store mappings if provided
+            if any([susceptible_values, intermediate_values, resistant_values]):
+                mapping_data['resistance_mappings'] = {
+                    'susceptible': susceptible_values,
+                    'intermediate': intermediate_values,
+                    'resistant': resistant_values
+                }
+            
             request.session['mapping_data'] = mapping_data
 
             if mapping_data['dataset_format'] == 'Wide':
                 suffix = mapping_data['antibiotic_format'].replace('Antibiotic', '')
                 antibiotic_columns = [col for col in dataset.columns if col.endswith(suffix)]
                 antibiotic_columns = sorted(list(set(antibiotic_columns)))
+                
+                # Apply resistance mappings for Wide format
+                if 'resistance_mappings' in mapping_data:
+                    for col in antibiotic_columns:
+                        # Apply mappings to each antibiotic column
+                        for value in susceptible_values:
+                            dataset.loc[dataset[col] == value, col] = 'Susceptible'
+                        for value in intermediate_values:
+                            dataset.loc[dataset[col] == value, col] = 'Intermediate'
+                        for value in resistant_values:
+                            dataset.loc[dataset[col] == value, col] = 'Resistant'
 
                 request.session['antibiotic_columns'] = antibiotic_columns
-
             else:
+                # For Long format
+                result_col = mapping_data['antibiotic_result_col']
+                
+                # Apply resistance mappings before pivoting
+                if 'resistance_mappings' in mapping_data:
+                    # Apply mappings to the result column
+                    for value in susceptible_values:
+                        dataset.loc[dataset[result_col] == value, result_col] = 'Susceptible'
+                    for value in intermediate_values:
+                        dataset.loc[dataset[result_col] == value, result_col] = 'Intermediate'
+                    for value in resistant_values:
+                        dataset.loc[dataset[result_col] == value, result_col] = 'Resistant'
+                
+                # Get unique antibiotic names
                 antibiotic_columns = dataset[mapping_data['antibiotic_name_col']].unique().tolist()
                 request.session['antibiotic_columns'] = antibiotic_columns
-
+                
+                # Transform from long to wide format
                 dataset[antibiotic_columns] = None
-
                 for index, row in dataset.iterrows():
                     antibiotic_name = row[mapping_data['antibiotic_name_col']]
                     result = row[mapping_data['antibiotic_result_col']]
                     dataset.loc[index, antibiotic_name] = result
 
-                request.session['dataset'] = dataset.to_json()
-
+            # Update the dataset in the session
+            request.session['dataset'] = dataset.to_json()
+            
             return render(request, 'main_results.html')
     return redirect('upload_dataset')
+
 
 def validate_file_format(file):
     """Validate CSV file format using extension, MIME type, and content inspection"""
@@ -600,3 +639,58 @@ def generate_scorecards(request):
         # Now we can directly use the structured data returned from the analysis function
         print(f"Generated visualization data with {len(visualization_data['years'])} years and {len(visualization_data['countries'])} countries")
         return JsonResponse(visualization_data)
+
+def get_unique_values(request):
+    """API endpoint to get unique values from a dataset column"""
+    column_name = request.GET.get('column')
+    
+    if not column_name:
+        return JsonResponse({'error': 'Column name not provided'}, status=400)
+    
+    dataset_json = request.session.get('dataset')
+    if not dataset_json:
+        return JsonResponse({'error': 'No dataset in session'}, status=400)
+    
+    try:
+        dataset = pd.read_json(dataset_json)
+        if column_name not in dataset.columns:
+            return JsonResponse({'error': f'Column {column_name} not found'}, status=404)
+        
+        unique_values = dataset[column_name].dropna().unique().tolist()
+        # Convert all values to strings
+        unique_values = [str(val) for val in unique_values if val is not None]
+        
+        return JsonResponse({'values': unique_values})
+    except Exception as e:
+        return JsonResponse({'error': str(e)}, status=500)
+
+def get_columns_with_suffix(request):
+    """API endpoint to get columns with a specific suffix and their unique values"""
+    suffix = request.GET.get('suffix')
+    
+    if not suffix:
+        return JsonResponse({'error': 'Suffix not provided'}, status=400)
+    
+    dataset_json = request.session.get('dataset')
+    if not dataset_json:
+        return JsonResponse({'error': 'No dataset in session'}, status=400)
+    
+    try:
+        dataset = pd.read_json(dataset_json)
+        columns_with_suffix = [col for col in dataset.columns if col.endswith(suffix)]
+        
+        if not columns_with_suffix:
+            return JsonResponse({'error': f'No columns found with suffix {suffix}'}, status=404)
+        
+        # Get all unique values from these columns
+        all_values = []
+        for col in columns_with_suffix:
+            values = dataset[col].dropna().unique().tolist()
+            all_values.extend(values)
+        
+        # Get unique values and convert to strings
+        unique_values = list(set([str(val) for val in all_values if val is not None]))
+        
+        return JsonResponse({'values': unique_values})
+    except Exception as e:
+        return JsonResponse({'error': str(e)}, status=500)

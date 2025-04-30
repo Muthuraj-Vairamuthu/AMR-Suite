@@ -6,7 +6,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dataset Mapping</title>
-
     <link rel="stylesheet" href="{% static 'css/dataset_mapping.css' %}">
 </head>
 <body>
@@ -86,27 +85,60 @@
                             <div class="select-wrapper">
                                 <select name="antibiotic_name_col">
                                     <option value="">Select Column</option>
-                                    {% for column in columns %}
-                                        <option value="{{ column }}">{{ column }}</option>
-                                    {% endfor %}
+                                {% for column in columns %}
+                                    <option value="{{ column }}">{{ column }}</option>
+                                {% endfor %}
                                 </select>
                             </div>
                         </div>
                         <div class="form-group">
                             <label>Antibiotic Result Column<span class="required">*</span></label>
                             <div class="select-wrapper">
-                                <select name="antibiotic_result_col">
+                                <select name="antibiotic_result_col" id="antibioticResultCol">
                                     <option value="">Select Column</option>
-                                    {% for column in columns %}
-                                        <option value="{{ column }}">{{ column }}</option>
-                                    {% endfor %}
+                                {% for column in columns %}
+                                    <option value="{{ column }}">{{ column }}</option>
+                                {% endfor %}
                                 </select>
                             </div>
                         </div>
                     </div>
                 </div>
-    
-                <!-- Section 3: Date Details -->
+
+                <!-- Section 3: Resistance Value Mapping -->
+                <div class="mapping-section" id="resistanceMappingSection">
+                    <h2>Antibiotic Resistance Mapping</h2>
+                    <p class="section-description">Map resistance values to standard categories</p>
+                    
+                    <div class="form-group">
+                        <label>Susceptible Values:</label>
+                        <div class="select-wrapper">
+                            <select name="susceptible_values" multiple id="susceptibleValues" class="multi-select">
+                                <!-- Options will be populated dynamically -->
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Intermediate Values:</label>
+                        <div class="select-wrapper">
+                            <select name="intermediate_values" multiple id="intermediateValues" class="multi-select">
+                                <!-- Options will be populated dynamically -->
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Resistant Values:</label>
+                        <div class="select-wrapper">
+                            <select name="resistant_values" multiple id="resistantValues" class="multi-select">
+                                <!-- Options will be populated dynamically -->
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                    
+                <!-- Section 4: Date Details -->
                 <div class="mapping-section">
                     <h2>Date Details</h2>
                     <div class="form-group">
@@ -136,7 +168,7 @@
                                 </optgroup>
                                 <optgroup label="Single Format">
                                     <option value="YYYY">Year Only (YYYY)</option>
-                                    <option value="MM">Month Only (MM)</option>
+                                    <option value="MM">Month Only (MM</option>
                                     <option value="DD">Day Only (DD)</option>
                                 </optgroup>
                             </select>
@@ -156,7 +188,7 @@
                     </div>
                 </div>
     
-                <!-- Section 4: Clustering Details -->
+                <!-- Section 5: Clustering Details -->
                 <div class="mapping-section">
                     <h2>Clustering Details</h2>
                     
@@ -193,21 +225,180 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const formatSelect = document.getElementById('formatSelect');
+            const antibioticResultCol = document.getElementById('antibioticResultCol');
+            const antibioticFormatInput = document.querySelector('input[name="antibiotic_format"]');
+            const susceptibleValues = document.getElementById('susceptibleValues');
+            const intermediateValues = document.getElementById('intermediateValues');
+            const resistantValues = document.getElementById('resistantValues');
+            const resistanceMappingSection = document.getElementById('resistanceMappingSection');
             
-            // Initial setup based on default selection
+            // Initial setup
             toggleAntibioticFields();
-            
             formatSelect.addEventListener('change', toggleAntibioticFields);
-
+            
+            // Listen for result column selection in Long format
+            if (antibioticResultCol) {
+                antibioticResultCol.addEventListener('change', function() {
+                    if (this.value) {
+                        fetchUniqueValues(this.value);
+                    }
+                });
+            }
+            
+            // Listen for format pattern in Wide format
+            if (antibioticFormatInput) {
+                antibioticFormatInput.addEventListener('change', function() {
+                    if (this.value && formatSelect.value === 'Wide') {
+                        const suffix = this.value.replace('Antibiotic', '');
+                        fetchColumnsWithSuffix(suffix);
+                    }
+                });
+            }
+            
             function toggleAntibioticFields() {
                 const format = formatSelect.value;
                 document.getElementById('longFields').style.display = format === 'Long' ? 'block' : 'none';
                 document.getElementById('wideFields').style.display = format === 'Long' ? 'none' : 'block';
                 
                 // Toggle required attributes
-                document.querySelectorAll('#longFields select').forEach(el => el.required = format === 'Long');
-                document.querySelector('#wideFields input').required = format !== 'Long';
+                document.querySelectorAll('#longFields select').forEach(el => {
+                    el.required = format === 'Long';
+                });
+                
+                if (document.querySelector('#wideFields input')) {
+                    document.querySelector('#wideFields input').required = format !== 'Long';
+                }
             }
+            
+            // Fetch unique values from the server for a specific column
+            function fetchUniqueValues(columnName) {
+                fetch(`/get_unique_values/?column=${columnName}`, {
+                    method: 'GET',
+                    headers: {
+                        'X-Requested-With': 'XMLHttpRequest',
+                        'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value
+                    }
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.values && data.values.length > 0) {
+                        populateSelectFields(data.values);
+                    } else {
+                        console.warn("No unique values found for column:", columnName);
+                    }
+                })
+                .catch(error => {
+                    console.error("Error fetching unique values:", error);
+                    // If API fails, use mock values for testing
+                    populateSelectFields(['Susceptible', 'Intermediate', 'Resistant', 'Dormant', 'S', 'I', 'R']);
+                });
+            }
+            
+            // Fetch columns with a specific suffix and their values
+            function fetchColumnsWithSuffix(suffix) {
+                fetch(`/get_columns_with_suffix/?suffix=${suffix}`, {
+                    method: 'GET',
+                    headers: {
+                        'X-Requested-With': 'XMLHttpRequest',
+                        'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value
+                    }
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.values && data.values.length > 0) {
+                        populateSelectFields(data.values);
+                    } else {
+                        console.warn("No values found for columns with suffix:", suffix);
+                    }
+                })
+                .catch(error => {
+                    console.error("Error fetching columns with suffix:", error);
+                    // If API fails, use mock values for testing
+                    populateSelectFields(['Susceptible', 'Intermediate', 'Resistant', 'Dormant', 'S', 'I', 'R']);
+                });
+            }
+            
+            // Populate all three select fields with the same values
+            function populateSelectFields(values) {
+                clearSelectFields();
+                
+                values.forEach(value => {
+                    addOptionToSelect(susceptibleValues, value);
+                    addOptionToSelect(intermediateValues, value);
+                    addOptionToSelect(resistantValues, value);
+                });
+                
+                // Pre-select common values based on patterns
+                preSelectCommonValues(values);
+            }
+            
+            function clearSelectFields() {
+                susceptibleValues.innerHTML = '';
+                intermediateValues.innerHTML = '';
+                resistantValues.innerHTML = '';
+            }
+            
+            function addOptionToSelect(select, value) {
+                const option = document.createElement('option');
+                option.value = value;
+                option.textContent = value;
+                select.appendChild(option);
+            }
+            
+            // Pre-select options based on common naming patterns
+            function preSelectCommonValues(values) {
+                const lowerValues = values.map(v => String(v).toLowerCase());
+                
+                // Define patterns for each category
+                const susceptiblePatterns = ['susceptible', 'sus', 's', 'sensitive', 'dormant'];
+                const intermediatePatterns = ['intermediate', 'int', 'i'];
+                const resistantPatterns = ['resistant', 'res', 'r'];
+                
+                // Match values to patterns
+                const susceptibleMatches = values.filter((value, index) => 
+                    susceptiblePatterns.some(pattern => lowerValues[index].includes(pattern)));
+                
+                const intermediateMatches = values.filter((value, index) => 
+                    intermediatePatterns.some(pattern => lowerValues[index].includes(pattern)));
+                
+                const resistantMatches = values.filter((value, index) => 
+                    resistantPatterns.some(pattern => lowerValues[index].includes(pattern)));
+                
+                // Select matching options
+                preSelectOptions(susceptibleValues, susceptibleMatches);
+                preSelectOptions(intermediateValues, intermediateMatches);
+                preSelectOptions(resistantValues, resistantMatches);
+            }
+            
+            function preSelectOptions(select, valuesToSelect) {
+                Array.from(select.options).forEach(option => {
+                    option.selected = valuesToSelect.includes(option.value);
+                });
+            }
+            
+            // Add styling for the multiselect fields
+            const style = document.createElement('style');
+            style.textContent = `
+                .multi-select {
+                    height: auto;
+                    min-height: 120px;
+                    width: 100%;
+                    background-color: #e0e0e0;
+                    border: none;
+                    border-radius: 5px;
+                    padding: 8px;
+                }
+                .multi-select option {
+                    padding: 6px;
+                    margin-bottom: 2px;
+                    background-color: #f0f0f0;
+                }
+                .multi-select option:checked {
+                    background-color: #1a2133;
+                    color: white;
+                }
+            `;
+            document.head.appendChild(style);
         });
     </script>
 </body>
