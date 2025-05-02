@@ -230,6 +230,8 @@
       border-radius: 8px;
       overflow: hidden;
       border: 1px solid #ddd;
+      height: 500px; /* ✅ Added fixed height */
+      max-height: 100%;
     }
     svg {
       display: block;
@@ -1001,7 +1003,10 @@
     .call(xAxis)
     .attr("color", "#333");
   
-  const yAxis = d3.axisLeft(yScale).tickFormat(d => Math.round(d));
+  const yAxis = d3.axisLeft(yScale)
+  .ticks(6)  // ✅ Set fewer ticks (adjust as needed)
+  .tickFormat(d => Math.round(d));
+  
   svg.append("g")
     .attr("transform", `translate(50, 0)`)
     .call(yAxis)

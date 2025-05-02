@@ -1,237 +1,174 @@
 Isolate Id,Study,Species,Family,Country,State,Gender,Age Group,Speciality,Source,In / Out Patient,Year,Phenotype,Amikacin_I,Imipenem_I,Meropenem_I,Month,Day
-ID_16381,TEST,Escherichia coli,Enterobacteriaceae,South Africa,Texas,Male,3 to 12 Years,Clinic / Office,Penis,Other,2014,ESBL,Susceptible,Susceptible,Intermediate,0,0
-ID_15838,Inform,Escherichia coli,Enterobacteriaceae,Thailand,Texas,Female,13 to 18 Years,Surgery General,Penis,Outpatient,2014,ESBL,Intermediate,Resistant,Intermediate,0,0
-ID_16669,Atlas,Escherichia coli,Enterobacteriaceae,Sweden,Alabama,,13 to 18 Years,Medicine ICU,Penis,,2014,,Susceptible,Resistant,Susceptible,0,0
-ID_15480,TEST,Escherichia coli,Enterobacteriaceae,Ireland,New Jersey,Male,85 and Over,Nursing Home / Rehab,Penis,,2014,ESBL,Intermediate,Resistant,Resistant,0,0
-ID_14700,Atlas,Escherichia coli,Enterobacteriaceae,Serbia,North Dakota,,85 and Over,Surgery ICU,Penis,Inpatient,2014,ESBL,Resistant,Susceptible,Resistant,0,0
-ID_19899,TEST,Escherichia coli,Enterobacteriaceae,Croatia,California,Female,85 and Over,Surgery ICU,Penis,,2014,,Susceptible,Resistant,Susceptible,0,0
-ID_19609,Inform,Escherichia coli,Enterobacteriaceae,Russia,Ohio,Female,19 to 64 Years,Other,Penis,Outpatient,2014,,Susceptible,Susceptible,Susceptible,0,0
-ID_20367,Inform,Escherichia coli,Enterobacteriaceae,Spain,Indiana,,0 to 2 Years,Pediatric ICU,Penis,,2014,ESBL,Susceptible,Resistant,Resistant,0,0
-ID_20947,Atlas,Escherichia coli,Enterobacteriaceae,Guatemala,California,,65 to 84 Years,Pediatric ICU,Penis,,2014,ESBL,Resistant,Resistant,Susceptible,0,0
-ID_18029,TEST,Escherichia coli,Enterobacteriaceae,Chile,Georgia,Female,19 to 64 Years,Medicine ICU,Penis,Outpatient,2014,,Intermediate,Resistant,Resistant,0,0
-ID_17641,Inform,Escherichia coli,Enterobacteriaceae,Colombia,New Jersey,Male,13 to 18 Years,Medicine ICU,Penis,,2014,,Resistant,Resistant,Intermediate,0,0
-ID_18464,Inform,Escherichia coli,Enterobacteriaceae,Portugal,New York,,3 to 12 Years,Pediatric General,Penis,Outpatient,2014,ESBL,Resistant,Susceptible,Resistant,0,0
-ID_8509,TEST,Escherichia coli,Enterobacteriaceae,Ireland,,Male,Unknown,Pediatric General,Penis,,2014,,Intermediate,Resistant,Susceptible,0,0
-ID_8924,Inform,Escherichia coli,Enterobacteriaceae,Saudi Arabia,Alabama,Female,65 to 84 Years,Nursing Home / Rehab,Penis,Other,2014,ESBL,Intermediate,Susceptible,Intermediate,0,0
-ID_8176,Inform,Escherichia coli,Enterobacteriaceae,Denmark,Indiana,Male,0 to 2 Years,General Unspecified ICU,Penis,Outpatient,2014,,Susceptible,Resistant,Resistant,0,0
-ID_8323,TEST,Escherichia coli,Enterobacteriaceae,Denmark,Illinois,Male,3 to 12 Years,Nursing Home / Rehab,Penis,Other,2014,ESBL,Susceptible,Resistant,Resistant,0,0
-ID_9817,Atlas,Escherichia coli,Enterobacteriaceae,Brazil,Florida,,13 to 18 Years,Nursing Home / Rehab,Penis,Inpatient,2014,ESBL,Intermediate,Resistant,Intermediate,0,0
-ID_7031,TEST,Escherichia coli,Enterobacteriaceae,Ireland,Alabama,Female,0 to 2 Years,Surgery General,Penis,Inpatient,2014,,Susceptible,Resistant,Susceptible,0,0
-ID_13275,Inform,Escherichia coli,Enterobacteriaceae,Morocco,Illinois,Female,19 to 64 Years,Medicine General,Penis,Other,2014,,Susceptible,Susceptible,Intermediate,0,0
-ID_10083,Inform,Escherichia coli,Enterobacteriaceae,Singapore,Michigan,,3 to 12 Years,Medicine General,Penis,,2014,ESBL,Resistant,Susceptible,Resistant,0,0
-ID_31603,Atlas,Escherichia coli,Enterobacteriaceae,Russia,New York,Male,19 to 64 Years,Other,Penis,None Given,2014,,Intermediate,Intermediate,Intermediate,0,0
-ID_29506,Inform,Escherichia coli,Enterobacteriaceae,France,New York,Male,Unknown,Pediatric ICU,Penis,Outpatient,2014,ESBL,Intermediate,Intermediate,Resistant,0,0
-ID_28905,TEST,Escherichia coli,Enterobacteriaceae,Portugal,Georgia,Male,3 to 12 Years,None Given,Penis,Inpatient,2014,,Intermediate,Resistant,Resistant,0,0
-ID_28870,Atlas,Escherichia coli,Enterobacteriaceae,Morocco,California,Female,Unknown,Surgery ICU,Penis,,2014,ESBL,Susceptible,Intermediate,Susceptible,0,0
-ID_30331,Inform,Escherichia coli,Enterobacteriaceae,"Korea, South",Kentucky,Male,0 to 2 Years,Medicine General,Penis,Outpatient,2014,,Resistant,Intermediate,Resistant,0,0
-ID_30539,TEST,Escherichia coli,Enterobacteriaceae,Spain,Indiana,,85 and Over,Nursing Home / Rehab,Penis,Inpatient,2014,ESBL,Susceptible,Resistant,Resistant,0,0
-ID_36071,Inform,Escherichia coli,Enterobacteriaceae,"Korea, South",Texas,Male,Unknown,Medicine ICU,Penis,None Given,2014,ESBL,Intermediate,Intermediate,Intermediate,0,0
-ID_33369,Atlas,Escherichia coli,Enterobacteriaceae,Poland,Texas,Female,0 to 2 Years,Nursing Home / Rehab,Penis,,2014,ESBL,Intermediate,Susceptible,Susceptible,0,0
-ID_34242,TEST,Escherichia coli,Enterobacteriaceae,Portugal,Illinois,,85 and Over,Pediatric General,Penis,Inpatient,2014,ESBL,Susceptible,Intermediate,Susceptible,0,0
-ID_33734,Inform,Escherichia coli,Enterobacteriaceae,Austria,California,Male,13 to 18 Years,None Given,Penis,None Given,2014,ESBL,Susceptible,Intermediate,Resistant,0,0
-ID_23246,Inform,Escherichia coli,Enterobacteriaceae,Costa Rica,Texas,,65 to 84 Years,Emergency Room,Penis,,2014,ESBL,Intermediate,Resistant,Resistant,0,0
-ID_24105,Atlas,Escherichia coli,Enterobacteriaceae,Belgium,Texas,,65 to 84 Years,Pediatric General,Penis,None Given,2014,ESBL,Resistant,Susceptible,Susceptible,0,0
-ID_21894,TEST,Escherichia coli,Enterobacteriaceae,Italy,,Male,0 to 2 Years,Surgery General,Penis,,2014,ESBL,Intermediate,Susceptible,Resistant,0,0
-ID_27434,Inform,Escherichia coli,Enterobacteriaceae,Malaysia,Michigan,Female,0 to 2 Years,Surgery General,Penis,Inpatient,2014,ESBL,Resistant,Resistant,Resistant,0,0
-ID_28594,Inform,Escherichia coli,Enterobacteriaceae,Sweden,California,,0 to 2 Years,Clinic / Office,Penis,Outpatient,2014,ESBL,Intermediate,Resistant,Resistant,0,0
-ID_27942,Inform,Escherichia coli,Enterobacteriaceae,Serbia,Wisconsin,,Unknown,Emergency Room,Penis,None Given,2014,,Intermediate,Intermediate,Intermediate,0,0
-ID_25335,Inform,Escherichia coli,Enterobacteriaceae,Turkey,North Dakota,Female,13 to 18 Years,None Given,Penis,,2014,ESBL,Resistant,Resistant,Susceptible,0,0
-ID_26417,Atlas,Escherichia coli,Enterobacteriaceae,Turkey,Alabama,Male,Unknown,Pediatric General,Penis,None Given,2014,ESBL,Susceptible,Intermediate,Resistant,0,0
-ID_26686,Atlas,Escherichia coli,Enterobacteriaceae,Austria,Pennsylvania,Female,65 to 84 Years,Emergency Room,Penis,Inpatient,2014,,Resistant,Resistant,Susceptible,0,0
-ID_4680,TEST,Escherichia coli,Enterobacteriaceae,Italy,Minnesota,,13 to 18 Years,None Given,Penis,,2014,ESBL,Resistant,Susceptible,Susceptible,0,0
-ID_2597,TEST,Escherichia coli,Enterobacteriaceae,Portugal,Minnesota,,0 to 2 Years,Surgery General,Penis,Outpatient,2014,ESBL,Susceptible,Susceptible,Resistant,0,0
-ID_1345,Inform,Escherichia coli,Enterobacteriaceae,Guatemala,New York,Female,Unknown,Surgery General,Penis,Inpatient,2014,,Resistant,Susceptible,Intermediate,0,0
-ID_961,Atlas,Escherichia coli,Enterobacteriaceae,Greece,North Dakota,Male,13 to 18 Years,Medicine General,Penis,Outpatient,2014,,Resistant,Intermediate,Susceptible,0,0
-ID_2518,Inform,Escherichia coli,Enterobacteriaceae,Pakistan,Florida,,19 to 64 Years,Nursing Home / Rehab,Penis,Outpatient,2014,ESBL,Intermediate,Intermediate,Susceptible,0,0
-ID_5032,Inform,Escherichia coli,Enterobacteriaceae,Hungary,Illinois,Male,85 and Over,General Unspecified ICU,Penis,None Given,2014,ESBL,Susceptible,Intermediate,Susceptible,0,0
-ID_1266,Inform,Escherichia coli,Enterobacteriaceae,Czech Republic,Ohio,Male,19 to 64 Years,Pediatric ICU,Penis,None Given,2014,ESBL,Intermediate,Susceptible,Susceptible,0,0
-ID_4805,Inform,Escherichia coli,Enterobacteriaceae,Chile,Ohio,,19 to 64 Years,General Unspecified ICU,Penis,Other,2014,,Susceptible,Resistant,Susceptible,0,0
-ID_18448,Inform,Escherichia coli,Enterobacteriaceae,Argentina,Wisconsin,Male,19 to 64 Years,Medicine General,Penis,Inpatient,2015,ESBL,Susceptible,Susceptible,Resistant,0,0
-ID_19122,TEST,Escherichia coli,Enterobacteriaceae,Latvia,Colorado,,19 to 64 Years,None Given,Penis,Outpatient,2015,,Intermediate,Intermediate,Resistant,0,0
-ID_1904,Inform,Escherichia coli,Enterobacteriaceae,Dominican Republic,Washington,Female,19 to 64 Years,None Given,Penis,None Given,2015,,Susceptible,Resistant,Intermediate,0,0
-ID_1895,TEST,Escherichia coli,Enterobacteriaceae,Turkey,Colorado,Male,13 to 18 Years,None Given,Penis,,2015,,Intermediate,Susceptible,Susceptible,0,0
-ID_15257,Inform,Escherichia coli,Enterobacteriaceae,Jordan,Washington,Female,3 to 12 Years,Medicine General,Penis,Inpatient,2015,ESBL,Susceptible,Resistant,Susceptible,0,0
-ID_33195,Atlas,Escherichia coli,Enterobacteriaceae,Canada,Minnesota,,13 to 18 Years,Medicine General,Penis,None Given,2015,ESBL,Susceptible,Resistant,Susceptible,0,0
-ID_3614,Atlas,Escherichia coli,Enterobacteriaceae,Canada,Illinois,,19 to 64 Years,Other,Penis,Inpatient,2015,ESBL,Resistant,Susceptible,Resistant,0,0
-ID_5025,Inform,Escherichia coli,Enterobacteriaceae,Romania,Ohio,Female,13 to 18 Years,Other,Penis,Other,2015,ESBL,Resistant,Resistant,Intermediate,0,0
-ID_1040,Inform,Escherichia coli,Enterobacteriaceae,Austria,New Jersey,,65 to 84 Years,Pediatric General,Penis,Other,2015,,Susceptible,Susceptible,Resistant,0,0
-ID_19882,Atlas,Escherichia coli,Enterobacteriaceae,Netherlands,Minnesota,Male,19 to 64 Years,Medicine General,Penis,None Given,2015,ESBL,Susceptible,Resistant,Intermediate,0,0
-ID_19933,TEST,Escherichia coli,Enterobacteriaceae,Belgium,Florida,Male,85 and Over,General Unspecified ICU,Penis,Inpatient,2015,ESBL,Susceptible,Intermediate,Intermediate,0,0
-ID_31754,Atlas,Escherichia coli,Enterobacteriaceae,Brazil,Colorado,Male,3 to 12 Years,Surgery General,Penis,None Given,2015,ESBL,Intermediate,Intermediate,Intermediate,0,0
-ID_13625,TEST,Escherichia coli,Enterobacteriaceae,Czech Republic,Alabama,Male,19 to 64 Years,None Given,Penis,Inpatient,2015,ESBL,Resistant,Intermediate,Susceptible,0,0
-ID_18642,Inform,Escherichia coli,Enterobacteriaceae,Finland,Pennsylvania,,19 to 64 Years,Medicine ICU,Penis,,2015,ESBL,Resistant,Intermediate,Susceptible,0,0
-ID_19643,Inform,Escherichia coli,Enterobacteriaceae,Ireland,North Dakota,,65 to 84 Years,Pediatric General,Penis,Outpatient,2015,,Resistant,Resistant,Intermediate,0,0
-ID_19525,TEST,Escherichia coli,Enterobacteriaceae,Singapore,Minnesota,,Unknown,Medicine ICU,Penis,Outpatient,2015,,Intermediate,Susceptible,Resistant,0,0
-ID_14334,Inform,Escherichia coli,Enterobacteriaceae,Philippines,,Female,19 to 64 Years,Surgery ICU,Penis,,2015,ESBL,Susceptible,Susceptible,Intermediate,0,0
-ID_28289,TEST,Escherichia coli,Enterobacteriaceae,Belgium,North Dakota,,65 to 84 Years,Nursing Home / Rehab,Penis,Inpatient,2015,ESBL,Intermediate,Intermediate,Intermediate,0,0
-ID_32265,Inform,Escherichia coli,Enterobacteriaceae,India,Florida,Male,19 to 64 Years,Medicine General,Penis,Inpatient,2015,ESBL,Resistant,Intermediate,Intermediate,0,0
-ID_29286,Inform,Escherichia coli,Enterobacteriaceae,Jordan,,Female,0 to 2 Years,Pediatric ICU,Penis,None Given,2015,,Intermediate,Susceptible,Resistant,0,0
-ID_29288,Inform,Escherichia coli,Enterobacteriaceae,Argentina,Florida,,3 to 12 Years,Nursing Home / Rehab,Penis,None Given,2015,ESBL,Resistant,Resistant,Susceptible,0,0
-ID_5707,TEST,Escherichia coli,Enterobacteriaceae,Greece,Texas,,Unknown,Other,Penis,Outpatient,2015,,Susceptible,Resistant,Susceptible,0,0
-ID_23891,TEST,Escherichia coli,Enterobacteriaceae,Netherlands,Alabama,Female,Unknown,General Unspecified ICU,Penis,Inpatient,2015,,Susceptible,Susceptible,Resistant,0,0
-ID_23496,TEST,Escherichia coli,Enterobacteriaceae,Jordan,New Jersey,,85 and Over,Nursing Home / Rehab,Penis,Other,2015,ESBL,Intermediate,Resistant,Susceptible,0,0
-ID_29720,Atlas,Escherichia coli,Enterobacteriaceae,Thailand,North Dakota,Female,0 to 2 Years,Nursing Home / Rehab,Penis,None Given,2015,,Resistant,Resistant,Intermediate,0,0
-ID_36591,TEST,Escherichia coli,Enterobacteriaceae,Saudi Arabia,Kentucky,,65 to 84 Years,General Unspecified ICU,Penis,Other,2015,ESBL,Resistant,Susceptible,Intermediate,0,0
-ID_24760,TEST,Escherichia coli,Enterobacteriaceae,Czech Republic,Washington,Male,13 to 18 Years,Surgery ICU,Penis,,2015,ESBL,Resistant,Susceptible,Intermediate,0,0
-ID_6068,TEST,Escherichia coli,Enterobacteriaceae,Italy,Florida,Male,65 to 84 Years,Surgery General,Penis,None Given,2015,,Resistant,Resistant,Intermediate,0,0
-ID_17493,Atlas,Escherichia coli,Enterobacteriaceae,United Kingdom,Illinois,Female,85 and Over,Clinic / Office,Penis,,2015,,Intermediate,Resistant,Intermediate,0,0
-ID_17418,Atlas,Escherichia coli,Enterobacteriaceae,India,Alabama,,0 to 2 Years,Pediatric ICU,Penis,,2015,,Intermediate,Intermediate,Resistant,0,0
-ID_36047,TEST,Escherichia coli,Enterobacteriaceae,Malaysia,Wisconsin,Female,19 to 64 Years,General Unspecified ICU,Penis,Outpatient,2015,ESBL,Intermediate,Intermediate,Resistant,0,0
-ID_22417,Atlas,Escherichia coli,Enterobacteriaceae,Greece,Wisconsin,Male,13 to 18 Years,Clinic / Office,Penis,,2015,ESBL,Intermediate,Susceptible,Resistant,0,0
-ID_34359,TEST,Escherichia coli,Enterobacteriaceae,Italy,Washington,Male,65 to 84 Years,Clinic / Office,Penis,None Given,2015,,Resistant,Intermediate,Intermediate,0,0
-ID_5343,Inform,Escherichia coli,Enterobacteriaceae,Turkey,New York,Male,0 to 2 Years,Nursing Home / Rehab,Penis,None Given,2015,ESBL,Resistant,Resistant,Susceptible,0,0
-ID_21871,TEST,Escherichia coli,Enterobacteriaceae,Romania,Florida,Female,0 to 2 Years,Surgery ICU,Penis,Outpatient,2015,ESBL,Resistant,Susceptible,Susceptible,0,0
-ID_34060,Atlas,Escherichia coli,Enterobacteriaceae,Romania,Florida,Female,Unknown,Pediatric ICU,Penis,Other,2015,ESBL,Resistant,Intermediate,Intermediate,0,0
-ID_26533,TEST,Escherichia coli,Enterobacteriaceae,Germany,,,0 to 2 Years,Emergency Room,Penis,None Given,2015,ESBL,Resistant,Intermediate,Susceptible,0,0
-ID_16409,Inform,Escherichia coli,Enterobacteriaceae,Serbia,Florida,,85 and Over,Surgery General,Penis,Outpatient,2015,ESBL,Susceptible,Intermediate,Resistant,0,0
-ID_26419,TEST,Escherichia coli,Enterobacteriaceae,Philippines,Kentucky,,19 to 64 Years,Medicine ICU,Penis,Other,2015,,Susceptible,Resistant,Susceptible,0,0
-ID_34154,TEST,Escherichia coli,Enterobacteriaceae,Israel,Georgia,Female,85 and Over,Emergency Room,Penis,,2015,ESBL,Resistant,Intermediate,Intermediate,0,0
-ID_21758,Atlas,Escherichia coli,Enterobacteriaceae,Panama,Kentucky,Male,85 and Over,Clinic / Office,Penis,Inpatient,2015,ESBL,Susceptible,Resistant,Susceptible,0,0
-ID_21776,Atlas,Escherichia coli,Enterobacteriaceae,Netherlands,Florida,Female,19 to 64 Years,Nursing Home / Rehab,Penis,Inpatient,2015,,Resistant,Resistant,Intermediate,0,0
-ID_29846,Inform,Escherichia coli,Enterobacteriaceae,Philippines,New Jersey,,65 to 84 Years,Pediatric General,Penis,Inpatient,2015,ESBL,Resistant,Susceptible,Susceptible,0,0
-ID_2658,Atlas,Escherichia coli,Enterobacteriaceae,Latvia,Pennsylvania,,65 to 84 Years,Pediatric ICU,Penis,Outpatient,2015,ESBL,Resistant,Resistant,Resistant,0,0
-ID_30121,TEST,Escherichia coli,Enterobacteriaceae,Italy,Florida,Male,65 to 84 Years,Surgery ICU,Penis,Inpatient,2015,,Susceptible,Resistant,Susceptible,0,0
-ID_9130,TEST,Escherichia coli,Enterobacteriaceae,Singapore,North Dakota,,Unknown,Clinic / Office,Penis,None Given,2015,ESBL,Intermediate,Resistant,Resistant,0,0
-ID_3699,TEST,Escherichia coli,Enterobacteriaceae,Japan,Kentucky,Male,3 to 12 Years,Surgery ICU,Penis,None Given,2015,,Intermediate,Intermediate,Intermediate,0,0
-ID_21807,TEST,Escherichia coli,Enterobacteriaceae,South Africa,Pennsylvania,Male,Unknown,Pediatric General,Penis,Inpatient,2015,,Susceptible,Susceptible,Intermediate,0,0
-ID_28800,Atlas,Escherichia coli,Enterobacteriaceae,Venezuela,Colorado,Male,65 to 84 Years,Nursing Home / Rehab,Penis,None Given,2016,ESBL,Susceptible,Resistant,Resistant,0,0
-ID_17814,Inform,Escherichia coli,Enterobacteriaceae,Croatia,Alabama,Male,85 and Over,Pediatric ICU,Penis,Other,2016,,Susceptible,Intermediate,Susceptible,0,0
-ID_28612,TEST,Escherichia coli,Enterobacteriaceae,United Kingdom,Kentucky,,19 to 64 Years,Clinic / Office,Penis,Outpatient,2016,,Susceptible,Susceptible,Susceptible,0,0
-ID_28849,Atlas,Escherichia coli,Enterobacteriaceae,Thailand,Ohio,Male,3 to 12 Years,Medicine ICU,Penis,Inpatient,2016,,Susceptible,Resistant,Intermediate,0,0
-ID_26063,Atlas,Escherichia coli,Enterobacteriaceae,France,Colorado,Male,0 to 2 Years,Pediatric ICU,Penis,None Given,2016,ESBL,Susceptible,Resistant,Intermediate,0,0
-ID_26620,Atlas,Escherichia coli,Enterobacteriaceae,Sweden,Nebraska,Male,13 to 18 Years,None Given,Penis,Inpatient,2016,,Resistant,Susceptible,Intermediate,0,0
-ID_26290,Atlas,Escherichia coli,Enterobacteriaceae,Romania,Pennsylvania,Male,19 to 64 Years,Other,Penis,Other,2016,,Intermediate,Susceptible,Susceptible,0,0
-ID_2260,Inform,Escherichia coli,Enterobacteriaceae,Japan,Minnesota,Male,0 to 2 Years,Emergency Room,Penis,Other,2016,,Resistant,Resistant,Resistant,0,0
-ID_24943,Atlas,Escherichia coli,Enterobacteriaceae,China,Minnesota,Female,85 and Over,Medicine ICU,Penis,Inpatient,2016,,Intermediate,Susceptible,Susceptible,0,0
-ID_23883,TEST,Escherichia coli,Enterobacteriaceae,Australia,Washington,,Unknown,General Unspecified ICU,Penis,Outpatient,2016,ESBL,Resistant,Susceptible,Intermediate,0,0
-ID_23825,TEST,Escherichia coli,Enterobacteriaceae,Serbia,Wisconsin,Male,65 to 84 Years,Medicine General,Penis,Other,2016,ESBL,Susceptible,Resistant,Intermediate,0,0
-ID_20044,TEST,Escherichia coli,Enterobacteriaceae,Dominican Republic,Pennsylvania,,3 to 12 Years,None Given,Penis,,2016,ESBL,Intermediate,Intermediate,Susceptible,0,0
-ID_21589,Inform,Escherichia coli,Enterobacteriaceae,Taiwan,Colorado,Female,3 to 12 Years,Other,Penis,Inpatient,2016,ESBL,Susceptible,Resistant,Resistant,0,0
-ID_20732,Inform,Escherichia coli,Enterobacteriaceae,Turkey,Nebraska,Female,0 to 2 Years,Surgery General,Penis,Outpatient,2016,ESBL,Susceptible,Susceptible,Susceptible,0,0
-ID_20867,TEST,Escherichia coli,Enterobacteriaceae,United States,Ohio,Female,19 to 64 Years,Clinic / Office,Penis,None Given,2016,,Susceptible,Resistant,Intermediate,0,0
-ID_12389,Atlas,Escherichia coli,Enterobacteriaceae,Netherlands,Washington,Male,0 to 2 Years,None Given,Penis,Other,2016,ESBL,Resistant,Resistant,Susceptible,0,0
-ID_35278,TEST,Escherichia coli,Enterobacteriaceae,Canada,Nebraska,Female,19 to 64 Years,Pediatric General,Penis,Inpatient,2016,ESBL,Intermediate,Susceptible,Intermediate,0,0
-ID_12435,Atlas,Escherichia coli,Enterobacteriaceae,United States,Washington,,3 to 12 Years,Pediatric ICU,Penis,,2016,,Resistant,Resistant,Intermediate,0,0
-ID_32797,Atlas,Escherichia coli,Enterobacteriaceae,Venezuela,Pennsylvania,Female,85 and Over,Nursing Home / Rehab,Penis,Outpatient,2016,ESBL,Susceptible,Intermediate,Intermediate,0,0
-ID_35321,Inform,Escherichia coli,Enterobacteriaceae,Belgium,New York,,19 to 64 Years,General Unspecified ICU,Penis,Outpatient,2016,,Resistant,Intermediate,Intermediate,0,0
-ID_33096,Atlas,Escherichia coli,Enterobacteriaceae,Switzerland,Indiana,Male,85 and Over,Emergency Room,Penis,None Given,2016,,Resistant,Susceptible,Susceptible,0,0
-ID_12052,Atlas,Escherichia coli,Enterobacteriaceae,Belgium,Texas,,13 to 18 Years,Surgery General,Penis,Other,2016,ESBL,Susceptible,Intermediate,Intermediate,0,0
-ID_901,TEST,Escherichia coli,Enterobacteriaceae,Japan,,,0 to 2 Years,Clinic / Office,Penis,,2016,,Resistant,Intermediate,Resistant,0,0
-ID_7700,TEST,Escherichia coli,Enterobacteriaceae,Austria,Nebraska,Male,65 to 84 Years,Clinic / Office,Penis,None Given,2016,ESBL,Resistant,Susceptible,Intermediate,0,0
-ID_34117,TEST,Escherichia coli,Enterobacteriaceae,Greece,New Jersey,Male,65 to 84 Years,Emergency Room,Penis,None Given,2016,,Resistant,Susceptible,Resistant,0,0
-ID_33374,Atlas,Escherichia coli,Enterobacteriaceae,Kuwait,Michigan,,3 to 12 Years,Emergency Room,Penis,Outpatient,2016,,Intermediate,Resistant,Intermediate,0,0
-ID_8622,Atlas,Escherichia coli,Enterobacteriaceae,South Africa,Florida,Female,0 to 2 Years,Medicine General,Penis,,2016,ESBL,Intermediate,Susceptible,Resistant,0,0
-ID_33781,TEST,Escherichia coli,Enterobacteriaceae,France,Ohio,Female,65 to 84 Years,None Given,Penis,None Given,2016,ESBL,Resistant,Resistant,Resistant,0,0
-ID_5526,Atlas,Escherichia coli,Enterobacteriaceae,Sweden,Illinois,,13 to 18 Years,Other,Penis,None Given,2016,,Intermediate,Resistant,Susceptible,0,0
-ID_596,TEST,Escherichia coli,Enterobacteriaceae,United Kingdom,Texas,Male,85 and Over,Surgery ICU,Penis,Inpatient,2016,ESBL,Resistant,Intermediate,Intermediate,0,0
-ID_34898,TEST,Escherichia coli,Enterobacteriaceae,Poland,Kentucky,Female,85 and Over,Clinic / Office,Penis,Other,2016,,Resistant,Susceptible,Susceptible,0,0
-ID_15724,Atlas,Escherichia coli,Enterobacteriaceae,Sweden,Florida,Male,Unknown,Medicine ICU,Penis,,2016,ESBL,Susceptible,Intermediate,Intermediate,0,0
-ID_20,Inform,Escherichia coli,Enterobacteriaceae,Belgium,Kentucky,,Unknown,Pediatric ICU,Penis,Outpatient,2016,,Resistant,Resistant,Resistant,0,0
-ID_36554,Inform,Escherichia coli,Enterobacteriaceae,Belgium,Nebraska,,13 to 18 Years,Other,Penis,Outpatient,2016,ESBL,Resistant,Intermediate,Resistant,0,0
-ID_16470,TEST,Escherichia coli,Enterobacteriaceae,Thailand,Minnesota,Male,13 to 18 Years,Medicine ICU,Penis,Inpatient,2016,,Resistant,Intermediate,Resistant,0,0
-ID_32,Atlas,Escherichia coli,Enterobacteriaceae,Czech Republic,North Dakota,Male,Unknown,Nursing Home / Rehab,Penis,,2016,,Susceptible,Resistant,Intermediate,0,0
-ID_36514,Atlas,Escherichia coli,Enterobacteriaceae,Ukraine,North Dakota,,19 to 64 Years,Surgery General,Penis,None Given,2016,,Intermediate,Susceptible,Intermediate,0,0
-ID_1299,TEST,Escherichia coli,Enterobacteriaceae,South Africa,Kentucky,Male,65 to 84 Years,Pediatric General,Penis,Inpatient,2016,,Intermediate,Intermediate,Resistant,0,0
-ID_1294,TEST,Escherichia coli,Enterobacteriaceae,Philippines,California,Male,19 to 64 Years,Pediatric ICU,Penis,Outpatient,2016,ESBL,Resistant,Intermediate,Resistant,0,0
-ID_4386,Atlas,Escherichia coli,Enterobacteriaceae,Canada,Washington,Male,0 to 2 Years,Clinic / Office,Penis,,2016,,Susceptible,Intermediate,Intermediate,0,0
-ID_31233,Atlas,Escherichia coli,Enterobacteriaceae,Hong Kong,New Jersey,,19 to 64 Years,Surgery General,Penis,Outpatient,2016,ESBL,Intermediate,Intermediate,Intermediate,0,0
-ID_14044,Inform,Escherichia coli,Enterobacteriaceae,Saudi Arabia,Georgia,Male,65 to 84 Years,Emergency Room,Penis,None Given,2016,,Resistant,Intermediate,Intermediate,0,0
-ID_13968,TEST,Escherichia coli,Enterobacteriaceae,Japan,Michigan,Female,19 to 64 Years,General Unspecified ICU,Penis,None Given,2016,ESBL,Intermediate,Resistant,Resistant,0,0
-ID_121,Inform,Escherichia coli,Enterobacteriaceae,Serbia,,,0 to 2 Years,Surgery General,Penis,None Given,2016,,Susceptible,Intermediate,Intermediate,0,0
-ID_7090,Atlas,Escherichia coli,Enterobacteriaceae,Thailand,Pennsylvania,,3 to 12 Years,Nursing Home / Rehab,Penis,Other,2016,ESBL,Intermediate,Resistant,Resistant,0,0
-ID_25749,Inform,Escherichia coli,Enterobacteriaceae,Taiwan,Kentucky,,85 and Over,Clinic / Office,Penis,Other,2017,ESBL,Intermediate,Intermediate,Intermediate,0,0
-ID_35211,TEST,Escherichia coli,Enterobacteriaceae,Spain,Washington,Male,65 to 84 Years,None Given,Penis,Outpatient,2017,,Intermediate,Intermediate,Resistant,0,0
-ID_36045,Inform,Escherichia coli,Enterobacteriaceae,Lithuania,Kentucky,Female,65 to 84 Years,Nursing Home / Rehab,Penis,None Given,2017,,Intermediate,Intermediate,Susceptible,0,0
-ID_24808,TEST,Escherichia coli,Enterobacteriaceae,Costa Rica,Kentucky,Female,Unknown,Medicine ICU,Penis,,2017,,Resistant,Intermediate,Susceptible,0,0
-ID_35579,TEST,Escherichia coli,Enterobacteriaceae,Lithuania,Texas,Male,13 to 18 Years,Medicine General,Penis,Inpatient,2017,ESBL,Susceptible,Resistant,Resistant,0,0
-ID_35863,Inform,Escherichia coli,Enterobacteriaceae,Pakistan,Pennsylvania,Female,65 to 84 Years,Other,Penis,,2017,,Resistant,Susceptible,Susceptible,0,0
-ID_34763,Inform,Escherichia coli,Enterobacteriaceae,Portugal,Michigan,,85 and Over,Surgery General,Penis,Outpatient,2017,ESBL,Resistant,Resistant,Resistant,0,0
-ID_29839,Atlas,Escherichia coli,Enterobacteriaceae,Malaysia,Nebraska,,Unknown,Emergency Room,Penis,Outpatient,2017,,Susceptible,Susceptible,Intermediate,0,0
-ID_30197,Inform,Escherichia coli,Enterobacteriaceae,Croatia,Nebraska,Male,Unknown,General Unspecified ICU,Penis,Other,2017,ESBL,Resistant,Susceptible,Susceptible,0,0
-ID_26956,Atlas,Escherichia coli,Enterobacteriaceae,Brazil,Colorado,,19 to 64 Years,Surgery General,Penis,,2017,,Intermediate,Intermediate,Susceptible,0,0
-ID_33487,Atlas,Escherichia coli,Enterobacteriaceae,Finland,New York,Female,3 to 12 Years,Other,Penis,Outpatient,2017,ESBL,Resistant,Resistant,Susceptible,0,0
-ID_1908,Inform,Escherichia coli,Enterobacteriaceae,Ireland,Pennsylvania,Male,0 to 2 Years,Surgery General,Penis,Outpatient,2017,,Resistant,Intermediate,Resistant,0,0
-ID_34365,TEST,Escherichia coli,Enterobacteriaceae,Singapore,Nebraska,Male,85 and Over,Medicine ICU,Penis,Outpatient,2017,,Intermediate,Susceptible,Intermediate,0,0
-ID_32528,Inform,Escherichia coli,Enterobacteriaceae,Poland,Florida,,85 and Over,Surgery ICU,Penis,None Given,2017,,Resistant,Resistant,Intermediate,0,0
-ID_897,TEST,Escherichia coli,Enterobacteriaceae,Belgium,New Jersey,,65 to 84 Years,Pediatric General,Penis,Inpatient,2017,,Intermediate,Intermediate,Resistant,0,0
-ID_1857,TEST,Escherichia coli,Enterobacteriaceae,Venezuela,Wisconsin,Female,19 to 64 Years,Nursing Home / Rehab,Penis,Other,2017,ESBL,Susceptible,Resistant,Susceptible,0,0
-ID_33061,Atlas,Escherichia coli,Enterobacteriaceae,Switzerland,New Jersey,Male,19 to 64 Years,Pediatric ICU,Penis,Outpatient,2017,,Resistant,Intermediate,Susceptible,0,0
-ID_27049,Inform,Escherichia coli,Enterobacteriaceae,Philippines,Kentucky,Male,85 and Over,Medicine ICU,Penis,None Given,2017,,Resistant,Susceptible,Intermediate,0,0
-ID_33103,Atlas,Escherichia coli,Enterobacteriaceae,United Kingdom,Indiana,Female,3 to 12 Years,None Given,Penis,Other,2017,,Intermediate,Resistant,Susceptible,0,0
-ID_32691,Inform,Escherichia coli,Enterobacteriaceae,Jordan,Kentucky,,13 to 18 Years,Surgery ICU,Penis,None Given,2017,,Susceptible,Susceptible,Intermediate,0,0
-ID_17927,TEST,Escherichia coli,Enterobacteriaceae,Brazil,Nebraska,Male,0 to 2 Years,Pediatric ICU,Penis,None Given,2017,ESBL,Resistant,Susceptible,Susceptible,0,0
-ID_17852,TEST,Escherichia coli,Enterobacteriaceae,Panama,Ohio,Male,0 to 2 Years,Medicine General,Penis,,2017,,Intermediate,Susceptible,Resistant,0,0
-ID_10055,Inform,Escherichia coli,Enterobacteriaceae,Japan,Indiana,,65 to 84 Years,Medicine General,Penis,None Given,2017,,Resistant,Intermediate,Intermediate,0,0
-ID_11037,Atlas,Escherichia coli,Enterobacteriaceae,Portugal,Wisconsin,Female,85 and Over,Nursing Home / Rehab,Penis,Inpatient,2017,,Susceptible,Susceptible,Resistant,0,0
-ID_17549,Inform,Escherichia coli,Enterobacteriaceae,Saudi Arabia,Pennsylvania,Female,3 to 12 Years,Medicine ICU,Penis,Other,2017,,Intermediate,Intermediate,Intermediate,0,0
-ID_9114,Inform,Escherichia coli,Enterobacteriaceae,Thailand,Florida,Male,Unknown,Clinic / Office,Penis,,2017,,Intermediate,Intermediate,Susceptible,0,0
-ID_3299,Inform,Escherichia coli,Enterobacteriaceae,Netherlands,,Male,Unknown,None Given,Penis,Inpatient,2017,,Intermediate,Intermediate,Susceptible,0,0
-ID_3264,Atlas,Escherichia coli,Enterobacteriaceae,Romania,Wisconsin,Male,65 to 84 Years,Surgery General,Penis,None Given,2017,,Resistant,Susceptible,Susceptible,0,0
-ID_8976,Atlas,Escherichia coli,Enterobacteriaceae,Japan,New York,Male,3 to 12 Years,Surgery ICU,Penis,Inpatient,2017,,Resistant,Intermediate,Intermediate,0,0
-ID_18898,Inform,Escherichia coli,Enterobacteriaceae,Morocco,Washington,Female,65 to 84 Years,General Unspecified ICU,Penis,Other,2017,,Susceptible,Susceptible,Susceptible,0,0
-ID_19524,TEST,Escherichia coli,Enterobacteriaceae,United States,Ohio,Female,13 to 18 Years,Pediatric ICU,Penis,None Given,2017,ESBL,Resistant,Intermediate,Resistant,0,0
-ID_4383,Atlas,Escherichia coli,Enterobacteriaceae,Japan,Kentucky,,3 to 12 Years,Medicine ICU,Penis,None Given,2017,ESBL,Susceptible,Intermediate,Intermediate,0,0
-ID_4704,Atlas,Escherichia coli,Enterobacteriaceae,Portugal,Michigan,Male,3 to 12 Years,Surgery General,Penis,Outpatient,2017,,Resistant,Resistant,Resistant,0,0
-ID_12979,Inform,Escherichia coli,Enterobacteriaceae,Jordan,Illinois,Female,3 to 12 Years,General Unspecified ICU,Penis,Other,2017,ESBL,Resistant,Resistant,Intermediate,0,0
-ID_16129,Atlas,Escherichia coli,Enterobacteriaceae,Portugal,Michigan,,13 to 18 Years,None Given,Penis,Inpatient,2017,ESBL,Intermediate,Intermediate,Intermediate,0,0
-ID_5038,TEST,Escherichia coli,Enterobacteriaceae,Singapore,North Dakota,Male,3 to 12 Years,None Given,Penis,Outpatient,2017,,Resistant,Intermediate,Intermediate,0,0
-ID_15147,Atlas,Escherichia coli,Enterobacteriaceae,Austria,Ohio,Male,3 to 12 Years,General Unspecified ICU,Penis,Inpatient,2017,ESBL,Susceptible,Resistant,Susceptible,0,0
-ID_4218,TEST,Escherichia coli,Enterobacteriaceae,Singapore,Michigan,Female,3 to 12 Years,Other,Penis,,2017,ESBL,Resistant,Susceptible,Intermediate,0,0
-ID_2882,TEST,Escherichia coli,Enterobacteriaceae,Costa Rica,Texas,Male,Unknown,Clinic / Office,Penis,None Given,2017,,Intermediate,Resistant,Resistant,0,0
-ID_6707,TEST,Escherichia coli,Enterobacteriaceae,China,Ohio,,85 and Over,General Unspecified ICU,Penis,Other,2017,ESBL,Resistant,Resistant,Resistant,0,0
-ID_21590,Inform,Escherichia coli,Enterobacteriaceae,Turkey,Wisconsin,,85 and Over,Medicine ICU,Penis,None Given,2017,ESBL,Intermediate,Resistant,Susceptible,0,0
-ID_21567,Inform,Escherichia coli,Enterobacteriaceae,Sweden,Indiana,Female,85 and Over,Medicine General,Penis,Other,2017,ESBL,Susceptible,Susceptible,Resistant,0,0
-ID_7009,TEST,Escherichia coli,Enterobacteriaceae,Romania,North Dakota,Male,85 and Over,Surgery ICU,Penis,Outpatient,2017,ESBL,Intermediate,Intermediate,Intermediate,0,0
-ID_7115,TEST,Escherichia coli,Enterobacteriaceae,Jordan,Michigan,Male,13 to 18 Years,General Unspecified ICU,Penis,Inpatient,2017,,Resistant,Resistant,Resistant,0,0
-ID_22361,Atlas,Escherichia coli,Enterobacteriaceae,Turkey,Wisconsin,Female,19 to 64 Years,Other,Penis,,2017,,Susceptible,Intermediate,Intermediate,0,0
-ID_8452,Atlas,Escherichia coli,Enterobacteriaceae,Hong Kong,Pennsylvania,Male,3 to 12 Years,None Given,Penis,Inpatient,2017,ESBL,Susceptible,Resistant,Resistant,0,0
-ID_8363,Atlas,Escherichia coli,Enterobacteriaceae,Romania,Illinois,Female,19 to 64 Years,Medicine ICU,Penis,None Given,2017,ESBL,Susceptible,Resistant,Susceptible,0,0
-ID_8711,Inform,Escherichia coli,Enterobacteriaceae,Lithuania,Kentucky,,19 to 64 Years,Clinic / Office,Penis,Outpatient,2017,,Susceptible,Intermediate,Resistant,0,0
-ID_24695,TEST,Escherichia coli,Enterobacteriaceae,Serbia,Indiana,Female,13 to 18 Years,Surgery ICU,Penis,Outpatient,2017,ESBL,Resistant,Intermediate,Intermediate,0,0
-ID_6409,Inform,Escherichia coli,Enterobacteriaceae,Thailand,Colorado,Male,85 and Over,Emergency Room,Penis,,2017,ESBL,Resistant,Resistant,Susceptible,0,0
-ID_32540,Atlas,Escherichia coli,Enterobacteriaceae,France,Georgia,Female,0 to 2 Years,Surgery General,Penis,None Given,2018,,Susceptible,Resistant,Intermediate,0,0
-ID_13225,Inform,Escherichia coli,Enterobacteriaceae,Switzerland,Pennsylvania,Female,65 to 84 Years,Surgery ICU,Penis,Other,2018,ESBL,Resistant,Intermediate,Intermediate,0,0
-ID_11801,Atlas,Escherichia coli,Enterobacteriaceae,Saudi Arabia,Illinois,Female,13 to 18 Years,Medicine General,Penis,Other,2018,,Intermediate,Susceptible,Resistant,0,0
-ID_32519,TEST,Escherichia coli,Enterobacteriaceae,Italy,California,Female,Unknown,Clinic / Office,Penis,Outpatient,2018,,Intermediate,Intermediate,Susceptible,0,0
-ID_12689,Inform,Escherichia coli,Enterobacteriaceae,Chile,New York,Female,19 to 64 Years,None Given,Penis,None Given,2018,,Susceptible,Resistant,Susceptible,0,0
-ID_5958,TEST,Escherichia coli,Enterobacteriaceae,Panama,North Dakota,,13 to 18 Years,Surgery ICU,Penis,Inpatient,2018,,Susceptible,Susceptible,Intermediate,0,0
-ID_791,Inform,Escherichia coli,Enterobacteriaceae,Saudi Arabia,New Jersey,Female,19 to 64 Years,Surgery ICU,Penis,Inpatient,2018,,Susceptible,Intermediate,Resistant,0,0
-ID_34382,TEST,Escherichia coli,Enterobacteriaceae,Romania,New Jersey,,Unknown,Surgery ICU,Penis,Other,2018,ESBL,Susceptible,Intermediate,Susceptible,0,0
-ID_9892,Inform,Escherichia coli,Enterobacteriaceae,Mexico,Texas,Male,85 and Over,Surgery General,Penis,None Given,2018,ESBL,Resistant,Resistant,Susceptible,0,0
-ID_11167,Inform,Escherichia coli,Enterobacteriaceae,Sweden,Minnesota,,65 to 84 Years,Emergency Room,Penis,None Given,2018,,Intermediate,Intermediate,Susceptible,0,0
-ID_35751,Atlas,Escherichia coli,Enterobacteriaceae,Jordan,,Female,19 to 64 Years,Pediatric General,Penis,None Given,2018,,Susceptible,Resistant,Intermediate,0,0
-ID_5083,Atlas,Escherichia coli,Enterobacteriaceae,Pakistan,Nebraska,Female,0 to 2 Years,Pediatric General,Penis,Inpatient,2018,,Intermediate,Susceptible,Intermediate,0,0
-ID_7307,Atlas,Escherichia coli,Enterobacteriaceae,United Kingdom,California,Male,Unknown,Surgery ICU,Penis,,2018,,Resistant,Susceptible,Susceptible,0,0
-ID_33803,TEST,Escherichia coli,Enterobacteriaceae,Denmark,,Female,Unknown,Nursing Home / Rehab,Penis,Other,2018,,Intermediate,Intermediate,Intermediate,0,0
-ID_33741,TEST,Escherichia coli,Enterobacteriaceae,Croatia,California,Male,13 to 18 Years,None Given,Penis,Other,2018,ESBL,Susceptible,Intermediate,Resistant,0,0
-ID_3092,Inform,Escherichia coli,Enterobacteriaceae,Hong Kong,Pennsylvania,Female,65 to 84 Years,Medicine ICU,Penis,,2018,,Resistant,Intermediate,Resistant,0,0
-ID_27327,TEST,Escherichia coli,Enterobacteriaceae,Austria,Indiana,,0 to 2 Years,Surgery General,Penis,None Given,2018,ESBL,Resistant,Resistant,Susceptible,0,0
-ID_26723,TEST,Escherichia coli,Enterobacteriaceae,Singapore,Nebraska,,85 and Over,Pediatric General,Penis,Outpatient,2018,ESBL,Resistant,Intermediate,Intermediate,0,0
-ID_26617,Inform,Escherichia coli,Enterobacteriaceae,Poland,Michigan,Male,0 to 2 Years,Surgery General,Penis,Outpatient,2018,,Susceptible,Intermediate,Intermediate,0,0
-ID_26805,Atlas,Escherichia coli,Enterobacteriaceae,Ukraine,Indiana,,85 and Over,Clinic / Office,Penis,Outpatient,2018,,Resistant,Resistant,Intermediate,0,0
-ID_28074,Atlas,Escherichia coli,Enterobacteriaceae,"Korea, South",North Dakota,Female,85 and Over,None Given,Penis,,2018,ESBL,Intermediate,Intermediate,Resistant,0,0
-ID_3381,Inform,Escherichia coli,Enterobacteriaceae,Lithuania,Indiana,,13 to 18 Years,General Unspecified ICU,Penis,Outpatient,2018,ESBL,Susceptible,Intermediate,Susceptible,0,0
-ID_19503,Inform,Escherichia coli,Enterobacteriaceae,Singapore,Wisconsin,Female,65 to 84 Years,Pediatric General,Penis,Other,2018,ESBL,Susceptible,Intermediate,Susceptible,0,0
-ID_19939,Atlas,Escherichia coli,Enterobacteriaceae,Singapore,Michigan,,65 to 84 Years,None Given,Penis,Other,2018,,Susceptible,Resistant,Susceptible,0,0
-ID_24582,TEST,Escherichia coli,Enterobacteriaceae,Turkey,Nebraska,,19 to 64 Years,Medicine ICU,Penis,Inpatient,2018,ESBL,Resistant,Intermediate,Susceptible,0,0
-ID_24878,Inform,Escherichia coli,Enterobacteriaceae,Taiwan,,Male,65 to 84 Years,General Unspecified ICU,Penis,,2018,,Resistant,Intermediate,Resistant,0,0
-ID_24175,Inform,Escherichia coli,Enterobacteriaceae,Spain,Kentucky,Male,Unknown,Nursing Home / Rehab,Penis,Outpatient,2018,,Intermediate,Susceptible,Resistant,0,0
-ID_24314,Inform,Escherichia coli,Enterobacteriaceae,Philippines,,,65 to 84 Years,Nursing Home / Rehab,Penis,,2018,ESBL,Intermediate,Resistant,Intermediate,0,0
-ID_22459,Inform,Escherichia coli,Enterobacteriaceae,Hungary,Washington,Male,3 to 12 Years,Medicine ICU,Penis,None Given,2018,ESBL,Resistant,Resistant,Resistant,0,0
-ID_22364,Inform,Escherichia coli,Enterobacteriaceae,Pakistan,Ohio,,19 to 64 Years,Clinic / Office,Penis,None Given,2018,,Susceptible,Intermediate,Intermediate,0,0
-ID_22517,Inform,Escherichia coli,Enterobacteriaceae,India,Kentucky,Male,13 to 18 Years,Surgery General,Penis,Other,2018,,Susceptible,Resistant,Resistant,0,0
-ID_22050,TEST,Escherichia coli,Enterobacteriaceae,Poland,Indiana,,Unknown,Medicine ICU,Penis,Inpatient,2018,ESBL,Resistant,Susceptible,Resistant,0,0
-ID_22291,Inform,Escherichia coli,Enterobacteriaceae,Morocco,Nebraska,Female,3 to 12 Years,General Unspecified ICU,Penis,None Given,2018,,Resistant,Intermediate,Resistant,0,0
-ID_23192,TEST,Escherichia coli,Enterobacteriaceae,Lithuania,Nebraska,Female,3 to 12 Years,Surgery General,Penis,Outpatient,2018,,Intermediate,Susceptible,Resistant,0,0
-ID_26043,TEST,Escherichia coli,Enterobacteriaceae,Brazil,Nebraska,,3 to 12 Years,Surgery General,Penis,,2018,,Resistant,Susceptible,Intermediate,0,0
-ID_2747,TEST,Escherichia coli,Enterobacteriaceae,Netherlands,Michigan,Female,3 to 12 Years,Pediatric ICU,Penis,Inpatient,2018,ESBL,Intermediate,Intermediate,Resistant,0,0
-ID_30758,TEST,Escherichia coli,Enterobacteriaceae,Italy,New York,Female,85 and Over,Surgery ICU,Penis,,2018,,Resistant,Resistant,Susceptible,0,0
-ID_4216,Atlas,Escherichia coli,Enterobacteriaceae,Poland,Kentucky,,65 to 84 Years,Medicine ICU,Penis,None Given,2018,,Susceptible,Susceptible,Resistant,0,0
-ID_30306,Atlas,Escherichia coli,Enterobacteriaceae,Kuwait,Minnesota,Female,65 to 84 Years,Clinic / Office,Penis,Other,2018,,Resistant,Intermediate,Susceptible,0,0
-ID_13693,Inform,Escherichia coli,Enterobacteriaceae,"Korea, South",Washington,Male,13 to 18 Years,Nursing Home / Rehab,Penis,Inpatient,2018,,Susceptible,Susceptible,Susceptible,0,0
-ID_28992,TEST,Escherichia coli,Enterobacteriaceae,Russia,Nebraska,Male,19 to 64 Years,Emergency Room,Penis,Inpatient,2018,ESBL,Resistant,Intermediate,Resistant,0,0
-ID_18760,TEST,Escherichia coli,Enterobacteriaceae,Finland,Minnesota,Male,3 to 12 Years,Pediatric General,Penis,Other,2018,ESBL,Resistant,Intermediate,Intermediate,0,0
-ID_3957,Atlas,Escherichia coli,Enterobacteriaceae,Netherlands,Washington,Male,3 to 12 Years,Surgery General,Penis,Outpatient,2018,,Susceptible,Resistant,Resistant,0,0
-ID_30169,Atlas,Escherichia coli,Enterobacteriaceae,Croatia,Nebraska,,65 to 84 Years,Medicine ICU,Penis,Inpatient,2018,ESBL,Intermediate,Susceptible,Susceptible,0,0
-ID_16492,TEST,Escherichia coli,Enterobacteriaceae,Switzerland,Pennsylvania,Female,85 and Over,Clinic / Office,Penis,Inpatient,2018,,Intermediate,Intermediate,Intermediate,0,0
-ID_29568,TEST,Escherichia coli,Enterobacteriaceae,South Africa,Texas,Female,0 to 2 Years,None Given,Penis,Outpatient,2018,,Intermediate,Resistant,Intermediate,0,0
+ID_1,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Netherlands,North Dakota,,Unknown,Surgery ICU,Nails,Outpatient,2014,ESBL,Resistant,Resistant,Intermediate,0,0
+ID_15999,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Costa Rica,North Dakota,Female,85 and Over,Surgery ICU,Nails,None Given,2014,,Intermediate,Resistant,Intermediate,0,0
+ID_16820,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Dominican Republic,New York,,3 to 12 Years,Emergency Room,Nails,,2014,,Susceptible,Intermediate,Susceptible,0,0
+ID_16821,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Taiwan,Wisconsin,Male,85 and Over,Surgery ICU,Nails,,2014,,Susceptible,Intermediate,Intermediate,0,0
+ID_14767,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Greece,Michigan,,13 to 18 Years,Emergency Room,Nails,None Given,2014,ESBL,Intermediate,Intermediate,Susceptible,0,0
+ID_14948,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Morocco,Michigan,,0 to 2 Years,Nursing Home / Rehab,Nails,Inpatient,2014,,Susceptible,Intermediate,Susceptible,0,0
+ID_19200,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,United States,Colorado,,3 to 12 Years,Medicine ICU,Nails,Outpatient,2014,,Susceptible,Susceptible,Susceptible,0,0
+ID_18893,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Japan,North Dakota,Male,Unknown,Pediatric General,Nails,Outpatient,2014,,Susceptible,Resistant,Susceptible,0,0
+ID_8567,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Argentina,Minnesota,Male,19 to 64 Years,Medicine General,Nails,,2014,,Susceptible,Susceptible,Susceptible,0,0
+ID_8090,Inform,Klebsiella pneumoniae,Enterobacteriaceae,"Korea, South",Minnesota,Female,0 to 2 Years,None Given,Nails,Other,2014,,Resistant,Intermediate,Resistant,0,0
+ID_7298,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Turkey,Ohio,Female,0 to 2 Years,Clinic / Office,Nails,Other,2014,,Resistant,Intermediate,Intermediate,0,0
+ID_10602,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Morocco,New York,Male,65 to 84 Years,Surgery ICU,Nails,None Given,2014,ESBL,Intermediate,Susceptible,Resistant,0,0
+ID_10029,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Sweden,Colorado,,85 and Over,Medicine General,Nails,Outpatient,2014,ESBL,Intermediate,Resistant,Susceptible,0,0
+ID_29605,Inform,Klebsiella pneumoniae,Enterobacteriaceae,"Korea, South",Michigan,Female,Unknown,Pediatric General,Nails,None Given,2014,,Susceptible,Susceptible,Intermediate,0,0
+ID_29991,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Singapore,Georgia,Male,19 to 64 Years,Pediatric ICU,Nails,None Given,2014,,Intermediate,Intermediate,Resistant,0,0
+ID_32850,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,France,Texas,Female,13 to 18 Years,Medicine General,Nails,None Given,2014,,Intermediate,Susceptible,Resistant,0,0
+ID_34137,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Czech Republic,Florida,,85 and Over,Nursing Home / Rehab,Nails,Inpatient,2014,,Intermediate,Susceptible,Resistant,0,0
+ID_23857,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Austria,Florida,,65 to 84 Years,Other,Nails,Inpatient,2014,ESBL,Resistant,Intermediate,Susceptible,0,0
+ID_23791,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,China,Washington,Male,3 to 12 Years,Clinic / Office,Nails,Outpatient,2014,ESBL,Resistant,Resistant,Susceptible,0,0
+ID_21952,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Romania,Michigan,,3 to 12 Years,Surgery ICU,Nails,Outpatient,2014,,Susceptible,Susceptible,Susceptible,0,0
+ID_22168,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Costa Rica,Indiana,Male,85 and Over,Clinic / Office,Nails,Other,2014,ESBL,Susceptible,Resistant,Intermediate,0,0
+ID_27421,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Lithuania,Kentucky,,65 to 84 Years,General Unspecified ICU,Nails,,2014,ESBL,Resistant,Intermediate,Resistant,0,0
+ID_27000,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Romania,California,,19 to 64 Years,Pediatric ICU,Nails,Outpatient,2014,,Susceptible,Susceptible,Susceptible,0,0
+ID_26918,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Sweden,Texas,Male,65 to 84 Years,Surgery ICU,Nails,,2014,,Susceptible,Resistant,Intermediate,0,0
+ID_26004,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Israel,,Female,85 and Over,None Given,Nails,Inpatient,2014,,Resistant,Intermediate,Intermediate,0,0
+ID_25949,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Taiwan,Alabama,Female,85 and Over,Pediatric General,Nails,Inpatient,2014,ESBL,Intermediate,Intermediate,Intermediate,0,0
+ID_4607,Inform,Klebsiella pneumoniae,Enterobacteriaceae,South Africa,Kentucky,Female,3 to 12 Years,None Given,Nails,,2014,,Susceptible,Resistant,Resistant,0,0
+ID_4635,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Morocco,Michigan,Male,13 to 18 Years,Clinic / Office,Nails,,2014,,Susceptible,Susceptible,Susceptible,0,0
+ID_1506,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Lithuania,Ohio,Female,0 to 2 Years,Surgery ICU,Nails,None Given,2014,,Susceptible,Resistant,Resistant,0,0
+ID_4593,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Romania,Alabama,Female,Unknown,Surgery General,Nails,Inpatient,2014,ESBL,Susceptible,Susceptible,Resistant,0,0
+ID_3633,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,South Africa,Alabama,Female,65 to 84 Years,Nursing Home / Rehab,Nails,Inpatient,2014,,Susceptible,Intermediate,Intermediate,0,0
+ID_5163,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Mexico,Florida,,3 to 12 Years,Emergency Room,Nails,Inpatient,2014,ESBL,Intermediate,Susceptible,Intermediate,0,0
+ID_1500,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Dominican Republic,Kentucky,,19 to 64 Years,Medicine General,Nails,Inpatient,2014,ESBL,Intermediate,Susceptible,Resistant,0,0
+ID_5366,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Mexico,Illinois,,85 and Over,Surgery ICU,Nails,Inpatient,2014,ESBL,Intermediate,Susceptible,Resistant,0,0
+ID_27204,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Canada,Texas,Female,65 to 84 Years,Other,Nails,Inpatient,2015,,Susceptible,Resistant,Intermediate,0,0
+ID_33511,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Serbia,North Dakota,Male,0 to 2 Years,Nursing Home / Rehab,Nails,,2015,ESBL,Susceptible,Intermediate,Intermediate,0,0
+ID_4964,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Singapore,Florida,Male,85 and Over,Medicine ICU,Nails,None Given,2015,ESBL,Susceptible,Susceptible,Resistant,0,0
+ID_5022,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Hong Kong,Nebraska,Female,3 to 12 Years,Surgery ICU,Nails,Outpatient,2015,ESBL,Susceptible,Resistant,Intermediate,0,0
+ID_3014,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Italy,New Jersey,Male,Unknown,Surgery ICU,Nails,None Given,2015,,Intermediate,Intermediate,Susceptible,0,0
+ID_13463,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Serbia,New Jersey,Female,0 to 2 Years,None Given,Nails,Outpatient,2015,ESBL,Resistant,Resistant,Susceptible,0,0
+ID_30655,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Thailand,Florida,,13 to 18 Years,None Given,Nails,,2015,ESBL,Intermediate,Susceptible,Intermediate,0,0
+ID_992,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Dominican Republic,Ohio,Male,13 to 18 Years,Surgery General,Nails,,2015,,Susceptible,Susceptible,Resistant,0,0
+ID_13914,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Greece,Georgia,Female,65 to 84 Years,Emergency Room,Nails,Outpatient,2015,ESBL,Resistant,Susceptible,Susceptible,0,0
+ID_19469,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Canada,Texas,,0 to 2 Years,Medicine General,Nails,None Given,2015,ESBL,Intermediate,Intermediate,Resistant,0,0
+ID_15392,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Singapore,Washington,,3 to 12 Years,Clinic / Office,Nails,Outpatient,2015,ESBL,Intermediate,Resistant,Susceptible,0,0
+ID_4744,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Pakistan,Indiana,Male,13 to 18 Years,Other,Nails,None Given,2015,ESBL,Intermediate,Resistant,Intermediate,0,0
+ID_12932,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Taiwan,Ohio,Female,13 to 18 Years,Pediatric ICU,Nails,Other,2015,,Resistant,Susceptible,Resistant,0,0
+ID_3586,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Poland,Illinois,,85 and Over,Medicine General,Nails,Inpatient,2015,,Susceptible,Susceptible,Intermediate,0,0
+ID_4609,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Japan,New Jersey,Female,85 and Over,None Given,Nails,None Given,2015,ESBL,Susceptible,Resistant,Resistant,0,0
+ID_13219,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Belgium,Nebraska,Male,19 to 64 Years,None Given,Nails,Other,2015,,Resistant,Susceptible,Intermediate,0,0
+ID_13171,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Taiwan,Ohio,Female,0 to 2 Years,Surgery General,Nails,,2015,,Intermediate,Resistant,Susceptible,0,0
+ID_20284,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Italy,Georgia,,19 to 64 Years,Nursing Home / Rehab,Nails,Other,2015,ESBL,Intermediate,Intermediate,Intermediate,0,0
+ID_7722,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Nigeria,Minnesota,,3 to 12 Years,General Unspecified ICU,Nails,Outpatient,2015,,Susceptible,Intermediate,Susceptible,0,0
+ID_35458,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Philippines,Michigan,,19 to 64 Years,Pediatric General,Nails,None Given,2015,,Susceptible,Resistant,Susceptible,0,0
+ID_17780,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Portugal,Washington,,65 to 84 Years,Surgery General,Nails,Outpatient,2015,,Resistant,Intermediate,Intermediate,0,0
+ID_29309,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Switzerland,Illinois,,0 to 2 Years,Medicine ICU,Nails,,2015,ESBL,Intermediate,Intermediate,Susceptible,0,0
+ID_25730,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Greece,Nebraska,,85 and Over,Surgery ICU,Nails,Other,2015,ESBL,Intermediate,Resistant,Resistant,0,0
+ID_284,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Belgium,Wisconsin,Male,0 to 2 Years,Clinic / Office,Nails,None Given,2015,ESBL,Susceptible,Susceptible,Resistant,0,0
+ID_8356,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Portugal,Ohio,,13 to 18 Years,Pediatric General,Nails,None Given,2015,,Susceptible,Resistant,Intermediate,0,0
+ID_23176,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Greece,,Female,3 to 12 Years,Clinic / Office,Nails,Outpatient,2015,ESBL,Susceptible,Susceptible,Intermediate,0,0
+ID_36641,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Pakistan,New Jersey,Male,0 to 2 Years,General Unspecified ICU,Nails,,2015,ESBL,Resistant,Intermediate,Resistant,0,0
+ID_26315,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Canada,Indiana,Male,85 and Over,Pediatric ICU,Nails,,2015,,Susceptible,Intermediate,Susceptible,0,0
+ID_16627,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Greece,Washington,Female,65 to 84 Years,Medicine ICU,Nails,,2015,,Resistant,Susceptible,Intermediate,0,0
+ID_22592,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Kuwait,Alabama,Female,19 to 64 Years,Medicine General,Nails,Outpatient,2015,,Intermediate,Resistant,Susceptible,0,0
+ID_26230,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Hong Kong,Ohio,,3 to 12 Years,Pediatric General,Nails,Inpatient,2015,,Intermediate,Intermediate,Susceptible,0,0
+ID_10232,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Mexico,Ohio,Male,65 to 84 Years,Pediatric ICU,Nails,,2015,ESBL,Resistant,Intermediate,Intermediate,0,0
+ID_1981,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Finland,,Female,3 to 12 Years,Medicine General,Nails,None Given,2015,,Resistant,Resistant,Susceptible,0,0
+ID_25899,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Saudi Arabia,Georgia,,Unknown,Pediatric General,Nails,Other,2015,,Intermediate,Intermediate,Susceptible,0,0
+ID_8679,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Switzerland,Florida,Female,19 to 64 Years,Surgery General,Nails,Inpatient,2015,ESBL,Intermediate,Resistant,Intermediate,0,0
+ID_26074,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Morocco,New Jersey,,3 to 12 Years,General Unspecified ICU,Nails,None Given,2015,ESBL,Resistant,Intermediate,Susceptible,0,0
+ID_22871,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Israel,California,,65 to 84 Years,Pediatric General,Nails,Inpatient,2015,ESBL,Susceptible,Susceptible,Resistant,0,0
+ID_9182,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Portugal,Texas,Female,85 and Over,None Given,Nails,Inpatient,2015,,Resistant,Susceptible,Resistant,0,0
+ID_34689,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Austria,Wisconsin,Female,0 to 2 Years,Pediatric General,Nails,Outpatient,2015,ESBL,Susceptible,Susceptible,Resistant,0,0
+ID_28966,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Hungary,Illinois,,3 to 12 Years,General Unspecified ICU,Nails,Outpatient,2016,,Resistant,Resistant,Susceptible,0,0
+ID_18646,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Ukraine,Pennsylvania,,85 and Over,Surgery General,Nails,Other,2016,,Resistant,Resistant,Resistant,0,0
+ID_23252,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Czech Republic,California,Male,0 to 2 Years,None Given,Nails,None Given,2016,ESBL,Intermediate,Resistant,Susceptible,0,0
+ID_23050,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Portugal,Florida,Female,Unknown,Pediatric General,Nails,Inpatient,2016,ESBL,Intermediate,Resistant,Intermediate,0,0
+ID_22382,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Saudi Arabia,New Jersey,,65 to 84 Years,Pediatric ICU,Nails,Other,2016,ESBL,Resistant,Resistant,Intermediate,0,0
+ID_22325,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Lithuania,Pennsylvania,,0 to 2 Years,Medicine ICU,Nails,Other,2016,,Susceptible,Resistant,Intermediate,0,0
+ID_25030,TEST,Klebsiella pneumoniae,Enterobacteriaceae,China,New York,,65 to 84 Years,Surgery General,Nails,,2016,ESBL,Intermediate,Susceptible,Susceptible,0,0
+ID_24788,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Turkey,Ohio,Female,65 to 84 Years,General Unspecified ICU,Nails,None Given,2016,ESBL,Resistant,Susceptible,Intermediate,0,0
+ID_25469,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Belgium,Alabama,Male,0 to 2 Years,Nursing Home / Rehab,Nails,None Given,2016,,Susceptible,Susceptible,Resistant,0,0
+ID_23782,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Russia,Texas,,85 and Over,General Unspecified ICU,Nails,Other,2016,,Intermediate,Resistant,Intermediate,0,0
+ID_1686,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Lithuania,Minnesota,Male,19 to 64 Years,None Given,Nails,Outpatient,2016,ESBL,Intermediate,Susceptible,Susceptible,0,0
+ID_19465,Inform,Klebsiella pneumoniae,Enterobacteriaceae,United Kingdom,Kentucky,,0 to 2 Years,Pediatric ICU,Nails,Outpatient,2016,ESBL,Resistant,Resistant,Susceptible,0,0
+ID_21365,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Brazil,,,85 and Over,Pediatric General,Nails,Other,2016,,Intermediate,Resistant,Resistant,0,0
+ID_26874,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Taiwan,California,Male,13 to 18 Years,Medicine General,Nails,Other,2016,ESBL,Intermediate,Resistant,Intermediate,0,0
+ID_20576,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Kuwait,Illinois,,Unknown,None Given,Nails,Outpatient,2016,,Intermediate,Susceptible,Intermediate,0,0
+ID_3070,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,United Kingdom,Kentucky,Male,Unknown,Medicine General,Nails,Other,2016,,Susceptible,Intermediate,Resistant,0,0
+ID_12670,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Italy,New York,,0 to 2 Years,Pediatric General,Nails,,2016,ESBL,Resistant,Susceptible,Resistant,0,0
+ID_12719,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Nigeria,Illinois,Female,65 to 84 Years,Medicine ICU,Nails,None Given,2016,,Intermediate,Resistant,Susceptible,0,0
+ID_11646,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Nigeria,Wisconsin,Female,13 to 18 Years,Surgery ICU,Nails,Other,2016,ESBL,Susceptible,Resistant,Susceptible,0,0
+ID_11989,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Romania,Indiana,Male,0 to 2 Years,None Given,Nails,Other,2016,,Resistant,Resistant,Intermediate,0,0
+ID_13294,Inform,Klebsiella pneumoniae,Enterobacteriaceae,"Korea, South",Colorado,Female,65 to 84 Years,Medicine General,Nails,Inpatient,2016,,Susceptible,Intermediate,Resistant,0,0
+ID_32441,Inform,Klebsiella pneumoniae,Enterobacteriaceae,China,Washington,,85 and Over,Pediatric ICU,Nails,None Given,2016,ESBL,Intermediate,Susceptible,Resistant,0,0
+ID_33177,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Panama,Kentucky,,13 to 18 Years,Medicine General,Nails,Outpatient,2016,ESBL,Susceptible,Resistant,Intermediate,0,0
+ID_33279,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Morocco,Florida,Male,19 to 64 Years,Other,Nails,Other,2016,ESBL,Intermediate,Susceptible,Intermediate,0,0
+ID_35040,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Chile,Kentucky,,Unknown,Surgery ICU,Nails,Other,2016,ESBL,Susceptible,Resistant,Resistant,0,0
+ID_33844,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Spain,Nebraska,Male,19 to 64 Years,Medicine ICU,Nails,Outpatient,2016,ESBL,Intermediate,Intermediate,Intermediate,0,0
+ID_16390,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Colombia,Minnesota,Female,65 to 84 Years,Medicine General,Nails,Inpatient,2016,ESBL,Intermediate,Susceptible,Susceptible,0,0
+ID_16217,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Dominican Republic,Florida,Male,85 and Over,General Unspecified ICU,Nails,Outpatient,2016,,Intermediate,Intermediate,Susceptible,0,0
+ID_15469,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,United States,Georgia,Female,3 to 12 Years,Pediatric ICU,Nails,Inpatient,2016,,Resistant,Resistant,Susceptible,0,0
+ID_30514,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,South Africa,Wisconsin,Male,Unknown,Emergency Room,Nails,,2016,,Resistant,Intermediate,Susceptible,0,0
+ID_6798,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Croatia,Wisconsin,Female,0 to 2 Years,Medicine General,Nails,Other,2016,,Intermediate,Susceptible,Resistant,0,0
+ID_5895,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Romania,Texas,Male,65 to 84 Years,Other,Nails,,2016,ESBL,Intermediate,Intermediate,Intermediate,0,0
+ID_29655,TEST,Klebsiella pneumoniae,Enterobacteriaceae,United States,New Jersey,Male,19 to 64 Years,Medicine General,Nails,Outpatient,2016,ESBL,Susceptible,Intermediate,Resistant,0,0
+ID_3880,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Philippines,North Dakota,Male,85 and Over,Medicine ICU,Nails,None Given,2016,,Intermediate,Intermediate,Resistant,0,0
+ID_17078,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Brazil,Wisconsin,Female,13 to 18 Years,Clinic / Office,Nails,None Given,2016,ESBL,Intermediate,Intermediate,Resistant,0,0
+ID_29489,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,"Korea, South",Ohio,Female,65 to 84 Years,Surgery General,Nails,None Given,2016,,Intermediate,Intermediate,Resistant,0,0
+ID_14473,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Argentina,Washington,Male,0 to 2 Years,Medicine ICU,Nails,Outpatient,2016,ESBL,Susceptible,Intermediate,Susceptible,0,0
+ID_14248,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,South Africa,North Dakota,,Unknown,Medicine ICU,Nails,Inpatient,2016,,Susceptible,Susceptible,Resistant,0,0
+ID_4299,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Pakistan,Florida,Male,65 to 84 Years,Other,Nails,Outpatient,2016,,Intermediate,Susceptible,Intermediate,0,0
+ID_26075,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Romania,New York,Female,65 to 84 Years,Nursing Home / Rehab,Nails,Outpatient,2017,ESBL,Susceptible,Susceptible,Susceptible,0,0
+ID_24965,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Brazil,Georgia,Female,85 and Over,General Unspecified ICU,Nails,Inpatient,2017,,Intermediate,Intermediate,Intermediate,0,0
+ID_31635,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Turkey,New Jersey,Male,3 to 12 Years,Emergency Room,Nails,,2017,ESBL,Resistant,Susceptible,Susceptible,0,0
+ID_31368,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Venezuela,New Jersey,Female,13 to 18 Years,Medicine General,Nails,Outpatient,2017,,Susceptible,Intermediate,Susceptible,0,0
+ID_29891,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Argentina,Nebraska,,13 to 18 Years,Clinic / Office,Nails,Inpatient,2017,ESBL,Resistant,Resistant,Intermediate,0,0
+ID_29915,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Romania,Alabama,,Unknown,Emergency Room,Nails,None Given,2017,,Susceptible,Intermediate,Resistant,0,0
+ID_28756,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Kuwait,Nebraska,,0 to 2 Years,Pediatric ICU,Nails,None Given,2017,,Intermediate,Susceptible,Intermediate,0,0
+ID_30107,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Dominican Republic,Nebraska,Male,65 to 84 Years,Surgery General,Nails,Outpatient,2017,,Intermediate,Susceptible,Resistant,0,0
+ID_515,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Israel,Pennsylvania,Male,3 to 12 Years,Clinic / Office,Nails,,2017,ESBL,Resistant,Intermediate,Susceptible,0,0
+ID_34183,Inform,Klebsiella pneumoniae,Enterobacteriaceae,United Kingdom,Kentucky,Female,3 to 12 Years,Pediatric ICU,Nails,,2017,,Resistant,Intermediate,Susceptible,0,0
+ID_1715,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Nigeria,Texas,Female,3 to 12 Years,Medicine ICU,Nails,Outpatient,2017,ESBL,Resistant,Intermediate,Intermediate,0,0
+ID_10442,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,South Africa,Kentucky,Female,65 to 84 Years,Pediatric ICU,Nails,None Given,2017,ESBL,Resistant,Susceptible,Resistant,0,0
+ID_17831,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Singapore,Michigan,Male,13 to 18 Years,Pediatric ICU,Nails,Inpatient,2017,,Intermediate,Susceptible,Susceptible,0,0
+ID_17600,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Nigeria,Georgia,Female,Unknown,Medicine General,Nails,,2017,,Resistant,Susceptible,Susceptible,0,0
+ID_19825,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Russia,Ohio,Female,3 to 12 Years,Pediatric General,Nails,Inpatient,2017,ESBL,Intermediate,Resistant,Resistant,0,0
+ID_8860,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,South Africa,Colorado,,19 to 64 Years,Surgery ICU,Nails,Inpatient,2017,,Susceptible,Intermediate,Resistant,0,0
+ID_20078,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Pakistan,Alabama,Female,3 to 12 Years,Medicine General,Nails,Outpatient,2017,,Susceptible,Intermediate,Intermediate,0,0
+ID_9772,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Ukraine,New Jersey,Male,Unknown,Clinic / Office,Nails,Other,2017,ESBL,Susceptible,Intermediate,Susceptible,0,0
+ID_19565,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Taiwan,Colorado,Female,0 to 2 Years,Medicine ICU,Nails,None Given,2017,ESBL,Resistant,Resistant,Resistant,0,0
+ID_9604,TEST,Klebsiella pneumoniae,Enterobacteriaceae,United States,Nebraska,Female,85 and Over,Other,Nails,Outpatient,2017,,Susceptible,Intermediate,Resistant,0,0
+ID_19265,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Jordan,Florida,Female,85 and Over,Emergency Room,Nails,Other,2017,ESBL,Intermediate,Resistant,Intermediate,0,0
+ID_16443,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Argentina,Wisconsin,,Unknown,Medicine General,Nails,,2017,ESBL,Intermediate,Resistant,Resistant,0,0
+ID_22075,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Guatemala,Michigan,Male,19 to 64 Years,Surgery General,Nails,None Given,2017,,Intermediate,Susceptible,Resistant,0,0
+ID_2984,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Ukraine,Alabama,,0 to 2 Years,Medicine ICU,Nails,,2017,,Intermediate,Intermediate,Susceptible,0,0
+ID_2710,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Saudi Arabia,Michigan,Male,65 to 84 Years,Emergency Room,Nails,Outpatient,2017,ESBL,Intermediate,Susceptible,Intermediate,0,0
+ID_6796,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Pakistan,Florida,Female,19 to 64 Years,Nursing Home / Rehab,Nails,None Given,2017,ESBL,Susceptible,Susceptible,Intermediate,0,0
+ID_21045,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Panama,Colorado,,85 and Over,Nursing Home / Rehab,Nails,None Given,2017,ESBL,Susceptible,Susceptible,Resistant,0,0
+ID_21379,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Argentina,Illinois,,65 to 84 Years,General Unspecified ICU,Nails,None Given,2017,,Susceptible,Intermediate,Intermediate,0,0
+ID_13258,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Kuwait,Alabama,,65 to 84 Years,Medicine General,Nails,None Given,2018,ESBL,Intermediate,Resistant,Susceptible,0,0
+ID_32734,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Belgium,Florida,,13 to 18 Years,None Given,Nails,Outpatient,2018,,Resistant,Intermediate,Resistant,0,0
+ID_12123,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Japan,Florida,,0 to 2 Years,Pediatric General,Nails,Outpatient,2018,,Intermediate,Resistant,Resistant,0,0
+ID_9805,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Serbia,Indiana,Female,Unknown,Emergency Room,Nails,None Given,2018,ESBL,Intermediate,Resistant,Resistant,0,0
+ID_5309,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Spain,Washington,Female,0 to 2 Years,None Given,Nails,Inpatient,2018,,Intermediate,Susceptible,Resistant,0,0
+ID_5297,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Mexico,Nebraska,Male,19 to 64 Years,Surgery ICU,Nails,Outpatient,2018,ESBL,Intermediate,Intermediate,Resistant,0,0
+ID_9024,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Philippines,Alabama,Male,13 to 18 Years,Nursing Home / Rehab,Nails,Outpatient,2018,,Susceptible,Susceptible,Susceptible,0,0
+ID_8629,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Czech Republic,Florida,Male,13 to 18 Years,General Unspecified ICU,Nails,,2018,,Intermediate,Intermediate,Intermediate,0,0
+ID_35959,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Lithuania,Indiana,Male,85 and Over,Clinic / Office,Nails,,2018,ESBL,Susceptible,Susceptible,Resistant,0,0
+ID_7303,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Malaysia,Pennsylvania,Female,Unknown,Medicine ICU,Nails,Outpatient,2018,ESBL,Intermediate,Intermediate,Susceptible,0,0
+ID_7244,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Israel,Alabama,Female,65 to 84 Years,Emergency Room,Nails,Inpatient,2018,ESBL,Susceptible,Resistant,Resistant,0,0
+ID_10377,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Dominican Republic,Georgia,Male,85 and Over,Surgery General,Nails,,2018,ESBL,Intermediate,Intermediate,Intermediate,0,0
+ID_5219,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Chile,,,Unknown,Medicine General,Nails,,2018,ESBL,Susceptible,Intermediate,Intermediate,0,0
+ID_10565,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Nigeria,,Female,3 to 12 Years,None Given,Nails,,2018,,Intermediate,Susceptible,Susceptible,0,0
+ID_33754,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Croatia,Minnesota,,0 to 2 Years,Pediatric ICU,Nails,,2018,,Intermediate,Susceptible,Resistant,0,0
+ID_21687,TEST,Klebsiella pneumoniae,Enterobacteriaceae,United Kingdom,Florida,Female,65 to 84 Years,Pediatric General,Nails,Inpatient,2018,ESBL,Susceptible,Resistant,Intermediate,0,0
+ID_26668,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Latvia,,Female,65 to 84 Years,Medicine ICU,Nails,,2018,,Resistant,Resistant,Intermediate,0,0
+ID_27044,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Russia,Minnesota,Male,0 to 2 Years,Clinic / Office,Nails,None Given,2018,,Resistant,Resistant,Susceptible,0,0
+ID_26828,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,China,Alabama,,13 to 18 Years,Clinic / Office,Nails,Inpatient,2018,ESBL,Susceptible,Susceptible,Intermediate,0,0
+ID_3361,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Colombia,Colorado,Male,85 and Over,Other,Nails,Inpatient,2018,,Resistant,Resistant,Intermediate,0,0
+ID_28262,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Hungary,New Jersey,,85 and Over,General Unspecified ICU,Nails,Inpatient,2018,,Resistant,Intermediate,Susceptible,0,0
+ID_19966,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Taiwan,Florida,,Unknown,Other,Nails,Inpatient,2018,,Susceptible,Resistant,Intermediate,0,0
+ID_23478,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Belgium,,Female,Unknown,Surgery General,Nails,,2018,ESBL,Susceptible,Resistant,Susceptible,0,0
+ID_26269,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Latvia,Texas,,Unknown,Surgery General,Nails,,2018,,Intermediate,Intermediate,Susceptible,0,0
+ID_26404,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,Russia,Indiana,Male,3 to 12 Years,Pediatric ICU,Nails,Outpatient,2018,ESBL,Intermediate,Susceptible,Resistant,0,0
+ID_15936,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Portugal,Alabama,Female,0 to 2 Years,Surgery ICU,Nails,,2018,,Susceptible,Intermediate,Resistant,0,0
+ID_13820,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Mexico,Indiana,,65 to 84 Years,Surgery ICU,Nails,Inpatient,2018,ESBL,Intermediate,Intermediate,Resistant,0,0
+ID_14301,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Venezuela,Michigan,Female,0 to 2 Years,Pediatric General,Nails,None Given,2018,,Intermediate,Susceptible,Intermediate,0,0
+ID_28963,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Netherlands,Ohio,Male,Unknown,Pediatric General,Nails,,2018,,Resistant,Susceptible,Susceptible,0,0
+ID_17731,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Portugal,Alabama,Female,19 to 64 Years,Surgery General,Nails,Other,2018,ESBL,Susceptible,Susceptible,Intermediate,0,0
+ID_17963,TEST,Klebsiella pneumoniae,Enterobacteriaceae,Venezuela,Alabama,,0 to 2 Years,None Given,Nails,,2018,ESBL,Susceptible,Resistant,Intermediate,0,0
+ID_3970,Inform,Klebsiella pneumoniae,Enterobacteriaceae,Lithuania,Wisconsin,,3 to 12 Years,Medicine General,Nails,,2018,,Intermediate,Susceptible,Resistant,0,0
+ID_17524,Atlas,Klebsiella pneumoniae,Enterobacteriaceae,China,California,Male,3 to 12 Years,Pediatric ICU,Nails,Outpatient,2018,,Resistant,Susceptible,Resistant,0,0

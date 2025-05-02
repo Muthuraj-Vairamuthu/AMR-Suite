@@ -126,7 +126,8 @@ def mapping_dataset(request):
                 'antibiotic_result_col': request.POST.get('antibiotic_result_col'),
                 'date_format': request.POST.get('date_format'),
                 'date_column': request.POST.get('date_column'),
-                'resistance_granularity': request.POST.get('resistance_granularity')
+                'resistance_granularity': request.POST.get('resistance_granularity'),
+                'time_gap_attribute': request.POST.get('time_gap_attribute'),
             }
             
             # Get resistance value mappings
@@ -470,34 +471,6 @@ def google_callback(request):
     
     return redirect('login')
 
-# def generate_scorecards(request):
-#     if request.method == 'POST':
-#         source = request.POST.get('source')
-#         infection = request.POST.get('infection')
-#         antibiotic = request.POST.get('antibiotic')
-
-#         print(f"Generating scorecards for: {source}, {infection}, {antibiotic}")
-
-#         dataset = pd.read_json(request.session['dataset'])
-
-#         figures = scorecard_analysis(
-#             dataset,
-#             source,
-#             infection,
-#             antibiotic,
-#             request.session['mapping_data']
-#         )
-        
-#         pngs = []
-#         for fig in figures:
-#             buffer = BytesIO()
-#             fig.savefig(buffer, format='png', bbox_inches='tight', transparent=True)
-#             buffer.seek(0)
-#             image = base64.b64encode(buffer.getvalue()).decode('utf-8')
-#             pngs.append(image)
-#             plt.close(fig)
-
-#         return JsonResponse({'pngs': pngs})
     
 def generate_scorecards(request):
     if request.method == 'POST':
