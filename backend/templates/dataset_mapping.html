@@ -14,7 +14,7 @@
         <div class="nav-links">
             <a href="{% url 'home' %}">Home </a>
             <a href="{% url 'logout' %}" class="logout-btn">Logout</a>
-            <img src="{% static 'media/tavlab.logo.png' %}" alt="Lab Logo" />
+            <img src="{% static 'media/tavlabclubs.logo.png' %}" alt="Lab Logo" />
         </div>
     </nav>
 
@@ -59,12 +59,7 @@
                             </select>
                         </div>
                     </div>
-                </div>
-    
-                <!-- Section 2: Antibiotic Details -->
-                <div class="mapping-section">
-                    <h2>Antibiotic Details</h2>
-                    
+
                     <!-- Wide Format Fields (Visible by Default) -->
                     <div class="dynamic-section" id="wideFields" style="display: block;">
                         <div class="form-group">
@@ -104,6 +99,9 @@
                         </div>
                     </div>
                 </div>
+    
+                    
+                    
 
                 <!-- Section 3: Resistance Value Mapping -->
                 <div class="mapping-section" id="resistanceMappingSection">
@@ -112,28 +110,25 @@
                     
                     <div class="form-group">
                         <label>Susceptible Values:</label>
-                        <div class="select-wrapper">
-                            <select name="susceptible_values" multiple id="susceptibleValues" class="multi-select">
-                                <!-- Options will be populated dynamically -->
-                            </select>
+                        <div class="custom-multi-select">
+                            <div class="multi-select-box" id="susceptibleValuesBox"></div>
+                            <input type="hidden" name="susceptible_values" id="susceptibleValues">
                         </div>
                     </div>
                     
                     <div class="form-group">
                         <label>Intermediate Values:</label>
-                        <div class="select-wrapper">
-                            <select name="intermediate_values" multiple id="intermediateValues" class="multi-select">
-                                <!-- Options will be populated dynamically -->
-                            </select>
+                        <div class="custom-multi-select">
+                            <div class="multi-select-box" id="intermediateValuesBox"></div>
+                            <input type="hidden" name="intermediate_values" id="intermediateValues">
                         </div>
                     </div>
                     
                     <div class="form-group">
                         <label>Resistant Values:</label>
-                        <div class="select-wrapper">
-                            <select name="resistant_values" multiple id="resistantValues" class="multi-select">
-                                <!-- Options will be populated dynamically -->
-                            </select>
+                        <div class="custom-multi-select">
+                            <div class="multi-select-box" id="resistantValuesBox"></div>
+                            <input type="hidden" name="resistant_values" id="resistantValues">
                         </div>
                     </div>
                 </div>
@@ -227,9 +222,12 @@
             const formatSelect = document.getElementById('formatSelect');
             const antibioticResultCol = document.getElementById('antibioticResultCol');
             const antibioticFormatInput = document.querySelector('input[name="antibiotic_format"]');
-            const susceptibleValues = document.getElementById('susceptibleValues');
-            const intermediateValues = document.getElementById('intermediateValues');
-            const resistantValues = document.getElementById('resistantValues');
+            const susceptibleValuesBox = document.getElementById('susceptibleValuesBox');
+            const intermediateValuesBox = document.getElementById('intermediateValuesBox');
+            const resistantValuesBox = document.getElementById('resistantValuesBox');
+            const susceptibleValuesInput = document.getElementById('susceptibleValues');
+            const intermediateValuesInput = document.getElementById('intermediateValues');
+            const resistantValuesInput = document.getElementById('resistantValues');
             const resistanceMappingSection = document.getElementById('resistanceMappingSection');
             
             // Initial setup
@@ -318,14 +316,14 @@
                 });
             }
             
-            // Populate all three select fields with the same values
+            // Populate all three custom multi-select boxes with checkboxes
             function populateSelectFields(values) {
                 clearSelectFields();
                 
                 values.forEach(value => {
-                    addOptionToSelect(susceptibleValues, value);
-                    addOptionToSelect(intermediateValues, value);
-                    addOptionToSelect(resistantValues, value);
+                    addCheckboxToBox(susceptibleValuesBox, susceptibleValuesInput, value);
+                    addCheckboxToBox(intermediateValuesBox, intermediateValuesInput, value);
+                    addCheckboxToBox(resistantValuesBox, resistantValuesInput, value);
                 });
                 
                 // Pre-select common values based on patterns
@@ -333,16 +331,37 @@
             }
             
             function clearSelectFields() {
-                susceptibleValues.innerHTML = '';
-                intermediateValues.innerHTML = '';
-                resistantValues.innerHTML = '';
+                susceptibleValuesBox.innerHTML = '';
+                intermediateValuesBox.innerHTML = '';
+                resistantValuesBox.innerHTML = '';
+                susceptibleValuesInput.value = '';
+                intermediateValuesInput.value = '';
+                resistantValuesInput.value = '';
             }
             
-            function addOptionToSelect(select, value) {
-                const option = document.createElement('option');
-                option.value = value;
-                option.textContent = value;
-                select.appendChild(option);
+            function addCheckboxToBox(box, hiddenInput, value) {
+                const container = document.createElement('label');
+                container.className = 'multi-select-option';
+                
+                const checkbox = document.createElement('input');
+                checkbox.type = 'checkbox';
+                checkbox.value = value;
+                checkbox.addEventListener('change', () => {
+                    updateHiddenInput(hiddenInput, box);
+                });
+                
+                const label = document.createElement('span');
+                label.textContent = value;
+                
+                container.appendChild(checkbox);
+                container.appendChild(label);
+                box.appendChild(container);
+            }
+            
+            function updateHiddenInput(hiddenInput, box) {
+                const selectedValues = Array.from(box.querySelectorAll('input[type="checkbox"]:checked'))
+                    .map(checkbox => checkbox.value);
+                hiddenInput.value = selectedValues.join(',');
             }
             
             // Pre-select options based on common naming patterns
@@ -364,38 +383,124 @@
                 const resistantMatches = values.filter((value, index) => 
                     resistantPatterns.some(pattern => lowerValues[index].includes(pattern)));
                 
-                // Select matching options
-                preSelectOptions(susceptibleValues, susceptibleMatches);
-                preSelectOptions(intermediateValues, intermediateMatches);
-                preSelectOptions(resistantValues, resistantMatches);
+                // Select matching checkboxes
+                preSelectCheckboxes(susceptibleValuesBox, susceptibleValuesInput, susceptibleMatches);
+                preSelectCheckboxes(intermediateValuesBox, intermediateValuesInput, intermediateMatches);
+                preSelectCheckboxes(resistantValuesBox, resistantValuesInput, resistantMatches);
             }
             
-            function preSelectOptions(select, valuesToSelect) {
-                Array.from(select.options).forEach(option => {
-                    option.selected = valuesToSelect.includes(option.value);
+            function preSelectCheckboxes(box, hiddenInput, valuesToSelect) {
+                const checkboxes = box.querySelectorAll('input[type="checkbox"]');
+                checkboxes.forEach(checkbox => {
+                    if (valuesToSelect.includes(checkbox.value)) {
+                        checkbox.checked = true;
+                    }
                 });
+                updateHiddenInput(hiddenInput, box);
             }
             
-            // Add styling for the multiselect fields
+            // Add styling for the custom multi-select
             const style = document.createElement('style');
             style.textContent = `
-                .multi-select {
-                    height: auto;
-                    min-height: 120px;
+                .custom-multi-select {
                     width: 100%;
-                    background-color: #e0e0e0;
-                    border: none;
-                    border-radius: 5px;
-                    padding: 8px;
+                    box-sizing: border-box;
+                    margin-top: 8px;
                 }
-                .multi-select option {
-                    padding: 6px;
-                    margin-bottom: 2px;
-                    background-color: #f0f0f0;
+
+                .multi-select-box {
+                    width: 100%;
+                    min-height: 120px;
+                    max-height: 200px;
+                    padding: 12px;
+                    border: 1px solid #e2e8f0;
+                    border-radius: 6px;
+                    background-color: #fafafa;
+                    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+                    overflow-y: auto;
+                    box-sizing: border-box;
+                    transition: border-color 0.3s ease, box-shadow 0.3s ease;
                 }
-                .multi-select option:checked {
-                    background-color: #1a2133;
-                    color: white;
+
+                .multi-select-box:focus-within {
+                    border-color: #1a2133;
+                    box-shadow: 0 0 5px rgba(26,33,51,0.3);
+                }
+
+                .multi-select-option {
+                    display: flex;
+                    align-items: center;
+                    padding: 6px 10px;
+                    margin: 2px 0;
+                    background-color: #ffffff;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    transition: background-color 0.2s ease;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+
+                .multi-select-option:hover {
+                    background-color: #edf2f7;
+                }
+
+                .multi-select-option input[type="checkbox"] {
+                    margin-right: 8px;
+                    width: 14px;
+                    height: 14px;
+                    accent-color: #1a2133;
+                    cursor: pointer;
+                }
+
+                .multi-select-option span {
+                    font-size: 14px;
+                    color: #2d3748;
+                    flex-grow: 1;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+
+                .multi-select-option input[type="checkbox"]:checked + span {
+                    font-weight: 600;
+                    color: #1a2133;
+                }
+
+                .multi-select-box::-webkit-scrollbar {
+                    width: 6px;
+                }
+
+                .multi-select-box::-webkit-scrollbar-track {
+                    background: #edf2f7;
+                    border-radius: 3px;
+                }
+
+                .multi-select-box::-webkit-scrollbar-thumb {
+                    background: #cbd5e0;
+                    border-radius: 3px;
+                }
+
+                .multi-select-box::-webkit-scrollbar-thumb:hover {
+                    background: #a0aec0;
+                }
+
+                @media (max-width: 768px) {
+                    .custom-multi-select {
+                        max-width: 100%;
+                    }
+
+                    .multi-select-box {
+                        max-height: 180px;
+                        padding: 10px;
+                    }
+
+                    .multi-select-option {
+                        padding: 5px 8px;
+                    }
+
+                    .multi-select-option span {
+                        font-size: 13px;
+                    }
                 }
             `;
             document.head.appendChild(style);
