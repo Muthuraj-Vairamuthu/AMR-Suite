@@ -445,59 +445,6 @@ def scorecards(request):
     return redirect('upload_dataset')
 
 
-def generate_scorecard_graph(request):
-    pass
-# def check_scorecard_data(request):
-#     organism = request.GET.get('infection')
-#     antibiotic_full = request.GET.get('antibiotic', '').strip()
-#     antibiotic = antibiotic_full.split('_')[0]
-#     source = request.GET.get('source')
-
-#     if not all([organism, antibiotic, source]):
-#         return JsonResponse({'error': 'Missing parameters'}, status=400)
-
-    # try:
-    #     base_path = os.path.join(settings.BASE_DIR, 'scorecards', organism, source)
-    #     year_file = os.path.join(base_path, f'{antibiotic}_{organism}_year.json')
-    #     snapshot_file = os.path.join(base_path, f'{antibiotic}_{organism}_countries.json')
-
-    #     if os.path.exists(year_file):
-    #         with open(year_file, 'r') as f:
-    #             year_data = json.load(f)
-    #         return JsonResponse({
-    #             'mode': 'year_based',
-    #             'data': year_data
-    #         }, safe=False)
-
-    #     elif os.path.exists(snapshot_file):
-    #         with open(snapshot_file, 'r') as f:
-    #             snapshot_data = json.load(f)
-
-    #         points = []
-    #         for country in snapshot_data:
-    #             if country['years']:
-    #                 latest_year = sorted(country['years'], key=lambda x: x['year'])[-1]
-    #                 points.append({
-    #                     'x': max(0, latest_year['x']),
-    #                     'y': latest_year['y'],
-    #                     'label': country['name']
-    #                 })
-
-    #         median_x = sorted([p['x'] for p in points])[len(points) // 2] if points else 0
-    #         median_y = sorted([p['y'] for p in points])[len(points) // 2] if points else 0
-
-    #         return JsonResponse({
-    #             'mode': 'snapshot',
-    #             'points': points,
-    #             'medians': {'x': median_x, 'y': median_y}
-    #         }, safe=False)
-
-    #     else:
-    #         return JsonResponse({'error': 'No scorecard data found for this selection'}, status=404)
-
-    # except Exception as e:
-    #     return JsonResponse({'error': str(e)}, status=500)
-
 def google_callback(request):
     if request.user.is_authenticated:
         return redirect('upload_dataset')
