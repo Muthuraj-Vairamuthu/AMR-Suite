@@ -450,8 +450,11 @@ def scorecard_analysis(dataset, source_input, infection, antibiotic, mappings):
     threads = []
     time_gap = int(mappings['time_gap_attribute'])
 
-    for i in range(start, end + 1, time_gap):
-        chunk_end = min(i + time_gap - 1, end)
+    for i in range(start, end - time_gap + 2):  # ensures inclusive of last valid window
+        chunk_end = i + time_gap - 1
+        if chunk_end > end:
+            break  # prevent exceeding end year
+
         thread = threading.Thread(
             target=run_r_script,
             args=(infection, antibiotic, source_input, i, chunk_end, dataset_path, mappings)
@@ -467,6 +470,7 @@ def scorecard_analysis(dataset, source_input, infection, antibiotic, mappings):
     return figures, visualization_data
 
 def run_r_script(infection, antibiotic, source_input, start, end, dataset_path, mappings):
+    print(f"Running R script for {infection}, {antibiotic}, {source_input}, {start} to {end}")
     r_script_path = "static/media/cluster_model_final.R"
     cmd = [
         'Rscript', r_script_path, infection, antibiotic,
@@ -485,6 +489,7 @@ def generate_scorecard_graph(source, infection, antibiotic, dataset, mappings):
     json_output_dir = 'Scorecards JSONs'
     folder = os.path.join(time_series_dir, infection, source, antibiotic)
     files = os.listdir(folder)
+    print(f"Files in {folder}: {files}")
 
     if len(files) == 0:
         print(f"No files found in {folder}")
@@ -501,7 +506,7 @@ def generate_scorecard_graph(source, infection, antibiotic, dataset, mappings):
     attribute_colors = {attr: color_palette[i] for i, attr in enumerate(cluster_attributes)}
 
     # Regular expression to extract year from filenames
-    file_pattern = re.compile(r"(?P<organism>[^_]+)_(?P<antibiotic>[^_]+)_I_(?P<year>\d{4})")
+    file_pattern = re.compile(r"(?P<organism>.+?)_(?P<antibiotic>.+?)_(?P<start>\d{4})_(?P<end>\d{4})\.csv")
 
     # Create a list to store file paths and metadata
     file_data = []
@@ -566,7 +571,7 @@ def generate_scorecard_graph(source, infection, antibiotic, dataset, mappings):
 
         for data in files:
             df = pd.read_csv(data['file_path'])
-            year = data['year']
+            year = data['start']
 
             country_data = df[df['Cluster'] != 'Global']
             global_average = df[df['Cluster'] == 'Global'].iloc[0]

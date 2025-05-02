@@ -102,6 +102,12 @@ subset_data <- decomposed_data %>%
 
 # Factor setup
 subset_data[[cluster_attribute]] <- as.factor(subset_data[[cluster_attribute]])
+
+if (nrow(subset_data) == 0 || length(levels(subset_data[[cluster_attribute]])) == 0) {
+  cat("No data available for this subset. Skipping.\n")
+  quit("no", 0)
+}
+
 if ("Global" %in% levels(subset_data[[cluster_attribute]])) {
   subset_data[[cluster_attribute]] <- relevel(subset_data[[cluster_attribute]], ref = "Global")
   baseline_label <- "Global"

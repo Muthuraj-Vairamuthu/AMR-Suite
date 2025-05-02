@@ -555,6 +555,9 @@ def generate_scorecards(request):
             antibiotic,
             request.session['mapping_data']
         )
+
+        if visualization_data is None:
+            return JsonResponse({'error': 'Visualization data could not be found due to insufficient data.'}, status=500)
         
         # Now we can directly use the structured data returned from the analysis function
         print(f"Generated visualization data with {len(visualization_data['years'])} years and {len(visualization_data['countries'])} countries")
