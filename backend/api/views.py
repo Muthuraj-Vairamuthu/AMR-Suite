@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from rest_framework.views import APIView
 from . models import *
 from rest_framework.response import Response
-from django.http import HttpResponse, JsonResponse
+from django.http import HttpResponse, JsonResponse, FileResponse
 import pandas as pd
 import csv
 import numpy as np
@@ -26,6 +26,7 @@ import base64
 from django.conf import settings
 import os
 import re
+import zipfile
 
 
 # Create your views here.
@@ -189,6 +190,7 @@ def mapping_dataset(request):
 
             # Update the dataset in the session
             request.session['dataset'] = dataset.to_json()
+            dataset.to_csv('static/media/original_dataset.csv', index=False)
             
             return render(request, 'main_results.html')
     return redirect('upload_dataset')
@@ -617,3 +619,67 @@ def get_columns_with_suffix(request):
         return JsonResponse({'values': unique_values})
     except Exception as e:
         return JsonResponse({'error': str(e)}, status=500)
+
+
+
+def synthetic_dataset_creation(request):
+    """Renders the synthetic dataset creation page"""
+    return render(request, 'synthetic_dataset_creation.html')
+
+def generate_synthetic_dataset(request):
+    if request.method == 'POST':
+        input_file_path = 'static/media/original_dataset.csv'
+        output_folder = 'Synthetic_Dataset_Files/'
+        os.makedirs(output_folder, exist_ok=True)
+
+        n_total = int(request.POST.get('n_total', 10000))
+        preserve_proportions = request.POST.get('preserve_proportions', 'country_year')
+        anonymize = 'anonymize' in request.POST
+        generate_plots = 'generate_plots' in request.POST
+
+        r_script_path = 'static/media/generate_synthetic_dataset.R'
+        output_prefix = os.path.join(output_folder, 'synthetic_output')
+
+        print(f"Generating synthetic dataset with n_total={n_total}, anonymize={anonymize}, plots={generate_plots}, preserve={preserve_proportions}")
+
+        try:
+            subprocess.run([
+                'Rscript',
+                r_script_path,
+                input_file_path,
+                output_prefix,
+                str(n_total),
+                str(anonymize).upper(),
+                str(generate_plots).upper(),
+                preserve_proportions
+            ], check=True)
+
+            # 📦 Return generated CSV for download
+            csv_path = f"{output_prefix}.csv"
+            pdf_path = f"{output_prefix}.pdf"
+            zip_path = os.path.join("Synthetic_Dataset_Files", "synthetic_output_bundle.zip")
+
+            # ✅ Create ZIP archive
+            with zipfile.ZipFile(zip_path, 'w') as zipf:
+                if os.path.exists(csv_path):
+                    zipf.write(csv_path, arcname='synthetic_data.csv')
+                if os.path.exists(pdf_path):
+                    zipf.write(pdf_path, arcname='synthetic_output.pdf')
+
+                img_files = [img for img in os.listdir(output_folder) if img.endswith('.png')]
+                for img in img_files:
+                    zipf.write(os.path.join(output_folder, img), arcname=img)
+
+
+            if os.path.exists(zip_path):
+                return FileResponse(open(zip_path, 'rb'), as_attachment=True, filename='synthetic_output_bundle.zip')
+            else:
+                return HttpResponse("Error: ZIP file not found.", status=500)
+
+        except subprocess.CalledProcessError as e:
+            return HttpResponse(f"Error generating dataset: {str(e)}", status=500)
+
+    return HttpResponse("Invalid request method.", status=405)
+
+
+
