@@ -65,10 +65,12 @@
                         <div class="form-group">
                             <label>Antibiotic Column Format<span class="required">*</span></label>
                             <div class="input-wrapper">
-                                <input type="text" name="antibiotic_format" 
-                                       placeholder="Format: Antibiotic_[suffix]"
-                                       pattern="^Antibiotic[_a-zA-Z]+$"
-                                       required>
+                                <input type="text" 
+                                    name="antibiotic_format" 
+                                    placeholder="Format: Antibiotic [any suffix]"
+                                    pattern="^Antibiotic.*$"
+                                    title="Start with 'Antibiotic' followed by any suffix"
+                                    required>
                             </div>
                         </div>
                     </div>

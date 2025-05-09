@@ -132,9 +132,9 @@ def mapping_dataset(request):
             }
             
             # Get resistance value mappings
-            susceptible_values = request.POST.getlist('susceptible_values')
-            intermediate_values = request.POST.getlist('intermediate_values')
-            resistant_values = request.POST.getlist('resistant_values')
+            susceptible_values = request.POST.get('susceptible_values', '').split(',')
+            intermediate_values = request.POST.get('intermediate_values', '').split(',')
+            resistant_values = request.POST.get('resistant_values', '').split(',') 
             
             # Store mappings if provided
             if any([susceptible_values, intermediate_values, resistant_values]):

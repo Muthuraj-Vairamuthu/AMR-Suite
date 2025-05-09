@@ -36,3 +36,6 @@ db.sqlite3
 # Python compiled files
 *.pyc
 __pycache__/
+
+# Rough
+playground/
