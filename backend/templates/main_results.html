@@ -66,8 +66,15 @@
     </div>
 
     <script>
-        // Simulate validation process
-        const updateStatus = (elementId, success = true) => {
+    async function checkValidationStatus() {
+        const statusChecks = [
+            { id: 'file-format-status', endpoint: '/api/check-file-format' },
+            { id: 'file-content-status', endpoint: '/api/check-file-content' },
+            { id: 'dataset-structure-status', endpoint: '/api/check-dataset-structure' },
+            { id: 'mapping-status', endpoint: '/api/check-mapping' }
+        ];
+
+        const updateStatus = (elementId, success) => {
             const statusElement = document.getElementById(elementId);
             const loader = statusElement.querySelector('.loading-icon');
             
@@ -75,23 +82,37 @@
                 loader.remove();
                 const icon = document.createElement('span');
                 icon.className = 'check-icon';
-                icon.textContent = '✓';
+                icon.textContent = success ? '✓' : '✗';
                 statusElement.insertBefore(icon, statusElement.firstChild);
-                
-                if (success) {
-                    statusElement.classList.add('success');
-                } else {
-                    statusElement.classList.add('error');
-                    icon.textContent = '✗';
-                }
+                statusElement.classList.add(success ? 'success' : 'error');
             }
         };
 
-        // Simulate validation steps with delays
-        setTimeout(() => updateStatus('file-format-status'), 1000);
-        setTimeout(() => updateStatus('file-content-status'), 2000);
-        setTimeout(() => updateStatus('dataset-structure-status'), 3000);
-        setTimeout(() => updateStatus('mapping-status'), 5000);
+        for (const check of statusChecks) {
+            try {
+                const response = await fetch(check.endpoint, {
+                    method: 'GET',
+                    headers: {
+                        'X-CSRFToken': '{{ csrf_token }}',
+                    },
+                });
+                const data = await response.json();
+                updateStatus(check.id, data.success);
+                
+                if (!data.success) {
+                    console.error(`Validation failed for ${check.id}:`, data.error);
+                    break; // Stop further checks if one fails
+                }
+            } catch (error) {
+                console.error(`Error checking ${check.id}:`, error);
+                updateStatus(check.id, false);
+                break; // Stop further checks if an error occurs
+            }
+        }
+    }
+
+    // Start the validation checks when the page loads
+    document.addEventListener('DOMContentLoaded', checkValidationStatus);
     </script>
 </body>
 </html>

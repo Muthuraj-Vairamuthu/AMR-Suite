@@ -1,7 +1,7 @@
 from django.urls import path
 from .views import (home,home2,scorecard_info,resistance_info,isolation_info,login_page,signup_view, login_user, upload_dataset, dataset_upload, 
                 mapping_dataset, isolation_burden_analysis, generate_isolation_graph,
-                resistance_analysis, generate_resistance_graph, logout_view, scorecards, generate_scorecards, video, get_unique_values, get_columns_with_suffix, synthetic_dataset_creation, generate_synthetic_dataset)
+                resistance_analysis, generate_resistance_graph, logout_view, scorecards, generate_scorecards, video, get_unique_values, get_columns_with_suffix, synthetic_dataset_creation, generate_synthetic_dataset, check_file_format, check_file_content, check_dataset_structure, check_mapping)
 
 urlpatterns = [
 
@@ -34,5 +34,9 @@ urlpatterns = [
     path('get_unique_values/', get_unique_values, name='get_unique_values'),
     path('get_columns_with_suffix/', get_columns_with_suffix, name='get_columns_with_suffix'),
     path('synthetic_dataset_creation/', synthetic_dataset_creation, name='synthetic_dataset_creation'),
-    path('generate_synthetic_dataset/', generate_synthetic_dataset, name='generate_synthetic_dataset')
+    path('generate_synthetic_dataset/', generate_synthetic_dataset, name='generate_synthetic_dataset'),
+    path('api/check-file-format', check_file_format, name='check_file_format'),
+    path('api/check-file-content', check_file_content, name='check_file_content'),
+    path('api/check-dataset-structure', check_dataset_structure, name='check_dataset_structure'),
+    path('api/check-mapping', check_mapping, name='check_mapping'),
 ]

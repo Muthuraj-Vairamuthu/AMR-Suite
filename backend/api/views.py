@@ -111,89 +111,63 @@ def login_user(request):
     return HttpResponse("Login Successful")
 
 def mapping_dataset(request):
-    if request.method == 'POST':
-        dataset_json = request.session.get('dataset')
-        if dataset_json:
-            dataset = pd.read_json(dataset_json)
-            
-            mapping_data = {
-                'bacterial_infection': request.POST.get('bacterial_infection'),
-                'source_input': request.POST.get('source_input'),
-                'dataset_format': request.POST.get('dataset_format'),
-                'cluster_attribute': request.POST.get('cluster_attribute'),
-                'time_stamp': request.POST.get('time_stamp'),
-                'antibiotic_format': request.POST.get('antibiotic_format'),
-                'antibiotic_name_col': request.POST.get('antibiotic_name_col'),
-                'antibiotic_result_col': request.POST.get('antibiotic_result_col'),
-                'date_format': request.POST.get('date_format'),
-                'date_column': request.POST.get('date_column'),
-                'resistance_granularity': request.POST.get('resistance_granularity'),
-                'time_gap_attribute': request.POST.get('time_gap_attribute'),
-            }
-            
-            # Get resistance value mappings
-            susceptible_values = request.POST.get('susceptible_values', '').split(',')
-            intermediate_values = request.POST.get('intermediate_values', '').split(',')
-            resistant_values = request.POST.get('resistant_values', '').split(',') 
-            
-            # Store mappings if provided
-            if any([susceptible_values, intermediate_values, resistant_values]):
-                mapping_data['resistance_mappings'] = {
-                    'susceptible': susceptible_values,
-                    'intermediate': intermediate_values,
-                    'resistant': resistant_values
-                }
-            
-            request.session['mapping_data'] = mapping_data
-
-            if mapping_data['dataset_format'] == 'Wide':
-                suffix = mapping_data['antibiotic_format'].replace('Antibiotic', '')
-                antibiotic_columns = [col for col in dataset.columns if col.endswith(suffix)]
-                antibiotic_columns = sorted(list(set(antibiotic_columns)))
-                
-                # Apply resistance mappings for Wide format
-                if 'resistance_mappings' in mapping_data:
-                    for col in antibiotic_columns:
-                        # Apply mappings to each antibiotic column
-                        for value in susceptible_values:
-                            dataset.loc[dataset[col] == value, col] = 'Susceptible'
-                        for value in intermediate_values:
-                            dataset.loc[dataset[col] == value, col] = 'Intermediate'
-                        for value in resistant_values:
-                            dataset.loc[dataset[col] == value, col] = 'Resistant'
-
-                request.session['antibiotic_columns'] = antibiotic_columns
-            else:
-                # For Long format
-                result_col = mapping_data['antibiotic_result_col']
-                
-                # Apply resistance mappings before pivoting
-                if 'resistance_mappings' in mapping_data:
-                    # Apply mappings to the result column
-                    for value in susceptible_values:
-                        dataset.loc[dataset[result_col] == value, result_col] = 'Susceptible'
-                    for value in intermediate_values:
-                        dataset.loc[dataset[result_col] == value, result_col] = 'Intermediate'
-                    for value in resistant_values:
-                        dataset.loc[dataset[result_col] == value, result_col] = 'Resistant'
-                
-                # Get unique antibiotic names
-                antibiotic_columns = dataset[mapping_data['antibiotic_name_col']].unique().tolist()
-                request.session['antibiotic_columns'] = antibiotic_columns
-                
-                # Transform from long to wide format
-                dataset[antibiotic_columns] = None
-                for index, row in dataset.iterrows():
-                    antibiotic_name = row[mapping_data['antibiotic_name_col']]
-                    result = row[mapping_data['antibiotic_result_col']]
-                    dataset.loc[index, antibiotic_name] = result
-
-            # Update the dataset in the session
-            request.session['dataset'] = dataset.to_json()
-            dataset.to_csv('static/media/original_dataset.csv', index=False)
-            
-            return render(request, 'main_results.html')
-    return redirect('upload_dataset')
+    if request.method != 'POST':
+        messages.error(request, "Invalid request method. Please submit the mapping form.")
+        return redirect('upload_dataset')
+    
+    dataset_json = request.session.get('dataset')
+    if not dataset_json:
+        messages.error(request, "No dataset found in session. Please upload a dataset first.")
+        return redirect('upload_dataset')
+    
+    dataset = pd.read_json(dataset_json)
+    
+    mapping_data = {
+        'bacterial_infection': request.POST.get('bacterial_infection'),
+        'source_input': request.POST.get('source_input'),
+        'dataset_format': request.POST.get('dataset_format'),
+        'cluster_attribute': request.POST.get('cluster_attribute'),
+        'time_stamp': request.POST.get('time_stamp'),
+        'antibiotic_format': request.POST.get('antibiotic_format'),
+        'antibiotic_name_col': request.POST.get('antibiotic_name_col'),
+        'antibiotic_result_col': request.POST.get('antibiotic_result_col'),
+        'date_format': request.POST.get('date_format'),
+        'date_column': request.POST.get('date_column'),
+        'resistance_granularity': request.POST.get('resistance_granularity'),
+        'time_gap_attribute': request.POST.get('time_gap_attribute'),
+    }
+    
+    # Validate required fields
+    required_fields = ['bacterial_infection', 'source_input', 'dataset_format', 'date_column', 'date_format']
+    for field in required_fields:
+        if not mapping_data[field]:
+            messages.error(request, f"Required field '{field.replace('_', ' ')}' is missing. Please fill in all required fields.")
+            return redirect('upload_dataset')
+    
+    # Store mappings in session
+    request.session['mapping_data'] = mapping_data
+    
+    # Transform dataset based on mappings
+    try:
+        if mapping_data['dataset_format'] == 'Wide':
+            suffix = mapping_data['antibiotic_format'].replace('Antibiotic', '')
+            antibiotic_columns = [col for col in dataset.columns if col.endswith(suffix)]
+            if not antibiotic_columns:
+                messages.error(request, f"No columns found with suffix '{suffix}'. Ensure the antibiotic format is correct.")
+                return redirect('upload_dataset')
+            request.session['antibiotic_columns'] = antibiotic_columns
+        else:
+            antibiotic_columns = dataset[mapping_data['antibiotic_name_col']].unique().tolist()
+            request.session['antibiotic_columns'] = antibiotic_columns
+    except Exception as e:
+        messages.error(request, f"Error processing dataset: {str(e)}. Please check your mappings and try again.")
+        return redirect('upload_dataset')
+    
+    # Update the dataset in the session
+    request.session['dataset'] = dataset.to_json()
+    dataset.to_csv('static/media/original_dataset.csv', index=False)
+    
+    return render(request, 'main_results.html')
 
 
 def validate_file_format(file):
@@ -202,7 +176,7 @@ def validate_file_format(file):
     
     # 1. Check File Extension
     if not file.name.lower().endswith('.csv'):
-        errors.append("Invalid file extension. Only .csv files are supported")
+        errors.append("Invalid file extension. Only .csv files are supported.")
     
     # 2. Verify MIME Type
     valid_mime_types = ['text/csv']
@@ -217,18 +191,18 @@ def validate_file_format(file):
         file.seek(0)
     
     if mime_type not in valid_mime_types:
-        errors.append(f"Invalid MIME type: {mime_type}. Only text/csv is supported")
+        errors.append(f"Invalid MIME type: {mime_type}. Only text/csv is supported.")
     
-    # Inspect File Content
+    # 3. Inspect File Content
     try:
         file.seek(0)
         # Check if it's a valid CSV
         sample = file.read(1024).decode('utf-8')
         file.seek(0)
         if not any(char in sample for char in [',', ';', '\t']):
-            errors.append("File content doesn't appear to be valid CSV")
+            errors.append("File content doesn't appear to be valid CSV. Ensure the file uses commas, semicolons, or tabs as delimiters.")
     except Exception as e:
-        errors.append(f"Error reading file content: {str(e)}")
+        errors.append(f"Error reading file content: {str(e)}. The file may be corrupted or encoded incorrectly.")
     
     return errors
 
@@ -264,6 +238,10 @@ def validate_dataset(dataset, mapping_data, file=None):
     return errors
 
 def dataset_upload(request):
+    if 'csv_file' not in request.FILES:
+        messages.error(request, "No file uploaded. Please select a CSV file.")
+        return redirect('upload_dataset')
+    
     file = request.FILES['csv_file']
     
     # First validate file format
@@ -278,8 +256,11 @@ def dataset_upload(request):
         dataset = pd.read_csv(file)
         
         # Additional validation by checking if we can access basic file properties
-        if len(dataset.columns) == 0 or len(dataset) == 0:
-            messages.error(request, "The file appears to be corrupted or empty")
+        if len(dataset.columns) == 0:
+            messages.error(request, "The file has no columns. Ensure the file contains valid data.")
+            return redirect('upload_dataset')
+        if len(dataset) == 0:
+            messages.error(request, "The file is empty. Ensure the file contains valid data.")
             return redirect('upload_dataset')
             
         # Try to perform basic operations
@@ -288,20 +269,20 @@ def dataset_upload(request):
             dataset.columns
             dataset.dtypes
         except Exception as e:
-            messages.error(request, f"File corruption detected: {str(e)}")
+            messages.error(request, f"File corruption detected: {str(e)}. The file may be improperly formatted.")
             return redirect('upload_dataset')
             
     except pd.errors.EmptyDataError:
-        messages.error(request, "The file appears to be empty")
+        messages.error(request, "The file appears to be empty. Ensure the file contains valid data.")
         return redirect('upload_dataset')
     except pd.errors.ParserError:
-        messages.error(request, "The file could not be parsed - it may be corrupted")
+        messages.error(request, "The file could not be parsed. It may be corrupted or improperly formatted.")
         return redirect('upload_dataset')
     except UnicodeDecodeError:
-        messages.error(request, "The file encoding appears to be invalid")
+        messages.error(request, "The file encoding appears to be invalid. Ensure the file is encoded in UTF-8.")
         return redirect('upload_dataset')
     except Exception as e:
-        messages.error(request, f"Error reading file: {str(e)}")
+        messages.error(request, f"Error reading file: {str(e)}. The file may be corrupted or improperly formatted.")
         return redirect('upload_dataset')
     
     # Store dataset in session
@@ -680,6 +661,54 @@ def generate_synthetic_dataset(request):
             return HttpResponse(f"Error generating dataset: {str(e)}", status=500)
 
     return HttpResponse("Invalid request method.", status=405)
+
+def check_file_format(request):
+    dataset_json = request.session.get('dataset')
+    if not dataset_json:
+        return JsonResponse({'success': False, 'error': 'No dataset in session'})
+    
+    # Perform file format validation
+    dataset = pd.read_json(dataset_json)
+    if not isinstance(dataset, pd.DataFrame):
+        return JsonResponse({'success': False, 'error': 'Invalid dataset format'})
+    
+    return JsonResponse({'success': True})
+
+def check_file_content(request):
+    dataset_json = request.session.get('dataset')
+    if not dataset_json:
+        return JsonResponse({'success': False, 'error': 'No dataset in session'})
+    
+    # Perform file content validation
+    dataset = pd.read_json(dataset_json)
+    if dataset.empty:
+        return JsonResponse({'success': False, 'error': 'Dataset is empty'})
+    
+    return JsonResponse({'success': True})
+
+def check_dataset_structure(request):
+    dataset_json = request.session.get('dataset')
+    if not dataset_json:
+        return JsonResponse({'success': False, 'error': 'No dataset in session'})
+    
+    # Perform dataset structure validation
+    dataset = pd.read_json(dataset_json)
+    if len(dataset.columns) == 0:
+        return JsonResponse({'success': False, 'error': 'Dataset has no columns'})
+    
+    return JsonResponse({'success': True})
+
+def check_mapping(request):
+    dataset_json = request.session.get('dataset')
+    if not dataset_json:
+        return JsonResponse({'success': False, 'error': 'No dataset in session'})
+    
+    # Perform mapping validation
+    dataset = pd.read_json(dataset_json)
+    if 'mapping_data' not in request.session:
+        return JsonResponse({'success': False, 'error': 'No mapping data found'})
+    
+    return JsonResponse({'success': True})
 
 
 
