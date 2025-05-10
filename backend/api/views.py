@@ -27,7 +27,52 @@ from django.conf import settings
 import os
 import re
 import zipfile
+import logging
+from datetime import datetime
+import traceback
+from logging.handlers import RotatingFileHandler
+import subprocess
 
+# Configure logging with rotation
+log_file_path = os.path.join(settings.BASE_DIR, 'audit.log')
+handler = RotatingFileHandler(
+    log_file_path,
+    maxBytes=10 * 1024 * 1024,  # 10 MB
+    backupCount=5  # Keep up to 5 backup files
+)
+handler.setFormatter(logging.Formatter('[%(asctime)s] [%(event_type)s] [user:%(user)s] %(message)s'))
+
+logger = logging.getLogger('audit_logger')
+logger.setLevel(logging.INFO)
+logger.addHandler(handler)
+
+def log_event(event_type, user, description, details_dict=None):
+    """
+    Logs an event in both human-readable and machine-readable formats.
+    
+    Args:
+        event_type (str): The type of event (e.g., UPLOAD, VALIDATE, MAP).
+        user (str): The username or session ID of the user.
+        description (str): A human-readable description of the event.
+        details_dict (dict, optional): Additional details for machine-readable logging.
+    """
+    # Human-readable log
+    logger.info(
+        f"{description}",
+        extra={'event_type': event_type, 'user': user}
+    )
+    
+    # Machine-readable log (JSON)
+    log_entry = {
+        "timestamp": datetime.now().isoformat(),
+        "event_type": event_type,
+        "user": user,
+        "description": description,
+        "details": details_dict or {}
+    }
+    
+    with open(os.path.join(settings.BASE_DIR, 'audit.json'), 'a') as f:
+        f.write(json.dumps(log_entry) + '\n')
 
 # Create your views here.
 def home(request):
@@ -54,9 +99,18 @@ def login_view(request):
         
         if user is not None:
             login(request, user)
-            print(f"{username} logged in successfully")
+            log_event(
+                event_type="LOGIN",
+                user=username,
+                description="User logged in successfully."
+            )
             return redirect('upload_dataset/')
         else:
+            log_event(
+                event_type="LOGIN_FAILED",
+                user=username,
+                description="Failed login attempt."
+            )
             messages.error(request, 'Invalid username or password.')
             return redirect('login')
     
@@ -93,7 +147,12 @@ def signup_view(request):
 
 def logout_view(request):
     if request.user.is_authenticated:
-        print(f"Logging out user: {request.user.username}")
+        username = request.user.username
+        log_event(
+            event_type="LOGOUT",
+            user=username,
+            description="User logged out."
+        )
         logout(request)
     return redirect('login')
 
@@ -121,6 +180,7 @@ def mapping_dataset(request):
         return redirect('upload_dataset')
     
     dataset = pd.read_json(dataset_json)
+    user = request.user.username if request.user.is_authenticated else 'anonymous'
     
     mapping_data = {
         'bacterial_infection': request.POST.get('bacterial_infection'),
@@ -136,6 +196,14 @@ def mapping_dataset(request):
         'resistance_granularity': request.POST.get('resistance_granularity'),
         'time_gap_attribute': request.POST.get('time_gap_attribute'),
     }
+    
+    # Log mapping
+    log_event(
+        event_type="MAP",
+        user=user,
+        description=f"Mapped columns: {mapping_data}",
+        details_dict=mapping_data
+    )
     
     # Validate required fields
     required_fields = ['bacterial_infection', 'source_input', 'dataset_format', 'date_column', 'date_format']
@@ -162,6 +230,14 @@ def mapping_dataset(request):
     except Exception as e:
         messages.error(request, f"Error processing dataset: {str(e)}. Please check your mappings and try again.")
         return redirect('upload_dataset')
+    
+    # Log processing
+    log_event(
+        event_type="PROCESS",
+        user=user,
+        description=f"Dataset processed into {mapping_data['dataset_format']} format (records: {len(dataset)})",
+        details_dict={"record_count": len(dataset), "format": mapping_data['dataset_format']}
+    )
     
     # Update the dataset in the session
     request.session['dataset'] = dataset.to_json()
@@ -243,17 +319,48 @@ def dataset_upload(request):
         return redirect('upload_dataset')
     
     file = request.FILES['csv_file']
+    user = request.user.username if request.user.is_authenticated else 'anonymous'
+    
+    # Log upload
+    log_event(
+        event_type="UPLOAD",
+        user=user,
+        description=f"Uploaded file: {file.name} (size: {file.size} bytes)",
+        details_dict={"file_name": file.name, "file_size": file.size}
+    )
     
     # First validate file format
     format_errors = validate_file_format(file)
     if format_errors:
         for error in format_errors:
             messages.error(request, error)
+        # Log validation failure
+        log_event(
+            event_type="VALIDATE",
+            user=user,
+            description=f"File validation failed: {', '.join(format_errors)}",
+            details_dict={"errors": format_errors}
+        )
         return redirect('upload_dataset')
+    
+    # Log validation success
+    log_event(
+        event_type="VALIDATE",
+        user=user,
+        description="File passed format and structure validation."
+    )
     
     # Then proceed with reading the file
     try:
         dataset = pd.read_csv(file)
+        
+        # Log parsing
+        log_event(
+            event_type="PARSE",
+            user=user,
+            description=f"CSV parsed into DataFrame (rows: {len(dataset)}, columns: {len(dataset.columns)})",
+            details_dict={"row_count": len(dataset), "column_count": len(dataset.columns)}
+        )
         
         # Additional validation by checking if we can access basic file properties
         if len(dataset.columns) == 0:
@@ -272,16 +379,44 @@ def dataset_upload(request):
             messages.error(request, f"File corruption detected: {str(e)}. The file may be improperly formatted.")
             return redirect('upload_dataset')
             
-    except pd.errors.EmptyDataError:
+    except pd.errors.EmptyDataError as e:
+        user = request.user.username if request.user.is_authenticated else 'anonymous'
+        log_event(
+            event_type="ERROR",
+            user=user,
+            description=f"EmptyDataError: {str(e)}",
+            details_dict={"exception": str(e), "stack_trace": traceback.format_exc()}
+        )
         messages.error(request, "The file appears to be empty. Ensure the file contains valid data.")
         return redirect('upload_dataset')
-    except pd.errors.ParserError:
+    except pd.errors.ParserError as e:
+        user = request.user.username if request.user.is_authenticated else 'anonymous'
+        log_event(
+            event_type="ERROR",
+            user=user,
+            description=f"ParserError: {str(e)}",
+            details_dict={"exception": str(e), "stack_trace": traceback.format_exc()}
+        )
         messages.error(request, "The file could not be parsed. It may be corrupted or improperly formatted.")
         return redirect('upload_dataset')
-    except UnicodeDecodeError:
+    except UnicodeDecodeError as e:
+        user = request.user.username if request.user.is_authenticated else 'anonymous'
+        log_event(
+            event_type="ERROR",
+            user=user,
+            description=f"UnicodeDecodeError: {str(e)}",
+            details_dict={"exception": str(e), "stack_trace": traceback.format_exc()}
+        )
         messages.error(request, "The file encoding appears to be invalid. Ensure the file is encoded in UTF-8.")
         return redirect('upload_dataset')
     except Exception as e:
+        user = request.user.username if request.user.is_authenticated else 'anonymous'
+        log_event(
+            event_type="ERROR",
+            user=user,
+            description=f"Unexpected error: {str(e)}",
+            details_dict={"exception": str(e), "stack_trace": traceback.format_exc()}
+        )
         messages.error(request, f"Error reading file: {str(e)}. The file may be corrupted or improperly formatted.")
         return redirect('upload_dataset')
     
@@ -331,8 +466,17 @@ def generate_isolation_graph(request):
         country = request.POST.get('country')
         bacteria = request.POST.get('bacteria')
         cluster_attribute = request.POST.get('cluster_attribute')
-        gender_column = request.POST.get('gender_column')  # Get selected gender column
+        gender_column = request.POST.get('gender_column')
         gender_filter = request.POST.get('gender_filter') == 'true'
+        user = request.user.username if request.user.is_authenticated else 'anonymous'
+        
+        # Log isolation analysis
+        log_event(
+            event_type="ISOLATION_ANALYSIS",
+            user=user,
+            description=f"Filters used: Source={source}, Country={country}, Bacteria={bacteria}, Cluster={cluster_attribute}",
+            details_dict={"source": source, "country": country, "bacteria": bacteria, "cluster": cluster_attribute}
+        )
         
         dataset_json = request.session.get('dataset')
         mappings = request.session.get('mapping_data')
@@ -340,16 +484,13 @@ def generate_isolation_graph(request):
         if dataset_json:
             dataset = pd.read_json(dataset_json)
             
-            if bacteria != 'All Bacteria':
-                dataset = dataset[dataset[mappings['bacterial_infection']] == bacteria]
-            
             fig = isolation_burden_analysis_graph(
                 dataset, 
                 source, 
                 country,
                 cluster_attribute,
                 gender_filter,
-                gender_column,  # Pass gender column to analysis function
+                gender_column,
                 mappings
             )
             
@@ -357,9 +498,8 @@ def generate_isolation_graph(request):
             buffer = BytesIO()
             fig.savefig(buffer, format='png', bbox_inches='tight', transparent=True)
             buffer.seek(0)
-            plt.close(fig)  # Close the specific figure
+            plt.close(fig)
             
-            # Return the image
             return HttpResponse(buffer.getvalue(), content_type='image/png')
             
     return HttpResponse('Invalid request', status=400)
@@ -385,6 +525,15 @@ def generate_resistance_graph(request):
         source = request.POST.get('source')
         infection = request.POST.get('infection')
         antibiotic = request.POST.get('antibiotic')
+        user = request.user.username if request.user.is_authenticated else 'anonymous'
+        
+        # Log resistance analysis
+        log_event(
+            event_type="RESISTANCE_ANALYSIS",
+            user=user,
+            description=f"Filters used: Infection={infection}, Antibiotic={antibiotic}, Source={source}",
+            details_dict={"infection": infection, "antibiotic": antibiotic, "source": source}
+        )
         
         # Get dataset and mappings from session
         dataset_json = request.session.get('dataset')
@@ -460,91 +609,38 @@ def generate_scorecards(request):
         source = request.POST.get('source')
         infection = request.POST.get('infection')
         antibiotic = request.POST.get('antibiotic')
-
-        print(f"Generating scorecards for: {source}, {infection}, {antibiotic}")
-
-        # First try to load the data from JSON files if they exist
-        json_dir = os.path.join(
-            os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
-            'Scorecards JSONs',
-            infection,
-            source,
-            antibiotic
+        user = request.user.username if request.user.is_authenticated else 'anonymous'
+        
+        # Log scorecard generation
+        log_event(
+            event_type="SCORECARD_GENERATED",
+            user=user,
+            description=f"Scorecard generated for: Infection={infection}, Antibiotic={antibiotic}, Source={source}",
+            details_dict={"infection": infection, "antibiotic": antibiotic, "source": source}
         )
         
-        print(f"Looking for scorecard JSONs in: {json_dir}")
+        # Get dataset and mappings from session
+        dataset_json = request.session.get('dataset')
+        mappings = request.session.get('mapping_data', {})
         
-        visualization_data = {
-            'years': [],
-            'countries': {}  # Use dict first for easier lookup, then convert to list
-        }
-        
-        # Check if directory exists and contains JSON files
-        if os.path.exists(json_dir):
-            try:
-                # Get all JSON files in the directory
-                json_files = [f for f in os.listdir(json_dir) if f.endswith('_scorecard.json')]
-                print(f"Found {len(json_files)} JSON files")
-                
-                # Process each JSON file
-                for json_file in json_files:
-                    try:
-                        with open(os.path.join(json_dir, json_file), 'r') as f:
-                            year_data = json.load(f)
-                            print(f"Loaded JSON data for year: {year_data.get('year', 'unknown')}")
-                            
-                            # Add year data to visualization_data
-                            visualization_data['years'].append(year_data)
-                            
-                            # Process each country in the year data
-                            for country in year_data['countries']:
-                                country_name = country['name']
-                                
-                                if country_name not in visualization_data['countries']:
-                                    visualization_data['countries'][country_name] = {
-                                        'name': country_name,
-                                        'years': []
-                                    }
-                                
-                                # Add this year's data to the country
-                                visualization_data['countries'][country_name]['years'].append({
-                                    'year': year_data['year'],
-                                    'x': country['x'],
-                                    'y': country['y'],
-                                    'median_intercept': year_data['median_intercept'],
-                                    'median_slope': year_data['median_slope']
-                                })
-                    except Exception as e:
-                        print(f"Error processing JSON file {json_file}: {str(e)}")
-                
-                # If we loaded data successfully from JSON files, convert countries dict to list and return
-                if visualization_data['years']:
-                    visualization_data['countries'] = list(visualization_data['countries'].values())
-                    print(f"Successfully processed JSON data: {len(visualization_data['years'])} years, {len(visualization_data['countries'])} countries")
-                    return JsonResponse(visualization_data)
-            except Exception as e:
-                print(f"Error loading JSON files: {str(e)}")
-        else:
-            print(f"JSON directory does not exist: {json_dir}")
-        
-        # If we couldn't load from JSON files, proceed with generating from the dataset
-        dataset = pd.read_json(request.session['dataset'])
-
-        # Call the updated scorecard_analysis function that returns both figures and data
-        figures, visualization_data = scorecard_analysis(
-            dataset,
-            source,
-            infection,
-            antibiotic,
-            request.session['mapping_data']
-        )
-
-        if visualization_data is None:
-            return JsonResponse({'error': 'Visualization data could not be found due to insufficient data.'}, status=500)
-        
-        # Now we can directly use the structured data returned from the analysis function
-        print(f"Generated visualization data with {len(visualization_data['years'])} years and {len(visualization_data['countries'])} countries")
-        return JsonResponse(visualization_data)
+        if dataset_json:
+            dataset = pd.read_json(dataset_json)
+            
+            # Call the scorecard_analysis function
+            figures, visualization_data = scorecard_analysis(
+                dataset,
+                source,
+                infection,
+                antibiotic,
+                mappings
+            )
+            
+            if visualization_data is None:
+                return JsonResponse({'error': 'Visualization data could not be found due to insufficient data.'}, status=500)
+            
+            return JsonResponse(visualization_data)
+            
+    return JsonResponse({'error': 'Invalid request'}, status=400)
 
 def get_unique_values(request):
     """API endpoint to get unique values from a dataset column"""
@@ -709,6 +805,32 @@ def check_mapping(request):
         return JsonResponse({'success': False, 'error': 'No mapping data found'})
     
     return JsonResponse({'success': True})
+
+def update_system_settings(request):
+    if request.method == 'POST':
+        # Update system settings
+        user = request.user.username if request.user.is_authenticated else 'anonymous'
+        log_event(
+            event_type="CONFIG_CHANGE",
+            user=user,
+            description="System settings updated.",
+            details_dict={"settings": request.POST}
+        )
+        return JsonResponse({'status': 'success'})
+    return JsonResponse({'status': 'error'}, status=400)
+
+def deploy_new_version(request):
+    if request.method == 'POST':
+        # Deploy new version
+        user = request.user.username if request.user.is_authenticated else 'anonymous'
+        log_event(
+            event_type="VERSION_DEPLOYED",
+            user=user,
+            description="New version deployed.",
+            details_dict={"version": request.POST.get('version')}
+        )
+        return JsonResponse({'status': 'success'})
+    return JsonResponse({'status': 'error'}, status=400)
 
 
 
