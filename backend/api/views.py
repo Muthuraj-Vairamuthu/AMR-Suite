@@ -12,15 +12,14 @@ from . analysis_code import *
 import matplotlib
 matplotlib.use('Agg')  # Set the backend to Agg before importing pyplot
 import matplotlib.pyplot as plt
-from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
-from django.contrib.auth.models import User
-from social_django.utils import load_strategy, load_backend
-from social_core.backends.oauth import BaseOAuth2
-from social_core.exceptions import MissingBackend, AuthAlreadyAssociated
 import mimetypes
-import magic
+try:
+    import magic
+except ImportError:
+    # Fallback to mimetypes if magic is not available
+    magic = None
 import io
 import base64
 from django.conf import settings
@@ -74,6 +73,10 @@ def log_event(event_type, user, description, details_dict=None):
     with open(os.path.join(settings.BASE_DIR, 'audit.json'), 'a') as f:
         f.write(json.dumps(log_entry) + '\n')
 
+def get_user_identifier(request):
+    """Helper function to get user identifier for logging"""
+    return request.user.username if request.user.is_authenticated else 'anonymous'
+
 # Create your views here.
 def home(request):
     """Renders the main home page"""
@@ -86,88 +89,16 @@ def scorecard_info(request):
 def video(request):
     return render(request, 'video.html')
 
-def login_view(request):
-    # Clear any existing messages when first loading the page
-    if request.method == 'GET':
-        storage = messages.get_messages(request)
-        storage.used = True
-
-    if request.method == 'POST':
-        username = request.POST.get('username')
-        password = request.POST.get('password')
-        user = authenticate(request, username=username, password=password)
-        
-        if user is not None:
-            login(request, user)
-            log_event(
-                event_type="LOGIN",
-                user=username,
-                description="User logged in successfully."
-            )
-            return redirect('upload_dataset/')
-        else:
-            log_event(
-                event_type="LOGIN_FAILED",
-                user=username,
-                description="Failed login attempt."
-            )
-            messages.error(request, 'Invalid username or password.')
-            return redirect('login')
-    
 def resistance_info(request):
     return render(request,'resistance_info.html')
 def isolation_info(request):
     return render(request,'isolation_info.html')
-def login_page(request):
-    return render(request, 'login_page.html')
 
-def signup_view(request):
-    if request.method == 'POST':
-        first_name = request.POST.get('first_name')
-        last_name = request.POST.get('last_name')
-        username = request.POST.get('username')
-        email = request.POST.get('email')
-        password = request.POST.get('password')
-        
-        try:
-            user = User.objects.create_user(
-                username=username,
-                email=email,
-                password=password,
-                first_name=first_name,
-                last_name=last_name
-            )
-            messages.success(request, 'Account created successfully. Please login.')
-            return redirect('login')
-        except Exception as e:
-            messages.error(request, 'Error creating account. Please try again.')
-            return redirect('signup')
-    
-    return render(request, 'signup_page.html')
-
-def logout_view(request):
-    if request.user.is_authenticated:
-        username = request.user.username
-        log_event(
-            event_type="LOGOUT",
-            user=username,
-            description="User logged out."
-        )
-        logout(request)
-    return redirect('login')
-
-
-@login_required
+@login_required(login_url='accounts:login')
 def upload_dataset(request):
-    if not request.user.is_authenticated:
-        return redirect('login')
-        
     return render(request, 'upload_dataset.html', {
         'welcome_message': f'Welcome, {request.user.username}!'
     })
-def login_user(request):
-    # Your login logic here
-    return HttpResponse("Login Successful")
 
 def mapping_dataset(request):
     if request.method != 'POST':
@@ -180,7 +111,7 @@ def mapping_dataset(request):
         return redirect('upload_dataset')
     
     dataset = pd.read_json(dataset_json)
-    user = request.user.username if request.user.is_authenticated else 'anonymous'
+    user = get_user_identifier(request)
     
     mapping_data = {
         'bacterial_infection': request.POST.get('bacterial_infection'),
@@ -247,38 +178,23 @@ def mapping_dataset(request):
 
 
 def validate_file_format(file):
-    """Validate CSV file format using extension, MIME type, and content inspection"""
+    """Simple CSV validation without magic library"""
     errors = []
     
-    # 1. Check File Extension
+    # Extension check
     if not file.name.lower().endswith('.csv'):
         errors.append("Invalid file extension. Only .csv files are supported.")
     
-    # 2. Verify MIME Type
-    valid_mime_types = ['text/csv']
-    
-    # First try Django's built-in MIME type detection
-    mime_type = getattr(file, 'content_type', mimetypes.guess_type(file.name)[0])
-    
-    # If not reliable, use python-magic for more accurate detection
-    if mime_type not in valid_mime_types:
-        file.seek(0)
-        mime_type = magic.from_buffer(file.read(1024), mime=True)
-        file.seek(0)
-    
-    if mime_type not in valid_mime_types:
-        errors.append(f"Invalid MIME type: {mime_type}. Only text/csv is supported.")
-    
-    # 3. Inspect File Content
+    # Content check
     try:
         file.seek(0)
-        # Check if it's a valid CSV
         sample = file.read(1024).decode('utf-8')
         file.seek(0)
+        
         if not any(char in sample for char in [',', ';', '\t']):
-            errors.append("File content doesn't appear to be valid CSV. Ensure the file uses commas, semicolons, or tabs as delimiters.")
+            errors.append("Invalid CSV format. Please check the file content.")
     except Exception as e:
-        errors.append(f"Error reading file content: {str(e)}. The file may be corrupted or encoded incorrectly.")
+        errors.append(f"Error reading file: {str(e)}")
     
     return errors
 
@@ -313,118 +229,55 @@ def validate_dataset(dataset, mapping_data, file=None):
     
     return errors
 
+@login_required(login_url='accounts:login')
 def dataset_upload(request):
     if 'csv_file' not in request.FILES:
         messages.error(request, "No file uploaded. Please select a CSV file.")
         return redirect('upload_dataset')
     
     file = request.FILES['csv_file']
-    user = request.user.username if request.user.is_authenticated else 'anonymous'
+    user = get_user_identifier(request)
     
-    # Log upload
-    log_event(
-        event_type="UPLOAD",
-        user=user,
-        description=f"Uploaded file: {file.name} (size: {file.size} bytes)",
-        details_dict={"file_name": file.name, "file_size": file.size}
-    )
-    
-    # First validate file format
-    format_errors = validate_file_format(file)
-    if format_errors:
-        for error in format_errors:
-            messages.error(request, error)
-        # Log validation failure
-        log_event(
-            event_type="VALIDATE",
-            user=user,
-            description=f"File validation failed: {', '.join(format_errors)}",
-            details_dict={"errors": format_errors}
-        )
-        return redirect('upload_dataset')
-    
-    # Log validation success
-    log_event(
-        event_type="VALIDATE",
-        user=user,
-        description="File passed format and structure validation."
-    )
-    
-    # Then proceed with reading the file
     try:
-        dataset = pd.read_csv(file)
-        
-        # Log parsing
-        log_event(
-            event_type="PARSE",
-            user=user,
-            description=f"CSV parsed into DataFrame (rows: {len(dataset)}, columns: {len(dataset.columns)})",
-            details_dict={"row_count": len(dataset), "column_count": len(dataset.columns)}
-        )
-        
-        # Additional validation by checking if we can access basic file properties
-        if len(dataset.columns) == 0:
-            messages.error(request, "The file has no columns. Ensure the file contains valid data.")
+        # Validate file format
+        format_errors = validate_file_format(file)
+        if format_errors:
+            for error in format_errors:
+                messages.error(request, error)
+            log_event(
+                event_type="VALIDATE_ERROR",
+                user=user,
+                description="File validation failed",
+                details_dict={"errors": format_errors}
+            )
             return redirect('upload_dataset')
-        if len(dataset) == 0:
-            messages.error(request, "The file is empty. Ensure the file contains valid data.")
-            return redirect('upload_dataset')
-            
-        # Try to perform basic operations
+        
+        # Read the CSV file
         try:
-            dataset.head()
-            dataset.columns
-            dataset.dtypes
-        except Exception as e:
-            messages.error(request, f"File corruption detected: {str(e)}. The file may be improperly formatted.")
+            dataset = pd.read_csv(file)
+        except pd.errors.EmptyDataError:
+            messages.error(request, "The uploaded file is empty.")
             return redirect('upload_dataset')
-            
-    except pd.errors.EmptyDataError as e:
-        user = request.user.username if request.user.is_authenticated else 'anonymous'
-        log_event(
-            event_type="ERROR",
-            user=user,
-            description=f"EmptyDataError: {str(e)}",
-            details_dict={"exception": str(e), "stack_trace": traceback.format_exc()}
-        )
-        messages.error(request, "The file appears to be empty. Ensure the file contains valid data.")
-        return redirect('upload_dataset')
-    except pd.errors.ParserError as e:
-        user = request.user.username if request.user.is_authenticated else 'anonymous'
-        log_event(
-            event_type="ERROR",
-            user=user,
-            description=f"ParserError: {str(e)}",
-            details_dict={"exception": str(e), "stack_trace": traceback.format_exc()}
-        )
-        messages.error(request, "The file could not be parsed. It may be corrupted or improperly formatted.")
-        return redirect('upload_dataset')
-    except UnicodeDecodeError as e:
-        user = request.user.username if request.user.is_authenticated else 'anonymous'
-        log_event(
-            event_type="ERROR",
-            user=user,
-            description=f"UnicodeDecodeError: {str(e)}",
-            details_dict={"exception": str(e), "stack_trace": traceback.format_exc()}
-        )
-        messages.error(request, "The file encoding appears to be invalid. Ensure the file is encoded in UTF-8.")
-        return redirect('upload_dataset')
+        except pd.errors.ParserError:
+            messages.error(request, "Unable to parse the file. Please ensure it's a valid CSV.")
+            return redirect('upload_dataset')
+        except Exception as e:
+            messages.error(request, f"Error reading file: {str(e)}")
+            return redirect('upload_dataset')
+        
+        # Store in session and continue
+        request.session['dataset'] = dataset.to_json()
+        return render(request, 'dataset_mapping.html', {'columns': dataset.columns.tolist()})
+        
     except Exception as e:
-        user = request.user.username if request.user.is_authenticated else 'anonymous'
+        messages.error(request, f"An unexpected error occurred: {str(e)}")
         log_event(
             event_type="ERROR",
             user=user,
-            description=f"Unexpected error: {str(e)}",
-            details_dict={"exception": str(e), "stack_trace": traceback.format_exc()}
+            description=f"Upload error: {str(e)}",
+            details_dict={"error": str(e)}
         )
-        messages.error(request, f"Error reading file: {str(e)}. The file may be corrupted or improperly formatted.")
         return redirect('upload_dataset')
-    
-    # Store dataset in session
-    request.session['dataset'] = dataset.to_json()
-    
-    columns = dataset.columns.tolist()
-    return render(request, 'dataset_mapping.html', {'columns': columns})
 
 def isolation_burden_analysis(request):
     dataset_json = request.session.get('dataset')
@@ -468,7 +321,7 @@ def generate_isolation_graph(request):
         cluster_attribute = request.POST.get('cluster_attribute')
         gender_column = request.POST.get('gender_column')
         gender_filter = request.POST.get('gender_filter') == 'true'
-        user = request.user.username if request.user.is_authenticated else 'anonymous'
+        user = get_user_identifier(request)
         
         # Log isolation analysis
         log_event(
@@ -504,7 +357,7 @@ def generate_isolation_graph(request):
             
     return HttpResponse('Invalid request', status=400)
 
-
+@login_required
 def resistance_analysis(request):
     dataset_json = request.session.get('dataset')
     mapping_data = request.session.get('mapping_data', {})
@@ -525,7 +378,7 @@ def generate_resistance_graph(request):
         source = request.POST.get('source')
         infection = request.POST.get('infection')
         antibiotic = request.POST.get('antibiotic')
-        user = request.user.username if request.user.is_authenticated else 'anonymous'
+        user = get_user_identifier(request)
         
         # Log resistance analysis
         log_event(
@@ -578,38 +431,12 @@ def scorecards(request):
     return redirect('upload_dataset')
 
 
-def google_callback(request):
-    if request.user.is_authenticated:
-        return redirect('upload_dataset')
-    
-    try:
-        strategy = load_strategy(request)
-        backend = load_backend(strategy=strategy, name='google-oauth2', redirect_uri=None)
-        
-        if 'code' in request.GET:
-            try:
-                user = backend.complete(request=request)
-                if user and user.is_active:
-                    login(request, user)
-                    print(f"Successfully authenticated Google user: {user.email}")
-                    messages.success(request, f'Welcome, {user.first_name}!')
-                    return redirect('upload_dataset')
-            except Exception as e:
-                print(f"Error completing Google authentication: {str(e)}")
-                messages.error(request, f'Google authentication error: {str(e)}')
-    except Exception as e:
-        print(f"Error in Google callback: {str(e)}")
-        messages.error(request, 'An error occurred during Google authentication.')
-    
-    return redirect('login')
-
-    
 def generate_scorecards(request):
     if request.method == 'POST':
         source = request.POST.get('source')
         infection = request.POST.get('infection')
         antibiotic = request.POST.get('antibiotic')
-        user = request.user.username if request.user.is_authenticated else 'anonymous'
+        user = get_user_identifier(request)
         
         # Log scorecard generation
         log_event(
@@ -809,7 +636,7 @@ def check_mapping(request):
 def update_system_settings(request):
     if request.method == 'POST':
         # Update system settings
-        user = request.user.username if request.user.is_authenticated else 'anonymous'
+        user = get_user_identifier(request)
         log_event(
             event_type="CONFIG_CHANGE",
             user=user,
@@ -822,7 +649,7 @@ def update_system_settings(request):
 def deploy_new_version(request):
     if request.method == 'POST':
         # Deploy new version
-        user = request.user.username if request.user.is_authenticated else 'anonymous'
+        user = get_user_identifier(request)
         log_event(
             event_type="VERSION_DEPLOYED",
             user=user,

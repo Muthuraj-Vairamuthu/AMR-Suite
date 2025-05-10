@@ -9,4 +9,5 @@ python-magic
 scikits.bootstrap
 python-magic-bin==0.4.14
 python-magic==0.4.27
-pkg_resources
+djangorestframework-simplejwt
+django-allauth

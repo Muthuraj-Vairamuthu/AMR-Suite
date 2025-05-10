@@ -1,3 +1,4 @@
+.html
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
@@ -6,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up - AMRSuite</title>
     <link rel="stylesheet" href="{% static 'css/signup_page.css' %}">
-    
 </head>
 <body>
     <nav>
@@ -30,7 +30,7 @@
                     {% endfor %}
                 {% endif %}
                 <h1>Sign Up</h1>
-                <form class="signup-form" method="POST" action="{% url 'accounts:signup' %}">
+                <form class="signup-form" method="POST" action="{% url 'accounts:register' %}">
                     {% csrf_token %}
                     <input type="text" name="first_name" placeholder="First Name" required>
                     <input type="text" name="last_name" placeholder="Last Name" required>

@@ -1,5 +1,4 @@
-
-        * {
+* {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -158,41 +157,44 @@
             display: flex;
             align-items: center;
             text-align: center;
-            margin: 30px 0;
-            color: #FFFFFF;
+            margin: 20px 0;
         }
 
         .divider::before,
         .divider::after {
             content: '';
             flex: 1;
-            border-bottom: 1px solid #555;
+            border-bottom: 1px solid #ccc;
         }
 
         .divider span {
             padding: 0 10px;
-            color: #888;
+            color: #666;
+            font-size: 14px;
         }
 
         .google-btn {
-            background-color: #B7392D;
-            color: white;
-            border: none;
-            padding: 12px;
-            border-radius: 20px;
-            cursor: pointer;
-            font-size: 1rem;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 10px;
             width: 100%;
+            padding: 10px;
+            margin-top: 15px;
+            background: white;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: background-color 0.3s;
+        }
+
+        .google-btn:hover {
+            background-color: #f5f5f5;
         }
 
         .google-btn img {
-            border-radius: 50%;
-            width: 20px;
-            height: 20px;
+            margin-right: 10px;
         }
 
         .signup-section h2 {

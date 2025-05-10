@@ -13,7 +13,7 @@
         <div class="logo">AMRSuite</div>
         <div class="nav-links">
             <a href="{% url 'home' %}">Home</a>
-            <a href="{% url 'logout' %}" class="logout-btn">Logout</a>
+            <a href="{% url 'accounts:logout' %}" class="logout-btn">Logout</a>
             <img src="{% static 'media/tavlab.logo.png' %}" alt="Lab Logo" />
         </div>
     </nav>
@@ -82,7 +82,7 @@
         // Handle browser back button
         window.addEventListener('popstate', function(event) {
             // Make a request to logout
-            fetch('{% url "logout" %}', {
+            fetch('{% url "accounts:logout" %}', {
                 method: 'GET',
                 credentials: 'same-origin',
                 headers: {
@@ -90,13 +90,13 @@
                 }
             }).then(() => {
                 // Redirect to login page after logout
-                window.location.href = '{% url "login" %}';
+                window.location.href = '{% url "accounts:login" %}';
             });
         });
 
         // Also handle the actual back button click
         window.onbeforeunload = function() {
-            fetch('{% url "logout" %}', {
+            fetch('{% url "accounts:logout" %}', {
                 method: 'GET',
                 credentials: 'same-origin',
                 headers: {

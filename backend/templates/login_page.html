@@ -32,22 +32,24 @@
                     {% endfor %}
                 {% endif %}
                 <h1>Login</h1>
-                <form class="login-form" method="POST" action="{% url 'login' %}">
+                <form class="login-form" method="POST" action="{% url 'accounts:login' %}">
                     {% csrf_token %}
                     <input type="text" name="username" class="input-box" placeholder="Username" required>
                     <input type="password" name="password" class="input-box" placeholder="Password" required>
-                    <a href="#" class="forgot-password">Forgot password?</a>
+                    <a href="{% url 'accounts:reset-otp' %}" class="forgot-password">Forgot password?</a>
                     <button type="submit" class="sign-in-btn" id="login-button">Sign in</button>
-                    
-                    <div class="divider">
-                        <span>or</span>
-                    </div>
-                    
-                    <a href="{% url 'social:begin' 'google-oauth2' %}" class="google-btn" style="text-decoration: none;">
-                        <img src="{% static 'media/google.logo.png' %}" alt="Google logo" width="20" height="20">
-                        <span>Sign in with Google</span>
-                    </a>
                 </form>
+
+                {% comment %}
+                <div class="divider">
+                    <span>or</span>
+                </div>
+
+                <a href="{% url 'social:begin' 'google-oauth2' %}" class="google-btn">
+                    <img src="{% static 'media/google.logo.png' %}" alt="Google logo" width="20" height="20">
+                    <span>Sign in with Google</span>
+                </a>
+                {% endcomment %}
             </section>
         </div>
 
@@ -55,7 +57,7 @@
             <section class="signup-section">
                 <h2>New Here?</h2>
                 <p class="signup-text">Sign up to explore and analyze your AMST data!</p>
-                <a href="{% url 'signup' %}">
+                <a href="{% url 'accounts:register' %}" class="btn btn-secondary">Sign Up</a>
                     <button type="button" class="signup-btn">Sign up</button>
                 </a>
             </section>
