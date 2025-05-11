@@ -1,0 +1,261 @@
+[
+  {
+    "timestamp": "2025-05-11T14:41:42.962348",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-11T14:41:45.052262",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-11T14:41:46.174120",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-11T14:41:55.267860",
+    "event_type": "LOGOUT",
+    "user": "rishi22403",
+    "description": "User logged out",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-11T14:41:55.283553",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-11T14:41:55.308053",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-11T14:41:56.203831",
+    "event_type": "UPLOAD",
+    "user": "",
+    "description": "Uploaded file: Data_part4.csv",
+    "details": {
+      "size": 78809100,
+      "content_type": "text/csv"
+    }
+  },
+  {
+    "timestamp": "2025-05-11T14:41:56.264389",
+    "event_type": "VALIDATE",
+    "user": "",
+    "description": "File passed validation",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-11T14:41:59.109770",
+    "event_type": "PARSE",
+    "user": "",
+    "description": "CSV parsed into DataFrame",
+    "details": {
+      "rows": 183410,
+      "columns": 136
+    }
+  },
+  {
+    "timestamp": "2025-05-11T14:42:03.364076",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-11T14:47:44.028502",
+    "event_type": "ISOLATION_BURDEN_ANALYSIS",
+    "user": "",
+    "description": "Isolation burden analysis initiated",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-11T14:48:02.773582",
+    "event_type": "ISOLATION_BURDEN_ANALYSIS",
+    "user": "",
+    "description": "Data prepared for isolation burden analysis",
+    "details": {
+      "bacteria_species_count": 205,
+      "source_columns_count": 92,
+      "country_columns_count": 74,
+      "all_columns_count": 137
+    }
+  },
+  {
+    "timestamp": "2025-05-11T15:05:42.645529",
+    "event_type": "RESISTANCE_ANALYSIS_PAGE",
+    "user": "",
+    "description": "Loading resistance analysis page",
+    "details": {
+      "bacteria_count": 204,
+      "sources_count": 91,
+      "antibiotics_count": 49
+    }
+  },
+  {
+    "timestamp": "2025-05-11T15:07:00.889987",
+    "event_type": "RESISTANCE_ANALYSIS_PAGE",
+    "user": "",
+    "description": "Loading resistance analysis page",
+    "details": {
+      "bacteria_count": 204,
+      "sources_count": 91,
+      "antibiotics_count": 49
+    }
+  },
+  {
+    "timestamp": "2025-05-11T15:52:30.661565",
+    "event_type": "LOGOUT",
+    "user": "rishi22403",
+    "description": "User logged out",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-11T15:52:31.148075",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-11T15:52:31.159793",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-11T15:52:34.844343",
+    "event_type": "UPLOAD",
+    "user": "rishi22403",
+    "description": "Uploaded file: Data_part3.csv",
+    "details": {
+      "size": 89353284,
+      "content_type": "text/csv"
+    }
+  },
+  {
+    "timestamp": "2025-05-11T15:52:34.920384",
+    "event_type": "VALIDATE",
+    "user": "rishi22403",
+    "description": "File passed validation",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-11T15:52:37.896307",
+    "event_type": "PARSE",
+    "user": "rishi22403",
+    "description": "CSV parsed into DataFrame",
+    "details": {
+      "rows": 183410,
+      "columns": 136
+    }
+  },
+  {
+    "timestamp": "2025-05-11T15:52:42.111364",
+    "event_type": "SESSION_EXPIRED",
+    "user": "rishi22403",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-11T15:58:10.947898",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-11T15:58:13.351065",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-11T15:58:14.533468",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-11T15:58:43.646522",
+    "event_type": "LOGOUT",
+    "user": "rishi22403",
+    "description": "User logged out",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-11T15:58:43.662702",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-11T15:58:43.691408",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-11T15:58:44.587388",
+    "event_type": "UPLOAD",
+    "user": "",
+    "description": "Uploaded file: Data_part4.csv",
+    "details": {
+      "size": 78809100,
+      "content_type": "text/csv"
+    }
+  },
+  {
+    "timestamp": "2025-05-11T15:58:44.647355",
+    "event_type": "VALIDATE",
+    "user": "",
+    "description": "File passed validation",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-11T15:58:47.448803",
+    "event_type": "PARSE",
+    "user": "",
+    "description": "CSV parsed into DataFrame",
+    "details": {
+      "rows": 183410,
+      "columns": 136
+    }
+  },
+  {
+    "timestamp": "2025-05-11T15:58:51.395603",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-11T16:07:10.516994",
+    "event_type": "RESISTANCE_ANALYSIS_PAGE",
+    "user": "",
+    "description": "Loading resistance analysis page",
+    "details": {
+      "bacteria_count": 204,
+      "sources_count": 91,
+      "antibiotics_count": 49
+    }
+  }
+]

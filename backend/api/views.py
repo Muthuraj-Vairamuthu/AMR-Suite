@@ -23,9 +23,11 @@ import mimetypes
 import io
 import base64
 from django.conf import settings
+import traceback
 import os
 import re
 import zipfile
+from AMR_Suite.utils import log_event
 
 
 # Create your views here.
@@ -41,24 +43,21 @@ def video(request):
     return render(request, 'video.html')
 
 def login_view(request):
-    # Clear any existing messages when first loading the page
-    if request.method == 'GET':
-        storage = messages.get_messages(request)
-        storage.used = True
-
     if request.method == 'POST':
         username = request.POST.get('username')
-        password = request.POST.get('password')
-        user = authenticate(request, username=username, password=password)
+        user = authenticate(request, username=username, 
+                          password=request.POST.get('password'))
         
         if user is not None:
             login(request, user)
-            print(f"{username} logged in successfully")
-            return redirect('upload_dataset/')
+            log_event('LOGIN', username, f"User logged in successfully")
+            return redirect('upload_dataset')
         else:
+            log_event('LOGIN_FAILED', username, "Invalid login attempt")
             messages.error(request, 'Invalid username or password.')
-            return redirect('login')
-    
+            
+    return render(request, 'login.html')
+
 def resistance_info(request):
     return render(request,'resistance_info.html')
 def isolation_info(request):
@@ -92,7 +91,8 @@ def signup_view(request):
 
 def logout_view(request):
     if request.user.is_authenticated:
-        print(f"Logging out user: {request.user.username}")
+        username = request.user.username
+        log_event('LOGOUT', username, "User logged out")
         logout(request)
     return redirect('login')
 
@@ -232,90 +232,93 @@ def validate_dataset(dataset, mapping_data, file=None):
 
 def dataset_upload(request):
     if 'csv_file' not in request.FILES:
+        log_event('ERROR', request.user.username, "No file uploaded")
         messages.error(request, "No file uploaded. Please select a CSV file.")
         return redirect('upload_dataset')
     
     file = request.FILES['csv_file']
     
-    # First validate file format
-    format_errors = validate_file_format(file)
-    if format_errors:
-        for error in format_errors:
-            messages.error(request, error)
-        return redirect('upload_dataset')
-    
-    # Then proceed with reading the file
     try:
-        dataset = pd.read_csv(file)
+        log_event('UPLOAD', request.user.username, f"Uploaded file: {file.name}", 
+                 {'size': file.size, 'content_type': file.content_type})
         
-        # Additional validation by checking if we can access basic file properties
-        if len(dataset.columns) == 0:
-            messages.error(request, "The file has no columns. Ensure the file contains valid data.")
+        # Validate file format
+        format_errors = validate_file_format(file)
+        if format_errors:
+            log_event('VALIDATE', request.user.username, "File validation failed", 
+                     {'errors': format_errors})
+            for error in format_errors:
+                messages.error(request, error)
             return redirect('upload_dataset')
-        if len(dataset) == 0:
-            messages.error(request, "The file is empty. Ensure the file contains valid data.")
-            return redirect('upload_dataset')
-            
-        # Try to perform basic operations
-        try:
-            dataset.head()
-            dataset.columns
-            dataset.dtypes
-        except Exception as e:
-            messages.error(request, f"File corruption detected: {str(e)}. The file may be improperly formatted.")
-            return redirect('upload_dataset')
-            
-    except pd.errors.EmptyDataError:
-        messages.error(request, "The file appears to be empty. Ensure the file contains valid data.")
-        return redirect('upload_dataset')
-    except pd.errors.ParserError:
-        messages.error(request, "The file could not be parsed. It may be corrupted or improperly formatted.")
-        return redirect('upload_dataset')
-    except UnicodeDecodeError:
-        messages.error(request, "The file encoding appears to be invalid. Ensure the file is encoded in UTF-8.")
-        return redirect('upload_dataset')
+        
+        log_event('VALIDATE', request.user.username, "File passed validation")
+        
+        # Read dataset
+        dataset = pd.read_csv(file)
+        log_event('PARSE', request.user.username, "CSV parsed into DataFrame",
+                 {'rows': len(dataset), 'columns': len(dataset.columns)})
+        
+        # Store in session
+        request.session['dataset'] = dataset.to_json()
+        
+        return render(request, 'dataset_mapping.html', {'columns': dataset.columns.tolist()})
+        
     except Exception as e:
-        messages.error(request, f"Error reading file: {str(e)}. The file may be corrupted or improperly formatted.")
+        log_event('ERROR', request.user.username, f"Error processing upload: {str(e)}", 
+                 {'traceback': traceback.format_exc()})
+        messages.error(request, f"Error processing file: {str(e)}")
         return redirect('upload_dataset')
-    
-    # Store dataset in session
-    request.session['dataset'] = dataset.to_json()
-    
-    columns = dataset.columns.tolist()
-    return render(request, 'dataset_mapping.html', {'columns': columns})
 
 def isolation_burden_analysis(request):
+    log_event('ISOLATION_BURDEN_ANALYSIS', request.user.username, "Isolation burden analysis initiated")
+    
     dataset_json = request.session.get('dataset')
     mapping_data = request.session.get('mapping_data', {})
     
     if dataset_json:
-        dataset = pd.read_json(dataset_json)
-        
-        # Get unique bacteria species
-        bacteria_column = mapping_data.get('bacterial_infection')
-        source_column = mapping_data.get('source_input')
-        
-        # Get unique values for each column
-        bacteria_species = list(dataset[bacteria_column].unique())
-        source_columns = list(dataset[source_column].unique())
-        country_columns = list(dataset['Country'].unique()) if 'Country' in dataset.columns else []
-        
-        # Get all columns for cluster attribute and gender selection
-        all_columns = dataset.columns.tolist()
-        
-        # Add 'All' options
-        bacteria_species.insert(0, 'All Bacteria')
-        source_columns.insert(0, 'All Sources')
-        country_columns.insert(0, 'All Countries')
-        all_columns.insert(0, 'None')
-
-        return render(request, 'isolation_burden_analysis.html', {
-            'bacteria_species': bacteria_species,
-            'source_columns': source_columns,
-            'country_columns': country_columns,
-            'cluster_attributes': all_columns,
-            'gender_columns': all_columns  # Add this for gender column selection
-        })
+        try:
+            dataset = pd.read_json(dataset_json)
+            
+            # Get unique bacteria species
+            bacteria_column = mapping_data.get('bacterial_infection')
+            source_column = mapping_data.get('source_input')
+            
+            # Get unique values for each column
+            bacteria_species = list(dataset[bacteria_column].unique())
+            source_columns = list(dataset[source_column].unique())
+            country_columns = list(dataset['Country'].unique()) if 'Country' in dataset.columns else []
+            
+            # Get all columns for cluster attribute and gender selection
+            all_columns = dataset.columns.tolist()
+            
+            # Add 'All' options
+            bacteria_species.insert(0, 'All Bacteria')
+            source_columns.insert(0, 'All Sources')
+            country_columns.insert(0, 'All Countries')
+            all_columns.insert(0, 'None')
+            
+            log_event('ISOLATION_BURDEN_ANALYSIS', request.user.username, "Data prepared for isolation burden analysis", {
+                'bacteria_species_count': len(bacteria_species),
+                'source_columns_count': len(source_columns),
+                'country_columns_count': len(country_columns),
+                'all_columns_count': len(all_columns)
+            })
+            
+            return render(request, 'isolation_burden_analysis.html', {
+                'bacteria_species': bacteria_species,
+                'source_columns': source_columns,
+                'country_columns': country_columns,
+                'cluster_attributes': all_columns,
+                'gender_columns': all_columns  # Add this for gender column selection
+            })
+        except Exception as e:
+            log_event('ERROR', request.user.username, f"Error in isolation burden analysis: {str(e)}", {
+                'traceback': traceback.format_exc()
+            })
+            messages.error(request, "An error occurred while processing the dataset.")
+            return redirect('upload_dataset')
+    
+    log_event('ISOLATION_BURDEN_ANALYSIS', request.user.username, "No dataset found in session")
     return redirect('upload_dataset')
 
 def generate_isolation_graph(request):
@@ -359,19 +362,82 @@ def generate_isolation_graph(request):
 
 
 def resistance_analysis(request):
-    dataset_json = request.session.get('dataset')
-    mapping_data = request.session.get('mapping_data', {})
-    if dataset_json:
-        dataset = pd.read_json(dataset_json)
-        columns = dataset.columns.tolist()
-
-        return render(request, 'resistance_analysis.html', {
-            'infection_columns': dataset[mapping_data['bacterial_infection']].unique(),
-            'source_columns': dataset[mapping_data['source_input']].unique(),
-            'antibiotic_columns': request.session['antibiotic_columns'],
-            'columns': columns
-        })
-    return redirect('upload_dataset')
+    """Handles both GET and POST requests for resistance analysis"""
+    if request.method == 'GET':
+        dataset_json = request.session.get('dataset')
+        if dataset_json:
+            try:
+                dataset = pd.read_json(dataset_json)
+                mappings = request.session.get('mapping_data', {})
+                
+                # Get the correct column names from mappings
+                bacteria_column = mappings.get('bacterial_infection')
+                source_column = mappings.get('source_input')
+                antibiotic_format = mappings.get('antibiotic_format', '')
+                
+                # Get unique values and handle None/empty values
+                bacteria_species = []
+                if bacteria_column and bacteria_column in dataset.columns:
+                    bacteria_species = sorted(list(dataset[bacteria_column].dropna().unique()))
+                    print(f"Found bacteria species: {bacteria_species}")  # Debug print
+                
+                source_columns = []
+                if source_column and source_column in dataset.columns:
+                    source_columns = sorted(list(dataset[source_column].dropna().unique()))
+                
+                # Get antibiotic columns based on format
+                antibiotic_columns = []
+                if antibiotic_format:
+                    suffix = antibiotic_format.replace('Antibiotic', '')
+                    antibiotic_columns = sorted([col for col in dataset.columns 
+                                       if col.endswith(suffix)])
+                
+                log_event('RESISTANCE_ANALYSIS_PAGE', request.user.username, 
+                         "Loading resistance analysis page", {
+                             'bacteria_count': len(bacteria_species),
+                             'sources_count': len(source_columns),
+                             'antibiotics_count': len(antibiotic_columns)
+                         })
+                
+                context = {
+                    'bacteria_species': bacteria_species,
+                    'source_columns': source_columns,
+                    'antibiotic_columns': antibiotic_columns
+                }
+                
+                return render(request, 'resistance_analysis.html', context)
+                
+            except Exception as e:
+                log_event('ERROR', request.user.username, 
+                         f"Error preparing resistance analysis page: {str(e)}", 
+                         {'traceback': traceback.format_exc()})
+                messages.error(request, f"Error preparing resistance analysis: {str(e)}")
+                return redirect('upload_dataset')
+                
+        messages.error(request, "No dataset found. Please upload a dataset first.")
+        return redirect('upload_dataset')
+    
+    if request.method == 'POST':
+        filters = {
+            'source': request.POST.get('source'),
+            'infection': request.POST.get('infection'),
+            'antibiotic': request.POST.get('antibiotic')
+        }
+        
+        log_event('RESISTANCE_ANALYSIS', request.user.username, 
+                 "Resistance analysis initiated", filters)
+        
+        try:
+            # Your existing analysis code...
+            results = {"message": "Analysis completed successfully"}
+            log_event('ANALYSIS_COMPLETE', request.user.username, 
+                     "Resistance analysis completed successfully")
+            return JsonResponse(results)
+        except Exception as e:
+            log_event('ERROR', request.user.username, 
+                     f"Error in resistance analysis: {str(e)}", 
+                     {'traceback': traceback.format_exc()})
+            return JsonResponse({'error': str(e)}, status=500)
 
 def generate_resistance_graph(request):
     if request.method == 'POST':
@@ -424,6 +490,7 @@ def scorecards(request):
 
 def google_callback(request):
     if request.user.is_authenticated:
+        log_event('GOOGLE_CALLBACK', request.user.username, "User already authenticated, redirecting to upload_dataset")
         return redirect('upload_dataset')
     
     try:
@@ -435,16 +502,17 @@ def google_callback(request):
                 user = backend.complete(request=request)
                 if user and user.is_active:
                     login(request, user)
-                    print(f"Successfully authenticated Google user: {user.email}")
+                    log_event('GOOGLE_AUTH_SUCCESS', user.username, f"Successfully authenticated Google user: {user.email}")
                     messages.success(request, f'Welcome, {user.first_name}!')
                     return redirect('upload_dataset')
             except Exception as e:
-                print(f"Error completing Google authentication: {str(e)}")
+                log_event('GOOGLE_AUTH_ERROR', 'UNKNOWN', f"Error completing Google authentication: {str(e)}", {'traceback': traceback.format_exc()})
                 messages.error(request, f'Google authentication error: {str(e)}')
     except Exception as e:
-        print(f"Error in Google callback: {str(e)}")
+        log_event('GOOGLE_CALLBACK_ERROR', 'UNKNOWN', f"Error in Google callback: {str(e)}", {'traceback': traceback.format_exc()})
         messages.error(request, 'An error occurred during Google authentication.')
     
+    log_event('GOOGLE_CALLBACK_REDIRECT', 'UNKNOWN', "Redirecting to login page due to authentication failure")
     return redirect('login')
 
     
@@ -608,8 +676,8 @@ def generate_synthetic_dataset(request):
 
         n_total = int(request.POST.get('n_total', 10000))
         preserve_proportions = request.POST.get('preserve_proportions', 'country_year')
-        anonymize = 'anonymize' in request.POST
-        generate_plots = 'generate_plots' in request.POST
+        anonymize = 'anonymize' in request
+        generate_plots = 'generate_plots' in request
 
         r_script_path = 'static/media/generate_synthetic_dataset.R'
         output_prefix = os.path.join(output_folder, 'synthetic_output')

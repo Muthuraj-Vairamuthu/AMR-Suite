@@ -32,10 +32,10 @@
                     <div class="form-group">
                         <label>Choose Infection:</label>
                         <div class="select-wrapper">
-                            <select name="infection" required>
+                            <select id="infection-select" name="infection" required>
                                 <option value="">Choose Infection</option>
-                                {% for infection in infection_columns %}
-                                    <option value="{{ infection }}">{{ infection }}</option>
+                                {% for bacteria in bacteria_species %}
+                                    <option value="{{ bacteria }}">{{ bacteria }}</option>
                                 {% endfor %}
                             </select>
                         </div>
@@ -118,4 +118,4 @@
         });
     </script>
 </body>
-</html> 
+</html>

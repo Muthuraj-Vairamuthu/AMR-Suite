@@ -67,6 +67,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'social_django.middleware.SocialAuthExceptionMiddleware',
+    'AMR_Suite.middleware.SessionLoggingMiddleware',
 ]
 
 ROOT_URLCONF = 'AMR_Suite.urls'
