@@ -20,7 +20,6 @@ from social_django.utils import load_strategy, load_backend
 from social_core.backends.oauth import BaseOAuth2
 from social_core.exceptions import MissingBackend, AuthAlreadyAssociated
 import mimetypes
-import magic
 import io
 import base64
 from django.conf import settings
@@ -183,13 +182,7 @@ def validate_file_format(file):
     
     # First try Django's built-in MIME type detection
     mime_type = getattr(file, 'content_type', mimetypes.guess_type(file.name)[0])
-    
-    # If not reliable, use python-magic for more accurate detection
-    if mime_type not in valid_mime_types:
-        file.seek(0)
-        mime_type = magic.from_buffer(file.read(1024), mime=True)
-        file.seek(0)
-    
+        
     if mime_type not in valid_mime_types:
         errors.append(f"Invalid MIME type: {mime_type}. Only text/csv is supported.")
     
