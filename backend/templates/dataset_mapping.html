@@ -28,7 +28,10 @@
                 <div class="mapping-section">
                     <h2>Core Details</h2>
                     <div class="form-group">
-                        <label>Dataset Format<span class="required">*</span></label>
+                        <label>
+                            Dataset Format<span class="required">*</span>
+                            <span class="info-icon" data-tooltip="Choose whether your dataset has separate columns for each antibiotic (Wide) or a single column for antibiotic names (Long)"></span>
+                        </label>
                         <div class="select-wrapper">
                             <select name="dataset_format" required id="formatSelect">
                                 <option value="">Choose Format</option>
@@ -38,7 +41,10 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label>Bacterial Infection<span class="required">*</span></label>
+                        <label>
+                            Bacterial Infection<span class="required">*</span>
+                            <span class="info-icon" data-tooltip="Column containing bacterial species or pathogen names"></span>
+                        </label>
                         <div class="select-wrapper">
                             <select name="bacterial_infection" required>
                                 <option value="">Select Column</option>
@@ -49,7 +55,10 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label>Source Input<span class="required">*</span></label>
+                        <label>
+                            Source Input<span class="required">*</span>
+                            <span class="info-icon" data-tooltip="Column indicating sample type (e.g., blood, urine, sputum)"></span>
+                        </label>
                         <div class="select-wrapper">
                             <select name="source_input" required>
                                 <option value="">Select Column</option>
@@ -63,7 +72,10 @@
                     <!-- Wide Format Fields (Visible by Default) -->
                     <div class="dynamic-section" id="wideFields" style="display: block;">
                         <div class="form-group">
-                            <label>Antibiotic Column Format<span class="required">*</span></label>
+                            <label>
+                                Antibiotic Column Format<span class="required">*</span>
+                                <span class="info-icon" data-tooltip="Pattern used for antibiotic column names (e.g., Antibiotic_CIP for Ciprofloxacin)"></span>
+                            </label>
                             <div class="input-wrapper">
                                 <input type="text" 
                                     name="antibiotic_format" 
@@ -78,7 +90,10 @@
                     <!-- Long Format Fields (Hidden by Default) -->
                     <div class="dynamic-section" id="longFields" style="display: none;">
                         <div class="form-group">
-                            <label>Antibiotic Name Column<span class="required">*</span></label>
+                            <label>
+                                Antibiotic Name Column<span class="required">*</span>
+                                <span class="info-icon" data-tooltip="Column that contains the names of antibiotics tested (e.g., CIP, AMP, GEN)"></span>
+                            </label>
                             <div class="select-wrapper">
                                 <select name="antibiotic_name_col">
                                     <option value="">Select Column</option>
@@ -89,7 +104,10 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label>Antibiotic Result Column<span class="required">*</span></label>
+                            <label>
+                                Antibiotic Result Column<span class="required">*</span>
+                                <span class="info-icon" data-tooltip="Column containing the test results for each antibiotic (e.g., R, S, I)"></span>
+                            </label>
                             <div class="select-wrapper">
                                 <select name="antibiotic_result_col" id="antibioticResultCol">
                                     <option value="">Select Column</option>
@@ -111,7 +129,10 @@
                     <p class="section-description">Map resistance values to standard categories</p>
                     
                     <div class="form-group">
-                        <label>Susceptible Values:</label>
+                        <label>
+                            Susceptible Values
+                            <span class="info-icon" data-tooltip="Values in your dataset that indicate bacterial susceptibility to antibiotics (e.g., S, Susceptible, Sensitive)"></span>
+                        </label>
                         <div class="custom-multi-select">
                             <div class="multi-select-box" id="susceptibleValuesBox"></div>
                             <input type="hidden" name="susceptible_values" id="susceptibleValues">
@@ -119,7 +140,10 @@
                     </div>
                     
                     <div class="form-group">
-                        <label>Intermediate Values:</label>
+                        <label>
+                            Intermediate Values
+                            <span class="info-icon" data-tooltip="Values indicating partial resistance to antibiotics (e.g., I, Intermediate, Indeterminate)"></span>
+                        </label>
                         <div class="custom-multi-select">
                             <div class="multi-select-box" id="intermediateValuesBox"></div>
                             <input type="hidden" name="intermediate_values" id="intermediateValues">
@@ -127,7 +151,10 @@
                     </div>
                     
                     <div class="form-group">
-                        <label>Resistant Values:</label>
+                        <label>
+                            Resistant Values
+                            <span class="info-icon" data-tooltip="Select all values in your dataset that indicate resistance to antibiotics (e.g., R, Resistant)"></span>
+                        </label>
                         <div class="custom-multi-select">
                             <div class="multi-select-box" id="resistantValuesBox"></div>
                             <input type="hidden" name="resistant_values" id="resistantValues">
@@ -139,7 +166,10 @@
                 <div class="mapping-section">
                     <h2>Date Details</h2>
                     <div class="form-group">
-                        <label>Date Column<span class="required">*</span></label>
+                        <label>
+                            Date Column<span class="required">*</span>
+                            <span class="info-icon" data-tooltip="Column containing the date when samples were collected or tested"></span>
+                        </label>
                         <div class="select-wrapper">
                             <select name="date_column" required>
                                 <option value="">Select Date Column</option>
@@ -151,7 +181,10 @@
                     </div>
                 
                     <div class="form-group">
-                        <label>Date Format<span class="required">*</span></label>
+                        <label>
+                            Date Format<span class="required">*</span>
+                            <span class="info-icon" data-tooltip="Format of dates in your dataset. Choose the pattern that matches your data (e.g., YYYY-MM-DD for 2025-05-11)"></span>
+                        </label>
                         <div class="select-wrapper">
                             <select name="date_format" required>
                                 <option value="">Select Date Format</option>
@@ -173,7 +206,10 @@
                     </div>
                 
                     <div class="form-group">
-                        <label>Resistance Analysis Granularity<span class="required">*</span></label>
+                        <label>
+                            Resistance Analysis Granularity<span class="required">*</span>
+                            <span class="info-icon" data-tooltip="Time period for grouping resistance data. Daily shows detailed patterns, while Monthly or Yearly shows long-term trends"></span>
+                        </label>
                         <div class="select-wrapper">
                             <select name="resistance_granularity" required>
                                 <option value="">Select Time Granularity</option>
@@ -190,7 +226,10 @@
                     <h2>Clustering Details</h2>
                     
                     <div class="form-group">
-                        <label>Cluster Attribute<span class="required">*</span></label>
+                        <label>
+                            Cluster Attribute<span class="required">*</span>
+                            <span class="info-icon" data-tooltip="Column used to group related samples (e.g., department, ward, location)"></span>
+                        </label>
                         <div class="select-wrapper">
                             <select name="cluster_attribute" required title="Select column containing cluster/group identifiers">
                                 <option value="">Select Grouping Column</option>
@@ -202,7 +241,10 @@
                     </div>
     
                     <div class="form-group">
-                        <label>Time Stamp<span class="required">*</span></label>
+                        <label>
+                            Time Stamp<span class="required">*</span>
+                            <span class="info-icon" data-tooltip="Select the temporal granularity for clustering (e.g., Year, Month, or Date)"></span>
+                        </label>
                         <div class="select-wrapper">
                             <select name="time_stamp" required>
                                 <option value="">Select Temporal Granularity</option>
@@ -216,6 +258,7 @@
                     <div class="form-group" style="margin-bottom: 20px;">
                         <label for="time-gap-attribute" style="font-weight: 500; color: #ccc; display: block; margin-bottom: 6px;">
                           Cluster Time Gap <span style="color: #e74c3c;">*</span>
+                          <span class="info-icon" data-tooltip="Minimum number of days between samples to be considered separate clusters"></span>
                         </label>
                         <input
                           type="number"
@@ -529,6 +572,85 @@
                     }
                 }
             `;
+            style.textContent += `
+    .info-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 18px;
+        height: 18px;
+        background-color: #3498db;
+        color: white;
+        border-radius: 50%;
+        font-size: 12px;
+        margin-left: 8px;
+        cursor: help;
+        position: relative;
+    }
+
+    .info-icon::before {
+        content: 'i';
+        font-style: normal;
+        font-weight: bold;
+        position: relative;
+        z-index: 1;
+    }
+
+    .info-icon:after {
+        content: attr(data-tooltip);
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 8px 12px;
+        background-color: #2c3e50;
+        color: white;
+        font-size: 12px;
+        border-radius: 4px;
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.3s;
+        white-space: normal;
+        width: max-content;
+        max-width: 300px;
+        margin-bottom: 12px;
+        z-index: 1000;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        line-height: 1.4;
+    }
+
+    /* Arrow for tooltip */
+    .info-icon:hover:after {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .info-icon:hover:before {
+        content: 'i';  /* Keep the 'i' visible on hover */
+    }
+
+    /* Add triangle pointer */
+    .info-icon:hover:after {
+        content: attr(data-tooltip);
+        border-radius: 4px;
+    }
+
+    .info-icon:hover:after {
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-bottom: 12px;
+    }
+
+    /* Responsive design for smaller screens */
+    @media (max-width: 768px) {
+        .info-icon:after {
+            width: 200px;
+            white-space: normal;
+        }
+    }
+`;
             document.head.appendChild(style);
         });
     </script>
