@@ -678,8 +678,7 @@
       autoplayInterval: null,
       hoveredCountry: null,
       clickedCountry: null,
-      currentSlide: 0,
-      countryColorMap: {} // New: persistent mapping of countries to colors
+      currentSlide: 0
     };
     
     // DOM elements
@@ -826,397 +825,361 @@
       clearInterval(state.autoplayInterval);
     }
     
-    // Function to build a consistent color map for all countries across all years
-    function buildCountryColorMap() {
-      // First, get a set of all unique country names across all years
-      const allCountries = new Set();
-      
-      state.yearsData.forEach(yearData => {
-        yearData.countries.forEach(country => {
-          if (country.name && country.name.toLowerCase() !== "global") {
-            allCountries.add(country.name);
-          }
-        });
-      });
-      
-      // Assign a fixed color to each country name
-      const countryArray = Array.from(allCountries);
-      countryArray.forEach((countryName, index) => {
-        state.countryColorMap[countryName] = colors[index % colors.length];
-      });
-      
-      console.log("Built country color map:", state.countryColorMap);
-    }
-    
-    // Get color for a country, maintaining consistency across year ranges
-    function getCountryColor(countryName) {
-      // If we already have a color assigned for this country, use it
-      if (state.countryColorMap[countryName]) {
-        return state.countryColorMap[countryName];
-      }
-      
-      // Otherwise, assign a new color (this should rarely happen after initial build)
-      const colorIndex = Object.keys(state.countryColorMap).length;
-      state.countryColorMap[countryName] = colors[colorIndex % colors.length];
-      return state.countryColorMap[countryName];
-    }
-    
     // Function to render legend for countries
     function renderCountriesLegend(data) {
-      const legendContainer = elements.countriesLegend;
-      legendContainer.innerHTML = '';
-      
-      // Add legend title
-      const titleDiv = document.createElement('div');
-      titleDiv.className = 'legend-title';
-      titleDiv.textContent = 'Countries';
-      legendContainer.appendChild(titleDiv);
+  const legendContainer = elements.countriesLegend;
+  legendContainer.innerHTML = '';
+  
+  // Add legend title
+  const titleDiv = document.createElement('div');
+  titleDiv.className = 'legend-title';
+  titleDiv.textContent = 'Countries';
+  legendContainer.appendChild(titleDiv);
 
-      // Create a set to track unique country names
-      const uniqueCountries = new Set();
-      
-      console.log("Data received for legend rendering:", data);
-      
-      // Create a list of countries with their colors
-      data.forEach((country) => {
-        console.log(`Legend item: label=${country.label}`);
-        
-        // Skip if label is missing or if it's "Global"
-        if (!country.label || country.label.toLowerCase() === "global") {
-          console.log(`Skipping country: label=${country.label}`);
-          return;
-        }
-        
-        // Skip duplicate country names
-        if (uniqueCountries.has(country.label)) {
-          console.log(`Skipping duplicate country: ${country.label}`);
-          return;
-        }
-        uniqueCountries.add(country.label);
-        
-        const legendItem = document.createElement('div');
-        legendItem.className = `legend-item ${state.clickedCountry === country.label ? 'selected' : ''}`;
-        legendItem.dataset.country = country.label;
-        
-        const colorSpan = document.createElement('span');
-        colorSpan.className = 'legend-color';
-        // Use our consistent color mapping
-        colorSpan.style.backgroundColor = getCountryColor(country.label);
-        
-        const labelSpan = document.createElement('span');
-        labelSpan.className = 'legend-label';
-        labelSpan.textContent = country.label || "Unknown Country"; // Fallback to "Unknown Country"
-        
-        console.log(`Added legend item: ${country.label}`);
-        
-        legendItem.appendChild(colorSpan);
-        legendItem.appendChild(labelSpan);
-        
-        // Modify click handler to only highlight country without switching views
-        legendItem.addEventListener('click', () => {
-          const countryName = country.label;
-          state.clickedCountry = state.clickedCountry === countryName ? null : countryName;
-          
-          // Update UI to show selected state
-          document.querySelectorAll('.legend-item').forEach(item => {
-            item.classList.remove('selected');
-          });
-          if (state.clickedCountry) {
-            legendItem.classList.add('selected');
-          }
-          
-          // Only re-render the scatter plot, don't change view
-          renderScatterPlot();
-        });
-        
-        // Enhanced hover effects with more visible feedback
-        legendItem.addEventListener('mouseenter', () => {
-          // Highlight all points with this country
-          document.querySelectorAll(`.country-point[data-country="${country.label}"]`).forEach(point => {
-            point.style.stroke = getCountryColor(country.label);
-            point.style.strokeWidth = '3px';
-            point.style.opacity = '1';
-            point.style.r = '10'; // Slightly larger
-          });
-          
-          // Highlight the legend item
-          legendItem.style.backgroundColor = "rgba(0,0,0,0.1)";
-          legendItem.style.transform = "translateX(5px)";
-        });
-        
-        legendItem.addEventListener('mouseleave', () => {
-          // Reset point styles if not clicked
-          if (state.clickedCountry !== country.label) {
-            document.querySelectorAll(`.country-point[data-country="${country.label}"]`).forEach(point => {
-              point.style.stroke = 'none';
-              point.style.opacity = '0.8';
-              point.style.r = '8'; // Back to normal size
-            });
-          }
-          
-          // Reset legend item styles if not selected
-          if (state.clickedCountry !== country.label) {
-            legendItem.style.backgroundColor = "";
-            legendItem.style.transform = "";
-          }
-        });
-        
-        legendContainer.appendChild(legendItem);
-      });
-      
-      console.log(`Total unique countries rendered in legend: ${uniqueCountries.size}`);
-      
-      // Add a message if no countries were found
-      if (uniqueCountries.size === 0) {
-        const noData = document.createElement('div');
-        noData.style.padding = '20px';
-        noData.style.textAlign = 'center';
-        noData.style.color = '#666';
-        noData.textContent = 'No country data available';
-        legendContainer.appendChild(noData);
-      }
+  // Create a set to track unique country names
+  const uniqueCountries = new Set();
+  
+  console.log("Data received for legend rendering:", data);
+  
+  // Create a list of countries with their colors
+  data.forEach((country, index) => {
+    console.log(`Legend item: index=${index}, label=${country.label}`);
+    
+    // Skip if label is missing or if it's "Global"
+    if (!country.label || country.label.toLowerCase() === "global") {
+      console.log(`Skipping country at index ${index}: label=${country.label}`);
+      return;
     }
     
-    // Function to render scatter plot for all countries
-    function renderScatterPlot() {
-      const svg = d3.select('#scatter-chart');
-      svg.selectAll("*").remove();
+    // Skip duplicate country names
+    if (uniqueCountries.has(country.label)) {
+      console.log(`Skipping duplicate country: ${country.label}`);
+      return;
+    }
+    uniqueCountries.add(country.label);
+    
+    const legendItem = document.createElement('div');
+    legendItem.className = `legend-item ${state.clickedCountry === country.label ? 'selected' : ''}`;
+    legendItem.dataset.country = country.label;
+    
+    const colorSpan = document.createElement('span');
+    colorSpan.className = 'legend-color';
+    colorSpan.style.backgroundColor = colors[index % colors.length];
+    
+    const labelSpan = document.createElement('span');
+    labelSpan.className = 'legend-label';
+    labelSpan.textContent = country.label || "Unknown Country"; // Fallback to "Unknown Country"
+    
+    console.log(`Added legend item: ${country.label}`);
+    
+    legendItem.appendChild(colorSpan);
+    legendItem.appendChild(labelSpan);
+    
+    // Modify click handler to only highlight country without switching views
+    legendItem.addEventListener('click', () => {
+      const countryName = country.label;
+      state.clickedCountry = state.clickedCountry === countryName ? null : countryName;
       
-      const yearData = state.yearsData.find(y => parseInt(y.year) === state.selectedYear);
+      // Update UI to show selected state
+      document.querySelectorAll('.legend-item').forEach(item => {
+        item.classList.remove('selected');
+      });
+      if (state.clickedCountry) {
+        legendItem.classList.add('selected');
+      }
       
-      if (!yearData) return;
-      
-      console.log("Year data for scatter plot:", yearData);
-      console.log("Countries in this year:", yearData.countries);
-      
-      const data = yearData.countries.map((country) => {
-        // Ensure we have a valid country name
-        const countryName = country.name || `Country ${Math.random().toString(36).substring(7)}`; // Unique fallback
-        console.log(`Processing country: name=${country.name}, using=${countryName}`);
-        
-        return {
-          x: Math.max(0, parseFloat((country.x || 0).toFixed(2))),
-          y: parseFloat((country.y || 0).toFixed(2)),
-          label: countryName,
-          color: getCountryColor(countryName) // Use consistent color mapping
-        };
-      }).filter(d => d.x !== undefined && d.y !== undefined); // Filter out any invalid data points
-      
-      console.log("Processed data for scatter plot:", data);
-      
-      // Get dimensions based on container
-      const container = document.getElementById('scatter-chart');
-      const width = container.clientWidth;
-      const height = container.clientHeight;
-      
-      // Calculate domain for axes from all years to maintain consistent scale
-      const { maxX, maxY, minX, minY } = state.yearsData.reduce(
-        (acc, year) => {
-          year.countries.forEach(country => {
-            const x = Math.max(0, country.x || 0);
-            const y = country.y || 0;
-            acc.maxX = Math.max(acc.maxX, x);
-            acc.maxY = Math.max(acc.maxY, y);
-            acc.minX = Math.min(acc.minX, x);
-            acc.minY = Math.min(acc.minY, y);
-          });
-          return acc;
-        },
-        { maxX: -Infinity, maxY: -Infinity, minX: Infinity, minY: Infinity }
-      );
-      
-      // Create scales with some padding
-      const xScale = d3.scaleLinear()
-        .domain([Math.max(0, Math.floor(minX)), Math.ceil(maxX) + 1])
-        .range([50, width - 50]);
-      
-      const yScale = d3.scaleLinear()
-        .domain([Math.floor(minY) - 1, Math.ceil(maxY) + 1])
-        .range([height - 50, 30]);
-      
-      // Draw axes
-      const xAxis = d3.axisBottom(xScale).tickFormat(d => Math.round(d));
-      svg.append("g")
-        .attr("transform", `translate(0, ${height - 50})`)
-        .call(xAxis)
-        .attr("color", "#333");
-      
-      const yAxis = d3.axisLeft(yScale)
-      .ticks(6)  // ✅ Set fewer ticks (adjust as needed)
-      .tickFormat(d => Math.round(d));
-      
-      svg.append("g")
-        .attr("transform", `translate(50, 0)`)
-        .call(yAxis)
-        .attr("color", "#333");
-      
-      // Add axis labels
-      svg.append("text")
-        .attr("x", width / 2)
-        .attr("y", height - 10)
-        .attr("text-anchor", "middle")
-        .text("Intercept")
-        .attr("fill", "#333")
-        .attr("font-weight", "500");
-      
-      svg.append("text")
-        .attr("transform", "rotate(-90)")
-        .attr("x", -height / 2)
-        .attr("y", 15)
-        .attr("text-anchor", "middle")
-        .text("Slope")
-        .attr("fill", "#333")
-        .attr("font-weight", "500");
-      
-      // Draw grid lines
-      svg.append('g')
-        .attr('class', 'grid')
-        .attr('transform', `translate(0, ${height - 50})`)
-        .call(d3.axisBottom(xScale)
-          .tickSize(-(height - 80))
-          .tickFormat('')
-        )
-        .attr("color", "#eee")
-        .attr("opacity", 0.7);
-      
-      svg.append('g')
-        .attr('class', 'grid')
-        .attr('transform', `translate(50, 0)`)
-        .call(d3.axisLeft(yScale)
-          .tickSize(-(width - 100))
-          .tickFormat('')
-        )
-        .attr("color", "#eee")
-        .attr("opacity", 0.7);
-      
-      // Draw reference lines
-      svg.append("line")
-        .attr("class", "reference-line")
-        .attr("x1", xScale(parseFloat(yearData.median_intercept.toFixed(2))))
-        .attr("y1", 30)
-        .attr("x2", xScale(parseFloat(yearData.median_intercept.toFixed(2))))
-        .attr("y2", height - 50)
-        .attr("stroke", "green")
-        .attr("stroke-dasharray", "5,5");
-      
-      svg.append("line")
-        .attr("class", "reference-line")
-        .attr("x1", 50)
-        .attr("y1", yScale(parseFloat(yearData.median_slope.toFixed(2))))
-        .attr("x2", width - 50)
-        .attr("y2", yScale(parseFloat(yearData.median_slope.toFixed(2))))
-        .attr("stroke", "red")
-        .attr("stroke-dasharray", "5,5");
-      
-      // Add year label to the chart
-      svg.append("text")
-        .attr("x", width - 15)
-        .attr("y", 25)
-        .attr("text-anchor", "end")
-        .attr("font-size", "18px")
-        .attr("font-weight", "bold")
-        .text(`${state.selectedYear}-${(state.selectedYear + 3).toString().slice(-2)}`)
-        .attr("fill", "#555");
-      
-      // Draw points with enhanced behavior
-      data.forEach((d) => {
-        // Determine if this country should be highlighted
-        let isHighlighted = true;
-        
-        // If a country is clicked, only highlight that one
-        if (state.clickedCountry) {
-          isHighlighted = d.label === state.clickedCountry;
-        }
-        // Otherwise, if a country is hovered, highlight only that one
-        else if (state.hoveredCountry) {
-          isHighlighted = d.label === state.hoveredCountry;
-        }
-        
-        // First draw a larger circle as a highlight/stroke effect
-        if (isHighlighted) {
-          svg.append("circle")
-            .attr("cx", xScale(d.x))
-            .attr("cy", yScale(d.y))
-            .attr("r", 10)
-            .attr("fill", "none")
-            .attr("stroke", d.color) // Use consistent color
-            .attr("stroke-width", 1.5)
-            .attr("opacity", 0.6);
-        }
-        
-        svg.append("circle")
-          .attr("class", "country-point")
-          .attr("cx", xScale(d.x))
-          .attr("cy", yScale(d.y))
-          .attr("r", 8)
-          .attr("fill", d.color) // Use consistent color
-          .attr("opacity", isHighlighted ? 1 : 0.2)
-          .attr("data-country", d.label)
-          .on("mouseenter", (event) => {
-            const content = `
-              <div class="tooltip-title" style="color: ${d.color};">${d.label}</div>
-              <div class="tooltip-row">
-                <span>Intercept:</span>
-                <span><b>${d.x.toFixed(2)}</b></span>
-              </div>
-              <div class="tooltip-row">
-                <span>Slope:</span>
-                <span><b>${d.y.toFixed(2)}</b></span>
-              </div>
-              <div class="tooltip-row">
-                <span>Year:</span>
-                <span><b>${state.selectedYear}-${(state.selectedYear + 3).toString().slice(-2)}</b></span>
-              </div>
-            `;
-            showTooltip(event.pageX, event.pageY, content);
-            
-            // Highlight in legend
-            const legendItem = document.querySelector(`.legend-item[data-country="${d.label}"]`);
-            if (legendItem) {
-              legendItem.style.backgroundColor = "rgba(0,0,0,0.1)";
-              legendItem.style.transform = "translateX(5px)";
-            }
-            
-            // Update state
-            state.hoveredCountry = d.label;
-            renderScatterPlot();
-          })
-          .on("mouseleave", () => {
-            hideTooltip();
-            
-            // Remove highlight from legend
-            const legendItem = document.querySelector(`.legend-item[data-country="${d.label}"]`);
-            if (legendItem && state.clickedCountry !== d.label) {
-              legendItem.style.backgroundColor = "";
-              legendItem.style.transform = "";
-            }
-            
-            // Update state
-            state.hoveredCountry = null;
-            renderScatterPlot();
-          })
-          .on("click", () => {
-            if (state.clickedCountry === d.label) {
-              state.clickedCountry = null;
-            } else {
-              state.clickedCountry = d.label;
-            }
-            renderScatterPlot();
-            
-            // Update legend
-            document.querySelectorAll('.legend-item').forEach(item => {
-              item.classList.remove('selected');
-              
-              if (item.dataset.country === state.clickedCountry) {
-                item.classList.add('selected');
-              }
-            });
-          });
+      // Only re-render the scatter plot, don't change view
+      renderScatterPlot();
+    });
+    
+    // Enhanced hover effects with more visible feedback
+    legendItem.addEventListener('mouseenter', () => {
+      // Highlight all points with this country
+      document.querySelectorAll(`.country-point[data-country="${country.label}"]`).forEach(point => {
+        point.style.stroke = colors[index % colors.length];
+        point.style.strokeWidth = '3px';
+        point.style.opacity = '1';
+        point.style.r = '10'; // Slightly larger
       });
       
-      // Render the legend
-      renderCountriesLegend(data);
+      // Highlight the legend item
+      legendItem.style.backgroundColor = "rgba(0,0,0,0.1)";
+      legendItem.style.transform = "translateX(5px)";
+    });
+    
+    legendItem.addEventListener('mouseleave', () => {
+      // Reset point styles if not clicked
+      if (state.clickedCountry !== country.label) {
+        document.querySelectorAll(`.country-point[data-country="${country.label}"]`).forEach(point => {
+          point.style.stroke = 'none';
+          point.style.opacity = '0.8';
+          point.style.r = '8'; // Back to normal size
+        });
+      }
+      
+      // Reset legend item styles if not selected
+      if (state.clickedCountry !== country.label) {
+        legendItem.style.backgroundColor = "";
+        legendItem.style.transform = "";
+      }
+    });
+    
+    legendContainer.appendChild(legendItem);
+  });
+  
+  console.log(`Total unique countries rendered in legend: ${uniqueCountries.size}`);
+  
+  // Add a message if no countries were found
+  if (uniqueCountries.size === 0) {
+    const noData = document.createElement('div');
+    noData.style.padding = '20px';
+    noData.style.textAlign = 'center';
+    noData.style.color = '#666';
+    noData.textContent = 'No country data available';
+    legendContainer.appendChild(noData);
+  }
+}
+    // Function to render scatter plot for all countries
+    function renderScatterPlot() {
+  const svg = d3.select('#scatter-chart');
+  svg.selectAll("*").remove();
+  
+  const yearData = state.yearsData.find(y => parseInt(y.year) === state.selectedYear);
+  
+  if (!yearData) return;
+  
+  console.log("Year data for scatter plot:", yearData);
+  console.log("Countries in this year:", yearData.countries);
+  
+  const data = yearData.countries.map((country, index) => {
+    // Ensure we have a valid country name
+    const countryName = country.name || `Country ${index + 1}`;
+    console.log(`Processing country: index=${index}, name=${country.name}, using=${countryName}`);
+    
+    return {
+      x: Math.max(0, parseFloat((country.x || 0).toFixed(2))),
+      y: parseFloat((country.y || 0).toFixed(2)),
+      label: countryName,
+      color: colors[index % colors.length]
+    };
+  }).filter(d => d.x !== undefined && d.y !== undefined); // Filter out any invalid data points
+  
+  console.log("Processed data for scatter plot:", data);
+  
+  // Get dimensions based on container
+  const container = document.getElementById('scatter-chart');
+  const width = container.clientWidth;
+  const height = container.clientHeight;
+  
+  // Calculate domain for axes from all years to maintain consistent scale
+  const { maxX, maxY, minX, minY } = state.yearsData.reduce(
+    (acc, year) => {
+      year.countries.forEach(country => {
+        const x = Math.max(0, country.x || 0);
+        const y = country.y || 0;
+        acc.maxX = Math.max(acc.maxX, x);
+        acc.maxY = Math.max(acc.maxY, y);
+        acc.minX = Math.min(acc.minX, x);
+        acc.minY = Math.min(acc.minY, y);
+      });
+      return acc;
+    },
+    { maxX: -Infinity, maxY: -Infinity, minX: Infinity, minY: Infinity }
+  );
+  
+  // Create scales with some padding
+  const xScale = d3.scaleLinear()
+    .domain([Math.max(0, Math.floor(minX)), Math.ceil(maxX) + 1])
+    .range([50, width - 50]);
+  
+  const yScale = d3.scaleLinear()
+    .domain([Math.floor(minY) - 1, Math.ceil(maxY) + 1])
+    .range([height - 50, 30]);
+  
+  // Draw axes
+  const xAxis = d3.axisBottom(xScale).tickFormat(d => Math.round(d));
+  svg.append("g")
+    .attr("transform", `translate(0, ${height - 50})`)
+    .call(xAxis)
+    .attr("color", "#333");
+  
+  const yAxis = d3.axisLeft(yScale)
+  .ticks(6)  // ✅ Set fewer ticks (adjust as needed)
+  .tickFormat(d => Math.round(d));
+  
+  svg.append("g")
+    .attr("transform", `translate(50, 0)`)
+    .call(yAxis)
+    .attr("color", "#333");
+  
+  // Add axis labels
+  svg.append("text")
+    .attr("x", width / 2)
+    .attr("y", height - 10)
+    .attr("text-anchor", "middle")
+    .text("Intercept")
+    .attr("fill", "#333")
+    .attr("font-weight", "500");
+  
+  svg.append("text")
+    .attr("transform", "rotate(-90)")
+    .attr("x", -height / 2)
+    .attr("y", 15)
+    .attr("text-anchor", "middle")
+    .text("Slope")
+    .attr("fill", "#333")
+    .attr("font-weight", "500");
+  
+  // Draw grid lines
+  svg.append('g')
+    .attr('class', 'grid')
+    .attr('transform', `translate(0, ${height - 50})`)
+    .call(d3.axisBottom(xScale)
+      .tickSize(-(height - 80))
+      .tickFormat('')
+    )
+    .attr("color", "#eee")
+    .attr("opacity", 0.7);
+  
+  svg.append('g')
+    .attr('class', 'grid')
+    .attr('transform', `translate(50, 0)`)
+    .call(d3.axisLeft(yScale)
+      .tickSize(-(width - 100))
+      .tickFormat('')
+    )
+    .attr("color", "#eee")
+    .attr("opacity", 0.7);
+  
+  // Draw reference lines
+  svg.append("line")
+    .attr("class", "reference-line")
+    .attr("x1", xScale(parseFloat(yearData.median_intercept.toFixed(2))))
+    .attr("y1", 30)
+    .attr("x2", xScale(parseFloat(yearData.median_intercept.toFixed(2))))
+    .attr("y2", height - 50)
+    .attr("stroke", "green")
+    .attr("stroke-dasharray", "5,5");
+  
+  svg.append("line")
+    .attr("class", "reference-line")
+    .attr("x1", 50)
+    .attr("y1", yScale(parseFloat(yearData.median_slope.toFixed(2))))
+    .attr("x2", width - 50)
+    .attr("y2", yScale(parseFloat(yearData.median_slope.toFixed(2))))
+    .attr("stroke", "red")
+    .attr("stroke-dasharray", "5,5");
+  
+  // Add year label to the chart
+  svg.append("text")
+    .attr("x", width - 15)
+    .attr("y", 25)
+    .attr("text-anchor", "end")
+    .attr("font-size", "18px")
+    .attr("font-weight", "bold")
+    .text(`${state.selectedYear}-${(state.selectedYear + 3).toString().slice(-2)}`)
+    .attr("fill", "#555");
+  
+  // Draw points with enhanced behavior
+  data.forEach((d, i) => {
+    // Determine if this country should be highlighted
+    let isHighlighted = true;
+    
+    // If a country is clicked, only highlight that one
+    if (state.clickedCountry) {
+      isHighlighted = d.label === state.clickedCountry;
     }
+    // Otherwise, if a country is hovered, highlight only that one
+    else if (state.hoveredCountry) {
+      isHighlighted = d.label === state.hoveredCountry;
+    }
+    
+    // First draw a larger circle as a highlight/stroke effect
+    if (isHighlighted) {
+      svg.append("circle")
+        .attr("cx", xScale(d.x))
+        .attr("cy", yScale(d.y))
+        .attr("r", 10)
+        .attr("fill", "none")
+        .attr("stroke", d.color)
+        .attr("stroke-width", 1.5)
+        .attr("opacity", 0.6);
+    }
+    
+    svg.append("circle")
+      .attr("class", "country-point")
+      .attr("cx", xScale(d.x))
+      .attr("cy", yScale(d.y))
+      .attr("r", 8)
+      .attr("fill", d.color)
+      .attr("opacity", isHighlighted ? 1 : 0.2)
+      .attr("data-country", d.label)
+      .on("mouseenter", (event) => {
+        const content = `
+          <div class="tooltip-title" style="color: ${d.color};">${d.label}</div>
+          <div class="tooltip-row">
+            <span>Intercept:</span>
+            <span><b>${d.x.toFixed(2)}</b></span>
+          </div>
+          <div class="tooltip-row">
+            <span>Slope:</span>
+            <span><b>${d.y.toFixed(2)}</b></span>
+          </div>
+          <div class="tooltip-row">
+            <span>Year:</span>
+            <span><b>${state.selectedYear}-${(state.selectedYear + 3).toString().slice(-2)}</b></span>
+          </div>
+        `;
+        showTooltip(event.pageX, event.pageY, content);
+        
+        // Highlight in legend
+        const legendItem = document.querySelector(`.legend-item[data-country="${d.label}"]`);
+        if (legendItem) {
+          legendItem.style.backgroundColor = "rgba(0,0,0,0.1)";
+          legendItem.style.transform = "translateX(5px)";
+        }
+        
+        // Update state
+        state.hoveredCountry = d.label;
+        renderScatterPlot();
+      })
+      .on("mouseleave", () => {
+        hideTooltip();
+        
+        // Remove highlight from legend
+        const legendItem = document.querySelector(`.legend-item[data-country="${d.label}"]`);
+        if (legendItem && state.clickedCountry !== d.label) {
+          legendItem.style.backgroundColor = "";
+          legendItem.style.transform = "";
+        }
+        
+        // Update state
+        state.hoveredCountry = null;
+        renderScatterPlot();
+      })
+      .on("click", () => {
+        if (state.clickedCountry === d.label) {
+          state.clickedCountry = null;
+        } else {
+          state.clickedCountry = d.label;
+        }
+        renderScatterPlot();
+        
+        // Update legend
+        document.querySelectorAll('.legend-item').forEach(item => {
+          item.classList.remove('selected');
+          
+          if (item.dataset.country === state.clickedCountry) {
+            item.classList.add('selected');
+          }
+        });
+      });
+      // Removed the dblclick event handler that was causing navigation to country-specific view
+  });
+  
+  // Render the legend
+  renderCountriesLegend(data);
+}
     
     // Function to render country specific view
     function renderCountryView() {
@@ -1530,7 +1493,7 @@
         }
         
         const data = await response.json();
-        console.log("Raw data received from server:", data);
+        console.log("Raw data received from server:", data); // Log the complete raw data
         
         // Format data for our application
         // First check if we have the new format data
@@ -1572,9 +1535,6 @@
               });
             });
           }
-          
-          // Build the color map after we have all country data
-          buildCountryColorMap();
         } 
         // Otherwise we have the old format with just PNGs
         else if (data.pngs && data.pngs.length > 0) {
