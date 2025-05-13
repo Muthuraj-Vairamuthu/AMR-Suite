@@ -1,4 +1,4 @@
-# AMR Suite User Guide & Documentation
+# AMR Suite - User Guide & Documentation
 
 ## Table of Contents
 1. [Overview](#overview)
@@ -17,7 +17,7 @@
 
 ## Overview
 
-The AMR Suite is a web-based application designed to analyze antimicrobial resistance (AMR) data. It is an end to end tool to analayse isolation burden and resistance patterns. It also features and intutitve scorecard feature.
+**AMR Suite** is a web-based application built to analyze antimicrobial resistance (AMR) data. It provides an end-to-end pipeline to process, validate, and visualize AMR datasets. With features for **Isolation Burden Analysis**, **Resistance Analysis**, and **Scorecards**, it is designed to help researchers and public health analysts gain actionable insights through an intuitive interface.
 
 ---
 
@@ -26,71 +26,73 @@ The AMR Suite is a web-based application designed to analyze antimicrobial resis
 ### 1. Upload Dataset
 
 #### How to Use
-- Navigate to the **Upload Dataset** page.
-- Drag and drop your `.csv` file into the designated area or click the **Browse** button to select a file from your computer.
-- Click the **Upload Dataset** button to proceed.
+- Go to the **Upload Dataset** page.
+- Drag and drop your `.csv` file into the dropzone or use the **Browse** button to select it.
+- Click **Upload Dataset** to continue.
 
 #### What Happens Internally
-- The uploaded file is validated for:
-  - File format (must be `.csv`).
-  - MIME type (ensures the file is a valid CSV).
-  - Content structure (checks for valid delimiters like commas, tabs, or semicolons).
-- If the file passes validation, it is stored in the session for further processing.
+- File is validated for:
+  - Correct `.csv` extension.
+  - Valid MIME type.
+  - Valid delimiters (`,`, `;`, or tabs).
+- If valid, the file is stored in the session for further processing.
 
 ---
 
 ### 2. Dataset Mapping
 
 #### How to Use
-- After uploading the dataset, you will be redirected to the **Dataset Mapping** page.
-- Fill in the required fields:
-  - **Dataset Format**: Choose between Wide or Long.
-  - **Bacterial Infection**: Select the column representing bacterial infections.
-  - **Source Input**: Select the column representing the source of the data.
+- After upload, proceed to the **Dataset Mapping** page.
+- Fill in these fields:
+  - **Dataset Format**: Choose **Wide** or **Long**.
+  - **Bacterial Infection**: Column with bacterial species.
+  - **Source Input**: Column with sample source.
   - **Antibiotic Details**:
-    - For **Wide format**: Specify the suffix used in antibiotic column names. Wide format data organizes each subject in a single row, with different variables (e.g., antibiotic results) in separate columns.
-    - For **Long format**: Select the columns for antibiotic names and results. Long format data organizes each observation in a separate row, often with repeated rows for the same subject and a column indicating the variable type.
-  - **Date Details**: Specify the date column, format, and granularity (yearly, monthly, or daily).
-  - **Clustering Details**: Select the column for clustering attributes and the time stamp granularity.
-- Click **Process Dataset** to save the mappings.
+    - **Wide**: Provide suffix for antibiotic columns (e.g., `_I`, `_R`, `_S`).
+    - **Long**: Select columns for antibiotic names and results.
+  - **Date Details**:
+    - Column name
+    - Format (e.g., `YYYY-MM-DD`)
+    - Granularity (`yearly`, `monthly`, `daily`)
+  - **Clustering Details**:
+    - Column used for clustering (e.g., Age Group)
+    - Timestamp granularity
+- Click **Process Dataset** to save.
 
 #### What Happens Internally
-- The mapping data is stored in the session for subsequent steps.
-- For Wide format, antibiotic columns are identified based on the provided suffix.
-- For Long format, antibiotic results are mapped to their respective names.
+- Mapping is stored in the session.
+- For **Wide**, columns with antibiotic suffix are extracted.
+- For **Long**, antibiotic names and results are aligned for each row.
 
 ---
 
 ### 3. Dataset Checks
 
 #### How to Use
-- After mapping, the system automatically validates the dataset for:
-  - Structural integrity (e.g., presence of columns, non-empty rows).
-  - Duplicate records.
-  - Valid date formats in the specified date column.
-  - Future dates (if any).
+- The system automatically validates the dataset after mapping.
 
 #### What Happens Internally
-- The system performs comprehensive checks:
-  - Ensures the dataset has valid columns and rows.
-  - Checks for duplicate records.
-  - Validates the date column against the specified format.
-- Errors are displayed on the **Results Page** if any issues are detected.
+Checks performed include:
+- Structural validity (columns and non-empty rows)
+- Duplicate detection
+- Date format verification
+- Detection of future dates
+- Results of checks are shown on the **Results Page** if any issues arise.
 
 ---
 
 ### 4. Results Page
 
 #### How to Use
-- After dataset checks, you will be redirected to the **Results Page**.
-- Choose one of the available analysis options:
+- After checks, you'll be directed to the **Results Page**.
+- Choose from:
   - **Isolation Burden Analysis**
   - **Resistance Analysis**
   - **Scorecards**
-- Click the corresponding button to proceed with the selected analysis.
+- Click the corresponding button to continue.
 
 #### What Happens Internally
-- The system uses the mapped dataset and performs the selected analysis.
+- The selected analysis is performed using the processed and validated dataset.
 - Results are visualized as interactive graphs or scorecards.
 
 ---
@@ -98,93 +100,89 @@ The AMR Suite is a web-based application designed to analyze antimicrobial resis
 ### 5. Isolation Burden Analysis
 
 #### How to Use
-- Select **Isolation Burden Analysis** from the **Results Page**.
-- Specify the following filters:
-  - **Source**: Select a specific source/sample_type or choose "All Sources."
-  - **Country**: Select a specific country or choose "All Countries."
-  - **Cluster Attribute**: Choose a column for grouping data such as Age Group.
-  - **Gender Filter**: Enable or disable gender-based filtering.
-- Click **Generate Graph** to view the analysis.
+- From the Results Page, select **Isolation Burden Analysis**.
+- Apply filters:
+  - **Source** (e.g., Blood, Urine, etc.)
+  - **Country** or **All Countries**
+  - **Cluster Attribute** (e.g., Age Group, Region)
+  - **Gender Filter** (enable if needed)
+- Click **Generate Graph**.
 
 #### What Happens Internally
-- The system filters the dataset based on the selected criteria.
-- Data is grouped by the specified cluster attribute and gender (if enabled).
-- A graph is generated to visualize isolation rates across the selected dimensions.
+- Data is grouped based on selected filters.
+- Isolation counts are calculated and displayed using grouped bar or line charts.
 
 ---
 
 ### 6. Resistance Analysis
 
 #### How to Use
-- Select **Resistance Analysis** from the **Results Page**.
-- Choose the required filters:
-  - **Infection**: Bacterial species (e.g., *Klebsiella pneumoniae*).
-  - **Antibiotic**: Select the antibiotic (e.g., *Amikacin_I*).
-  - **Source**: Sample source (e.g., *Nails*).
-- Click **Generate** to view the resistance trends.
+- From the Results Page, select **Resistance Analysis**.
+- Select filters:
+  - **Infection** (e.g., *E. coli*, *Klebsiella pneumoniae*)
+  - **Antibiotic** (e.g., *Amikacin_I*)
+  - **Source** (e.g., *Urine*, *Blood*)
+- Click **Generate**.
 
 #### What Happens Internally
-- The dataset is filtered based on the selected infection, antibiotic, and source.
-- Dates are parsed using the specified format and grouped by the chosen granularity (`yearly`, `monthly`, or `daily`).
-- The resistance rate is computed as:  
-  **Resistance Rate = (Resistant / Total) × 100**
+- Filters are applied to the dataset.
+- Dates are parsed and grouped by granularity.
+- **Resistance Rate** is calculated:
+  
+  \[
+  \text{Resistance Rate} = \left( \frac{\text{Resistant}}{\text{Total}} \right) \times 100
+  \]
 
 #### Confidence Intervals
-- The system uses **bootstrapping** (1000 samples) to compute a **95% confidence interval (CI)** for each resistance rate.
-- CIs are clipped between 0–100% to ensure clean visualization.
+- **Bootstrapping** with 1000 samples is used to compute **95% CI**.
+- CI values are clipped to 0–100% for display.
 
 #### Visualization
-- A line graph displays resistance rates over time, with shaded regions representing the confidence intervals.
-- Continuous lines show non-zero resistance periods, while standalone gray markers denote zero-resistance points.
-- The plot follows a dark theme with white gridlines for readability.
+- A line graph is plotted:
+  - **Line**: Non-zero resistance rates over time.
+  - **Shaded Area**: 95% CI.
+  - **Gray Dots**: Time points with zero resistance.
+
+---
+
+### 7. Scorecards
+
+#### How to Use
+- From the Results Page, select **Scorecards**.
+- Depending on implementation, the user may view:
+  - Per-source or per-country resistance summaries.
+  - Stratified indicators by age group, gender, or infection type.
+
+#### What Happens Internally
+- Summarized statistics like resistance prevalence, frequency distributions, and top resistant organisms are calculated and formatted into visual scorecards.
 
 ---
 
 ## Common Errors and Resolutions
 
-1. **File Not Uploaded**
-    - **Error**: "No file chosen."
-    - **Cause**: No file was selected for upload.
-    - **Resolution**: Ensure you select a `.csv` file before clicking the **Upload Dataset** button.
-
-2. **Invalid File Format**
-    - **Error**: "Invalid file extension. Only `.csv` files are supported."
-    - **Cause**: The uploaded file is not a `.csv` file.
-    - **Resolution**: Upload a valid `.csv` file.
-
-3. **Empty File**
-    - **Error**: "The file appears to be empty."
-    - **Cause**: The uploaded file has no data.
-    - **Resolution**: Verify the file content and re-upload.
-
-4. **Corrupted File**
-    - **Error**: "The file could not be parsed - it may be corrupted."
-    - **Cause**: The file contains invalid or unreadable data.
-    - **Resolution**: Check the file for corruption and ensure it is a valid CSV.
-
-5. **Missing Columns**
-    - **Error**: "Dataset has no columns - invalid format."
-    - **Cause**: The file does not contain column headers.
-    - **Resolution**: Ensure the file includes column headers and re-upload.
-
-6. **Invalid Date Format**
-    - **Error**: "Invalid date format in date column."
-    - **Cause**: The date column does not match the specified format.
-    - **Resolution**: Verify the date format in the dataset and update the mapping accordingly.
-
-7. **Future Dates**
-    - **Error**: "Future dates found in the dataset."
-    - **Cause**: The date column contains dates beyond the current year.
-    - **Resolution**: Correct the date values in the dataset.
+| Error | Cause | Resolution |
+|------|-------|------------|
+| **No file chosen** | No file was selected. | Select a `.csv` file before uploading. |
+| **Invalid file extension** | Uploaded file isn't a `.csv`. | Upload a valid `.csv` file. |
+| **The file appears to be empty** | File has no data. | Ensure your file has content. |
+| **File could not be parsed** | Possibly corrupted or invalid delimiters. | Open the file and confirm it is readable. |
+| **Dataset has no columns** | File lacks headers. | Ensure the file has properly formatted headers. |
+| **Invalid date format** | Dates don't match the format you specified. | Recheck the date format and update mapping. |
+| **Future dates found** | Date column has values from the future. | Update dataset to correct invalid dates. |
 
 ---
 
 ## Technical Notes
 
-- **Session Management**: The application uses Django sessions to store uploaded datasets and mapping configurations.
-- **Validation**: File validation is performed using MIME type detection and content inspection.
-- **Graph Generation**: Graphs are generated using Matplotlib with a dark theme for better visualization.
-- **Error Handling**: Errors are displayed as messages on the respective pages, guiding users to resolve issues.
+- **Session Handling**: Django sessions store the uploaded data and mappings.
+- **Validation**:
+  - MIME type is checked to prevent invalid files.
+  - Parsing includes header inspection, delimiter consistency, and empty rows check.
+- **Visualization**:
+  - Graphs are rendered using **Matplotlib**.
+  - Default theme is **dark** with white gridlines for contrast.
+- **Bootstrapping**: Used to compute resistance rate confidence intervals robustly.
+- **Error Messages**: Displayed inline to guide users on how to fix issues.
 
 ---
 
