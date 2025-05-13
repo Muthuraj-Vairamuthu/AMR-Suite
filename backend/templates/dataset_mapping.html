@@ -29,6 +29,20 @@
                     <h2>Core Details</h2>
                     <div class="form-group">
                         <label>
+                            Isolate ID<span class="required">*</span>
+                            <span class="info-icon" data-tooltip="Column containing unique identifier for each record/isolate (e.g., sample ID, isolate number)"></span>
+                        </label>
+                        <div class="select-wrapper">
+                            <select name="isolate_id" required>
+                                <option value="">Select Column</option>
+                                {% for column in columns %}
+                                    <option value="{{ column }}">{{ column }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>
                             Dataset Format<span class="required">*</span>
                             <span class="info-icon" data-tooltip="Choose whether your dataset has separate columns for each antibiotic (Wide) or a single column for antibiotic names (Long)"></span>
                         </label>

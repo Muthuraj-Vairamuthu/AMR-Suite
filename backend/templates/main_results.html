@@ -23,25 +23,33 @@
         <div class="processing-section">
             <h1>Processing your Dataset</h1>
             
-            <div class="status-item" id="file-format-status">
-                <div class="loading-icon" id="file-format-loader"></div>
-                <span>Checking File Format</span>
+            <div class="validation-steps">
+                <div class="status-item" id="format-check">
+                    <div class="loading-icon"></div>
+                    <span>File Format</span>
+                    <div class="details"></div>
+                </div>
+                
+                <div class="status-item" id="structure-check">
+                    <div class="loading-icon"></div>
+                    <span>Dataset Structure</span>
+                    <div class="details"></div>
+                </div>
+                
+                <div class="status-item" id="missing-data-check">
+                    <div class="loading-icon"></div>
+                    <span>Missing Data Analysis</span>
+                    <div class="details"></div>
+                </div>
+                
+                <div class="status-item" id="duplicates-check">
+                    <div class="loading-icon"></div>
+                    <span>Duplicate Records</span>
+                    <div class="details"></div>
+                </div>
             </div>
-            
-            <div class="status-item" id="file-content-status">
-                <div class="loading-icon" id="file-content-loader"></div>
-                <span>Validating File Content</span>
-            </div>
-            
-            <div class="status-item" id="dataset-structure-status">
-                <div class="loading-icon" id="dataset-structure-loader"></div>
-                <span>Checking Dataset Structure</span>
-            </div>
-            
-            <div class="status-item" id="mapping-status">
-                <div class="loading-icon" id="mapping-loader"></div>
-                <span>Creating Mappings</span>
-            </div>
+
+            <div id="validation-alerts" class="alerts-container"></div>
         </div>
 
         <div class="results-section">
@@ -66,53 +74,131 @@
     </div>
 
     <script>
-    async function checkValidationStatus() {
-        const statusChecks = [
-            { id: 'file-format-status', endpoint: '/api/check-file-format' },
-            { id: 'file-content-status', endpoint: '/api/check-file-content' },
-            { id: 'dataset-structure-status', endpoint: '/api/check-dataset-structure' },
-            { id: 'mapping-status', endpoint: '/api/check-mapping' }
-        ];
+    async function validateDataset() {
+        // Clear previous alerts
+        document.getElementById('validation-alerts').innerHTML = '';
+        
+        // Reset all steps to loading state
+        const steps = document.querySelectorAll('.status-item');
+        steps.forEach(step => {
+            step.querySelector('.loading-icon').style.display = 'inline-block';
+            step.classList.remove('success', 'error', 'warning');
+            // Remove any existing status icons
+            const existingIcon = step.querySelector('.status-icon');
+            if (existingIcon) existingIcon.remove();
+        });
 
-        const updateStatus = (elementId, success) => {
-            const statusElement = document.getElementById(elementId);
-            const loader = statusElement.querySelector('.loading-icon');
-            
-            if (loader) {
-                loader.remove();
-                const icon = document.createElement('span');
-                icon.className = 'check-icon';
-                icon.textContent = success ? '✓' : '✗';
-                statusElement.insertBefore(icon, statusElement.firstChild);
-                statusElement.classList.add(success ? 'success' : 'error');
-            }
-        };
-
-        for (const check of statusChecks) {
-            try {
-                const response = await fetch(check.endpoint, {
-                    method: 'GET',
-                    headers: {
-                        'X-CSRFToken': '{{ csrf_token }}',
-                    },
-                });
-                const data = await response.json();
-                updateStatus(check.id, data.success);
-                
-                if (!data.success) {
-                    console.error(`Validation failed for ${check.id}:`, data.error);
-                    break; // Stop further checks if one fails
+        try {
+            const response = await fetch('/api/validate-dataset/', {
+                method: 'POST',
+                headers: {
+                    'X-CSRFToken': '{{ csrf_token }}',
+                    'Content-Type': 'application/json',
                 }
-            } catch (error) {
-                console.error(`Error checking ${check.id}:`, error);
-                updateStatus(check.id, false);
-                break; // Stop further checks if an error occurs
+            });
+
+            const data = await response.json();
+            
+            // Update each validation step individually
+            Object.entries(data.steps).forEach(([step, passed]) => {
+                const stepElement = document.getElementById(`${step}-check`);
+                if (stepElement) {
+                    updateValidationStep(stepElement, passed);
+                    
+                    // Add specific error/warning messages for each step
+                    if (!passed) {
+                        let message = '';
+                        switch(step) {
+                            case 'format':
+                                message = 'File format validation failed';
+                                break;
+                            case 'structure':
+                                message = 'Dataset structure validation failed';
+                                break;
+                            case 'missing_data':
+                                message = 'Critical missing data detected';
+                                break;
+                            case 'duplicates':
+                                message = `${data.duplicates} duplicate records found`;
+                                break;
+                        }
+                        showAlert('error', message);
+                    }
+                }
+            });
+
+            // Show warnings
+            if (data.warnings && data.warnings.length > 0) {
+                data.warnings.forEach(warning => {
+                    showAlert('warning', warning);
+                });
             }
+
+            // Show errors
+            if (data.errors && data.errors.length > 0) {
+                data.errors.forEach(error => {
+                    showAlert('error', error);
+                });
+            }
+
+            // Show duplicate records prompt if needed
+            if (data.duplicates > 0) {
+                showDuplicatesPrompt(data.duplicates);
+            }
+
+        } catch (error) {
+            showAlert('error', 'Error during validation: ' + error.message);
         }
     }
 
-    // Start the validation checks when the page loads
-    document.addEventListener('DOMContentLoaded', checkValidationStatus);
+    function updateValidationStep(stepElement, passed) {
+        // Hide loading icon
+        const loadingIcon = stepElement.querySelector('.loading-icon');
+        if (loadingIcon) {
+            loadingIcon.style.display = 'none';
+        }
+
+        // Remove any existing status icon
+        const existingIcon = stepElement.querySelector('.status-icon');
+        if (existingIcon) {
+            existingIcon.remove();
+        }
+
+        // Add appropriate status class and icon
+        stepElement.classList.remove('success', 'error');
+        stepElement.classList.add(passed ? 'success' : 'error');
+        
+        // Insert new status icon at the beginning
+        const iconSpan = document.createElement('span');
+        iconSpan.className = 'status-icon';
+        iconSpan.innerHTML = passed ? '✓' : '✗';
+        stepElement.insertBefore(iconSpan, stepElement.firstChild);
+
+        // Update details section if it exists
+        const details = stepElement.querySelector('.details');
+        if (details) {
+            details.textContent = passed ? 'Passed' : 'Failed';
+        }
+    }
+
+    function showAlert(type, message) {
+        const alertsContainer = document.getElementById('validation-alerts');
+        const alertDiv = document.createElement('div');
+        alertDiv.className = `alert alert-${type}`;
+        alertDiv.innerHTML = message;
+        alertsContainer.appendChild(alertDiv);
+    }
+
+    function showDuplicatesPrompt(count) {
+        if (confirm(`Found ${count} duplicate records. Do you want to continue?`)) {
+            // Continue with processing
+        } else {
+            window.location.href = '{% url "upload_dataset" %}';
+        }
+    }
+
+    // Start validation when page loads
+    document.addEventListener('DOMContentLoaded', validateDataset);
     </script>
 </body>
 </html>

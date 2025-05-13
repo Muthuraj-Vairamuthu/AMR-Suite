@@ -257,5 +257,1499 @@
       "sources_count": 91,
       "antibiotics_count": 49
     }
+  },
+  {
+    "timestamp": "2025-05-13T16:28:45.464111",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T16:28:46.014210",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T16:28:49.248700",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T16:28:49.347974",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T16:28:54.793364",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T16:29:12.344746",
+    "event_type": "LOGOUT",
+    "user": "rishi22403",
+    "description": "User logged out",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T16:29:12.382003",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T16:29:12.408457",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T16:29:13.285693",
+    "event_type": "UPLOAD",
+    "user": "",
+    "description": "Uploaded file: Data_part2.csv",
+    "details": {
+      "size": 79757299,
+      "content_type": "text/csv"
+    }
+  },
+  {
+    "timestamp": "2025-05-13T16:29:13.365347",
+    "event_type": "VALIDATE",
+    "user": "",
+    "description": "File passed validation",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T16:29:16.500096",
+    "event_type": "PARSE",
+    "user": "",
+    "description": "CSV parsed into DataFrame",
+    "details": {
+      "rows": 183410,
+      "columns": 136
+    }
+  },
+  {
+    "timestamp": "2025-05-13T16:29:21.011501",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T16:34:37.139414",
+    "event_type": "ISOLATION_BURDEN_ANALYSIS",
+    "user": "",
+    "description": "Isolation burden analysis initiated",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T16:37:43.044029",
+    "event_type": "RESISTANCE_ANALYSIS_PAGE",
+    "user": "",
+    "description": "Loading resistance analysis page",
+    "details": {
+      "bacteria_count": 242,
+      "sources_count": 91,
+      "antibiotics_count": 49
+    }
+  },
+  {
+    "timestamp": "2025-05-13T16:37:43.175487",
+    "event_type": "RESISTANCE_ANALYSIS_PAGE",
+    "user": "",
+    "description": "Loading resistance analysis page",
+    "details": {
+      "bacteria_count": 242,
+      "sources_count": 91,
+      "antibiotics_count": 49
+    }
+  },
+  {
+    "timestamp": "2025-05-13T16:37:45.262634",
+    "event_type": "ISOLATION_BURDEN_ANALYSIS",
+    "user": "",
+    "description": "Data prepared for isolation burden analysis",
+    "details": {
+      "bacteria_species_count": 243,
+      "source_columns_count": 92,
+      "country_columns_count": 58,
+      "all_columns_count": 137
+    }
+  },
+  {
+    "timestamp": "2025-05-13T16:37:45.286079",
+    "event_type": "RESISTANCE_ANALYSIS_PAGE",
+    "user": "",
+    "description": "Loading resistance analysis page",
+    "details": {
+      "bacteria_count": 242,
+      "sources_count": 91,
+      "antibiotics_count": 49
+    }
+  },
+  {
+    "timestamp": "2025-05-13T16:37:46.609515",
+    "event_type": "RESISTANCE_ANALYSIS_PAGE",
+    "user": "",
+    "description": "Loading resistance analysis page",
+    "details": {
+      "bacteria_count": 242,
+      "sources_count": 91,
+      "antibiotics_count": 49
+    }
+  },
+  {
+    "timestamp": "2025-05-13T17:10:16.379636",
+    "event_type": "LOGOUT",
+    "user": "rishi22403",
+    "description": "User logged out",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T17:10:16.902772",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T17:10:16.931581",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T17:10:20.596494",
+    "event_type": "UPLOAD",
+    "user": "rishi22403",
+    "description": "Uploaded file: Data_part2.csv",
+    "details": {
+      "size": 79757299,
+      "content_type": "text/csv"
+    }
+  },
+  {
+    "timestamp": "2025-05-13T17:10:20.687901",
+    "event_type": "VALIDATE",
+    "user": "rishi22403",
+    "description": "File passed validation",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T17:10:23.419772",
+    "event_type": "PARSE",
+    "user": "rishi22403",
+    "description": "CSV parsed into DataFrame",
+    "details": {
+      "rows": 183410,
+      "columns": 136
+    }
+  },
+  {
+    "timestamp": "2025-05-13T17:10:27.550638",
+    "event_type": "SESSION_EXPIRED",
+    "user": "rishi22403",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T17:12:05.925444",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T17:12:07.566141",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T17:12:08.758377",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T17:12:18.096166",
+    "event_type": "LOGOUT",
+    "user": "rishi22403",
+    "description": "User logged out",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T17:12:18.132691",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T17:12:18.160187",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T17:12:18.455603",
+    "event_type": "UPLOAD",
+    "user": "",
+    "description": "Uploaded file: Data_part2.csv",
+    "details": {
+      "size": 79757299,
+      "content_type": "text/csv"
+    }
+  },
+  {
+    "timestamp": "2025-05-13T17:12:18.541698",
+    "event_type": "VALIDATE",
+    "user": "",
+    "description": "File passed validation",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T17:12:21.360542",
+    "event_type": "PARSE",
+    "user": "",
+    "description": "CSV parsed into DataFrame",
+    "details": {
+      "rows": 183410,
+      "columns": 136
+    }
+  },
+  {
+    "timestamp": "2025-05-13T17:12:25.434842",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T17:32:39.480843",
+    "event_type": "UPLOAD",
+    "user": "rishi22403",
+    "description": "Uploaded file: Data_part2.csv",
+    "details": {
+      "size": 79757299,
+      "content_type": "text/csv"
+    }
+  },
+  {
+    "timestamp": "2025-05-13T17:32:39.637263",
+    "event_type": "VALIDATE",
+    "user": "rishi22403",
+    "description": "File passed validation",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T17:32:39.995370",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T17:32:40.032641",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T17:32:42.600955",
+    "event_type": "PARSE",
+    "user": "rishi22403",
+    "description": "CSV parsed into DataFrame",
+    "details": {
+      "rows": 183410,
+      "columns": 136
+    }
+  },
+  {
+    "timestamp": "2025-05-13T17:32:47.042528",
+    "event_type": "SESSION_EXPIRED",
+    "user": "rishi22403",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T17:34:38.461631",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T17:34:40.992053",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T17:34:44.400004",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T17:34:53.711759",
+    "event_type": "LOGOUT",
+    "user": "rishi22403",
+    "description": "User logged out",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T17:34:53.745796",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T17:34:53.773785",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T17:34:54.070809",
+    "event_type": "UPLOAD",
+    "user": "",
+    "description": "Uploaded file: Data_part2.csv",
+    "details": {
+      "size": 79757299,
+      "content_type": "text/csv"
+    }
+  },
+  {
+    "timestamp": "2025-05-13T17:34:54.152101",
+    "event_type": "VALIDATE",
+    "user": "",
+    "description": "File passed validation",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T17:34:56.984453",
+    "event_type": "PARSE",
+    "user": "",
+    "description": "CSV parsed into DataFrame",
+    "details": {
+      "rows": 183410,
+      "columns": 136
+    }
+  },
+  {
+    "timestamp": "2025-05-13T17:35:01.019135",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T17:48:02.294811",
+    "event_type": "UPLOAD",
+    "user": "rishi22403",
+    "description": "Uploaded file: Data_part2.csv",
+    "details": {
+      "size": 79757299,
+      "content_type": "text/csv"
+    }
+  },
+  {
+    "timestamp": "2025-05-13T17:48:02.431484",
+    "event_type": "VALIDATE",
+    "user": "rishi22403",
+    "description": "File passed validation",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T17:48:02.812181",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T17:48:02.843548",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T17:48:05.365140",
+    "event_type": "PARSE",
+    "user": "rishi22403",
+    "description": "CSV parsed into DataFrame",
+    "details": {
+      "rows": 183410,
+      "columns": 136
+    }
+  },
+  {
+    "timestamp": "2025-05-13T17:48:09.535278",
+    "event_type": "SESSION_EXPIRED",
+    "user": "rishi22403",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T17:51:04.845224",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T17:51:07.248348",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T17:51:08.394857",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T17:51:19.715743",
+    "event_type": "LOGOUT",
+    "user": "rishi22403",
+    "description": "User logged out",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T17:51:19.755574",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T17:51:19.787281",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T17:51:20.069955",
+    "event_type": "UPLOAD",
+    "user": "",
+    "description": "Uploaded file: Data_part2.csv",
+    "details": {
+      "size": 79757299,
+      "content_type": "text/csv"
+    }
+  },
+  {
+    "timestamp": "2025-05-13T17:51:20.151385",
+    "event_type": "VALIDATE",
+    "user": "",
+    "description": "File passed validation",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T17:51:22.963981",
+    "event_type": "PARSE",
+    "user": "",
+    "description": "CSV parsed into DataFrame",
+    "details": {
+      "rows": 183410,
+      "columns": 136
+    }
+  },
+  {
+    "timestamp": "2025-05-13T17:51:26.994184",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T18:07:18.491750",
+    "event_type": "LOGOUT",
+    "user": "rishi22403",
+    "description": "User logged out",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T18:07:18.985961",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T18:07:19.018853",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T18:07:22.708326",
+    "event_type": "UPLOAD",
+    "user": "rishi22403",
+    "description": "Uploaded file: Data_part2.csv",
+    "details": {
+      "size": 79757299,
+      "content_type": "text/csv"
+    }
+  },
+  {
+    "timestamp": "2025-05-13T18:07:22.815587",
+    "event_type": "VALIDATE",
+    "user": "rishi22403",
+    "description": "File passed validation",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T18:07:25.556896",
+    "event_type": "PARSE",
+    "user": "rishi22403",
+    "description": "CSV parsed into DataFrame",
+    "details": {
+      "rows": 183410,
+      "columns": 136
+    }
+  },
+  {
+    "timestamp": "2025-05-13T18:07:29.674623",
+    "event_type": "SESSION_EXPIRED",
+    "user": "rishi22403",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T18:08:57.144710",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T18:09:00.462825",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T18:09:01.725402",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T18:10:24.659334",
+    "event_type": "LOGOUT",
+    "user": "rishi22403",
+    "description": "User logged out",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T18:10:24.704005",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T18:10:24.734208",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T18:10:24.997434",
+    "event_type": "UPLOAD",
+    "user": "",
+    "description": "Uploaded file: Data_part2.csv",
+    "details": {
+      "size": 79757299,
+      "content_type": "text/csv"
+    }
+  },
+  {
+    "timestamp": "2025-05-13T18:10:25.076152",
+    "event_type": "VALIDATE",
+    "user": "",
+    "description": "File passed validation",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T18:10:27.892178",
+    "event_type": "PARSE",
+    "user": "",
+    "description": "CSV parsed into DataFrame",
+    "details": {
+      "rows": 183410,
+      "columns": 136
+    }
+  },
+  {
+    "timestamp": "2025-05-13T18:10:31.919967",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T18:20:34.801622",
+    "event_type": "UPLOAD",
+    "user": "rishi22403",
+    "description": "Uploaded file: Data_part2.csv",
+    "details": {
+      "size": 79757299,
+      "content_type": "text/csv"
+    }
+  },
+  {
+    "timestamp": "2025-05-13T18:20:34.947361",
+    "event_type": "VALIDATE",
+    "user": "rishi22403",
+    "description": "File passed validation",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T18:20:35.329142",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T18:20:35.361217",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T18:20:37.954472",
+    "event_type": "PARSE",
+    "user": "rishi22403",
+    "description": "CSV parsed into DataFrame",
+    "details": {
+      "rows": 183410,
+      "columns": 136
+    }
+  },
+  {
+    "timestamp": "2025-05-13T18:20:41.916480",
+    "event_type": "SESSION_EXPIRED",
+    "user": "rishi22403",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T18:22:09.258715",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T18:22:11.123229",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T18:22:12.538378",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T18:22:22.741282",
+    "event_type": "LOGOUT",
+    "user": "rishi22403",
+    "description": "User logged out",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T18:22:22.779392",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T18:22:22.811102",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T18:22:23.077886",
+    "event_type": "UPLOAD",
+    "user": "",
+    "description": "Uploaded file: Data_part2.csv",
+    "details": {
+      "size": 79757299,
+      "content_type": "text/csv"
+    }
+  },
+  {
+    "timestamp": "2025-05-13T18:22:23.186686",
+    "event_type": "VALIDATE",
+    "user": "",
+    "description": "File passed validation",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T18:22:25.987193",
+    "event_type": "PARSE",
+    "user": "",
+    "description": "CSV parsed into DataFrame",
+    "details": {
+      "rows": 183410,
+      "columns": 136
+    }
+  },
+  {
+    "timestamp": "2025-05-13T18:22:30.023853",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T18:25:26.580636",
+    "event_type": "ISOLATION_BURDEN_ANALYSIS",
+    "user": "",
+    "description": "Isolation burden analysis initiated",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T18:25:43.189643",
+    "event_type": "ISOLATION_BURDEN_ANALYSIS",
+    "user": "",
+    "description": "Data prepared for isolation burden analysis",
+    "details": {
+      "bacteria_species_count": 243,
+      "source_columns_count": 92,
+      "country_columns_count": 58,
+      "all_columns_count": 137
+    }
+  },
+  {
+    "timestamp": "2025-05-13T18:28:02.784254",
+    "event_type": "RESISTANCE_ANALYSIS_PAGE",
+    "user": "",
+    "description": "Loading resistance analysis page",
+    "details": {
+      "bacteria_count": 242,
+      "sources_count": 91,
+      "antibiotics_count": 49
+    }
+  },
+  {
+    "timestamp": "2025-05-13T21:17:40.025423",
+    "event_type": "LOGOUT",
+    "user": "rishi22403",
+    "description": "User logged out",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T21:17:40.563511",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T21:17:40.594427",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T21:17:44.543177",
+    "event_type": "UPLOAD",
+    "user": "rishi22403",
+    "description": "Uploaded file: Data_part3.csv",
+    "details": {
+      "size": 89353284,
+      "content_type": "text/csv"
+    }
+  },
+  {
+    "timestamp": "2025-05-13T21:17:44.655139",
+    "event_type": "VALIDATE",
+    "user": "rishi22403",
+    "description": "File passed validation",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T21:17:47.761703",
+    "event_type": "PARSE",
+    "user": "rishi22403",
+    "description": "CSV parsed into DataFrame",
+    "details": {
+      "rows": 183410,
+      "columns": 136
+    }
+  },
+  {
+    "timestamp": "2025-05-13T21:17:51.944649",
+    "event_type": "SESSION_EXPIRED",
+    "user": "rishi22403",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T21:24:39.715350",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T21:24:42.185582",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T21:24:45.222041",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T21:30:15.607689",
+    "event_type": "LOGOUT",
+    "user": "rishi22403",
+    "description": "User logged out",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T21:30:15.648403",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T21:30:15.681795",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T21:30:15.998905",
+    "event_type": "UPLOAD",
+    "user": "",
+    "description": "Uploaded file: Data_part3.csv",
+    "details": {
+      "size": 89353284,
+      "content_type": "text/csv"
+    }
+  },
+  {
+    "timestamp": "2025-05-13T21:30:16.080855",
+    "event_type": "VALIDATE",
+    "user": "",
+    "description": "File passed validation",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T21:30:19.123300",
+    "event_type": "PARSE",
+    "user": "",
+    "description": "CSV parsed into DataFrame",
+    "details": {
+      "rows": 183410,
+      "columns": 136
+    }
+  },
+  {
+    "timestamp": "2025-05-13T21:30:23.314268",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T21:34:58.279184",
+    "event_type": "RESISTANCE_ANALYSIS_PAGE",
+    "user": "",
+    "description": "Loading resistance analysis page",
+    "details": {
+      "bacteria_count": 257,
+      "sources_count": 82,
+      "antibiotics_count": 49
+    }
+  },
+  {
+    "timestamp": "2025-05-13T22:26:07.264715",
+    "event_type": "LOGOUT",
+    "user": "rishi22403",
+    "description": "User logged out",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T22:26:07.825517",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T22:26:07.857906",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T22:26:11.911070",
+    "event_type": "UPLOAD",
+    "user": "rishi22403",
+    "description": "Uploaded file: Data_part2.csv",
+    "details": {
+      "size": 79757299,
+      "content_type": "text/csv"
+    }
+  },
+  {
+    "timestamp": "2025-05-13T22:26:11.934150",
+    "event_type": "VALIDATE",
+    "user": "rishi22403",
+    "description": "File passed validation",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T22:26:14.744739",
+    "event_type": "PARSE",
+    "user": "rishi22403",
+    "description": "CSV parsed into DataFrame",
+    "details": {
+      "rows": 183410,
+      "columns": 136
+    }
+  },
+  {
+    "timestamp": "2025-05-13T22:26:18.823797",
+    "event_type": "SESSION_EXPIRED",
+    "user": "rishi22403",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T23:11:40.452231",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T23:11:42.495660",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T23:11:43.794246",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T23:12:19.287905",
+    "event_type": "LOGOUT",
+    "user": "rishi22403",
+    "description": "User logged out",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T23:12:19.323954",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T23:12:19.361730",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T23:12:19.810109",
+    "event_type": "UPLOAD",
+    "user": "",
+    "description": "Uploaded file: Data_part2_future_dates.csv",
+    "details": {
+      "size": 79940708,
+      "content_type": "text/csv"
+    }
+  },
+  {
+    "timestamp": "2025-05-13T23:12:19.891086",
+    "event_type": "VALIDATE",
+    "user": "",
+    "description": "File passed validation",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T23:12:22.785518",
+    "event_type": "PARSE",
+    "user": "",
+    "description": "CSV parsed into DataFrame",
+    "details": {
+      "rows": 183410,
+      "columns": 136
+    }
+  },
+  {
+    "timestamp": "2025-05-13T23:12:26.865048",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T23:18:42.250565",
+    "event_type": "LOGOUT",
+    "user": "rishi22403",
+    "description": "User logged out",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T23:18:42.793451",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T23:18:42.828478",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T23:18:46.622725",
+    "event_type": "UPLOAD",
+    "user": "rishi22403",
+    "description": "Uploaded file: Data_part2_duplicate_records.csv",
+    "details": {
+      "size": 79946013,
+      "content_type": "text/csv"
+    }
+  },
+  {
+    "timestamp": "2025-05-13T23:18:46.732755",
+    "event_type": "VALIDATE",
+    "user": "rishi22403",
+    "description": "File passed validation",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T23:18:49.537156",
+    "event_type": "PARSE",
+    "user": "rishi22403",
+    "description": "CSV parsed into DataFrame",
+    "details": {
+      "rows": 183420,
+      "columns": 136
+    }
+  },
+  {
+    "timestamp": "2025-05-13T23:18:54.038596",
+    "event_type": "SESSION_EXPIRED",
+    "user": "rishi22403",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T23:21:14.371036",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T23:21:16.617883",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T23:21:44.319608",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T23:21:57.502552",
+    "event_type": "LOGOUT",
+    "user": "rishi22403",
+    "description": "User logged out",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T23:21:57.538565",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T23:21:57.572747",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T23:21:58.018853",
+    "event_type": "UPLOAD",
+    "user": "",
+    "description": "Uploaded file: Data_part2_duplicate_records.csv",
+    "details": {
+      "size": 79946013,
+      "content_type": "text/csv"
+    }
+  },
+  {
+    "timestamp": "2025-05-13T23:21:58.097235",
+    "event_type": "VALIDATE",
+    "user": "",
+    "description": "File passed validation",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T23:22:00.900620",
+    "event_type": "PARSE",
+    "user": "",
+    "description": "CSV parsed into DataFrame",
+    "details": {
+      "rows": 183420,
+      "columns": 136
+    }
+  },
+  {
+    "timestamp": "2025-05-13T23:22:05.012788",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T23:37:30.221302",
+    "event_type": "LOGOUT",
+    "user": "rishi22403",
+    "description": "User logged out",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T23:37:30.757700",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T23:37:30.792831",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T23:37:34.111906",
+    "event_type": "UPLOAD",
+    "user": "rishi22403",
+    "description": "Uploaded file: Data_part2_duplicate_records.csv",
+    "details": {
+      "size": 79946013,
+      "content_type": "text/csv"
+    }
+  },
+  {
+    "timestamp": "2025-05-13T23:37:34.218495",
+    "event_type": "VALIDATE",
+    "user": "rishi22403",
+    "description": "File passed validation",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T23:37:36.978428",
+    "event_type": "PARSE",
+    "user": "rishi22403",
+    "description": "CSV parsed into DataFrame",
+    "details": {
+      "rows": 183420,
+      "columns": 136
+    }
+  },
+  {
+    "timestamp": "2025-05-13T23:37:41.192354",
+    "event_type": "SESSION_EXPIRED",
+    "user": "rishi22403",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T23:39:18.286473",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T23:39:21.430163",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T23:39:22.799097",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T23:39:52.812713",
+    "event_type": "LOGOUT",
+    "user": "rishi22403",
+    "description": "User logged out",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T23:39:52.861651",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T23:39:52.896337",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T23:39:53.184006",
+    "event_type": "UPLOAD",
+    "user": "",
+    "description": "Uploaded file: Data_part2_duplicate_records.csv",
+    "details": {
+      "size": 79946013,
+      "content_type": "text/csv"
+    }
+  },
+  {
+    "timestamp": "2025-05-13T23:39:53.262397",
+    "event_type": "VALIDATE",
+    "user": "",
+    "description": "File passed validation",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T23:39:56.085609",
+    "event_type": "PARSE",
+    "user": "",
+    "description": "CSV parsed into DataFrame",
+    "details": {
+      "rows": 183420,
+      "columns": 136
+    }
+  },
+  {
+    "timestamp": "2025-05-13T23:40:00.140350",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-13T23:43:39.164389",
+    "event_type": "RESISTANCE_ANALYSIS_PAGE",
+    "user": "",
+    "description": "Loading resistance analysis page",
+    "details": {
+      "bacteria_count": 242,
+      "sources_count": 91,
+      "antibiotics_count": 49
+    }
+  },
+  {
+    "timestamp": "2025-05-14T00:05:36.716842",
+    "event_type": "LOGOUT",
+    "user": "rishi22403",
+    "description": "User logged out",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-14T00:05:37.245064",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-14T00:05:37.282578",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-14T00:05:40.981951",
+    "event_type": "UPLOAD",
+    "user": "rishi22403",
+    "description": "Uploaded file: Data_part2.csv",
+    "details": {
+      "size": 79757299,
+      "content_type": "text/csv"
+    }
+  },
+  {
+    "timestamp": "2025-05-14T00:05:41.096520",
+    "event_type": "VALIDATE",
+    "user": "rishi22403",
+    "description": "File passed validation",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-14T00:05:43.852461",
+    "event_type": "PARSE",
+    "user": "rishi22403",
+    "description": "CSV parsed into DataFrame",
+    "details": {
+      "rows": 183410,
+      "columns": 136
+    }
+  },
+  {
+    "timestamp": "2025-05-14T00:05:47.943668",
+    "event_type": "SESSION_EXPIRED",
+    "user": "rishi22403",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-14T00:07:17.667419",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-14T00:07:20.220105",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-14T00:07:21.388061",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-14T00:09:03.200574",
+    "event_type": "LOGOUT",
+    "user": "rishi22403",
+    "description": "User logged out",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-14T00:09:03.244561",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-14T00:09:03.283536",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-14T00:09:03.566459",
+    "event_type": "UPLOAD",
+    "user": "",
+    "description": "Uploaded file: Data_part2.csv",
+    "details": {
+      "size": 79757299,
+      "content_type": "text/csv"
+    }
+  },
+  {
+    "timestamp": "2025-05-14T00:09:03.650809",
+    "event_type": "VALIDATE",
+    "user": "",
+    "description": "File passed validation",
+    "details": {}
+  },
+  {
+    "timestamp": "2025-05-14T00:09:06.436424",
+    "event_type": "PARSE",
+    "user": "",
+    "description": "CSV parsed into DataFrame",
+    "details": {
+      "rows": 183410,
+      "columns": 136
+    }
+  },
+  {
+    "timestamp": "2025-05-14T00:09:10.570509",
+    "event_type": "SESSION_EXPIRED",
+    "user": "anonymous",
+    "description": "User session expired",
+    "details": {}
   }
 ]

@@ -28,9 +28,9 @@ import os
 import re
 import zipfile
 from AMR_Suite.utils import log_event
+from .utils.validators import DatasetValidator
+import json
 
-
-# Create your views here.
 def home(request):
     """Renders the main home page"""
     return render(request, 'home.html')
@@ -122,6 +122,7 @@ def mapping_dataset(request):
     dataset = pd.read_json(dataset_json)
     
     mapping_data = {
+        'isolate_id': request.POST.get('isolate_id'),  # Add this line
         'bacterial_infection': request.POST.get('bacterial_infection'),
         'source_input': request.POST.get('source_input'),
         'dataset_format': request.POST.get('dataset_format'),
@@ -137,7 +138,7 @@ def mapping_dataset(request):
     }
     
     # Validate required fields
-    required_fields = ['bacterial_infection', 'source_input', 'dataset_format', 'date_column', 'date_format']
+    required_fields = ['isolate_id', 'bacterial_infection', 'source_input', 'dataset_format', 'date_column', 'date_format']
     for field in required_fields:
         if not mapping_data[field]:
             messages.error(request, f"Required field '{field.replace('_', ' ')}' is missing. Please fill in all required fields.")
@@ -196,37 +197,6 @@ def validate_file_format(file):
             errors.append("File content doesn't appear to be valid CSV. Ensure the file uses commas, semicolons, or tabs as delimiters.")
     except Exception as e:
         errors.append(f"Error reading file content: {str(e)}. The file may be corrupted or encoded incorrectly.")
-    
-    return errors
-
-def validate_dataset(dataset, mapping_data, file=None):
-    """Perform comprehensive validation checks on the dataset"""
-    errors = []
-    
-    # File Format Validation
-    if file:
-        format_errors = validate_file_format(file)
-        errors.extend(format_errors)
-    
-    # Dataset Structure Validation
-    
-    if len(dataset.columns) == 0:
-        errors.append("Dataset has no columns - invalid format")
-    elif len(dataset) == 0:
-        errors.append("Dataset is empty - invalid format")
-    
-    # Duplicate Records Check
-    if dataset.duplicated().any():
-        errors.append("Duplicate records found in the dataset")
-    
-    # Date Validity Check
-    if 'date_column' in mapping_data:
-        try:
-            dates = pd.to_datetime(dataset[mapping_data['date_column']])
-            if (dates.dt.year > pd.Timestamp.now().year).any():
-                errors.append("Future dates found in the dataset")
-        except:
-            errors.append("Invalid date format in date column")
     
     return errors
 
@@ -662,8 +632,6 @@ def get_columns_with_suffix(request):
     except Exception as e:
         return JsonResponse({'error': str(e)}, status=500)
 
-
-
 def synthetic_dataset_creation(request):
     """Renders the synthetic dataset creation page"""
     return render(request, 'synthetic_dataset_creation.html')
@@ -723,53 +691,125 @@ def generate_synthetic_dataset(request):
 
     return HttpResponse("Invalid request method.", status=405)
 
-def check_file_format(request):
-    dataset_json = request.session.get('dataset')
-    if not dataset_json:
-        return JsonResponse({'success': False, 'error': 'No dataset in session'})
-    
-    # Perform file format validation
-    dataset = pd.read_json(dataset_json)
-    if not isinstance(dataset, pd.DataFrame):
-        return JsonResponse({'success': False, 'error': 'Invalid dataset format'})
-    
-    return JsonResponse({'success': True})
+from io import StringIO
 
-def check_file_content(request):
-    dataset_json = request.session.get('dataset')
-    if not dataset_json:
-        return JsonResponse({'success': False, 'error': 'No dataset in session'})
-    
-    # Perform file content validation
-    dataset = pd.read_json(dataset_json)
-    if dataset.empty:
-        return JsonResponse({'success': False, 'error': 'Dataset is empty'})
-    
-    return JsonResponse({'success': True})
+def validate_dataset(request):
+    """Endpoint for real-time dataset validation"""
+    if request.method != 'POST':
+        return JsonResponse({'error': 'Invalid request method'}, status=400)
 
-def check_dataset_structure(request):
+    print("Starting dataset validation...")
+    
+    # Check if both dataset and mapping data exist in session
     dataset_json = request.session.get('dataset')
+    mapping_data = request.session.get('mapping_data')
+    
+    print(f"Session data - Dataset: {'Present' if dataset_json else 'Missing'}, "
+          f"Mapping: {'Present' if mapping_data else 'Missing'}")
+    
+    # Remove the problematic debug line and replace with simpler logging
+    print("Session data:")
+    print(f"Dataset present: {bool(dataset_json)}")
+    print(f"Mapping data: {mapping_data}")
+    
     if not dataset_json:
-        return JsonResponse({'success': False, 'error': 'No dataset in session'})
+        return JsonResponse({
+            'success': False,
+            'error': 'No dataset found in session. Please upload a dataset first.'
+        })
     
-    # Perform dataset structure validation
-    dataset = pd.read_json(dataset_json)
-    if len(dataset.columns) == 0:
-        return JsonResponse({'success': False, 'error': 'Dataset has no columns'})
-    
-    return JsonResponse({'success': True})
+    if not mapping_data:
+        return JsonResponse({
+            'success': False,
+            'error': 'No mapping data found. Please complete the dataset mapping first.'
+        })
 
-def check_mapping(request):
-    dataset_json = request.session.get('dataset')
-    if not dataset_json:
-        return JsonResponse({'success': False, 'error': 'No dataset in session'})
-    
-    # Perform mapping validation
-    dataset = pd.read_json(dataset_json)
-    if 'mapping_data' not in request.session:
-        return JsonResponse({'success': False, 'error': 'No mapping data found'})
-    
-    return JsonResponse({'success': True})
+    try:
+        # Convert JSON string to DataFrame
+        try:
+            dataset = pd.read_json(StringIO(dataset_json))
+        except Exception as e:
+            print(f"Error parsing dataset JSON: {str(e)}")
+            return JsonResponse({
+                'success': False,
+                'error': 'Error parsing dataset. Please try uploading again.'
+            }, status=400)
+
+        print(f"Dataset loaded successfully with {len(dataset)} rows and {len(dataset.columns)} columns")
+        
+        # Create validator instance
+        validator = DatasetValidator(dataset=dataset, mapping_data=mapping_data)
+        
+        # Initialize results dictionary
+        results = {
+            'success': True,
+            'errors': [],
+            'warnings': [],
+            'missing_data': {},
+            'duplicates': 0,
+            'steps': {
+                'format': True,
+                'structure': False,
+                'missing_data': False,
+                'duplicates': False
+            }
+        }
+        
+        # Run validations one by one with error handling
+        try:
+            # Structure validation
+            print("Running structure validation...")
+            structure_results = validator.validate_dataset_structure()
+            results['errors'].extend(structure_results.get('errors', []))
+            results['steps']['structure'] = len(structure_results.get('errors', [])) == 0
+            
+            # Missing data check
+            print("Checking for missing data...")
+            missing_data_results = validator.check_missing_data()
+            results['warnings'].extend(missing_data_results.get('warnings', []))
+            results['missing_data'] = missing_data_results.get('missing_data', {})
+            results['steps']['missing_data'] = not any(
+                pct > 20 for pct in results['missing_data'].values()
+            )
+            
+            # Duplicates check
+            print("Checking for duplicates...")
+            duplicate_results = validator.check_duplicates()
+            results['duplicates'] = duplicate_results.get('duplicates', 0)
+            results['steps']['duplicates'] = results['duplicates'] == 0
+            
+            if results['duplicates'] > 0:
+                results['warnings'].append(
+                    f"Found {results['duplicates']} duplicate records"
+                )
+        
+        except Exception as e:
+            print(f"Error during validation steps: {str(e)}")
+            return JsonResponse({
+                'success': False,
+                'error': f'Error during validation: {str(e)}'
+            }, status=500)
+        
+        # Update overall success status
+        results['success'] = all([
+            results['steps']['format'],
+            results['steps']['structure'],
+            results['steps']['missing_data'],
+            results['steps']['duplicates']
+        ])
+        
+        # Convert any numpy types to native Python types for JSON serialization
+        results['missing_data'] = {k: float(v) for k, v in results['missing_data'].items()}
+        
+        print(f"Validation complete. Results: {results}")
+        return JsonResponse(results)
+
+    except Exception as e:
+        print(f"Unexpected error: {str(e)}")
+        return JsonResponse({
+            'success': False,
+            'error': f'Unexpected error: {str(e)}'
+        }, status=500)
 
 
 
