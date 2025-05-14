@@ -7,6 +7,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dataset Mapping</title>
     <link rel="stylesheet" href="{% static 'css/dataset_mapping.css' %}">
+    <style>
+        /* Add to your existing CSS */
+        .antibiotic-select-wrapper {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .antibiotic-select {
+            width: 100% !important;
+            min-height: 200px !important;
+            background-color: #1E1E1E;
+            color: #ffffff;
+            border: 1px solid #3498db;
+            border-radius: 4px;
+            padding: 8px;
+        }
+
+        .antibiotic-select option {
+            padding: 8px 12px;
+            margin: 2px 0;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .antibiotic-select option:hover {
+            background-color: #2a3143;
+        }
+
+        .antibiotic-select option:checked {
+            background-color: #3498db;
+            color: white;
+        }
+
+        .selected-count {
+            color: #3498db;
+            font-size: 14px;
+            margin-top: 8px;
+        }
+
+        .column-search {
+            width: 100%;
+            padding: 8px 12px;
+            margin-bottom: 10px;
+            border: 1px solid #3498db;
+            border-radius: 4px;
+            background-color: #1E1E1E;
+            color: #ffffff;
+        }
+
+        .selection-buttons {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .selection-buttons button {
+            padding: 6px 12px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            background-color: #3498db;
+            color: white;
+            transition: background-color 0.2s;
+        }
+
+        .selection-buttons button:hover {
+            background-color: #2980b9;
+        }
+
+        .btn-clear {
+            background-color: #95a5a6 !important;
+        }
+
+        .btn-clear:hover {
+            background-color: #7f8c8d !important;
+        }
+    </style>
 </head>
 <body>
     <nav>
@@ -138,40 +216,24 @@
                     
 
                 <!-- Section 3: Resistance Value Mapping -->
-                <div class="mapping-section" id="resistanceMappingSection">
-                    <h2>Antibiotic Resistance Mapping</h2>
-                    <p class="section-description">Map resistance values to standard categories</p>
+                <div class="mapping-section" id="antibioticColumnsSection">
+                    <h2>Antibiotic Columns</h2>
+                    <p class="section-description">Review and modify the automatically selected antibiotic columns</p>
                     
                     <div class="form-group">
                         <label>
-                            Susceptible Values
-                            <span class="info-icon" data-tooltip="Values in your dataset that indicate bacterial susceptibility to antibiotics (e.g., S, Susceptible, Sensitive)"></span>
+                            Antibiotic Columns
+                            <span class="info-icon" data-tooltip="Columns containing antibiotic test results are automatically selected based on your format. You can add or remove columns as needed."></span>
                         </label>
-                        <div class="custom-multi-select">
-                            <div class="multi-select-box" id="susceptibleValuesBox"></div>
-                            <input type="hidden" name="susceptible_values" id="susceptibleValues">
+                        <div class="antibiotic-select-wrapper">
+                            <select name="antibiotic_columns" id="antibioticColumns" multiple="multiple" class="antibiotic-select">
+                                {% for column in columns %}
+                                    <option value="{{ column }}">{{ column }}</option>
+                                {% endfor %}
+                            </select>
                         </div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label>
-                            Intermediate Values
-                            <span class="info-icon" data-tooltip="Values indicating partial resistance to antibiotics (e.g., I, Intermediate, Indeterminate)"></span>
-                        </label>
-                        <div class="custom-multi-select">
-                            <div class="multi-select-box" id="intermediateValuesBox"></div>
-                            <input type="hidden" name="intermediate_values" id="intermediateValues">
-                        </div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label>
-                            Resistant Values
-                            <span class="info-icon" data-tooltip="Select all values in your dataset that indicate resistance to antibiotics (e.g., R, Resistant)"></span>
-                        </label>
-                        <div class="custom-multi-select">
-                            <div class="multi-select-box" id="resistantValuesBox"></div>
-                            <input type="hidden" name="resistant_values" id="resistantValues">
+                        <div class="selected-count">
+                            Selected columns: <span id="selectedCount">0</span>
                         </div>
                     </div>
                 </div>
@@ -481,6 +543,58 @@
                 });
                 updateHiddenInput(hiddenInput, box);
             }
+
+            // Add this to your existing script section
+            function populateResistanceValues(uniqueValues) {
+                const susceptibleBox = document.getElementById('susceptibleValuesBox');
+                const intermediateBox = document.getElementById('intermediateValuesBox');
+                const resistantBox = document.getElementById('resistantValuesBox');
+                
+                // Clear existing values
+                susceptibleBox.innerHTML = '';
+                intermediateBox.innerHTML = '';
+                resistantBox.innerHTML = '';
+                
+                // Add checkboxes for each value
+                uniqueValues.forEach(value => {
+                    ['susceptible', 'intermediate', 'resistant'].forEach(type => {
+                        const box = document.getElementById(`${type}ValuesBox`);
+                        const checkbox = document.createElement('div');
+                        checkbox.className = 'multi-select-option';
+                        checkbox.innerHTML = `
+                            <input type="checkbox" name="${type}_values" value="${value}">
+                            <span>${value}</span>
+                        `;
+                        box.appendChild(checkbox);
+                    });
+                });
+                
+                // Pre-select common values
+                preSelectCommonValues(uniqueValues);
+            }
+
+            // Modify your antibioticFormatInput event listener
+            if (antibioticFormatInput) {
+                antibioticFormatInput.addEventListener('change', function() {
+                    if (this.value === 'Antibiotic') {
+                        // Make AJAX call to get unique values
+                        fetch('/get_unique_values/', {
+                            method: 'GET',
+                            headers: {
+                                'X-Requested-With': 'XMLHttpRequest',
+                                'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value
+                            }
+                        })
+                        .then(response => response.json())
+                        .then(data => {
+                            if (data.values) {
+                                populateResistanceValues(data.values);
+                                document.getElementById('resistanceMappingSection').style.display = 'block';
+                            }
+                        });
+                    }
+                });
+            }
             
             // Add styling for the custom multi-select
             const style = document.createElement('style');
@@ -666,6 +780,296 @@
     }
 `;
             document.head.appendChild(style);
+        });
+
+        // Add this to your existing script section
+        document.addEventListener('DOMContentLoaded', function() {
+            const formatSelect = document.getElementById('formatSelect');
+            const antibioticFormatInput = document.querySelector('input[name="antibiotic_format"]');
+            const antibioticColumns = document.getElementById('antibioticColumns');
+            const selectedCount = document.getElementById('selectedCount');
+
+            // Function to update selected count
+            function updateSelectedCount() {
+                const count = Array.from(antibioticColumns.selectedOptions).length;
+                selectedCount.textContent = count;
+            }
+
+            // Handle antibiotic format changes
+            if (antibioticFormatInput) {
+                antibioticFormatInput.addEventListener('change', function() {
+                    if (formatSelect.value === 'Wide') {
+                        if (this.value === 'Antibiotic') {
+                            // Pattern-based selection
+                            fetch('/get_unique_values/', {
+                                method: 'GET',
+                                headers: {
+                                    'X-Requested-With': 'XMLHttpRequest',
+                                    'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value
+                                }
+                            })
+                            .then(response => response.json())
+                            .then(data => {
+                                if (data.columns) {
+                                    autoSelectColumns(data.columns);
+                                }
+                            });
+                        } else {
+                            // Suffix-based selection
+                            const suffix = this.value.replace('Antibiotic', '');
+                            if (suffix) {
+                                fetch(`/get_columns_with_suffix/?suffix=${suffix}`, {
+                                    method: 'GET',
+                                    headers: {
+                                        'X-Requested-With': 'XMLHttpRequest',
+                                        'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value
+                                    }
+                                })
+                                .then(response => response.json())
+                                .then(data => {
+                                    if (data.columns) {
+                                        autoSelectColumns(data.columns);
+                                    }
+                                });
+                            }
+                        }
+                    }
+                });
+            }
+
+            // Function to auto-select columns
+            function autoSelectColumns(columns) {
+                Array.from(antibioticColumns.options).forEach(option => {
+                    option.selected = columns.includes(option.value);
+                });
+                updateSelectedCount();
+            }
+
+            // Function to update selected count
+            function updateSelectedCount() {
+                const count = Array.from(antibioticColumns.selectedOptions).length;
+                selectedCount.textContent = count;
+            }
+
+            // Add change listener to the multiselect
+            antibioticColumns.addEventListener('change', updateSelectedCount);
+
+            // Initialize selected count
+            updateSelectedCount();
+        });
+
+        // Add this to your existing script
+        document.addEventListener('DOMContentLoaded', function() {
+            const antibioticColumns = document.getElementById('antibioticColumns');
+            
+            // Add search functionality
+            const searchBox = document.createElement('input');
+            searchBox.type = 'text';
+            searchBox.placeholder = 'Search columns...';
+            searchBox.className = 'column-search';
+            antibioticColumns.parentElement.insertBefore(searchBox, antibioticColumns);
+
+            searchBox.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase();
+                Array.from(antibioticColumns.options).forEach(option => {
+                    const match = option.text.toLowerCase().includes(searchTerm);
+                    option.style.display = match ? '' : 'none';
+                });
+            });
+
+            // Add quick selection buttons
+            const buttonContainer = document.createElement('div');
+            buttonContainer.className = 'selection-buttons';
+            buttonContainer.innerHTML = `
+                <button type="button" class="btn-select-all">Select All</button>
+                <button type="button" class="btn-clear">Clear Selection</button>
+            `;
+            antibioticColumns.parentElement.insertBefore(buttonContainer, antibioticColumns);
+
+            // Add button event listeners
+            buttonContainer.querySelector('.btn-select-all').addEventListener('click', () => {
+                Array.from(antibioticColumns.options).forEach(option => option.selected = true);
+                updateSelectedCount();
+            });
+
+            buttonContainer.querySelector('.btn-clear').addEventListener('click', () => {
+                Array.from(antibioticColumns.options).forEach(option => option.selected = false);
+                updateSelectedCount();
+            });
+        });
+
+        // Add this to your existing script section in dataset_mapping.html
+        document.addEventListener('DOMContentLoaded', function() {
+            const formatSelect = document.getElementById('formatSelect');
+            const antibioticFormatInput = document.querySelector('input[name="antibiotic_format"]');
+            const antibioticColumns = document.getElementById('antibioticColumns');
+            const selectedCount = document.getElementById('selectedCount');
+
+            // Handle antibiotic format changes
+            if (antibioticFormatInput) {
+                antibioticFormatInput.addEventListener('change', function() {
+                    if (formatSelect.value === 'Wide') {
+                        if (this.value === 'Antibiotic') {
+                            // Pattern-based selection using common antibiotics list
+                            fetch('/api/validate-dataset/', {
+                                method: 'POST',
+                                headers: {
+                                    'X-Requested-With': 'XMLHttpRequest',
+                                    'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value,
+                                    'Content-Type': 'application/json'
+                                },
+                                body: JSON.stringify({
+                                    action: 'get_antibiotic_columns',
+                                    format: 'pattern'
+                                })
+                            })
+                            .then(response => response.json())
+                            .then(data => {
+                                if (data.columns) {
+                                    autoSelectColumns(data.columns);
+                                }
+                            });
+                        } else {
+                            // Suffix-based selection
+                            const suffix = this.value.replace('Antibiotic', '');
+                            if (suffix) {
+                                fetch('/api/validate-dataset/', {
+                                    method: 'POST',
+                                    headers: {
+                                        'X-Requested-With': 'XMLHttpRequest',
+                                        'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value,
+                                        'Content-Type': 'application/json'
+                                    },
+                                    body: JSON.stringify({
+                                        action: 'get_antibiotic_columns',
+                                        format: 'suffix',
+                                        suffix: suffix
+                                    })
+                                })
+                                .then(response => response.json())
+                                .then(data => {
+                                    if (data.columns) {
+                                        autoSelectColumns(data.columns);
+                                    }
+                                });
+                            }
+                        }
+                    }
+                });
+            }
+
+            // Function to auto-select columns
+            function autoSelectColumns(columns) {
+                // First clear all selections
+                Array.from(antibioticColumns.options).forEach(option => {
+                    option.selected = false;
+                });
+
+                // Then select the matching columns
+                Array.from(antibioticColumns.options).forEach(option => {
+                    if (columns.includes(option.value)) {
+                        option.selected = true;
+                        option.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                    }
+                });
+
+                // Update the count and trigger change event
+                updateSelectedCount();
+                const event = new Event('change');
+                antibioticColumns.dispatchEvent(event);
+            }
+
+            function updateSelectedCount() {
+                const count = Array.from(antibioticColumns.selectedOptions).length;
+                selectedCount.textContent = count;
+            }
+        });
+
+        // Add this to your existing script section in dataset_mapping.html
+        document.addEventListener('DOMContentLoaded', function() {
+            const formatSelect = document.getElementById('formatSelect');
+            const antibioticFormatInput = document.querySelector('input[name="antibiotic_format"]');
+            const antibioticColumns = document.getElementById('antibioticColumns');
+            const selectedCount = document.getElementById('selectedCount');
+
+            // Handle antibiotic format changes
+            if (antibioticFormatInput) {
+                antibioticFormatInput.addEventListener('change', function() {
+                    if (formatSelect.value === 'Wide') {
+                        if (this.value === 'Antibiotic') {
+                            // Pattern-based selection using common antibiotics list
+                            fetch('/api/validate-dataset/', {
+                                method: 'POST',
+                                headers: {
+                                    'X-Requested-With': 'XMLHttpRequest',
+                                    'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value,
+                                    'Content-Type': 'application/json'
+                                },
+                                body: JSON.stringify({
+                                    action: 'get_antibiotic_columns',
+                                    format: 'pattern'
+                                })
+                            })
+                            .then(response => response.json())
+                            .then(data => {
+                                if (data.columns) {
+                                    autoSelectColumns(data.columns);
+                                }
+                            });
+                        } else {
+                            // Suffix-based selection
+                            const suffix = this.value.replace('Antibiotic', '');
+                            if (suffix) {
+                                fetch('/api/validate-dataset/', {
+                                    method: 'POST',
+                                    headers: {
+                                        'X-Requested-With': 'XMLHttpRequest',
+                                        'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value,
+                                        'Content-Type': 'application/json'
+                                    },
+                                    body: JSON.stringify({
+                                        action: 'get_antibiotic_columns',
+                                        format: 'suffix',
+                                        suffix: suffix
+                                    })
+                                })
+                                .then(response => response.json())
+                                .then(data => {
+                                    if (data.columns) {
+                                        autoSelectColumns(data.columns);
+                                    }
+                                });
+                            }
+                        }
+                    }
+                });
+            }
+
+            // Function to auto-select columns
+            function autoSelectColumns(columns) {
+                // First clear all selections
+                Array.from(antibioticColumns.options).forEach(option => {
+                    option.selected = false;
+                });
+
+                // Then select the matching columns
+                Array.from(antibioticColumns.options).forEach(option => {
+                    if (columns.includes(option.value)) {
+                        option.selected = true;
+                        option.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                    }
+                });
+
+                // Update the count and trigger change event
+                updateSelectedCount();
+                const event = new Event('change');
+                antibioticColumns.dispatchEvent(event);
+            }
+
+            function updateSelectedCount() {
+                const count = Array.from(antibioticColumns.selectedOptions).length;
+                selectedCount.textContent = count;
+            }
         });
     </script>
 </body>

@@ -1,0 +1,109 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Resistance Value Mapping</title>
+    <link rel="stylesheet" href="{% static 'css/dataset_mapping.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+</head>
+<body>
+    <nav>
+        <div class="logo">AMRSuite</div>
+        <div class="nav-links">
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'logout' %}" class="logout-btn">Logout</a>
+            <img src="{% static 'media/tavlab.logo.png' %}" alt="Lab Logo" />
+        </div>
+    </nav>
+
+    <div class="main-content">
+        <h1>Map Resistance Values</h1>
+        
+        <form action="{% url 'process_resistance_mapping' %}" method="POST">
+            {% csrf_token %}
+            
+            <div class="mapping-container">
+                <div class="mapping-section">
+                    <h2>Resistance Value Mapping</h2>
+                    <p class="section-description">Map values from your antibiotic columns to standard resistance categories</p>
+                    
+                    <div class="form-group">
+                        <label>
+                            Susceptible Values
+                            <span class="info-icon" data-tooltip="Select values that indicate bacterial susceptibility to antibiotics"></span>
+                        </label>
+                        <select name="susceptible_values" multiple="multiple" class="select2">
+                            {% for value in unique_values %}
+                                <option value="{{ value }}">{{ value }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>
+                            Intermediate Values
+                            <span class="info-icon" data-tooltip="Select values that indicate intermediate resistance"></span>
+                        </label>
+                        <select name="intermediate_values" multiple="multiple" class="select2">
+                            {% for value in unique_values %}
+                                <option value="{{ value }}">{{ value }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>
+                            Resistant Values
+                            <span class="info-icon" data-tooltip="Select values that indicate bacterial resistance"></span>
+                        </label>
+                        <select name="resistant_values" multiple="multiple" class="select2">
+                            {% for value in unique_values %}
+                                <option value="{{ value }}">{{ value }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="button-group">
+                <button type="button" onclick="window.history.back()" class="btn btn-secondary">Back</button>
+                <button type="submit" class="btn btn-primary">Continue to Analysis</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $('.select2').select2({
+                placeholder: 'Select values',
+                allowClear: true,
+                closeOnSelect: false,
+                width: '100%'
+            });
+
+            // Pre-select common values based on patterns
+            const susceptiblePatterns = ['susceptible', 'sus', 's', 'sensitive'];
+            const intermediatePatterns = ['intermediate', 'int', 'i'];
+            const resistantPatterns = ['resistant', 'res', 'r'];
+
+            function preSelectValues(selectElement, patterns) {
+                const options = $(selectElement).find('option');
+                options.each(function() {
+                    const value = $(this).text().toLowerCase();
+                    if (patterns.some(pattern => value.includes(pattern))) {
+                        $(this).prop('selected', true);
+                    }
+                });
+                $(selectElement).trigger('change');
+            }
+
+            preSelectValues('select[name="susceptible_values"]', susceptiblePatterns);
+            preSelectValues('select[name="intermediate_values"]', intermediatePatterns);
+            preSelectValues('select[name="resistant_values"]', resistantPatterns);
+        });
+    </script>
+</body>
+</html>

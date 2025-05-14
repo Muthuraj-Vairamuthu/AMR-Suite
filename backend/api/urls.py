@@ -1,7 +1,7 @@
 from django.urls import path
 from .views import (home,home2,scorecard_info,resistance_info,isolation_info,login_page,signup_view, login_user, upload_dataset, dataset_upload, 
                 mapping_dataset, isolation_burden_analysis, generate_isolation_graph,
-                resistance_analysis, generate_resistance_graph, logout_view, scorecards, generate_scorecards, video, get_unique_values, get_columns_with_suffix, synthetic_dataset_creation, generate_synthetic_dataset, validate_dataset, process_antibiotic_columns)
+                resistance_analysis, get_antibiotic_columns, generate_resistance_graph, logout_view, scorecards, generate_scorecards, video, get_unique_values, get_columns_with_suffix, synthetic_dataset_creation, generate_synthetic_dataset, validate_dataset, process_antibiotic_columns, resistance_mapping, process_resistance_mapping)
 urlpatterns = [
 
     # path('', scorecard_info, name='scorecard_info'),
@@ -33,5 +33,7 @@ urlpatterns = [
     path('generate_synthetic_dataset/', generate_synthetic_dataset, name='generate_synthetic_dataset'),
     path('api/validate-dataset/', validate_dataset, name='validate_dataset'),
     path('mapping-dataset/', mapping_dataset, name='mapping_dataset'),
-    path('process-antibiotic-columns/', process_antibiotic_columns, name='process_antibiotic_columns'),
+    path('resistance-mapping/', resistance_mapping, name='resistance_mapping'),
+    path('process-resistance-mapping/', process_resistance_mapping, name='process_resistance_mapping'),
+    path('api/get-antibiotic-columns/', get_antibiotic_columns, name='get_antibiotic_columns'),
 ]

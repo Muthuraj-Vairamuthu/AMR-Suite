@@ -25,6 +25,7 @@ import base64
 from django.conf import settings
 import traceback
 import os
+from django.views.decorators.http import require_http_methods
 import re
 import zipfile
 from AMR_Suite.utils import log_event
@@ -122,7 +123,7 @@ def mapping_dataset(request):
     
     dataset = pd.read_json(dataset_json)
     
-    # Get all form data
+    # Get mapping data
     mapping_data = {
         'isolate_id': request.POST.get('isolate_id'),
         'bacterial_infection': request.POST.get('bacterial_infection'),
@@ -137,68 +138,121 @@ def mapping_dataset(request):
         'date_column': request.POST.get('date_column'),
         'resistance_granularity': request.POST.get('resistance_granularity'),
         'time_gap_attribute': request.POST.get('time_gap_attribute'),
-        'susceptible_values': request.POST.get('susceptible_values', '').split(','),
-        'intermediate_values': request.POST.get('intermediate_values', '').split(','),
-        'resistant_values': request.POST.get('resistant_values', '').split(','),
     }
     
-    # Store mappings in session
     request.session['mapping_data'] = mapping_data
     
     try:
+        antibiotic_columns = []
         if mapping_data['dataset_format'] == 'Wide':
             if mapping_data['antibiotic_format'] == 'Antibiotic':
-                # Infer antibiotic columns
+                # Infer antibiotic columns using pattern matching
                 antibiotic_list = antibiotics
                 antibiotic_columns = [
                     col for col in dataset.columns 
                     if any(antibiotic.lower() in col.lower() for antibiotic in antibiotic_list)
                 ]
-                
                 if not antibiotic_columns:
                     messages.warning(request, "No antibiotic columns automatically identified. Please select them manually.")
                     antibiotic_columns = []
-                
-                # Get unique values from all inferred antibiotic columns
-                unique_values = set()
-                for col in antibiotic_columns:
-                    values = dataset[col].dropna().unique().tolist()
-                    unique_values.update(values)
-                
-                # Store in session for use in template
-                request.session['antibiotic_columns'] = antibiotic_columns
-                request.session['resistance_values'] = list(unique_values)
-                
-                return render(request, 'confirm_antibiotic_columns.html', {
-                    'columns': dataset.columns.tolist(),
-                    'identified_columns': antibiotic_columns,
-                    'resistance_values': list(unique_values),
-                    'mapping_data': mapping_data
-                })
-                
             else:
                 # Handle suffix-based columns
+                print("Handling suffix-based columns")
                 suffix = mapping_data['antibiotic_format'].replace('Antibiotic', '')
                 antibiotic_columns = [col for col in dataset.columns if col.endswith(suffix)]
                 if not antibiotic_columns:
                     messages.error(request, f"No columns found with suffix '{suffix}'.")
                     return redirect('upload_dataset')
-                request.session['antibiotic_columns'] = antibiotic_columns
-                
         else:
-            # Handle Long format
-            antibiotic_columns = dataset[mapping_data['antibiotic_name_col']].unique().tolist()
-            request.session['antibiotic_columns'] = antibiotic_columns
+            # Handle Long format - get unique values from antibiotic name column
+            antibiotic_name_col = mapping_data['antibiotic_name_col']
+            if antibiotic_name_col:
+                antibiotic_columns = dataset[antibiotic_name_col].unique().tolist()
 
-        # Update session and save dataset
+        # Store columns in session
+        request.session['antibiotic_columns'] = antibiotic_columns
         request.session['dataset'] = dataset.to_json()
-        dataset.to_csv('static/media/original_dataset.csv', index=False)
         
-        return render(request, 'main_results.html')
+        # Move to resistance mapping page
+        return redirect('resistance_mapping')
         
     except Exception as e:
         messages.error(request, f"Error processing dataset: {str(e)}")
         return redirect('upload_dataset')
+
+def resistance_mapping(request):
+    """Handle resistance value mapping for both Wide and Long formats"""
+    dataset_json = request.session.get('dataset')
+    mapping_data = request.session.get('mapping_data')
+    antibiotic_columns = request.session.get('antibiotic_columns')
+    
+    if not all([dataset_json, mapping_data, antibiotic_columns]):
+        messages.error(request, "Missing required data. Please start over.")
+        return redirect('upload_dataset')
+    
+    try:
+        dataset = pd.read_json(dataset_json)
+        unique_values = set()
+        
+        if mapping_data['dataset_format'] == 'Wide':
+            # Get unique values from all antibiotic columns
+            for col in antibiotic_columns:
+                if col in dataset.columns:
+                    values = dataset[col].dropna().unique().tolist()
+                    unique_values.update(values)
+        else:
+            # Get unique values from result column in Long format
+            result_col = mapping_data['antibiotic_result_col']
+            if result_col in dataset.columns:
+                unique_values.update(dataset[result_col].dropna().unique().tolist())
+        
+        return render(request, 'resistance_mapping.html', {
+            'unique_values': sorted(list(unique_values)),
+            'mapping_data': mapping_data
+        })
+        
+    except Exception as e:
+        messages.error(request, f"Error preparing resistance mapping: {str(e)}")
+        return redirect('upload_dataset')
+
+def process_resistance_mapping(request):
+    """Process resistance value mapping and proceed to analysis"""
+    if request.method != 'POST':
+        return redirect('upload_dataset')
+    
+    # Get resistance values from form
+    susceptible_values = request.POST.getlist('susceptible_values')
+    intermediate_values = request.POST.getlist('intermediate_values')
+    resistant_values = request.POST.getlist('resistant_values')
+    
+    if not any([susceptible_values, intermediate_values, resistant_values]):
+        messages.error(request, "Please map at least one resistance category")
+        return redirect('resistance_mapping')
+    
+    try:
+        # Get data from session
+        mapping_data = request.session.get('mapping_data', {})
+        
+        # Update mapping data with resistance values
+        mapping_data.update({
+            'susceptible_values': susceptible_values,
+            'intermediate_values': intermediate_values,
+            'resistant_values': resistant_values
+        })
+        
+        # Update session
+        request.session['mapping_data'] = mapping_data
+        
+        # Proceed to main results
+        return render(request, 'main_results.html')
+        
+    except Exception as e:
+        messages.error(request, f"Error processing resistance mapping: {str(e)}")
+        return redirect('resistance_mapping')
+
+def login_user(request):
+    # Your login logic here
+    return HttpResponse("Login Successful")
 
 def process_antibiotic_columns(request):
     """Process the confirmed antibiotic columns and continue with dataset processing"""
@@ -876,6 +930,40 @@ def validate_dataset(request):
             'success': False,
             'error': f'Unexpected error: {str(e)}'
         }, status=500)
+
+@require_http_methods(["POST"])
+def get_antibiotic_columns(request):
+    """API endpoint to get antibiotic columns based on format"""
+    try:
+        data = json.loads(request.body)
+        dataset_json = request.session.get('dataset')
+        
+        if not dataset_json:
+            return JsonResponse({'error': 'No dataset found'}, status=400)
+        
+        dataset = pd.read_json(dataset_json)
+        
+        if data['format'] == 'pattern':
+            # Use pattern matching with common antibiotics list
+            antibiotic_list = antibiotics
+            columns = [
+                col for col in dataset.columns 
+                if any(antibiotic.lower() in col.lower() for antibiotic in antibiotic_list)
+            ]
+        elif data['format'] == 'suffix':
+            # Use suffix matching
+            suffix = data['suffix']
+            columns = [col for col in dataset.columns if col.endswith(suffix)]
+        else:
+            return JsonResponse({'error': 'Invalid format'}, status=400)
+        
+        return JsonResponse({
+            'success': True,
+            'columns': columns
+        })
+        
+    except Exception as e:
+        return JsonResponse({'error': str(e)}, status=500)
 
 
 
