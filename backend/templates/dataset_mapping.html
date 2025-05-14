@@ -29,12 +29,12 @@
                     <h2>Core Details</h2>
                     <div class="form-group">
                         <label>
-                            Isolate ID<span class="required">*</span>
-                            <span class="info-icon" data-tooltip="Column containing unique identifier for each record/isolate (e.g., sample ID, isolate number)"></span>
+                            Isolate ID
+                            <span class="info-icon" data-tooltip="Column containing unique identifier for each record/isolate. Select 'None' if your dataset doesn't have unique IDs."></span>
                         </label>
                         <div class="select-wrapper">
-                            <select name="isolate_id" required>
-                                <option value="">Select Column</option>
+                            <select name="isolate_id">
+                                <option value="">None</option>
                                 {% for column in columns %}
                                     <option value="{{ column }}">{{ column }}</option>
                                 {% endfor %}

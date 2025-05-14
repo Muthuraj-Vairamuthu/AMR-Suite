@@ -1,7 +1,7 @@
 from django.urls import path
 from .views import (home,home2,scorecard_info,resistance_info,isolation_info,login_page,signup_view, login_user, upload_dataset, dataset_upload, 
                 mapping_dataset, isolation_burden_analysis, generate_isolation_graph,
-                resistance_analysis, generate_resistance_graph, logout_view, scorecards, generate_scorecards, video, get_unique_values, get_columns_with_suffix, synthetic_dataset_creation, generate_synthetic_dataset, validate_dataset)
+                resistance_analysis, generate_resistance_graph, logout_view, scorecards, generate_scorecards, video, get_unique_values, get_columns_with_suffix, synthetic_dataset_creation, generate_synthetic_dataset, validate_dataset, process_antibiotic_columns)
 urlpatterns = [
 
     # path('', scorecard_info, name='scorecard_info'),
@@ -26,13 +26,12 @@ urlpatterns = [
     path('generate_resistance_graph', generate_resistance_graph, name='generate_resistance_graph'),
     path('scorecards/', scorecards, name='scorecards'),
     path('generate_scorecards', generate_scorecards, name='generate_scorecards'),
-    # path('check-scorecard-data/', check_scorecard_data, name='check_scorecard_data'),
-    # path('generate_scorecards_test/',generate_scorecards_test, name='generate_scorecards_test'),
-
     path('logout/', logout_view, name='logout'),
     path('get_unique_values/', get_unique_values, name='get_unique_values'),
     path('get_columns_with_suffix/', get_columns_with_suffix, name='get_columns_with_suffix'),
     path('synthetic_dataset_creation/', synthetic_dataset_creation, name='synthetic_dataset_creation'),
     path('generate_synthetic_dataset/', generate_synthetic_dataset, name='generate_synthetic_dataset'),
     path('api/validate-dataset/', validate_dataset, name='validate_dataset'),
+    path('mapping-dataset/', mapping_dataset, name='mapping_dataset'),
+    path('process-antibiotic-columns/', process_antibiotic_columns, name='process_antibiotic_columns'),
 ]

@@ -29,6 +29,7 @@ import re
 import zipfile
 from AMR_Suite.utils import log_event
 from .utils.validators import DatasetValidator
+from .utils.common_antibiotics import antibiotics
 import json
 
 def home(request):
@@ -121,8 +122,9 @@ def mapping_dataset(request):
     
     dataset = pd.read_json(dataset_json)
     
+    # Get all form data
     mapping_data = {
-        'isolate_id': request.POST.get('isolate_id'),  # Add this line
+        'isolate_id': request.POST.get('isolate_id'),
         'bacterial_infection': request.POST.get('bacterial_infection'),
         'source_input': request.POST.get('source_input'),
         'dataset_format': request.POST.get('dataset_format'),
@@ -135,40 +137,104 @@ def mapping_dataset(request):
         'date_column': request.POST.get('date_column'),
         'resistance_granularity': request.POST.get('resistance_granularity'),
         'time_gap_attribute': request.POST.get('time_gap_attribute'),
+        'susceptible_values': request.POST.get('susceptible_values', '').split(','),
+        'intermediate_values': request.POST.get('intermediate_values', '').split(','),
+        'resistant_values': request.POST.get('resistant_values', '').split(','),
     }
-    
-    # Validate required fields
-    required_fields = ['isolate_id', 'bacterial_infection', 'source_input', 'dataset_format', 'date_column', 'date_format']
-    for field in required_fields:
-        if not mapping_data[field]:
-            messages.error(request, f"Required field '{field.replace('_', ' ')}' is missing. Please fill in all required fields.")
-            return redirect('upload_dataset')
     
     # Store mappings in session
     request.session['mapping_data'] = mapping_data
     
-    # Transform dataset based on mappings
     try:
         if mapping_data['dataset_format'] == 'Wide':
-            suffix = mapping_data['antibiotic_format'].replace('Antibiotic', '')
-            antibiotic_columns = [col for col in dataset.columns if col.endswith(suffix)]
-            if not antibiotic_columns:
-                messages.error(request, f"No columns found with suffix '{suffix}'. Ensure the antibiotic format is correct.")
-                return redirect('upload_dataset')
-            request.session['antibiotic_columns'] = antibiotic_columns
+            if mapping_data['antibiotic_format'] == 'Antibiotic':
+                # Infer antibiotic columns
+                antibiotic_list = antibiotics
+                antibiotic_columns = [
+                    col for col in dataset.columns 
+                    if any(antibiotic.lower() in col.lower() for antibiotic in antibiotic_list)
+                ]
+                
+                if not antibiotic_columns:
+                    messages.warning(request, "No antibiotic columns automatically identified. Please select them manually.")
+                    antibiotic_columns = []
+                
+                # Get unique values from all inferred antibiotic columns
+                unique_values = set()
+                for col in antibiotic_columns:
+                    values = dataset[col].dropna().unique().tolist()
+                    unique_values.update(values)
+                
+                # Store in session for use in template
+                request.session['antibiotic_columns'] = antibiotic_columns
+                request.session['resistance_values'] = list(unique_values)
+                
+                return render(request, 'confirm_antibiotic_columns.html', {
+                    'columns': dataset.columns.tolist(),
+                    'identified_columns': antibiotic_columns,
+                    'resistance_values': list(unique_values),
+                    'mapping_data': mapping_data
+                })
+                
+            else:
+                # Handle suffix-based columns
+                suffix = mapping_data['antibiotic_format'].replace('Antibiotic', '')
+                antibiotic_columns = [col for col in dataset.columns if col.endswith(suffix)]
+                if not antibiotic_columns:
+                    messages.error(request, f"No columns found with suffix '{suffix}'.")
+                    return redirect('upload_dataset')
+                request.session['antibiotic_columns'] = antibiotic_columns
+                
         else:
+            # Handle Long format
             antibiotic_columns = dataset[mapping_data['antibiotic_name_col']].unique().tolist()
             request.session['antibiotic_columns'] = antibiotic_columns
+
+        # Update session and save dataset
+        request.session['dataset'] = dataset.to_json()
+        dataset.to_csv('static/media/original_dataset.csv', index=False)
+        
+        return render(request, 'main_results.html')
+        
     except Exception as e:
-        messages.error(request, f"Error processing dataset: {str(e)}. Please check your mappings and try again.")
+        messages.error(request, f"Error processing dataset: {str(e)}")
+        return redirect('upload_dataset')
+
+def process_antibiotic_columns(request):
+    """Process the confirmed antibiotic columns and continue with dataset processing"""
+    if request.method != 'POST':
         return redirect('upload_dataset')
     
-    # Update the dataset in the session
-    request.session['dataset'] = dataset.to_json()
-    dataset.to_csv('static/media/original_dataset.csv', index=False)
+    # Get the confirmed columns from the form
+    antibiotic_columns = request.POST.getlist('antibiotic_columns')
     
-    return render(request, 'main_results.html')
-
+    if not antibiotic_columns:
+        messages.error(request, "Please select at least one antibiotic column")
+        return redirect('upload_dataset')
+    
+    try:
+        # Get the dataset and mapping data from session
+        dataset_json = request.session.get('dataset')
+        mapping_data = request.session.get('mapping_data')
+        
+        if not dataset_json or not mapping_data:
+            messages.error(request, "Session data lost. Please start over.")
+            return redirect('upload_dataset')
+        
+        dataset = pd.read_json(dataset_json)
+        
+        # Update antibiotic columns in session
+        request.session['antibiotic_columns'] = antibiotic_columns
+        
+        # Save dataset
+        request.session['dataset'] = dataset.to_json()
+        dataset.to_csv('static/media/original_dataset.csv', index=False)
+        
+        return render(request, 'main_results.html')
+        
+    except Exception as e:
+        messages.error(request, f"Error processing dataset: {str(e)}")
+        return redirect('upload_dataset')
 
 def validate_file_format(file):
     """Validate CSV file format using extension, MIME type, and content inspection"""
