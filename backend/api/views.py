@@ -351,43 +351,69 @@ def validate_file_format(file):
     
     return errors
 
+def existing_datasets(request):
+    """Fetch existing datasets from the static media directory"""
+    dataset_dir = os.path.join('Sample Datasets')
+    datasets = [f for f in os.listdir(dataset_dir) if f.endswith('.csv')]
+    
+    return JsonResponse(datasets, safe=False)
+
 def dataset_upload(request):
-    if 'csv_file' not in request.FILES:
-        log_event('ERROR', request.user.username, "No file uploaded")
-        messages.error(request, "No file uploaded. Please select a CSV file.")
-        return redirect('upload_dataset')
-    
-    file = request.FILES['csv_file']
-    
+    choice = request.POST.get('dataset_choice')
+
     try:
-        log_event('UPLOAD', request.user.username, f"Uploaded file: {file.name}", 
-                 {'size': file.size, 'content_type': file.content_type})
-        
-        # Validate file format
-        format_errors = validate_file_format(file)
-        if format_errors:
-            log_event('VALIDATE', request.user.username, "File validation failed", 
-                     {'errors': format_errors})
-            for error in format_errors:
-                messages.error(request, error)
-            return redirect('upload_dataset')
-        
-        log_event('VALIDATE', request.user.username, "File passed validation")
-        
-        # Read dataset
-        dataset = pd.read_csv(file)
-        log_event('PARSE', request.user.username, "CSV parsed into DataFrame",
-                 {'rows': len(dataset), 'columns': len(dataset.columns)})
-        
-        # Store in session
+        if choice == 'existing':
+            # User picked an existing static CSV
+            csv_name = request.POST.get('existing_dataset')
+            log_event('UPLOAD', request.user.username,
+                      f"Using existing dataset: {csv_name}")
+
+            csv_path = os.path.join(
+                settings.BASE_DIR,
+                'static', 'media',
+                csv_name
+            )
+            dataset = pd.read_csv(csv_path)
+
+        else:
+            # Upload new CSV
+            if 'csv_file' not in request.FILES:
+                raise ValueError("No file uploaded")
+
+            file = request.FILES['csv_file']
+            log_event('UPLOAD', request.user.username,
+                      f"Uploaded file: {file.name}",
+                      {'size': file.size,
+                       'content_type': file.content_type})
+
+            # Validate file format
+            errors = validate_file_format(file)
+            if errors:
+                for err in errors:
+                    messages.error(request, err)
+                log_event('VALIDATE', request.user.username,
+                          "Validation failed", {'errors': errors})
+                return redirect('upload_dataset')
+
+            # Parse
+            dataset = pd.read_csv(file)
+            log_event('PARSE', request.user.username,
+                      "CSV parsed into DataFrame",
+                      {'rows': len(dataset),
+                       'columns': len(dataset.columns)})
+
+        # Store dataset JSON in session
         request.session['dataset'] = dataset.to_json()
-        
-        return render(request, 'dataset_mapping.html', {'columns': dataset.columns.tolist()})
-        
+        return render(request, 'dataset_mapping.html', {
+            'columns': dataset.columns.tolist()
+        })
+
     except Exception as e:
-        log_event('ERROR', request.user.username, f"Error processing upload: {str(e)}", 
-                 {'traceback': traceback.format_exc()})
-        messages.error(request, f"Error processing file: {str(e)}")
+        log_event('ERROR', request.user.username,
+                  f"Error processing upload: {str(e)}",
+                  {'traceback': traceback.format_exc()})
+        messages.error(request,
+                       f"Error processing file: {str(e)}")
         return redirect('upload_dataset')
 
 def isolation_burden_analysis(request):

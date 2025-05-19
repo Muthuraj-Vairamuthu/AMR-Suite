@@ -2,108 +2,165 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dataset Mapping</title>
-    <link rel="stylesheet" href="{% static 'css/upload_dataset.css' %}">
-    
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+  <title>Dataset Mapping</title>
+  <link
+    rel="stylesheet"
+    href="{% static 'css/upload_dataset.css' %}"
+  >
 </head>
 <body>
-    <nav>
-        <div class="logo">AMRSuite</div>
-        <div class="nav-links">
-            <a href="{% url 'home' %}">Home</a>
-            <a href="{% url 'logout' %}" class="logout-btn">Logout</a>
-            <img src="{% static 'media/tavlab.logo.png' %}" alt="Lab Logo" />
-        </div>
-    </nav>
-
-    <div class="upload-container">
-        <div class="welcome-banner">
-            {{ welcome_message }}
-        </div>
-
-        <form action="/dataset_upload" method="POST" enctype="multipart/form-data">
-            {% csrf_token %}
-            <h1>Uploading your Dataset</h1>
-            
-            <div class="drop-zone" id="dropZone">
-                <h3>Drag and drop file here</h3>
-                <p>Drag and drop or browse your file to get started</p>
-                <input type="file" name="csv_file" id="csv_file" style="display: none;" required accept=".csv">
-                <button type="button" class="browse-btn" onclick="document.getElementById('csv_file').click()">Browse</button>
-                <div class="file-info" id="fileInfo">
-                    <p>Selected file: <span id="fileName">No file chosen</span></p>
-                </div>
-            </div>
-
-            <button class="upload-btn" type="submit">Upload Dataset</button>
-        </form>
+  <nav>
+    <div class="logo">AMRSuite</div>
+    <div class="nav-links">
+      <a href="{% url 'home' %}">Home</a>
+      <a href="{% url 'logout' %}" class="logout-btn">Logout</a>
+      <img
+        src="{% static 'media/tavlab.logo.png' %}"
+        alt="Lab Logo"
+      />
     </div>
+  </nav>
 
-    <script>
-        const dropZone = document.getElementById('dropZone');
-        const fileInput = document.getElementById('csv_file');
-        const fileInfo = document.getElementById('fileInfo');
-        const fileNameSpan = document.getElementById('fileName');
+  <div class="upload-container">
+    <div class="welcome-banner">{{ welcome_message }}</div>
 
-        // Handle file selection
-        fileInput.addEventListener('change', (e) => {
-            const file = e.target.files[0];
-            if (file) {
-                fileNameSpan.textContent = file.name;
-                fileInfo.classList.add('visible');
-            }
+    <form
+      action="{% url 'dataset_upload' %}"
+      method="POST"
+      enctype="multipart/form-data"
+      id="uploadForm"
+    >
+      {% csrf_token %}
+      <h1>Uploading your Dataset</h1>
+
+      <!-- Choice: upload vs existing -->
+      <div class="dataset-choice">
+        <label>
+          <input
+            type="radio"
+            name="dataset_choice"
+            value="upload"
+            checked
+          > Upload a new CSV
+        </label>
+        <label>
+          <input
+            type="radio"
+            name="dataset_choice"
+            value="existing"
+          > Use existing dataset
+        </label>
+      </div>
+
+      <!-- Existing dataset selector (populated via JS) -->
+      <div
+        id="existingZone"
+        style="display:none; margin:1em 0;"
+      >
+        <label for="existing_dataset">
+          Select dataset:
+        </label>
+        <select
+          name="existing_dataset"
+          id="existing_dataset"
+          required
+        >
+          <option value="">— choose —</option>
+          <!-- options will be inserted here by JS -->
+        </select>
+      </div>
+
+      <!-- File-upload drop zone -->
+      <div class="drop-zone" id="dropZone">
+        <h3>Drag & drop file here</h3>
+        <p>Or browse your file to get started</p>
+        <input
+          type="file"
+          name="csv_file"
+          id="csv_file"
+          style="display:none"
+          accept=".csv"
+        >
+        <button
+          type="button"
+          class="browse-btn"
+          onclick="fileInput.click()"
+        >Browse</button>
+        <div class="file-info" id="fileInfo">
+          Selected file:
+          <span id="fileName">No file chosen</span>
+        </div>
+      </div>
+
+      <button
+        class="upload-btn"
+        type="submit"
+      >Upload Dataset</button>
+    </form>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const form         = document.getElementById('uploadForm');
+      const existingRadios = form.dataset_choice;
+      const existingZone = document.getElementById('existingZone');
+      const dropZone     = document.getElementById('dropZone');
+      const fileInput    = document.getElementById('csv_file');
+      const fileNameEl   = document.getElementById('fileName');
+      const select       = document.getElementById('existing_dataset');
+
+      // 1) Fetch list of existing datasets
+      fetch("{% url 'existing_datasets' %}")
+        .then(res => res.json())
+        .then(list => {
+          list.forEach(fname => {
+            const opt = document.createElement('option');
+            opt.value = fname;
+            opt.textContent = fname;
+            select.appendChild(opt);
+          });
+        })
+        .catch(err => {
+          console.error("Could not load existing datasets:", err);
         });
 
-        // Handle drag and drop
-        dropZone.addEventListener('dragover', (e) => {
-            e.preventDefault();
-            dropZone.classList.add('dragover');
-        });
+      // 2) Toggle upload vs existing UI
+      form.addEventListener('change', e => {
+        if (e.target.name === 'dataset_choice') {
+          const isExisting = e.target.value === 'existing';
+          existingZone.style.display = isExisting ? 'block' : 'none';
+          dropZone.style.display     = isExisting ? 'none'  : 'block';
+        }
+      });
 
-        dropZone.addEventListener('dragleave', (e) => {
-            e.preventDefault();
-            dropZone.classList.remove('dragover');
-        });
-
-        dropZone.addEventListener('drop', (e) => {
-            e.preventDefault();
-            dropZone.classList.remove('dragover');
-            
-            const files = e.dataTransfer.files;
-            if (files.length > 0) {
-                fileInput.files = files;
-                fileNameSpan.textContent = files[0].name;
-                fileInfo.classList.add('visible');
-            }
-        });
-
-        // Handle browser back button
-        window.addEventListener('popstate', function(event) {
-            // Make a request to logout
-            fetch('{% url "logout" %}', {
-                method: 'GET',
-                credentials: 'same-origin',
-                headers: {
-                    'X-CSRFToken': '{{ csrf_token }}'
-                }
-            }).then(() => {
-                // Redirect to login page after logout
-                window.location.href = '{% url "login" %}';
-            });
-        });
-
-        // Also handle the actual back button click
-        window.onbeforeunload = function() {
-            fetch('{% url "logout" %}', {
-                method: 'GET',
-                credentials: 'same-origin',
-                headers: {
-                    'X-CSRFToken': '{{ csrf_token }}'
-                }
-            });
-        };
-    </script>
+      // 3) File selection UI
+      fileInput.addEventListener('change', () => {
+        if (fileInput.files.length) {
+          fileNameEl.textContent = fileInput.files[0].name;
+        }
+      });
+      dropZone.addEventListener('dragover', ev => {
+        ev.preventDefault();
+        dropZone.classList.add('dragover');
+      });
+      dropZone.addEventListener('dragleave', ev => {
+        ev.preventDefault();
+        dropZone.classList.remove('dragover');
+      });
+      dropZone.addEventListener('drop', ev => {
+        ev.preventDefault();
+        dropZone.classList.remove('dragover');
+        if (ev.dataTransfer.files.length) {
+          fileInput.files = ev.dataTransfer.files;
+          fileNameEl.textContent = ev.dataTransfer.files[0].name;
+        }
+      });
+    });
+  </script>
 </body>
 </html>

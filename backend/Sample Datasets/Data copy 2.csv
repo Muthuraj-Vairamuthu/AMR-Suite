@@ -1,0 +1,74 @@
+Isolate.Id,Study,Species,Family,Country,State,Gender,Age.Group,Speciality,Source,In...Out.Patient,Year,Phenotype,Amikacin_I,Imipenem_I,Meropenem_I,Month,Day
+ID_48,A,Klebsiella pneumoniae,Enterobacteriaceae,Z27,Y9,,13 to 18 Years,Pediatric General,Trachea,Other,2014,ESBL,Susceptible,Resistant,Susceptible,0,0
+ID_48,A,Klebsiella pneumoniae,Enterobacteriaceae,Z27,Y9,,13 to 18 Years,Pediatric General,Trachea,Other,2014,,Resistant,Susceptible,Resistant,0,0
+ID_497,A,Klebsiella pneumoniae,Enterobacteriaceae,Z24,Y17,Female,19 to 64 Years,Clinic / Office,Trachea,Inpatient,2014,,Intermediate,Resistant,Susceptible,0,0
+ID_497,A,Klebsiella pneumoniae,Enterobacteriaceae,Z24,Y17,Female,19 to 64 Years,Clinic / Office,Trachea,None Given,2014,,Susceptible,Susceptible,Resistant,0,0
+ID_497,A,Klebsiella pneumoniae,Enterobacteriaceae,Z24,Y17,Female,19 to 64 Years,Clinic / Office,Trachea,None Given,2014,,Resistant,Intermediate,Susceptible,0,0
+ID_497,A,Klebsiella pneumoniae,Enterobacteriaceae,Z24,Y17,Female,19 to 64 Years,Clinic / Office,Trachea,Outpatient,2014,ESBL,Resistant,Intermediate,Susceptible,0,0
+ID_771,A,Klebsiella pneumoniae,Enterobacteriaceae,Z25,Y12,Male,3 to 12 Years,Nursing Home / Rehab,Trachea,Outpatient,2014,ESBL,Intermediate,Resistant,Susceptible,0,0
+ID_274,B,Klebsiella pneumoniae,Enterobacteriaceae,Z22,Y8,,85 and Over,Emergency Room,Trachea,Other,2014,,Intermediate,Susceptible,Susceptible,0,0
+ID_274,B,Klebsiella pneumoniae,Enterobacteriaceae,Z22,Y8,,85 and Over,Emergency Room,Trachea,Other,2014,,Resistant,Resistant,Susceptible,0,0
+ID_274,B,Klebsiella pneumoniae,Enterobacteriaceae,Z22,Y8,,85 and Over,Emergency Room,Trachea,Other,2014,ESBL,Intermediate,Intermediate,Intermediate,0,0
+ID_274,B,Klebsiella pneumoniae,Enterobacteriaceae,Z22,Y8,,85 and Over,Emergency Room,Trachea,Outpatient,2014,ESBL,Intermediate,Resistant,Resistant,0,0
+ID_274,B,Klebsiella pneumoniae,Enterobacteriaceae,Z22,Y8,,85 and Over,Emergency Room,Trachea,,2014,ESBL,Intermediate,Resistant,Resistant,0,0
+ID_148,C,Klebsiella pneumoniae,Enterobacteriaceae,Z48,Y2,Male,19 to 64 Years,Pediatric ICU,Trachea,Outpatient,2014,ESBL,Susceptible,Resistant,Intermediate,0,0
+ID_148,C,Klebsiella pneumoniae,Enterobacteriaceae,Z48,Y2,Male,19 to 64 Years,Pediatric ICU,Trachea,Inpatient,2014,ESBL,Susceptible,Resistant,Intermediate,0,0
+ID_148,C,Klebsiella pneumoniae,Enterobacteriaceae,Z48,Y2,Male,19 to 64 Years,Pediatric ICU,Trachea,,2014,,Intermediate,Resistant,Intermediate,0,0
+ID_285,A,Klebsiella pneumoniae,Enterobacteriaceae,Z37,Y15,,13 to 18 Years,Clinic / Office,Trachea,,2014,ESBL,Intermediate,Intermediate,Susceptible,0,0
+ID_285,A,Klebsiella pneumoniae,Enterobacteriaceae,Z37,Y15,,13 to 18 Years,Clinic / Office,Trachea,None Given,2014,ESBL,Susceptible,Intermediate,Intermediate,0,0
+ID_451,C,Klebsiella pneumoniae,Enterobacteriaceae,Z49,Y10,Female,0 to 2 Years,Surgery ICU,Trachea,Outpatient,2014,ESBL,Resistant,Resistant,Intermediate,0,0
+ID_451,C,Klebsiella pneumoniae,Enterobacteriaceae,Z49,Y10,Female,0 to 2 Years,Surgery ICU,Trachea,Outpatient,2014,,Intermediate,Susceptible,Susceptible,0,0
+ID_195,C,Klebsiella pneumoniae,Enterobacteriaceae,Z35,Y20,Female,19 to 64 Years,Clinic / Office,Trachea,Inpatient,2014,,Intermediate,Susceptible,Resistant,0,0
+ID_133,B,Klebsiella pneumoniae,Enterobacteriaceae,Z17,Y19,,65 to 84 Years,Surgery General,Trachea,Other,2014,ESBL,Intermediate,Resistant,Resistant,0,0
+ID_752,B,Klebsiella pneumoniae,Enterobacteriaceae,Z6,Y16,Female,65 to 84 Years,Pediatric General,Trachea,Other,2014,ESBL,Intermediate,Intermediate,Resistant,0,0
+ID_345,B,Klebsiella pneumoniae,Enterobacteriaceae,Z50,Y8,,65 to 84 Years,Pediatric ICU,Trachea,None Given,2015,,Intermediate,Intermediate,Resistant,0,0
+ID_345,B,Klebsiella pneumoniae,Enterobacteriaceae,Z50,Y8,,65 to 84 Years,Pediatric ICU,Trachea,Other,2015,,Intermediate,Susceptible,Susceptible,0,0
+ID_345,B,Klebsiella pneumoniae,Enterobacteriaceae,Z50,Y8,,65 to 84 Years,Pediatric ICU,Trachea,,2015,,Resistant,Resistant,Susceptible,0,0
+ID_345,B,Klebsiella pneumoniae,Enterobacteriaceae,Z50,Y8,,65 to 84 Years,Pediatric ICU,Trachea,None Given,2015,ESBL,Susceptible,Susceptible,Resistant,0,0
+ID_135,A,Klebsiella pneumoniae,Enterobacteriaceae,Z48,Y1,,85 and Over,Other,Trachea,Other,2015,,Intermediate,Intermediate,Susceptible,0,0
+ID_135,A,Klebsiella pneumoniae,Enterobacteriaceae,Z48,Y1,,85 and Over,Other,Trachea,Outpatient,2015,ESBL,Intermediate,Intermediate,Intermediate,0,0
+ID_188,B,Klebsiella pneumoniae,Enterobacteriaceae,Z38,Y17,Female,Unknown,Emergency Room,Trachea,Inpatient,2015,ESBL,Intermediate,Susceptible,Resistant,0,0
+ID_86,B,Klebsiella pneumoniae,Enterobacteriaceae,Z24,Y3,Male,85 and Over,Pediatric General,Trachea,Inpatient,2015,ESBL,Intermediate,Resistant,Intermediate,0,0
+ID_86,B,Klebsiella pneumoniae,Enterobacteriaceae,Z24,Y3,Male,85 and Over,Pediatric General,Trachea,,2015,,Susceptible,Susceptible,Susceptible,0,0
+ID_189,B,Klebsiella pneumoniae,Enterobacteriaceae,Z2,,Male,65 to 84 Years,Medicine ICU,Trachea,Outpatient,2015,,Resistant,Intermediate,Resistant,0,0
+ID_86,B,Klebsiella pneumoniae,Enterobacteriaceae,Z24,Y3,Male,85 and Over,Pediatric General,Trachea,Inpatient,2015,,Susceptible,Resistant,Susceptible,0,0
+ID_86,B,Klebsiella pneumoniae,Enterobacteriaceae,Z24,Y3,Male,85 and Over,Pediatric General,Trachea,,2015,ESBL,Susceptible,Susceptible,Susceptible,0,0
+ID_86,B,Klebsiella pneumoniae,Enterobacteriaceae,Z24,Y3,Male,85 and Over,Pediatric General,Trachea,None Given,2015,ESBL,Susceptible,Resistant,Intermediate,0,0
+ID_89,B,Klebsiella pneumoniae,Enterobacteriaceae,Z21,Y20,Female,19 to 64 Years,Other,Trachea,Inpatient,2015,ESBL,Resistant,Intermediate,Susceptible,0,0
+ID_151,C,Klebsiella pneumoniae,Enterobacteriaceae,Z38,Y20,Female,0 to 2 Years,None Given,Trachea,,2016,,Intermediate,Resistant,Susceptible,0,0
+ID_151,C,Klebsiella pneumoniae,Enterobacteriaceae,Z38,Y20,Female,0 to 2 Years,None Given,Trachea,Outpatient,2016,,Susceptible,Resistant,Susceptible,0,0
+ID_151,C,Klebsiella pneumoniae,Enterobacteriaceae,Z38,Y20,Female,0 to 2 Years,None Given,Trachea,None Given,2016,,Susceptible,Resistant,Susceptible,0,0
+ID_343,C,Klebsiella pneumoniae,Enterobacteriaceae,Z53,Y14,Male,3 to 12 Years,Pediatric General,Trachea,Inpatient,2016,,Intermediate,Susceptible,Intermediate,0,0
+ID_150,B,Klebsiella pneumoniae,Enterobacteriaceae,Z27,Y16,Female,Unknown,None Given,Trachea,Inpatient,2016,,Resistant,Intermediate,Resistant,0,0
+ID_149,B,Klebsiella pneumoniae,Enterobacteriaceae,Z7,Y12,Male,19 to 64 Years,Pediatric General,Trachea,Inpatient,2016,ESBL,Intermediate,Intermediate,Intermediate,0,0
+ID_459,B,Klebsiella pneumoniae,Enterobacteriaceae,Z51,Y20,Male,0 to 2 Years,Medicine General,Trachea,Other,2016,,Resistant,Intermediate,Intermediate,0,0
+ID_459,B,Klebsiella pneumoniae,Enterobacteriaceae,Z51,Y20,Male,0 to 2 Years,Medicine General,Trachea,None Given,2016,ESBL,Susceptible,Susceptible,Intermediate,0,0
+ID_461,A,Klebsiella pneumoniae,Enterobacteriaceae,Z22,Y9,Female,65 to 84 Years,Other,Trachea,Other,2016,,Intermediate,Susceptible,Intermediate,0,0
+ID_461,A,Klebsiella pneumoniae,Enterobacteriaceae,Z22,Y9,Female,65 to 84 Years,Other,Trachea,None Given,2016,,Intermediate,Intermediate,Susceptible,0,0
+ID_464,B,Klebsiella pneumoniae,Enterobacteriaceae,Z8,Y7,Female,13 to 18 Years,None Given,Trachea,Other,2017,,Intermediate,Susceptible,Intermediate,0,0
+ID_141,A,Klebsiella pneumoniae,Enterobacteriaceae,Z51,Y3,Male,85 and Over,Pediatric General,Trachea,,2017,ESBL,Susceptible,Intermediate,Susceptible,0,0
+ID_289,B,Klebsiella pneumoniae,Enterobacteriaceae,Z57,Y12,,3 to 12 Years,Pediatric General,Trachea,Inpatient,2017,ESBL,Susceptible,Intermediate,Intermediate,0,0
+ID_289,B,Klebsiella pneumoniae,Enterobacteriaceae,Z57,Y12,,3 to 12 Years,Pediatric General,Trachea,,2017,,Susceptible,Susceptible,Susceptible,0,0
+ID_464,B,Klebsiella pneumoniae,Enterobacteriaceae,Z8,Y7,Female,13 to 18 Years,None Given,Trachea,,2017,,Intermediate,Susceptible,Susceptible,0,0
+ID_348,C,Klebsiella pneumoniae,Enterobacteriaceae,Z19,Y19,Female,3 to 12 Years,Pediatric ICU,Trachea,,2017,ESBL,Resistant,Resistant,Resistant,0,0
+ID_200,B,Klebsiella pneumoniae,Enterobacteriaceae,Z3,Y11,Male,19 to 64 Years,Nursing Home / Rehab,Trachea,Other,2017,ESBL,Intermediate,Resistant,Susceptible,0,0
+ID_200,B,Klebsiella pneumoniae,Enterobacteriaceae,Z3,Y11,Male,19 to 64 Years,Nursing Home / Rehab,Trachea,Other,2017,ESBL,Intermediate,Intermediate,Resistant,0,0
+ID_348,C,Klebsiella pneumoniae,Enterobacteriaceae,Z19,Y19,Female,3 to 12 Years,Pediatric ICU,Trachea,Outpatient,2017,ESBL,Intermediate,Resistant,Resistant,0,0
+ID_348,C,Klebsiella pneumoniae,Enterobacteriaceae,Z19,Y19,Female,3 to 12 Years,Pediatric ICU,Trachea,Outpatient,2017,ESBL,Susceptible,Resistant,Intermediate,0,0
+ID_348,C,Klebsiella pneumoniae,Enterobacteriaceae,Z19,Y19,Female,3 to 12 Years,Pediatric ICU,Trachea,None Given,2017,ESBL,Resistant,Intermediate,Resistant,0,0
+ID_520,B,Klebsiella pneumoniae,Enterobacteriaceae,Z38,Y10,Male,13 to 18 Years,Surgery General,Trachea,Other,2017,ESBL,Susceptible,Susceptible,Resistant,0,0
+ID_520,B,Klebsiella pneumoniae,Enterobacteriaceae,Z38,Y10,Male,13 to 18 Years,Surgery General,Trachea,Outpatient,2017,ESBL,Susceptible,Intermediate,Resistant,0,0
+ID_12,A,Klebsiella pneumoniae,Enterobacteriaceae,Z2,Y3,Male,0 to 2 Years,General Unspecified ICU,Trachea,None Given,2018,,Intermediate,Intermediate,Susceptible,0,0
+ID_12,A,Klebsiella pneumoniae,Enterobacteriaceae,Z2,Y3,Male,0 to 2 Years,General Unspecified ICU,Trachea,,2018,ESBL,Resistant,Intermediate,Resistant,0,0
+ID_12,A,Klebsiella pneumoniae,Enterobacteriaceae,Z2,Y3,Male,0 to 2 Years,General Unspecified ICU,Trachea,None Given,2018,,Resistant,Intermediate,Susceptible,0,0
+ID_12,A,Klebsiella pneumoniae,Enterobacteriaceae,Z2,Y3,Male,0 to 2 Years,General Unspecified ICU,Trachea,Inpatient,2018,,Susceptible,Resistant,Resistant,0,0
+ID_12,A,Klebsiella pneumoniae,Enterobacteriaceae,Z2,Y3,Male,0 to 2 Years,General Unspecified ICU,Trachea,Outpatient,2018,,Resistant,Resistant,Resistant,0,0
+ID_12,A,Klebsiella pneumoniae,Enterobacteriaceae,Z2,Y3,Male,0 to 2 Years,General Unspecified ICU,Trachea,,2018,,Intermediate,Susceptible,Intermediate,0,0
+ID_12,A,Klebsiella pneumoniae,Enterobacteriaceae,Z2,Y3,Male,0 to 2 Years,General Unspecified ICU,Trachea,,2018,,Intermediate,Resistant,Resistant,0,0
+ID_12,A,Klebsiella pneumoniae,Enterobacteriaceae,Z2,Y3,Male,0 to 2 Years,General Unspecified ICU,Trachea,None Given,2018,,Resistant,Susceptible,Susceptible,0,0
+ID_19,C,Klebsiella pneumoniae,Enterobacteriaceae,Z8,Y15,Female,0 to 2 Years,Medicine ICU,Trachea,Inpatient,2018,ESBL,Susceptible,Resistant,Resistant,0,0
+ID_19,C,Klebsiella pneumoniae,Enterobacteriaceae,Z8,Y15,Female,0 to 2 Years,Medicine ICU,Trachea,Inpatient,2018,ESBL,Resistant,Resistant,Susceptible,0,0
+ID_79,B,Klebsiella pneumoniae,Enterobacteriaceae,Z14,Y18,Female,13 to 18 Years,Medicine General,Trachea,Other,2018,,Intermediate,Susceptible,Intermediate,0,0
+ID_69,C,Klebsiella pneumoniae,Enterobacteriaceae,Z35,Y5,,19 to 64 Years,Surgery ICU,Trachea,Inpatient,2018,,Resistant,Susceptible,Susceptible,0,0
+ID_374,A,Klebsiella pneumoniae,Enterobacteriaceae,Z24,Y9,Female,65 to 84 Years,Medicine General,Trachea,,2018,,Susceptible,Susceptible,Susceptible,0,0
+ID_374,A,Klebsiella pneumoniae,Enterobacteriaceae,Z24,Y9,Female,65 to 84 Years,Medicine General,Trachea,,2018,,Susceptible,Resistant,Resistant,0,0

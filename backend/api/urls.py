@@ -1,7 +1,7 @@
 from django.urls import path
 from .views import (home,home2,scorecard_info,resistance_info,isolation_info,login_page,signup_view, login_view, upload_dataset, dataset_upload, 
                 mapping_dataset, isolation_burden_analysis, generate_isolation_graph,
-                resistance_analysis, get_antibiotic_columns, generate_resistance_graph, logout_view, scorecards, generate_scorecards, video, get_unique_values, get_columns_with_suffix, synthetic_dataset_creation, generate_synthetic_dataset, validate_dataset, process_antibiotic_columns, resistance_mapping, process_resistance_mapping)
+                resistance_analysis, get_antibiotic_columns, generate_resistance_graph, logout_view, scorecards, generate_scorecards, video, get_unique_values, get_columns_with_suffix, synthetic_dataset_creation, generate_synthetic_dataset, validate_dataset, process_antibiotic_columns, resistance_mapping, process_resistance_mapping, existing_datasets)
 urlpatterns = [
 
     # path('', scorecard_info, name='scorecard_info'),
@@ -36,4 +36,5 @@ urlpatterns = [
     path('resistance-mapping/', resistance_mapping, name='resistance_mapping'),
     path('process-resistance-mapping/', process_resistance_mapping, name='process_resistance_mapping'),
     path('api/get-antibiotic-columns/', get_antibiotic_columns, name='get_antibiotic_columns'),
+    path('existing-datasets/', existing_datasets, name='existing_datasets')
 ]
