@@ -1,71 +1,258 @@
-{% load static %}
-
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to AMRSuite</title>
-    <link rel="stylesheet" href="{% static 'css/login_page.css' %}">
-    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        body {
+            background-color: #1E1E1E;
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 80px;
+            background-color: #141619;
+            height: 107px;
+            width: 100%;
+        }
+
+        .logo {
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.3rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #ccc;
+        }
+
+        .nav-links img {
+            height: 65px;
+            width: auto;
+        }
+
+        .page-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex: 1;
+            min-height: calc(100vh - 107px);
+            background-color: #1E1E1E;
+            padding: 40px;
+        }
+
+        .left-half {
+            width: 100%;
+            max-width: 450px;
+            background-color: #22252B;
+            padding: 50px 40px;
+            border-radius: 12px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        .login-section {
+            width: 100%;
+        }
+
+        .welcome-text {
+            text-align: center;
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 40px;
+            color: white;
+        }
+
+        h1 {
+            font-size: 20px;
+            margin-bottom: 25px;
+            font-weight: 600;
+            text-align: left;
+            color: white;
+        }
+
+        #login-form {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .input-box {
+            width: 100%;
+            padding: 14px 16px;
+            border-radius: 8px;
+            border: none;
+            background-color: #E8E8E8;
+            color: #000;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            outline: none;
+        }
+
+        .input-box:focus {
+            outline: 2px solid #555;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .input-box::placeholder {
+            color: #666;
+        }
+
+        .sign-in-btn {
+            background-color: #1a2133;
+            color: white;
+            border: none;
+            padding: 14px 20px;
+            border-radius: 20px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .sign-in-btn:hover {
+            background-color: #2a3143;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(26, 33, 51, 0.4);
+        }
+
+        .alert {
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 6px;
+            position: relative;
+            font-size: 0.9rem;
+        }
+
+        .alert-error {
+            color: #721c24;
+            background-color: #f8d7da;
+            border: 1px solid #f5c6cb;
+        }
+
+        .alert-success {
+            color: #155724;
+            background-color: #d4edda;
+            border: 1px solid #c3e6cb;
+        }
+
+        .alert .close {
+            position: absolute;
+            top: 8px;
+            right: 12px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            background: none;
+            border: none;
+            color: #000;
+            transition: opacity 0.3s ease;
+        }
+
+        .alert .close:hover {
+            opacity: 0.7;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            nav {
+                padding: 0 20px;
+            }
+            
+            .page-container {
+                padding: 20px;
+            }
+            
+            .left-half {
+                padding: 40px 30px;
+                max-width: 90%;
+            }
+            
+            .welcome-text {
+                font-size: 28px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .left-half {
+                padding: 30px 25px;
+            }
+            
+            .welcome-text {
+                font-size: 24px;
+            }
+            
+            nav {
+                height: 80px;
+                padding: 0 15px;
+            }
+            
+            .logo {
+                font-size: 1.3rem;
+            }
+            
+            .nav-links a {
+                font-size: 1.1rem;
+            }
+            
+            .nav-links img {
+                height: 50px;
+            }
+        }
+    </style>
 </head>
 <body>
     <nav>
         <div class="logo">AMRSuite</div>
         <div class="nav-links">
-            <a href="{% url 'home' %}">Home</a>
+            <a href="#home">Home</a>
             <img src="{% static 'media/tavlab.logo.png' %}" alt="Tav Lab Logo" />
         </div>
     </nav>
-
+    
     <div class="page-container">
         <div class="left-half">
             <section class="login-section">
                 <div class="welcome-text">Welcome to AMRSuite</div>
-                {% if messages %}
-                    {% for message in messages %}
-                        <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %}">
-                            {{ message }}
-                            <button type="button" class="close" onclick="this.parentElement.style.display='none'">&times;</button>
-                        </div>
-                    {% endfor %}
-                {% endif %}
+                
                 <h1>Login</h1>
-                <form class="login-form" method="POST" action="{% url 'login' %}">
+                <form method="POST" action="{% url 'login_user' %}" id="login-form">
                     {% csrf_token %}
                     <input type="text" name="username" class="input-box" placeholder="Username" required>
                     <input type="password" name="password" class="input-box" placeholder="Password" required>
-                    <a href="#" class="forgot-password">Forgot password?</a>
                     <button type="submit" class="sign-in-btn" id="login-button">Sign in</button>
-                    
-                    <div class="divider">
-                        <span>or</span>
-                    </div>
-                    
-                    <a href="{% url 'social:begin' 'google-oauth2' %}" class="google-btn" style="text-decoration: none;">
-                        <img src="{% static 'media/google.logo.png' %}" alt="Google logo" width="20" height="20">
-                        <span>Sign in with Google</span>
-                    </a>
                 </form>
-            </section>
-        </div>
-
-        <div class="right-half">
-            <section class="signup-section">
-                <h2>New Here?</h2>
-                <p class="signup-text">Sign up to explore and analyze your AMST data!</p>
-                <a href="{% url 'signup' %}">
-                    <button type="button" class="signup-btn">Sign up</button>
-                </a>
             </section>
         </div>
     </div>
 </body>
 </html>
-
-<script>
-    document.getElementById('login-button').addEventListener('click', function(event) {
-        document.getElementById('login-form').submit();
-    });
-</script>

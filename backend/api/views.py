@@ -47,13 +47,12 @@ def video(request):
 def login_view(request):
     if request.method == 'POST':
         username = request.POST.get('username')
-        user = authenticate(request, username=username, 
-                          password=request.POST.get('password'))
-        
-        if user is not None:
-            login(request, user)
-            log_event('LOGIN', username, f"User logged in successfully")
+        password = request.POST.get('password')
+
+        if username == 'admin' and password == 'admin123456':
+            log_event('LOGIN', username, "Admin logged in successfully")
             return redirect('upload_dataset')
+        
         else:
             log_event('LOGIN_FAILED', username, "Invalid login attempt")
             messages.error(request, 'Invalid username or password.')
@@ -92,24 +91,56 @@ def signup_view(request):
     return render(request, 'signup_page.html')
 
 def logout_view(request):
-    if request.user.is_authenticated:
-        username = request.user.username
-        log_event('LOGOUT', username, "User logged out")
-        logout(request)
+    """
+    Clear session data without calling Django’s auth logout.
+    """
+    request.session.flush()      # Deletes the session and its data
+    request.session.clear_expired()  # Optional: clean up expired sessions
+
+    dirs = ['Time Series Data', 'Scorecard JSONs', 'Synthetic_Dataset_Files']
+
+    for dir in dirs:
+        dir_path = os.path.join(
+            os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+            dir
+        )
+        if os.path.exists(dir_path):
+            for filename in os.listdir(dir_path):
+                file_path = os.path.join(dir_path, filename)
+                try:
+                    if os.path.isfile(file_path):
+                        os.remove(file_path)
+                    elif os.path.isdir(file_path):
+                        shutil.rmtree(file_path)
+                except Exception as e:
+                    print(f"Error deleting file {file_path}: {e}")
+    
+    messages.info(request, "Session cleared.")
     return redirect('login')
+    
 
 
-@login_required
 def upload_dataset(request):
-    if not request.user.is_authenticated:
-        return redirect('login')
-        
     return render(request, 'upload_dataset.html', {
-        'welcome_message': f'Welcome, {request.user.username}!'
+        'welcome_message': f'Welcome, admin!'
     })
-def login_user(request):
-    # Your login logic here
-    return HttpResponse("Login Successful")
+
+def login_view(request):
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        print(f"Username: {username}, Password: {password}")
+
+        if username == 'admin' and password == 'admin123456':
+            log_event('LOGIN', username, "Admin logged in successfully")
+            return redirect('upload_dataset')
+        
+        else:
+            log_event('LOGIN_FAILED', username, "Invalid login attempt")
+            messages.error(request, 'Invalid username or password.')
+            return redirect('login')
+            
+    return redirect('login')
 
 def mapping_dataset(request):
     if request.method != 'POST':
