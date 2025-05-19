@@ -1,0 +1,312 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+body {
+    background-color: #121316;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 80px;
+    background-color: #141619;
+    height: 107px;
+    width: 100%;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: white;
+    margin-left: 0;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    margin-right: 0;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.3rem;
+}
+
+.nav-links img {
+    height: 65px;
+    width: auto;
+}
+
+.main-content {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 40px;
+    background-color: #1b1e25;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #ffffff;
+}
+
+.mapping-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.mapping-section {
+    background-color: #22252d;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    width: 100%;
+}
+
+.mapping-section:hover {
+    transform: none;
+}
+
+.mapping-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.section-description {
+    margin-bottom: 25px;
+    color: #9ba3af;
+    font-size: 0.95rem;
+}
+
+.form-group {
+    margin-bottom: 25px;
+    width: 100%;
+    max-width: 600px; /* Increased from 500px to 600px */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-group label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 1.15rem; /* Slightly larger font */
+    color: #e0e0e0;
+    font-weight: 500;
+}
+
+.info-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    background-color: rgba(255,255,255,0.2);
+    border-radius: 50%;
+    color: white;
+    margin-left: 8px;
+    font-size: 12px;
+    cursor: help;
+    position: relative;
+}
+
+.info-icon:before {
+    content: "i";
+}
+
+.info-icon[data-tooltip]:hover:after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #333;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    max-width: 300px;
+}
+
+/* Select2 Custom Styling - More compact with larger text */
+.select2-container {
+    width: 100% !important;
+    max-width: 600px !important; /* Increased from 500px to 600px */
+    margin: 0 auto !important;
+}
+
+.select2-container--default .select2-selection--multiple {
+    background-color: #171b23 !important;
+    color: #ffffff !important;
+    border: 1px solid #2c3e50 !important;
+    border-radius: 6px !important;
+    min-height: 42px !important; /* Slightly taller */
+    padding: 5px 10px !important; /* More padding */
+}
+
+.select2-container--default.select2-container--focus .select2-selection--multiple {
+    border: 1px solid #3498db !important;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2) !important;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice {
+    background-color: #4b9cd3 !important;
+    border: none !important;
+    color: white !important;
+    padding: 5px 12px !important;
+    margin: 4px !important;
+    border-radius: 20px !important;
+    font-size: 1rem !important; /* Increased font size */
+    box-shadow: none !important;
+    transition: all 0.1s ease !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice:hover {
+    background-color: #3498db !important;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+    color: #ffffff !important;
+    margin-right: 8px !important; /* Increased spacing between X and text */
+    opacity: 0.9;
+    font-size: 16px !important; /* Larger font size */
+    font-weight: normal !important;
+    background: none !important;
+    border: none !important;
+    padding-right: 2px !important;
+    position: relative !important;
+    top: -1px !important; /* Align X vertically */
+}
+
+.select2-dropdown {
+    background-color: #171b23 !important;
+    border: 1px solid #2c3e50 !important;
+    border-radius: 6px !important;
+    color: white !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3) !important;
+    overflow: hidden !important;
+}
+
+.select2-container--default .select2-results__option {
+    padding: 8px 12px !important;
+    font-size: 1rem !important; /* Increased font size */
+    color: #e0e0e0 !important;
+}
+
+.select2-container--default .select2-results__option[aria-selected=true] {
+    background-color: rgba(75, 156, 211, 0.3) !important;
+    color: #ffffff !important;
+}
+
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+    background-color: #4b9cd3 !important;
+    color: white !important;
+}
+
+/* Improve visibility of text when selecting */
+.select2-container--default .select2-results__option {
+    background-color: #171b23 !important;
+}
+
+.select2-container--default .select2-results__option:hover {
+    background-color: #4b9cd3 !important;
+    color: #ffffff !important;
+}
+
+.select2-search__field {
+    background-color: #1a1d25 !important;
+    color: #ffffff !important;
+    padding: 6px !important;
+    border: 1px solid #2c3e50 !important;
+    border-radius: 4px !important;
+    font-size: 1rem !important; /* Increased font size */
+}
+
+.select2-search__field:focus {
+    border-color: #3498db !important;
+    outline: none !important;
+}
+
+.select2-container--default .select2-search--inline .select2-search__field {
+    color: #ffffff !important;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif !important;
+    margin-top: 1px !important;
+    font-size: 1rem !important; /* Increased font size */
+}
+
+.select2-container--default .select2-search--inline .select2-search__field::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+    opacity: 1;
+}
+
+/* Fix spacing in dropdown to make it more compact */
+.select2-results__options {
+    max-height: 250px !important; /* Taller dropdown */
+    overflow-y: auto !important;
+}
+
+/* Button styling adjustments */
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 35px;
+    padding: 0 2px;
+    max-width: 600px; /* Increased from 500px to 600px */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn {
+    padding: 10px 25px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1.05rem; /* Slightly larger buttons */
+    font-weight: 500;
+    transition: all 0.2s ease;
+    min-width: 130px;
+    text-align: center;
+}
+
+.btn-secondary {
+    background-color: #34495e;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #2c3e50;
+}
+
+.btn-primary {
+    background-color: #3498db;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #2980b9;
+}

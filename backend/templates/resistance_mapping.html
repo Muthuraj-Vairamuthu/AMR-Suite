@@ -3,8 +3,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resistance Value Mapping</title>
-    <link rel="stylesheet" href="{% static 'css/dataset_mapping.css' %}">
+    <link rel="stylesheet" href="{% static 'css/resistance_mapping.css' %}">
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
@@ -78,11 +79,35 @@
     <script>
         $(document).ready(function() {
             $('.select2').select2({
-                placeholder: 'Select values',
+                placeholder: 'Click to select values',
                 allowClear: true,
                 closeOnSelect: false,
-                width: '100%'
+                width: '100%',
+                dropdownParent: $('body'),
+                templateResult: formatOption,
+                templateSelection: formatSelectedOption
             });
+
+            // Function to format dropdown options
+            function formatOption(option) {
+                if (!option.id) {
+                    return option.text;
+                }
+                
+                var $option = $(
+                    '<div class="select-option"><span class="option-text">' + option.text + '</span></div>'
+                );
+                
+                return $option;
+            }
+            
+            // Function to format selected options
+            function formatSelectedOption(option) {
+                if (!option.id) {
+                    return option.text;
+                }
+                return option.text;
+            }
 
             // Pre-select common values based on patterns
             const susceptiblePatterns = ['susceptible', 'sus', 's', 'sensitive'];
