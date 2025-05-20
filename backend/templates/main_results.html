@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AMR Suite Results</title>
     <link rel="stylesheet" href="{% static 'css/main_results.css' %}">
-    
 </head>
 <body>
     <nav>
@@ -26,26 +25,26 @@
             <div class="validation-steps">
                 <div class="status-item" id="format-check">
                     <div class="loading-icon"></div>
-                    <span>File Format</span>
-                    <div class="details"></div>
+                    <span class="status-text">File Format</span>
+                    <span class="status-result"></span>
                 </div>
                 
                 <div class="status-item" id="structure-check">
                     <div class="loading-icon"></div>
-                    <span>Dataset Structure</span>
-                    <div class="details"></div>
+                    <span class="status-text">Dataset Structure</span>
+                    <span class="status-result"></span>
                 </div>
                 
                 <div class="status-item" id="missing-data-check">
                     <div class="loading-icon"></div>
-                    <span>Missing Data Analysis</span>
-                    <div class="details"></div>
+                    <span class="status-text">Missing Data Analysis</span>
+                    <span class="status-result"></span>
                 </div>
                 
                 <div class="status-item" id="duplicates-check">
                     <div class="loading-icon"></div>
-                    <span>Duplicate Records</span>
-                    <div class="details"></div>
+                    <span class="status-text">Duplicate Records</span>
+                    <span class="status-result"></span>
                 </div>
             </div>
 
@@ -74,131 +73,120 @@
     </div>
 
     <script>
-    async function validateDataset() {
-        // Clear previous alerts
-        document.getElementById('validation-alerts').innerHTML = '';
-        
-        // Reset all steps to loading state
-        const steps = document.querySelectorAll('.status-item');
-        steps.forEach(step => {
-            step.querySelector('.loading-icon').style.display = 'inline-block';
-            step.classList.remove('success', 'error', 'warning');
-            // Remove any existing status icons
-            const existingIcon = step.querySelector('.status-icon');
-            if (existingIcon) existingIcon.remove();
-        });
-
-        try {
-            const response = await fetch('/api/validate-dataset/', {
-                method: 'POST',
-                headers: {
-                    'X-CSRFToken': '{{ csrf_token }}',
-                    'Content-Type': 'application/json',
-                }
-            });
-
-            const data = await response.json();
+        async function validateDataset() {
+            // Clear previous alerts
+            document.getElementById('validation-alerts').innerHTML = '';
             
-            // Update each validation step individually
-            Object.entries(data.steps).forEach(([step, passed]) => {
-                const stepElement = document.getElementById(`${step}-check`);
-                if (stepElement) {
-                    updateValidationStep(stepElement, passed);
-                    
-                    // Add specific error/warning messages for each step
-                    if (!passed) {
-                        let message = '';
-                        switch(step) {
-                            case 'format':
-                                message = 'File format validation failed';
-                                break;
-                            case 'structure':
-                                message = 'Dataset structure validation failed';
-                                break;
-                            case 'missing_data':
-                                message = 'Critical missing data detected';
-                                break;
-                            case 'duplicates':
-                                message = `${data.duplicates} duplicate records found`;
-                                break;
-                        }
-                        showAlert('error', message);
-                    }
-                }
+            // Reset all steps to loading state
+            const steps = document.querySelectorAll('.status-item');
+            steps.forEach(step => {
+                // Remove any previous status icons
+                const oldIcon = step.querySelector('.status-icon-success, .status-icon-error');
+                if (oldIcon) oldIcon.remove();
+                
+                // Show loading icon
+                const loadingIcon = step.querySelector('.loading-icon');
+                if (loadingIcon) loadingIcon.style.display = 'inline-block';
+                
+                // Clear result text
+                const result = step.querySelector('.status-result');
+                if (result) result.textContent = '';
             });
 
-            // Show warnings
-            if (data.warnings && data.warnings.length > 0) {
-                data.warnings.forEach(warning => {
-                    showAlert('warning', warning);
+            try {
+                const response = await fetch('/api/validate-dataset/', {
+                    method: 'POST',
+                    headers: {
+                        'X-CSRFToken': '{{ csrf_token }}',
+                        'Content-Type': 'application/json',
+                    }
                 });
-            }
 
-            // Show errors
-            if (data.errors && data.errors.length > 0) {
-                data.errors.forEach(error => {
-                    showAlert('error', error);
+                const data = await response.json();
+                
+                // Update each validation step
+                Object.entries(data.steps).forEach(([step, passed]) => {
+                    const stepElement = document.getElementById(`${step}-check`);
+                    if (stepElement) {
+                        updateValidationStep(stepElement, passed);
+                        
+                        // Add messages for failures
+                        if (!passed) {
+                            let message = '';
+                            switch(step) {
+                                case 'format':
+                                    message = 'File format validation failed';
+                                    break;
+                                case 'structure':
+                                    message = 'Dataset structure validation failed';
+                                    break;
+                                case 'missing_data':
+                                    message = 'Critical missing data detected';
+                                    break;
+                                case 'duplicates':
+                                    message = `${data.duplicates} duplicate records found`;
+                                    break;
+                            }
+                            showAlert('error', message);
+                        }
+                    }
                 });
+
+                // Show warnings and errors
+                if (data.warnings && data.warnings.length > 0) {
+                    data.warnings.forEach(warning => showAlert('warning', warning));
+                }
+                
+                if (data.errors && data.errors.length > 0) {
+                    data.errors.forEach(error => showAlert('error', error));
+                }
+
+                // Show duplicate records prompt if needed
+                if (data.duplicates > 0) {
+                    showDuplicatesPrompt(data.duplicates);
+                }
+
+            } catch (error) {
+                showAlert('error', 'Error during validation: ' + error.message);
             }
+        }
 
-            // Show duplicate records prompt if needed
-            if (data.duplicates > 0) {
-                showDuplicatesPrompt(data.duplicates);
+        function updateValidationStep(stepElement, passed) {
+            // Hide loading icon
+            const loadingIcon = stepElement.querySelector('.loading-icon');
+            if (loadingIcon) loadingIcon.style.display = 'none';
+            
+            // Create and add the appropriate icon
+            const icon = document.createElement('span');
+            icon.className = passed ? 'status-icon-success' : 'status-icon-error';
+            icon.textContent = passed ? '✓' : '✗';
+            stepElement.insertBefore(icon, stepElement.firstChild);
+            
+            // Update result text
+            const result = stepElement.querySelector('.status-result');
+            if (result) {
+                result.textContent = passed ? 'Passed' : 'Failed';
             }
-
-        } catch (error) {
-            showAlert('error', 'Error during validation: ' + error.message);
-        }
-    }
-
-    function updateValidationStep(stepElement, passed) {
-        // Hide loading icon
-        const loadingIcon = stepElement.querySelector('.loading-icon');
-        if (loadingIcon) {
-            loadingIcon.style.display = 'none';
         }
 
-        // Remove any existing status icon
-        const existingIcon = stepElement.querySelector('.status-icon');
-        if (existingIcon) {
-            existingIcon.remove();
+        function showAlert(type, message) {
+            const alertsContainer = document.getElementById('validation-alerts');
+            const alertDiv = document.createElement('div');
+            alertDiv.className = `alert alert-${type}`;
+            alertDiv.textContent = message;
+            alertsContainer.appendChild(alertDiv);
         }
 
-        // Add appropriate status class and icon
-        stepElement.classList.remove('success', 'error');
-        stepElement.classList.add(passed ? 'success' : 'error');
-        
-        // Insert new status icon at the beginning
-        const iconSpan = document.createElement('span');
-        iconSpan.className = 'status-icon';
-        iconSpan.innerHTML = passed ? '✓' : '✗';
-        stepElement.insertBefore(iconSpan, stepElement.firstChild);
-
-        // Update details section if it exists
-        const details = stepElement.querySelector('.details');
-        if (details) {
-            details.textContent = passed ? 'Passed' : 'Failed';
+        function showDuplicatesPrompt(count) {
+            if (confirm(`Found ${count} duplicate records. Do you want to continue?`)) {
+                // Continue with processing
+            } else {
+                window.location.href = '{% url "upload_dataset" %}';
+            }
         }
-    }
 
-    function showAlert(type, message) {
-        const alertsContainer = document.getElementById('validation-alerts');
-        const alertDiv = document.createElement('div');
-        alertDiv.className = `alert alert-${type}`;
-        alertDiv.innerHTML = message;
-        alertsContainer.appendChild(alertDiv);
-    }
-
-    function showDuplicatesPrompt(count) {
-        if (confirm(`Found ${count} duplicate records. Do you want to continue?`)) {
-            // Continue with processing
-        } else {
-            window.location.href = '{% url "upload_dataset" %}';
-        }
-    }
-
-    // Start validation when page loads
-    document.addEventListener('DOMContentLoaded', validateDataset);
+        // Start validation when page loads
+        document.addEventListener('DOMContentLoaded', validateDataset);
     </script>
 </body>
 </html>

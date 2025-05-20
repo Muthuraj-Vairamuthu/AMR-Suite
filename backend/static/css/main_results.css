@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: #1E1E1E;
+    background-color: #121316;
     color: white;
     min-height: 100vh;
     display: flex;
@@ -65,14 +65,10 @@ nav {
     display: flex;
     padding: 40px;
     gap: 40px;
+    background-color: #121316;
 }
 
-.processing-section {
-    flex: 1;
-    padding: 20px;
-}
-
-.results-section {
+.processing-section, .results-section {
     flex: 1;
     padding: 20px;
 }
@@ -80,29 +76,60 @@ nav {
 h1 {
     font-size: 2rem;
     margin-bottom: 30px;
+    color: #ffffff;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+/* Clean simplified validation steps - fixing issues with white backgrounds */
+.validation-steps {
+    margin-bottom: 30px;
+    width: 100%;
 }
 
 .status-item {
     display: flex;
     align-items: center;
-    gap: 10px;
     margin-bottom: 20px;
-    font-size: 1.1rem;
-    transition: all 0.3s ease;
+    color: white;
+    font-size: 1.3rem; /* Increased font size */
+    position: relative;
+    background-color: transparent;
 }
 
-.check-icon {
-    color: #4CAF50;
-    font-size: 1.5rem;
+/* Styling for the status icons */
+.status-icon-success,
+.status-icon-error {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-right: 15px;
+    font-size: 1.5rem; /* Larger icon */
+    line-height: 1;
 }
 
+.status-icon-success {
+    color: #4CAF50; /* Green check mark */
+}
+
+.status-icon-error {
+    color: #ff4444; /* Red X */
+}
+
+/* Loading spinner - similar to the one in screenshot */
 .loading-icon {
-    width: 20px;
-    height: 20px;
-    border: 3px solid #f3f3f3;
-    border-top: 3px solid #3498db;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
     border-radius: 50%;
-    animation: spin 1s linear infinite;
+    border-top-color: #3498db;
+    animation: spin 1s infinite linear;
+    margin-right: 15px;
 }
 
 @keyframes spin {
@@ -110,6 +137,41 @@ h1 {
     100% { transform: rotate(360deg); }
 }
 
+/* Status text - make it larger */
+.status-text {
+    flex: 1;
+    font-size: 1.3rem; /* Increased font size */
+}
+
+/* Result text - align right and make more visible */
+.status-result {
+    margin-left: auto;
+    font-size: 1.1rem; /* Increased font size */
+    color: rgba(255, 255, 255, 0.8); /* More visible */
+}
+
+/* Alerts container */
+.alerts-container {
+    margin-top: 20px;
+}
+
+.alert {
+    padding: 12px;
+    margin-bottom: 10px;
+    color: white;
+    border-left: 3px solid;
+    background-color: rgba(0,0,0,0.2);
+}
+
+.alert-error {
+    border-color: #ff4444;
+}
+
+.alert-warning {
+    border-color: #FFA500;
+}
+
+/* Button styling */
 .results-button {
     display: block;
     width: 100%;
@@ -126,35 +188,4 @@ h1 {
 
 .results-button:hover {
     background-color: #34495e;
-}
-
-h2 {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-}
-
-/* Make success icons green and thicker */
-.status-item .status-icon {
-    margin-right: 1rem;
-    font-size: 1.5rem;  /* Increased from 1.2rem */
-    font-weight: bold;  /* Make the symbol thicker */
-}
-
-.success .status-icon {
-    color: #22c55e;  /* Bright green color */
-}
-
-.error .status-icon {
-    color: #ef4444;  /* Bright red color */
-}
-
-/* Make the success state more visible */
-.status-item.success {
-    background-color: #f0fdf4;  /* Light green background */
-    border-left: 4px solid #22c55e;
-}
-
-.status-item.error {
-    background-color: #fef2f2;  /* Light red background */
-    border-left: 4px solid #ef4444;
 }
