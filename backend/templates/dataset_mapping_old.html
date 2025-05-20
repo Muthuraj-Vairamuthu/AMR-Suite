@@ -782,106 +782,135 @@
             document.head.appendChild(style);
         });
 
-        // Replace the previously added event listener with this improved version
+        // Add this to your existing script section
         document.addEventListener('DOMContentLoaded', function() {
             const formatSelect = document.getElementById('formatSelect');
             const antibioticFormatInput = document.querySelector('input[name="antibiotic_format"]');
             const antibioticColumns = document.getElementById('antibioticColumns');
             const selectedCount = document.getElementById('selectedCount');
-            const searchBox = document.querySelector('.column-search');
 
-            // Debug function to log selection state
-            function logSelectionState(message) {
-                console.log(message, Array.from(antibioticColumns.options)
-                    .filter(opt => opt.selected)
-                    .map(opt => opt.value));
+            // Function to update selected count
+            function updateSelectedCount() {
+                const count = Array.from(antibioticColumns.selectedOptions).length;
+                selectedCount.textContent = count;
             }
 
-            // Improved auto-select columns function with exact matching
-            function autoSelectColumns(columns) {
-                console.log("Attempting to auto-select columns:", columns);
-                
-                // First clear all selections
-                Array.from(antibioticColumns.options).forEach(option => {
-                    option.selected = false;
-                });
-
-                // Then select the matching columns - using exact match
-                let matchFound = false;
-                Array.from(antibioticColumns.options).forEach(option => {
-                    // Use exact matching to avoid selecting wrong columns
-                    if (columns.includes(option.value)) {
-                        option.selected = true;
-                        matchFound = true;
-                        console.log(`Selected option: ${option.value}`);
-                    }
-                });
-
-                // If no matches were found, log an error
-                if (!matchFound) {
-                    console.error("No matching columns found in the dropdown");
-                    console.log("Available options:", Array.from(antibioticColumns.options).map(o => o.value));
-                }
-
-                // Force a UI update by triggering a change event
-                antibioticColumns.dispatchEvent(new Event('change'));
-                
-                // Update the count display
-                updateSelectedCount();
-                
-                // Force browser to re-render the select element
-                const originalDisplay = antibioticColumns.style.display;
-                antibioticColumns.style.display = 'none';
-                setTimeout(() => {
-                    antibioticColumns.style.display = originalDisplay;
-                    // Attempt to scroll to first selected option
-                    const firstSelected = antibioticColumns.querySelector('option:checked');
-                    if (firstSelected) {
-                        firstSelected.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-                    }
-                }, 10);
-                
-                // Log the final selection state
-                logSelectionState("After auto-select:");
-            }
-
-            // Enhanced antibiotic format input listener with improved filtering
+            // Handle antibiotic format changes
             if (antibioticFormatInput) {
-                antibioticFormatInput.addEventListener('input', function() {
-                    console.log("Format input changed:", this.value);
-                    
+                antibioticFormatInput.addEventListener('change', function() {
                     if (formatSelect.value === 'Wide') {
-                        const prefix = this.value.trim();
-                        if (!prefix) return;
-                        
-                        // Clear search box to show all options
-                        if (searchBox) searchBox.value = '';
-                        
-                        // More strict filtering for local matching
-                        const matchingColumns = Array.from(antibioticColumns.options)
-                            .filter(option => {
-                                // Ensure exact prefix match to avoid selecting columns like "Age.Group"
-                                // when looking for "A" prefix
-                                return option.value.startsWith(prefix) || 
-                                       // Check for common antibiotic naming patterns
-                                       (prefix === "Antibiotic" && 
-                                        (option.value.includes("_") || 
-                                         /^[A-Z]{3}$/.test(option.value) || // Antibiotic codes like CIP, AMX
-                                         option.value.match(/^[A-Za-z]+_[A-Z]$/)));  // Pattern like Amikacin_I
+                        if (this.value === 'Antibiotic') {
+                            // Pattern-based selection
+                            fetch('/get_unique_values/', {
+                                method: 'GET',
+                                headers: {
+                                    'X-Requested-With': 'XMLHttpRequest',
+                                    'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value
+                                }
                             })
-                            .map(option => option.value);
-                        
-                        console.log("Matching columns (client-side):", matchingColumns);
-                        
-                        // Apply local selection immediately if we have matches
-                        if (matchingColumns.length > 0) {
-                            autoSelectColumns(matchingColumns);
+                            .then(response => response.json())
+                            .then(data => {
+                                if (data.columns) {
+                                    autoSelectColumns(data.columns);
+                                }
+                            });
+                        } else {
+                            // Suffix-based selection
+                            const suffix = this.value.replace('Antibiotic', '');
+                            if (suffix) {
+                                fetch(`/get_columns_with_suffix/?suffix=${suffix}`, {
+                                    method: 'GET',
+                                    headers: {
+                                        'X-Requested-With': 'XMLHttpRequest',
+                                        'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value
+                                    }
+                                })
+                                .then(response => response.json())
+                                .then(data => {
+                                    if (data.columns) {
+                                        autoSelectColumns(data.columns);
+                                    }
+                                });
+                            }
                         }
-                        
-                        // For server request, add a small delay to avoid too many requests
-                        clearTimeout(this._serverRequestTimer);
-                        this._serverRequestTimer = setTimeout(() => {
-                            // Fetch from server for more comprehensive matching
+                    }
+                });
+            }
+
+            // Function to auto-select columns
+            function autoSelectColumns(columns) {
+                Array.from(antibioticColumns.options).forEach(option => {
+                    option.selected = columns.includes(option.value);
+                });
+                updateSelectedCount();
+            }
+
+            // Function to update selected count
+            function updateSelectedCount() {
+                const count = Array.from(antibioticColumns.selectedOptions).length;
+                selectedCount.textContent = count;
+            }
+
+            // Add change listener to the multiselect
+            antibioticColumns.addEventListener('change', updateSelectedCount);
+
+            // Initialize selected count
+            updateSelectedCount();
+        });
+
+        // Add this to your existing script
+        document.addEventListener('DOMContentLoaded', function() {
+            const antibioticColumns = document.getElementById('antibioticColumns');
+            
+            // Add search functionality
+            const searchBox = document.createElement('input');
+            searchBox.type = 'text';
+            searchBox.placeholder = 'Search columns...';
+            searchBox.className = 'column-search';
+            antibioticColumns.parentElement.insertBefore(searchBox, antibioticColumns);
+
+            searchBox.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase();
+                Array.from(antibioticColumns.options).forEach(option => {
+                    const match = option.text.toLowerCase().includes(searchTerm);
+                    option.style.display = match ? '' : 'none';
+                });
+            });
+
+            // Add quick selection buttons
+            const buttonContainer = document.createElement('div');
+            buttonContainer.className = 'selection-buttons';
+            buttonContainer.innerHTML = `
+                <button type="button" class="btn-select-all">Select All</button>
+                <button type="button" class="btn-clear">Clear Selection</button>
+            `;
+            antibioticColumns.parentElement.insertBefore(buttonContainer, antibioticColumns);
+
+            // Add button event listeners
+            buttonContainer.querySelector('.btn-select-all').addEventListener('click', () => {
+                Array.from(antibioticColumns.options).forEach(option => option.selected = true);
+                updateSelectedCount();
+            });
+
+            buttonContainer.querySelector('.btn-clear').addEventListener('click', () => {
+                Array.from(antibioticColumns.options).forEach(option => option.selected = false);
+                updateSelectedCount();
+            });
+        });
+
+        // Add this to your existing script section in dataset_mapping.html
+        document.addEventListener('DOMContentLoaded', function() {
+            const formatSelect = document.getElementById('formatSelect');
+            const antibioticFormatInput = document.querySelector('input[name="antibiotic_format"]');
+            const antibioticColumns = document.getElementById('antibioticColumns');
+            const selectedCount = document.getElementById('selectedCount');
+
+            // Handle antibiotic format changes
+            if (antibioticFormatInput) {
+                antibioticFormatInput.addEventListener('change', function() {
+                    if (formatSelect.value === 'Wide') {
+                        if (this.value === 'Antibiotic') {
+                            // Pattern-based selection using common antibiotics list
                             fetch('/api/validate-dataset/', {
                                 method: 'POST',
                                 headers: {
@@ -891,126 +920,157 @@
                                 },
                                 body: JSON.stringify({
                                     action: 'get_antibiotic_columns',
-                                    format: 'prefix',
-                                    prefix: prefix
+                                    format: 'pattern'
                                 })
                             })
                             .then(response => response.json())
                             .then(data => {
-                                console.log("Server response:", data);
-                                if (data.columns && data.columns.length > 0) {
-                                    // Filter out any non-antibiotic columns that might have been included
-                                    const antibioticColumns = data.columns.filter(col => 
-                                        col.startsWith(prefix) ||
-                                        col.includes('antibiotic') || 
-                                        col.match(/^[A-Za-z]+_[A-Z]$/) || // Pattern like Amikacin_I
-                                        col.match(/^[A-Za-z]+\.[A-Z]$/)   // Pattern like Amikacin.I
-                                    );
-                                    
-                                    if (antibioticColumns.length > 0) {
-                                        autoSelectColumns(antibioticColumns);
-                                    } else {
-                                        console.warn("No antibiotic columns found in server response");
-                                    }
-                                } else {
-                                    console.warn("No columns returned from server");
+                                if (data.columns) {
+                                    autoSelectColumns(data.columns);
                                 }
-                            })
-                            .catch(error => {
-                                console.error("API error:", error);
-                                // Fall back to local filtering in case of API error
                             });
-                        }, 300); // Debounce server requests
+                        } else {
+                            // Suffix-based selection
+                            const suffix = this.value.replace('Antibiotic', '');
+                            if (suffix) {
+                                fetch('/api/validate-dataset/', {
+                                    method: 'POST',
+                                    headers: {
+                                        'X-Requested-With': 'XMLHttpRequest',
+                                        'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value,
+                                        'Content-Type': 'application/json'
+                                    },
+                                    body: JSON.stringify({
+                                        action: 'get_antibiotic_columns',
+                                        format: 'suffix',
+                                        suffix: suffix
+                                    })
+                                })
+                                .then(response => response.json())
+                                .then(data => {
+                                    if (data.columns) {
+                                        autoSelectColumns(data.columns);
+                                    }
+                                });
+                            }
+                        }
                     }
-                });
-
-                // Also handle change event for compatibility
-                antibioticFormatInput.addEventListener('change', function() {
-                    // Trigger the input handler to ensure consistent behavior
-                    const event = new Event('input');
-                    this.dispatchEvent(event);
                 });
             }
 
-            // Add a more selective matching for "Antibiotic_" prefix
-            if (antibioticColumns) {
-                // Add this function to try to auto-detect antibiotic columns
-                function detectAntibioticColumns() {
-                    // Common patterns for antibiotic columns
-                    const patterns = [
-                        /^Antibiotic/i,
-                        /_[SIR]$/,  // Ends with _S, _I, _R
-                        /\.[SIR]$/,  // Ends with .S, .I, .R
-                        /^[A-Za-z]+_[SIR]$/  // Pattern like Amikacin_S
-                    ];
-                    
-                    const likelyAntibioticColumns = Array.from(antibioticColumns.options)
-                        .filter(option => patterns.some(pattern => pattern.test(option.value)))
-                        .map(option => option.value);
-                    
-                    if (likelyAntibioticColumns.length > 0) {
-                        console.log("Auto-detected antibiotic columns:", likelyAntibioticColumns);
-                        // Only auto-select if user hasn't made selections yet
-                        if (Array.from(antibioticColumns.selectedOptions).length === 0) {
-                            autoSelectColumns(likelyAntibioticColumns);
-                        }
+            // Function to auto-select columns
+            function autoSelectColumns(columns) {
+                // First clear all selections
+                Array.from(antibioticColumns.options).forEach(option => {
+                    option.selected = false;
+                });
+
+                // Then select the matching columns
+                Array.from(antibioticColumns.options).forEach(option => {
+                    if (columns.includes(option.value)) {
+                        option.selected = true;
+                        option.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
                     }
-                }
-                
-                // Try to auto-detect antibiotic columns when the page loads
-                setTimeout(detectAntibioticColumns, 500);
+                });
+
+                // Update the count and trigger change event
+                updateSelectedCount();
+                const event = new Event('change');
+                antibioticColumns.dispatchEvent(event);
             }
 
             function updateSelectedCount() {
                 const count = Array.from(antibioticColumns.selectedOptions).length;
                 selectedCount.textContent = count;
             }
-            
-            // Initialize the count
-            updateSelectedCount();
-            
-            // Add search box if it doesn't exist yet
-            if (!searchBox && antibioticColumns) {
-                const newSearchBox = document.createElement('input');
-                newSearchBox.type = 'text';
-                newSearchBox.placeholder = 'Search columns...';
-                newSearchBox.className = 'column-search';
-                antibioticColumns.parentElement.insertBefore(newSearchBox, antibioticColumns);
-
-                newSearchBox.addEventListener('input', function() {
-                    const searchTerm = this.value.toLowerCase();
-                    Array.from(antibioticColumns.options).forEach(option => {
-                        const match = option.text.toLowerCase().includes(searchTerm);
-                        option.style.display = match ? '' : 'none';
-                    });
-                });
-            }
-            
-            // Add quick selection buttons if they don't exist
-            if (!document.querySelector('.selection-buttons') && antibioticColumns) {
-                const buttonContainer = document.createElement('div');
-                buttonContainer.className = 'selection-buttons';
-                buttonContainer.innerHTML = `
-                    <button type="button" class="btn-select-all">Select All</button>
-                    <button type="button" class="btn-clear">Clear Selection</button>
-                `;
-                antibioticColumns.parentElement.insertBefore(buttonContainer, antibioticColumns);
-
-                // Add button event listeners
-                buttonContainer.querySelector('.btn-select-all').addEventListener('click', () => {
-                    Array.from(antibioticColumns.options).forEach(option => option.selected = true);
-                    updateSelectedCount();
-                });
-
-                buttonContainer.querySelector('.btn-clear').addEventListener('click', () => {
-                    Array.from(antibioticColumns.options).forEach(option => option.selected = false);
-                    updateSelectedCount();
-                });
-            }
         });
 
-        // Remove any duplicate event handlers that may be bound multiple times
-        // ...existing code...
+        // Add this to your existing script section in dataset_mapping.html
+        document.addEventListener('DOMContentLoaded', function() {
+            const formatSelect = document.getElementById('formatSelect');
+            const antibioticFormatInput = document.querySelector('input[name="antibiotic_format"]');
+            const antibioticColumns = document.getElementById('antibioticColumns');
+            const selectedCount = document.getElementById('selectedCount');
+
+            // Handle antibiotic format changes
+            if (antibioticFormatInput) {
+                antibioticFormatInput.addEventListener('change', function() {
+                    if (formatSelect.value === 'Wide') {
+                        if (this.value === 'Antibiotic') {
+                            // Pattern-based selection using common antibiotics list
+                            fetch('/api/validate-dataset/', {
+                                method: 'POST',
+                                headers: {
+                                    'X-Requested-With': 'XMLHttpRequest',
+                                    'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value,
+                                    'Content-Type': 'application/json'
+                                },
+                                body: JSON.stringify({
+                                    action: 'get_antibiotic_columns',
+                                    format: 'pattern'
+                                })
+                            })
+                            .then(response => response.json())
+                            .then(data => {
+                                if (data.columns) {
+                                    autoSelectColumns(data.columns);
+                                }
+                            });
+                        } else {
+                            // Suffix-based selection
+                            const suffix = this.value.replace('Antibiotic', '');
+                            if (suffix) {
+                                fetch('/api/validate-dataset/', {
+                                    method: 'POST',
+                                    headers: {
+                                        'X-Requested-With': 'XMLHttpRequest',
+                                        'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value,
+                                        'Content-Type': 'application/json'
+                                    },
+                                    body: JSON.stringify({
+                                        action: 'get_antibiotic_columns',
+                                        format: 'suffix',
+                                        suffix: suffix
+                                    })
+                                })
+                                .then(response => response.json())
+                                .then(data => {
+                                    if (data.columns) {
+                                        autoSelectColumns(data.columns);
+                                    }
+                                });
+                            }
+                        }
+                    }
+                });
+            }
+
+            // Function to auto-select columns
+            function autoSelectColumns(columns) {
+                // First clear all selections
+                Array.from(antibioticColumns.options).forEach(option => {
+                    option.selected = false;
+                });
+
+                // Then select the matching columns
+                Array.from(antibioticColumns.options).forEach(option => {
+                    if (columns.includes(option.value)) {
+                        option.selected = true;
+                        option.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                    }
+                });
+
+                // Update the count and trigger change event
+                updateSelectedCount();
+                const event = new Event('change');
+                antibioticColumns.dispatchEvent(event);
+            }
+
+            function updateSelectedCount() {
+                const count = Array.from(antibioticColumns.selectedOptions).length;
+                selectedCount.textContent = count;
+            }
+        });
     </script>
 </body>
 </html>
