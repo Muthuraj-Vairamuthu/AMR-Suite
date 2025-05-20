@@ -32,6 +32,7 @@ from AMR_Suite.utils import log_event
 from .utils.validators import DatasetValidator
 from .utils.common_antibiotics import antibiotics
 import json
+import shutil
 
 def home(request):
     """Renders the main home page"""
@@ -97,7 +98,7 @@ def logout_view(request):
     request.session.flush()      # Deletes the session and its data
     request.session.clear_expired()  # Optional: clean up expired sessions
 
-    dirs = ['Time Series Data', 'Scorecard JSONs', 'Synthetic_Dataset_Files']
+    dirs = ['Time Series Data', 'Scorecards JSONs', 'Synthetic_Dataset_Files']
 
     for dir in dirs:
         dir_path = os.path.join(

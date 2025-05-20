@@ -13,7 +13,6 @@ end_year          <- as.integer(args[5])
 dataset_path      <- args[6]
 cluster_attribute <- args[7]
 time_attribute    <- args[8]
-baseline_attribute <- 'India'
 
 cat(organism, antibiotic, source_input, start_year, end_year, dataset_path, cluster_attribute, time_attribute, "\n")
 
@@ -58,6 +57,8 @@ yearly_data <- df %>%
     .groups = "drop"
   )
 
+cat("Yearly data aggregated.\n")
+
 # Global data
 global_data <- df %>%
   filter(.data[[antibiotic]] %in% c("Resistant", "Intermediate", "Susceptible")) %>%
@@ -75,7 +76,7 @@ yearly_data_new <- rbind(yearly_data, global_data) %>%
   filter(!is.na(resistance_percentage))
 
 data_decomp <- yearly_data_new[, c("resistance_percentage", time_attribute, cluster_attribute)]
-
+cat("Data combined and cleaned.\n")
 # Determine countries with full data across years
 country_data_points <- data_decomp %>%
   group_by(.data[[cluster_attribute]]) %>%
@@ -110,20 +111,12 @@ if (nrow(subset_data) == 0 || length(levels(subset_data[[cluster_attribute]])) =
 
 if ("Global" %in% levels(subset_data[[cluster_attribute]])) {
   subset_data[[cluster_attribute]] <- relevel(subset_data[[cluster_attribute]], ref = "Global")
-  baseline_label <- "Global"
-} else if (baseline_attribute %in% levels(subset_data[[cluster_attribute]])) {
-  subset_data[[cluster_attribute]] <- relevel(subset_data[[cluster_attribute]], ref = baseline_attribute)
-  baseline_label <- baseline_attribute
-} else {
-  fallback <- levels(subset_data[[cluster_attribute]])[1]
-  subset_data[[cluster_attribute]] <- relevel(subset_data[[cluster_attribute]], ref = fallback)
-  baseline_label <- fallback
 }
 
 # Skip check
 if (nlevels(subset_data[[cluster_attribute]]) <= 2 ||
     all(subset_data$trend == subset_data$trend[1])) {
-  warning("Insufficient variability or cluster levels. Skipping.")
+  cat("Insufficient variability or cluster levels. Skipping.")
   quit("no", 0)
 }
 
@@ -143,6 +136,8 @@ if (any(is.nan(coef(model)))) {
   quit("no", 0)
 }
 
+cat("Model fitted successfully.\n")
+
 # Extract coefficients
 coefficients <- model_summary$coefficients
 intercepts <- numeric()
@@ -152,9 +147,9 @@ names_vec <- character()
 global_intercept <- coefficients["(Intercept)", "Estimate"]
 global_slope     <- coefficients["seq_num", "Estimate"]
 
-names_vec <- c(names_vec, baseline_label)
-intercepts <- c(intercepts, global_intercept)
-slopes     <- c(slopes, global_slope)
+names_vec <- "Global"
+intercepts <- global_intercept
+slopes <- global_slope
 
 for (nm in rownames(coefficients)) {
   if (grepl(paste0("^factor\\(", cluster_attribute, "\\)"), nm) && !grepl("seq_num:factor", nm)) {
@@ -170,7 +165,7 @@ for (nm in rownames(coefficients)) {
     slopes     <- c(slopes, slope)
   }
 }
-
+cat("Intercepts and slopes calculated for clusters.\n")
 # Save output
 directory_path <- file.path("Time series data", organism, source_input, antibiotic)
 if (!dir.exists(directory_path)) {

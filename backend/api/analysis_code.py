@@ -450,6 +450,7 @@ def scorecard_analysis(dataset, source_input, infection, antibiotic, mappings):
     threads = []
     time_gap = int(mappings['time_gap_attribute'])
 
+    print(f"Start: {start}, End: {end}, Time Gap: {time_gap}")
     for i in range(start, end - time_gap + 2):  # ensures inclusive of last valid window
         chunk_end = i + time_gap - 1
         if chunk_end > end:
