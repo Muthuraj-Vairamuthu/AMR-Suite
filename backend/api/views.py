@@ -359,8 +359,11 @@ def existing_datasets(request):
     return JsonResponse(datasets, safe=False)
 
 def dataset_upload(request):
+    if request.method != 'POST':
+        return redirect('upload_dataset')
+    
     choice = request.POST.get('dataset_choice')
-
+    print(f"Dataset choice: {choice}")
     try:
         if choice == 'existing':
             # User picked an existing static CSV
@@ -621,16 +624,14 @@ def scorecards(request):
         source_columns = dataset[request.session['mapping_data']['source_input']].unique()
         antibiotic_columns = []
 
-        for column in columns:
-            antibiotic_format = request.session['mapping_data']['antibiotic_format']
-            antibiotic_format = antibiotic_format.replace('Antibiotic', '')
-            if column.endswith(antibiotic_format):
-                antibiotic_columns.append(column)
+        antibiotic_columns = request.session['antibiotic_columns']
+        
         return render(request, 'scorecard_analysis.html', {
             'infection_columns': infection_columns, 
             'source_columns': source_columns, 
             'antibiotic_columns': antibiotic_columns, 
-            'columns': columns
+            'columns': columns,
+
         })
     return redirect('upload_dataset')
 

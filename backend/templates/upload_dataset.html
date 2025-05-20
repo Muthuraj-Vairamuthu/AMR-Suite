@@ -3,15 +3,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dataset Mapping</title>
-  <link
-    rel="stylesheet"
-    href="{% static 'css/upload_dataset.css' %}"
-  >
+  <link rel="stylesheet" href="{% static 'css/upload_dataset.css' %}">
 </head>
 <body>
   <nav>
@@ -19,102 +13,68 @@
     <div class="nav-links">
       <a href="{% url 'home' %}">Home</a>
       <a href="{% url 'logout' %}" class="logout-btn">Logout</a>
-      <img
-        src="{% static 'media/tavlab.logo.png' %}"
-        alt="Lab Logo"
-      />
+      <img src="{% static 'media/tavlab.logo.png' %}" alt="Lab Logo" />
     </div>
   </nav>
 
   <div class="upload-container">
     <div class="welcome-banner">{{ welcome_message }}</div>
 
-    <form
-      action="{% url 'dataset_upload' %}"
-      method="POST"
-      enctype="multipart/form-data"
-      id="uploadForm"
-    >
+    <form action="/dataset_upload" method="POST" enctype="multipart/form-data" id="uploadForm">
       {% csrf_token %}
       <h1>Uploading your Dataset</h1>
 
       <!-- Choice: upload vs existing -->
       <div class="dataset-choice">
         <label>
-          <input
-            type="radio"
-            name="dataset_choice"
-            value="upload"
-            checked
-          > Upload a new CSV
+          <input type="radio" name="dataset_choice" value="upload" checked>
+          Upload a new CSV
         </label>
         <label>
-          <input
-            type="radio"
-            name="dataset_choice"
-            value="existing"
-          > Use existing dataset
+          <input type="radio" name="dataset_choice" value="existing">
+          Use existing dataset
         </label>
       </div>
 
-      <!-- Existing dataset selector (populated via JS) -->
-      <div
-        id="existingZone"
-        style="display:none; margin:1em 0;"
-      >
-        <label for="existing_dataset">
-          Select dataset:
-        </label>
-        <select
-          name="existing_dataset"
-          id="existing_dataset"
-          required
-        >
+      <!-- Existing dataset selector -->
+      <div id="existingZone" style="display:none; margin:1em 0;">
+        <label for="existing_dataset">Select dataset:</label>
+        <select name="existing_dataset" id="existing_dataset">
           <option value="">— choose —</option>
-          <!-- options will be inserted here by JS -->
         </select>
       </div>
 
       <!-- File-upload drop zone -->
       <div class="drop-zone" id="dropZone">
-        <h3>Drag & drop file here</h3>
+        <h3>Drag and drop file here</h3>
         <p>Or browse your file to get started</p>
-        <input
-          type="file"
-          name="csv_file"
-          id="csv_file"
-          style="display:none"
-          accept=".csv"
-        >
-        <button
-          type="button"
-          class="browse-btn"
-          onclick="fileInput.click()"
-        >Browse</button>
+        <input type="file" name="csv_file" id="csv_file" style="display: none;" accept=".csv">
+        <button type="button" class="browse-btn" id="browseBtn">Browse</button>
         <div class="file-info" id="fileInfo">
-          Selected file:
-          <span id="fileName">No file chosen</span>
+          <p>Selected file: <span id="fileName">No file chosen</span></p>
         </div>
       </div>
 
-      <button
-        class="upload-btn"
-        type="submit"
-      >Upload Dataset</button>
+      <button class="upload-btn" type="submit" id="uploadBtn">Upload Dataset</button>
     </form>
   </div>
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      const form         = document.getElementById('uploadForm');
-      const existingRadios = form.dataset_choice;
+      const form = document.getElementById('uploadForm');
       const existingZone = document.getElementById('existingZone');
-      const dropZone     = document.getElementById('dropZone');
-      const fileInput    = document.getElementById('csv_file');
-      const fileNameEl   = document.getElementById('fileName');
-      const select       = document.getElementById('existing_dataset');
-
-      // 1) Fetch list of existing datasets
+      const dropZone = document.getElementById('dropZone');
+      const fileInput = document.getElementById('csv_file');
+      const fileNameEl = document.getElementById('fileName');
+      const select = document.getElementById('existing_dataset');
+      const browseBtn = document.getElementById('browseBtn');
+      const fileInfo = document.getElementById('fileInfo');
+      const uploadBtn = document.getElementById('uploadBtn');
+      
+      // Track current mode
+      let currentMode = 'upload'; // Default mode
+      
+      // Load existing datasets
       fetch("{% url 'existing_datasets' %}")
         .then(res => res.json())
         .then(list => {
@@ -128,38 +88,116 @@
         .catch(err => {
           console.error("Could not load existing datasets:", err);
         });
-
-      // 2) Toggle upload vs existing UI
-      form.addEventListener('change', e => {
-        if (e.target.name === 'dataset_choice') {
-          const isExisting = e.target.value === 'existing';
-          existingZone.style.display = isExisting ? 'block' : 'none';
-          dropZone.style.display     = isExisting ? 'none'  : 'block';
+      
+      // Function to update mode and UI
+      function updateMode(mode) {
+        currentMode = mode;
+        const isExisting = mode === 'existing';
+        
+        // Update UI
+        existingZone.style.display = isExisting ? 'block' : 'none';
+        dropZone.style.display = isExisting ? 'none' : 'block';
+        
+        // Important: Never disable the file input, it causes submission issues
+        // Update required attributes only
+        if (isExisting) {
+          fileInput.removeAttribute('required');
+        } else {
+          fileInput.setAttribute('required', 'required');
+        }
+      }
+      
+      // Toggle between upload and existing
+      document.querySelectorAll('input[name="dataset_choice"]').forEach(radio => {
+        radio.addEventListener('change', (e) => {
+          updateMode(e.target.value);
+        });
+      });
+      
+      // Initialize the form based on default selection
+      updateMode('upload');
+      
+      // Browse button
+      browseBtn.addEventListener('click', () => {
+        fileInput.click();
+      });
+      
+      // File selection update
+      fileInput.addEventListener('change', (e) => {
+        const file = e.target.files[0];
+        if (file) {
+          fileNameEl.textContent = file.name;
+          fileInfo.classList.add('visible');
         }
       });
-
-      // 3) File selection UI
-      fileInput.addEventListener('change', () => {
-        if (fileInput.files.length) {
-          fileNameEl.textContent = fileInput.files[0].name;
-        }
-      });
-      dropZone.addEventListener('dragover', ev => {
-        ev.preventDefault();
+      
+      // Drag & Drop
+      dropZone.addEventListener('dragover', (e) => {
+        e.preventDefault();
         dropZone.classList.add('dragover');
       });
-      dropZone.addEventListener('dragleave', ev => {
-        ev.preventDefault();
+      
+      dropZone.addEventListener('dragleave', (e) => {
+        e.preventDefault();
         dropZone.classList.remove('dragover');
       });
-      dropZone.addEventListener('drop', ev => {
-        ev.preventDefault();
+      
+      dropZone.addEventListener('drop', (e) => {
+        e.preventDefault();
         dropZone.classList.remove('dragover');
-        if (ev.dataTransfer.files.length) {
-          fileInput.files = ev.dataTransfer.files;
-          fileNameEl.textContent = ev.dataTransfer.files[0].name;
+        const files = e.dataTransfer.files;
+        if (files.length > 0) {
+          fileInput.files = files;
+          fileNameEl.textContent = files[0].name;
+          fileInfo.classList.add('visible');
         }
       });
+      
+      // Form submission handler
+      form.addEventListener('submit', (e) => {
+        // Prevent default submission to handle validation
+        e.preventDefault();
+        
+        if (currentMode === 'existing') {
+          // Validate existing dataset selection
+          if (!select.value) {
+            alert('Please select an existing dataset');
+            return;
+          }
+        } else {
+          // Validate file upload
+          if (!fileInput.files || fileInput.files.length === 0) {
+            alert('Please select a file to upload');
+            return;
+          }
+        }
+        
+        // If we get here, form is valid - submit it
+        form.submit();
+      });
+      
+      // Back button logout
+      window.addEventListener('popstate', function(event) {
+        fetch('{% url "logout" %}', {
+          method: 'GET',
+          credentials: 'same-origin',
+          headers: {
+            'X-CSRFToken': '{{ csrf_token }}'
+          }
+        }).then(() => {
+          window.location.href = '{% url "login" %}';
+        });
+      });
+      
+      window.onbeforeunload = function() {
+        fetch('{% url "logout" %}', {
+          method: 'GET',
+          credentials: 'same-origin',
+          headers: {
+            'X-CSRFToken': '{{ csrf_token }}'
+          }
+        });
+      };
     });
   </script>
 </body>
